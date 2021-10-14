@@ -742,7 +742,6 @@ function Load() {
 	}
 
 	const urlParams = new URLSearchParams(window.location.search);
-
 	if (urlParams.has('text')) {
 		let text = urlParams.get('text');
 		let tl = urlParams.get('tl');
@@ -758,6 +757,10 @@ function Load() {
 			document.getElementById('selector').selectedIndex = 1;
 		}
 		return;
+	}
+
+	if (window.location == "https://geftgames.github.io/moravskyprekladac/index.html") {
+		window.location = "https://geftgames.github.io/moravskyprekladac/index.html";
 	}
 
 	if ('serviceWorker' in navigator) {
