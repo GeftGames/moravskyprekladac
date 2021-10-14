@@ -1,32 +1,32 @@
 var cacheName = 'hanpre-ver-1';
 var filesToCache = [
-    "https://hanackeprekladac.ga/index.php",
+    "https://moravskyprekladac.pages.dev/index.html",
 
-    "https://hanackeprekladac.ga/engine.js",
+    "https://moravskyprekladac.pages.dev/engine.js",
 
-    "https://hanackeprekladac.ga/themes/dark.css",
-    "https://hanackeprekladac.ga/themes/nightdark.css",
-    "https://hanackeprekladac.ga/themes/light.css",
+    "https://moravskyprekladac.pages.dev/themes/dark.css",
+    "https://moravskyprekladac.pages.dev/themes/nightdark.css",
+    "https://moravskyprekladac.pages.dev/themes/light.css",
 
-    "https://hanackeprekladac.ga/style.css",
-    "https://hanackeprekladac.ga/ListHa.txt",
+    "https://moravskyprekladac.pages.dev/style.css",
+    "https://moravskyprekladac.pages.dev/ListMo.txt",
 
-    "https://hanackeprekladac.ga/favicon.ico",
+    "https://moravskyprekladac.pages.dev/favicon.ico",
    // "https://hanackeprekladac.ga/icon512.png",
   //  "https://hanackeprekladac.ga/script.js",
 
-    "https://hanackeprekladac.ga/index400.php",
-    "https://hanackeprekladac.ga/index401.php",
-    "https://hanackeprekladac.ga/index403.php",
-    "https://hanackeprekladac.ga/index404.php",
-    "https://hanackeprekladac.ga/index503.php",
+    "https://moravskyprekladac.pages.dev/index400.php",
+    "https://moravskyprekladac.pages.dev/index401.php",
+    "https://moravskyprekladac.pages.dev/index403.php",
+    "https://moravskyprekladac.pages.dev/index404.php",
+    "https://moravskyprekladac.pages.dev/index503.php",
 
-    "https://hanackeprekladac.ga/manifestEN.json",
-    "https://hanackeprekladac.ga/manifestHA.json",
-    "https://hanackeprekladac.ga/manifestCS.json",
-    "https://hanackeprekladac.ga/manifestSK.json",
-    "https://hanackeprekladac.ga/manifestDE.json",
-    "https://hanackeprekladac.ga/manifestJP.json",
+    "https://moravskyprekladac.pages.dev/manifestEN.json",
+    "https://moravskyprekladac.pages.dev/manifestHA.json",
+    "https://moravskyprekladac.pages.dev/manifestCS.json",
+    "https://moravskyprekladac.pages.dev/manifestSK.json",
+    "https://moravskyprekladac.pages.dev/manifestDE.json",
+    "https://moravskyprekladac.pages.dev/manifestJP.json",
 ];
 
 self.addEventListener('install', function (e) {
