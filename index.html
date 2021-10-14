@@ -36,7 +36,7 @@
 		<!-- Search -->
 		<meta name="keywords" content="GeftGames,translator,geft,haná,hanáčtina,čeština,česky"/>
 		<meta id="metalocale" property="og:locale" content="cs_CZ"/>
-		<meta id="mataDescription" name="description" content="Překladač <?php echo $name?>"/>
+		<meta id="mataDescription" name="description" content="Překladač česko-hanácký"/>
 
 		<!-- Title -->
 		<title>Překladač <?php echo $name; ?></title>
@@ -46,7 +46,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 		<!-- General aplication -->
-		<meta id="mataDescription2" name="application-name" content="Překladač <?php echo $name?>">
+		<meta id="mataDescription2" name="application-name" content="Překladač česko-hanácký">
 		<meta name="application-url" content="https://hanackeprekladac.ga">
 
 		<!-- Windows modern UI -->
@@ -56,7 +56,7 @@
 		<!-- Apple aplication -->
 		<link rel="apple-touch-icon" href="favicon.ico"/>
 		<link rel="apple-touch-startup-image" href="favicon.ico"/>
-		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač <?php echo $name?>"/>
+		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač česko-hanácký"/>
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
 		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 	</head>
@@ -271,7 +271,7 @@
 			<div onclick="hideNav()" style="flex-grow: 1;">
 			<!-- Trash browser, where will content not work -->
 			<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
-			<?php
+			<!--<?php
 				$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 				$ua = htmlentities($_SERVER['HTTP_USER_AGENT'], ENT_QUOTES, 'UTF-8');
@@ -279,7 +279,7 @@
 					if ($lang=='cs') echo "<p class='error'>Používáte zastaralý prohlížeč, něco nemusí fungovat. Zkuste prohlížeče jako třeba <a href='https://www.google.com/intl/cs_CZ/chrome/'>Google Chrome</a> nebo <a href='https://www.mozilla.org/cs/firefox/new/'>Firefox</a></p>";
 					else "<p class='error'>You are using an outdated browser, something may not work. Try browsers like a <a href='https://www.google.com/intl/cs_CZ/chrome/'>Google Chrome</a> nebo <a href='https://www.mozilla.org/cs/firefox/new/'>Firefox</a></p>";
 				}
-			?>
+			?>-->
 
 			<!-- No JavaScript -->
 			<noscript>
@@ -301,7 +301,9 @@
 				<!-- Source translated text -->
 				<div id="lte" style="min-height:75px">
 					<!--<div spellcheck="false" contenteditable autocheck="true"  id="specialTextarea" autofocus data-placeholder="Sem něco napište"><?php if (isset($_GET['text'])) echo $_GET['text'];?></div>-->
-					<textarea spellcheck="false" id="specialTextarea" autofocus data-placeholder="Sem něco napište"><?php if (isset($_GET['text'])) echo $_GET['text'];?></textarea>
+					<textarea spellcheck="false" id="specialTextarea" autofocus data-placeholder="Sem něco napište">
+					<!--<?php if (isset($_GET['text'])) echo $_GET['text'];?>-->
+					</textarea>
 					<div id="char" style="user-select:none; cursor:normal; display: <?php if ($name=="česko-hanácký") echo "none"; else echo "flex"; ?>;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
 						<span id="addchar">Vložit znak</span>
 						<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
