@@ -525,10 +525,10 @@ function SetLanguage() {
 			textWoc = "Velikost slovníku: ";
 			textRemove="Vymazat";
 			textCH="Česko-moravský";
-			textHC="Morvsko-český";
+			textHC="Morvasko-český";
 
-			textCHTranslator="Překladač česko-morvský";
-			textHCTranslator="Překladač morvský-český";
+			textCHTranslator="Překladač česko-moravský";
+			textHCTranslator="Překladač moravský-český";
 
 			textRefreshTooltip = "Vymažat mezipaměť a obnovit stránku";
 			document.getElementById("metalocale").content = "cs_CZ";
