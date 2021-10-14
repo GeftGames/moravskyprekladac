@@ -46,8 +46,8 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 		<!-- General aplication -->
-		<meta id="mataDescription2" name="application-name" content="Překladač česko-morvský">
-		<meta name="application-url" content="https://geftgames.github.io/moravskyprekladac/">
+		<meta id="mataDescription2" name="application-name" content="Překladač česko-moravský">
+		<meta name="application-url" content="https://moravskyprekladac.pages.dev/">
 
 		<!-- Windows modern UI -->
 		<meta name="msapplication-TileColor" content="#66ccff">
@@ -163,12 +163,12 @@
 						</svg>
 					</button>
 
-					<a id="headername" href="https://geftgames.github.io/moravskyprekladac/" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);">Překladač <?php echo $name?></a>
+					<a id="headername" href="https://moravskyprekladac.pages.dev/" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);">Překladač česko-moravský</a>
 					<button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
 					caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
 					HidePopUps();
 					window.location.reload();
-					window.location='https://geftgames.github.io/moravskyprekladac/index.html?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
+					window.location='https://moravskyprekladac.pages.dev/index.html?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
 						<svg class="ib" viewBox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
 					</button>
 				</div>
