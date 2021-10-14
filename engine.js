@@ -977,23 +977,23 @@ function SetSavedTranslations() {
 }
 
 function GetVocabulary() {
-	if (dev) console.log("INFO| Starting Downloading ListHa.txt");
+	if (dev) console.log("INFO| Starting Downloading ListMo.txt");
 	var request = new XMLHttpRequest();
-	request.open('GET', 'https://hanackeprekladac.ga/ListHa.txt', true);
+	request.open('GET', 'https://hanackeprekladac.ga/ListMo.txt', true);
 	request.send();
 	request.onerror = function () {
-		if (dev) console.log("ERROR| Cannot downloaded ListHa.txt");
+		if (dev) console.log("ERROR| Cannot downloaded ListMo.txt");
 	};
 	request.onreadystatechange = function () {
 		if (request.readyState === 4) {
 			if (request.status === 200) {
-				if (dev) console.log("INFO| Downloaded ListHa.txt");
+				if (dev) console.log("INFO| Downloaded ListMo.txt");
 
 				let text = request.responseText;
-				//	console.log("INFO| Downloaded ListHa.txt"+text);
+				//	console.log("INFO| Downloaded ListMo.txt"+text);
 				let lines = text.split('\r\n');
 				if (lines.length < 100 && dev) {
-					if (dev) console.log("ERROR| Downloaded ListHa.txt seems too small");
+					if (dev) console.log("ERROR| Downloaded ListMo.txt seems too small");
 					enabletranslate = false;
 					return;
 				}
