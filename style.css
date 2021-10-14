@@ -285,6 +285,7 @@ a {
 	font-family: system-ui, artifakt element, sans-serif;
 	outline-offset: 1px;
 	transition: color .3s;
+	text-shadow: var(--tsh);
 }
 p {
 	margin: 10px;
