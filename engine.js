@@ -573,7 +573,7 @@ function SetLanguage() {
 	document.getElementById("textRemove").innerText = textRemove;
 	document.getElementById("selRev").innerText=textCH;
 	document.getElementById("selRev2").innerText=textHC;
-	document.getElementById("addchar").innerText = textAddChar;
+	//document.getElementById("addchar").innerText = textAddChar;
 	document.getElementById("textSettings").innerText = textSettings;
 	document.getElementById("textSaveTrans").innerText = textSaveTrans;
 	document.getElementById("textCopyThisTrans").innerText = textCopyThisTrans;
