@@ -85,7 +85,7 @@ var textCopy,
 	textHereShow,
 	textConClear,
 	textSavedTrans,
-	textAddChar,
+	//textAddChar,
 	textTranslation,
 	textCopyThisTrans,
 	textSettings,
@@ -236,11 +236,11 @@ function ChangeDic() {
 	if (sel.selectedIndex == 1) {
 		document.getElementById('headername').innerText = textHCTranslator;
 		document.title = textHCTranslator;
-		document.getElementById('char').style.display = "flex";
+	//	document.getElementById('char').style.display = "flex";
 	} else {
 		document.getElementById('headername').innerText = textCHTranslator;
 		document.title = textCHTranslator;
-		document.getElementById('char').style.display = "none";
+	//	document.getElementById('char').style.display = "none";
 	}
 	SpellingJob();
 	prepareToTranslate(true);
@@ -328,7 +328,7 @@ function SetLanguage() {
 			textWriteSomething = "Write there something";
 			textConClear = "Are you sure you want to clear saved translations?";
 			textSavedTrans = "Saved translations";
-			textAddChar = "Insert a char";
+		//	textAddChar = "Insert a char";
 			textTranslation = "Translation";
 			textCopyThisTrans = "Copy the link to the translation";
 			textSaveTrans = "Save this translation";
@@ -365,7 +365,7 @@ function SetLanguage() {
 			textWriteSomething = "Sem neco napište";
 			textConClear = "Opravdô chcete vêmazat ôloženy překladê?";
 			textSavedTrans = "Ôloženy překladê";
-			textAddChar = "Vložte znak";
+		//	textAddChar = "Vložte znak";
 			textTranslation = "Překlad";
 			textCopyThisTrans = "Kopirovat odkaz na překlad";
 			textSaveTrans = "Ôložêt tento překlad";
@@ -402,7 +402,7 @@ function SetLanguage() {
 			textWriteSomething = "Sem niečo napíšte";
 			textConClear = "Ste si istí, že chcete vymazať uložené preklady?";
 			textSavedTrans = "Uložené preklady";
-			textAddChar = "Vložte znak";
+		//	textAddChar = "Vložte znak";
 			textTranslation = "Preklad";
 			textCopyThisTrans = "Kopírovať odkaz na preklad";
 			textSaveTrans = "Uložiť tento preklad";
@@ -439,7 +439,7 @@ function SetLanguage() {
 			textWriteSomething = "ここに何か書いて";
 			textConClear = "保存した翻訳をクリアしてもよろしいですか？";
 			textSavedTrans = "保存された翻訳";
-			textAddChar = "文字を挿入します";
+		//	textAddChar = "文字を挿入します";
 			textTranslation = "翻訳";
 			textCopyThisTrans = "翻訳へのリンクをコピーする";
 			textSaveTrans = "この翻訳を保存する";
@@ -474,7 +474,7 @@ function SetLanguage() {
 			textWriteSomething = "Schreib etwas hier";
 			textConClear = "Möchten Sie gespeicherte Übersetzungen wirklich löschen?";
 			textSavedTrans = "Gespeicherte Übersetzungen";
-			textAddChar = "Ein Zeichen einfügen";
+		//	textAddChar = "Ein Zeichen einfügen";
 			textTranslation = "Übersetzung";
 			textCopyThisTrans = "Kopiere den Link zur Übersetzung";
 			textSaveTrans = "Diese Übersetzung speichern";
@@ -507,7 +507,7 @@ function SetLanguage() {
 			textHereShow = "Zde se objeví překlad";
 			textConClear = "Opravdu chcete vymazat uložené překlady?";
 			textSavedTrans = "Uložené překlady";
-			textAddChar = "Vložit znak";
+		//	textAddChar = "Vložit znak";
 			textTranslation = "Překlad";
 			textCopyThisTrans = "Kopírovat odkaz na překlad";
 			textSaveTrans = "Uložit tento překlad";
@@ -865,13 +865,13 @@ function Load() {
 
 	//let n;
 
-	if (sel.selectedIndex == 1) {
+//	if (sel.selectedIndex == 1) {
 		//n = "hanácko-český";
-		document.getElementById('char').style.display = "flex";
-	} else {
+	//	document.getElementById('char').style.display = "flex";
+	//} else {
 		//n = "česko-hanácký";
-		document.getElementById('char').style.display = "none";
-	}
+	//	document.getElementById('char').style.display = "none";
+	//}
 
 	if (!autoTranslate) {
 		document.getElementById('autoTranslate').style.display = "inline-block";
@@ -2034,10 +2034,10 @@ function translate() {
 				}
 
 
-				editing = editing.replaceAll('ý', '<span class="replaces" comment="in">y</span>');
-				editing = editing.replaceAll('í', '<span class="replaces" comment="in">i</span>');
-				editing = editing.replaceAll('ú', '<span class="replaces" comment="in">u</span>');
-				editing = editing.replaceAll('ů', '<span class="replaces" comment="in">u</span>');
+				//editing = editing.replaceAll('ý', '<span class="replaces" comment="in">y</span>');
+				//editing = editing.replaceAll('í', '<span class="replaces" comment="in">i</span>');
+				//editing = editing.replaceAll('ú', '<span class="replaces" comment="in">u</span>');
+				//editing = editing.replaceAll('ů', '<span class="replaces" comment="in">u</span>');
 			} else {
 				for (let v = 0; v < ReplacesC.length; v++) {
 					let repc = ReplacesC[v];
@@ -2053,8 +2053,8 @@ function translate() {
 					else editing = editing.replace(reverse ? rep.input : rep.output, (reverse ? rep.output : rep.input));
 				}
 
-				editing = editing.replaceAll('ê', '<span class="replaces" comment="in">e</span>');
-				editing = editing.replaceAll('ô', '<span class="replaces" comment="in">o</span>');
+			//	editing = editing.replaceAll('ê', '<span class="replaces" comment="in">e</span>');
+			//	editing = editing.replaceAll('ô', '<span class="replaces" comment="in">o</span>');
 			}
 			return editing;
 		}
@@ -3293,56 +3293,56 @@ function AddWord(parentToAdd, w) {
 		parentToAdd.appendChild(span);
 	} else {
 		if (!reverse){
-			if (w.includes('í')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
-			if (w.includes('ý')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
-			if (w.includes('ů')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
-			if (w.includes('ú')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
-			if (w.includes('ou')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
+			//if (w.includes('í')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
+			//if (w.includes('ý')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
+			//if (w.includes('ů')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
+			//if (w.includes('ú')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
+			//if (w.includes('ou')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
 		} else {
-			if (w.includes('ê')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
-			if (w.includes('ô')) {
-				let span=document.createElement("span");
-				span.className="wrong";
-				span.innerText=w;
-				parentToAdd.appendChild(span);
-				return;
-			}
+			//if (w.includes('ê')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
+			//if (w.includes('ô')) {
+			//	let span=document.createElement("span");
+			//	span.className="wrong";
+			//	span.innerText=w;
+			//	parentToAdd.appendChild(span);
+			//	return;
+			//}
 		}
 	//	console.log(w);
 		let span=document.createTextNode(w);
