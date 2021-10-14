@@ -66,7 +66,7 @@ var usingTheme;
 var error = false;
 var errorText;
 var enabletranslate = true;
-var myVocabHA=[];
+var myVocabMO=[];
 var myVocabCS=[];
 var Words = [], SameWords = [], Sentences = [], Phrases = [], ReplacesEnding = [], ReplacesEndingH = [], ReplacesEndingC = [];
 var ReplacesStarting = [], Replaces = [], ReplacesH = [], ReplacesC = [], RepairsC = [], RepairsH = [];
@@ -741,6 +741,25 @@ function Load() {
 		return;
 	}
 
+	const urlParams = new URLSearchParams(window.location.search);
+
+	if (urlParams.has('text')) {
+		let text = urlParams.get('text');
+		let tl = urlParams.get('tl');
+		console.log("INFO|Set text...");
+
+		document.getElementById('specialTextarea').innerText = text;
+
+
+		if (tl == "cs") {
+			document.getElementById('selector').selectedIndex = 0;
+		}
+		if (tl == "mo") {
+			document.getElementById('selector').selectedIndex = 1;
+		}
+		return;
+	}
+
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function() {
 			navigator.serviceWorker.register('service-worker.js')
@@ -792,17 +811,17 @@ function Load() {
 	let zstyleOutput = localStorage.getItem('setting-styleOutput');
 	let zdev = localStorage.getItem('setting-dev');
 	let savedget=localStorage.getItem('saved');
-	let zmyvocabHA=localStorage.getItem('vocab-ha');
+	let zmyvocabMO=localStorage.getItem('vocab-mo');
 	let zmyvocabCS=localStorage.getItem('vocab-cs');
 	if (zmyvocabCS === null){
 		myVocabCS=new Array();
 		myVocabCS.push('');
 	}else myVocabCS=zmyvocabCS;
 
-	if (zmyvocabHA === null) {
-		myVocabHA=new Array();
-		myVocabHA.push('');
-	}else myVocabHA=zmyvocabHA;
+	if (zmyvocabMO === null) {
+		myVocabMO=new Array();
+		myVocabMO.push('');
+	}else myVocabMO=zmyvocabMO;
 
 	if (savedget === null) saved = new Array();
 	else saved = JSON.parse(savedget);
@@ -886,8 +905,8 @@ function Load() {
 }
 
 function AddToVocabHA(str) {
-	myVocabHA.push(str);
-	localStorage.setItem('vocab-ha', JSON.stringify(myVocabHA));
+	myVocabMO.push(str);
+	localStorage.setItem('vocab-mo', JSON.stringify(myVocabMO));
 	//SpellingJob();
 }
 
@@ -2268,7 +2287,7 @@ function Copy() {
 function CopyLink() {
 	HidePopUps();
 	//encodeURIComponent(document.getElementById('specialTextarea').value)
-	let copyText = "https://moravskyprekladac.pages.dev/?text=" + encodeURIComponent(document.getElementById('specialTextarea').value)+ "&tl=" + (document.getElementById('selRev').selected ? "cs" : "ha");
+	let copyText = "https://moravskyprekladac.pages.dev/?text=" + encodeURIComponent(document.getElementById('specialTextarea').value)+ "&tl=" + (document.getElementById('selRev').selected ? "cs" : "mo");
 
 	navigator.clipboard.writeText(copyText).then(function () {
 		if (dev) console.log('Copying to clipboard was successful!');
@@ -3150,8 +3169,8 @@ function AddWord(parentToAdd, w) {
 
 	if (!reverse) {
 		// From vocabulary
-		for (let i=0; i<myVocabHA.length; i++){
-			let voc=myVocabHA[i];
+		for (let i=0; i<myVocabMO.length; i++){
+			let voc=myVocabMO[i];
 
 			if (search==voc) {
 				let span=document.createTextNode(w);
