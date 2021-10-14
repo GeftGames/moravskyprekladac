@@ -298,10 +298,10 @@
 			</div>
 
 			<div id="transarea">
-				<!-- Source translated text -->
+				<!-- Source translated text <?php if (isset($_GET['text'])) echo $_GET['text'];?>-->
 				<div id="lte" style="min-height:75px">
 					<!--<div spellcheck="false" contenteditable autocheck="true"  id="specialTextarea" autofocus data-placeholder="Sem něco napište"><?php if (isset($_GET['text'])) echo $_GET['text'];?></div>-->
-					<textarea spellcheck="false" id="specialTextarea" autofocus data-placeholder="Sem něco napište"><?php if (isset($_GET['text'])) echo $_GET['text'];?></textarea>
+					<textarea spellcheck="false" id="specialTextarea" autofocus data-placeholder="Sem něco napište"></textarea>
 					<div id="char" style="user-select:none; cursor:normal; display: <?php if ($name=="česko-moravský") echo "none"; else echo "flex"; ?>;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
 						<span id="addchar">Vložit znak</span>
 						<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
