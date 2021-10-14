@@ -742,6 +742,11 @@ function Load() {
 	}
 
 	const urlParams = new URLSearchParams(window.location.search);
+	if (urlParams.has('top')){
+		document.getElementById('features').style.display = 'block'; 
+		document.getElementById('blackback').style.display='block';
+	}
+	
 	if (urlParams.has('text')) {
 		let text = urlParams.get('text');
 		let tl = urlParams.get('tl');
