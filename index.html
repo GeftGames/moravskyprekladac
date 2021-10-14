@@ -1,16 +1,4 @@
-﻿<!--<?php
-	$name="";
-	if (isset($_GET['tl'])) {
-		if ($_GET['tl']=='ha') {
-			$name="hanácko-český";
-		} else {
-			$name="česko-hanácký";
-		}
-	} else {
-		$name="česko-hanácký";
-	}
-?>-->
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="cs" style="min-height: 100%">
 	<head>
 		<meta charset="UTF-8"/>
@@ -36,18 +24,18 @@
 		<!-- Search -->
 		<meta name="keywords" content="GeftGames,translator,geft,morava,moravština,čeština,česky"/>
 		<meta id="metalocale" property="og:locale" content="cs_CZ"/>
-		<meta id="mataDescription" name="description" content="Překladač česko-hanácký"/>
+		<meta id="mataDescription" name="description" content="Překladač česko-moravský"/>
 
 		<!-- Title -->
-		<title>Překladač <?php echo $name; ?></title>
+		<title>Překladač česko-moravský</title>
 
 		<!-- Icon-->
 		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 		<!-- General aplication -->
-		<meta id="mataDescription2" name="application-name" content="Překladač česko-hanácký">
-		<meta name="application-url" content="https://hanackeprekladac.ga">
+		<meta id="mataDescription2" name="application-name" content="Překladač česko-moravský">
+		<meta name="application-url" content="https://moravskyprekladac.pages.dev/">
 
 		<!-- Windows modern UI -->
 		<meta name="msapplication-TileColor" content="#66ccff">
@@ -56,7 +44,7 @@
 		<!-- Apple aplication -->
 		<link rel="apple-touch-icon" href="favicon.ico"/>
 		<link rel="apple-touch-startup-image" href="favicon.ico"/>
-		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač česko-hanácký"/>
+		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač česko-moravský"/>
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
 		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 	</head>
@@ -199,6 +187,7 @@
 								<option value="en">English</option>
 								<option value="sk">Slovenčina</option>
 								<option value="jp">日本語</option>
+								<option value="mo">Moravština</option>
 							</select>
 						</div>
 
@@ -271,15 +260,6 @@
 			<div onclick="hideNav()" style="flex-grow: 1;">
 			<!-- Trash browser, where will content not work -->
 			<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
-			<!--<?php
-				$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-
-				$ua = htmlentities($_SERVER['HTTP_USER_AGENT'], ENT_QUOTES, 'UTF-8');
-				if (preg_match('~MSIE|Internet Explorer~i', $ua) || (strpos($ua, 'Trident/7.0; rv:11.0') !== false)) {
-					if ($lang=='cs') echo "<p class='error'>Používáte zastaralý prohlížeč, něco nemusí fungovat. Zkuste prohlížeče jako třeba <a href='https://www.google.com/intl/cs_CZ/chrome/'>Google Chrome</a> nebo <a href='https://www.mozilla.org/cs/firefox/new/'>Firefox</a></p>";
-					else "<p class='error'>You are using an outdated browser, something may not work. Try browsers like a <a href='https://www.google.com/intl/cs_CZ/chrome/'>Google Chrome</a> nebo <a href='https://www.mozilla.org/cs/firefox/new/'>Firefox</a></p>";
-				}
-			?>-->
 
 			<!-- No JavaScript -->
 			<noscript>
@@ -289,8 +269,8 @@
 			<!-- Combobox From-To -->
 			<div style="margin-top: 15px; width:100%; display: block;text-align:center; user-select:none">
 				<select id="selector" style="margin: 5px;text-align: center;" onchange="ChangeDic();" onclick='prepareToTranslate(false);'>
-					<option id="selRev"  <?php if (isset($_GET['tl'])) { if ($_GET['tl']=='cs') echo "selected";}?>>česko-hanácký</option>
-					<option id="selRev2" <?php if (isset($_GET['tl'])) { if ($_GET['tl']=='ha') echo "selected";}?>>hanácko-český</option>
+					<option id="selRev" >Česko-moravský</option>
+					<option id="selRev2">Moravsko-český</option>
 				</select>
 				<div>
 					<button class="button" onclick="prepareToTranslate(true);" id="autoTranslate" style="display: none">Přeložit</button>
@@ -302,13 +282,13 @@
 				<div id="lte" style="min-height:75px">
 					<!--<div spellcheck="false" contenteditable autocheck="true"  id="specialTextarea" autofocus data-placeholder="Sem něco napište"><?php if (isset($_GET['text'])) echo $_GET['text'];?></div>-->
 					<textarea spellcheck="false" id="specialTextarea" autofocus data-placeholder="Sem něco napište"></textarea>
-					<div id="char" style="user-select:none; cursor:normal; display: <?php if ($name=="česko-hanácký") echo "none"; else echo "flex"; ?>;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
+					<!--<div id="char" style="user-select:none; cursor:normal; display: <?php if ($name=="česko-hanácký") echo "none"; else echo "flex"; ?>;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
 						<span id="addchar">Vložit znak</span>
 						<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
 						<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
 						<a class="charIns" onclick="insert2('ô');"><div class="btnsm">ô</div></a>
 						<a class="charIns" onclick="insert2('Ô');"><div class="btnsm">Ô</div></a>
-					</div>
+					</div>-->
 				</div>
 
 				<!-- Translated text out -->
