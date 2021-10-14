@@ -761,7 +761,7 @@ function Load() {
 		if (tl == "mo") {
 			document.getElementById('selector').selectedIndex = 1;
 		}
-		return;
+		//translate();
 	}
 
 	if (window.location == "https://geftgames.github.io/moravskyprekladac/index.html") {
