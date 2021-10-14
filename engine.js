@@ -979,7 +979,7 @@ function SetSavedTranslations() {
 function GetVocabulary() {
 	if (dev) console.log("INFO| Starting Downloading ListMo.txt");
 	var request = new XMLHttpRequest();
-	request.open('GET', 'https://moravskyprekladac.pages.dev/ListMo.txt', true);
+	request.open('GET', 'https://hanackeprekladac.ga/ListMo.txt', true);
 	request.send();
 	request.onerror = function () {
 		if (dev) console.log("ERROR| Cannot downloaded ListMo.txt");
@@ -990,10 +990,10 @@ function GetVocabulary() {
 				if (dev) console.log("INFO| Downloaded ListMo.txt");
 
 				let text = request.responseText;
-				//	console.log("INFO| Downloaded ListHa.txt"+text);
+				//	console.log("INFO| Downloaded ListMo.txt"+text);
 				let lines = text.split('\r\n');
 				if (lines.length < 100 && dev) {
-					if (dev) console.log("ERROR| Downloaded ListHa.txt seems too small");
+					if (dev) console.log("ERROR| Downloaded ListMo.txt seems too small");
 					enabletranslate = false;
 					return;
 				}
