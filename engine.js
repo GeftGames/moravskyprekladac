@@ -318,10 +318,10 @@ function SetLanguage() {
 			textNightDark="Night dark";
 			textLight="Light";
 			textDark="Dark";
-			textCH="Czech-Haná dialect";
-			textHC="Haná dialect-Czech";
-			textCHTranslator="Translator Czech-Haná dialect";
-			textHCTranslator="Translator Haná dialect-Czech";
+			textCH="Czech-Moravian";
+			textHC ="Moravian-Czech";
+			textCHTranslator="Translator Czech-Moravian";
+			textHCTranslator="Translator Moravian-Czech";
 			textCopy = "Copy";
 			textRemove="Remove";
 			textHereShow = "The translation will appear here";
@@ -352,12 +352,12 @@ function SetLanguage() {
 			textTheme="Motiv";
 			textLight="Světlé";
 			textDark="Tmavé";
-			textCH="Z češtênê do hanáčtênê";
+			textCH="Z češtênê do moravštênê";
 			textNightDark="Tmavé nočni";
-			textHC="Z hanáčtênê do češtênê";
+			textHC ="Z moravštênê do češtênê";
 			textDefault2="Podlevá systémô";
-			textCHTranslator="Překladač Česko-hanácké";
-			textHCTranslator="Překladač Hanácko-české";
+			textCHTranslator="Překladač Česko-moravský";
+			textHCTranslator="Překladač Moravsko-české";
 			textCopy = "Kopirovat";
 			textRemove="Vêmazat";
 			//textTranslator = "Překladač";
@@ -391,11 +391,11 @@ function SetLanguage() {
 			textDark="Tmavý";
 			textNightDark="Tmavý nočný";
 			textCopy = "Kopírovať";
-			textCH="Česko-hanácký";
+			textCH="Česko-moravský";
 			textDefault2="Podľa systému";
-			textHC="Hanácko-český";
-			textCHTranslator="Prekladač Česko-hanácký";
-			textHCTranslator="Prekladač Hanácko-český";
+			textHC="Moravsko-český";
+			textCHTranslator="Prekladač Česko-moravský";
+			textHCTranslator="Prekladač Moravsko-český";
 			textRemove="Vymazať";
 		//	textTranslator = "Prekladač";
 			textHereShow = "Tu sa objaví preklad";
@@ -466,10 +466,10 @@ function SetLanguage() {
 			textDark="Dunkel";
 			textCopy = "Kopieren";
 			textDefault2="nach dem System";
-			textCH="Tschechisch-Haná Dialekt";
-			textHC="Haná Dialekt-Tschechisch";
-			textCHTranslator="Übersetzer Tschechisch-Haná Dialekt";
-			textHCTranslator="Übersetzer Haná Dialekt-Tschechisch";
+			textCH ="Tschechisch-Mährisch";
+			textHC ="Mährisch-Tschechisch";
+			textCHTranslator ="Übersetzer Tschechisch-Mährisch";
+			textHCTranslator ="Übersetzer Mährisch-Tschechisch";
 			textHereShow = "Die Übersetzung erscheint hier";
 			textWriteSomething = "Schreib etwas hier";
 			textConClear = "Möchten Sie gespeicherte Übersetzungen wirklich löschen?";
@@ -524,11 +524,11 @@ function SetLanguage() {
 			textInfo = "Informace";
 			textWoc = "Velikost slovníku: ";
 			textRemove="Vymazat";
-			textCH="Česko-hanácký";
-			textHC="Hanácko-český";
+			textCH="Česko-moravský";
+			textHC="Morvsko-český";
 
-			textCHTranslator="Překladač česko-hanácký";
-			textHCTranslator="Překladač hanácko-český";
+			textCHTranslator="Překladač česko-morvský";
+			textHCTranslator="Překladač morvský-český";
 
 			textRefreshTooltip = "Vymažat mezipaměť a obnovit stránku";
 			document.getElementById("metalocale").content = "cs_CZ";
@@ -990,10 +990,10 @@ function GetVocabulary() {
 				if (dev) console.log("INFO| Downloaded ListMo.txt");
 
 				let text = request.responseText;
-				//	console.log("INFO| Downloaded ListMo.txt"+text);
+				//	console.log("INFO| Downloaded ListHa.txt"+text);
 				let lines = text.split('\r\n');
 				if (lines.length < 100 && dev) {
-					if (dev) console.log("ERROR| Downloaded ListMo.txt seems too small");
+					if (dev) console.log("ERROR| Downloaded ListHa.txt seems too small");
 					enabletranslate = false;
 					return;
 				}
