@@ -543,12 +543,12 @@ function SetLanguage() {
 	link.type = 'text/json';
 	link.rel = 'manifest';
 	//console.log(language);
-	link.href = "https://hanackeprekladac.ga/manifest" + language.toUpperCase() + ".json";
+	link.href = "https://moravskyprekladac.pages.dev/manifest" + language.toUpperCase() + ".json";
 	headID.appendChild(link);
 
 	//  link.href = 'http://fonts.googleapis.com/css?family=' + param.family + '&effect=' + param.effect;
 
-	//	<link rel="manifest" href="https://hanackeprekladac.ga/manifestEN.json">
+	//	<link rel="manifest" href="https://moravskyprekladac.pages.dev/manifestEN.json">
 	document.getElementById("textTheme").innerText= textTheme;
 	document.getElementById("textDefault2").innerText= textDefault2;
 	document.getElementById("textLight").innerText= textLight;
@@ -979,7 +979,7 @@ function SetSavedTranslations() {
 function GetVocabulary() {
 	if (dev) console.log("INFO| Starting Downloading ListMo.txt");
 	var request = new XMLHttpRequest();
-	request.open('GET', 'https://hanackeprekladac.ga/ListMo.txt', true);
+	request.open('GET', 'https://moravskyprekladac.pages.dev/ListMo.txt', true);
 	request.send();
 	request.onerror = function () {
 		if (dev) console.log("ERROR| Cannot downloaded ListMo.txt");
@@ -2268,7 +2268,7 @@ function Copy() {
 function CopyLink() {
 	HidePopUps();
 	//encodeURIComponent(document.getElementById('specialTextarea').value)
-	let copyText = "https://hanackeprekladac.ga/?text=" + encodeURIComponent(document.getElementById('specialTextarea').value)+ "&tl=" + (document.getElementById('selRev').selected ? "cs" : "ha");
+	let copyText = "https://moravskyprekladac.pages.dev/?text=" + encodeURIComponent(document.getElementById('specialTextarea').value)+ "&tl=" + (document.getElementById('selRev').selected ? "cs" : "ha");
 
 	navigator.clipboard.writeText(copyText).then(function () {
 		if (dev) console.log('Copying to clipboard was successful!');
