@@ -18,7 +18,7 @@
 		<!-- Links -->
 		<link href="style.css" rel="stylesheet" type="text/css"/>
 		<link id="themeAplicator" href="" rel="stylesheet" type="text/css"/>
-		<script type='text/javascript' src='engine.js' importance="high"></script>
+		<script type='text/javascript' src='engine.js' importance="high" type="module" ></script>
 
 		<!-- Speed up download styles-->
 		<link rel="preload" title="Dark theme" href="themes/dark.css" as="style">
@@ -36,18 +36,18 @@
 		<!-- Search -->
 		<meta name="keywords" content="GeftGames,translator,geft,morava,moravština,čeština,česky"/>
 		<meta id="metalocale" property="og:locale" content="cs_CZ"/>
-		<meta id="mataDescription" name="description" content="Překladač <?php echo $name?>"/>
+		<meta id="mataDescription" name="description" content="Překladač česko-hanácký"/>
 
 		<!-- Title -->
-		<title>Překladač česko-morvský</title>
+		<title>Překladač <?php echo $name; ?></title>
 
 		<!-- Icon-->
 		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 		<!-- General aplication -->
-		<meta id="mataDescription2" name="application-name" content="Překladač česko-moravský">
-		<meta name="application-url" content="https://moravskyprekladac.pages.dev/">
+		<meta id="mataDescription2" name="application-name" content="Překladač česko-hanácký">
+		<meta name="application-url" content="https://hanackeprekladac.ga">
 
 		<!-- Windows modern UI -->
 		<meta name="msapplication-TileColor" content="#66ccff">
@@ -56,7 +56,7 @@
 		<!-- Apple aplication -->
 		<link rel="apple-touch-icon" href="favicon.ico"/>
 		<link rel="apple-touch-startup-image" href="favicon.ico"/>
-		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač česko-morvský"/>
+		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač česko-hanácký"/>
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
 		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 	</head>
@@ -163,12 +163,12 @@
 						</svg>
 					</button>
 
-					<a id="headername" href="https://moravskyprekladac.pages.dev/" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);">Překladač česko-moravský</a>
+					<a id="headername" href="https://hanackeprekladac.ga/" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);">Překladač <?php echo $name?></a>
 					<button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
 					caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
 					HidePopUps();
 					window.location.reload();
-					window.location='https://moravskyprekladac.pages.dev/index.html?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
+					window.location='https://hanackeprekladac.ga/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
 						<svg class="ib" viewBox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
 					</button>
 				</div>
@@ -289,8 +289,8 @@
 			<!-- Combobox From-To -->
 			<div style="margin-top: 15px; width:100%; display: block;text-align:center; user-select:none">
 				<select id="selector" style="margin: 5px;text-align: center;" onchange="ChangeDic();" onclick='prepareToTranslate(false);'>
-					<option id="selRev" >česko-moravský</option>
-					<option id="selRev2">moravský-český</option>
+					<option id="selRev"  <?php if (isset($_GET['tl'])) { if ($_GET['tl']=='cs') echo "selected";}?>>česko-hanácký</option>
+					<option id="selRev2" <?php if (isset($_GET['tl'])) { if ($_GET['tl']=='ha') echo "selected";}?>>hanácko-český</option>
 				</select>
 				<div>
 					<button class="button" onclick="prepareToTranslate(true);" id="autoTranslate" style="display: none">Přeložit</button>
@@ -298,11 +298,11 @@
 			</div>
 
 			<div id="transarea">
-				<!-- Source translated text <?php if (isset($_GET['text'])) echo $_GET['text'];?>-->
+				<!-- Source translated text -->
 				<div id="lte" style="min-height:75px">
 					<!--<div spellcheck="false" contenteditable autocheck="true"  id="specialTextarea" autofocus data-placeholder="Sem něco napište"><?php if (isset($_GET['text'])) echo $_GET['text'];?></div>-->
 					<textarea spellcheck="false" id="specialTextarea" autofocus data-placeholder="Sem něco napište"></textarea>
-					<div id="char" style="user-select:none; cursor: unset; display: flex"?>;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
+					<div id="char" style="user-select:none; cursor:normal; display: <?php if ($name=="česko-hanácký") echo "none"; else echo "flex"; ?>;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
 						<span id="addchar">Vložit znak</span>
 						<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
 						<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
