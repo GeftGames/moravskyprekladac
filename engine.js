@@ -525,7 +525,7 @@ function SetLanguage() {
 			textWoc = "Velikost slovníku: ";
 			textRemove="Vymazat";
 			textCH="Česko-moravský";
-			textHC="Morvasko-český";
+			textHC="Moravsko-český";
 
 			textCHTranslator="Překladač česko-moravský";
 			textHCTranslator="Překladač moravský-český";
