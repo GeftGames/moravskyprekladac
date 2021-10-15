@@ -785,6 +785,18 @@ function Load() {
 		document.getElementById('features').style.display = 'block'; 
 		document.getElementById('blackback').style.display='block';
 	}
+	if (urlParams.has('topZ')) {
+		document.getElementById('featuresZ').style.display = 'block';
+		document.getElementById('blackback').style.display = 'block';
+	}
+	if (urlParams.has('topP')) {
+		document.getElementById('featuresP').style.display = 'block';
+		document.getElementById('blackback').style.display = 'block';
+	}
+	if (urlParams.has('topS')) {
+		document.getElementById('featuresS').style.display = 'block';
+		document.getElementById('blackback').style.display = 'block';
+	}
 	
 	if (urlParams.has('text')) {
 		let text = urlParams.get('text');
@@ -2325,6 +2337,14 @@ function insertAtCursor(myField, myValue) {
 function Copy() {
 	let copyText = document.getElementById("outputtext").innerText;
 	navigator.clipboard.writeText(copyText).then(function () {
+		if (dev) console.log('Copying to clipboard was successful!');
+	}, function (err) {
+		if (dev) console.error('Could not copy text: ', err);
+	});
+}
+
+function CopyStr(str) {
+	navigator.clipboard.writeText(str).then(function () {
 		if (dev) console.log('Copying to clipboard was successful!');
 	}, function (err) {
 		if (dev) console.error('Could not copy text: ', err);

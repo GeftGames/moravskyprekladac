@@ -53,66 +53,197 @@
     <div id="bar" style="margin: auto;height:20px; width: 100px; background-color: gray"><div style="width: 5px; height: 20px;    background-color: blue;"></div></div>
     </div>
     <!--<div id="body" style="min-height: 100vh">-->
-       	<div id="blackback" style="position: absolute;
+        <div id="blackback" style="position: absolute;
     width: 100%; height: 100%;
     background-color: #00000099;
      z-index: 99 !important;
      display:none;
      ">
-        <div id="features" style="display: none; background-color: white;margin: 5px; border-radius: 5px;">
-            <div style="background-color: aliceblue; border-radius: 5px 5px 0 0;display: flex;align-items: center;justify-content: space-between;">
-            <p style="text-align: center;padding: 5px;">Často hledané</p>
-            <button class="butIc" onclick="
+            <div id="features" style="display: none; background-color: white;margin: 5px; border-radius: 5px;">
+                <div style="background-color: aliceblue; border-radius: 5px 5px 0 0;display: flex;align-items: center;justify-content: space-between;">
+                    <p style="text-align: center;padding: 5px;">Často hledaná</p>
+                    <button class="butIc" onclick="
             document.getElementById('features').style.display='none';
             document.getElementById('blackback').style.display='none';
             ">
-            <svg  class="ib" viewBox="0 0 24 24" style="">
-                    <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-                </svg>
-            </button>
+                        <svg class="ib" viewBox="0 0 24 24" style="">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div style="padding: 5px;">
+                    <p style="margin-top: 0px;">Často vyhledané slova: </p>
+                    <ul style="max-height: 70vh; overflow-y: scroll;">
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=baňka&tl=mo">Baňka - vánoční koule</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=bloncat&tl=mo">Bloncat - toulat</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=sud&tl=mo">Bečka - sud</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=dědina&tl=mo">Dědina - vesnice</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=srstka&tl=mo">Gatě - kalhoty</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=haluz&tl=mo">Haluz - větev</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=legát&tl=mo">Legát - židle</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kačena&tl=mo">Kačena - kachna</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=koblih&tl=mo">Koblih - kobliha</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=křidla&tl=mo">Křidla - poklička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=lavečka&tl=mo">Lavečka - lavička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=obyčej&tl=mo">Obyčej - zvyk</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=okurek&tl=mo">Okurek - okurka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=rozednívá&tl=mo">Rozednívá se - svítá</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=okoštovat&tl=mo">Okoštovat - ochutnat</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=pletýnka&tl=mo">Pletýnka - houska</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=prča&tl=mo">Prča - legrace</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=rožnout&tl=mo">Rožnout - rozsvíťit</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=slunce&tl=mo">Slunko - slunce</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=strnisko&tl=mo">Strnisko - strniště</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=střechýl&tl=mo">Střechýl - rampouch</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=srstka&tl=mo">Srstka - angrešt</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=smola&tl=mo">Smola - smůla</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=syrnica&tl=mo">Syrnica - sýrová polévka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šnytlich&tl=mo">Šnytlich - pažitka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šalina&tl=mo">Šalina - tramvaj</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šňůrka&tl=mo">Šňůrka - tkanička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zavazet&tl=mo">Zavazet - překážet</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zhlavec&tl=mo">Zhlavec - polštář</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zhlavec&tl=mo">Ryna - žlab</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zamčit&tl=mo">Zamčít - zamknout</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=metla&tl=mo">Metla - koště</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=hadra&tl=mo">Hadra - hard</a></li>
+                    </ul>
+                    <p>Morava je různorodá, některé termíny mohou být různě polohově ohraničená</p>
+                    <!--<a style="display:block;margin: 10px;" href="https://moravskyprekladac.pages.dev/?top">Odkaz na tento list</a>-->
+                    <a style="display:block;margin: 10px;" onclick="CopyStr('https://moravskyprekladac.pages.dev/?top')">Kopírovat tdkaz na tento list</a>
+                </div>
             </div>
-            <div style="padding: 5px;">
-                <p style="margin-top: 0px;">Často hledané slova: </p>
-                <ul style="max-height: 70vh; overflow-y: scroll;">
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=baňka&tl=mo">Baňka - vánoční koule</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=bloncat&tl=mo">Bloncat - toulat</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=sud&tl=mo">Bečka - sud</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=dědina&tl=mo">Dědina - vesnice</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=srstka&tl=mo">Gatě - kalhoty</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=haluz&tl=mo">Haluz - větev</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=legát&tl=mo">Legát - židle</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kačena&tl=mo">Kačena - kachna</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=koblih&tl=mo">Koblih - kobliha</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=křidla&tl=mo">Křidla - poklička</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=lavečka&tl=mo">Lavečka - lavička</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=obyčej&tl=mo">Obyčej - zvyk</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=okurek&tl=mo">Okurek - okurka</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=rozednívá&tl=mo">Rozednívá se - svítá</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=okoštovat&tl=mo">Okoštovat - ochutnat</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=pletýnka&tl=mo">Pletýnka - houska</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=prča&tl=mo">Prča - legrace</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=rožnout&tl=mo">Rožnout - rozsvíťit</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=slunce&tl=mo">Slunko - slunce</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=strnisko&tl=mo">Strnisko - strniště</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=střechýl&tl=mo">Střechýl - rampouch</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=srstka&tl=mo">Srstka - angrešt</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=smola&tl=mo">Smola - smůla</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=syrnica&tl=mo">Syrnica - sýrová polévka</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šnytlich&tl=mo">Šnytlich - pažitka</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šalina&tl=mo">Šalina - tramvaj</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šňůrka&tl=mo">Šňůrka - tkanička</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zavazet&tl=mo">Zavazet - překážet</a></li>
-                    <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zhlavec&tl=mo">Zhlavec - polštář</a></li>
 
-                </ul>
-				<p>Morava je různorodá, některé termíny mohou být různě polohově ohraničená</p>
-				<a style="display:block;margin: 10px;" href="https://moravskyprekladac.pages.dev/?top">Odkaz na tento list</a>
+            <div id="featuresZ" style="display: none; background-color: white;margin: 5px; border-radius: 5px;">
+                <div style="background-color: aliceblue; border-radius: 5px 5px 0 0;display: flex;align-items: center;justify-content: space-between;">
+                    <p style="text-align: center;padding: 5px;">Často hledané hodně lišící</p>
+                    <button class="butIc" onclick="
+            document.getElementById('featuresZ').style.display='none';
+            document.getElementById('blackback').style.display='none';
+            ">
+                        <svg class="ib" viewBox="0 0 24 24" style="">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div style="padding: 5px;">
+                    <p style="margin-top: 0px;">Často hledané slova, která jsou hodně lišící: </p>
+                    <ul style="max-height: 70vh; overflow-y: scroll;">
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=baňka&tl=mo">Baňka - vánoční koule</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=bloncat&tl=mo">Bloncat - toulat</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=sud&tl=mo">Bečka - sud</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=dědina&tl=mo">Dědina - vesnice</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=srstka&tl=mo">Gatě - kalhoty</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=haluz&tl=mo">Haluz - větev</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=legát&tl=mo">Legát - židle</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kačena&tl=mo">Kačena - kachna</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=koblih&tl=mo">Koblih - kobliha</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=křidla&tl=mo">Křidla - poklička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=obyčej&tl=mo">Obyčej - zvyk</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=rozednívá&tl=mo">Rozednívá se - svítá</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=okoštovat&tl=mo">Okoštovat - ochutnat</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=pletýnka&tl=mo">Pletýnka - houska</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=prča&tl=mo">Prča - legrace</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=rožnout&tl=mo">Rožnout - rozsvíťit</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=slunce&tl=mo">Slunko - slunce</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=strnisko&tl=mo">Strnisko - strniště</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=střechýl&tl=mo">Střechýl - rampouch</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=srstka&tl=mo">Srstka - angrešt</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=syrnica&tl=mo">Syrnica - sýrová polévka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šnytlich&tl=mo">Šnytlich - pažitka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šalina&tl=mo">Šalina - tramvaj</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=šňůrka&tl=mo">Šňůrka - tkanička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zavazet&tl=mo">Zavazet - překážet</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zhlavec&tl=mo">Zhlavec - polštář</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zhlavec&tl=mo">Ryna - žlab</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=uškubnout&tl=mo">Uškubnout - utrhnout</a></li>
+                    </ul>
+                    <p>Morava je různorodá, některé termíny mohou být různě polohově ohraničená</p>
+                    <!--<a style="display:block;margin: 10px;" href="https://moravskyprekladac.pages.dev/?topZ">Odkaz na tento list</a>-->
+                    <a style="display:block;margin: 10px;" onclick="CopyStr('https://moravskyprekladac.pages.dev/?topZ')">Kopírovat tdkaz na tento list</a>
 
+                </div>
             </div>
-        </div>
+
+            <div id="featuresP" style="display: none; background-color: white;margin: 5px; border-radius: 5px;">
+                <div style="background-color: aliceblue; border-radius: 5px 5px 0 0;display: flex;align-items: center;justify-content: space-between;">
+                    <p style="text-align: center;padding: 5px;">Často hledaná drobně lišící</p>
+                    <button class="butIc" onclick="
+            document.getElementById('featuresP').style.display='none';
+            document.getElementById('blackback').style.display='none';
+            ">
+                        <svg class="ib" viewBox="0 0 24 24" style="">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div style="padding: 5px;">
+                    <p style="margin-top: 0px;">Často hledané slova, která drobně lišící</p>
+                    <ul style="max-height: 70vh; overflow-y: scroll;">
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=babka&tl=mo">Babka - bába</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=botek&tl=mo">Botek - botka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=brk&tl=mo">Brk - brko</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=dobré%20ráno&tl=mo">Dobré ráno - dobré jitro</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kačena&tl=mo">Kačena - kachna</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=karborátor&tl=mo">Karborátor - karburátor</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kmotřenka&tl=mo">Kmotřenka - kmotřička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=knedla&tl=mo">Knedla - knedlík</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kvítí&tl=mo">Kvítí - kytka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=krtičinec&tl=mo">Krtičinec - krtinec</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=hadra&tl=mo">Hadra - hard</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=metla&tl=mo">Metla - koště</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kameň&tl=mo">Kameň - kamen</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=koblih&tl=mo">Koblih - kobliha</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=kaluže&tl=mo">Kaluže - kaluž</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=lavečka&tl=mo">Lavečka - lavička</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=okurek&tl=mo">Okurek - okurka</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=oskoruša&tl=mo">Oskoruša - oskeruše</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=slunce&tl=mo">Slunko - slunce</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=strnisko&tl=mo">Strnisko - strniště</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=smola&tl=mo">Smola - smůla</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=udeřit&tl=mo">Udeřit - uhodit</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=všecko&tl=mo">Všecko - všechno</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zamčit&tl=mo">Zamčít - zamknout</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=žička&tl=mo">Žička - lžíce</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=zalivat&tl=mo">Zalívat - zalévat</a></li>
+                    </ul>
+                    <p>Morava je různorodá, některé termíny mohou být různě polohově ohraničená</p>
+                    <!--<a style="display:block;margin: 10px;" href="https://moravskyprekladac.pages.dev/?topP">Odkaz na tento list</a>-->
+                    <a style="display:block;margin: 10px;" onclick="CopyStr('https://moravskyprekladac.pages.dev/?topP')">Kopírovat tdkaz na tento list</a>
+                </div>
+            </div>
+
+            <div id="featuresS" style="display: none; background-color: white;margin: 5px; border-radius: 5px;">
+                <div style="background-color: aliceblue; border-radius: 5px 5px 0 0;display: flex;align-items: center;justify-content: space-between;">
+                    <p style="text-align: center;padding: 5px;">Častá zvláštní slova pro čechy</p>
+                    <button class="butIc" onclick="
+            document.getElementById('featuresS').style.display='none';
+            document.getElementById('blackback').style.display='none';
+            ">
+                        <svg class="ib" viewBox="0 0 24 24" style="">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div style="padding: 5px;">
+                    <p style="margin-top: 0px;">Často hledané slova, která drobně lišící</p>
+                    <ul style="max-height: 70vh; overflow-y: scroll;">
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=babka&tl=mo">Babka - bába</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=bečka&tl=mo">Bečka - sud</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=deska&tl=mo">Deska - prkno</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=sodovka&tl=mo">Sodovka - limonáda</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=stolař&tl=mo">Stolař - truhlář</a></li>
+                        <li><a style="display:block;font-size: 6mm;" href="https://moravskyprekladac.pages.dev/?text=stolař&tl=mo">Piják - klíště</a></li>
+
+
+                    </ul>
+                    <p>Morava je různorodá, některé termíny mohou být různě polohově ohraničená</p>
+                    <!--<a style="display:block;margin: 10px;" href="https://moravskyprekladac.pages.dev/?topS">Odkaz na tento list</a>-->
+                    <a style="display:block;margin: 10px;" onclick="CopyStr('https://moravskyprekladac.pages.dev/?topS')">Kopírovat tdkaz na tento list</a>
+                </div>
+            </div>
 
         </div>
-    </div>
         <div id="body" style="min-height: 100vh; /*display: none*/">
             <div style="padding: 0px; height: -webkit-fill-available;">
 
@@ -132,11 +263,11 @@
 							} else {
 							/*	document.getElementById('nav').style.display='flex';*/
 							/*	document.getElementById('nav').style.left='0px;';*/
-							document.getElementById('butShow').style.opacity='0';
+							    document.getElementById('butShow').style.opacity='0';
 								document.getElementById('butclose').style.opacity='1';
 								/*	document.getElementById('nav').style.marginLeft='500px';*/
 									document.getElementById('nav').style.opacity='1';
-							document.getElementById('nav').classList.remove('navTrans');
+							    document.getElementById('nav').classList.remove('navTrans');
 							}
 						">
                         <svg id="butShow" class="ib" viewBox="0 0 24 24" style="position: absolute;">
@@ -160,16 +291,40 @@
                 <!-- Links, settings, info -->
 
                 <div id="nav" style="/*display: none;*/" class="navTrans">
-					<p style="display:inline-block;text-decoration: underline;" id="textTopSearch">Seznam často hledaných</p>
-					<br>
-                    <button class="button" id="textMyTop" onclick="
-					document.getElementById('features').style.display = 'block'; 
+                    <p style="display:inline-block;text-decoration: underline;" id="textTopSearch">Seznamy slov</p>
+                    <br>
+                    <button class="button" id="textMyTopZ" onclick="
+					document.getElementById('featuresZ').style.display = 'block';
 					document.getElementById('blackback').style.display='block';
 					document.getElementById('nav').classList.add('navTrans');
-									document.getElementById('nav').style.opacity='0.1';
-					">Top&nbsp;překlady</button>
+					document.getElementById('nav').style.opacity='0.1';
+					">Hodně lišící překlady
+                    </button>
                     <br>
-					<br>
+                    <button class="button" id="textMyTopP" onclick="
+					    document.getElementById('featuresP').style.display = 'block';
+					    document.getElementById('blackback').style.display='block';
+					    document.getElementById('nav').classList.add('navTrans');
+					    document.getElementById('nav').style.opacity='0.1';
+					">Drobně lišicí překlady
+                    </button>
+                    <br>
+                    <button class="button" id="textMyTop" onclick="
+					    document.getElementById('features').style.display = 'block';
+					    document.getElementById('blackback').style.display='block';
+					    document.getElementById('nav').classList.add('navTrans');
+					    document.getElementById('nav').style.opacity='0.1';
+					">Top překlady
+                    </button>
+                    <br>
+                    <button class="button" id="textMyTopS" onclick="
+					    document.getElementById('featuresS').style.display = 'block';
+					    document.getElementById('blackback').style.display='block';
+					    document.getElementById('nav').classList.add('navTrans');
+					    document.getElementById('nav').style.opacity='0.1';
+					">Zvláštní moravská slova pro čechy</button>
+                    <br>
+                    <br>
                     <p style="display:inline-block;text-decoration: underline;" id="textTranslation">Překlad</p>
                     <br>
                     <button class="button" id="textCopyThisTrans" onclick="CopyLink()">Kopírovat odkaz na&nbsp;překlad</button>
