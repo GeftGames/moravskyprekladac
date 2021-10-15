@@ -533,6 +533,45 @@ function SetLanguage() {
 			textRefreshTooltip = "Vymažat mezipaměť a obnovit stránku";
 			document.getElementById("metalocale").content = "cs_CZ";
 			break;
+			
+		case "mo":
+			textTheme="Motiv";
+			textNightDark="Tmavý noční";
+			textLight="Světlý";
+			textDark="Tmavý";
+			textCopy = "Kopírovat";
+			//textTranslator = "Překladač";
+			textDefault2="Podlevá systému";
+			textWriteSomething = "Semka něco napište";
+			textHereShow = "Toť se objeví překlad";
+			textConClear = "Opravdu chcete vymazat uložené překlady?";
+			textSavedTrans = "Uložené překlady";
+		//	textAddChar = "Vložit znak";
+			textTranslation = "Překlad";
+			textCopyThisTrans = "Kopírovat odkaz na překlad";
+			textSaveTrans = "Uložit tento překlad";
+			textSettings = "Nastavení";
+			textWeblanguage = "Jazyk webu";
+			textAutoTranslate = "Automatický překlad";
+			textMark = "Zvýraznění překladu";
+			textMoreInfo = "Rozšířené informace";
+			textMoreInfoDev = "Pro vývojáře";
+			textSaved = "Uložené překlady";
+			textDeveloper = "Vývojář";
+			textPCSaving = "Ukládání do počítače";
+			textCookies = "Tento web nepoužívá cookies. Ukládání nastavení do počítače je pomocí localStorage.";
+			textInfo = "Informace";
+			textWoc = "Velikost slovníku: ";
+			textRemove="Vymazat";
+			textCH="Česko-moravský";
+			textHC="Moravsko-český";
+
+			textCHTranslator="Překladač česko-moravský";
+			textHCTranslator="Překladač moravský-český";
+
+			textRefreshTooltip = "Vymažat mezipaměť a obnovit stránku";
+			//document.getElementById("metalocale").content = "cs_CZ";
+			break;
 	}
 
 	if (language == "ha") document.documentElement.lang = "hana1242"; // Glottolog
