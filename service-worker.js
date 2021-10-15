@@ -27,6 +27,7 @@ var filesToCache = [
     "https://moravskyprekladac.pages.dev/manifestSK.json",
     "https://moravskyprekladac.pages.dev/manifestDE.json",
     "https://moravskyprekladac.pages.dev/manifestJP.json",
+	"https://moravskyprekladac.pages.dev/manifestMO.json",
 ];
 
 self.addEventListener('install', function (e) {
