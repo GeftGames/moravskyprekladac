@@ -1,0 +1,41 @@
+{
+  "name": "Moravian translator",
+  "short_name": "Moravian translator",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "../images/icon64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../images/icon96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../images/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "splash_pages": null,
+  "shortcuts": [
+    {
+      "name": "Moravian-Czech",
+      "short_name": "Moravian-Czech",
+      "description": "Moravian-Czech translator",
+      "url": "https://moravskyprekladac.ga/",
+      "icons": [{"src": "icon96.png", "sizes": "96x96" }]
+    }
+  ]
+}

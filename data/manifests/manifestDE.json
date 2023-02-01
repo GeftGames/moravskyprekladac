@@ -1,0 +1,45 @@
+{
+  "author": "GeftGames",
+  "manifest_version": 2,
+  "version": "0.1",
+  "name": "Übersetzer Tschechisch-Mährenisch",
+  "short_name": "Übersetzer Tschechisch-Mährenisch",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "lang": "de-DE",
+  "default_locale": "en",
+  "icons": [
+    {
+      "src": "../images/icon64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../images/icon96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../images/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "splash_pages": null,
+  "shortcuts": [
+    {
+      "name": "M-Tschechisch",
+      "short_name": "Mährenisch-Tschechisch",
+      "description": "Mährenisch-Tschechisch Übersetzer",
+      "url": "https://moravskyprekladac.ga/",
+      "icons": [{"src": "icon96.png", "sizes": "96x96" }]
+    }
+  ]
+}
