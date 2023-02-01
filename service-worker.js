@@ -1,33 +1,39 @@
-var cacheName = 'hanpre-ver-1';
+var cacheName = 'moravskyprekladac-ver-1';
 var filesToCache = [
-    "https://moravskyprekladac.pages.dev/index.html",
+    "index.php",
 
-    "https://moravskyprekladac.pages.dev/engine.js",
+    "engine.js",
+    "data/styles/style.css",
 
-    "https://moravskyprekladac.pages.dev/themes/dark.css",
-    "https://moravskyprekladac.pages.dev/themes/nightdark.css",
-    "https://moravskyprekladac.pages.dev/themes/light.css",
+    "data/styles/themes/dark.css",
+    "data/styles/themes/nightdark.css",
+    "data/styles/themes/light.css",
 
-    "https://moravskyprekladac.pages.dev/style.css",
-    "https://moravskyprekladac.pages.dev/ListMo.txt",
+    "DIC/ListHA.txt",
+    "DIC/ListMO.txt",
+    "DIC/ListVA.txt",
+    "DIC/ListSO.txt",
+    "DIC/ListSLez.txt",
 
-    "https://moravskyprekladac.pages.dev/favicon.ico",
-   // "https://hanackeprekladac.ga/icon512.png",
-  //  "https://hanackeprekladac.ga/script.js",
+    "favicon.ico",
 
-    "https://moravskyprekladac.pages.dev/index400.php",
-    "https://moravskyprekladac.pages.dev/index401.php",
-    "https://moravskyprekladac.pages.dev/index403.php",
-    "https://moravskyprekladac.pages.dev/index404.php",
-    "https://moravskyprekladac.pages.dev/index503.php",
+    "data/images/icon64.png",
+    "data/images/icon96.png",
+    "data/images/icon512.png",
 
-    "https://moravskyprekladac.pages.dev/manifestEN.json",
-    "https://moravskyprekladac.pages.dev/manifestHA.json",
-    "https://moravskyprekladac.pages.dev/manifestCS.json",
-    "https://moravskyprekladac.pages.dev/manifestSK.json",
-    "https://moravskyprekladac.pages.dev/manifestDE.json",
-    "https://moravskyprekladac.pages.dev/manifestJP.json",
-	"https://moravskyprekladac.pages.dev/manifestMO.json",
+    "data/errorPages/index400.php",
+    "data/errorPages/index401.php",
+    "data/errorPages/index403.php",
+    "data/errorPages/index404.php",
+    "data/errorPages/index503.php",
+
+    "data/manifests/manifestEN.json",
+    "data/manifests/manifestHA.json",
+    "data/manifests/manifestCS.json",
+    "data/manifests/manifestSK.json",
+    "data/manifests/manifestDE.json",
+    "data/manifests/manifestJP.json",
+    "data/manifests/manifestMO.json",
 ];
 
 self.addEventListener('install', function (e) {
@@ -38,16 +44,21 @@ self.addEventListener('install', function (e) {
     );
 });
 self.addEventListener('fetch', function (event) {
+    
    self.caches.open(cacheName).then(function (cache) {
         self.caches.match(event.request).then(function (cacheResponse) {
-           /* var fetchPromise = */self.fetch(event.request).then(function (fetchResponse) {
+            /* var fetchPromise = */self.fetch(event.request).then(function (fetchResponse) {
                 // Online - add to cache
                 cache.put(event.request, fetchResponse.clone());
-                event.respondWith( fetchResponse);
-             //   return;
-            }).catch(() => {
+              //  event.respondWith(fetchResponse);
+              //  console.error('Offline:', error);
+              console.log('Online loaded: '+event.request.url);
+                return fetchResponse;
+            }).catch((error) => {
                 // Offline
-                event.respondWith( cacheResponse);
+                console.log('Offline loaded: '+event.request.url);
+                event.respondWith(cacheResponse);
+                 return cacheResponse;
                // return;
             });
           //  event.respondWith( cacheResponse || fetchPromise);
