@@ -1,0 +1,41 @@
+{
+  "name": "モラビアン方言の翻訳者",
+  "short_name": "モラビアン方言の翻訳者",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "lang": "jp-JP",
+  "icons": [
+    {
+      "src": "../images/icon64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../images/icon96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../images/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "splash_pages": null,
+  "shortcuts": [
+    {
+      "name": "モラビアン方言-チェコ語",
+      "short_name": "モラビアン方言-チェコ語",
+      "description": "モラビアン方言-チェコ語 翻訳者",
+      "url": "https://moravskyprekladac.ga/",
+      "icons": [{"src": "icon96.png", "sizes": "96x96" }]
+    }
+  ]
+}

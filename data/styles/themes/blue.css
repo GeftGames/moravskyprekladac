@@ -1,0 +1,23 @@
+/*div#body.theme,*/ html.theme{
+	background-color: #e6f2ff;
+}
+
+#header.theme {
+	background-color: #99c9ff;
+	color: #99c9ff;
+}
+#nav.theme {
+	background-color: #e6f2ff;
+}
+#lte{
+	background-color: #EDF5FF;
+}
+#rte.theme{
+	background-color: white;
+}
+.selectGroup0{font-size: larger; background-color: #99c9ff;  }
+.selectGroup1{ font-size: large;padding-left: 5px;background-color:#EDF5FF; }
+
+#progness{
+	background-color: #99c9ff;
+}

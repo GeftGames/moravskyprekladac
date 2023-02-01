@@ -1,0 +1,184 @@
+/*div#body.theme,*/ html.theme{
+	background-color: black;
+}
+center.theme, p.theme, span.theme {
+	color: lightgray;
+}
+#header.theme {
+	background-color: #002633;
+	color: aliceblue;
+	box-shadow: -.3px -.3px 4px #ffffff42;
+}
+#lte.theme, #rte.theme {
+	color: lightgray;
+	text-shadow: .5px .5px 2px rgba(255,255,255,.2);
+	background-color: #111111;
+}
+#lte.theme, #rte.theme {
+	background-color: #111111;
+	box-shadow: 0px 0px 4px #ffffff;
+}
+.placeholder.theme, textarea::placeholder.theme {
+	color: rgba(70,70,70) !important;
+	text-shadow: .5px .5px 2px rgba(255,255,255,.05);
+	filter: blur(0.5px);
+}
+span.translated/*.theme*/ {
+	color: rgb(180, 235, 180);
+}
+span.phase/*.theme*/ {
+	color: rgb(140, 235, 140);
+}
+span.untranslated/*.theme*/ {
+	color: rgb(235, 180, 180);
+}
+span.replaces/*.theme*/ {
+	color: rgb(180, 220, 235);
+}
+span.unknown/*.theme*/ {
+	color: rgb(235, 235, 235);
+}
+.symolerror{
+	background-color: rgb(255,125,0,.3);
+}
+/*.traMOp {
+	text-decoration: underline dotted gray;
+}*/
+.button.theme {
+	color: lightgray;
+	border: 1px solid #cacaca;
+	background-color: #1a1a1a;
+	box-shadow: 0 1px 0 rgba(255,255,255,.3), 1.25px 2.25px 2.5px -1px rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.1) inset;
+	text-shadow: .5px .5px 2px rgba(255,255,255,.2);
+}
+.button.theme:hover {
+	background-color: #222222;
+	text-shadow: 1px 1px 2.5px rgba(255,255,255,.3);
+	color: lightgray;
+}
+.button.theme:active, .button.theme:focus {
+	background-color: #0c0c0c;
+	box-shadow: 0 1px 1px rgba(255,255,255,.1) inset;
+	text-shadow: .7px .7px 2px rgba(255,255,255,.1);
+}
+select.theme {
+	background-color: #1a1a1a;
+	color: lightgray;
+	text-shadow: .5px .5px 2px rgba(255,255,255,.2);
+	box-shadow: 0px 0px 3px #fffffff0;
+}
+select.theme, option.theme {
+	background-color: #1a1a1a;
+}
+#nav.theme {
+	background-color: black;
+	box-shadow: 6px 6px 16px #ffffff42;
+}
+a.theme {
+	color: #c7e3ff;
+}
+.charIns.theme {
+	color: rgb(200,200,255);
+}
+.textbox.theme:focus-visible {
+	outline: 2px yellow dashed;
+}
+a.theme:focus-visible {
+	outline: 2px yellow dashed;
+}
+input.theme:focus-visible + .slider {
+	outline: 2px yellow dashed;
+}
+.button.theme:focus-visible {
+	outline: 2px yellow dashed;
+}
+.butIc.theme:focus-visible {
+	border: 2px yellow dashed;
+}
+select.theme:focus {
+	box-shadow: 0px 0px 7px #b3d4ff;
+}
+#lte:focus-within.theme {
+	box-shadow: 0px 0px 7px #b3d4ff;
+}
+#headername.theme {
+	color: lightgray;
+}
+.ib.theme {
+	color: #94989e;
+	filter: drop-shadow(0.5px 0.5px 1px rgba(255, 255, 255, .2));
+}
+
+.savedItem.theme{
+	background-color: #002533;
+	box-shadow: 0 0 5px #002533;
+}
+.savedItemFrom.theme{
+	color: lightgray;
+}
+.savedItemTo.theme{
+	color: #999999;
+}
+.slider/*.theme*/{
+	box-shadow: inset 0 0 2px #ffffff23, 0 0 3px #ffffff55;
+}
+.slider/*.theme*/:before{
+	box-shadow: 1px 1px 3px #ffffff99;
+}
+a.theme:hover{
+	color:#00bfff;
+}
+input:checked + .slider:before {
+	background-color: #00ace6;
+}
+input:checked + .slider{
+	background-color: #00ace680;
+}
+p.savedItem.theme.mouseover{
+	background-color: #00384d;
+	box-shadow: 0 0 3px 2px #00384d;
+}
+#specialTextarea.theme {
+	background-color: black;
+    color: lightgray;
+}
+#specialTextarea[data-placeholder].theme:empty:before {
+	color:#666666;
+}
+/*
+::selection{
+	background-color: #198cb3;
+}
+::-webkit-selection{
+	background-color: #198cb3;
+}
+::-moz-selection {
+  background-color: #198cb3;
+}*/
+.selectGroup0{ color:lightgray; background-color: #00384d; }
+.selectGroup1{ color:lightgray; background-color:black; }
+.selectGroup2{ color:lightgray; background-color: black; }
+.selectGroupLang0{color:lightgray; background-color: black; }
+.selectGroupLang1{ color:lightgray; background-color: black; }
+.selectGroupLang2{ color:lightgray; background-color: black; }
+option{
+	color:lightgray; 
+	background-color: black;
+}
+
+#errorMessage{    
+	background-color: rgb(80,0,0)
+}
+.disabledTranslate{
+	color:rgb(150, 150, 150);
+}
+
+#progness{
+	background-color: #004e92;
+}
+#loadingBar{
+	background-color: #3f3f3f;
+}
+#loadingBar{
+	box-shadow: .5px .5px 2.5px #ffffff42;
+}
