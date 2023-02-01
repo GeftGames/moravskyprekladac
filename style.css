@@ -12,7 +12,7 @@
 }
 .wrong {
 	text-decoration: underline wavy 1.5px #ff000099;
-}
+} 
 span{
 	transition: color .3s;
 }
