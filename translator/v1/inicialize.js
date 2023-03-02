@@ -1,3 +1,10 @@
+// 0 - nothing
+// 1 - something small
+// 2 - basic
+// 3-  good
+// 4 - advanced
+// 5 - really good
+
 let translations = [
 	/*"Iterdialekty", [
 		"Západomoravský",
@@ -7,7 +14,7 @@ let translations = [
 
 	"Moravské oblasti", [
 		"Slovácko", [
-			"Podluží 👎|CS_SL_Poluží",
+			"Podluží|CS_SL-Poluzi|2",
 
 			"Horňácko",
 			"Moravské Kopanice",
@@ -27,24 +34,28 @@ let translations = [
 
 			// nekdy k Valachách
 			"Luhačovické Zálesí",
+
+			"Kopanice|CS_SL-Kopanice|1"
 		],
 
 		"Valašsko", [
 			"Uherskohradišťské Závrší",
 			"Podřevnicko",
-			"Rožnovsko|CS_VA_Rožnov",
-			"Klouboukovsko",
-			"Vsetínsko",
+			"Rožnovsko|CS_VA-Roznov|3",
+			"Meziříčsko|CS_VA-ValMez|1",
+			"Klouboukovsko|CS_VA-Klobouky|0",
+			"Vsetínsko|CS_VA-Vsetin|0",
 			"Visovicko",
+			"Frenštátsko|CS_VA-Frenstat|0",
 			// nekdy zvlášť k Hranicku
-			"Kelečsko",
+		//	"Kelečsko|CS_VA-Kelc|0",
 		],
 
 		"Moravské Horácko", [
 			"Horácko", [
 				//Severní
 				"Žďársko",
-				"Kunštátsko",
+				"Kunštátsko|CS_PH-Kunstat|0",
 
 				// Střední
 				"Jihlavsko",
@@ -53,7 +64,7 @@ let translations = [
 				"Želetavsko",
 				"Telč",
 				"Dačice",
-				"Jemnicko 👎|CS_CS_Jemnice",
+				"Jemnicko|CS_HO-Jemnice|1",
 			],
 
 			"Podhorácko", [
@@ -65,18 +76,18 @@ let translations = [
 				"Velkobítešsko",
 
 				// Jižní Podhorácko
-				"Třebíčsko",
+				"Třebíčsko|CS_PH_Trebicsko|0",
 				"Oslovansko",
 				"Hrotovicko",
 
 				// Pod Brnem
 				"Moravskobudějovicko",
-				"Židlochovicko 👎|Židlochovicko",
+				"Židlochovicko|CS_PH-Zidlochovicko|1",
 			],
 
 			"Malá haná", [
 				// Severní
-				"Boskovicko|CS_Boskovicko",
+				"Boskovicko|CS_MH-Boskovicko|2",
 
 				// Jižní
 				"Jevíčko",
@@ -85,27 +96,29 @@ let translations = [
 			],
 
 			"Horácké Dolsko", [
-				"Znojemsko 👎|znojmo",
+				"Znojemsko|CS_PH-Znojmo|1",
 			]
 		],
 
 		"Haná", [
 			// nekdy k samostatny
+			"Zábřežsko SZ|CS_HA-ZabrehSZ|0",
 			"Zábřežsko",
 			"Litovelsko",
-			"Olomoucko|CS_HA_Namest",
-			"Čuhácko 👎|CS_Cuhacko",
+			"Olomoucko|CS_HA-Namest|4",
+			"Čuhácko|CS_HA-Cuhacko|2",
 			"Prostějovsko Severní",
 			"Prostějovsko Jižní",
 			"Přerovsko",
-			"Kroměřížsko 👎|Kroměříž",
+			"Kroměřížsko|CS_HA-Kromeriz|1",
 			"Vyškovsko",
-			"Slavkovsko-Bučovicko",
+			"Slavkovsko-Bučovicko|CS_Ha-SlavkovskoBucovicko|1",
 		],
 
-		"Pobečví, Záhoří", [
+		"Kelečsko, Záhoří, Pobečví", [
 			"Hranicko",
-			"Hostýnské závrší"
+			"Hostýnské závrší",
+			"Kelečsko|CS_KZ-Kelc|0"
 		],
 
 		"Drahansko, Blansko, Hřebečsko", [
@@ -118,23 +131,23 @@ let translations = [
 		"Lašsko, Kravařsko", // Moravská brána,
 		[
 			// Lašsko
-			"Jižní Frýdecko-Mýstecko 👎|CS_LA_FrydekMistek",
+			"Jižní Frýdecko-Mýstecko|CS_LA-FrydekMistek|1",
 			"Ostravsko",
 			"Frendštátsko",
-			"Novojíčinsko",
+			"Novojíčinsko|CS_KR-Jicin|1",
 			//"Staré hamry"
 		],
 
 		"Brněnsko", [
-			"Brněnský hantec",
-		]
+			"Brněnský hantec|CS_BR-Hantec|0",
+		],
 	],
 
 	"Slezské oblasti", [
 		"Těšínské Slezsko", [
 			"Goralsko",
 			"Karvinsko",
-			"Těšínsko 👎|CS_těšín",
+			"Těšínsko|CS_SZ-Tesin|1",
 			"Bohumínsko",
 			"Havířovsko",
 		],
@@ -149,8 +162,9 @@ let translations = [
 	],
 
 	"Moravský jazyk", [
-	//	"Přirozená Moravština 👎|CS_MO_light",
-		"Moravština 👎|CS_MO_medium",
+		"Moravština, nenápadná|CS_MO-Nenapadna|1",
+		"Moravština, návrh|CS_MO-Tradice|2",
+		//"Moravština C, převaha|CS_MO_medium",
 	],
 
 	/*"Okolní jazyky", [
@@ -163,17 +177,16 @@ let translations = [
 var languagesList = [];
 
 function init() {
-	console.log("Translator inicializating starting...");
+	if (dev)console.log("Translator inicializating starting...");
 	let select = document.getElementById('selectorFrom');
 	let select2= document.getElementById("selectorTo");
 
-	let AllLang=[];
 	InnerSearch(translations, select,select2, 0);
 
 	function InnerSearch(arr, parent, parent2, level) {
 		let onlyStr = true;
-		for (let i = 0; i < arr.length; i++) {
-			if (typeof arr[i] !== 'string') {
+		for (const a of arr) {//const i = 0; i < arr.length; i++
+			if (typeof a !== 'string') {
 				onlyStr = false;
 				break;
 			}
@@ -181,49 +194,41 @@ function init() {
 
 		// Nové jazyky
 		if (onlyStr) {
-			for (let i = 0; i < arr.length; i++) {
-				let lang = arr[i];
-
-				//  let from=new LanguageTr("CS"+"_"+lang);
-				// let to=new LanguageTr(lang+"_"+"CS");
-				//  languagesList.push(from);
-				//  languagesList.push(to);
+			//for (let i = 0; i < arr.length; i++) {
+			//	let lang = arr[i];
+			for (const lang of arr) {
 
 				// Add text to comboBox
 				if (lang.includes('|')) {
 					let s=lang.split('|');
-					let tr=new LanguageTr(s[1]);
-					languagesList.push(tr);
-					AllLang.push(s[1]);
-
-					let nodeLang = document.createElement('option');
-					nodeLang.value=s[1];
-					nodeLang.innerText = s[0];
-					nodeLang.className = "selectGroupLang" + level;
-					parent.appendChild(nodeLang);
 					
-					let nodeLang2 = document.createElement('option');
-					nodeLang2.value=s[1];
-					nodeLang2.innerText = s[0];
-					nodeLang2.className = "selectGroupLang" + level;
-					parent2.appendChild(nodeLang2);
-				} else {
-				/*	let tr=new LanguageTr(lang);
-					languagesList.push(tr);
-					AllLang.push(lang);
+					let quality=s[2];//0=nothing, 1=something basic, 2=low quality; 3=medium; 4=good; 5=well done
+					if ((!betaFunctions && quality>=2) || (betaFunctions && quality>0) || dev) {
+						let name=s[0];
+						if (quality<=1) name+=" 👎";
+						if (quality>=4) name+=" 👍";
+						let file=s[1];
 
-					let nodeLang = document.createElement('option');
-					nodeLang.value=lang;
-					nodeLang.innerText = lang;
-					nodeLang.className = "selectGroupLang" + level;
-					parent.appendChild(nodeLang);
-					
-					let nodeLang2 = document.createElement('option');
-					nodeLang2.value=lang;
-					nodeLang2.innerText = lang;
-					nodeLang2.className = "selectGroupLang" + level;
-					parent2.appendChild(nodeLang2);*/
-				}
+						let tr=new LanguageTr(file);
+						tr.quality=quality;
+						languagesList.push(tr);
+						tr.GetVocabulary(/*dev*/);
+						//AllLang.push(file);
+
+						let nodeLang = document.createElement('option');
+						nodeLang.value=file;
+						nodeLang.innerText = name;
+						nodeLang.className = "selectGroupLang" + level;
+						parent.appendChild(nodeLang);
+						
+						let nodeLang2 = document.createElement('option');
+						nodeLang2.value=file;
+						nodeLang2.innerText = name;
+						nodeLang2.className = "selectGroupLang" + level;
+						parent2.appendChild(nodeLang2);
+
+					}
+				} 
 			}
 			return;
 		} else {
@@ -231,7 +236,7 @@ function init() {
 			for (let i = 0; i < arr.length; i += 2) {
 				let name = arr[i];
 				let next = null;
-				if (i + 1 < arr.length) next = arr[i + 1];
+				if (i + 1 < arr.length) next = arr[i+1];
 				let nodeLang;
 				let nodeLang2;
 
@@ -240,7 +245,7 @@ function init() {
 					nodeLang = document.createElement('optgroup');
 					nodeLang.label = name;
 					nodeLang.className = "selectGroup" + level;
-					select.appendChild(nodeLang);
+					select.appendChild(nodeLang);/**/
 					
 					nodeLang2 = document.createElement('optgroup');
 					nodeLang2.label = name;
@@ -253,17 +258,11 @@ function init() {
 			return;
 		}
 	}
-	dev=true;
-	//CS_VA_Rožnov//CS_HA_Namest
-//	languagesList.push(new LanguageTr("CS_MO"));
-	//languagesList.push(new LanguageTr("CS_HA_Namest"));
-	//languagesList.push(new LanguageTr("CS_VA_Rožnov"));
-	// Load Vacabulary
-	for (let i = 0; i < languagesList.length; i++) {
-		languagesList[i].GetVocabulary(dev);
-	}
+	//dev=true;
 
-	//Translate();
+/*	for (let i = 0; i < languagesList.length; i++) {
+		languagesList[i].GetVocabulary(dev);
+	}*/
 }
 
 function DisableLangTranslate(search) {
@@ -304,12 +303,14 @@ function Translate() {
 	let input=document.getElementById("specialTextarea").value;
 	//console.log("input: ", input);
 
-	if (lang !== null){
-		let out=lang.Translate(input,true);
-		if (dev) console.log("Transtated as: ", out);
+	if (lang !== null) {
 		let outputParernt=document.getElementById("outputtext");
 		outputParernt.innerHTML="";
+		let out=lang.Translate(input,true);
+		if (dev) console.log("Transtated as: ", out);
 		outputParernt.appendChild(out);
+
+		BuildSelect(lang);
 	}
 }
 
@@ -329,7 +330,7 @@ function GetCurrentLanguage() {
 	
 	for (let e of languagesList) {
 		if (e.name==ele2){
-			console.log(e.name);
+			//console.log(e.name);
 			return e;
 		}
 	}
@@ -353,3 +354,180 @@ function ReportDownloadedLanguage() {
 	}
 }
 
+function BuildSelect(lang) {
+	if (lang==null) return "";
+	let parent=document.getElementById("optionsSelect");
+	parent.innerHTML="";
+	if (lang.SelectReplace==undefined) return;
+	if (lang.SelectReplace==null) return;
+
+	
+
+	 // lang.SelectReplace = např. [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]
+	for (let i=0; i<lang.SelectReplace.length; i++){
+		const l = lang.SelectReplace[i];
+		let to=l[1];
+		let node=document.createElement("select");
+		node.setAttribute("languageTo", lang.Name)
+		node.setAttribute("languageSelectIndex", i);
+
+		// Options
+		for (const z of to) {
+			let option=document.createElement("option");
+			option.innerText=z;
+			node.appendChild(option);
+		}
+		
+		
+		// text
+		let info=document.createElement("span");
+		info.innerText="Výběr: ";	
+		parent.appendChild(info);
+
+		parent.appendChild(node);
+	}
+}
+function translateContentsSubs(contents) {
+	console.log("Translating file...");
+
+	let lines=contents.split("\r\n").join('\n').split("\n");
+	let output="";
+	//let events=false;
+
+	for (const line of lines){
+		//if (events) {
+			if (line.startsWith("Dialogue")) {
+				let lineCont=ToXOcur(",", 7, line);
+				output+=lineCont[0];
+
+				let linesOfSubs=lineCont[1].split("\\n");
+				
+				for (const sl of linesOfSubs){
+					let translated=TranslateSimpleText(sl);
+					if (linesOfSubs[linesOfSubs.length-1]==sl)output+=translated;
+					else output+=translated+"\\n";
+				}
+				output+="\n";
+			} else output+=line+"\n";
+		//}else output+=line+"\n";
+		
+		//if (line=="[Events]") events=true;
+	}
+console.log(output);
+	return output;
+}
+  
+function ToXOcur(char, ocur, string){
+	let cnt=0;
+	let ret="", bef="";
+
+	for (let i=0; i<string.length; i++){
+		let ch=string[i];
+				
+		if (cnt==ocur) {
+			ret+=ch;
+		} else {
+			if (ch==char) cnt++;
+			bef+=ch;
+		}
+	}
+	return [bef, ret];
+}
+
+function TranslateFile() {
+	var link = document.getElementById('downloadFile');
+    link.style.display = 'none';
+
+	console.log(document.querySelector("#file-input").files[0]);
+	if(document.querySelector("#file-input").files.length == 0) {
+		alert('Error : No file selected');
+		return;
+	}
+
+	// file selected by user
+	let file = document.querySelector("#file-input").files[0];
+
+	// file name
+	let file_name = file.name;
+
+	// file MIME type
+	//let file_type = file.type;
+
+	// file size in bytes
+	//let file_size = file.size;
+
+	// new FileReader object
+	let reader = new FileReader();
+
+	// event fired when file reading finished
+	reader.addEventListener('load', function(e) {
+	   // contents of the file
+	    let text = e.target.result;
+		let translated=TranslateSimpleText(text);
+		//makeTextFile(file_name,text);
+
+		
+		var link = document.getElementById('downloadFile');
+		link.setAttribute('download', file_name);
+		link.href = makeTextFile(translated);
+		link.style.display = 'block';
+		console.log(link.href);
+	});
+	
+
+	// event fired when file reading failed
+	reader.addEventListener('error', function() {
+	    alert('Error : Failed to read file');
+	});
+
+	reader.readAsText(file);
+}
+
+function TranslateSubs() {
+	var link = document.getElementById('downloadSubs');
+    link.style.display = 'none';
+
+	console.log(document.querySelector("#subs-input").files[0]);
+	if(document.querySelector("#subs-input").files.length == 0) {
+		alert('Error: No subs selected');
+		return;
+	}
+
+	let file = document.querySelector("#subs-input").files[0];
+
+	// file name
+	let file_name = file.name;
+
+	let reader = new FileReader();
+
+	reader.addEventListener('load', function(e) {
+	    let text = e.target.result;
+		let translated=translateContentsSubs(text);
+		
+		var link = document.getElementById('downloadSubs');
+		link.setAttribute('download', file_name);
+		link.href = makeTextFile(translated);
+		link.style.display = 'block';
+		console.log(link.href);
+	});
+	
+	reader.addEventListener('error', function() {
+	    alert('Error : Failed to read subs');
+	});
+
+	reader.readAsText(file);
+}
+
+
+var textFile= null;
+makeTextFile = function (text) {
+	var data = new Blob([text], { type: "text/html" });
+
+	if (textFile !== null) {
+		window.URL.revokeObjectURL(textFile);
+	}
+
+	textFile = window.URL.createObjectURL(data);
+
+	return textFile;
+};

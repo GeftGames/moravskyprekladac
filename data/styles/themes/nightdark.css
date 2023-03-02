@@ -1,3 +1,11 @@
+:root{
+	--text: lightgray;	/*Text color*/
+	--back: black; 	/*Background Color*/
+	--thCol: #002633;	/*theme Color*/
+	--thCol55: #66ccff55;/*theme Color alpha 55*/
+	--conBack: #111111; /*controls background*/
+	--conBackH: #222222; /*controls background hover*/
+}
 /*div#body.theme,*/ html.theme{
 	background-color: black;
 }
@@ -5,17 +13,17 @@ center.theme, p.theme, span.theme {
 	color: lightgray;
 }
 #header.theme {
-	background-color: #002633;
+	background-color: var(--thCol);
 	color: aliceblue;
 	box-shadow: -.3px -.3px 4px #ffffff42;
 }
 #lte.theme, #rte.theme {
 	color: lightgray;
 	text-shadow: .5px .5px 2px rgba(255,255,255,.2);
-	background-color: #111111;
+	background-color: var(--conBack);
 }
 #lte.theme, #rte.theme {
-	background-color: #111111;
+	background-color: var(--conBack);
 	box-shadow: 0px 0px 4px #ffffff;
 }
 .placeholder.theme, textarea::placeholder.theme {
@@ -47,12 +55,12 @@ span.unknown/*.theme*/ {
 .button.theme {
 	color: lightgray;
 	border: 1px solid #cacaca;
-	background-color: #1a1a1a;
+	background-color: var(--conBack);
 	box-shadow: 0 1px 0 rgba(255,255,255,.3), 1.25px 2.25px 2.5px -1px rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.1) inset;
 	text-shadow: .5px .5px 2px rgba(255,255,255,.2);
 }
 .button.theme:hover {
-	background-color: #222222;
+	background-color: var(--conBackH);
 	text-shadow: 1px 1px 2.5px rgba(255,255,255,.3);
 	color: lightgray;
 }
@@ -62,13 +70,13 @@ span.unknown/*.theme*/ {
 	text-shadow: .7px .7px 2px rgba(255,255,255,.1);
 }
 select.theme {
-	background-color: #1a1a1a;
+	background-color: var(--conBack);
 	color: lightgray;
 	text-shadow: .5px .5px 2px rgba(255,255,255,.2);
 	box-shadow: 0px 0px 3px #fffffff0;
 }
 select.theme, option.theme {
-	background-color: #1a1a1a;
+	background-color: var(--conBack);
 }
 #nav.theme {
 	background-color: black;
@@ -139,22 +147,12 @@ p.savedItem.theme.mouseover{
 	box-shadow: 0 0 3px 2px #00384d;
 }
 #specialTextarea.theme {
-	background-color: black;
+	background-color: var(--conBack);
     color: lightgray;
 }
 #specialTextarea[data-placeholder].theme:empty:before {
 	color:#666666;
 }
-/*
-::selection{
-	background-color: #198cb3;
-}
-::-webkit-selection{
-	background-color: #198cb3;
-}
-::-moz-selection {
-  background-color: #198cb3;
-}*/
 .selectGroup0{ color:lightgray; background-color: #00384d; }
 .selectGroup1{ color:lightgray; background-color:black; }
 .selectGroup2{ color:lightgray; background-color: black; }
@@ -165,14 +163,12 @@ option{
 	color:lightgray; 
 	background-color: black;
 }
-
 #errorMessage{    
 	background-color: rgb(80,0,0)
 }
 .disabledTranslate{
 	color:rgb(150, 150, 150);
 }
-
 #progness{
 	background-color: #004e92;
 }
@@ -181,4 +177,28 @@ option{
 }
 #loadingBar{
 	box-shadow: .5px .5px 2.5px #ffffff42;
+}
+#tabBackGround{
+	background: linear-gradient(180deg, var(--thCol) 0%, var(--thCol) 10%, black 100%);
+}
+.tab{
+	color: var(--text);
+	background-color: var(--conBack);
+    box-shadow: 0px 0px 3px #ffffff42;
+}
+.tab:hover{
+	background-color: var(--conBackH);
+	color: var(--text);
+}
+.tabSelected{
+	background-color: var(--thCol);
+}
+#aboutPage{
+    background-color: var(--back);
+}
+#closeAboutPage:focus-visible{
+	border: 2px var(--text) dashed;
+}
+#closeAboutPage:hover{
+	background-color: var(--thCol55);
 }

@@ -441,9 +441,238 @@ var textTheme,
     textDefault2,
     textLight,
     textDark;
-var theme;
+var ThemeLight, ThemeDay, Power;
 var lastInputText = [];
 var textNote;
+
+function getOS() {
+	var userAgent = window.navigator.userAgent,
+		platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
+		macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+		windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+		iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+		os = null;
+  
+	if (macosPlatforms.indexOf(platform) !== -1) {
+	  	os = 'Mac OS';
+	} else if (iosPlatforms.indexOf(platform) !== -1) {
+	  	os = 'iOS';
+	} else if (windowsPlatforms.indexOf(platform) !== -1) {
+	  	os = 'Windows';
+	} else if (/Android/.test(userAgent)) {
+	  	os = 'Android';
+	} else if (/Linux/.test(platform)) {
+	  	os = 'Linux';
+	}
+
+	return os;
+}
+
+const HSLToRGB = (h, s, l) => {
+	s /= 100;
+	l /= 100;
+	const k = n => (n + h / 30) % 12;
+	const a = s * Math.min(l, 1 - l);
+	const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+	return Math.round(255 * f(0))+", "+Math.round(255 * f(8))+", "+Math.round(255 * f(4));
+  };
+
+function customTheme() {
+	ThemeLight= document.getElementById("themeLight").value;
+	Power= document.getElementById("power").value;
+	ThemeDay= document.getElementById("themeDay").value;
+
+	localStorage.setItem('ThemeLight', ThemeLight);
+	localStorage.setItem('ThemeDay', ThemeDay);
+	localStorage.setItem('Power', Power);
+
+	// Dark/Light
+	let themeLight; // true or false
+	if (ThemeLight == "default") {
+		if (window.matchMedia) { 
+			themeLight=!window.matchMedia('(prefers-color-scheme: dark)').matches;
+		} else themeLight=true;
+    } else themeLight=ThemeLight;
+	
+	// Day/Night
+	let themeDay; // true or false
+	if (ThemeDay == "default") {
+		if (window.matchMedia) { 
+			themeDay = !window.matchMedia('(prefers-color-scheme: night)').matches;
+		} else themeDay=true;
+    } else themeDay=(ThemeDay=="day");
+	
+	// (low / optimal / high) tier
+	let power;
+	if (Power == "default") {
+		// Some win
+        if (window.navigator.userAgent.indexOf("Windows") !=-1) {
+			if (window.navigator.userAgent.indexOf('like Gecko') !=-1) {
+				// Win 10
+				if (window.navigator.userAgent.indexOf('Windows NT 10') !=-1) power="fancy";
+				// Win 8.1
+				else if (window.navigator.userAgent.indexOf('Windows NT 6.3') !=-1) power="fancy";
+				// Win 8 
+				else if (window.navigator.userAgent.indexOf('Windows NT 6.2') !=-1) power="fancy"; 
+				// Win 7 
+				else if (window.navigator.userAgent.indexOf('Windows NT 6.1') !=-1) power="optimal"; 
+				// Win ?
+				else if (window.navigator.userAgent.indexOf('compatible') !=-1) power="optimal";  
+				else power="fancy";	
+			}else if (window.navigator.userAgent.indexOf('Trident') !=-1) power="fast";
+			else power="optimal"; 
+
+		// new Mac
+		}else if (navigator.platform.indexOf("MacIntel") !=-1) power="fancy";
+
+		// Old win
+		else if (window.navigator.indexOf("Win98") !=-1) power="fast";
+
+		// old mac
+		else if (window.navigator.indexOf("Mac68K") !=-1) power="fast";
+		// old win phone
+		else if (/windows phone/i.test(userAgent)) power="fast";
+		// apple
+		else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) power="fancy";
+		// Unix
+		if (window.navigator.userAgent.indexOf("X11") != -1) {
+			power="optimal";
+		}
+		// Linux
+		else if (window.navigator.userAgent.indexOf("Linux") != -1) {
+			power="optimal";
+		}
+		// android
+		else if (/android/i.test(window.navigator)) {
+			if(window.innerWidth > 800){
+				power="fancy";
+			}else if(window.innerWidth < 400){
+				power="fast";
+			}else power="optimal";
+			//if (window.opera) power="optimal";
+			//else power="optimal";
+		}else power="optimal";
+    } else power=Power;
+	
+	let colorH=myRange.value;
+	localStorage.setItem('Color', colorH);
+
+	for (let s of document.styleSheets) {
+		/*if (s.href.endsWith('blue.css')) {
+			let rules=s.cssRules;
+			console.log('hsl('+myRange.value+'% 0% 0%)');
+			rules[0].style.setProperty('--ColorTheme', 'hsl('+myRange.value+'deg 100% 80%)');
+			rules[0].style.setProperty('--ColorBack', 'hsl('+myRange.value+'deg 100% 97%)');
+		} else */
+		if (s.href.endsWith('style.css')) {
+			let styles=s.cssRules[0].style;
+
+			if (themeLight=="dark") {
+				if (themeDay) {
+				//	console.log("dark, day");
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 15%)');
+					styles.setProperty('--ColorText', 	'white');
+					styles.setProperty('--ConBack', 	'#2f2f2f');
+					styles.setProperty('--ColorBack', 	'#101010');
+					styles.setProperty('--ColorThemeAccent', 		HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
+					styles.setProperty('--ColorThemeForward', 		'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeAccentBack', 	'hsl('+colorH+'deg 30% 90%)');
+
+					styles.setProperty('--RawColorForw','0, 0, 0');
+					styles.setProperty('--RawColorBack','255, 255, 255');
+					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
+				} else {
+				//	console.log("dark, night");
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 8%)');
+					styles.setProperty('--ColorText', 	'lightgray');
+					styles.setProperty('--ConBack', 	'#1a1a1a');
+					styles.setProperty('--ColorBack', 	'black');
+					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
+					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 10%)');
+
+					styles.setProperty('--RawColorForw','0, 0, 0');
+					styles.setProperty('--RawColorBack','255, 255, 255');
+					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
+				}			
+			} else if (themeLight=="light") {
+				if (themeDay) {					
+				//	console.log("light, day");
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 96%)');
+					styles.setProperty('--ColorText', 	'black');
+					styles.setProperty('--ConBack', 	'white');
+					styles.setProperty('--ColorBack', 	'white');
+					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 100% 50%)'*/);
+					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+
+					styles.setProperty('--RawColorForw','255, 255, 255');
+					styles.setProperty('--RawColorBack','0, 0, 0');
+					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
+				} else {
+				//	console.log("light, night");
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 97%)');
+					styles.setProperty('--ColorText', 	'black');
+					styles.setProperty('--ConBack', 	'white');
+					styles.setProperty('--ColorBack', 	'white');
+					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
+					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+
+					styles.setProperty('--RawColorForw','200, 200, 200');
+					styles.setProperty('--RawColorBack','0, 0, 0');
+					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
+				}
+			} else {// Semilight
+				if (themeDay){
+				//	console.log("semi, day");
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 90%)');
+					styles.setProperty('--ColorText', 	'black');
+					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 100% 99%)');
+					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 100% 98%)');
+					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50));//styles.setProperty('--ColorThemeAccent', 	);
+					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+
+					styles.setProperty('--RawColorForw','255, 255, 255');
+					styles.setProperty('--RawColorBack','0, 0, 0');
+					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
+				} else {
+					//console.log("semi, night");
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 90%)');
+					styles.setProperty('--ColorText', 	'black');
+					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH,30,50));/*'hsl('+colorH+'deg 30% 50%, .4)');*/
+					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+
+					styles.setProperty('--RawColorForw','255, 255, 255');
+					styles.setProperty('--RawColorBack','0, 0, 0');
+					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
+				}
+			}
+
+			if (Power=="fancy") {
+				styles.setProperty('--transitionSlow','.3s');
+				styles.setProperty('--transitionFast','.15s');
+				styles.setProperty('--transitionRFast','50ms');
+				styles.setProperty('--tsh', '.5px .5px 2px rgba(var(--RawColorBack), .2)');
+			} else if (Power=="fast") {
+				styles.setProperty('--transitionSlow','0s');
+				styles.setProperty('--transitionFast','0s');
+				styles.setProperty('--transitionRFast','0s');
+				styles.setProperty('--tsh', 'none');
+			} else {//Optimal
+				styles.setProperty('--transitionSlow','.25s');
+				styles.setProperty('--transitionFast','.15s');
+				styles.setProperty('--transitionRFast','0s');
+				styles.setProperty('--tsh', '.5px .5px 1.5px rgba(var(--RawColorBack), .2)');
+			} 
+			break;
+		}
+	}
+}
 
 function toggleTransitionOn() {
     document.querySelectorAll('p').forEach(e => e.classList.add('theme'));
@@ -454,40 +683,15 @@ function toggleTransitionOn() {
     document.querySelectorAll('option').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('.ib').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('.innertxttranscont').forEach(e => e.classList.add('theme'));
-
     document.getElementById('lte').classList.add('theme');
     document.getElementById('rte').classList.add('theme');
-    //	document.getElementById('body').classList.add('theme');
     document.getElementById('nav').classList.add('theme');
     document.getElementById('header').classList.add('theme');
     document.getElementById('specialTextarea').classList.add('theme');
     document.documentElement.classList.add('theme');
-
-    /*function SetTransition(e) {
-    	e.classList.add('theme');
-    }*/
 }
 
 function toggleTransitionOff() {
-    /*document.querySelectorAll('p').forEach(e => SetTransition(e));
-    document.querySelectorAll('a').forEach(e => SetTransition(e));
-    document.querySelectorAll('span').forEach(e => SetTransition(e));
-    document.querySelectorAll('button').forEach(e => SetTransition(e));
-    document.querySelectorAll('select').forEach(e => SetTransition(e));
-    document.querySelectorAll('option').forEach(e => SetTransition(e));
-    document.querySelectorAll('.ib').forEach(e => SetTransition(e));
-    document.querySelectorAll('.innertxttranscont').forEach(e => SetTransition(e));
-
-    SetTransition(document.getElementById('lte'));
-    SetTransition(document.getElementById('rte'));
-    SetTransition(document.getElementById('body'));
-    SetTransition(document.getElementById('nav'));
-    SetTransition(document.getElementById('header'));
-    SetTransition(document.documentElement);
-
-    function SetTransition(e) {
-    	e.classList.remove('theme');
-    }*/
     usingTheme = false;
     document.querySelectorAll('p').forEach(e => e.classList.remove('theme'));
     document.querySelectorAll('a').forEach(e => e.classList.remove('theme'));
@@ -500,7 +704,6 @@ function toggleTransitionOff() {
 
     document.getElementById('lte').classList.remove('theme');
     document.getElementById('rte').classList.remove('theme');
-    //document.getElementById('body').classList.remove('theme');
     document.getElementById('specialTextarea').classList.add('theme');
     document.getElementById('nav').classList.remove('theme');
     document.getElementById('header').classList.remove('theme');
@@ -510,7 +713,6 @@ function toggleTransitionOff() {
 function toggleNoTransitionOn() {
     usingTheme = true;
     SetTransition(document.documentElement);
-    //	SetTransition(document.getElementById('body'));
     SetTransition(document.getElementById('nav'));
     SetTransition(document.getElementById('header'));
     SetTransition(document.getElementById('rte'));
@@ -525,7 +727,6 @@ function toggleNoTransitionOn() {
     document.querySelectorAll('.ib').forEach(e => SetTransition(e));
     document.querySelectorAll('.innertxttranscont').forEach(e => SetTransition(e));
 
-
     function SetTransition(e) {
         e.classList.add('disabled-transition');
         e.classList.add('theme');
@@ -538,7 +739,7 @@ function toggleNoTransitionOn() {
 
 function SaveTrans() {
     HidePopUps();
-    let fr = document.getElementById('specialTextarea').value /*innerText*/ ; //textInput
+    let fr = document.getElementById('specialTextarea').value;
     if (fr == "") return;
     let st = new savedTraslation();
     st.input = fr;
@@ -550,8 +751,6 @@ function SaveTrans() {
 
     document.getElementById("savedDiv").style.display = "block";
 
-    //let tr = saved[i], i = saved.length-1;
-
     SetSavedTranslations();
 
     document.getElementById('nav').style.display = 'none';
@@ -561,10 +760,10 @@ function SaveTrans() {
 }
 
 function ChangeDic() {
-    let selFrom = document.getElementById('selectorFrom');
+   // let selFrom = document.getElementById('selectorFrom');
     let selTo = document.getElementById('selectorTo');
 
-    localStorage.setItem('trFrom', selFrom.value);
+   // localStorage.setItem('trFrom', selFrom.value);
     localStorage.setItem('trTo', selTo.value);
 
 
@@ -583,20 +782,6 @@ function ChangeDic() {
     SpellingJob();*/
    // prepareToTranslate(true);
 }
-
-/*function prepareToTranslate(z) {
-    if (!z && !autoTranslate) return;
-    forceTranslate = z;
-    //if (enabletranslate || z){
-    enabletranslate = false;
-    //	setTimeout(timeoutEnableTranslating, 100);
-    //	translate();
-    if (document.getElementById('outputtext').innerHTML == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' + textHereShow + '</span>';
-    //}else{
-
-    //	console.log("matte");
-    //}
-}*/
 
 function ShowError(text) {
     error = true;
@@ -627,8 +812,11 @@ function ChangeDev() {
         document.getElementById('whiteabout').style.display = 'none';
         document.getElementById('refresh').style.display = 'none';
     }
-    //SpellingJob();
-    //prepareToTranslate(true);
+}
+function ChangeBetaFunctions() {
+    if (!loaded) return;
+    betaFunctions = document.getElementById('betaFunctions').checked;
+    localStorage.setItem('setting-betaFunctions', betaFunctions);
 }
 
 function ChangeStylizate() {
@@ -636,7 +824,6 @@ function ChangeStylizate() {
     styleOutput = document.getElementById('styleOutput').checked;
     localStorage.setItem('setting-styleOutput', styleOutput);
     SpellingJob();
-  //  prepareToTranslate(true);
 }
 
 function ChangeTesting() {
@@ -644,16 +831,12 @@ function ChangeTesting() {
     testingFunc = document.getElementById('testingFunc').checked;
     localStorage.setItem('setting-testingFunc', testingFunc);
 
-    //document.querySelectorAll('.devFunction').forEach(e => SwitchHide(e));
     if (testingFunc) document.querySelectorAll('.devFunction').forEach(e => e.style.display = 'unset');
     else document.querySelectorAll('.devFunction').forEach(e => e.style.display = 'none');
-
-    //
 }
 
 function SwitchHide(e) {
     e.classList.toggle("hidden");
-    //	console.log("testingFunc"+testingFunc);
 }
 
 function ShowAboutPage(){
@@ -686,8 +869,7 @@ function CloseAboutPage(){
 function setNodeAboutPage(){
 	document.getElementById("aboutPage").style.display="none";
 }
-
-
+let langFile;
 function SetLanguage() {
     if (language == "default") {
         var userLang = navigator.language || navigator.userLanguage;
@@ -698,506 +880,111 @@ function SetLanguage() {
         else language = "en";
     }
 
-    switch (language) {
-        default: textFrom = "From";
-        textTo = "to";
-        text2HAOB = "Obecná hanáčtina";
-        text2LAOB = "Obecná laština";
-        text2SLOB = "Obecný východomoravský";
-        textCannotTranslate = "Cannot translate";
-        text2CS = "Czech";
-        text2HA = "Hanakien";
-        text2CSje = "Jemnické nářečí";
-        text2VA = "Wallachian";
-        text2SO = "Slovakian";
-        text2Slez = "Silezian";
-        text2SL = "Slovak";
-        text2BH = "Brněnského hantecu";
-        text2MO = "Moravian";
-        textTheme = "Theme";
-        textDefault2 = "Default";
-        textNightDark = "Night dark";
-        textLight = "Light";
-        textDark = "Dark";
-        textCH = "Czech-Haná dialect";
-        textHC = "Haná dialect-Czech";
-        textCHTranslator = "Translator Czech-Moravian";
-        textHCTranslator = "Translator Moravian-Czech";
-        textCopy = "Copy";
-        textRemove = "Remove";
-        textHereShow = "The translation will appear here";
-        textWriteSomething = "Write there something";
-        textConClear = "Are you sure you want to clear saved translations?";
-        textSavedTrans = "Saved translations";
-        textAddChar = "Insert a char";
-        textTranslation = "Translation";
-        textCopyThisTrans = "Copy the link to the translation";
-        textSaveTrans = "Save this translation";
-        textSettings = "Settings";
-        textWeblanguage = "Web language";
-        textAutoTranslate = "Automatic translation";
-        textMark = "Highlight the translation";
-        textMoreInfo = "Extra information";
-        textMoreInfoDev = "For developers";
-        textSaved = "Saved translations";
-        //	textDeveloper = "Developer";
-        textPCSaving = "Saving to your computer";
-        textCookies = "This website does not use cookies. Save settings into your computer is via localStorage.";
-        //	textInfo = "Information";
-        textWoc = "Dictionary size: ";
-        textRefreshTooltip = "Clear the cache and refresh the page";
-        document.getElementById("metalocale").content = "en_GB";
-        textNote = "Translator is still in developing process";
-        break;
+	langFile=langs[language];
+	if (langFile==undefined) {
+		console.log("Unknown lang: "+lang+", userLang"+language);
+		return;
+	}
+  
+  document.documentElement.lang = language;
 
-        case "ha":
-			textFrom = "Z";
-            textTo = "do";
-            text2CSje = "Jemnické nářečí";
-            textTheme = "Motiv";
-            textLight = "Světlé";
-            textDark = "Tmavé";
-            text2CS = "Češťênê";
-            text2HA = "Hanačênê";
-            text2VA = "Valaštênê";
-            text2Slez = "Slezšťěna";
-            text2SO = "Slováčťênê";
-            text2SL = "Slovenšťênê";
-            text2BH = "Brněnskyho hantecô";
-            text2MO = "Moravštênê";
-            textNightDark = "Tmavé nočni";
-            textHC = "Z hanáčtênê do češtênê";
-            textDefault2 = "Podlevá systémô";
-            textCHTranslator = "Překladač Česko-moravské";
-            textHCTranslator = "Překladač Moravsko-české";
-            textCopy = "Kopirovat";
-            textCannotTranslate = "Nende přeložit";
-            textRemove = "Vêmazat";
-            //textTranslator = "Překladač";
-            textHereShow = "Toť se objevi překlaď";
-            textWriteSomething = "Sem neco napište";
-            textConClear = "Opravdô chcete vêmazat ôloženy překladê?";
-            textSavedTrans = "Ôloženy překladê";
-            textAddChar = "Vložte znak";
-            textTranslation = "Překlad";
-            textCopyThisTrans = "Kopirovat odkaz na překlad";
-            textSaveTrans = "Ôložêt tento překlad";
-            textSettings = "Nastaveni";
-            textWeblanguage = "Jazêk webô";
-            textAutoTranslate = "Automatické překlad";
-            textMark = "Zvyrazněni překladô";
-            textMoreInfo = "Vic informaci";
-            textMoreInfoDev = "Pro developerê";
-            textSaved = "Ôloženy překladê";
-            //	textDeveloper = "Vévojář";
-            textPCSaving = "Ôkládáni do počitača";
-            textCookies = "Tato stránka nepóžêvá šôšenkê. K ôkládáni nastaveni do počitača se póžêvá localstorage.";
-            //	textInfo = "Informace";
-            textWoc = "Velêkosť slovnikô: ";
-            textRefreshTooltip = "Vêmažat mezêpaměť a obnovit stránkô";
-            document.getElementById("metalocale").content = "ha_CZ";
-            textNote = "Překladač furt je v rozfrfněnym stavô";
-
-            break;
-
-        case "sk":
-                textFrom = "Z";
-            textTo = "do";
-            text2CS = "Češtiny";
-            text2HA = "Hanáčiny";
-            text2CSje = "Jemnické nářečí";
-            text2VA = "Valaštiny";
-            text2SO = "Sliezky";
-            text2Slez = "Silezian";
-            text2SL = "Slovenčtiny";
-            text2BH = "Brněnského hantecu";
-            text2MO = "Moravštiny";
-            textNote = "Prekladač je stále vo vývine";
-            textTheme = "Motiv";
-            textLight = "Svetlý";
-            textDark = "Tmavý";
-            textNightDark = "Tmavý nočný";
-            textCopy = "Kopírovať";
-            textCannotTranslate = "Nie je možné preložiť";
-            textCH = "Česko-hanácký";
-            textDefault2 = "Podľa systému";
-            textHC = "Hanácko-český";
-            textCHTranslator = "Prekladač Česko-moravský";
-            textHCTranslator = "Prekladač Moravsko-český";
-            textRemove = "Vymazať";
-            //	textTranslator = "Prekladač";
-            textHereShow = "Tu sa objaví preklad";
-            textWriteSomething = "Sem niečo napíšte";
-            textConClear = "Ste si istí, že chcete vymazať uložené preklady?";
-            textSavedTrans = "Uložené preklady";
-            textAddChar = "Vložte znak";
-            textTranslation = "Preklad";
-            textCopyThisTrans = "Kopírovať odkaz na preklad";
-            textSaveTrans = "Uložiť tento preklad";
-            textSettings = "Nastavenie";
-            textWeblanguage = "Jazyk webu";
-            textAutoTranslate = "Automatický preklad";
-            textMark = "Zvýraznenie prekladu";
-            textMoreInfo = "Rozšírené informácie";
-            textMoreInfoDev = "Pre vývojárov";
-            textSaved = "Uložené preklady";
-            //	textDeveloper = "Vývojár";
-            textPCSaving = "Ukladanie do počítača";
-            textCookies = "Táto stránka nepoužíva cookies. Na uchovávanie nastavenia sa používa localStorage.";
-            //	textInfo = "Informácie";
-            textWoc = "Veľkosť slovníka: ";
-            textRefreshTooltip = "Vymazať vyrovnávaciu pamäť a obnoviť stránku";
-            document.getElementById("metalocale").content = "sk_SK";
-            break;
-
-        case "jp":
-                textFrom = "";
-            textTo = "から";
-            text2CSje = "Jemnické nářečí";
-            text2CS = "Češtiny";
-            textCannotTranslate = "翻訳できません";
-            text2HA = "Hanáčiny";
-            text2VA = "Valaštiny";
-            text2SO = "Slováčtiny";
-            text2Slez = "シレジア語";
-            text2SL = "Slovenštiny";
-            text2BH = "Brněnského hantecu";
-            text2MO = "Moravštiny";
-            textTheme = "色";
-            textNightDark = "ダークナイト";
-            textLight = "白";
-            textDark = "黒";
-            textDefault2 = "システムによると";
-            textCH = "チェコ語-ハナツケ言";
-            textHC = "ハナツケ言-チェコ語";
-            textCHTranslator = "翻訳者 チェコ語-モラビア語";
-            textHCTranslator = "翻訳者 モラビア語-チェコ語";
-            textRemove = "消去";
-            textCopy = "コピー";
-            //	textTranslator = "翻訳者";
-            textHereShow = "翻訳はここに表示されます";
-            textWriteSomething = "ここに何か書いて";
-            textConClear = "保存した翻訳をクリアしてもよろしいですか？";
-            textSavedTrans = "保存された翻訳";
-            textAddChar = "文字を挿入します";
-            textTranslation = "翻訳";
-            textCopyThisTrans = "翻訳へのリンクをコピーする";
-            textSaveTrans = "この翻訳を保存する";
-            textSettings = "設定";
-            textWeblanguage = "ウェブ言語";
-            textAutoTranslate = "自動翻訳";
-            textMark = "翻訳を強調表示する";
-            textMoreInfo = "拡張情報";
-            textMoreInfoDev = "デベロッパー向け";
-            textSaved = "保存された翻訳";
-            //	textDeveloper = "デベロッパー";
-            textPCSaving = "コンピューターに保存";
-            textCookies = "このサイトはクッキーを使用していません。設定をコンピューターに保存するには、localStorageを使用します。";
-            //	textInfo = "インフォメーション";
-            textWoc = "辞書のサイズ: ";
-            textRefreshTooltip = "キャッシュをクリアしてページを更新します";
-            textNote = "翻訳者はまだ開発中です";
-            document.getElementById("metalocale").content = "jp_JP";
-            break;
-
-        case "de":
-                textFrom = "Von";
-            textTo = "nach";
-            text2CS = "Češtiny";
-            text2HA = "Hanáčiny";
-            text2CSje = "Jemnické nářečí";
-            text2VA = "Valaštiny";
-            text2SO = "Slováčtiny";
-            text2Slez = "Schlesisch";
-            text2SL = "Slovenštiny";
-            text2BH = "Brněnského hantecu";
-            text2MO = "Moravštiny";
-            textTheme = "Mode";
-            textNightDark = "Dunkle Nacht";
-            textLight = "Licht";
-            textCannotTranslate = "Kann nicht übersetzt werden";
-            textDark = "Dunkel";
-            textCopy = "Kopieren";
-            textDefault2 = "nach dem System";
-            textCH = "Tschechisch-Haná Dialekt";
-            textHC = "Haná Dialekt-Tschechisch";
-            textCHTranslator = "Übersetzer Tschechisch-Mährisch";
-            textHCTranslator = "Übersetzer Mährisch-Tschechisch";
-            textHereShow = "Die Übersetzung erscheint hier";
-            textWriteSomething = "Schreib etwas hier";
-            textConClear = "Möchten Sie gespeicherte Übersetzungen wirklich löschen?";
-            textSavedTrans = "Gespeicherte Übersetzungen";
-            textAddChar = "Ein Zeichen einfügen";
-            textTranslation = "Übersetzung";
-            textCopyThisTrans = "Kopiere den Link zur Übersetzung";
-            textSaveTrans = "Diese Übersetzung speichern";
-            textSettings = "Einstellungen";
-            textWeblanguage = "Websprache";
-            textAutoTranslate = "Automatische Übersetzung";
-            textMark = "Markieren Sie die Übersetzung";
-            textRemove = "Löschen";
-            textMoreInfo = "Erweiterte Informationen";
-            textMoreInfoDev = "Für Entwickler";
-            textSaved = "Gespeicherte Übersetzungen";
-            //	textDeveloper = "Entwickler";
-            textPCSaving = "Auf Computer speichern";
-            textCookies = "Das Speichern der Einstellungen auf Ihrem Computer erfolgt über localStorage.";
-            //	textInfo = "Information";
-            textWoc = "Wörterbuchgröße: ";
-            textRefreshTooltip = "Cache leeren und Seite aktualisieren";
-            document.getElementById("metalocale").content = "de_DE";
-            break;
-
-        case "cs":
-                textFrom = "Z";
-            textTo = "do";
-            text2CSje = "Jemnické nářečí";
-            textTheme = "Motiv";
-            text2Slez = "Slezština";
-            textNightDark = "Tmavý noční";
-            textLight = "Světlý";
-            textDark = "Tmavý";
-            textCannotTranslate = "Nelze přeložit, změňte jazyk";
-            textCopy = "Kopírovat";
-            textDefault2 = "Dle systému";
-            textWriteSomething = "Tady něco napište";
-            textHereShow = "Zde se objeví překlad";
-            textConClear = "Opravdu chcete vymazat uložené překlady?";
-            textSavedTrans = "Uložené překlady";
-            textAddChar = "Vložit znak";
-            textTranslation = "Překlad";
-            textCopyThisTrans = "Kopírovat odkaz na překlad";
-            textSaveTrans = "Uložit tento překlad";
-            textSettings = "Nastavení";
-            textWeblanguage = "Jazyk webu";
-            textAutoTranslate = "Automatický překlad";
-            textMark = "Zvýraznění překladu";
-            textMoreInfo = "Rozšířené informace";
-            textMoreInfoDev = "Pro vývojáře";
-            textSaved = "Uložené překlady";
-            //	textDeveloper = "Vývojář";
-            textPCSaving = "Ukládání do počítače";
-            textCookies = "Tento web neužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.";
-            //	textInfo = "Informace";
-            textWoc = "Velikost slovníku: ";
-            textRemove = "Vymazat";
-            textNote = "Překladač je pořád ve vývoji";
-
-            text2CS = "Češtiny";
-            text2HA = "Hanáčiny";
-            text2VA = "Valaštiny";
-            text2SO = "Slováčtiny";
-            text2SL = "Slovenštiny";
-            text2BH = "Brněnského hantecu";
-            text2MO = "Moravštiny";
-
-            textCHTranslator = "Překladač česko-moravský";
-            textHCTranslator = "Překladač moravsko-český";
-
-            textRefreshTooltip = "Vymazat mezipaměť a obnovit stránku";
-            document.getElementById("metalocale").content = "cs_CZ";
-            break;
-
-        case "mo":
-                textFrom = "Z";
-            textTo = "do";
-            text2CSje = "Jemnické nářečí";
-            textTheme = "Motiv";
-            text2Slez = "Slezština";
-            textNightDark = "Tmavý noční";
-            textLight = "Svjetlý";
-            textDark = "Tmavý";
-            textCannotTranslate = "Nende přeložit, změňte jazyk";
-            textCopy = "Kopírovat";
-            textDefault2 = "Podli systému";
-            textWriteSomething = "Toť něco napište";
-            textHereShow = "Toť se objeví překlad";
-            textConClear = "Opravdu chcete vymazat uložené překlady?";
-            textSavedTrans = "Uložené překlady";
-            textAddChar = "Vložit znak";
-            textTranslation = "Překlad";
-            textCopyThisTrans = "Kopírovat odkaz na překlad";
-            textSaveTrans = "Uložit toť ten překlad";
-            textSettings = "Nastavení";
-            textWeblanguage = "Jazyk webu";
-            textAutoTranslate = "Automatický překlad";
-            textMark = "Zvýraznění překladu";
-            textMoreInfo = "Víc informací";
-            textMoreInfoDev = "Pro vývojáře";
-            textSaved = "Uložené překlady";
-            //	textDeveloper = "Developer";
-            textPCSaving = "Ukládání do počítača";
-            textCookies = "Toť ten web nepoužívá cookies. Fšecko se uládá do počítače pomocí localStorage.";
-            //	textInfo = "Informace";
-            textWoc = "Velikosť slovníku: ";
-            textRemove = "Vymazat";
-            textNote = "Překladač je furt ve vývoju";
-
-            text2CS = "Češtiny";
-            text2HA = "Hanáčiny";
-            text2VA = "Valaštiny";
-            text2SO = "Slováčtiny";
-            text2SL = "Slovenštiny";
-            text2BH = "Brněnského hantecu";
-            text2MO = "Moravštiny";
-
-            textCHTranslator = "Překladač česko-moravský";
-            textHCTranslator = "Překladač moravsko-český";
-
-            textRefreshTooltip = "Vymazat mezipaměť a obnovit stránku";
-            document.getElementById("metalocale").content = "cs_CZ";
-            break;
-
-        case "pl":
-                textFrom = "Z";
-            text2CSje = "Jemnické nářečí";
-            textTo = "do";
-            textTheme = "Motyw";
-            text2Slez = "Śląskie";
-            textNightDark = "ciemna noc";
-            textLight = "Jasny";
-            textDark = "Ciemny";
-            textCopy = "Kopiuj";
-            textCannotTranslate = "Nie można przetłumaczyć";
-            textDefault2 = "Zgodnie z systemem";
-            textWriteSomething = "Napisz coś tutaj";
-            textHereShow = "Tłumaczenie pojawi się tutaj";
-            textConClear = "Czy na pewno chcesz usunąć zapisane tłumaczenia?";
-            textSavedTrans = "Zapisane tłumaczenia";
-            textAddChar = "Charakter wkładka";
-            textTranslation = "Tłumaczenie";
-            textCopyThisTrans = "Skopiuj link do tłumaczenia";
-            textSaveTrans = "Zapisz to tłumaczenie";
-            textSettings = "Ustawienia";
-            textWeblanguage = "Język sieci";
-            textAutoTranslate = "Automatyczne tłumaczenie";
-            textMark = "Zaznacz tłumaczenie";
-            textMoreInfo = "Rozszerzone informacje";
-            textMoreInfoDev = "Dla programistów";
-            textSaved = "Zapisane tłumaczenia";
-            //textDeveloper = "Deweloper";
-            textPCSaving = "Przechowywanie komputera";
-            textCookies = "Ta strona nie używa plików cookie. Używasz localStorage do zapisywania ustawień na swoim komputerze.";
-            //	textInfo = "Informacja";
-            textWoc = "Rozmiar słownika: ";
-            textRemove = "Kasować";
-            textNote = "Tłumacz jest wciąż w fazie rozwoju";
-
-            text2CS = "Czeskiego";
-            text2HA = "Hanaczyzny";
-            text2VA = "Wołoszczyzny";
-            text2SO = "Słowaczyzny";
-            text2SL = "Słowackiego";
-            text2BH = "Brneńskiego hańca";
-            text2MO = "Morawczyzny";
-
-            textCHTranslator = "Tłumacz czesko-morawski";
-            textHCTranslator = "Tłumacz morawsko-czeski";
-
-            textRefreshTooltip = "Wyczyść pamięć podręczną i odśwież stronę";
-            document.getElementById("metalocale").content = "pl_PL";
-            break;
-    }
-
-    if (language == "ha") document.documentElement.lang = "hana1242"; // Glottolog
-    else document.documentElement.lang = language;
-
-	var headID = document.getElementsByTagName('manifest');	// document.getElementsByTagName('head')[0];
+	var headID = document.getElementsByTagName('manifest');
 	headID.href = "data/manifests/manifest" + language.toUpperCase() + ".json";
-    //var link = document.createElement('link');
-   // link.type = 'text/json';
-    //link.rel = 'manifest';
-  //  link.href = "/manifests/manifest" + language.toUpperCase() + ".json";
-   // headID.appendChild(link);
 
-    /* link.href = 'http://fonts.googleapis.com/css?family=' + param.family + '&effect=' + param.effect;
+    document.getElementById("from").innerText = langFile.From;
+    document.getElementById("to").innerText = langFile.To;
+    if (document.getElementById("cannotTr") != null) document.getElementById("cannotTr").innerText = langFile.CannotTranslate;
+    document.getElementById("note").innerText = langFile.Note;
+    document.getElementById("textTheme").innerText = langFile.Theme;
+    document.getElementById("textDefaultPower").innerText = langFile.Default;
+    document.getElementById("textDefaultTheme").innerText = langFile.Default;
+    document.getElementById("textLight").innerText = langFile.Light;
+    document.getElementById("textDark").innerText = langFile.Dark;
+    document.getElementById("refresh").title = langFile.RefreshTooltip;
+    document.getElementById("mataDescription").title = langFile.RefreshTooltip;
+    document.getElementById("mataDescription2").title = langFile.RefreshTooltip;
+    document.getElementById("mataDescription3").title = langFile.RefreshTooltip;
+    document.getElementById("textSettings").innerText = langFile.Settings;
+    document.getElementById("textWeblanguage").innerText = langFile.WebLanguage;
+    document.getElementById("textAutoTranslate").innerText = langFile.AutoTranslate;
+    document.getElementById("textMark").innerText = langFile.MarkTranslate;
+    document.getElementById("textMoreInfo").innerText = langFile.MoreInfo;
+    document.getElementById("textMoreInfoDev").innerText = langFile.MoreInfoDev;
+    document.getElementById("textSaved").innerText = langFile.SavedTranslations;
+    document.getElementById("textPCSaving").innerText = langFile.SavingToPC;
+    document.getElementById("textCookies").innerText = langFile.CookiesMessage;
+    document.getElementById("textRemove").innerText = langFile.Remove;
+   // document.getElementById("addchar").innerText = langFile.AddChar;
+    document.getElementById("textSettings").innerText = langFile.Settings;
+	document.getElementById("textAbout").innerText = langFile.About;
+    document.getElementById("txtSavedTrans").innerText = langFile.SavedTrans;
+    document.getElementById("specialTextarea").placeholder = langFile.WriteSomething;
+	document.getElementById("note").innerText = langFile.noteStillInDev;
+	document.getElementById("textTranslator").innerText = langFile.Translator;
+	document.getElementById("tabText").innerText = langFile.Text;
+	document.getElementById("tabTxtFiles").innerText = langFile.TextFiles;
+	document.getElementById("tabSubs").innerText = langFile.SubtitlesFiles;
+	document.getElementById("textSettingsTranstale").innerText = langFile.TranslateOptions;
+	document.getElementById("textbetaFunctions").innerText = langFile.BetaTranslate;
+	document.getElementById("textSettings").innerText = langFile.Settings;
+	document.getElementById("closeAbout").innerText = langFile.Close;
+	document.getElementById("aboutTranslator").innerText = langFile.About;
+	document.getElementById("privacy").innerText = langFile.Privacy;
+	document.getElementById("comment").innerText = langFile.Comment;
+	document.getElementById("contact").innerText = langFile.Contact;
+	document.getElementById("forGoodComputerUsers").innerText = langFile.CommentForDev;
+	document.getElementById("downloadSubs").innerText = langFile.Download;
+	document.getElementById("downloadFile").innerText = langFile.Download;
+	document.getElementById("btnTranslateTxt").innerText = langFile.Translate;
+	document.getElementById("btnTranslateSubs").innerText = langFile.Translate;
+	document.getElementById("VideoNote").innerText = langFile.VideoNote;
+	document.getElementById("supportFiles").innerText = langFile.FileSupport;
+	document.getElementById("textbetaFunctionsDetails").innerText = langFile.MoreInfoBetaTranslate;
+	document.getElementById("czech").innerText = langFile.Czech;
+    if (document.getElementById('specialTextarea').value == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' +  langFile.HereShow + '</span>';
 
-    	<link rel="manifest" href="/manifestEN.json">*/
-    document.getElementById("from").innerText = textFrom;
-    document.getElementById("to").innerText = textTo;
-    if (document.getElementById("cannotTr") != null) document.getElementById("cannotTr").innerText = textCannotTranslate;
-    document.getElementById("note").innerText = textNote;
-    document.getElementById("textTheme").innerText = textTheme;
-    document.getElementById("textDefault2").innerText = textDefault2;
-    document.getElementById("textLight").innerText = textLight;
-    document.getElementById("textDark").innerText = textDark;
-    document.getElementById("textNightDark").innerText = textNightDark;
-    document.getElementById("refresh").title = textRefreshTooltip;
-    document.getElementById("mataDescription").title = textRefreshTooltip;
-    document.getElementById("mataDescription2").title = textRefreshTooltip;
-    document.getElementById("mataDescription3").title = textRefreshTooltip;
-    document.getElementById("textSettings").innerText = textSettings;
-    document.getElementById("textWeblanguage").innerText = textWeblanguage;
-    document.getElementById("textAutoTranslate").innerText = textAutoTranslate;
-    document.getElementById("textMark").innerText = textMark;
-    document.getElementById("textMoreInfo").innerText = textMoreInfo;
-    document.getElementById("textMoreInfoDev").innerText = textMoreInfoDev;
-    document.getElementById("textSaved").innerText = textSaved;
-    /*document.getElementById("textDeveloper").innerText = textDeveloper;*/
-    document.getElementById("textPCSaving").innerText = textPCSaving;
-    document.getElementById("textCookies").innerText = textCookies;
-    //document.getElementById("textInfo").innerText = textInfo;
-    //document.getElementById("textWoc").innerText = textWoc;
-    document.getElementById("textRemove").innerText = textRemove;
-    /*	document.getElementById("selRev").innerText=textCH;
-    	document.getElementById("selRev2").innerText=textHC;*/
-    document.getElementById("addchar").innerText = textAddChar;
-    document.getElementById("textSettings").innerText = textSettings;
-//    document.getElementById("textSaveTrans").innerText = textSaveTrans;
-   // document.getElementById("textCopyThisTrans").innerText = textCopyThisTrans;
- //   document.getElementById("copy").innerText = textCopy;
- //   document.getElementById("textTranslation").innerText = textTranslation;
-
-    /*
-    	document.getElementById("selRevFcs").innerText = text2CS;// +" ⭐";
-    	document.getElementById("selRevTcs").innerText = text2CS;// +" ⭐";
-
-    	document.getElementById("selRevFmo").innerText = text2MO+" ";
-    	document.getElementById("selRevTmo").innerText = text2MO+" ";
-
-    	document.getElementById("selRevFva").innerText = text2VA +" ";
-    	document.getElementById("selRevTva").innerText = text2VA +" ";
-
-    	document.getElementById("selRevFha").innerText = text2HA;//+" ⭐";
-    	document.getElementById("selRevTha").innerText = text2HA;// +" ⭐";
-
-    	document.getElementById("selRevFso").innerText = text2SO+" ";
-    	document.getElementById("selRevTso").innerText = text2SO+" ";
-
-    	document.getElementById("selRevFslez").innerText = text2Slez +" ";
-    	document.getElementById("selRevTslez").innerText = text2Slez +" ";
-    	
-    	document.getElementById("selRevFcs_je").innerText = text2CSje +" (dev)";
-    	document.getElementById("selRevTcs_je").innerText = text2CSje +" (dev)";
-
-    	/*document.getElementById("selRevFha").innerText = text2HAOB+" ⭐";
-    	document.getElementById("selRevTha").innerText = text2HAOB +" ⭐";
-
-    	document.getElementById("selRevFso").innerText = text2SLOB+" ";
-    	document.getElementById("selRevTso").innerText = text2SLOB+" ";
-
-    	text2HAOB="Obecná hanáčtina";
-    			text2LAOB="Obecná laština";
-    			text2SLOB="Obecný východomoravský";
-    			*/
-    //let n;
-    document.getElementById("txtSavedTrans").innerText = textSavedTrans;
-    document.getElementById("specialTextarea").dataset.placeholder = textWriteSomething;
-    //	document.getElementById("specialTextarea").setAttribute('data','placeholder: '+textWriteSomething);
-
-    if (document.getElementById('specialTextarea').value /*innerHTML*/ == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' + textHereShow + '</span>';
-
-    //let sel = document.getElementById('selector');
-
-    //if (sel.selectedIndex == 1) {
     let headername = document.getElementById('headername');
-    headername.innerText = textHCTranslator;
-    document.title = textHCTranslator;
-    //	} else {
-    //	let headername = document.getElementById('headername');
-    //	headername.innerText = textCHTranslator;
-    //	document.title = textCHTranslator;
-    //	}
+    headername.innerText = langFile.TranslatorCM;
+    document.title = langFile.TranslatorCM;
+}
+
+function TabSelect(enableElement, tab) {
+	if (tab==tabText){
+		tabText.classList.add("tabSelected");
+		tabSubs.classList.remove("tabSelected");
+		tabTxtFiles.classList.remove("tabSelected");
+		// return;
+	}else
+	if (tab==tabSubs) {
+		tabText.classList.remove("tabSelected");
+		tabSubs.classList.add("tabSelected");
+		tabTxtFiles.classList.remove("tabSelected");
+		///return;
+   	}else
+   	if (tab==tabTxtFiles){
+		tabText.classList.remove("tabSelected");
+		tabSubs.classList.remove("tabSelected");
+		tabTxtFiles.classList.add("tabSelected");
+	//	return;
+	}
+
+	// Disable all
+	translateText.style.display='none'; 
+	translateSubs.style.display='none';
+	translateFiles.style.display='none';
+
+	//tabText.style.zIndex=0;
+	//tabSubs.style.zIndex=0;
+	//tabTxtFiles.style.zIndex=0;
+
+	//tabText.style.backgroundColor="white";
+	//tabSubs.style.backgroundColor="white";
+	//tabTxtFiles.style.backgroundColor="white";
+
+	// Enable
+	enableElement.style.display='contents'; 
+	//tab.style.zIndex=3;
+	//tab.style.backgroundColor="aliceBlue";
 }
 
 function RemoveTrans() {
@@ -1291,23 +1078,38 @@ function RegisterSpecialTextarea() {
 }
 
 function SetTheme() {
-    let bef = theme;
-    theme = document.getElementById("theme").value;
-    if (theme == bef) return;
+    let bef = ThemeLight;
+    ThemeLight = document.getElementById("themeLight").value;
+    if (ThemeLight == bef) return;
 
     // Off
-    toggleTransitionOff();
+   // toggleTransitionOff();
 
-    if (dev) console.log("Set Theme: " + theme);
-    if (theme == "default") {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-            document.getElementById("themeAplicator").href = "./data/styles/themes/dark.css";
-        else document.getElementById("themeAplicator").href = "./data/styles/themes/light.css";
-    } else document.getElementById("themeAplicator").href = "./data/styles/themes/" + theme + ".css";
+    if (dev) console.log("Set Theme: " + ThemeLight);
+    if (ThemeLight == "default") {
+        if (window.matchMedia){ 
+			let constrast=window.matchMedia('(prefers-contrast: more)').matches;
+			let dark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+			if (dark) {
+				if (constrast) {
+			//		document.getElementById("themeAplicator").href = "./data/styles/themes/dark.css";
+				}else{
+			//		document.getElementById("themeAplicator").href = "./data/styles/themes/darknight.css";	
+				}
+			}else{
+				if (constrast) {
+				//	document.getElementById("themeAplicator").href = "./data/styles/themes/light.css";
+				}else{	
+				//	document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
+				}
+			}            
+		} //else document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
+    } //else document.getElementById("themeAplicator").href = "./data/styles/themes/" + ThemeLight + ".css";
     // On
-    toggleTransitionOn();
+    //toggleTransitionOn();
 
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('themeLight', ThemeLight);
 
     //SpellingJob();
     //	translate();
@@ -1359,42 +1161,92 @@ function Load() {
     // Load setting
     let ztheme;
     try {
-        ztheme = localStorage.getItem('theme');
+        ztheme = localStorage.getItem('ThemeLight');
     } catch {}
-    if (ztheme === null) {
-        theme = "default";
-    } else theme = ztheme;
 
-    if (theme == "default") {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-            document.getElementById("themeAplicator").href = "./data/styles/themes/dark.css";
-        else document.getElementById("themeAplicator").href = "./data/styles/themes/light.css";
+    if (ztheme === null) {
+        ThemeLight = "default";
+    } else ThemeLight = ztheme;
+
+    if (ThemeLight == "default") {
     } else {
-        document.getElementById("themeAplicator").href = "./data/styles/themes/" + theme + ".css";
-        switch (theme) {
+        switch (ThemeLight) {
             case "light":
-                document.getElementById("theme").selectedIndex = 1;
+                document.getElementById("themeLight").selectedIndex = 1;
                 break;
+
+			default: //semi
+				document.getElementById("themeLight").selectedIndex = 2;
+				break;
 
             case "dark":
-                document.getElementById("theme").selectedIndex = 2;
-                break;
-
-            case "nightdark":
-                document.getElementById("theme").selectedIndex = 3;
-                break;
-
-            case "blue":
-                document.getElementById("theme").selectedIndex = 4;
+                document.getElementById("themeLight").selectedIndex = 3;
                 break;
         }
     }
-    toggleNoTransitionOn();
+
+	let zthemeDay;
+    try {
+        zthemeDay = localStorage.getItem('ThemeDay');
+    } catch {}
+
+    if (zthemeDay === null) {
+        ThemeDay = "default";
+    } else ThemeDay = zthemeDay;
+
+    if (ThemeDay == "default") {
+    } else {
+        switch (ThemeDay) {
+            case "day":
+                document.getElementById("themeDay").selectedIndex = 1;
+                break;
+
+            case "night":
+                document.getElementById("themeDay").selectedIndex = 2;
+                break;
+        }
+    }
+
+	let zPower;
+    try {
+        zPower = localStorage.getItem('Power');
+    } catch {}
+
+    if (zPower === null) {
+        Power = "default";
+    } else Power = zPower;
+
+    if (Power == "default") {
+    } else {
+        switch (Power) {
+            case "fast":
+                document.getElementById("power").selectedIndex = 3;
+                break;
+
+            case "optimal":
+                document.getElementById("power").selectedIndex = 2;
+                break;
+				
+			case "fancy":
+				document.getElementById("power").selectedIndex = 1;
+				break;
+        }
+    }
+
+	let zColor;
+    try {
+        zColor = localStorage.getItem('Color');
+    } catch {}
+	if (zColor === null) {
+        Power = 208;
+    } else Power = parseInt(zColor);
+    myRange.value=Power;
+
+  //  toggleNoTransitionOn();
 
     document.documentElement.style.display = "unset";
 
     RegisterSpecialTextarea();
-
 
     let zlanguage = "mo";
     let zautoTranslate;
@@ -1411,7 +1263,9 @@ function Load() {
         zautoTranslate = localStorage.getItem('setting-autoTranslate');
         zstyleOutput = localStorage.getItem('setting-styleOutput');
         zTestingFunc = localStorage.getItem('setting-testingFunc');
-        zdev = localStorage.getItem('setting-dev');
+        zdev = localStorage.getItem('setting-dev'); 
+		zbetaFunctions = localStorage.getItem('setting-betaFunctions');
+		
         savedget = localStorage.getItem('saved');
         zmyvocabHA = localStorage.getItem('vocab-ha');
         zmyvocabCS = localStorage.getItem('vocab-cs');
@@ -1552,6 +1406,10 @@ function Load() {
         document.getElementById('refresh').style.display = 'none';
     }
 
+	   if (zbetaFunctions == null) betaFunctions = false;
+    else betaFunctions = (zbetaFunctions == "true");
+	  document.getElementById('betaFunctions').checked = betaFunctions;
+
     if (zstyleOutput == null) styleOutput = false;
     else styleOutput = (zstyleOutput == "true");
     if (zautoTranslate == null) {
@@ -1576,7 +1434,7 @@ function Load() {
 
     //let n;
 
-    if (document.getElementById('selectorTo').value == "ha") {
+ /*   if (document.getElementById('selectorTo').value == "ha") {
         //n = "hanácko-český";
         document.getElementById('charHa').style.display = "flex";
         document.getElementById('charSo').style.display = "none";
@@ -1589,7 +1447,7 @@ function Load() {
         //n = "česko-hanácký";
         document.getElementById('charsHa').style.display = "none";
         document.getElementById('charsVa').style.display = "none";
-    }
+    }*/
 
     if (!autoTranslate) {
         document.getElementById('autoTranslate').style.display = "inline-block";
@@ -1613,7 +1471,7 @@ function Load() {
     loaded = true;
 
     SetSavedTranslations();
-
+	customTheme();
 
     //GetVocabulary();
     /*
@@ -4379,3 +4237,4 @@ function auto_grow() {
     document.getElementById("specialTextarea").style.minHeight = "5px";
     document.getElementById("specialTextarea").style.minHeight = (document.getElementById('specialTextarea').scrollHeight) + "px";
 }
+
