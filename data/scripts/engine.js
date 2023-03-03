@@ -505,53 +505,81 @@ function customTheme() {
 	// (low / optimal / high) tier
 	let power;
 	if (Power == "default") {
-		// Some win
-        if (window.navigator.userAgent.indexOf("Windows") !=-1) {
-			if (window.navigator.userAgent.indexOf('like Gecko') !=-1) {
-				// Win 10
-				if (window.navigator.userAgent.indexOf('Windows NT 10') !=-1) power="fancy";
-				// Win 8.1
-				else if (window.navigator.userAgent.indexOf('Windows NT 6.3') !=-1) power="fancy";
-				// Win 8 
-				else if (window.navigator.userAgent.indexOf('Windows NT 6.2') !=-1) power="fancy"; 
-				// Win 7 
-				else if (window.navigator.userAgent.indexOf('Windows NT 6.1') !=-1) power="optimal"; 
-				// Win ?
-				else if (window.navigator.userAgent.indexOf('compatible') !=-1) power="optimal";  
-				else power="fancy";	
-			}else if (window.navigator.userAgent.indexOf('Trident') !=-1) power="fast";
-			else power="optimal"; 
+		while (true){
+			// Some win
+			if (window.navigator.userAgent.indexOf("Windows") !=-1) {
+				if (window.navigator.userAgent.indexOf('like Gecko') !=-1) {
+					// Win 10
+					if (window.navigator.userAgent.indexOf('Windows NT 10') !=-1) power="fancy";
+					// Win 8.1
+					else if (window.navigator.userAgent.indexOf('Windows NT 6.3') !=-1) power="fancy";
+					// Win 8 
+					else if (window.navigator.userAgent.indexOf('Windows NT 6.2') !=-1) power="fancy"; 
+					// Win 7 
+					else if (window.navigator.userAgent.indexOf('Windows NT 6.1') !=-1) power="optimal"; 
+					// Win ?
+					else if (window.navigator.userAgent.indexOf('compatible') !=-1) power="optimal";  
+					else power="fancy";
+					break;
+				}else if (window.navigator.userAgent.indexOf('Trident') !=-1) power="fast";
+				else power="optimal"; 
+				break;
+			// new Mac
+			} else if (navigator.platform.indexOf("MacIntel") !=-1) {power="fancy";break;}
 
-		// new Mac
-		}else if (navigator.platform.indexOf("MacIntel") !=-1) power="fancy";
+			// Old win
+			try{
+				if (window.navigator.indexOf("Win98") !=-1){ power="fast";break;}
+			}catch{}
 
-		// Old win
-		//else if (window.navigator.indexOf("Win98") !=-1) power="fast";
+			// old mac
+			try{
+				if (window.navigator.indexOf("Mac68K") !=-1) {ower="fast";break;}
+			}catch{}
 
-		// old mac
-		//else if (window.navigator.indexOf("Mac68K") !=-1) power="fast";
-		// old win phone
-		else if (/windows phone/i.test(userAgent)) power="fast";
-		// apple
-		else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) power="fancy";
-		// Unix
-		if (window.navigator.userAgent.indexOf("X11") != -1) {
-			power="optimal";
+			// old win phone
+			try{
+				if (/windows phone/i.test(userAgent)) {power="fast";break;}
+			}catch{}
+		
+			// apple
+			try{
+				if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) { 
+					power="fancy";
+					break;
+				}
+			}catch{}
+			
+			// Unix
+			try{
+				if (window.navigator.userAgent.indexOf("X11") != -1) {
+					power="optimal";
+					break;
+				}
+			}catch{}
+
+			// Linux
+			try{
+				if (window.navigator.userAgent.indexOf("Linux") != -1) {
+					power="optimal";
+					break;
+				}
+			}catch{}
+
+			// android
+			try{
+				if (/android/i.test(window.navigator)) {
+					if (window.innerWidth > 800) {
+						power="fancy";
+					} else if(window.innerWidth < 400) {
+						power="fast";
+					} else power="optimal";
+					//if (window.opera) power="optimal";
+					//else power="optimal";
+				}else power="optimal";
+			}catch{}
+			break;
 		}
-		// Linux
-		else if (window.navigator.userAgent.indexOf("Linux") != -1) {
-			power="optimal";
-		}
-		// android
-		else if (/android/i.test(window.navigator)) {
-			if(window.innerWidth > 800){
-				power="fancy";
-			}else if(window.innerWidth < 400){
-				power="fast";
-			}else power="optimal";
-			//if (window.opera) power="optimal";
-			//else power="optimal";
-		}else power="optimal";
     } else power=Power;
 	
 	let colorH=myRange.value;
