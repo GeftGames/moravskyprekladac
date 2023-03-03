@@ -526,7 +526,7 @@ function customTheme() {
 		}else if (navigator.platform.indexOf("MacIntel") !=-1) power="fancy";
 
 		// Old win
-		else if (window.navigator.indexOf("Win98") !=-1) power="fast";
+		//else if (window.navigator.indexOf("Win98") !=-1) power="fast";
 
 		// old mac
 		else if (window.navigator.indexOf("Mac68K") !=-1) power="fast";
