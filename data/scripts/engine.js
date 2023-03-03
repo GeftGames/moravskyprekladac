@@ -529,7 +529,7 @@ function customTheme() {
 		//else if (window.navigator.indexOf("Win98") !=-1) power="fast";
 
 		// old mac
-		else if (window.navigator.indexOf("Mac68K") !=-1) power="fast";
+		//else if (window.navigator.indexOf("Mac68K") !=-1) power="fast";
 		// old win phone
 		else if (/windows phone/i.test(userAgent)) power="fast";
 		// apple
