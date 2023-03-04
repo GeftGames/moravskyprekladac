@@ -2575,8 +2575,8 @@ lal|láł
 t|ť
 ší|šú
 ím|ám
-rami|rama
-hami|hama
+rami
+hami
 tě|ťa
 é|ej
 it|iť
@@ -2606,8 +2606,8 @@ al|áł
 díl|dil
 chopí|chopíja
 ovat|ovať
-tými|týma
-dami|ďama
+tými
+dami|ďami
 žil|žíl
 ýších|ýšoch
 esech|esoch
@@ -2664,7 +2664,7 @@ tikou|tikú
 ovou|ovú
 zíme|záme
 ůdky|údky
-skými|skýma
+skými
 nskou|nskú
 oct|ocť
 řel|řéł
@@ -2696,6 +2696,11 @@ ojeně|ojno
 át|ať
 gií|gijí
 řel|řéł
+nech|noch
+váno|váné
+iště|išče
+jeno|jené
+lním|lňím
 -
 okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
@@ -2868,6 +2873,7 @@ generac|pokole|růžE|staveŇÍ
 družic|růžE|rúžA
 keř|chrást|strom|strom
 mlýn|młýn|les|strom
+minel|galán|ruKA|pohádKA
 -
 mladý|-1||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
@@ -3085,7 +3091,7 @@ sedě,vsedě|seďačky
 kleče|klekačky
 opět,znovu,zase|zaséj
 rychle|honem
-zpět|spátkem
+zpět|spátky,spátkem
 kdesi|gdesyk
 nějak|jaksyk
 zde,tady|tadyk
@@ -3126,6 +3132,7 @@ proč|čem,čemu,počemu,naco
 zatímco|zatýmco
 výše|vyšéj
 doposud|dosél,doposel
+dosud|doty,dosaváť,dovčilška,posaváď
 -
 mezi|medza|4,7
 v|7

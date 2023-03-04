@@ -1,51 +1,51 @@
 ﻿<!DOCTYPE html>
 <html lang="cs" style="min-height: 100%">
 	<head>
-		<meta charset="UTF-8"/>
+		<meta charset="UTF-8">
 		<!-- Links -->
-		<link href="data/styles/style.css" rel="stylesheet" type="text/css"/>
-		<script type="text/javascript" src="data/scripts/engine.js" importance="high"></script>
-		<script type="text/javascript" src="translator/v1/inicialize.js" importance="high"></script>
-		<script type="text/javascript" src="translator/v1/translate.js"></script>
-		<script type="text/javascript" src="data/scripts/langs.js"></script>
+		<link href="data/styles/style.css" rel="stylesheet" type="text/css">
+		<script src="data/scripts/engine.js"></script>
+		<script src="translator/v1/inicialize.js"></script>
+		<script src="translator/v1/translate.js"></script>
+		<script src="data/scripts/langs.js"></script>
 
 		<!-- Theme -->
-		<meta name="theme-color" content="#66ccff"/>
-		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white"/>
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black"/>
+		<meta name="theme-color" content="#66ccff">
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 
 		<!-- Appereance -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Search -->
-		<meta name="keywords" content="GeftGames,translator,geft,haná,hanáčtina,valašsko,slovácko,slovácký dialekt,hantec,slovenština,valachy,valaština,laština,po ślůnski,po nasymu,po nasimu,silezian,moravština,dialekty,interdialekty,překladač,čeština,česky"/>
-		<meta id="metalocale" property="og:locale" content="cs_CZ"/>
-		<meta id="mataDescription" name="description" content="Překladač Česko-Moravský"/>
+		<meta name="keywords" content="moravština,překladač,hanáčtina,valaština,laština,hantec,dialekt,GeftGames,translator,geft,haná,valašsko,slovácko,slovenština,valachy,po ślůnski,po nasymu,po nasimu,silezian,dialekty,interdialekty,čeština,česky">
+		<meta id="metalocale" property="og:locale" content="cs_CZ">
+		<meta id="mataDescription" name="description" content="Překladač Česko-Moravský">
 
 		<!-- Title -->
 		<title>Překladač česko-moravský</title>
 
 		<!-- Icon-->
-		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 		<!-- General aplication -->
 		<meta id="mataDescription2" name="application-name" content="Překladač Česko-Moravský">
-		<meta id="application-url" name="application-url"><!-- content="https://moravskyprekladac.ga"-->
+		<!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.ga"-->
 
 		<!-- Windows modern UI -->
 		<meta name="msapplication-TileColor" content="#66ccff">
 		<meta name="msapplication-square64x64logo" content="favicon.ico">
 
 		<!-- Apple aplication -->
-		<link rel="apple-touch-icon" href="favicon.ico"/>
-		<link rel="apple-touch-startup-image" href="favicon.ico"/>
-		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač Česko-Moravský"/>
-		<meta name="apple-mobile-web-app-capable" content="yes"/>
-		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<link rel="apple-touch-icon" href="favicon.ico">
+		<link rel="apple-touch-startup-image" href="favicon.ico">
+		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Překladač Česko-Moravský">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<!-- PWA -->
-		<link id="manifest" rel="manifest">
+		<!--<link id="manifest" rel="manifest">-->
 		<script>
 		if ('serviceWorker' in navigator) {
 			let location=window.location;
@@ -97,7 +97,7 @@
 						</svg>
 					</button>
 
-					<a  rel="nofollow" id="headername" onclick="window.location=window.location.origin;" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);margin-right: auto;">Překladač česko-moravský</a>
+					<span  rel="nofollow" id="headername" onclick="window.location=window.location.origin;" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);margin-right: auto;">Překladač česko-moravský</span>
 					<div style="display: flex;">
 					<!--write about-->	
 					<button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(GetCurrentLanguage());">
@@ -117,7 +117,7 @@
 
 				<!-- Links, settings, info -->
 				<!-- Settings-->
-				<div id="nav" class="navTrans" class="settingSection">
+				<div id="nav" class="navTrans settingSection">
 
 					<!-- Current translation, only transtation page -->
 					<div>
@@ -126,7 +126,7 @@
 						
 
 						<!-- Copy current translation -->
-						<p><a id="textAbout" onclick="ShowAboutPage()" style="cursor: pointer;">O překladači</a></p>
+						<span id="textAbout" onclick="ShowAboutPage()" style="cursor: pointer;">O překladači</span>
 					
 						<!--<p><a id="textAbout">Kontakt</a></p>-->
 						
@@ -178,7 +178,7 @@
 							<!-- Denní/Noční -->
 							<div style="display: flex; justify-content: space-between; align-items: center">
 								<p style="flex-direction: column">
-									<span id="textTheme">Motiv</span>
+									<span id="textMode">Režim</span>
 								</p>
 								<select id="themeDay" style="margin: 5px;text-align: center;" onchange="customTheme();">
 									<option id="textDefaultNight" value="default" style="font-weight: bold">Výchozí</option>
@@ -288,139 +288,143 @@
 				</div>
 			</div>
 			
-			<div id="loadingPage">
+			<div id="loadingPage" style="flex-direction: column; display:flex; align-items: center;">
 				<div id="loadingBar">
 					<div id="progness"></div>
 				</div>
+				<span>Loading dictionaries...</span>
+				<span style="display:none" onclick="">Zastavit</span>
 			</div>
 
 		
 			
 			<div id="translatingPage" style="display: none">
-			<!--<div onclick="hideNav()" style="flex-grow: 1;">
-			<!-- Trash browser, where will content not work -->
-			<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
+				<!--<div onclick="hideNav()" style="flex-grow: 1;">
+				<!-- Trash browser, where will content not work -->
+				<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
+				
+				<!-- No JavaScript -->
+				<noscript>
+					<p class="error">Tato stránka nefunguje bez javaskriptu<br>This site not work without java script</p>
+				</noscript>
+				
+				<center><p id="note">Překladač je stále ve vývoji</p></center>
 			
-			<!-- No JavaScript -->
-			<noscript>
-				<p class="error">Tato stránka nefunguje bez java skriptu<br>This site not work without java script</p>
-			</noscript>
-			
-			<center><p id="note">Překladač je stále ve vývoji</p></center>
-		
-			
-			<!-- Combobox From-To -->
-			<div style="margin-top: 15px; width:100%; display: flex; justify-content: center; flex-direction: column;align-items: center;">
-				<div style="display: flex;">
-					<span style="display: flex">
-						<p id="from" style="display: inline">Z</p>
-						<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select><!---->
-						
-						<p id="czech" style="display: inline">Češtiny</p>
-					</span>
-					<span style="display: inline-block">
-						<p id="to" style="display: inline">do</p>
-						<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();" onclick="Translate();">
-						
-						</select>
-					</span>
-					<div>
-						<button class="button" onclick="Translate();" id="autoTranslate" style="display: none">Přeložit</button>
-						
-						<!--<div style="display: none" id="noteMOGEN">
-							<br><p>Ucelená moravština <i>neexistuje</i>, zde "moravština" zahrnuje stejné rysy moravských nářečí nebo blízké, popř. doplňuje o známé výrazy</p>
-						</div>-->
-					</div>
-				</div>
-				<div id="optionsSelect"></div>
-			</div>
-
-			<div style="display: flex; justify-content: center;margin-top: 20px">
-				<a rel="nofollow" id="tabText" 	class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));">Text</a>
-				<a rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));">Textové soubory</a>
-				<a rel="nofollow" id="tabSubs" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Titulky k filmu</a>
-			</div>
-			<div id="tabBackGround"></div>
-			<div id="transarea">
-				<div id="translateText" style="display: contents">
-					<!-- Source translated text -->
-					<div id="lte" style="min-height:75px">
-						<textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
-					<!--	<div id="charsHa" style="user-select:none; cursor:normal; display: none; ">Dej mouku ze mlýna na vozík.
-							<span id="addchar">Vložit znak</span>
-							<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
-							<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
-							<a class="charIns" onclick="insert2('ô');"><div class="btnsm">ô</div></a>
-							<a class="charIns" onclick="insert2('Ô');"><div class="btnsm">Ô</div></a>
+				
+				<!-- Combobox From-To -->
+				<div style="margin-top: 15px; width:100%; display: flex; justify-content: center; flex-direction: column;align-items: center;">
+					<div id="changeLangSection">
+						<div style="display: flex;">
+							<p id="from" style="display: inline">Z</p>
+						<!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->				
+							<p id="czech" style="display: flex">Češtiny</p>
 						</div>
-						<div id="charsVa" style="user-select:none; cursor:normal; display: none;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
-							<span id="addchar2">Vložit znak</span>
-							<a class="charIns" onclick="insert2('ł');"><div class="btnsm">ł</div></a>
-							<a class="charIns" onclick="insert2('Ł');"><div class="btnsm">Ł</div></a>
-							<a class="charIns" onclick="insert2('ŕ');"><div class="btnsm">ŕ</div></a>
-							<a class="charIns" onclick="insert2('Ŕ');"><div class="btnsm">Ŕ</div></a>
-						</div>-->
-					</div>
-
-					<!-- Translated text out -->
-					<div id="rte" style="display: flex;flex-direction: column;  min-height:50px">
-						<div style="max-height: 80vh;overflow: auto;">
-							<p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+						<div style="display: flex">
+							<p id="to" style="display: inline">do</p>
+							<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();" onclick="Translate();">
+							
+							</select>
 						</div>
-						<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
-							<a rel="nofollow" id="" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Kvalita překladu 50 až 100"><p id="translateWellLevel" alt="Kopírovat text překladu">Q?</p></a>
-							<a rel="nofollow" id="" class="butIc" onclick="Copy()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Kopírovat text překladu"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="M22.405 3.49v1.9325h3.0475.0025v.005c.9625.0025 1.835.3925 2.465 1.025.625.6275 1.015 1.495 1.0175 2.455h.005v.005 18.3175.0025h-.005c-.0025.96-.3925 1.8325-1.025 2.465-.6275.625-1.495 1.015-2.455 1.0175v.005h-.005-15.425H10.025v-.005c-.96-.0025-1.835-.3925-2.465-1.025-.625-.6275-1.015-1.495-1.0175-2.455h-.005v-.005V23.1275H3.49h-.0025v-.005c-.96-.0025-1.835-.3925-2.465-1.025-.625-.6275-1.015-1.495-1.0175-2.455H0v-.005V3.49v-.0025h.005c.0025-.9625.395-1.835 1.025-2.465.6275-.625 1.495-1.015 2.455-1.0175V0h.005 15.425.0025v.005c.9625.0025 1.835.3925 2.465 1.025.625.6275 1.015 1.495 1.0175 2.455h.005V3.49L22.405 3.49zM19.76 5.4225v-1.9325-.005h.005c0-.2275-.0975-.4375-.2525-.5925-.1525-.1525-.365-.25-.5925-.25v.005h-.0025-15.425-.005v-.005c-.2275 0-.4375.0975-.5925.2525-.1525.1525-.25.365-.25.5925h.005v.0025 16.1475.005h-.005c0 .2275.0975.4375.2525.5925.1525.1525.365.25.5925.25v-.005h.0025 3.0475V8.9125v-.0025h.005c.0025-.9625.395-1.835 1.025-2.465.6275-.625 1.495-1.015 2.455-1.0175v-.005h.005H19.76L19.76 5.4225zM26.295 27.23V8.9125v-.005h.005c0-.2275-.0975-.4375-.2525-.5925-.1525-.1525-.365-.25-.5925-.25v.005h-.0025-15.425-.005v-.005c-.2275 0-.4375.0975-.5925.2525-.1525.1525-.25.365-.25.5925h.005v.0025 18.3175.005h-.005c0 .2275.0975.4375.2525.5925.1525.1525.365.25.5925.25v-.005h.0025 15.425.005v.005c.2275 0 .4375-.0975.5925-.2525.1525-.1525.25-.365.25-.5925h-.005V27.23L26.295 27.23z"/></svg></a>
-							<a rel="nofollow" id="" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Kopírovat odkaz na překlad"><svg  class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"></svg></a>
-							<a rel="nofollow" id="" class="butIc" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Uložit do oblíbených"><svg  class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></a>
-							<!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
+						<div>
+							<button class="button" onclick="Translate();" id="autoTranslate" style="display: none">Přeložit</button>
+							
+							<!--<div style="display: none" id="noteMOGEN">
+								<br><p>Ucelená moravština <i>neexistuje</i>, zde "moravština" zahrnuje stejné rysy moravských nářečí nebo blízké, popř. doplňuje o známé výrazy</p>
+							</div>-->
+						</div>
+						<span style="width: fit-content; height: fit-content;" class="butIc" rel="nofollow" onclick="ShowMapPage();">
+							<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
+						</span>
+					</div>
+					<div style="display:none" id="optionsSelect"></div>
+
+				</div>
+
+				<div style="display: flex; justify-content: center;margin-top: 20px">
+					<span rel="nofollow" id="tabText" 	class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));">Text</span>
+					<span rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));">Textové soubory</span>
+					<span rel="nofollow" id="tabSubs" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Titulky k filmu</span>
+				</div>
+
+				<div id="tabBackGround"></div>
+
+				<div id="transarea">
+					<div id="translateText" style="display: contents">
+						<!-- Source translated text -->
+						<div id="lte" style="min-height:75px">
+							<textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
+						<!--	<div id="charsHa" style="user-select:none; cursor:normal; display: none; ">Dej mouku ze mlýna na vozík.
+								<span id="addchar">Vložit znak</span>
+								<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
+								<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
+								<a class="charIns" onclick="insert2('ô');"><div class="btnsm">ô</div></a>
+								<a class="charIns" onclick="insert2('Ô');"><div class="btnsm">Ô</div></a>
+							</div>
+							<div id="charsVa" style="user-select:none; cursor:normal; display: none;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
+								<span id="addchar2">Vložit znak</span>
+								<a class="charIns" onclick="insert2('ł');"><div class="btnsm">ł</div></a>
+								<a class="charIns" onclick="insert2('Ł');"><div class="btnsm">Ł</div></a>
+								<a class="charIns" onclick="insert2('ŕ');"><div class="btnsm">ŕ</div></a>
+								<a class="charIns" onclick="insert2('Ŕ');"><div class="btnsm">Ŕ</div></a>
+							</div>-->
+						</div>
+
+						<!-- Translated text out -->
+						<div id="rte" style="display: flex;flex-direction: column;  min-height:50px">
+							<div style="max-height: 80vh;overflow: auto;">
+								<p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+							</div>
+							<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
+								<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
+								<span rel="nofollow" class="butIc" onclick="Copy()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="M22.405 3.49v1.9325h3.0475.0025v.005c.9625.0025 1.835.3925 2.465 1.025.625.6275 1.015 1.495 1.0175 2.455h.005v.005 18.3175.0025h-.005c-.0025.96-.3925 1.8325-1.025 2.465-.6275.625-1.495 1.015-2.455 1.0175v.005h-.005-15.425H10.025v-.005c-.96-.0025-1.835-.3925-2.465-1.025-.625-.6275-1.015-1.495-1.0175-2.455h-.005v-.005V23.1275H3.49h-.0025v-.005c-.96-.0025-1.835-.3925-2.465-1.025-.625-.6275-1.015-1.495-1.0175-2.455H0v-.005V3.49v-.0025h.005c.0025-.9625.395-1.835 1.025-2.465.6275-.625 1.495-1.015 2.455-1.0175V0h.005 15.425.0025v.005c.9625.0025 1.835.3925 2.465 1.025.625.6275 1.015 1.495 1.0175 2.455h.005V3.49L22.405 3.49zM19.76 5.4225v-1.9325-.005h.005c0-.2275-.0975-.4375-.2525-.5925-.1525-.1525-.365-.25-.5925-.25v.005h-.0025-15.425-.005v-.005c-.2275 0-.4375.0975-.5925.2525-.1525.1525-.25.365-.25.5925h.005v.0025 16.1475.005h-.005c0 .2275.0975.4375.2525.5925.1525.1525.365.25.5925.25v-.005h.0025 3.0475V8.9125v-.0025h.005c.0025-.9625.395-1.835 1.025-2.465.6275-.625 1.495-1.015 2.455-1.0175v-.005h.005H19.76L19.76 5.4225zM26.295 27.23V8.9125v-.005h.005c0-.2275-.0975-.4375-.2525-.5925-.1525-.1525-.365-.25-.5925-.25v.005h-.0025-15.425-.005v-.005c-.2275 0-.4375.0975-.5925.2525-.1525.1525-.25.365-.25.5925h.005v.0025 18.3175.005h-.005c0 .2275.0975.4375.2525.5925.1525.1525.365.25.5925.25v-.005h.0025 15.425.005v.005c.2275 0 .4375-.0975.5925-.2525.1525-.1525.25-.365.25-.5925h-.005V27.23L26.295 27.23z"/></svg></span>
+								<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
+								<span rel="nofollow" class="butIc" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
+								<!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
+							</div>
+						</div>
+					</div>
+					<div id="translateFiles" style="display: none">
+						<div class="filesBox">
+							<p id="supportFiles">Podporujeme soubory .TXT</p>
+							<input type="file" id="file-input">
+							<button class="button" id="btnTranslateTxt" onclick="TranslateFile()">Translate</button>
+							<!--<h3>Contents of the file:</h3>
+							<pre id="file-content"></pre>-->
+							<!--<div id="downloadFile"></div>-->
+							<a rel="nofollow" id="downloadFile" class="button" style="display:none">Download</a>
+						</div>
+					</div>
+					<div id="translateSubs" style="display: none">
+						<div class="filesBox">
+							<p id="VideoNote">Podporujeme soubory .ASS. Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte.</p>
+							<!-- 
+								Vyhledávání titulků: https://www.opensubtitles.org/ 
+								Překlad do češtiny: https://www.nikse.dk/subtitleedit/online
+								Překlad do češtiny: https://www.syedgakbar.com/projects/dst
+							-->
+							<input type="file" id="subs-input">
+							<button class="button" id="btnTranslateSubs" onclick="TranslateSubs()">Translate</button>
+							<!--<h3>Contents of the file:</h3>
+							<pre id="file-content"></pre>-->
+							<!--<div id="downloadFile"></div>-->
+							<a rel="nofollow" id="downloadSubs" class="button" style="display:none">Download</a>
 						</div>
 					</div>
 				</div>
-				<div id="translateFiles" style="display: none">
-					<div class="filesBox">
-						<p id="supportFiles">Podporujeme soubory .TXT</p>
-						<input type="file" id="file-input" />
-						<button class="button" id="btnTranslateTxt" onclick="TranslateFile()">Translate</button>
-						<!--<h3>Contents of the file:</h3>
-						<pre id="file-content"></pre>-->
-						<!--<div id="downloadFile"></div>-->
-						<a rel="nofollow" id="downloadFile" class="button" style="display:none">Download</a>
-					</div>
-				</div>
-				<div id="translateSubs" style="display: none">
-					<div class="filesBox">
-						<p id="VideoNote">Podporujeme soubory .ASS. Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte.</p>
-						<!-- 
-							Vyhledávání titulků: https://www.opensubtitles.org/ 
-							Překlad do češtiny: https://www.nikse.dk/subtitleedit/online
-							Překlad do češtiny: https://www.syedgakbar.com/projects/dst
-						-->
-						<input type="file" id="subs-input" />
-						<button class="button" id="btnTranslateSubs" onclick="TranslateSubs()">Translate</button>
-						<!--<h3>Contents of the file:</h3>
-						<pre id="file-content"></pre>-->
-						<!--<div id="downloadFile"></div>-->
-						<a rel="nofollow" id="downloadSubs" class="button" style="display:none">Download</a>
-					</div>
+
+				<!-- Saved text -->
+				<div id="savedDiv" style=" display: none">
+					<p style="text-decoration-line: underline;" id="txtSavedTrans">Uložené překlady</p>
+					<div id="transl" style="max-height: 100vh; overflow: auto; scroll-behavior: smooth;"></div>
 				</div>
 			</div>
 
-			<!-- Saved text -->
-			<div id="savedDiv" style=" display: none">
-				<p style="text-decoration-line: underline;" id="txtSavedTrans">Uložené překlady</p>
-				<div id="transl" style="max-height: 100vh; overflow: auto; scroll-behavior: smooth;"></div>
-			</div>
-			</div>
-
-
-		
-
-			<div id="aboutPage" style="display: none; top:500px;z-index: 9;">
-				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex;    flex-direction: column;">
-					<div onclick="CloseAboutPage()" id="closeAboutPage">
-						<a rel="nofollow" onclick="CloseAboutPage()"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+			<div id="aboutPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;">
+				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+					<div onclick="CloseAboutPage()" class="pageFromDownClose" id="closeAboutPage">
+						<div rel="nofollow" onclick="CloseAboutPage()"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
 							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-						</svg></a>
+						</svg></div>
 						<p style="display:inline;" id="closeAbout">Zavřít</p>
 					</div>
 					<div><p class="aboutPageHeader" id="aboutTranslator">O Překladači</p></div>
@@ -449,10 +453,51 @@
 
 				</div>
 			</div>
+					<div id="mapPage" class="pageFromDown" style="display: none; top:500px;z-index: 9;">
+						<div id="about" style="margin-left: 10%; margin-right: 10%;display: flex; flex-direction: column;">
+							<div onclick="CloseMapPage()" class="pageFromDownClose" id="closeSelectorPage">
+								<div rel="nofollow" onclick="CloseMapPage()">
+									<svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+										<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+									</svg>
+								</div>
+								<p style="display:inline;" id="closeSelector">Zavřít</p>
+							</div>
+							<div><p class="mapPageHeader" id="mapPlace">Výběr místa</p></div>
+							<div id="mapSelector" style="display: flex; flex-direction: column;">
+								<div id="map" style="overflow: hidden; ">
+									
+									<svg width="170mm" height="150mm" viewBox="0 0 210 150" version="1.1" id="mapZoom" sodipodi:docname="výkres.svg" xmlns="http://www.w3.org/2000/svg" style="position: relative;">
+										<!--<sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" inkscape:zoom="0.52724989" inkscape:cx="418.20777" inkscape:cy="53.105749" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1"/>-->
+										<!--<defs id="defs2"/>-->
+										<g inkscape:label="Vrstva 1" inkscape:groupmode="layer" id="layer1" style="display:inline">
+											<!--<image width="275.83582" height="155.15767" preserveAspectRatio="none" xlink:href="Bez%20n%C3%A1zvu.png" id="image585" x="-11.281191" y="0.21433729" style="display:none"/>-->
+											<path style="display:inline; fill:#00ffff; fill-opacity: 1; stroke-width:0.264583;" d="m180.7 81.5.5-.5.8-.4.1-.2.4.3 1-.4.3.2v.9l.8.2.7-.4.5.2 1-.6.3.2.6-.5.5.3v.3h.9l.4-.1 1.1.7.3.3h.8l1.8-1.6h.6l.6-.6h1.8l-.4-.7.4-.2v-.5l.7-.3v-1l-.6-.4-.1-.5h-.4v-.8l-.3-.2.2-.3-.2-.3v-.3l.3-.3-.3-1.5-.4-.2v-.5l-.3-.1.2-.6-.5-1v-.7l-.4-.5.3-.4-.3-.8.3-.5-.3-.5h-.7l-.5-.5-.4.2-.6-.1-.6.6h-.6l-.1-.4-.5-.2h-.6v-.6l-1.6-.7-1.3-.3-1.8-1.5V61l-.8-.3-.1-1.3-.6-1v-.5l-.6-1.3-.1-1-1-1 .2-.3 1-1-.3-.6.7-.4.4.2V52l-.4-.4-1-.2-.4-1.4.2-.7.3-.8-.3-.3.2-.9-.4-.1-.4.3-1-.7-.2.1v1l.4.3-.8.7h-.5l-1.6-.4-.5-.5-1-.4V47h-1l-.3-.4h-.4v-.8l-1.9.4-1.5-.3-.5-.6-1.1-.2v.6h.7l.1.4h-.6v.3l.6.1-.7.4-.4.2h-1.3l-1.1-1-.1-1v-.7l-.4-.8-.9-.1-.7-.2-.4-.2-.7.3-.5-.4.2-1-.4-1-.7.2-.4-.4h-.8l-.3.3.3.5-.2.3-.6.3-.5-.8-.6-.1-.1-.4-.9.4-.7-.6-.5-1 .4-.8-.8-.7-.4-1.2-.8-.1-.2-1h-.5l-.7-.6-1.6 1.2v1.4l.4.6.8-.9.6.3.4.7-.2.8-.2.4.3.5h-.2l-.6-.4h-1.3v-.5l-1 .4-.1.7-.8-.4-.6.4-1.9 2h-1.6l-1.3.6-.4-.8-1-.6-.8-.5.5-.7-.4-.7h-1.6l-.2-.6-1-.2.3-.7s-.5-.4-.4-.5l.1-.5-.3-.7-.4-.7v-.5l-.6-1-.9-.8v-.7l-1.4-1.5-.9-.2-.6 1.1-1.4-.5-.4-1.8-1.6-.5-.8-1.6.5-1.1 1 .2 1.2-.6 1.2-.2.3-.4h1.6l.8-1.9 1 .6 1.3-1 .2-1.4-.3-.4V21l-2-1.3.2-1.5.4-.2v-.4l.8-1.4-.4-.3h-1l-.1-1.3-1.8-.7V16l-2 2s-1.9 1.2-2 1.1l-.7-.5-.2-.6h-.5l-1.5.7-2-.5h-1.6l-1.4.7-.3-.2v1l-.8.5-.7-.6.3-.3-.5-1h-.8l-.7-.6h-1.5l-.1 1.4h-.8l-.3-1.4-.3-.2.6-.2v-1l.4-1-.3-.1-.7-.2.2-.7h.5l.1-.4-1.2-.1-.8.7-1 .3-1.2-.3-.3-.7h-.8l-.9-1-.6-.3-.1-.5-.5-.8-.6-.3v-1l.3-.7-1-.4-.3.5h-.8l-.4.4h-.7l-1-1.3h-.7v-.8l-1.4-.1-.2.4-.7-.4h-.8l-.8-.7h-.4l-.3-.6-.4.3-.8-.8-1 .8-2-1.4-.8-.1-.7-.8h-1l-.6.5-.1.6-1 .5-.4 1 .9.9 1.2.7.1.4h.7l.6 1.5v1.2l.5 1.1.4.2-.2 1.3.8 1 .6.1.4-.4.2.8 1 .4h.6v.5l.4.2.4 1v1.1l-.5.7-.4.2v.3l.5.4v.5l.5.4.6.7 33.7 58 42.7 5.3 2.3-2-.3-1.4z" id="path498" inkscape:label="slezko+enkavy"/>
+											<path style="display:inline; fill:#000080; fill-opacity: 1; stroke-width:0.264583;" d="m95.8 151 1.3.5.8-.5.3-1.2.3-.7s-.4-1.6-.2-1.6l1.1-1.3.6-.7-.2-1.4.9-.4.2-1.1 1.2-2 .3-.8.8-.6.5-.6 1-.3v-1l.9-.7v-2l2.6-1.3.6-.8.4-.2.9-1.1 1-.1 1 .5.5-.1 1.3.8.6-.2.3.6s1 .8 1.3.8h.7l.7 1 1.6 1.4.8-.3.8.3 1.9-1.2.2-.8.4.1.5-.7 1.5.5 1.5 1.7.5-.4-.1.7.4.3 1.3-.6v-.8s.3-.2.4 0l.6.5 1-.2.8-1.2h.6l1-1.1 2-.1.9-.5h.8l1-1.1.6-.4 1.1-1.7 1.3-1 .2-1h3.7l.8.4c.2 0 .8-.5.8-.5l.1-1 .8-1.9-.2-1.3.8-.8-.1-1.5.8-.9 1.1-.2h1.8l.3-.4h.4l.5.6h1l.2-.4h.8l1.4-1 1-1.6v-.4l1.4-2.2-.3-2 .5-.2-.7-1.2.5-.8v-.7l.8-.5-.1-1 .2-1.5.8-1.2-.1-.6.4-.5v-.9l-.6-.2.2-1.3.6-.4.2-.4 1.1-.8V98l3.1-.5 3-.8.3-.5 3-1 .7-.4 1.9-3.2s-.6-2.2-.5-2.3l.5-.2 1.4.6.8-.7 1.1-.8v-.5l1-1V86l1.5-1-.1-.6h.5l.1-.6h.5l.3-.5-.9-1.2.5-.7-.4-.2-.3.6-.1 1.5-1.8 1-1.2.3-1.3-.7-.5-.8v-.5l-.6-1v-.9l-.8-1.5-.5-.6-.2-.8-1-1.8-.5-.3V73l-.6-1.2.1-.5h.5l-.1-1 .3-1.5-.6-.7v-.7l-1-1.5-.5-.3-.6-.9v-1c0-.3-.8-1.4-.8-1.4v-2.2l.4-.7-.6-.4.1-.5-1-1v-2.1l.4-.3-.2-.3.5-.5v-.7l-.2-.4.1-.6-.3-.4-.2.2.1-.4-.4-.7-.5.2-1.5.4-.4 1-.5.5v1l-.4.6.4 1.2-.8 1.8-.6.4-.3.9.3.3-2.1 2.2-1 .7-.7 1-1.2.5-1.3.5-.6.7-1.7.7-1 .8-1.2-.7s.2-1.8 0-1.8l-.4-.3.4-.8-.5-1.3-.5.2-.6 1.1-1.7 1-.8-.6.1-.8-.8-1 .3-1-.9-1.1.6-.8-.1-.5-1.4-.2-.3 1.6L144 62l1.6 2.2-.8 2.6-.6 1.2.1 1h.5l1.5-.6.4.5 1.7 1.2.4.8-.3.5-1.7-1h-.7l-1.1-.8h-1.2l.4.6.8.7.5.9v.7l-1.7-.2-.8-.6v-.5l-2.1-1.2-.5-.1v-1.6l-1.6-2.1 1.3-1.2-.3-1.3-.7-.3h-.7l-.4-.6h-1.4l-.4-2-.7-1.3-1.3-1c0-.2-.6-1.6-.5-1.7v-1l.4-.3.4-2-.5-1 .2-1 .6-.4v-1l-.5-.8-.9.2h-1l-1 1-.8-1.2s-1.3-.8-1.3-1V48h-.5l-.1.5-.8.3-.2-.5-1.3-.9v-1.2l-1-.3-.7.7-.5-1.1.4-1.2-.5-.5-3-1-.1.3v1l.6.5-.4.4-.3.8-.7-.2-.2-.5-1.5-.7.3-.5-2-1.8-.2-1.5v-1l-.8-.6h-.8l-2.6-3-.3-1.6v-1l-.4-1.2-2-.6-.7-.7h-.8l-1-2.5-1.1-1.2v-.7l-.4-1-1.2.3-1.4-1.2-1.3-2.6-1.4 1-.6-.3-.1-.6-.5-.5-.2-.8-.8.3v.9l-.5.5-1 .1-.6-.5-1.4.6-.6.5v.8l-.6.5-1.6-.8-.3.7.1 1-.4.5-1.7 4v1.6l.8 1.3.2 1-1 .9.8 1.3-.9.6-1 .1-1-.6h-1.6l-1 .4-.5-.3-.3.4.5 1.3-.1.9.5.5-.2.9.5 1.4.7 1v2l-1.1.6v.5l-.5.3-1 1.7v.8l-1 .4-.8.4.7 1.6.2 1.8-1-.5-.9-.2-.9.5-.3.6-.8.3-.5.4-.5.3-.2 1 .3.5.1.6-.3.4-.2 1.3.7 1.2.3 1.5-.6 1-.4-.2-.3.3-1.4-.2v-1l-1.4-.5-.1-1.2.2-.8-.6-.5-1.3-.2H72l-.3.5h-.6l-1.2-.3-.7.4-.2.6.2.5-1 1.2v.5l-.1 1-.4.1-.8 2v.6h.8l1 .6 1-.2 1.6.4 1.3 1.1v.8l.6.5-.2.4.3.1.5-.2.9.6.2 1.9.3.3v.4l.3.4v1h-1l-.4-.3-.5.3v.5l-1.4-.2-.2-.2-.5.3-.6 1.2-1.2-.7-.2.4.2.4-.8.8-1.3-1.1-.2-.7-1-.4-.6-.8-1.2-.3-1.2-.7-1.4-.3h-.7l-.8-.1h-.6l-.4-.4v-.5l.2-.2-.4-1.3.2-.4-.3-.3-.5.1-1-1-.5.3-.6-.4h-.8l-.7-.8-.8.3h-.8l-.6.6v.6l-.5.1-.3-1-.3-.2h-.4l-.4-.5-.3-1.2-.5-.3h-.6l-.7.3-.8.4-.5.6-.5.8-.2.9-.5.4h-.5l-.4.2-.6-.2-.4-.6h-.4l-.2.5-.4.4v.5l.3.6.3.2 1 1 .5-.3.7.1.4.4.5.2.1.4-.1.4.2.3-.2.5-1.6.7-.6 1-2.5-.3-.6.5H41l.1.5-.1.3.3 1h.5l-.1 1h-.5l-.8.9-.2 1.4-.6.5-.1 1.4-.6.3-.3 1-.3.4.4 1-1-.1-1 .1-.2.6.2.4-.4.4-1.4-.3-.2.4-.9-.2-.4.3h-1l-.5.2-.2.8-.5.2-.3-.3-.1-.6-1.4-.7-.7.7.6.5-.4 1-.8.2-1-.7.1.4-1.1 1.4-.2.2-.6-.6-.5.3-.8-.7-.4.2-.3.5-1.1.2v.3l-.2.3-.4.7.2 1-.4.1-.3.5.2.7-.9.9-.2.4-1 .2-.5 1-.9.4-.1.4-.8.2-.6-1-1.4-.3h-.6l.4.4.8.3v.4l.3.4-.4.5H15l-.2-.5-.6.2-.3-.2-.4.3.1.5-.5.6-.3 1.5.3.3-.2.5-.8-.4h-1v-.6l-.8.3-.3.4.3.3-.7 1.8.5.2-2-.6-.7.3.2.6v.7l-.3.7-.6-.2h-.2l-.7-.6-1.3 1.1-.3.7.2.3-.4.5-1 .2-.4.6v.4h.5l.4-.4.5.3.1.6.2.4h1.1l-.4-1 .6-.5.7-1.4h.5l.6.4 1-.5.5.8.5.2.4-.2.4.2-.1.3-.3-.2h-.4l-.2.5H7.4l-1 .8v.6l.6.1.4-.2.5.3-.1.9-.4.2-.2.9.6.7v.5l1.2.4v.9l-.3.3-.1 1.4-.7.5.8.5.5.5-.5.2-.8-.8h-.5l-.2.7-.7 1.3.8.3.2.4h1l.5 1-.4.2v.6h1l.2.5.5.5.3.7.2 1v1l1.6.2.6-.3h1l1.8.9.4.6.6.1.6.7.9.4.4-.2 1 .3.2-.3.7.6 1 .4.3.7.5 1.3 2.2.6 1.3.9 1.9-.2.5.8 1.2.4 1.8 1.8v.3h.5l.5-.3h.6l1.7.6.5-.2 1.2-1.7 1.4.3h1.2s.4-.4.5-.3l.6.6-.5.7.9.2.5.4.5-.6.2.6v.7l1-.4.2.4-.5.5h1l.8.3-.1.5.2.4.3.2.5-.6.6.6-.4.7v.6l.9.4 1.6 1.6 1.5.7 2.9 1.6.9.3.7-.3 1 .4h1l.3-.5 2.6.6 3 .4.4-.4 1.3.3h.5l.2.4 1 .2.5-.3.3-.7.6.5v.4l.2.4 1.1-.1.4-.8h.7l1-1.8.6-.2.4-.6v-1l.4-.6v-.6l.5-.4.3-.4 1.1.6h2.1l.7-.8h.5l.6 1.1 1.4.6.7.8h1.4l.8-.5 1 .3.3.8.5.2.3 1.5-.4.8.6 1 1-.6 1.1-.1 1.4.6v.7l2.5 1 .4-.3 1.5-.2.6.3 1.2-.2.5-.6.7.4.5-.3v.7l.9 1.2-.5 1.4.7.5-.1.4v1.6l.4.3-.4.4.2.5-.4.8z" id="path594" inkscape:label="morava"/>
+										</g>
+										<g id="layer2" style="display:inline">
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1602" cx="79.819305" cy="105.69204" r="3" inkscape:label="brno"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1608" cx="166.1754"  cy="55.34375"  r="3" inkscape:label="ostrava"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1606" cx="113.75352" cy="73.834167" r="2" inkscape:label="olomouc"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1610" cx="134.37738" cy="103.13138" r="2" inkscape:label="zlín"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1604" cx="26.216055" cy="89.229462" r="2" inkscape:label="jihlava"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1664" cx="175.00893" cy="58.359833" r="1" inkscape:label="havířov"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1666" cx="147.30243" cy="45.496975" r="1" inkscape:label="opava"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1668" cx="170.83757" cy="66.522209" r="1" inkscape:label="frydekmistek"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1670" cx="105.64831" cy="83.286057" r="1" inkscape:label="prostějov"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1672" cx="123.90524" cy="85.094757" r="1" inkscape:label="přerov"/>
 
-			<div id="newsPage" style="display: none; top:500px">
-				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex;    flex-direction: column;">
-					<div onclick="CloseAboutPage()" id="closeAboutPage">
+										<!--	<circle class="mapDot" id="path1672" cx="100" cy="140" r="4" onclick="SelectLang('poluží')"/>-->
+										</g>
+									</svg>					  
+								</div>
+							</div>
+						</div>
+					</div>
+
+		<!--	<div id="newsPage" style="display: none; top:500px">
+				<div id="news" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex;    flex-direction: column;">
+					<div onclick="CloseNewsPage()" id="closeNewsPage">
 						<a rel="nofollow" onclick="CloseAboutPage()"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
 							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 						</svg></a>
@@ -462,7 +507,7 @@
 					<p><span>v1</span><span>   </span></p>
 
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</body>
 </html>
