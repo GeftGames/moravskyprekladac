@@ -602,6 +602,189 @@ a:focus-visible {
 .innertxttranscont{
 	width: -moz-available;
 }
+.selectGroup0{
+	font-size: larger; 
+	background-color: var(--ColorTheme)/*rgb(240, 240, 240)*/;
+}
+.selectGroup1{ 
+	font-size: large;
+	padding-left: 5px;
+	background-color:var(--ColorTheme)/*rgb(250, 250, 250) */;
+}
+.selectGroup2{  
+	font-size: medium;
+	padding-left: 10px; 
+}
+.selectGroupLang0{font-size: medium;}
+.selectGroupLang1{ font-size: medium;}
+.selectGroupLang2{ font-size: medium;}
+option,optgroup{
+	font-family: system-ui, artifakt element, sans-serif;
+}
+#errorMessage{
+	max-height: 20vh;
+    overflow: auto;
+}
+.disabledTranslate{
+	color:rgb(200, 200, 200);
+	text-decoration: line-through;
+	user-select: none;
+}
+#loadingBar{
+	width: 100px;
+	height: 20px;
+	background-color: var(--ConBack);
+	border-radius: 3px;
+	box-shadow: .5px .5px 2.5px var(--RawColorForw3);/*0, 0, 0,*/
+}
+#progness{
+	height: 20px;
+	background-color: rgb(99, 124, 153);
+	transition: width .05s;
+	border-radius: inherit;
+}
+#loadingPage{
+    justify-content: center;
+    display: flex;	
+	top: 50%;
+    position: sticky;
+}
+#translatingPage{
+	transition: opacity, .1s;
+}
+.settingHeader{
+	font-weight: 350;
+	font-size: 8mm;
+}
+.settingSection{
+	margin-bottom: 5mm;
+}
+.pageFromDownHeader{
+	font-weight: 350;
+	font-size: 8mm;
+	margin-top: 1cm;
+}
+.pageFromDown{
+    background-color: var(--ConBack);
+	position: fixed;
+	top: 52px;
+	opacity:0;
+	transition: all 300ms ease-in;
+    transition-property: opacity, top;
+	width: 100%;
+}
+.pageFromDownClose{
+	margin-top: 20px;
+	justify-content: center;
+	align-items: center; 
+	display: block;
+	cursor: pointer;
+	transition: background-color var(--transitionFast);
+	border: 0px;
+	background-color: transparent;
+	align-items: center;
+	justify-content: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 12px;
+	padding-left: 12px;
+	margin: auto;
+    display: flex;
+	border-radius: 35px;
+	outline: none;
+	margin-top: 5mm;
+}
+.pageFromDownClose:focus-visible{
+	border: var(--tDash);
+	border-radius: 5%;
+}
+.pageFromDownClose:hover{
+	background-color: #66ccff55;
+}
+.tab{
+    font-size: 6mm;
+	user-select: none;
+	color: var(--ColorText);
+	background-color: var(--ConBack);
+    padding: 5px;
+    box-shadow: 0px 0px 3px #00000050;
+	border-radius: 5px 5px 0 0;
+	margin-left: 4px;
+    margin-right: 4px;
+	text-shadow: var(--tsh);
+	clip-path: inset(-5px -5px 0px -5px);
+	transition: background-color var(--transitionSlow);
+	z-Index: 0;
+	cursor: pointer;
+}
+.tab:hover{
+	background-color: var(--ColorTheme);
+	color: var(--ColorText);
+}
+.tabSelected{
+	background-color: var(--ColorTheme);
+	z-index: 3;
+}
+#tabBackGround{
+	width: 100%;
+    height: 60px;
+    z-index: 1;
+    position: absolute;
+    box-shadow: 0px 0px 3px #00000050;
+	clip-path: inset(-5px -5px 1px -5px);
+	background: linear-gradient(180deg, var(--ColorTheme) 0%, var(--ColorTheme) 10%, var(--ColorBack) 100%);
+}
+.filesBox{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#myRange{
+	position: inherit; 
+	-webkit-appearance: none;
+	height: 25px;
+	background-color:gray;
+	background: linear-gradient(90deg, red 0%,yellow 17% , lime 33%, cyan 50%, blue 67%, magenta 83%, red 100%);
+	outline: none;
+	opacity: 0.85;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	border-radius: 5px;
+	position: inherit;
+	/*box-shadow: none;*/
+	box-shadow: inset 0 0 2px #00000033, 0 0 2px #00000055;
+}
+#myRange::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 15px;
+	height: 25px;
+	border-radius: 1px;
+	background-color: var(--ColorTheme);
+	overflow: visible;
+	cursor: pointer;
+	box-shadow: inset 0 0 2px #00000033, 0 0 2px #00000055;
+}
+#myRange::before{
+	display: none;
+}
+#translateWellLevel{
+	user-select: none;
+	color: var(--ColorThemeForward); 
+	margin: 5px; 
+	width: 24px; 
+	height: 24px; 
+	display: flex;   
+	align-items: center;  
+	justify-content: center;
+}
+#changeLangSection{
+	display: flex; 
+	flex-direction: row;
+	align-items: center;
+}
+
+
 @media only screen and (min-width: 2000px) {
 	#transarea{
 		max-width: 85vw;
@@ -694,6 +877,9 @@ a:focus-visible {
 	#rte{
 		max-height: 40vh;
 	}
+	#changeLangSection{
+		flex-direction: column; 
+	}
 }
 @media only screen and (max-width:390px) {
 	#headername {
@@ -710,177 +896,13 @@ a:focus-visible {
     	text-shadow: .5px .5px 1.8px var(--RawColorForw1);
 	}
 }
-.selectGroup0{
-	font-size: larger; 
-	background-color: var(--ColorTheme)/*rgb(240, 240, 240)*/;
+.mapDot{
+	fill:red;
+	fill-opacity:1;
+	stroke-width: 0;
+	transition: fill var(--transitionSlow);
+	box-shadow: var(--tsh);
 }
-.selectGroup1{ 
-	font-size: large;
-	padding-left: 5px;
-	background-color:var(--ColorTheme)/*rgb(250, 250, 250) */;
-}
-.selectGroup2{  
-	font-size: medium;
-	padding-left: 10px; 
-}
-.selectGroupLang0{font-size: medium;}
-.selectGroupLang1{ font-size: medium;}
-.selectGroupLang2{ font-size: medium;}
-option,optgroup{
-	font-family: system-ui, artifakt element, sans-serif;
-}
-#errorMessage{
-	max-height: 20vh;
-    overflow: auto;
-}
-.disabledTranslate{
-	color:rgb(200, 200, 200);
-	text-decoration: line-through;
-	user-select: none;
-}
-#loadingBar{
-	width: 100px;
-	height: 20px;
-	background-color: var(--ConBack);
-	border-radius: 3px;
-	box-shadow: .5px .5px 2.5px var(--RawColorForw3);/*0, 0, 0,*/
-}
-#progness{
-	height: 20px;
-	background-color: rgb(99, 124, 153);
-	transition: width .05s;
-	border-radius: inherit;
-}
-#loadingPage{
-    justify-content: center;
-    display: flex;	
-	top: 50%;
-    position: sticky;
-}
-#translatingPage{
-	transition: opacity, .1s;
-}
-.settingHeader{
-	font-weight: 350;
-	font-size: 8mm;
-}
-.settingSection{
-	margin-bottom: 5mm;
-}
-.aboutPageHeader{
-	font-weight: 350;
-	font-size: 8mm;
-	margin-top: 1cm;
-}
-#aboutPage{
-    background-color: var(--ConBack);
-	position: fixed;
-	top: 52px;
-	opacity:0;
-	transition: all 300ms ease-in;
-    transition-property: opacity, top;
-}
-#closeAboutPage{
-	margin-top: 20px;
-	justify-content: center;
-	align-items: center; 
-	display: block;
-	cursor: pointer;
-	transition: background-color var(--transitionFast);
-	border: 0px;
-	background-color: transparent;
-	align-items: center;
-	justify-content: center;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-right: 12px;
-	padding-left: 12px;
-	margin: auto;
-    display: flex;
-	border-radius: 35px;
-	outline: none;
-	margin-top: 5mm;
-}
-#closeAboutPage:focus-visible{
-	border: var(--tDash);
-	border-radius: 5%;
-}
-#closeAboutPage:hover{
-	background-color: #66ccff55;
-}
-.tab{
-    font-size: 6mm;
-	user-select: none;
-	color: var(--ColorText);
-	background-color: var(--ConBack);
-    padding: 5px;
-    box-shadow: 0px 0px 3px #00000050;
-	border-radius: 5px 5px 0 0;
-	margin-left: 4px;
-    margin-right: 4px;
-	text-shadow: var(--tsh);
-	clip-path: inset(-5px -5px 0px -5px);
-	transition: background-color var(--transitionSlow);
-	z-Index: 0;
-}
-.tab:hover{
-	background-color: var(--ColorTheme);
-	color: var(--ColorText);
-}
-.tabSelected{
-	background-color: var(--ColorTheme);
-	z-index: 3;
-}
-#tabBackGround{
-	width: 100%;
-    height: 60px;
-    z-index: 1;
-    position: absolute;
-    box-shadow: 0px 0px 3px #00000050;
-	clip-path: inset(-5px -5px 1px -5px);
-	background: linear-gradient(180deg, var(--ColorTheme) 0%, var(--ColorTheme) 10%, var(--ColorBack) 100%);
-}
-.filesBox{
-	display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-#myRange{
-	position: inherit; 
-	-webkit-appearance: none;
-	height: 25px;
-	background-color:gray;
-	background: linear-gradient(90deg, red 0%,yellow 17% , lime 33%, cyan 50%, blue 67%, magenta 83%, red 100%);
-	outline: none;
-	opacity: 0.85;
-	-webkit-transition: .2s;
-	transition: opacity .2s;
-	border-radius: 5px;
-	position: inherit;
-	/*box-shadow: none;*/
-	box-shadow: inset 0 0 2px #00000033, 0 0 2px #00000055;
-}
-#myRange::-webkit-slider-thumb{
-	-webkit-appearance: none;
-	width: 15px;
-	height: 25px;
-	border-radius: 1px;
-	background-color: var(--ColorTheme);
-	overflow: visible;
-	cursor: pointer;
-	box-shadow: inset 0 0 2px #00000033, 0 0 2px #00000055;
-}
-#myRange::before{
-	display: none;
-}
-#translateWellLevel{
-	user-select: none;
-	color: var(--ColorThemeForward); 
-	margin: 5px; 
-	width: 24px; 
-	height: 24px; 
-	display: flex;   
-	align-items: center;  
-	justify-content: center;
+.mapDot:hover{
+	fill:darkred;
 }
