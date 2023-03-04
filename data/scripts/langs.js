@@ -4,7 +4,7 @@ langs["cs"] = {
 	Code : "cs",
 
 	// Zpráva
-	noteStillInDev : "Překladač je pořád ve vývoji",
+	noteStillInDev : "Překladač je pořád ve vývoji, nehotové překlady lze zapnout v nastavení, levém horním menu",
 
 	// Překládání
 	From : "Z",
@@ -196,7 +196,7 @@ langs["en"] = {
 	Code : "en",
 
 	// Zpráva
-	noteStillInDev : "Translator is still in developing process",
+	noteStillInDev : "Translator is still in developing process, unfinished languages you can switch on in settings located via top left button",
 
 	// Překládání
 	From 	 : "From",
@@ -576,7 +576,7 @@ langs["mor"] = {
 	LangName : "Moravština",
 
 	// Zpráva
-	noteStillInDev : "Překladač je furt ve vývoju",
+	noteStillInDev : "Překladač je furt ve vývoju, rozfifňané jazyky zapnete v nastavení v horním levém rohu",
 
 	// Překládání
 	From 	: "Z",
