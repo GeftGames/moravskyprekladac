@@ -93,7 +93,7 @@ class ItemNoun {
 			else item.PatternFrom = paternFrom;
 
 			let paternTo = this.GetPatternByNameTo(raw[2]);
-			if (paternFrom == null) return null;
+			if (paternTo == null) return null;
 			else item.PatternTo = paternTo;
 
 			return item;
@@ -107,7 +107,7 @@ class ItemNoun {
 			else item.PatternFrom = paternFrom;
 
 			let paternTo = this.GetPatternByNameTo(raw[1]);
-			if (paternFrom == null) return null;
+			if (paternTo == null) return null;
 			else item.PatternTo = paternTo;
 
 			return item;
@@ -2894,17 +2894,18 @@ class LanguageTr {
 				let phr=this.ApplyPhrases(words, w);
 				if (phr!=null){
 					BuildingSentence.push(phr);
+					console.log(phr);
 					continue;
 				}
 
 				// foreach words
-				{
+			/*	{
 					let n=this.searchWordPhrase(word);
 					if (n!=null) {
 						BuildingSentence.push(["Phrase", n, Zword]);
 						continue;
 					}
-				}
+				}*/
 				{
 					let n=this.searchWordNoun(word);
 					if (n!=null) {
@@ -3051,7 +3052,7 @@ class LanguageTr {
 				else if (type=="Adverb") printableString=string.output;
 				else if (type=="Preposition") printableString=string[0];
 				else if (type=="Conjunction") printableString=string.output;
-				else if (type=="Phrase") printableString=string.output;
+				else if (type=="Phrase") printableString=string/*.output*/;
 				else if (type=="Particle") printableString=string.output;
 				else if (type=="Interjection") printableString=string.output;
 				else if (type=="Symbol") printableString=string;
@@ -3073,6 +3074,7 @@ class LanguageTr {
 				}
 				let resStr=this.PrepareText(printableString);
 				let retText;
+
 				// All uppercase
 				if (original==original.toUpperCase()) {
 					if (Array.isArray(resStr)){
@@ -3838,7 +3840,7 @@ class LanguageTr {
 					for (let e of bestEnd.output) {
 						arr.push(ret+e);		
 					}
-				} else s+ret+bestEnd.output;
+				} else return s+ret+bestEnd.output;
 			}
 			console.log(arr);
 			return arr;
@@ -3848,8 +3850,9 @@ class LanguageTr {
 				for (let e of bestEnd.output) {
 					arr.push(bestStart.output+ret+e);		
 				}
-			} else bestStart.output+ret+bestEnd.output;
+			} else return bestStart.output+ret+bestEnd.output;
 			console.log(arr);
+			
 			return arr;
 		}	
 
@@ -3867,7 +3870,7 @@ class LanguageTr {
 					//console.log("Phrase",variantPhrase);
 					if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
 						let ret=ApplyMatch(arrOfWords, start, start+variantPhrase.length, phrase.output);
-						if (ret!=null) return ret;
+						/*if (ret!=null)*/ return ret;
 					}
 				}
 			}
