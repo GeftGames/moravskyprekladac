@@ -1401,7 +1401,7 @@ function Load() {
         //	
 
         language = zlanguage;
-        if (document.getElementById("manifest")!==undefined) document.getElementById("manifest").href = "data/manifests/manifest" + zlanguage.toUpperCase() + ".json";
+        if (document.getElementById("manifest")!==null) document.getElementById("manifest").href = "data/manifests/manifest" + zlanguage.toUpperCase() + ".json";
     } else {
         // By navigator
         /*
