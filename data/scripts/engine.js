@@ -445,6 +445,20 @@ var ThemeLight, ThemeDay, Power;
 var lastInputText = [];
 var textNote;
 
+function PushError(str) {
+	let parrentElement=document.getElementById("translatingPage");
+	let element=document.createElement("p");
+	element.classList.push("error");
+	parrentElement.childNodes.push(element);
+}
+
+function PushNote(str) {
+	let parrentElement=document.getElementById("translatingPage");
+	let element=document.createElement("p");
+	element.classList.push("note");
+	parrentElement.childNodes.push(element);
+}
+
 function getOS() {
 	var userAgent = window.navigator.userAgent,
 		platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
@@ -894,9 +908,44 @@ function CloseAboutPage(){
 	}
 	setTimeout(setNodeAboutPage, 300);
 }
+function ShowMapPage(){
+	document.getElementById("mapPage").style.display="block";
+	document.getElementById("mapPage").style.opacity="1";
+	document.getElementById("mapPage").style.position="absolute";
+//	document.getElementById("translatingPage").style.display="none";
+	document.getElementById("mapPage").style.top="52px";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+}
+function CloseMapPage(){
+	document.getElementById("mapPage").style.opacity="0";
+	document.getElementById("mapPage").style.top="500px";
+	document.getElementById("mapPage").style.position="fixed";
+	//document.getElementById("aboutPage").style.display="none";
+	//document.getElementById("translatingPage").style.display="block";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+	setTimeout(setNodeMapPage, 300);
+}
 function setNodeAboutPage(){
 	document.getElementById("aboutPage").style.display="none";
 }
+function setNodeMapPage(){
+	document.getElementById("mapPage").style.display="none";
+}
+function SelectLang(){
+
+
+}
+
 let langFile;
 function SetLanguage() {
     if (language == "default") {
@@ -1419,8 +1468,17 @@ function Load() {
         else if (userLang == "sk") language = "sk";
         else if (userLang == "jp") language = "jp";
         else language = "en";
-        document.getElementById("manifest").href = "data/manifests/manifest" + language.toUpperCase() + ".json";
-        if (userLang == "cs") { textDefault = "Výchozí"; } else if (userLang == "de") { textDefault = "Ursprünglich"; } else if (userLang == "sk") { textDefault = "Predvolené"; } else if (userLang == "jp") { textDefault = "ディフォルト"; } else { textDefault = "Default"; }
+
+		let el=document.getElementById("manifest");
+		if (el==undefined) {
+			let manifest = document.createElement("link");
+			manifest.link= "data/manifests/manifest" + language.toUpperCase() + ".json";
+			manifest.id  = "manifest";
+			manifest.rel = "manifest";
+			document.head.appendChild(manifest);
+		} else el.href = "data/manifests/manifest" + language.toUpperCase() + ".json";
+
+        //if (userLang == "cs") { textDefault = "Výchozí"; } else if (userLang == "de") { textDefault = "Ursprünglich"; } else if (userLang == "sk") { textDefault = "Predvolené"; } else if (userLang == "jp") { textDefault = "ディフォルト"; } else { textDefault = "Default"; }
         //document.getElementById('textDefault').innerText = textDefault;
 
     }
@@ -1539,6 +1597,50 @@ function Load() {
     document.getElementById("lte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("rte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("header").style.transition="background-color .3s, color .3s;";*/
+
+	let el=document.getElementById("map");
+	let zoom=1;
+	let ZOOM_SPEED=1.1;
+	let positionX=0;
+	let positionY=0;
+	let mapZoom=document.getElementById("mapZoom");
+	let moved;
+	let dPosX=0,dPosY=0;
+	el.addEventListener("wheel", function(e){
+		if (e.deltaY > 0) {    
+			zoom *= ZOOM_SPEED;
+			mapZoom.style.transform = `scale(${zoom})`; 
+			//positionX*=ZOOM_SPEED;
+			//positionY*=ZOOM_SPEED; 
+		}else{    
+			if (zoom<=0.1) return;
+			zoom /= ZOOM_SPEED;
+			mapZoom.style.transform = `scale(${zoom})`; 
+			//positionX/=ZOOM_SPEED;
+			//positionY/=ZOOM_SPEED;
+		}
+	});
+
+	el.addEventListener('mousedown', (event) => {
+		moved = true;
+		dPosX=event.pageX-positionX;
+		dPosY=event.pageY-positionY;
+	});
+
+	el.addEventListener('mousemove', (event) => {
+		if (moved) {
+		//	console.log('moved');
+			positionX=event.pageX-dPosX;
+			positionY=event.pageY-dPosY;
+			mapZoom.style.top=positionY+"px";
+			mapZoom.style.left=positionX+"px";
+		} else {
+			//console.log('not moved')
+		}
+	});
+	el.addEventListener('mouseup', () => {
+		moved = false;
+	});
 }
 
 function AddToVocabHA(str) {
@@ -4265,4 +4367,3 @@ function auto_grow() {
     document.getElementById("specialTextarea").style.minHeight = "5px";
     document.getElementById("specialTextarea").style.minHeight = (document.getElementById('specialTextarea').scrollHeight) + "px";
 }
-
