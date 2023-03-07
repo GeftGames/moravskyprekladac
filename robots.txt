@@ -1,21 +1,6 @@
 User-agent: *
 Allow: *
-Allow: /index.php
-
-User-agent: Googlebot
-Disallow: *
-Allow: /index.php
-
-User-agent: Bingbot
-Disallow: *
-Allow: /index.php
-
-User-agent: Googlebot-Image
-Disallow: *
-Allow: /icon64.png
-Allow: /icon512.png
-Allow: /favicon.ico
-
+Allow: /index.html
 
 User-agent: Baiduspider
 Disallow: *
@@ -32,4 +17,4 @@ Disallow: *
 User-agent: Yahoo Blogs
 Disallow: *
 
-Sitemap: https://moravskyprekladac.ga/sitemap.xml
+Sitemap: https://moravskyprekladac.pages.dev/sitemap.xml
