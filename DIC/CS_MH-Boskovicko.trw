@@ -105,6 +105,7 @@ městO|1|u?|a||ô|||||||a|||
 polE|1|e|||||ich||||||||
 telE|1|e|||||||||||||
 zelI|1|i|||i||||||||||
+nesklonné|1||||||||||||||
 ženA|2|a|||ô||je||||||||
 nohY|2||||ô|||||||e|||
 husA|2|a|||ô||||||||||
@@ -134,11 +135,11 @@ dEŇ|4|eň|ňa|ňô|eň|ňi|ňô|êm|ňê|ňi|ňám|ňê|ňê|ňách|ňama
 lokEŤ|4|eť|||ť?a|||ť?em|||||||
 chlebA|4|a|||a|||em|||||||
 pohřeb|4||pohřbô|||||em|||||||
-dôb|4||a||a|||em|||||||
+dôb|-1||a||a|||em|||||||
 strom|4||a||a|||em|||||||
 schod|4||ô||a|||em|||||||
 nos|4||a||a|||em|||||||
-nesklonné|1||||||||||||||
+kopEC|3|ec|||||||||||||
 -
 vodovod|vuduvud|hrad|vodovod
 kladiv|klaďivu|městO|městO
@@ -171,6 +172,8 @@ brambor|japk|hrad|olêcA
 kafé|nesklonné|nesklonné
 vozík|vozék|hrad|strom
 mlýn|mlén|les|hrad
+exploz|bóchan|růžE|kopEC
+moř|mořE|polE
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
 pěknÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
@@ -327,6 +330,7 @@ z|
 ze|
 ke|
 pro|
+o|vo|
 -
 ale|hale
 a
