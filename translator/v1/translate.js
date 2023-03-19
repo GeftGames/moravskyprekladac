@@ -3917,14 +3917,14 @@ class LanguageTr {
 	}
 
 	BuildSelect(rawStr){
-		if (rawStr=="") return [];
+		/*if (rawStr=="") return [];
 
 		let arr=[];
 		for (const t of rawStr.split('|')) {
 			let o=t.split(">");
 			arr.push([o[0], o[1].split(",")]);
 		}
-		this.SelectReplace=arr; // = [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]
+		this.SelectReplace=arr; // = [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]*/
 	}
 
 	
