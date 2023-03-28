@@ -10,7 +10,8 @@ z
 lValaština
 g49.4583186,18.1428886
 xlokální mluva
-q0
+q3
+oValašsko
 -
 Uprostřed <id=1,příd,pád=2,rod=id2> <id=2,pods,pád=2,rod=stř> bylo <id=3,příd,pád=1,rod=id4> <id=4,pods,pád=1>.|Prostřeď <id=1,příd,pád=2,rod=id2> <id=2,pods,pád=2,rod=stř> było <id=3,příd,pád=1,rod=id4> <id=4,pods,pád=1>.
 -
@@ -737,6 +738,8 @@ delší dobu|hodnú chvílu
 s vhodně|s pohúdně 
 je to ale
 pojď sem|pocem
+tak jak|tajak
+do dneška|do včilška
 -
 a
 abatyše|abatyša
@@ -2879,6 +2882,10 @@ družic|růžE|rúžA
 keř|chrást|strom|strom
 mlýn|młýn|les|strom
 minel|galán|ruKA|pohádKA
+slivovice|gořalka||
+darebák|grobián||
+rána|bolačka||
+kopce|kotáry||
 -
 mladý|-1||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
@@ -2930,6 +2937,7 @@ tu|řujn|tuHÝ|čudnÝ
 měsíční |Mjesíční|jarní|jarní
 vhodn|súcí|mladý|jarní
 vodní|vodní|jarní|jarní
+neupravená|rozgajdaná ||
 -
 kdo|-1|kdo|koho|komu|koho|kdo|kom|kým
 ten|-1|ten|toho|tomu|toho|-|tom|tím|ti||||-|||ten|toho|tomu|ten|-|tom|tím|||||-|||||||-|||||||-|||||||-|||||||-||
@@ -3064,6 +3072,10 @@ v|vĚDĚT|vĚĎAŤ
 p|pSÁT|pSÁT
 neház|neval|bydlET|žIŤ
 ods|odsOUDIT|odsÚDIŤ
+pojídat|cúhat||
+mačkat|gňávit||
+objímat|obtůlat||
+blekotat|blabocet||
 -
 ihned|hneď,hneďkaj,bez meškání
 se|sa
@@ -3138,6 +3150,8 @@ zatímco|zatýmco
 výše|vyšéj
 doposud|dosél,doposel
 dosud|doty,dosaváť,dovčilška,posaváď
+tam|hen
+dřepět|čopět
 -
 mezi|medza|4,7
 v|7
