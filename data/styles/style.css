@@ -666,7 +666,7 @@ option,optgroup{
 }
 .pageFromDown{
     background-color: var(--ConBack);
-	position: fixed;
+/*	position: fixed;*/
 	top: 52px;
 	opacity:0;
 	transition: all 300ms ease-in;
@@ -783,7 +783,6 @@ option,optgroup{
 	flex-direction: row;
 	align-items: center;
 }
-
 .pageInside{
 	margin-left: 10%; 
 	margin-right: 10%;
@@ -910,6 +909,41 @@ option,optgroup{
 	transition: fill var(--transitionSlow);
 	box-shadow: var(--tsh);
 }
+.mapDotGood{
+	fill:gold;
+}
+.mapDotNotSoGood{
+	fill:orange;
+}
+.mapDotSoGood{
+	fill:white;
+}
 .mapDot:hover{
 	fill:darkred;
+}
+.aboutPageHeader{
+	font-size: 7mm;
+	margin-bottom: 0px;
+	color: var(--ColorThemeForward);
+}
+#map{
+	cursor: grab;
+	transition-timing-function: steps(6, end);
+	transition: transform 0.1s;
+}
+#mapZoom{
+	transform-origin: left top;
+}
+circle{
+	cursor: pointer;
+}
+.mapTitle{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	transform-origin: left top;
+	text-rendering: optimizeSpeed;
+	color: var(--ColorOrig);
+	user-select: none;
+	color-rendering: optimizeSpeed;
+	transition: none;
 }
