@@ -1696,12 +1696,14 @@ class ItemAdjective{
 		for (const p of this.pattensFrom) {
 			if (p.Name==name) return p;
 		}
+		return null;
 	}
 
 	static GetPatternByNameTo(name) {
 		for (const p of this.pattensTo) {
 			if (p.Name==name) return p;
 		}
+		return null;
 	}
 }
 
