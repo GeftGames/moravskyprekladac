@@ -1,4 +1,4 @@
-﻿const serverName="https://moravskyprekladac.ga/";
+﻿const serverName="https://moravskyprekladac.pages.dev/";
 /*class Word {
 	constructor() {
 	    this.selectedIndex = 0;
@@ -1598,42 +1598,85 @@ function Load() {
     document.getElementById("rte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("header").style.transition="background-color .3s, color .3s;";*/
 
-	let el=document.getElementById("map");
+	let el=document.getElementById("mapSelector");
 	let zoom=1;
-	let ZOOM_SPEED=1.1;
+	let ZOOM_SPEED=1.2;
 	let positionX=0;
 	let positionY=0;
-	let mapZoom=document.getElementById("mapZoom");
+	let mapZoom=document.getElementById("map");
 	let moved;
 	let dPosX=0,dPosY=0;
-	el.addEventListener("wheel", function(e){
-		if (e.deltaY > 0) {    
-			zoom *= ZOOM_SPEED;
-			mapZoom.style.transform = `scale(${zoom})`; 
+	el.addEventListener("wheel", function(e) {
+		//positionX=e.pageX-dPosX;
+		//positionY=e.pageY-dPosY;
+		e.preventDefault();
+		//let scale=zoom;
+		//if (scale>1.3) scale=1.3;
+		//else if (scale<0.3) scale=0.7;
+		//console.log(positionX);
+	//	mapZoom.style.transformOrigin = positionX + "px, " + positionY + "px";
+		
+		
+	//console.log("x",e.clientX);
+	//console.log("y",e.clientY);
+	//console.log("xx",positionX);
+	//console.log("yy",positionY);
+		let dX=-(positionX-e.clientX+e.currentTarget.offsetLeft)/zoom;
+		let dY=-(positionY-e.clientY+e.currentTarget.offsetTop)/zoom;
+		
+		let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
+
+		if (delta > 0) zoom *= 1.2; else  zoom /= 1.2;
+if (zoom<=0.1)zoom=0.1;
+if (zoom>10)zoom=10;
+		//if (e.deltaY > 0) {   
+		//	zoom *= ZOOM_SPEED;
+			//mapZoom.style.transform = `scale(${zoom})`; 
 			//positionX*=ZOOM_SPEED;
 			//positionY*=ZOOM_SPEED; 
-		}else{    
-			if (zoom<=0.1) return;
-			zoom /= ZOOM_SPEED;
-			mapZoom.style.transform = `scale(${zoom})`; 
+		//}else{    
+		//	if (zoom<=0.1) return;
+	//		zoom /= ZOOM_SPEED;
+		//	mapZoom.style.transform = `scale(${zoom})`; 
 			//positionX/=ZOOM_SPEED;
 			//positionY/=ZOOM_SPEED;
-		}
+	//	}		
+
+
+	//	let dX2=(positionX-e.pageX)/zoom;
+	//	let dY2=(positionY-e.pageY)/zoom;
+	
+		positionX=e.clientX-e.currentTarget.offsetLeft-dX*zoom;
+		positionY=e.clientY-e.currentTarget.offsetTop-dY*zoom;
+
+		//mapZoom.style.transform = `scale(${zoom})`; 
+		setTransform();
+	//	mapZoom.style.top=positionY+"px";
+	//	mapZoom.style.left=positionX+"px";
 	});
 
-	el.addEventListener('mousedown', (event) => {
+	el.addEventListener('mousedown', (e) => {
+		e.preventDefault();
 		moved = true;
-		dPosX=event.pageX-positionX;
-		dPosY=event.pageY-positionY;
+		dPosX=e.clientX-positionX;
+		dPosY=e.clientY-positionY;
+	});
+	
+	el.addEventListener('mouseup', (e) => {
+		moved = false;
 	});
 
-	el.addEventListener('mousemove', (event) => {
+	el.addEventListener('mousemove', (e) => {
+		e.preventDefault();
 		if (moved) {
+			
 		//	console.log('moved');
-			positionX=event.pageX-dPosX;
-			positionY=event.pageY-dPosY;
-			mapZoom.style.top=positionY+"px";
-			mapZoom.style.left=positionX+"px";
+			positionX=e.clientX-dPosX;
+			positionY=e.clientY-dPosY;
+			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
+			setTransform();
+			//mapZoom.style.top=positionY+"px";
+			//mapZoom.style.left=positionX+"px";
 		} else {
 			//console.log('not moved')
 		}
@@ -1641,6 +1684,40 @@ function Load() {
 	el.addEventListener('mouseup', () => {
 		moved = false;
 	});
+
+	function setTransform() {
+        mapZoom.style.transform = "translate(" + positionX + "px, " + positionY + "px) scale(" + zoom + ")";
+
+		let elements=document.getElementById("layer2").childNodes;
+		for (let ele of elements) {
+			if (ele.nodeName=="circle"){
+				if (4/zoom>4)ele.setAttribute("r", 4);
+				else ele.setAttribute("r", 4/zoom);
+			}
+			//console.log(ele.r);
+		}
+
+		
+		for (let ele of document.getElementById("mapZoom").childNodes) {
+			if (ele.nodeName=="SPAN"){
+				//ele.style.fontSize=(1/zoom*100)+"%";
+				//ele.style.fontSize=(1/zoom*10)+"px";
+				ele.style.scale=(1/zoom);
+					ele.style.marginTop=(8/zoom)+"mm";
+				//ele.style.height=(1/zoom*100)+"%";
+			}
+			//console.log(ele.r);
+		}
+	 //mapZoom.style.width=(100*zoom) + "%";
+	 //mapZoom.style.height=(100*zoom) + "%";
+	 //mapZoom.style.top=positionY + "px";
+	 //mapZoom.style.left=positionX + "px";
+      }
+}
+
+function drawMap(){
+
+
 }
 
 function AddToVocabHA(str) {

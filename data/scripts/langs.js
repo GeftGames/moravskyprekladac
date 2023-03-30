@@ -4,7 +4,7 @@ langs["cs"] = {
 	Code : "cs",
 
 	// Zpráva
-	noteStillInDev : "Překladač je pořád ve vývoji, nehotové překlady lze zapnout v nastavení, levém horním menu",
+	noteStillInDev : "Překladač je pořád ve vývoji, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
 
 	// Překládání
 	From : "Z",
@@ -1525,7 +1525,7 @@ langs["valach"] = {
 	LangName : "Valaština",
 
 	// Zpráva
-	noteStillInDev : "Překladač je v jedném kusi nedoďełaný",
+	noteStillInDev : "Překladač je v jedném kusi nedoďełaný. Esli chcete zapnúť velmi rané překlady, tak kliknite v levým, vŕchným rohu na tři čáry.",
 
 	// Překládání
 	From : "Z",
