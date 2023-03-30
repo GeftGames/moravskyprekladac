@@ -1,5 +1,5 @@
 // 0 - nothing
-// 1 - something small
+// 1 - something small, can translate "Dej mouku ze mlýna na vozík." at least with replaces, no via replace sentence
 // 2 - basic
 // 3-  good
 // 4 - advanced
@@ -32,7 +32,7 @@ let translations = [
 			"Jižní Klobukovsko",
 
 			// nekdy k Valachách
-			"Luhačovické Zálesí",
+			"Luhačovické Zálesí|CS_SL-Preckovice|0|49.0727915,17.7640433",
 
 			"Moravské Kopanice|CS_SL-Kopanice|1|48.9586267,17.8553823"
 		],
@@ -74,6 +74,8 @@ let translations = [
 				"Náměšťsko",
 				"Velkobítešsko",
 
+				"Okřížky|CS_PH-Okrizky|0|49.2415278,15.7220176",
+
 				// Jižní Podhorácko
 				"Třebíčsko|CS_PH_Trebicsko|0|49.2160815,15.8822029",
 				"Oslovansko",
@@ -82,6 +84,8 @@ let translations = [
 				// Pod Brnem
 				"Moravskobudějovicko",
 				"Židlochovicko|CS_PH-Zidlochovicko|1|49.0398171,16.617251",
+
+				"Studenec|CS_PH-Studenec|0|49.1997571,16.0592562"
 			],
 
 			"Malá haná", [
@@ -109,15 +113,17 @@ let translations = [
 			"Prostějovsko Severní",
 			"Prostějovsko Jižní",
 			"Přerovsko",
+			"Hostýn|CS_HA-Hostyn|0|49.4017719,17.6479803",
 			"Kroměřížsko|CS_HA-Kromeriz|1|49.299031,17.3942005",
 			"Vyškovsko",
 			"Slavkovsko-Bučovicko|CS_Ha-SlavkovskoBucovicko|1|49.1526485,16.9494219",
 		],
 
 		"Kelečsko, Záhoří, Pobečví", [
-			"Hranicko",
+			"Hranicko|CS_KZ-Hranicko|0|49.5896673,17.7119718",
 			"Hostýnské závrší",
-			"Kelečsko|CS_KZ-Kelc|0|49.4791212,17.8183097"
+			"Kelečsko|CS_KZ-Kelc|0|49.4791212,17.8183097",
+			"Spálov|CS_Spalov|0|49.7040566,17.7220418"
 		],
 
 		"Drahansko, Blansko, Hřebečsko", [
@@ -131,7 +137,7 @@ let translations = [
 		[
 			// Lašsko
 			"Jižní Frýdecko-Mýstecko|CS_LA-FrydekMistek|1|49.686399,18.3479846",
-			"Ostravsko",
+			"Ostravsko|CS_LA-Ostrava|0|49.806989,18.2737574",
 			"Frendštátsko",
 			"Novojíčinsko|CS_KR-Jicin|1|49.5950059,18.0108946",
 			//"Staré hamry"
@@ -161,7 +167,7 @@ let translations = [
 	],
 
 	"Moravský jazyk", [
-		"Moravština, nenápadná|CS_MO-Nenapadna|1",
+	//	"Moravština, nenápadná|CS_MO-Nenapadna|1",
 		"Moravština, návrh|CS_MO-Tradice|2",
 		//"Moravština C, převaha|CS_MO_medium",
 	],
@@ -180,8 +186,8 @@ function init() {
 	//let select = document.getElementById('selectorFrom');
 	let select2= document.getElementById("selectorTo");
 	let pointsL2=document.getElementById('layer2');
+	GetFilesInDir();
 	InnerSearch(translations, /*select,*/select2, 0);
-
 	function InnerSearch(arr, /*parent,*/ parent2, level) {
 	//	select2.innerHTML = '';
 		let onlyStr = true;
@@ -198,57 +204,75 @@ function init() {
 			//	let lang = arr[i];
 			for (const lang of arr) {
 
-				// Add text to comboBox
-				if (lang.includes('|')) {
-					let s=lang.split('|');
-					
-					let quality=s[2];//0=nothing, 1=something basic, 2=low quality; 3=medium; 4=good; 5=well done
-					if ((!betaFunctions && quality>=2) || (betaFunctions && quality>0) || dev) {
-						let name=s[0];
-						if (quality<=1) name+=" 👎";
-						if (quality>=4) name+=" 👍";
-						let file=s[1];
-
-						let tr=new LanguageTr(file);
-						tr.quality=quality;
-						languagesList.push(tr);
-						tr.GetVocabulary(/*dev*/);
-						//AllLang.push(file);
-
-						/*let nodeLang = document.createElement('option');
-						nodeLang.value=file;
-						nodeLang.innerText = name;
-						nodeLang.className = "selectGroupLang" + level;
-						parent.appendChild(nodeLang);*/
-						
-						let nodeLang2 = document.createElement('option');
-						nodeLang2.value=file;
-						nodeLang2.innerText = name;
-						nodeLang2.className = "selectGroupLang" + level;
-						parent2.appendChild(nodeLang2);
-
-						if (s.length>=4){
-							let p=s[3].split(',');
-							let locX=parseFloat(p[0]);
-							let locY=parseFloat(p[1]);
-							//AddPoint(points, name, parseInt(p[0]), parseInt(p[1]));
-
-							let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-							circle.classList.add("mapDot");
-							circle.setAttribute("r", 3+quality/5);
-							circle.addEventListener("click", ()=>{
-								//document.getElementById('selectorTo').value=name;
-								nodeLang2.selected=true;
-								CloseMapPage();
-								Translate();
-							});
-							circle.setAttribute("data-name",name);
-							circle.setAttribute("cx",((locY-originX)/scX)*170*1.21-20.92);//((locY-14.888642)/3.8791)*170)
-							circle.setAttribute("cy",(-(locX-originY)/scY)*150*1.0367+3.4);
-							pointsL2.appendChild(circle);
-						}
-					}
-				} 
+				//// Add text to comboBox
+				//if (lang.includes('|')) {
+				//	let s=lang.split('|');
+				//	
+				//	let quality=s[2];//0=nothing, 1=something basic, 2=low quality; 3=medium; 4=good; 5=well done
+				//	if ((!betaFunctions && quality>=2) || (betaFunctions && quality>0) || dev) {
+				//		let name=s[0];
+				//		if (quality<=1) name+=" 👎";
+				//		if (quality>=4) name+=" 👍";
+				//		let file=s[1];
+//
+				//		let tr=new LanguageTr(file);
+				//		tr.quality=quality;
+				//		languagesList.push(tr);
+				//		tr.GetVocabulary(/*dev*/);
+				//		//AllLang.push(file);
+//
+				//		/*let nodeLang = document.createElement('option');
+				//		nodeLang.value=file;
+				//		nodeLang.innerText = name;
+				//		nodeLang.className = "selectGroupLang" + level;
+				//		parent.appendChild(nodeLang);*/
+				//		
+				//		let nodeLang2 = document.createElement('option');
+				//		nodeLang2.value=file;
+				//		nodeLang2.innerText = name;
+				//		nodeLang2.className = "selectGroupLang" + level;
+				//		parent2.appendChild(nodeLang2);
+//
+				//		if (s.length>=4){
+				//			let p=s[3].split(',');
+				//			let locX=parseFloat(p[0]);
+				//			let locY=parseFloat(p[1]);
+				//			//AddPoint(points, name, parseInt(p[0]), parseInt(p[1]));
+//
+				//			let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+				//			circle.classList.add("mapDot");
+				//			circle.setAttribute("r", 3+quality/5);
+				//			circle.addEventListener("click", ()=>{
+				//				//document.getElementById('selectorTo').value=name;
+				//				nodeLang2.selected=true;
+				//				CloseMapPage();
+				//				Translate();
+				//			});
+				//			circle.setAttribute("data-name",s[0]);
+				//			circle.setAttribute("cx",((locY-originX)/scX)*170*1.21-20.92);//((locY-14.888642)/3.8791)*170)
+				//			circle.setAttribute("cy",(-(locX-originY)/scY)*150*1.0367+3.4);
+				//			pointsL2.appendChild(circle);
+//
+				//			/*let txt=document.createElementNS("http://www.w3.org/2000/svg", 'text');
+				//			txt.classList.add("mapTitle");
+				//			txt.setAttribute("text-anchor","middle");
+				//			txt.setAttribute("fill","red");
+				//			txt.innerHTML=s[0];
+				//			txt.setAttribute("data-name",s[0]);
+				//			txt.setAttribute("x",((locY-originX)/scX)*170*1.21-20.92);//((locY-14.888642)/3.8791)*170)
+				//			txt.setAttribute("y",(-(locX-originY)/scY)*150*1.0367+3.4);
+				//			pointsL2.appendChild(txt);*/
+//
+				//			let txt=document.createElement("span");
+				//			txt.classList.add("mapTitle");
+				//			txt.innerHTML=s[0];
+				//			txt.style.left="calc("+(((locY-originX)/scX)*170*1.21-20.92)+"mm)";//((locY-14.888642)/3.8791)*170)
+				//			txt.style.top=((-(locX-originY)/scY)*150*1.0367+3.4)+"mm";
+				//		//	txt.style.position="absolute";
+				//			document.getElementById('mapZoom').appendChild(txt);
+				//		}
+				//	}
+				//} 
 			}
 			return;
 		} else {
@@ -278,32 +302,140 @@ function init() {
 			return;
 		}
 	}
-	//dev=true;
-
-/*	for (let i = 0; i < languagesList.length; i++) {
-		languagesList[i].GetVocabulary(dev);
-	}*/
 }
 let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
-/*
-function AddPoint(parent, lang, locX, locY) {
-	let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-	circle.classList.add("mapDot");
-	circle.setAttribute("r", 4);
-	circle.addEventListener("click", ()=>{
-		document.getElementById('selectorTo').value=lang;
+
+
+let totalDirFiles=-1;
+let downloadedFiles=0;
+function GetFilesInDir() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.timeout=4000;
+
+	let select2= document.getElementById("selectorTo");
+	let pointsL2=document.getElementById('layer2');
+
+	xhttp.onload = function() {		
+		let json=JSON.parse(this.responseText);
+		stepEnd=json.length;
 		
-		CloseMapPage();
+		for (const file of json) {
+			//console.log(file);
+			DownloadLang(file.download_url);
+		}
+	}
+	xhttp.addEventListener('error', (e)=>{
+		console.log('error',e);
 	});
-	circle.setAttribute("data-name",lang);
-	circle.setAttribute("cx",((locY-14.888642)/3.8791)*170);
-	circle.setAttribute("cy",(-(locX-50.4213505)/1.8483)*150);
-	parent.appendChild(circle);
-}*/
+	xhttp.open("GET", "https://api.github.com/repositories/417226915/contents/DIC", true);
+	xhttp.send();
+	
+	function DownloadLang(url) {
+		const xhttp2 = new XMLHttpRequest();
+		xhttp2.timeout=50000;
+
+		xhttp2.onload = function() {
+			RegisterLang(this.responseText);
+			ReportDownloadedLanguage();
+			//console.log("Loading...");
+		}
+		xhttp2.addEventListener('error', function(e) {
+			console.log('error',e);
+			ReportDownloadedLanguage();
+		});
+		xhttp2.open("GET", url, true);
+		xhttp2.send();
+	}
+
+	function RegisterLang(content){
+		let lines=content.split('\r\n');
+
+		if (lines.length<5) {
+			if (dev) console.log("WARLING| Downloaded twr seems too small");
+			return;
+		}
+
+		let tr=new LanguageTr();
+		tr.Load(lines);
+	//	console.log(tr.Quality);
+		AddLang(tr);
+	}
+
+	function AddLang(lang) {	
+
+		
+//console.log(category);
+		function insideSearch(div) {
+			for (let n of div.childNodes) {
+				if (n.nodeName!="#text"){
+					if (n.text==lang.lang) {
+						return n;
+					}
+				}else insideSearch(n);
+			}	
+			return select2;	
+		}
+		let category = insideSearch(select2);
+		
+	//	languagesList.push(tr);
+		//
+		//0=nothing, 1=something basic, 2=low quality; 3=medium; 4=good; 5=well done
+		//console.log("b",lang.Quality);
+		if (lang.Name!="") {
+		if ((!betaFunctions && lang.Quality>1) || (betaFunctions && lang.Quality>0) || dev) {
+		//	console.log("a",lang.Quality);
+			let name=lang.Name;
+			if (lang.Quality<=1) name+=" 👎";
+			else if (lang.quality>=4) name+=" 👍";
+			//let file=s[1];
+			//tr.Quality=lang.Quality;
+			languagesList.push(lang);
+			
+			let nodeLang2 = document.createElement('option');
+			nodeLang2.value=lang.Name;
+			nodeLang2.innerText = name;
+		//	console.log("z",lang);
+		//	nodeLang2.className = "selectGroupLang" + level;
+			category.appendChild(nodeLang2);
+		//	console.log(lang);
+			if (!isNaN(lang.locationX) && !isNaN(lang.locationY)) {
+				let locX=lang.locationX;
+				let locY=lang.locationY;
+
+				let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+				circle.classList.add("mapDot");
+				if (lang.Quality>3) circle.classList.add("mapDotSoGood");
+				else if (lang.Quality>1) circle.classList.add("mapDotGood");
+				if (lang.Quality==1) circle.classList.add("mapDotNotSoGood");
+				circle.setAttribute("r", lang.Quality>0 ? 3+lang.Quality/5 :1);
+				circle.addEventListener("click", ()=>{
+					nodeLang2.selected=true;
+					CloseMapPage();
+					Translate();
+				});
+				circle.setAttribute("data-name", lang.Name);
+				circle.setAttribute("cx",((locY-originX)/scX)*170*1.21-20.92);
+				circle.setAttribute("cy",(-(locX-originY)/scY)*150*1.0367+3.4);
+				pointsL2.appendChild(circle);
+
+				let txt=document.createElement("span");
+				txt.classList.add("mapTitle");
+				txt.innerHTML=lang.Name;
+				txt.style.left="calc("+(((locY-originX)/scX)*170*1.21-20.92)+"mm)";
+				txt.style.top=((-(locX-originY)/scY)*150*1.0367+3.4)+"mm";
+				document.getElementById('mapZoom').appendChild(txt);
+			}
+		}
+	}else{
+		if (dev)console.log("This lang has problems",lang);
+
+	}
+	}
+}
 
 function DisableLangTranslate(search) {
-	let ele=document.getElementById("selectorFrom");
-	InnerSearch(ele, 0);
+	//let ele=document.getElementById("selectorFrom");
+	//InnerSearch(ele, 0);
 
 	let ele2=document.getElementById("selectorTo");
 	InnerSearch(ele2, 0);
@@ -365,7 +497,7 @@ function GetCurrentLanguage() {
 	let ele2=document.getElementById("selectorTo").value;
 	
 	for (let e of languagesList) {
-		if (e.name==ele2){
+		if (e.Name==ele2){
 			//console.log(e.name);
 			return e;
 		}
@@ -374,9 +506,10 @@ function GetCurrentLanguage() {
 }
 
 let step=0;
+let stepEnd=NaN;
 function ReportDownloadedLanguage() {
 	step++;
-	let progness=step/languagesList.length;
+	let progness=step/stepEnd;
 	document.getElementById("progness").style.width=(progness*100)+"%";
 
 	if (progness==1) {
@@ -553,7 +686,6 @@ function TranslateSubs() {
 
 	reader.readAsText(file);
 }
-
 
 var textFile= null;
 makeTextFile = function (text) {

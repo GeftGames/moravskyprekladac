@@ -207,9 +207,11 @@ class ItemNoun {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
 						if (Array.isArray(this.PatternTo.Shapes[i])) {
 							for (const z of this.PatternTo.Shapes[i]){
-								ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
+								if (z!='?') ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
 							}
-						} else ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]); // [tvar, číslo, pád]	
+						} else {
+							if (shape!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]); // [tvar, číslo, pád]	
+						}
 						break;	
 					}
 				}
@@ -226,9 +228,9 @@ class ItemNoun {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
 						if (Array.isArray(this.PatternTo.Shapes[i])) {
 							for (const z of this.PatternTo.Shapes[i]){
-								ret.push([this.To+z, 2, i+1-7]); // [tvar, číslo, pád]	
+								if ('z'!="?") ret.push([this.To+z, 2, i+1-7]); // [tvar, číslo, pád]	
 							}
-						} else ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1]);
+						} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1]);
 						break;
 					}
 				}
@@ -247,9 +249,9 @@ class ItemNoun {
 							if (this.From+s==str) {
 								if (Array.isArray(this.PatternTo.Shapes[i])) {
 									for (const z of this.PatternTo.Shapes[i]){
-										ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
+										if (z!="?") ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
 									}
-								} else ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]);
+								} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]);
 								break;
 							}
 						}
@@ -257,9 +259,9 @@ class ItemNoun {
 						if (this.From+this.PatternFrom.Shapes[i]==str) {
 							if (Array.isArray(this.PatternTo.Shapes[i])) {
 								for (const z of this.PatternTo.Shapes[i]){
-									ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
+									if (z!="?") ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
 								}
-							} else ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]);
+							} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]);
 							break;
 						}
 					}
@@ -276,9 +278,9 @@ class ItemNoun {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
 							if (Array.isArray(this.PatternTo.Shapes[i])) {
 								for (const z of this.PatternTo.Shapes[i]){
-									ret.push([this.To+z, 2, i+1-7]); // [tvar, číslo, pád]	
+									if (z!="?") ret.push([this.To+z, 2, i+1-7]); // [tvar, číslo, pád]	
 								}
-							} else ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1]);
+							} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1]);
 							break;
 						}
 					}
@@ -527,7 +529,7 @@ class ItemPreposition {
 
 	IsStringThisWord(str) {
 		if (this.input==str) {
-			return [this.output, this.fall];
+			if (this.input!="?") return [this.output, this.fall];
 		}
 		return null;
 	}
@@ -1104,7 +1106,10 @@ class ItemPatternPronoun{
 			item.Type=1;
 			item.Gender=parseInt(raw[1]);
 			item.Shapes=[14];
-			for (let i=0; i<14; i++)item.Shapes[i]=raw[2+i].split(',');
+			for (let i=0; i<14; i++){
+				if (raw[2+i].includes('?')) item.Shapes[i]='?';
+				else item.Shapes[i]=raw[2+i].split(',');
+			}
 			return item; 
 		}
 		if (raw.length==7+2){
@@ -1113,7 +1118,10 @@ class ItemPatternPronoun{
 			item.Type=2;
 			item.Gender=parseInt(raw[1]);
 			item.Shapes=[7];
-			for (let i=0; i<7; i++)item.Shapes[i]=raw[2+i].split(',');
+			for (let i=0; i<7; i++){
+				if (raw[2+i].includes('?')) item.Shapes[i]='?';
+				else item.Shapes[i]=raw[2+i].split(',');
+			}
 			return item; 
 		}
 		if (raw.length==1+2){
@@ -1122,6 +1130,7 @@ class ItemPatternPronoun{
 			item.Type=3;
 			item.Gender=parseInt(raw[1]);
 			item.Shapes=[raw[2]].split(',');
+			if (raw[2].includes('?')) item.Shapes[i]='?';
 			return item; 
 		}
 		if (raw.length==14*4+2){
@@ -1130,7 +1139,10 @@ class ItemPatternPronoun{
 			item.Type=4;
 			item.Gender=parseInt(raw[1]);
 			item.Shapes=[14*4];
-			for (let i=0; i<14*4; i++)item.Shapes[i]=raw[2+i].split(',');
+			for (let i=0; i<14*4; i++) {
+				if (raw[2+i].includes('?')) item.Shapes[i]='?';
+				else item.Shapes[i]=raw[2+i].split(',');
+			}
 			return item; 
 		}
 		if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
@@ -1226,8 +1238,10 @@ class ItemPronoun{
 				for (const s of shapes) {
 					if (this.From+s==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) arr.push([this.To+s]);
-						ret.push([arr, 1, i+1,"muz"]);
+						for (let s of this.PatternTo.Shapes[i]) {
+							if (s!="?") arr.push([this.To+s]);
+						}
+						if (arr.length>0)ret.push([arr, 1, i+1,"muz"]);
 						break;
 					}
 				}
@@ -1239,7 +1253,7 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1,"muz"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1,"muz"]);
 						break;
 					}
 				}
@@ -1252,7 +1266,7 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 					//console.log(this.From+shapes[j]);
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14,"mun"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14,"mun"]);
 						break;
 					}
 				}
@@ -1264,7 +1278,7 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14+1,"mun"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14+1,"mun"]);
 						break;
 					}
 				}
@@ -1277,7 +1291,7 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 					//console.log(this.From+shapes[j]);
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14-14,"zen"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14-14,"zen"]);
 						break;
 					}
 				}
@@ -1289,7 +1303,7 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14-14+1,"zen"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14-14+1,"zen"]);
 						break;
 					}
 				}
@@ -1300,7 +1314,7 @@ class ItemPronoun{
 				
 				for (const s of shape) {
 					if (this.From+s==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14-14-14, "str"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14-14-14, "str"]);
 						break;
 					}
 				}
@@ -1312,7 +1326,7 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14+1-14-14, "str"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14+1-14-14, "str"]);
 						break;
 					}
 				}
@@ -1328,8 +1342,10 @@ class ItemPronoun{
 //					console.log(this.From+shapes[j]);
 					if (shape==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) arr.push(this.To+s);
-						ret.push([arr, 1, i+1]);
+						for (let s of this.PatternTo.Shapes[i]) {
+							if (s!="?") arr.push(this.To+s);
+						}
+						if (arr.length>0)ret.push([arr, 1, i+1]);
 						break;
 					}
 				}
@@ -1342,8 +1358,10 @@ class ItemPronoun{
 
 					if (shape==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) arr.push(this.To+s);
-						ret.push([arr, 2, i-7+1]);
+						for (let s of this.PatternTo.Shapes[i]) {
+							if (s!="?") arr.push(this.To+s);
+						}
+						if (arr.length>0)ret.push([arr, 2, i-7+1]);
 						break;
 					}
 				}
@@ -1361,8 +1379,10 @@ class ItemPronoun{
 					//console.log(this.From+shapes[j]);
 					if (shape==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) arr.push(this.To+s);
-						ret.push([arr, -1, i+1]);
+						for (let s of this.PatternTo.Shapes[i]) {
+							if (s!="?") arr.push(this.To+s);
+						}
+						if (arr.length>0)ret.push([arr, -1, i+1]);
 						break;
 					}
 				}
@@ -1378,7 +1398,7 @@ class ItemPronoun{
 				//for (let j=0; j<shapes.length; j++) {
 					let shape=this.From+shapes[0];
 					if (shape==str) {
-						ret.push([this.To+this.PatternTo.Shapes[0], -1,-1]);
+						if (this.PatternTo.Shapes[0]!="?") ret.push([this.To+this.PatternTo.Shapes[0], -1,-1]);
 						//break;
 					}
 				//}
@@ -1487,7 +1507,7 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
-						ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
+						if (this.PatternTo.Femimine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
 						break;	
 					}
 			//	}
@@ -1502,7 +1522,7 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
-						ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
+						if (this.PatternTo.Femimine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
 						break;
 					}
 				//}
@@ -1517,7 +1537,7 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
-						ret.push([this.To+this.PatternTo.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]); // [tvar, rod, číslo, pád]	
+						if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]); // [tvar, rod, číslo, pád]	
 						break;	
 					}
 				//}
@@ -1532,7 +1552,7 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
-						ret.push([this.To+this.PatternTo.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
+						if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
 						break;
 					}
 			//	}
@@ -1552,8 +1572,10 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]);
-							break;
+							if (this.PatternTo.Femimine[i]!="?") {
+								 ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]);
+								 break;
+							}
 						}
 				//	}
 				}
@@ -1567,7 +1589,7 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
+							if (this.PatternTo.Femimine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
 							break;
 						}
 					//}
@@ -1582,7 +1604,7 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]);
+							if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]);
 							break;
 						}
 					//}
@@ -1597,7 +1619,7 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
+							if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
 							break;
 						}
 				//	}
@@ -1612,7 +1634,7 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.MasculineInanimate[i], 1, i+1, "MasculineInanimate"]);
+							if (this.PatternTo.MasculineInanimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineInanimate[i], 1, i+1, "MasculineInanimate"]);
 							break;
 						}
 				//}
@@ -1627,7 +1649,7 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.MasculineInanimate[i], 2, i-7+1, "MasculineInanimate"]);
+							if (this.PatternTo.MasculineInanimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineInanimate[i], 2, i-7+1, "MasculineInanimate"]);
 							break;
 						}
 					//}
@@ -1642,7 +1664,7 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.Middle[i], 1, i+1, "Middle"]);
+							if (this.PatternTo.Middle[i]!="?") ret.push([this.To+this.PatternTo.Middle[i], 1, i+1, "Middle"]);
 							break;
 						}
 				//}
@@ -1657,7 +1679,7 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							ret.push([this.To+this.PatternTo.Middle[i], 2, i-7+1, "Middle"]);
+							if (this.PatternTo.Middle[i]!="?") ret.push([this.To+this.PatternTo.Middle[i], 2, i-7+1, "Middle"]);
 							break;
 						}
 					//}
@@ -1691,23 +1713,28 @@ class ItemPatternNumber{
 		
 	static Load(data) {
 		let raw=data.split('|');
+
 		let item=new ItemPatternNumber();
 		item.Name=raw[0];
 		//item.Gender=parseInt(raw[1]);
 		
 		if (raw.length==14+2) {
 			for (let i=0; i<14; i++) { 
-				item.Shapes.push(raw[2+i].split(',')); 
+				if (raw[2+i].includes('?'))item.Shapes.push('?'); 
+				else item.Shapes.push(raw[2+i].split(',')); 
 			}
 		} else if (raw.length==7+2) {
 			for (let i=0; i<7; i++) { 
-				item.Shapes.push(raw[2+i].split(',')); 
+				if (raw[2+i].includes('?'))item.Shapes.push('?'); 
+				else item.Shapes.push(raw[2+i].split(',')); 
 			}
 		} else if (raw.length==1+2) {
-			item.Shapes =[raw[2].split(',')];
+			if (raw[2].includes('?'))item.Shapes.push('?'); 
+			else item.Shapes =[raw[2].split(',')];
 		}else if (raw.length==14*4+2) {
 			for (let i=0; i<14*4; i++) { 
-				item.Shapes.push(raw[2+i].split(',')); 
+				if (raw[2+i].includes('?'))item.Shapes.push('?'); 
+				else item.Shapes.push(raw[2+i].split(',')); 
 			}
 		}else return null;
 
@@ -1774,7 +1801,7 @@ class ItemNumber{
 			if (Array.isArray(shape)) {
 				for (const s of shape) {
 					if (this.From+s==str) {
-						ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1, "muz"]);
+						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1, "muz"]);
 						break;
 					}
 				}
@@ -1933,6 +1960,7 @@ class ItemPatternVerb{
 		let arr = [len];
 		for (let i=0; i<len; i++) {
 			if (source[pos+i].includes(",")) arr[i]=source[pos+i].split(',');
+			else if (raw[2+i].include('?')) arr[i]='?'; 
 			else arr[i]=source[pos+i];
 		}
 		return arr;
@@ -2323,8 +2351,8 @@ class Replace {
 }
 
 class LanguageTr {
-	constructor(name) {
-		this.name=name;
+	constructor() {
+		this.Name="";
 	//	this.myVocab=[];
 		this.Words=[];
 		this.SameWords=[];
@@ -2385,19 +2413,28 @@ class LanguageTr {
 
 		this.qualityTrTotalTranslatedWell=0.0;
 		this.qualityTrTotalTranslated=0.0;
-	}
 
-	GetVocabulary(/*dev*/) {
+		
+		this.locationX=NaN;
+		this.locationY=NaN;
+		this.Quality=0;
+		this.Author="";
+		this.LastDateEdit="";
+		this.Comment="";
+		this.baseLangName=null;
+	}
+/*
+	GetVocabulary() {
 		this.state="downloading";
 	//	dev=dev;
-		if (dev) console.log("INFO| Starting Downloading '"+this.name+".trw'");
+		if (dev) console.log("INFO| Starting Downloading '"+this.Name+".trw'");
 		let request=new XMLHttpRequest();
 		request.timeout=4000;
-		request.open('GET', "DIC/"+this.name+".trw", true);
+		request.open('GET', "DIC/"+this.Name+".trw", true);
 		request.send();
 		let self=this;
 		request.onerror=function() {
-			if (dev) console.log("ERROR| Cannot downloaded '"+self.name+".trw'");
+			if (dev) console.log("ERROR| Cannot downloaded '"+self.Name+".trw'");
 			this.state="cannot download";
 		};
 		let x=this;
@@ -2431,12 +2468,12 @@ class LanguageTr {
 				}
 			}
 		};
-	}
+	}*/
 
 	Load(lines) {
 		this.state="loading";
 		enabletranslate=true;
-		if (dev) console.log("INFO| Parsing "+this.name);
+		if (dev) console.log("INFO| Parsing "+this.Name);
 		// Head
 		let i=0;
 		for(; i<lines.length; i++) {
@@ -2447,31 +2484,59 @@ class LanguageTr {
 			switch(subtype) {
 				// Comment info
 				case "i":
-					//	textBoxInfo.Text = line.Substring(1).Replace("\\n", Environment.NewLine);
+					this.Info = line.substring(1).replace("\\n","<br>");
 					break;
 
 				case "a":
-					//textBoxAuthor.Text = line.Substring(1);
+					this.Author = line.substring(1);
 					break;
 
 				case "d":
-					//	textBoxLastDate.Text = line.Substring(1);
+					this.LastDateEdit = line.substring(1);
 					break;
 
 				case "f":
-					//	textBoxLangFrom.Text = line.Substring(1);
+					this.From= line.substring(1);
 					break;
 
 				case "t":
-					//	textBoxLangTo.Text = line.Substring(1);
+					this.Name = line.substring(1);
 					break;
 
 				case "e":
-					this.BuildSelect(line.substring(1));//	textBoxLangTo.Text = line.Substring(1);
+					//this.BuildSelect(line.substring(1));
 					break;
 
 				case "c":
-					this.comment=line.substring(1);//	textBoxLangTo.Text = line.Substring(1);
+					this.Comment=line.substring(1);
+					break;
+					
+				case "g":
+					{
+						let GPS=line.substring(1);
+						//console.log(GPS);
+						if (GPS.includes(',')) {
+							let rawPos=GPS.split(',');
+							this.locationX=parseFloat(rawPos[0]);
+							this.locationY=parseFloat(rawPos[1]);
+						}
+					}
+					break;
+					
+				case "q":
+					this.Quality=parseFloat(line.substring(1));
+					break;
+					
+				case "l":
+					this.lang=line.substring(1);
+					break;
+
+				case "o":
+					this.Category=line.substring(1).split('>');
+					break;
+
+				case "z":
+					this.baseLangName=line.substring(1);
 					break;
 			}
 		}
@@ -2824,7 +2889,7 @@ class LanguageTr {
 
 		PrepareReplaceRules();
 
-		if (dev) console.log("📝 Translating "+this.name+"...");
+		if (dev) console.log("📝 Translating "+this.Name+"...");
 
 		let output=document.createElement("div");
 		let stringOutput="";
@@ -3917,7 +3982,7 @@ class LanguageTr {
 	}
 
 	BuildSelect(rawStr){
-		/*if (rawStr=="") return [];
+	/*	if (rawStr=="") return [];
 
 		let arr=[];
 		for (const t of rawStr.split('|')) {
