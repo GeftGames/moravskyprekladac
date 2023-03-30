@@ -120,13 +120,13 @@
 				<div id="nav" class="navTrans settingSection">
 
 					<!-- Current translation, only transtation page -->
-					<div>
+					<div class="settingSection">
 						<p style="display:inline-block;" id="textTranslator" class="settingHeader">Překladač</p>
 						<div class="sisetting">
 						
 
 						<!-- Copy current translation -->
-						<span id="textAbout" onclick="ShowAboutPage()" style="cursor: pointer;">O překladači</span>
+						<span id="textAbout" onclick="ShowAboutPage()" style="cursor: pointer;margin-left:10px;text-decoration: underline; color: var(--ColorOrig);">O překladači</span>
 					
 						<!--<p><a id="textAbout">Kontakt</a></p>-->
 						
@@ -344,6 +344,7 @@
 					<span rel="nofollow" id="tabText" 	class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));">Text</span>
 					<span rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));">Textové soubory</span>
 					<span rel="nofollow" id="tabSubs" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Titulky k filmu</span>
+					<!--<span rel="nofollow" id="tabWeb" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Doplněk prohlížeče - překlad youtube titulků, webu</span>-->
 				</div>
 
 				<div id="tabBackGround"></div>
@@ -440,7 +441,8 @@
 
 					<div><p class="aboutPageHeader" id="contact">Kontakt</p></div>
 					<p>Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi.</p>
-					<p>e-mail: <a href="mailto:admin@-">-</a></p>
+					<p>E-mail: <a href="mailto:geftgames@gmail.com">geftgames@gmail.com</a></p>
+					<p>Další odkazy: <a href="https://github.com/GeftGames/moravskyprekladac">Github</a></p>
 
 					<div><p class="aboutPageHeader" id="forGoodComputerUsers">Komentář počítačově zkušenějším</p></div>
 					<p>Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML. </p>
@@ -453,8 +455,8 @@
 
 				</div>
 			</div>
-					<div id="mapPage" class="pageFromDown" style="display: none; top:500px;z-index: 9;">
-						<div class="pageInside" id="about" style="display: flex; flex-direction: column;">
+					<div id="mapPage" class="pageFromDown" style="display: none; top:500px;z-index: 9;    height: inherit;">
+						<div class="pageInside" id="about" style="">
 							<div onclick="CloseMapPage()" class="pageFromDownClose" id="closeSelectorPage">
 								<div rel="nofollow" onclick="CloseMapPage()">
 									<svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
@@ -464,10 +466,11 @@
 								<p style="display:inline;" id="closeSelector">Zavřít</p>
 							</div>
 							<div><p class="mapPageHeader" id="mapPlace">Výběr místa</p></div>
-							<div id="mapSelector" style="display: flex; flex-direction: column;">
-								<div id="map" style="overflow: hidden;display: flex; ">
-									
-									<svg width="170mm" height="150mm" viewBox="0 0 210 150" version="1.1" id="mapZoom" sodipodi:docname="výkres.svg" xmlns="http://www.w3.org/2000/svg" style="position: relative;">
+						</div>
+						<div id="mapSelector" style="position: fixed; width: -webkit-fill-available; overflow: hidden;height: -webkit-fill-available;">
+							<div id="map" style="display: flex;transform-origin: left 0px; ">
+								<div id="mapZoom" >
+									<svg width="200mm" height="150mm" viewBox="0 0 200 150" version="1.1" sodipodi:docname="výkres.svg" xmlns="http://www.w3.org/2000/svg" style="margin: auto;position: relative; transform: scale(1) (0px, 0px)">
 										<!--<sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" inkscape:zoom="0.52724989" inkscape:cx="418.20777" inkscape:cy="53.105749" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1"/>-->
 										<!--<defs id="defs2"/>-->
 										<g inkscape:label="Vrstva 1" inkscape:groupmode="layer" id="layer1" style="display:inline">
@@ -476,8 +479,8 @@
 											<path style="display:inline; fill:#000080; fill-opacity: 1; stroke-width:0.264583;" d="m95.8 151 1.3.5.8-.5.3-1.2.3-.7s-.4-1.6-.2-1.6l1.1-1.3.6-.7-.2-1.4.9-.4.2-1.1 1.2-2 .3-.8.8-.6.5-.6 1-.3v-1l.9-.7v-2l2.6-1.3.6-.8.4-.2.9-1.1 1-.1 1 .5.5-.1 1.3.8.6-.2.3.6s1 .8 1.3.8h.7l.7 1 1.6 1.4.8-.3.8.3 1.9-1.2.2-.8.4.1.5-.7 1.5.5 1.5 1.7.5-.4-.1.7.4.3 1.3-.6v-.8s.3-.2.4 0l.6.5 1-.2.8-1.2h.6l1-1.1 2-.1.9-.5h.8l1-1.1.6-.4 1.1-1.7 1.3-1 .2-1h3.7l.8.4c.2 0 .8-.5.8-.5l.1-1 .8-1.9-.2-1.3.8-.8-.1-1.5.8-.9 1.1-.2h1.8l.3-.4h.4l.5.6h1l.2-.4h.8l1.4-1 1-1.6v-.4l1.4-2.2-.3-2 .5-.2-.7-1.2.5-.8v-.7l.8-.5-.1-1 .2-1.5.8-1.2-.1-.6.4-.5v-.9l-.6-.2.2-1.3.6-.4.2-.4 1.1-.8V98l3.1-.5 3-.8.3-.5 3-1 .7-.4 1.9-3.2s-.6-2.2-.5-2.3l.5-.2 1.4.6.8-.7 1.1-.8v-.5l1-1V86l1.5-1-.1-.6h.5l.1-.6h.5l.3-.5-.9-1.2.5-.7-.4-.2-.3.6-.1 1.5-1.8 1-1.2.3-1.3-.7-.5-.8v-.5l-.6-1v-.9l-.8-1.5-.5-.6-.2-.8-1-1.8-.5-.3V73l-.6-1.2.1-.5h.5l-.1-1 .3-1.5-.6-.7v-.7l-1-1.5-.5-.3-.6-.9v-1c0-.3-.8-1.4-.8-1.4v-2.2l.4-.7-.6-.4.1-.5-1-1v-2.1l.4-.3-.2-.3.5-.5v-.7l-.2-.4.1-.6-.3-.4-.2.2.1-.4-.4-.7-.5.2-1.5.4-.4 1-.5.5v1l-.4.6.4 1.2-.8 1.8-.6.4-.3.9.3.3-2.1 2.2-1 .7-.7 1-1.2.5-1.3.5-.6.7-1.7.7-1 .8-1.2-.7s.2-1.8 0-1.8l-.4-.3.4-.8-.5-1.3-.5.2-.6 1.1-1.7 1-.8-.6.1-.8-.8-1 .3-1-.9-1.1.6-.8-.1-.5-1.4-.2-.3 1.6L144 62l1.6 2.2-.8 2.6-.6 1.2.1 1h.5l1.5-.6.4.5 1.7 1.2.4.8-.3.5-1.7-1h-.7l-1.1-.8h-1.2l.4.6.8.7.5.9v.7l-1.7-.2-.8-.6v-.5l-2.1-1.2-.5-.1v-1.6l-1.6-2.1 1.3-1.2-.3-1.3-.7-.3h-.7l-.4-.6h-1.4l-.4-2-.7-1.3-1.3-1c0-.2-.6-1.6-.5-1.7v-1l.4-.3.4-2-.5-1 .2-1 .6-.4v-1l-.5-.8-.9.2h-1l-1 1-.8-1.2s-1.3-.8-1.3-1V48h-.5l-.1.5-.8.3-.2-.5-1.3-.9v-1.2l-1-.3-.7.7-.5-1.1.4-1.2-.5-.5-3-1-.1.3v1l.6.5-.4.4-.3.8-.7-.2-.2-.5-1.5-.7.3-.5-2-1.8-.2-1.5v-1l-.8-.6h-.8l-2.6-3-.3-1.6v-1l-.4-1.2-2-.6-.7-.7h-.8l-1-2.5-1.1-1.2v-.7l-.4-1-1.2.3-1.4-1.2-1.3-2.6-1.4 1-.6-.3-.1-.6-.5-.5-.2-.8-.8.3v.9l-.5.5-1 .1-.6-.5-1.4.6-.6.5v.8l-.6.5-1.6-.8-.3.7.1 1-.4.5-1.7 4v1.6l.8 1.3.2 1-1 .9.8 1.3-.9.6-1 .1-1-.6h-1.6l-1 .4-.5-.3-.3.4.5 1.3-.1.9.5.5-.2.9.5 1.4.7 1v2l-1.1.6v.5l-.5.3-1 1.7v.8l-1 .4-.8.4.7 1.6.2 1.8-1-.5-.9-.2-.9.5-.3.6-.8.3-.5.4-.5.3-.2 1 .3.5.1.6-.3.4-.2 1.3.7 1.2.3 1.5-.6 1-.4-.2-.3.3-1.4-.2v-1l-1.4-.5-.1-1.2.2-.8-.6-.5-1.3-.2H72l-.3.5h-.6l-1.2-.3-.7.4-.2.6.2.5-1 1.2v.5l-.1 1-.4.1-.8 2v.6h.8l1 .6 1-.2 1.6.4 1.3 1.1v.8l.6.5-.2.4.3.1.5-.2.9.6.2 1.9.3.3v.4l.3.4v1h-1l-.4-.3-.5.3v.5l-1.4-.2-.2-.2-.5.3-.6 1.2-1.2-.7-.2.4.2.4-.8.8-1.3-1.1-.2-.7-1-.4-.6-.8-1.2-.3-1.2-.7-1.4-.3h-.7l-.8-.1h-.6l-.4-.4v-.5l.2-.2-.4-1.3.2-.4-.3-.3-.5.1-1-1-.5.3-.6-.4h-.8l-.7-.8-.8.3h-.8l-.6.6v.6l-.5.1-.3-1-.3-.2h-.4l-.4-.5-.3-1.2-.5-.3h-.6l-.7.3-.8.4-.5.6-.5.8-.2.9-.5.4h-.5l-.4.2-.6-.2-.4-.6h-.4l-.2.5-.4.4v.5l.3.6.3.2 1 1 .5-.3.7.1.4.4.5.2.1.4-.1.4.2.3-.2.5-1.6.7-.6 1-2.5-.3-.6.5H41l.1.5-.1.3.3 1h.5l-.1 1h-.5l-.8.9-.2 1.4-.6.5-.1 1.4-.6.3-.3 1-.3.4.4 1-1-.1-1 .1-.2.6.2.4-.4.4-1.4-.3-.2.4-.9-.2-.4.3h-1l-.5.2-.2.8-.5.2-.3-.3-.1-.6-1.4-.7-.7.7.6.5-.4 1-.8.2-1-.7.1.4-1.1 1.4-.2.2-.6-.6-.5.3-.8-.7-.4.2-.3.5-1.1.2v.3l-.2.3-.4.7.2 1-.4.1-.3.5.2.7-.9.9-.2.4-1 .2-.5 1-.9.4-.1.4-.8.2-.6-1-1.4-.3h-.6l.4.4.8.3v.4l.3.4-.4.5H15l-.2-.5-.6.2-.3-.2-.4.3.1.5-.5.6-.3 1.5.3.3-.2.5-.8-.4h-1v-.6l-.8.3-.3.4.3.3-.7 1.8.5.2-2-.6-.7.3.2.6v.7l-.3.7-.6-.2h-.2l-.7-.6-1.3 1.1-.3.7.2.3-.4.5-1 .2-.4.6v.4h.5l.4-.4.5.3.1.6.2.4h1.1l-.4-1 .6-.5.7-1.4h.5l.6.4 1-.5.5.8.5.2.4-.2.4.2-.1.3-.3-.2h-.4l-.2.5H7.4l-1 .8v.6l.6.1.4-.2.5.3-.1.9-.4.2-.2.9.6.7v.5l1.2.4v.9l-.3.3-.1 1.4-.7.5.8.5.5.5-.5.2-.8-.8h-.5l-.2.7-.7 1.3.8.3.2.4h1l.5 1-.4.2v.6h1l.2.5.5.5.3.7.2 1v1l1.6.2.6-.3h1l1.8.9.4.6.6.1.6.7.9.4.4-.2 1 .3.2-.3.7.6 1 .4.3.7.5 1.3 2.2.6 1.3.9 1.9-.2.5.8 1.2.4 1.8 1.8v.3h.5l.5-.3h.6l1.7.6.5-.2 1.2-1.7 1.4.3h1.2s.4-.4.5-.3l.6.6-.5.7.9.2.5.4.5-.6.2.6v.7l1-.4.2.4-.5.5h1l.8.3-.1.5.2.4.3.2.5-.6.6.6-.4.7v.6l.9.4 1.6 1.6 1.5.7 2.9 1.6.9.3.7-.3 1 .4h1l.3-.5 2.6.6 3 .4.4-.4 1.3.3h.5l.2.4 1 .2.5-.3.3-.7.6.5v.4l.2.4 1.1-.1.4-.8h.7l1-1.8.6-.2.4-.6v-1l.4-.6v-.6l.5-.4.3-.4 1.1.6h2.1l.7-.8h.5l.6 1.1 1.4.6.7.8h1.4l.8-.5 1 .3.3.8.5.2.3 1.5-.4.8.6 1 1-.6 1.1-.1 1.4.6v.7l2.5 1 .4-.3 1.5-.2.6.3 1.2-.2.5-.6.7.4.5-.3v.7l.9 1.2-.5 1.4.7.5-.1.4v1.6l.4.3-.4.4.2.5-.4.8z" id="path594" inkscape:label="morava"/>
 										</g>
 										<g id="layer2" style="display:inline">
-											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1602" cx="79.819305" cy="105.69204" r="3" inkscape:label="brno"/>
-											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1608" cx="166.1754"  cy="55.34375"  r="3" inkscape:label="ostrava"/>
+											<!--<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1602" cx="79.819305" cy="105.69204" r="3" inkscape:label="brno"/>-->
+											<!--<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1608" cx="166.1754"  cy="55.34375"  r="3" inkscape:label="ostrava"/>
 											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1606" cx="113.75352" cy="73.834167" r="2" inkscape:label="olomouc"/>
 											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1610" cx="134.37738" cy="103.13138" r="2" inkscape:label="zlín"/>
 											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1604" cx="26.216055" cy="89.229462" r="2" inkscape:label="jihlava"/>
@@ -485,7 +488,7 @@
 											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1666" cx="147.30243" cy="45.496975" r="1" inkscape:label="opava"/>
 											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1668" cx="170.83757" cy="66.522209" r="1" inkscape:label="frydekmistek"/>
 											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1670" cx="105.64831" cy="83.286057" r="1" inkscape:label="prostějov"/>
-											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1672" cx="123.90524" cy="85.094757" r="1" inkscape:label="přerov"/>
+											<circle style="fill:gray;fill-opacity:1;stroke-width:0" id="path1672" cx="123.90524" cy="85.094757" r="1" inkscape:label="přerov"/>-->
 
 										<!--	<circle class="mapDot" id="path1672" cx="100" cy="140" r="4" onclick="SelectLang('poluží')"/>-->
 										</g>
