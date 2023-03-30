@@ -1094,6 +1094,7 @@ zvučet|zončêt
 živnostenského domu|žêvňákô
 živnostenský dům|žêvňák
 žlab pro krávy|korêto pro krávê
+pac a pusu|lóbanec přez celó čoňo
 -
 se
 si
@@ -8993,6 +8994,7 @@ kor|gor
 kat|gat
 mini
 vsa|fsa
+nescho|nesko
 -
 ou|ó
 ý|y
@@ -9187,11 +9189,11 @@ muž|3||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i.ové|ích|i
 pán|3||a,ě|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
 kolemjdoucí|3||ho|mu|ho||m|m||ch|m|||ich|mi
 vojáK|3|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
-les|4||a|u||e|e|em|y|ů|ům|y|y|ích|y
-hrad|4||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+les|1||a|u||e|e|em|y|ů|ům|y|y|ích|y
+hrad|1||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 kopEC|4|ec|ce|ci|ec|ci|ci|cem|ce|ců|ům|e|e|cích|ci
-ostrov|4||a|u||e|ě|em|y|ů|ům|y|y|ech|y
-roK|4|k|ku,ka|ku|k|ku|ce,ku|em|ky|ků|kům|ky|ky|cích|ky
+ostrov|1||a|u||e|ě|em|y|ů|ům|y|y|ech|y
+roK|1|k|ku,ka|ku|k|ku|ce,ku|em|ky|ků|kům|ky|ky|cích|ky
 stroj|4||e|i||i|i|em|e|ů|ům|e|e|ích|i
 vÍTR|4|ítr|ětru|ětru|ítr|ětře,ětre|ětru|ětrem|ětry|ětrů|ětrům|ětry|ětry|ětrech|ětry
 dŮM|4|ům|omu|omu|ům|omy|omu,omě|omem|omy|omů|omům|omy|omy|omech|omy
@@ -9201,6 +9203,8 @@ týdEN|3|en|ne|nu,ni|en|ne,ni|nu,ni|nem|ny|nů|nům|ny|ny|nech|ny
 šVEC|2|vec|evce|evci,evcovi|evce|evče|evci,evcovi|evcem|evci|evců|evcům|evce|evci|evcích|evci
 soudcE|1|e|e|i,ovi|e|e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
 ministryNĚ|1|ně|ně|ni|ni|ně|ni|ní|ně|ň,ministryní|ním|ně|ně|ních|němi
+úterý|0|||||||m|||m|||ch|mi
+stŮL|3|ůl|olu|olu|ůl|ole|ole,olu|olem|oly|olů|olům|oly|oly|olech|oly
 -
 polA|-1|e|a|ô|e|e|i|em|a||ám|e|e|ách|ama
 královstvI|1|i|i|i|i|i|i|im|i|i|im|i|i|ich|ima
@@ -9238,6 +9242,7 @@ ministryNĚ|1|ně|ně|ni|ni|ně|ni|ní|ně|ň,ní|ním|ně|ně|ních|němi
 tédEŇ|3|eň|ňa|nô|eň|ňi|ňo|ňem|ňê|ňu|ňum|ňe|ňe|ňech|ňama
 holomóc|2||e|i||i|i|ó|e|i|ám|e|e|ách|ama
 slunKO|0|ko|ka|kô|ko|ko|kô|kem|ka|ek|kám|ka|ka|kách|kama
+stUL|3|ul|ola|olô|ul|ole|olô|olem|olê|olu|olum|olê|olê|olech|olama
 -
 adam|pán|pán
 agres|růžE|ružA
@@ -9254,7 +9259,7 @@ břich|břôch|městO|hrad
 cihl|tihl|ženA|ženA
 čaroděj|čarovnik|muž|pán
 čarodějnic|čarodlnic|růžE|ženA
-část|čás|část|čásŤ
+část|čás|část|čásť
 člověk|člověk|člověk
 čočk|čečuvk|ženA|ženA
 d|dÍTĚ|děcko
@@ -9289,7 +9294,7 @@ jizv|ženA|ženA
 kalhot|gať|narozeninY|narozeninÊ
 karpat|narozeninY|narozeninÊ
 kávovar|kávostroj|hrad|hrad
-klíč|klóč|hrad|hrad
+klíč|klič|hrad|hrad
 kličk|klôčk|ženA|ženA
 kmotr|kmocháč|pán|zmetEK
 kolemjdoucí|kolemdóc|kolemjdoucí|kolemjdóci
@@ -9486,6 +9491,12 @@ parskoviš|parkovisk|letišTĚ|městO
 exploz|bóchan|růžE|hrad
 dn|městO|městO
 moř|růžE|polE
+prostějov|prostijov|les|hrad
+úterý|uter|úterý|zmetEK
+mis|větvičKA|halózKA
+ořech|hrad|hrad
+hlín|hlên|městO|městO
+st|stŮL|stUL
 -
 mladÝ|-1|é|ých|ým|é|é|ých|ými|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
 jarní|-1||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
