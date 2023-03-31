@@ -1507,7 +1507,7 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
-						if (this.PatternTo.Femimine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
+						if (this.PatternTo.Feminine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
 						break;	
 					}
 			//	}
@@ -1522,7 +1522,8 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
-						if (this.PatternTo.Femimine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
+						
+						if (this.PatternTo.Feminine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
 						break;
 					}
 				//}
@@ -1586,10 +1587,10 @@ class ItemAdjective{
 					//for (let j=0; j<shapes.length; j++) {
 						//let shape=this.From+shapes[j];
 						//console.log("Feminine", shape);
-
+					//	console.log(this.PatternTo.Feminine);
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.Femimine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
+							if (this.PatternTo.Feminine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
 							break;
 						}
 					//}
