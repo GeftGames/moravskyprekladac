@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Methods.cs" />
     <Compile Include="Computation.cs" />
     <Compile Include="DrawingControl.cs" />
     <Compile Include="FormGetData.cs">

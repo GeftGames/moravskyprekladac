@@ -5,7 +5,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Forms;
 
@@ -21,7 +20,7 @@ using System.Windows.Forms;
 
 namespace TranslatorWritter {
     public partial class FormMain :Form{
-        int CurrentVersion=0;
+        const int CurrentVersion=0;
         #region Lists
         List<ItemSimpleWord> itemsSimpleWords;
         List<ItemSimpleWord> itemsSimpleWordsFiltered;
@@ -297,8 +296,27 @@ namespace TranslatorWritter {
         }
 
         void Form1_FormClosing(object sender, FormClosingEventArgs e) {
-            if (BlockClosing)
-                e.Cancel = true;
+            if (BlockClosing) e.Cancel = true;
+
+            if (Edited){ 
+                DialogResult dr= MessageBox.Show("Chcete uložit data?","Co s neuloženými daty?", MessageBoxButtons.YesNoCancel);
+                switch (dr){ 
+                    case DialogResult.Yes:
+                        if (CurrentFile == NewProject) {
+                            SaveAs();
+                        } else {
+                            SaveCurrentFile();
+                        }
+                        break;
+
+                    case DialogResult.No:
+                        break;
+
+                    case DialogResult.Cancel:
+                        e.Cancel = true;
+                        break;
+                } 
+            }
         }
 
         void NovýToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -444,7 +462,7 @@ namespace TranslatorWritter {
                         break;
 
                     case "t":
-                        textBoxLangTo.Text = line.Substring(1);
+                        textBoxLangLocation.Text = line.Substring(1);
                         break;
 
                     case "e":
@@ -453,6 +471,29 @@ namespace TranslatorWritter {
 
                     case "c":
                         textBoxComment.Text=line.Substring(1).Replace("\\n", Environment.NewLine);
+                        break;
+
+                    case "z":
+                        textBoxZachytne.Text = line.Substring(1);
+                        break;
+             
+                    case "l":
+                        textBoxLang.Text = line.Substring(1);
+                        break;
+                        
+                    case "g":
+                        textBoxGPS.Text = line.Substring(1);
+                        break;
+                        
+                    case "x":
+                        textBoxtypeLang.Text = line.Substring(1);
+                        break;  
+                        
+                    case "q":
+                        numericUpDownQuality.Value = int.Parse(line.Substring(1));
+                        break;
+                    case "o":
+                        textBoxOblast.Text = line.Substring(1);
                         break;
 
                     case "#":
@@ -727,13 +768,19 @@ namespace TranslatorWritter {
             Edited = false;
             ChangeCaptionText();
             string data = SaveVersion + Environment.NewLine;
-            data += "f" + textBoxLangFrom.Text + Environment.NewLine;
-            data += "t" + textBoxLangTo.Text + Environment.NewLine;
-            data += "a" + textBoxAuthor.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxLangFrom.Text)) data += "f" + textBoxLangFrom.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxLangLocation.Text)) data += "t" + textBoxLangLocation.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxAuthor.Text)) data += "a" + textBoxAuthor.Text + Environment.NewLine;
             data += "d" + (Edited ? DateTime.Now.ToString() : (string.IsNullOrEmpty(textBoxLastDate.Text) ? DateTime.Now.ToString() : textBoxLastDate.Text)) + Environment.NewLine;
-            data += "i" + textBoxInfo.Text.Replace(Environment.NewLine, "\\n") + Environment.NewLine;
-            data += "e" + textBoxSelect.Text + Environment.NewLine;
-            data += "c" + textBoxComment.Text.Replace(Environment.NewLine, "\\n") + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxInfo.Text)) data += "i" + textBoxInfo.Text.Replace(Environment.NewLine, "\\n") + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxSelect.Text)) data += "e" + textBoxSelect.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxComment.Text)) data += "c" + textBoxComment.Text.Replace(Environment.NewLine, "\\n") + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxZachytne.Text)) data += "z" + textBoxZachytne.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxLang.Text)) data += "l" + textBoxLang.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxGPS.Text)) data += "g" + textBoxGPS.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxtypeLang.Text)) data += "x" + textBoxtypeLang.Text + Environment.NewLine;
+            data += "q" + numericUpDownQuality.Value + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxOblast.Text)) data += "o" + textBoxOblast.Text + Environment.NewLine;
             data += "-" + Environment.NewLine;
 
             //foreach (ItemSentencePattern sp in itemsSentencePatterns) {
@@ -1512,7 +1559,8 @@ namespace TranslatorWritter {
 
         void Form1_KeyDown(object sender, KeyEventArgs e) {
             if (e.Control && e.KeyCode == Keys.S) {
-                Save(CurrentFile);
+                if (CurrentFile=="<New>")SaveAs();
+                else Save(CurrentFile);
                 Debug.WriteLine("Saved");
                 e.SuppressKeyPress = true;
                 return;
@@ -1761,7 +1809,7 @@ namespace TranslatorWritter {
             }
         }
 
-         void ChangeTypePatternPronounTo(PronounType? type) {
+        void ChangeTypePatternPronounTo(PronounType? type) {
             if (!type.HasValue)
                 type = PronounType.Unknown;
 
@@ -2166,12 +2214,13 @@ namespace TranslatorWritter {
         }
 
         private void ZWikidirectonaryToolStripMenuItem_Click(object sender, EventArgs e) {
-               string name = GetString("", "Název adjektiva");
+            string name = GetString("", "Název adjektiva");
             if (name == null) return;
 
             DownloadDataCompletedEventHandler handler=null;
-        
+            #if !DEBUG
             try{
+            #endif
                 handler += (sender2, e2) => {
                     if (e2.Error!=null) { 
                         MessageBox.Show("Error "+e2.Error.Message);
@@ -2215,7 +2264,9 @@ namespace TranslatorWritter {
                         }
                     }
                 };
-            } catch { MessageBox.Show("Error");}
+            #if !DEBUG
+            } catch { MessageBox.Show("Error");} 
+            #endif
             Computation.DownloadString(ref handler, name);
             //string name = GetString("", "Název adjektiva");
             //if (name == null)
@@ -2444,7 +2495,7 @@ namespace TranslatorWritter {
             if (tabControl1.SelectedTab.Text == "Verb") {
                 if (CurrentVerb != null) {
                     // From
-                    ItemPatternVerb patternFrom = GetPatternVerb(CurrentVerb.PatternFrom);
+                    ItemPatternVerb patternFrom = itemsPatternVerbFrom.GetItemWithName(CurrentVerb.PatternFrom);// GetPatternVerb(CurrentVerb.PatternFrom);
                     if (patternFrom != null) {
 
                         var toforeach = new List<string[]> {
@@ -2617,10 +2668,11 @@ namespace TranslatorWritter {
                     //}
                    
                     // To
-                    ItemPatternVerb patternTo = GetPatternVerb(CurrentVerb.PatternTo);
+                    ItemPatternVerb patternTo = itemsPatternVerbTo.GetItemWithName(CurrentVerb.PatternTo);// GetPatternVerb(CurrentVerb.PatternTo);
                     if (patternTo != null) {
-                        var toforeach=new List<string[]>();
-                        toforeach.Add(new string[]{ patternTo.Infinitive });
+                        var toforeach = new List<string[]> {
+                            new string[] { patternTo.Infinitive }
+                        };
                         if (patternTo.SContinous)         toforeach.Add(patternTo.Continous);
                         if (patternTo.SImperative)        toforeach.Add(patternTo.Imperative);
                         if (patternTo.SPastActive)        toforeach.Add(patternTo.PastActive);
@@ -2629,20 +2681,21 @@ namespace TranslatorWritter {
                         if (patternTo.STransgressiveCont) toforeach.Add(patternTo.TransgressiveCont);
                         if (patternTo.STransgressivePast) toforeach.Add(patternTo.TransgressivePast);
 
-                        int i=0;
-                        bool br=false;
-                        foreach (string[] v in toforeach) { 
-                            foreach (string u in v) {
-                                if (i==timerIndex) { 
-                                    labelVerbShowTo.Text = CurrentVerb.To + u;
-                                    br=true;
-                                    break;
-                                }
-                                i++;
-                            }
-                            //if (br) break;
-                        }
-                        
+                        //int i=0;
+                        //bool br = false;
+                        //foreach (string[] v in toforeach) {
+                        //    foreach (string u in v) {
+                        //        if (i == timerIndex) {
+                        //            labelVerbShowTo.Text = CurrentVerb.To + u;
+                        //            br = true;
+                        //            break;
+                        //        }
+                        //        i++;
+                        //    }
+                        //    if (br)
+                        //        break;
+                        //}
+
                         //if (patternTo.TypeShow == VerbTypeShow.Cinne) {
                         //    if (timerIndex > 1 + 8 + 6 + 6 + 3)
                         //        timerIndex = 0;
@@ -2791,7 +2844,7 @@ namespace TranslatorWritter {
                 if (CurrentNoun != null) {
 
                     // From
-                    ItemPatternNoun patternF = GetPatternNounFrom(CurrentNoun.PatternFrom);
+                    ItemPatternNoun patternF = itemsPatternNounFrom.GetItemWithName(CurrentNoun.PatternFrom);// GetPatternNounFrom(CurrentNoun.PatternFrom);
                     if (patternF != null) {
                         if (timerIndex > 7 * 2)
                             timerIndex = 0;
@@ -2806,7 +2859,7 @@ namespace TranslatorWritter {
                         }
                     }
 
-                    ItemPatternNoun patternT = GetPatternNounTo(CurrentNoun.PatternTo);
+                    ItemPatternNoun patternT = itemsPatternNounTo.GetItemWithName(CurrentNoun.PatternTo); //GetPatternNounTo(CurrentNoun.PatternTo);
                     if (patternT != null) {
                         if (timerIndex > 7 * 2)
                             timerIndex = 0;
@@ -2825,32 +2878,32 @@ namespace TranslatorWritter {
             }
         }
 
-        ItemPatternVerb GetPatternVerb(string name) {
-            foreach (ItemPatternVerb item in itemsPatternVerbFrom) {
-                if (item.Name == name) {
-                    return item;
-                }
-            }
-            return null;
-        }
+        //ItemPatternVerb GetPatternVerb(string name) {
+        //    foreach (ItemPatternVerb item in itemsPatternVerbFrom) {
+        //        if (item.Name == name) {
+        //            return item;
+        //        }
+        //    }
+        //    return null;
+        //}
 
-        ItemPatternNoun GetPatternNounFrom(string name) {
-            foreach (ItemPatternNoun item in itemsPatternNounFrom) {
-                if (item.Name == name) {
-                    return item;
-                }
-            }
-            return null;
-        }
+        //ItemPatternNoun GetPatternNounFrom(string name) {
+        //    foreach (ItemPatternNoun item in itemsPatternNounFrom) {
+        //        if (item.Name == name) {
+        //            return item;
+        //        }
+        //    }
+        //    return null;
+        //}
 
-        ItemPatternNoun GetPatternNounTo(string name) {
-            foreach (ItemPatternNoun item in itemsPatternNounTo) {
-                if (item.Name == name) {
-                    return item;
-                }
-            }
-            return null;
-        }
+        //ItemPatternNoun GetPatternNounTo(string name) {
+        //    foreach (ItemPatternNoun item in itemsPatternNounTo) {
+        //        if (item.Name == name) {
+        //            return item;
+        //        }
+        //    }
+        //    return null;
+        //}
 
         void ComboBoxPatternNumberType_SelectedIndexChanged(object sender, EventArgs e) {
             if (CurrentPatternNumberFrom != null) {
@@ -3161,32 +3214,32 @@ namespace TranslatorWritter {
         void DleVzorůToolStripMenuItem_Click(object sender, EventArgs e) {
             doingJob = true;
             SaveCurrentNoun();
-            itemsNouns = itemsNouns.OrderBy(a => FindPatternFrom(a.PatternFrom)?.Gender).ToList();
+            itemsNouns = itemsNouns.OrderBy(a => itemsPatternNounFrom.GetItemWithName(a.PatternFrom)/* FindPatternFrom(a.PatternFrom)*/?.Gender).ToList();
             NounRefreshFilteredList();
             SetListBoxNoun();
             doingJob = false;
         }
 
-        ItemPatternNoun FindPatternFrom(string name) {
-            foreach (ItemPatternNoun p in itemsPatternNounFrom) {
-                if (p.Name == name)
-                    return p;
-            }
-            return null;
-        }
+        //ItemPatternNoun FindPatternFrom(string name) {
+        //    foreach (ItemPatternNoun p in itemsPatternNounFrom) {
+        //        if (p.Name == name)
+        //            return p;
+        //    }
+        //    return null;
+        //}
 
-        ItemPatternNoun FindPatternTo(string name) {
-            foreach (ItemPatternNoun p in itemsPatternNounTo) {
-                if (p.Name == name)
-                    return p;
-            }
-            return null;
-        }
+        //ItemPatternNoun FindPatternTo(string name) {
+        //    foreach (ItemPatternNoun p in itemsPatternNounTo) {
+        //        if (p.Name == name)
+        //            return p;
+        //    }
+        //    return null;
+        //}
 
         void DleNázvuVzorceToolStripMenuItem_Click(object sender, EventArgs e) {
             doingJob = true;
             SaveCurrentNoun();
-            itemsNouns = itemsNouns.OrderBy(a => FindPatternFrom(a.PatternFrom)?.Name).ToList();
+            itemsNouns = itemsNouns.OrderBy(a =>itemsPatternNounFrom.GetItemWithName(a.PatternFrom)/*  FindPatternFrom(a.PatternFrom)*/?.Name).ToList();
             NounRefreshFilteredList();
             SetListBoxNoun();
             doingJob = false;
@@ -3208,14 +3261,12 @@ namespace TranslatorWritter {
             ButtonPatternNounFromAdd_Click(null, null);
         }
 
-        void AddToolStripMenuItem1_Click(object sender, EventArgs e) {
-            ButtonAdjectiveAdd_Click(null, null);
-        }
+        void AddToolStripMenuItem1_Click(object sender, EventArgs e) => ButtonAdjectiveAdd_Click(null, null);
+        
 
         void MoveToolStripMenuItem3_Click(object sender, EventArgs e) {
             // From pattternNounFrom to patternnounTo
-            if (CurrentPatternNounFrom == null)
-                return;
+            if (CurrentPatternNounFrom == null)  return;
             ItemPatternNoun PatternNounFrom = CurrentPatternNounFrom;
             itemsPatternNounTo.Add(PatternNounFrom);
             itemsPatternNounFrom.Remove(PatternNounFrom);
@@ -3232,12 +3283,13 @@ namespace TranslatorWritter {
         }
 
         private void AddFromWikidirectonaryToolStripMenuItem_Click(object sender, EventArgs e) {
-             string name = GetString("", "Název pronomenu");
+            string name = GetString("", "Název pronomenu");
             if (name == null) return;
 
             DownloadDataCompletedEventHandler handler=null;
-        
+            #if !DEBUG
             try{
+            #endif
                 handler += (sender2, e2) => {
                     if (e2.Error!=null) { 
                         MessageBox.Show("Error "+e2.Error.Message);
@@ -3285,13 +3337,13 @@ namespace TranslatorWritter {
 
                             pattern.Optimize();
                             itemsPatternPronounFrom.Add(pattern);
-                            PatternPronounFromRefreshFilteredList();
-                            PatternPronounFromSetListBox();
-                            PatternPronounFromListBoxSetCurrent();
+                            PatternPronounFromRefresh();
                         }
                     }
                 };
+            #if !DEBUG
             }catch{ MessageBox.Show("Error");}
+            #endif
             Computation.DownloadString(ref handler, name);
         }
         #endregion
@@ -3443,14 +3495,6 @@ namespace TranslatorWritter {
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e) {
             ButtonVerbAdd_Click(null, null);
-        }
-
-        private void AddToolStripMenuItem5_Click(object sender, EventArgs e) {
-
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e) {
-
         }
 
         private void ToolStripMenuItem21_Click(object sender, EventArgs e) {
@@ -4103,7 +4147,7 @@ namespace TranslatorWritter {
                 ItemSentence item = itemsSentencesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentence.Items.Add(textToAdd);
             }
@@ -4145,7 +4189,7 @@ namespace TranslatorWritter {
                 ItemSentence item = itemsSentencesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentence.Items.Add(textToAdd);
             }
@@ -4328,7 +4372,7 @@ namespace TranslatorWritter {
                 ItemPhrase item = itemsPhrasesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+           //     if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPhrase.Items.Add(textToAdd);
             }
@@ -4370,7 +4414,7 @@ namespace TranslatorWritter {
                 ItemPhrase item = itemsPhrasesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPhrase.Items.Add(textToAdd);
             }
@@ -4551,7 +4595,7 @@ namespace TranslatorWritter {
                 ItemSimpleWord item = itemsSimpleWordsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSimpleWord.Items.Add(textToAdd);
             }
@@ -4595,7 +4639,7 @@ namespace TranslatorWritter {
                 ItemSimpleWord item = itemsSimpleWordsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSimpleWord.Items.Add(textToAdd);
             }
@@ -4751,7 +4795,7 @@ namespace TranslatorWritter {
                 ItemSentencePattern item = itemsSentencePatternsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentencePatterns.Items.Add(textToAdd);
             }
@@ -4840,7 +4884,7 @@ namespace TranslatorWritter {
                 ItemSentencePattern item = itemsSentencePatternsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentencePatterns.Items.Add(textToAdd);
             }
@@ -4892,8 +4936,8 @@ namespace TranslatorWritter {
             CurrentSentencePattern=itemsSentencePatternsFiltered[index];
           //  throw new Exception();
 
-            textBoxSentencePatternFrom.Text=CurrentSentencePattern.PatternSource;
-            textBoxSentencePatternTo.Text=CurrentSentencePattern.PatternOutput;
+            textBoxSentencePatternFrom.Text=CurrentSentencePattern.From;
+            textBoxSentencePatternTo.Text=CurrentSentencePattern.To;
             textBoxSentencePatternTo.Visible=true;
             textBoxSentencePatternFrom.Visible=true;
             labelSentencePatternInfo.Visible=true;
@@ -4915,8 +4959,8 @@ namespace TranslatorWritter {
         void SaveCurrentSentencePattern() {
             if (CurrentSentencePattern==null) return;
           
-            CurrentSentencePattern.PatternSource=textBoxSentencePatternFrom.Text;
-            CurrentSentencePattern.PatternOutput=textBoxSentencePatternTo.Text;
+            CurrentSentencePattern.From=textBoxSentencePatternFrom.Text;
+            CurrentSentencePattern.To=textBoxSentencePatternTo.Text;
         } 
           
         void RemoveCurrentSentencePattern(object sender, EventArgs e) {
@@ -4979,7 +5023,7 @@ namespace TranslatorWritter {
                 ItemSentencePatternPart item = itemsSentencePatternPartsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentencePatternPart.Items.Add(textToAdd);
             }
@@ -5068,7 +5112,7 @@ namespace TranslatorWritter {
                 ItemSentencePatternPart item = itemsSentencePatternPartsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+           //     if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentencePatternPart.Items.Add(textToAdd);
             }
@@ -5120,8 +5164,8 @@ namespace TranslatorWritter {
             CurrentSentencePatternPart=itemsSentencePatternPartsFiltered[index];
           //  throw new Exception();
 
-            textBoxSentencePatternPartFrom.Text=CurrentSentencePatternPart.PatternSource;
-            textBoxSentencePatternPartTo.Text=CurrentSentencePatternPart.PatternOutput;
+            textBoxSentencePatternPartFrom.Text=CurrentSentencePatternPart.From;
+            textBoxSentencePatternPartTo.Text=CurrentSentencePatternPart.To;
             textBoxSentencePatternPartTo.Visible=true;
             textBoxSentencePatternPartFrom.Visible=true;
             //labelSentencePatternPartInfo.Visible=true;
@@ -5143,8 +5187,8 @@ namespace TranslatorWritter {
         void SaveCurrentSentencePatternPart() {
             if (CurrentSentencePatternPart==null) return;
           
-            CurrentSentencePatternPart.PatternSource=textBoxSentencePatternPartFrom.Text;
-            CurrentSentencePatternPart.PatternOutput=textBoxSentencePatternPartTo.Text;
+            CurrentSentencePatternPart.From=textBoxSentencePatternPartFrom.Text;
+            CurrentSentencePatternPart.To=textBoxSentencePatternPartTo.Text;
         } 
           
         void RemoveCurrentSentencePatternPart(object sender, EventArgs e) {
@@ -5181,13 +5225,13 @@ namespace TranslatorWritter {
             labelSentencePatternPartTo.Visible=false;
         }
 
-        void ClearSentencePatternPart(){ 
-            listBoxSentencePatternPart.Items.Clear();
-            SetNoneSentencePatternPart();
-            itemsSentencePatternPartsFiltered?.Clear();
-            itemsSentencePatternParts?.Clear();
-            CurrentSentencePatternPart=null;
-        }
+        //void ClearSentencePatternPart(){ 
+        //    listBoxSentencePatternPart.Items.Clear();
+        //    SetNoneSentencePatternPart();
+        //    itemsSentencePatternPartsFiltered?.Clear();
+        //    itemsSentencePatternParts?.Clear();
+        //    CurrentSentencePatternPart=null;
+        //}
         #endregion
   
         #region SentencePart  
@@ -5207,7 +5251,7 @@ namespace TranslatorWritter {
                 ItemSentencePart item = itemsSentencePartsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentencePart.Items.Add(textToAdd);
             }
@@ -5296,7 +5340,7 @@ namespace TranslatorWritter {
                 ItemSentencePart item = itemsSentencePartsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxSentencePart.Items.Add(textToAdd);
             }
@@ -5409,13 +5453,13 @@ namespace TranslatorWritter {
             labelSentencePartTo.Visible=false;
         }
 
-        void ClearSentencePart(){ 
-            listBoxSentencePart.Items.Clear();
-            SetNoneSentencePart();
-            itemsSentencePartsFiltered?.Clear();
-            itemsSentenceParts?.Clear();
-            CurrentSentencePart=null;
-        }
+        //void ClearSentencePart(){ 
+        //    listBoxSentencePart.Items.Clear();
+        //    SetNoneSentencePart();
+        //    itemsSentencePartsFiltered?.Clear();
+        //    itemsSentenceParts?.Clear();
+        //    CurrentSentencePart=null;
+        //}
         #endregion
 
         #region NounPatternFrom
@@ -5466,7 +5510,7 @@ namespace TranslatorWritter {
                 ItemPatternNoun item = itemsPatternNounFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternNounFrom.Items.Add(textToAdd);
             }
@@ -5508,7 +5552,7 @@ namespace TranslatorWritter {
                 ItemPatternNoun item = itemsPatternNounFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternNounFrom.Items.Add(textToAdd);
             }
@@ -5765,7 +5809,7 @@ namespace TranslatorWritter {
                 ItemPatternNoun item = itemsPatternNounToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternNounTo.Items.Add(textToAdd);
             }
@@ -5805,7 +5849,7 @@ namespace TranslatorWritter {
                 ItemPatternNoun item = itemsPatternNounToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternNounTo.Items.Add(textToAdd);
             }
@@ -6040,11 +6084,11 @@ namespace TranslatorWritter {
                                 
                 string textToAdd=item.GetText();
                 
-                if (string.IsNullOrEmpty(textToAdd)) {
-                    if (string.IsNullOrEmpty(item.PatternFrom)){ 
-                        textToAdd="<Neznámé>";
-                    } else textToAdd="{"+item.PatternFrom+"}";
-                }
+                //if (string.IsNullOrEmpty(textToAdd)) {
+                //    if (string.IsNullOrEmpty(item.PatternFrom)){ 
+                //        textToAdd="<Neznámé>";
+                //    } else textToAdd="{"+item.PatternFrom+"}";
+                //}
 
                 listBoxNoun.Items.Add(textToAdd);
             }
@@ -6086,11 +6130,11 @@ namespace TranslatorWritter {
                 ItemNoun item = itemsNounsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) {
-                    if (string.IsNullOrEmpty(item.PatternFrom)) {
-                        textToAdd="<Neznámé>";
-                    } else textToAdd="{"+item.PatternFrom+"}";
-                }
+                //if (string.IsNullOrEmpty(textToAdd)) {
+                //    if (string.IsNullOrEmpty(item.PatternFrom)) {
+                //        textToAdd="<Neznámé>";
+                //    } else textToAdd="{"+item.PatternFrom+"}";
+                //}
                 listBoxNoun.Items.Add(textToAdd);
             }
 
@@ -6216,7 +6260,7 @@ namespace TranslatorWritter {
             CurrentNoun.From=textBoxNounFrom.Text;
             CurrentNoun.To=textBoxNounTo.Text;
             
-            
+            Edited=true;
             CurrentNoun.PatternFrom=comboBoxNounInputPatternFrom.Text;
 
           //  CurrentNoun.PatternTo=comboBoxNounInputPatternTo.SelectedText;
@@ -6299,7 +6343,7 @@ namespace TranslatorWritter {
                 ItemPatternAdjective item = itemsPatternAdjectivesFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternAdjectiveFrom.Items.Add(textToAdd);
             }
@@ -6341,7 +6385,7 @@ namespace TranslatorWritter {
                 ItemPatternAdjective item = itemsPatternAdjectivesFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternAdjectiveFrom.Items.Add(textToAdd);
             }
@@ -6520,7 +6564,7 @@ namespace TranslatorWritter {
         
         void PatternAdjectiveFromSaveCurrent() {
             if (CurrentPatternAdjectiveFrom==null) return;
-                     
+                     Edited=true;
             CurrentPatternAdjectiveFrom.Name=textBoxPatternAdjectiveFromName.Text;
 
             CurrentPatternAdjectiveFrom.Middle[0]=textBoxPatternAdjectiveFromStrJ1.Text;
@@ -6736,7 +6780,7 @@ namespace TranslatorWritter {
                 ItemPatternAdjective item = itemsPatternAdjectivesToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternAdjectiveTo.Items.Add(textToAdd);
             }
@@ -6778,7 +6822,7 @@ namespace TranslatorWritter {
                 ItemPatternAdjective item = itemsPatternAdjectivesToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternAdjectiveTo.Items.Add(textToAdd);
             }
@@ -6954,7 +6998,7 @@ namespace TranslatorWritter {
         
         void PatternAdjectiveToSaveCurrent() {
             if (CurrentPatternAdjectiveTo==null) return;
-                     
+                     Edited=true;
             CurrentPatternAdjectiveTo.Name=textBoxPatternAdjectiveToName.Text;
 
             CurrentPatternAdjectiveTo.Middle[0]=textBoxPatternAdjectiveToStrJ1.Text;
@@ -7170,7 +7214,7 @@ namespace TranslatorWritter {
                 ItemAdjective item = itemsAdjectivesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+           //     if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxAdjective.Items.Add(textToAdd);
             }
@@ -7212,7 +7256,7 @@ namespace TranslatorWritter {
                 ItemAdjective item = itemsAdjectivesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxAdjective.Items.Add(textToAdd);
             }
@@ -7411,7 +7455,7 @@ namespace TranslatorWritter {
                 ItemPatternPronoun item = itemsPatternPronounsFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternPronounFrom.Items.Add(textToAdd);
             }
@@ -7453,7 +7497,7 @@ namespace TranslatorWritter {
                 ItemPatternPronoun item = itemsPatternPronounsFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternPronounFrom.Items.Add(textToAdd);
             }
@@ -7669,6 +7713,7 @@ namespace TranslatorWritter {
         
         void PatternPronounFromSaveCurrent() {
             if (CurrentPatternPronounFrom==null) return;
+            Edited=true;
             comboBoxPatternPronounFromType.SelectedIndex=(int) CurrentPatternPronounFrom.Type;
             CurrentPatternPronounFrom.Name=textBoxPatternPronounFromName.Text;
             switch (CurrentPatternPronounFrom.Type) { 
@@ -7909,7 +7954,7 @@ namespace TranslatorWritter {
                 ItemPatternPronoun item = itemsPatternPronounsToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternPronounTo.Items.Add(textToAdd);
             }
@@ -7951,7 +7996,7 @@ namespace TranslatorWritter {
                 ItemPatternPronoun item = itemsPatternPronounsToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPatternPronounTo.Items.Add(textToAdd);
             }
@@ -7980,6 +8025,18 @@ namespace TranslatorWritter {
                     itemsPatternPronounsToFiltered.Add(item);
                 }
             }
+        }
+
+        void PatternPronounToRefresh(){ 
+            PatternPronounToRefreshFilteredList();
+            PatternPronounToSetListBox();
+            PatternPronounToListBoxSetCurrent();    
+        }
+        
+        void PatternPronounFromRefresh(){ 
+            PatternPronounFromRefreshFilteredList();
+            PatternPronounFromSetListBox();
+            PatternPronounFromListBoxSetCurrent();    
         }
                
         void PatternPronounToAddNewItem() {
@@ -8173,6 +8230,7 @@ namespace TranslatorWritter {
         
         void PatternPronounToSaveCurrent() {
             if (CurrentPatternPronounTo==null) return;
+            Edited=true;
             comboBoxPatternPronounToType.SelectedIndex=(int)CurrentPatternPronounTo.Type;
             CurrentPatternPronounTo.Name=textBoxPatternPronounToName.Text;
             switch (CurrentPatternPronounTo.Type) { 
@@ -8180,6 +8238,7 @@ namespace TranslatorWritter {
                     break;
 
                 case PronounType.NoDeklination:
+                    if (CurrentPatternPronounTo.Shapes.Length==0)CurrentPatternPronounTo.Shapes=new string[]{""};
                     CurrentPatternPronounTo.Shapes[0]=textBoxPatternPronounToMuzJ1.Text;
                     break;
                     
@@ -8413,11 +8472,11 @@ namespace TranslatorWritter {
                 ItemPronoun item = itemsPronounsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) { 
-                    if (string.IsNullOrEmpty(item.PatternFrom)) {
-                        textToAdd="<Neznámé>"; 
-                    } else textToAdd="{"+item.PatternFrom+"}"; 
-                }
+                //if (string.IsNullOrEmpty(textToAdd)) { 
+                //    if (string.IsNullOrEmpty(item.PatternFrom)) {
+                //        textToAdd="<Neznámé>"; 
+                //    } else textToAdd="{"+item.PatternFrom+"}"; 
+                //}
 
                 listBoxPronoun.Items.Add(textToAdd);
             }
@@ -8459,11 +8518,11 @@ namespace TranslatorWritter {
                 ItemPronoun item = itemsPronounsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) {
-                    if (string.IsNullOrEmpty(item.PatternFrom)) {
-                        textToAdd="<Neznámé>";
-                    } else textToAdd="{"+item.PatternFrom+"}";
-                }
+                //if (string.IsNullOrEmpty(textToAdd)) {
+                //    if (string.IsNullOrEmpty(item.PatternFrom)) {
+                //        textToAdd="<Neznámé>";
+                //    } else textToAdd="{"+item.PatternFrom+"}";
+                //}
                 listBoxPronoun.Items.Add(textToAdd);
             }
 
@@ -8575,7 +8634,8 @@ namespace TranslatorWritter {
         
         void SaveCurrentPronoun() {
             if (CurrentPronoun==null) return;
-                     
+            Edited=true;
+
             CurrentPronoun.From=textBoxPronounFrom.Text;
             CurrentPronoun.To=textBoxPronounTo.Text;
             
@@ -8659,7 +8719,7 @@ namespace TranslatorWritter {
                 ItemPatternNumber item = itemsPatternNumbersFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternNumberFromlistBox.Items.Add(textToAdd);
             }
@@ -8701,7 +8761,7 @@ namespace TranslatorWritter {
                 ItemPatternNumber item = itemsPatternNumbersFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternNumberFromlistBox.Items.Add(textToAdd);
             }
@@ -9032,6 +9092,7 @@ namespace TranslatorWritter {
         
         void PatternNumberFromSaveCurrent() {
             if (CurrentPatternNumberFrom==null) return;
+            Edited=true;
             CurrentPatternNumberFrom.ShowType=(NumberType)comboBoxPatternNumberFromType.SelectedIndex;
             CurrentPatternNumberFrom.Name=textBoxPatternNumberFromName.Text;
 
@@ -9299,7 +9360,7 @@ namespace TranslatorWritter {
                 ItemPatternNumber item = itemsPatternNumbersToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternNumberTolistBox.Items.Add(textToAdd);
             }
@@ -9341,7 +9402,7 @@ namespace TranslatorWritter {
                 ItemPatternNumber item = itemsPatternNumbersToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternNumberTolistBox.Items.Add(textToAdd);
             }
@@ -9399,6 +9460,18 @@ namespace TranslatorWritter {
             PatternNumberToSetListBox();
             PatternNumberToSetCurrent();
         } 
+
+        void PatternNumberToRefresh() {
+            PatternNumberToRefreshFilteredList();
+            PatternNumberToSetListBox();
+            PatternNumberToSetCurrent();
+        }
+        
+        void PatternNumberFromRefresh() {
+            PatternNumberFromRefreshFilteredList();
+            PatternNumberFromSetListBox();
+            PatternNumberFromSetCurrent();
+        }
            
         void PatternNumberToSetCurrent(){
             if (itemsPatternNumbersToFiltered.Count==0) {
@@ -9672,6 +9745,7 @@ namespace TranslatorWritter {
         
         void PatternNumberToSaveCurrent() {
             if (CurrentPatternNumberTo==null) return;
+            Edited=true;
             CurrentPatternNumberTo.ShowType=(NumberType)comboBoxPatternNumberToType.SelectedIndex;
             CurrentPatternNumberTo.Name=textBoxPatternNumberToName.Text;
 
@@ -9939,7 +10013,7 @@ namespace TranslatorWritter {
                 ItemNumber item = itemsNumbersFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxNumbers.Items.Add(textToAdd);
             }
@@ -9981,7 +10055,7 @@ namespace TranslatorWritter {
                 ItemNumber item = itemsNumbersFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxNumbers.Items.Add(textToAdd);
             }
@@ -10010,6 +10084,12 @@ namespace TranslatorWritter {
                     itemsNumbersFiltered.Add(item);
                 }
             }
+        }
+
+        void NumberRefresh(){ 
+            NumberRefreshFilteredList();
+            SetListBoxNumber();
+            SetCurrentNumber();
         }
                
         void AddNewItemNumber() {
@@ -10096,7 +10176,7 @@ namespace TranslatorWritter {
         
         void SaveCurrentNumber() {
             if (CurrentNumber==null) return;
-                     
+            Edited = true;
             CurrentNumber.From=textBoxNumberFrom.Text;
             CurrentNumber.To=textBoxNumberTo.Text;
             
@@ -10150,7 +10230,7 @@ namespace TranslatorWritter {
            
             CurrentVerb=itemsVerbs[index];
             SetCurrentVerb();
-            SetListBoxVerb();
+            VerbSetListBox();
           //  SetCurrent();
             doingJob=false;
         }  
@@ -10214,7 +10294,7 @@ namespace TranslatorWritter {
             itemsVerbs.Remove(CurrentVerb);
         }
 
-        void SetListBoxVerb() { 
+        void VerbSetListBox() { 
             int index=listBoxVerbs.SelectedIndex;
             listBoxVerbs.Items.Clear();
             for (int i=0; i<itemsVerbsFiltered.Count; i++) {
@@ -10268,8 +10348,8 @@ namespace TranslatorWritter {
             itemsVerbs.Add(newItem);
             CurrentVerb=newItem;
             VerbRefreshFilteredList();
-            SetListBoxVerb(); 
-            ListBoxSetCurrentVerb();
+            VerbSetListBox(); 
+            VerbListBoxSetCurrent();
             SetCurrentVerb(); 
             
             doingJob=false;
@@ -10280,7 +10360,7 @@ namespace TranslatorWritter {
             ChangeCaptionText();
             itemsVerbs.Remove(item);
             VerbRefreshFilteredList();
-            SetListBoxVerb();
+            VerbSetListBox();
             SetCurrentVerb();
         } 
            
@@ -10326,7 +10406,7 @@ namespace TranslatorWritter {
             labelVerbShowTo.Visible=true;
         }
          
-        void ListBoxSetCurrentVerb() {
+        void VerbListBoxSetCurrent() {
             for (int indexCur=0; indexCur<itemsVerbsFiltered.Count; indexCur++) {
                 if (itemsVerbs[indexCur]==CurrentVerb) { 
                     int indexList=listBoxVerbs.SelectedIndex;
@@ -10482,7 +10562,7 @@ namespace TranslatorWritter {
                 ItemPatternVerb item = itemsPatternVerbsFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternVerbFromlistBox.Items.Add(textToAdd);
             }
@@ -10521,7 +10601,7 @@ namespace TranslatorWritter {
                 ItemPatternVerb item = itemsPatternVerbsFromFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternVerbFromlistBox.Items.Add(textToAdd);
             }
@@ -11038,7 +11118,7 @@ namespace TranslatorWritter {
                 ItemPatternVerb item = itemsPatternVerbsToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternVerbToListBox.Items.Add(textToAdd);
             }
@@ -11080,7 +11160,7 @@ namespace TranslatorWritter {
                 ItemPatternVerb item = itemsPatternVerbsToFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 PatternVerbToListBox.Items.Add(textToAdd);
             }
@@ -11483,7 +11563,7 @@ namespace TranslatorWritter {
         #endregion
 
         #region Adverb
-        void listBoxAdverb_SelectedIndexChanged(object sender, EventArgs e) {
+        void ListBoxAdverb_SelectedIndexChanged(object sender, EventArgs e) {
             if (doingJob) return;
             doingJob=true;
             SaveCurrentAdverb();
@@ -11528,12 +11608,9 @@ namespace TranslatorWritter {
                 ItemAdverb item = itemsAdverbsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
-
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
                 listBoxAdverb.Items.Add(textToAdd);
             }
-
-            //SetListBoxAdverb();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){ 
@@ -11570,7 +11647,7 @@ namespace TranslatorWritter {
                 ItemAdverb item = itemsAdverbsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxAdverb.Items.Add(textToAdd);
             }
@@ -11645,9 +11722,8 @@ namespace TranslatorWritter {
             labelAdverbFrom.Visible=true;
             labelAdverbTo.Visible=true; 
 
-           textBoxAdverbFrom.Text= CurrentAdverb.From;
-           textBoxAdverbTo.Text= CurrentAdverb.To;
-      
+            textBoxAdverbFrom.Text= CurrentAdverb.From;
+            textBoxAdverbTo.Text= CurrentAdverb.To;      
         }
          
         void ListBoxSetCurrentAdverb() {
@@ -11660,25 +11736,6 @@ namespace TranslatorWritter {
                 }
             }
         }  
-
-        //int GetListBoxSelectedIndexAdverb() {
-        //    if (listBoxAdverbs.SelectedIndex==-1) return -1;
-
-        //    string filter=textBoxFilterAdverb.Text;
-        //    bool useFilter=filter=="" || filter=="*";
-
-        //    if (useFilter) { 
-        //        var item=itemsAdverbsFiltered[listBoxAdverbs.SelectedIndex];
-        //        return item.ID;
-        //        //for (int i=0; i<itemsAdverbs.Count; i++){
-        //        //    if (i==item) return i;
-        //        //}
-        //    } else { 
-        //        return listBoxAdverbs.SelectedIndex;
-        //    }
-
-        //    return -1;
-        //}
         
         void SaveCurrentAdverb() {
             if (CurrentAdverb==null) return;
@@ -11724,7 +11781,6 @@ namespace TranslatorWritter {
             CurrentPreposition=itemsPrepositions[index];
             SetCurrentPreposition();
             SetListBoxPreposition();
-          //  SetCurrent();
             doingJob=false;
         }  
         
@@ -11753,7 +11809,7 @@ namespace TranslatorWritter {
                 ItemPreposition item = itemsPrepositionsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPreposition.Items.Add(textToAdd);
             }
@@ -11786,8 +11842,8 @@ namespace TranslatorWritter {
         }
 
         void SetListBoxPreposition() { 
-            string filter=textBoxPrepositionFilter.Text;
-            bool useFilter = filter!="" && filter!="*"; 
+       //     string filter=textBoxPrepositionFilter.Text;
+          //  bool useFilter = filter!="" && filter!="*"; 
            
             int index=listBoxPreposition.SelectedIndex;
             listBoxPreposition.Items.Clear();
@@ -11795,7 +11851,7 @@ namespace TranslatorWritter {
                 ItemPreposition item = itemsPrepositionsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxPreposition.Items.Add(textToAdd);
             }
@@ -11914,13 +11970,13 @@ namespace TranslatorWritter {
             labelPrepositionFall.Visible=false;
         }
                 
-        void ClearPreposition() { 
-            listBoxPreposition.Items.Clear();
-            SetNonePreposition();
-            itemsPrepositionsFiltered?.Clear();
-            itemsPrepositions?.Clear();
-            CurrentPreposition=null;
-        }
+        //void ClearPreposition() { 
+        //    listBoxPreposition.Items.Clear();
+        //    SetNonePreposition();
+        //    itemsPrepositionsFiltered?.Clear();
+        //    itemsPrepositions?.Clear();
+        //    CurrentPreposition=null;
+        //}
         #endregion
 
         #region Conjunction
@@ -11969,7 +12025,7 @@ namespace TranslatorWritter {
                 ItemConjunction item = itemsConjunctionsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxConjunction.Items.Add(textToAdd);
             }
@@ -12011,7 +12067,7 @@ namespace TranslatorWritter {
                 ItemConjunction item = itemsConjunctionsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+                //if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxConjunction.Items.Add(textToAdd);
             }
@@ -12192,7 +12248,7 @@ namespace TranslatorWritter {
                 ItemParticle item = itemsParticlesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxParticle.Items.Add(textToAdd);
             }
@@ -12234,7 +12290,7 @@ namespace TranslatorWritter {
                 ItemParticle item = itemsParticlesFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxParticle.Items.Add(textToAdd);
             }
@@ -12415,7 +12471,7 @@ namespace TranslatorWritter {
                 ItemInterjection item = itemsInterjectionsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxInterjection.Items.Add(textToAdd);
             }
@@ -12457,7 +12513,7 @@ namespace TranslatorWritter {
                 ItemInterjection item = itemsInterjectionsFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxInterjection.Items.Add(textToAdd);
             }
@@ -12640,7 +12696,7 @@ namespace TranslatorWritter {
                 ItemReplaceS item = itemsReplaceSFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+              //  if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxReplaceS.Items.Add(textToAdd);
             }
@@ -12682,7 +12738,7 @@ namespace TranslatorWritter {
                 ItemReplaceS item = itemsReplaceSFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+            //    if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxReplaceS.Items.Add(textToAdd);
             }
@@ -12801,13 +12857,13 @@ namespace TranslatorWritter {
           //  labelReplaceSFall.Visible=false;
         }
                 
-        void ClearReplaceS() { 
-            listBoxReplaceS.Items.Clear();
-            ReplaceSSetNone();
-            itemsReplaceSFiltered?.Clear();
-            itemsReplaceS?.Clear();
-            CurrentReplaceS=null;
-        }
+        //void ClearReplaceS() { 
+        //    listBoxReplaceS.Items.Clear();
+        //    ReplaceSSetNone();
+        //    itemsReplaceSFiltered?.Clear();
+        //    itemsReplaceS?.Clear();
+        //    CurrentReplaceS=null;
+        //}
         #endregion
 
         #region ReplaceG
@@ -12858,7 +12914,7 @@ namespace TranslatorWritter {
                 ItemReplaceG item = itemsReplaceGFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+           //     if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxReplaceG.Items.Add(textToAdd);
             }
@@ -12900,7 +12956,7 @@ namespace TranslatorWritter {
                 ItemReplaceG item = itemsReplaceGFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+               // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxReplaceG.Items.Add(textToAdd);
             }
@@ -13019,13 +13075,13 @@ namespace TranslatorWritter {
            // labelReplaceGFall.Visible=false;
         }
                 
-        void ClearReplaceG() { 
-            listBoxReplaceG.Items.Clear();
-            SetNoneReplaceG();
-            itemsReplaceGFiltered?.Clear();
-            itemsReplaceG?.Clear();
-            CurrentReplaceG=null;
-        }
+        //void ClearReplaceG() { 
+        //    listBoxReplaceG.Items.Clear();
+        //    SetNoneReplaceG();
+        //    itemsReplaceGFiltered?.Clear();
+        //    itemsReplaceG?.Clear();
+        //    CurrentReplaceG=null;
+        //}
         #endregion
 
         #region ReplaceE
@@ -13076,7 +13132,7 @@ namespace TranslatorWritter {
                 ItemReplaceE item = itemsReplaceEFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxReplaceE.Items.Add(textToAdd);
             }
@@ -13164,7 +13220,7 @@ namespace TranslatorWritter {
             }
         }
 
-        private void renameWithBindsToolStripMenuItem2_Click(object sender, EventArgs e) {
+        private void RenameWithBindsToolStripMenuItem2_Click(object sender, EventArgs e) {
             if (CurrentPatternAdjectiveFrom != null) {
                 FormString edit = new FormString {
                     LabelText = "Přejmenovat PatternAdjective '" + CurrentPatternAdjectiveFrom.Name + "' s odkazy na...",
@@ -13252,7 +13308,7 @@ namespace TranslatorWritter {
             }
         }
 
-        private void renameWithBindsToolStripMenuItem3_Click(object sender, EventArgs e) {
+        private void RenameWithBindsToolStripMenuItem3_Click(object sender, EventArgs e) {
             if (CurrentPatternPronounFrom != null) {
                 FormString edit = new FormString {
                     LabelText = "Přejmenovat PatternPronoun '" + CurrentPatternPronounFrom.Name + "' s odkazy na...",
@@ -13582,7 +13638,11 @@ namespace TranslatorWritter {
 
         private void optimalizovatToolStripMenuItem1_Click(object sender, EventArgs e) {
             if (CurrentPatternVerbFrom!=null) { 
-                CurrentPatternVerbFrom.Optimize();    
+                PatternVerbFromSaveCurrent();
+                CurrentPatternVerbFrom.Optimize(); 
+                PatternVerbFromSetCurrent();
+                PatternVerbFromRefreshFilteredList();
+                PatternVerbFromSetListBox();
             }
         }
 
@@ -13702,11 +13762,8 @@ namespace TranslatorWritter {
             }
         }
 
-        private void contextMenuStripPatternAdjectiveFrom_Opening(object sender, System.ComponentModel.CancelEventArgs e) {
 
-        }
-
-        private void toolStripMenuItem76_Click(object sender, EventArgs e) {
+        private void ToolStripMenuItem76_Click(object sender, EventArgs e) {
             if (CurrentPatternPronounTo != null) {
                 itemsPatternPronounTo.Add(CurrentPatternPronounTo.Duplicate());
             }
@@ -13714,7 +13771,7 @@ namespace TranslatorWritter {
 
         private void duplicaeToolStripMenuItem_Click(object sender, EventArgs e) {
             if (CurrentPatternNounTo != null) {
-                var item=CurrentPatternNounTo.Duplicate();
+                ItemPatternNoun item =CurrentPatternNounTo.Duplicate();
                 itemsPatternNounTo.Add(item);
                 PatternNounToRefreshFilteredList();
                 PatternNounToSetListBox();
@@ -13745,8 +13802,9 @@ namespace TranslatorWritter {
         }
 
         private void duplicateToolStripMenuItem1_Click(object sender, EventArgs e) {
-            if (CurrentPatternNounFrom!=null){
-                var item=CurrentPatternNounFrom.Duplicate();
+            if (CurrentPatternNounFrom!=null) {
+                PatternNounFromSaveCurrent();
+                ItemPatternNoun item = CurrentPatternNounFrom.Duplicate();
                
                 itemsPatternNounFrom.Add(item);
                 PatternNounFromRefreshFilteredList();
@@ -13879,13 +13937,14 @@ namespace TranslatorWritter {
                     if (tables.Count==1) {
                         Table table=tables[0];
                 
-                        if (table.Rows.Count==9 && table.Rows[2].Cells.Count==9) {    
-                            ItemPatternNumber pattern=new ItemPatternNumber();
-                            pattern.Name=name;
-                            pattern.ShowType=NumberType.DeklinationWithGender;
-                            pattern.Shapes=new string[7*8];
+                        if (table.Rows.Count==9 && table.Rows[2].Cells.Count==9) {
+                            ItemPatternNumber pattern = new ItemPatternNumber {
+                                Name = name,
+                                ShowType = NumberType.DeklinationWithGender,
+                                Shapes = new string[7 * 8]
+                            };
 
-                            
+
                             for (int i=0; i<7; i++) pattern.Shapes[i+0*7]=table.Rows[2+i].Cells[1+0].Text;
                             for (int i=0; i<7; i++) pattern.Shapes[i+2*7]=table.Rows[2+i].Cells[1+1].Text;
                             for (int i=0; i<7; i++) pattern.Shapes[i+4*7]=table.Rows[2+i].Cells[1+2].Text;
@@ -13904,11 +13963,12 @@ namespace TranslatorWritter {
                             PatternNumberFromRefreshFilteredList();
                             PatternNumberFromSetListBox();
                             PatternNumberFromListBoxSetCurrent();
-                        } else if (table.Rows.Count==8 && table.Rows[2].Cells.Count==2) {    
-                            ItemPatternNumber pattern=new ItemPatternNumber();
-                            pattern.Name=name;
-                            pattern.ShowType=NumberType.DeklinationOnlySingle;
-                            pattern.Shapes=new string[7*8];
+                        } else if (table.Rows.Count==8 && table.Rows[2].Cells.Count==2) {
+                            ItemPatternNumber pattern = new ItemPatternNumber {
+                                Name = name,
+                                ShowType = NumberType.DeklinationOnlySingle,
+                                Shapes = new string[7 * 8]
+                            };
 
                             for (int i=0; i<7; i++) {
                                 pattern.Shapes[i]=table.Rows[1+i].Cells[1].Text;
@@ -13930,7 +13990,7 @@ namespace TranslatorWritter {
         private void toolStripMenuItem66_Click(object sender, EventArgs e) {
             if (CurrentPatternNumberFrom!=null) { 
                 PatternNumberFromSaveCurrent();
-                var item=CurrentPatternNumberFrom.Duplicate();
+                ItemPatternNumber item =CurrentPatternNumberFrom.Duplicate();
                 itemsPatternNumberFrom.Add(item);
                 PatternNumberFromRefreshFilteredList();
                 PatternNumberFromSetListBox();
@@ -13938,7 +13998,7 @@ namespace TranslatorWritter {
             }
         }
 
-        private void toolStripMenuItem147_Click(object sender, EventArgs e) {
+        private void ToolStripMenuItem147_Click(object sender, EventArgs e) {
              OpenFileDialog ofd = new OpenFileDialog {
                 Filter = "Textové soubory|*.*txt|Všecky sóbore|*.*"
             };
@@ -14245,11 +14305,11 @@ namespace TranslatorWritter {
             EditPosButtonsPatternNumberTo();
         }
 
-        private void splitContainer4_SplitterMoved(object sender, SplitterEventArgs e) {
+        private void SplitContainer4_SplitterMoved(object sender, SplitterEventArgs e) {
             EditPosButtonsPatternVerbTo();
         }
 
-        private void addFromClipboardToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void AddFromClipboardToolStripMenuItem_Click(object sender, EventArgs e) {
             PatternNumberFromAddNewItem();
             Button2_Click(null,null);
         }
@@ -14258,7 +14318,7 @@ namespace TranslatorWritter {
             if (CurrentPatternAdjectiveFrom!=null){
                 PatternAdjectiveFromSaveCurrent();
 
-                var item=CurrentPatternAdjectiveFrom.Duplicate();
+                ItemPatternAdjective item =CurrentPatternAdjectiveFrom.Duplicate();
                
                 itemsPatternAdjectiveFrom.Add(item);
                 PatternAdjectiveFromRefreshFilteredList();
@@ -14267,13 +14327,13 @@ namespace TranslatorWritter {
             }
         }
 
-        private void duplicateToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void DuplicateToolStripMenuItem_Click(object sender, EventArgs e) {
             if (CurrentPatternVerbFrom!=null){
                 PatternVerbFromSaveCurrent();
 
-                var item=CurrentPatternVerbFrom.Duplicate();
-               
+                ItemPatternVerb item =CurrentPatternVerbFrom.Duplicate();
                 itemsPatternVerbFrom.Add(item);
+
                 PatternVerbFromRefreshFilteredList();
                 PatternVerbFromSetListBox();
                 PatternVerbFromSetCurrent();
@@ -14370,7 +14430,7 @@ namespace TranslatorWritter {
             textBoxPatternVerbFromTr6.Visible=checkBoxPatternVerbFromTransgressiveCont.Checked;
         }
 
-         private void CheckBoxPatternVerbFromContinous_CheckedChanged(object sender, EventArgs e) {
+        private void CheckBoxPatternVerbFromContinous_CheckedChanged(object sender, EventArgs e) {
             tableLayoutPanelPatternVerbFromContinous.Visible=checkBoxPatternVerbFromContinous.Checked;
         }
 
@@ -14386,10 +14446,10 @@ namespace TranslatorWritter {
             textBoxPatternVerbFromTr6.Visible=checkBoxPatternVerbFromTransgressivePast.Checked;
         }
 
-        private void duplicateToolStripMenuItem2_Click(object sender, EventArgs e) {
+        private void DuplicateToolStripMenuItem2_Click(object sender, EventArgs e) {
             if (CurrentPatternPronounFrom!=null) { 
                 PatternPronounFromSaveCurrent();
-                var item=CurrentPatternPronounFrom.Duplicate();
+                ItemPatternPronoun item =CurrentPatternPronounFrom.Duplicate();
                 itemsPatternPronounFrom.Add(item);
                 PatternPronounFromRefreshFilteredList();
                 PatternPronounFromSetListBox();
@@ -14431,7 +14491,6 @@ namespace TranslatorWritter {
 
                     PatternNounFromSetListBox();
                     PatternNounFromSetCurrent();
-
 
                     PatternNounToSetListBox();
                     PatternNounToSetCurrent();
@@ -14508,14 +14567,13 @@ namespace TranslatorWritter {
                 foreach (TranslationsList t in list) { 
                    
                     DownloadDataCompletedEventHandler handler=null;
-                   
-                    
+                                       
                     try{
                         handler += (sender2, e2) => {
                             if (!e2.Cancelled){
                             var data = e2.Result;
                             string html = Encoding.UTF8.GetString(data);
-                            var node=Computation.findNode(html,"toc");
+                            NodeHTML node = Computation.findNode(html,"toc");
                             bool pods=node.FindText("podstatné jméno");
                             bool prid=node.FindText("přídavné jméno");
                             bool zajm=node.FindText("zájmeno");
@@ -14562,7 +14620,7 @@ namespace TranslatorWritter {
                             SetListBoxNumber();
                 
                             VerbRefreshFilteredList();
-                            SetListBoxVerb();
+                            VerbSetListBox();
                 
                             AdverbRefreshFilteredList();
                             SetListBoxAdverb();
@@ -14733,7 +14791,7 @@ namespace TranslatorWritter {
             }
         }
 
-        private void tabControl6_KeyDown(object sender, KeyEventArgs e) {         
+        private void TabControl6_KeyDown(object sender, KeyEventArgs e) {         
             if (e.KeyCode==Keys.N && e.Control) { 
                 switch (tabControl6.SelectedIndex) {
                    case 0: 
@@ -14852,19 +14910,19 @@ namespace TranslatorWritter {
         private void tenToolStripMenuItem_Click(object sender, EventArgs e) {
             PatternPronounToSaveCurrent();
             itemsPatternPronounTo.Add(ItemPatternPronoun.tEN);
-            PatternPronounToRefreshFilteredList();
-            PatternPronounToSetCurrent();
+            PatternPronounToRefresh();
         }
 
         private void tENToolStripMenuItem1_Click(object sender, EventArgs e) {
             PatternPronounFromSaveCurrent();
             itemsPatternPronounFrom.Add(ItemPatternPronoun.tEN);
-            PatternPronounFromRefreshFilteredList();
-            PatternPronounFromSetCurrent();
+            PatternPronounFromRefresh();
         }
 
         private void toolStripMenuItem23_Click(object sender, EventArgs e) {
-          
+            PatternVerbFromSaveCurrent();
+            itemsPatternVerbFrom.Add(ItemPatternVerb.BÝT);
+            PatternVerbFromRefresh();
         }
 
         private void toolStripMenuItem118_Click(object sender, EventArgs e) {
@@ -14883,7 +14941,7 @@ namespace TranslatorWritter {
 
         private void toolStripMenuItem125_Click(object sender, EventArgs e) {
             SaveCurrentSentencePattern();
-            itemsSentencePatterns = itemsSentencePatterns.OrderBy(a => a.PatternSource).ToList();
+            itemsSentencePatterns = itemsSentencePatterns.OrderBy(a => a.From).ToList();
             SentencePatternRefreshFilteredList();
             SetListBoxSentencePattern();
         }
@@ -14895,6 +14953,826 @@ namespace TranslatorWritter {
             SetListBoxSentencePart();
         }
 
+        private void addFromToToolStripMenuItem_Click(object sender, EventArgs e) {
+             string name = GetString("", "Název noun");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try{
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "deklinace substantivum", ref tables);
+
+                    ItemPatternNoun pattern = new ItemPatternNoun {
+                        Name = name,
+                        Shapes=new string[14]
+                    };
+                    bool found=false;
+                    if (tables.Count>0){ 
+                        Table table=tables[0];
+                        if (table.Rows.Count==8) {
+                            if (table.Rows[0].Cells[0].Text=="pád \\ číslo") { 
+                                found=true;
+                                for (int i=0; i<7; i++) {
+                                    pattern.Shapes[i]=table.Rows[i+1].Cells[1].Text;
+                                }
+                                for (int i=0; i<7; i++) {
+                                    pattern.Shapes[i+7]=table.Rows[i+1].Cells[2].Text;
+                                }
+                            } else MessageBox.Show("Error, something else,non substantivnum");
+                        } else MessageBox.Show("Error, something else,height");                        
+                    } else MessageBox.Show("Error, nic");
+                if (!found) return;
+                    if (html.Contains("rod střední"))pattern.Gender=GenderNoun.Neuter;
+                    else if (html.Contains("rod ženský"))pattern.Gender=GenderNoun.Feminine;
+                    else if (html.Contains("rod mužský neživotný"))pattern.Gender=GenderNoun.MasculineInanimate;
+                    else if (html.Contains("rod mužský životný"))pattern.Gender=GenderNoun.MasculineAnimal;
+                    pattern.Optimize();
+
+                    itemsPatternNounFrom.Add(pattern);
+                    ItemPatternNoun patternTo =pattern.Clone();
+                    patternTo.AddQuestionMark();
+                    itemsPatternNounTo.Add(patternTo);
+
+                    PatternNounFromRefreshFilteredList();
+                    PatternNounFromSetListBox();
+                    PatternNounFromListBoxSetCurrent();
+
+                    PatternNounToRefreshFilteredList();
+                    PatternNounToSetListBox();
+                    PatternNounToListBoxSetCurrent();
+                };
+            } catch { MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void býtToolStripMenuItem_Click(object sender, EventArgs e) {
+            PatternVerbFromSaveCurrent();
+            itemsPatternVerbFrom.Add(ItemPatternVerb.BÝT);
+            PatternVerbFromRefresh();
+        }
+
+        private void addFromToToolStripMenuItem1_Click(object sender, EventArgs e) {
+            string name = GetString("", "Název pronomenu");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try{
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "deklinace pronomen", ref tables);
+
+                    if (tables.Count>=1) { 
+                        Table table=tables[0];
+                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+                            ItemPatternPronoun pattern = new ItemPatternPronoun {
+                                Name = name,
+                                Type = PronounType.DeklinationWithGender,
+                                Shapes = new string[8*7]
+                            };
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+   
+                            pattern.Optimize();
+                            itemsPatternPronounFrom.Add(pattern);
+                            PatternPronounFromRefresh();
+
+                            ItemPatternPronoun pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternPronounTo.Add(pattern2);
+
+                            PatternPronounToRefresh();
+                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
+                            ItemPatternPronoun pattern = new ItemPatternPronoun {
+                                Name = name,
+                                Type = PronounType.DeklinationOnlySingle,
+                                Shapes = new string[7]
+                            };
+                            for (int c=0; c<7; c++) {  
+                                pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
+                            }
+
+                            pattern.Optimize();
+                            itemsPatternPronounFrom.Add(pattern);
+
+                            PatternPronounFromRefresh();
+
+                            ItemPatternPronoun pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternPronounTo.Add(pattern2);
+
+                            PatternPronounToRefresh();
+                        }
+                    }
+                };
+            }catch{ MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void addToolStripMenuItem7_Click(object sender, EventArgs e) {
+            
+        }
+
+        private void addFromToToolStripMenuItem2_Click(object sender, EventArgs e) {
+            string name = GetString("", "Název verb");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+            #if !DEBUG
+            try{
+            #endif
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "konjugace verbum", ref tables);
+
+                    ItemPatternVerb pattern = new ItemPatternVerb {
+                        Name = name,
+                        Infinitive = name
+                    };
+                    if (Computation.FindTableInListByName(tables, "Oznamovací způsob", out Table ozn)) { 
+                        if (ozn.Rows[2].Cells[0].Text=="Přítomný čas") { 
+                            pattern.SContinous=true;
+                            pattern.Continous=new string[6];
+                            for (int i=0; i<6; i++) {
+                                pattern.Continous[i]=ozn.Rows[2].Cells[1+i].Text;
+                            }
+                        }
+                        if (ozn.Rows.Count==4){
+                            if (ozn.Rows[3].Cells[0].Text=="Budoucí čas") { 
+                                pattern.SFuture=true;
+                                pattern.Future=new string[6];
+                                for (int i=0; i<6; i++) {
+                                    pattern.Future[i]=ozn.Rows[3].Cells[1+i].Text;
+                                }
+                            }
+                        }
+                    }else{ 
+                        MessageBox.Show("Špatné jméno");
+                        return;
+                    }
+
+                    if (Computation.FindTableInListByName(tables, "Rozkazovací způsob", out Table roz)) { 
+                        pattern.Imperative=new string[3];
+                        pattern.SImperative=true;
+                        for (int i=0; i<3; i++) {
+                            pattern.Imperative[i]=roz.Rows[2].Cells[1+i].Text;
+                        }
+                    }
+
+                if (Computation.FindTableInListByName(tables, "Příčestí", out Table tr)) { 
+                    if (tr.Rows[2].Cells[0].Text=="Činné") {
+                        pattern.SPastActive=true;
+                        pattern.PastActive=new string[8];
+                        if (tr.Rows[2].Cells.Count==7){ 
+                            pattern.PastActive[0]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastActive[1]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastActive[2]=tr.Rows[2].Cells[2].Text;
+                            pattern.PastActive[3]=tr.Rows[2].Cells[3].Text;
+                            pattern.PastActive[4]=tr.Rows[2].Cells[4].Text;
+                            pattern.PastActive[5]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastActive[6]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastActive[7]=tr.Rows[2].Cells[6].Text;
+                        }else{
+                            for (int i=0; i<8; i++) {
+                                pattern.PastActive[i]=tr.Rows[2].Cells[1+i].Text;
+                            }
+                        }
+                    }
+                    if (tr.Rows[2].Cells[0].Text=="Trpné") { 
+                        pattern.SPastPassive=true;
+                        pattern.PastPassive=new string[8];
+                        if (tr.Rows[2].Cells.Count==7) { 
+                            pattern.PastPassive[0]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastPassive[1]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastPassive[2]=tr.Rows[2].Cells[2].Text;
+                            pattern.PastPassive[3]=tr.Rows[2].Cells[3].Text;
+                            pattern.PastPassive[4]=tr.Rows[2].Cells[4].Text;
+                            pattern.PastPassive[5]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastPassive[6]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastPassive[7]=tr.Rows[2].Cells[6].Text;
+                        }else{
+                            for (int i=0; i<8; i++) {
+                                pattern.PastPassive[i]=tr.Rows[2].Cells[1+i].Text;
+                            }
+                        }
+                    }
+                    if (tr.Rows.Count>=4) {  
+                        if (tr.Rows[3].Cells[0].Text=="Činné") {
+                            pattern.SPastActive=true;
+                            pattern.PastActive=new string[8];
+                            if (tr.Rows[2].Cells.Count==7) { 
+                                pattern.PastActive[0]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastActive[1]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastActive[2]=tr.Rows[3].Cells[2].Text;
+                                pattern.PastActive[3]=tr.Rows[3].Cells[3].Text;
+                                pattern.PastActive[4]=tr.Rows[3].Cells[4].Text;
+                                pattern.PastActive[5]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastActive[6]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastActive[7]=tr.Rows[3].Cells[6].Text;
+                            } else {
+                                for (int i=0; i<8; i++) {
+                                    pattern.PastActive[i]=tr.Rows[3].Cells[1+i].Text;
+                                }
+                            }
+                        }
+                        if (tr.Rows[3].Cells[0].Text=="Trpné") { 
+                            pattern.SPastPassive=true;
+                            pattern.PastPassive=new string[8];
+                            if (tr.Rows[2].Cells.Count==7) {
+                                pattern.PastPassive[0]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastPassive[1]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastPassive[2]=tr.Rows[3].Cells[2].Text;
+                                pattern.PastPassive[3]=tr.Rows[3].Cells[3].Text;
+                                pattern.PastPassive[4]=tr.Rows[3].Cells[4].Text;
+                                pattern.PastPassive[5]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastPassive[6]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastPassive[7]=tr.Rows[3].Cells[6].Text;
+                            } else {
+                                for (int i=0; i<8; i++) {
+                                    pattern.PastPassive[i]=tr.Rows[3].Cells[1+i].Text;
+                                }
+                            }
+                        }
+                    }
+                } 
+                
+                if (Computation.FindTableInListByName(tables, "Přechodníky", out Table pre)) { 
+                    if (pre.Rows.Count>=4) {
+                        if (pre.Rows[2].Cells[0].Text=="Přítomný") {
+                            pattern.TransgressiveCont=new string[3];
+                            pattern.STransgressiveCont=true;
+                            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[2].Cells[1+i].Text;
+                        } else if (pre.Rows[2].Cells[0].Text=="Minulý") {
+                            pattern.TransgressivePast=new string[3];
+                            pattern.STransgressivePast=true;
+                            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[2].Cells[1+i].Text;
+                        }
+
+                        if (pre.Rows[3].Cells[0].Text=="Přítomný") {
+                            pattern.TransgressiveCont=new string[3];
+                            pattern.STransgressiveCont=true;
+                            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[3].Cells[1+i].Text;
+                         } else if (pre.Rows[3].Cells[0].Text=="Minulý") {
+                            pattern.TransgressivePast=new string[3];
+                            pattern.STransgressivePast=true;
+                            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[3].Cells[1+i].Text;
+                        }
+                    }
+                }
+
+                pattern.Optimize();
+
+                itemsPatternVerbFrom.Add(pattern);
+                PatternVerbFromRefresh();
+
+                ItemPatternVerb pattern2 =pattern.Clone();
+                pattern2.AddQuestionMark();
+
+                itemsPatternVerbTo.Add(pattern2);
+                PatternVerbToRefresh();
+
+            };
+            #if !DEBUG
+            }catch{ MessageBox.Show("Error");}
+            #endif
+            Computation.DownloadString(ref handler, name);
+        }
+
+        void PatternVerbToRefresh(){
+            PatternVerbToRefreshFilteredList();
+            PatternVerbToCheckBoxesSet();
+            PatternVerbToSetListBox();
+            PatternVerbToListBoxSetCurrent();    
+        }
+        
+        void VerbRefresh(){
+            VerbRefreshFilteredList();
+            VerbSetListBox();
+            VerbListBoxSetCurrent();    
+        }
+        
+        void PatternVerbFromRefresh() {
+            PatternVerbFromRefreshFilteredList();
+            PatternVerbFromCheckBoxesSet();
+            PatternVerbFromSetListBox();
+            PatternVerbFromListBoxSetCurrent();    
+        }
+
+        private void addFromtoToolStripMenuItem3_Click(object sender, EventArgs e) {
+             string name = GetString("", "Název numery");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try{
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
+
+                    if (tables.Count>=1) { 
+                        Table table=tables[0];
+                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+                            ItemPatternNumber pattern = new ItemPatternNumber {
+                                Name = name,
+                                ShowType = NumberType.DeklinationWithGender,
+                                Shapes = new string[8*7]
+                            };
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+   
+                            pattern.Optimize();
+                            itemsPatternNumberFrom.Add(pattern);
+                            PatternNumberFromRefresh();
+
+                            ItemPatternNumber pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternNumberTo.Add(pattern2);
+
+                            PatternNumberToRefresh();
+                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
+                            ItemPatternNumber pattern = new ItemPatternNumber {
+                                Name = name,
+                                ShowType = NumberType.DeklinationOnlySingle,
+                                Shapes = new string[7]
+                            };
+                            for (int c=0; c<7; c++) {  
+                                pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
+                            }
+
+                            pattern.Optimize();
+                            itemsPatternNumberFrom.Add(pattern);
+
+                            PatternNumberFromRefresh();
+
+                            ItemPatternNumber pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternNumberTo.Add(pattern2);
+
+                            PatternNumberToRefresh();
+                        }
+                    }
+                };
+            }catch{ MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void addLinkedFromtoToolStripMenuItem_Click(object sender, EventArgs e) {
+            string name = GetString("", "Název numery");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try {
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
+
+                    if (tables.Count>=1) { 
+                        Table table=tables[0];
+                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+                            ItemPatternNumber pattern = new ItemPatternNumber {
+                                Name = name,
+                                ShowType = NumberType.DeklinationWithGender,
+                                Shapes = new string[8*7]
+                            };
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+   
+                            pattern.Optimize();
+                            itemsPatternNumberFrom.Add(pattern);
+                            PatternNumberFromRefresh();
+
+                            ItemPatternNumber pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternNumberTo.Add(pattern2);
+
+                            PatternNumberToRefresh();
+                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
+                            ItemPatternNumber pattern = new ItemPatternNumber {
+                                Name = name,
+                                ShowType = NumberType.DeklinationOnlySingle,
+                                Shapes = new string[7]
+                            };
+                            for (int c=0; c<7; c++) pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
+
+                            pattern.Optimize();
+                            itemsPatternNumberFrom.Add(pattern);
+
+                            PatternNumberFromRefresh();
+
+                            ItemPatternNumber pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternNumberTo.Add(pattern2);
+
+                            PatternNumberToRefresh();
+
+                            ItemNumber num = new ItemNumber {
+                                PatternFrom = pattern.Name,
+                                PatternTo = pattern2.Name,
+
+                                From = pattern.GetPrefix(),
+                                To = pattern.GetPrefix(),
+                            };
+                            itemsNumbers.Add(num);
+
+                            NumberRefresh();
+                        }
+                    }
+                };
+            }catch{ MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void tENToolStripMenuItem2_Click(object sender, EventArgs e) {
+            SaveCurrentPronoun();
+            ItemPronoun pronoun =new ItemPronoun{ 
+                PatternFrom="tEN",
+                PatternTo="tEN",
+                From="t",
+                To="t",
+            };
+                      
+            if (!itemsPatternPronounFrom.ExistsWithName("tEN")) {//exist 
+                itemsPatternPronounFrom.Add(ItemPatternPronoun.tEN);
+                PatternPronounFromRefresh();
+
+                ItemPatternPronoun v= ItemPatternPronoun.tEN;
+                v.AddQuestionMark();
+                itemsPatternPronounTo.Add(v);
+                PatternPronounToRefresh();
+            }
+
+            itemsPronouns.Add(pronoun);
+            PronounRefresh();
+        }
+
+        void PronounRefresh(){
+            PronounRefreshFilteredList();
+            SetListBoxPronoun();
+            SetCurrentPronoun();
+        }
+
+        private void ListBoxPronoun_MouseDown(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Right) contextMenuStripPronoun.Show(MousePosition);
+        }
+
+        private void addLinkedFromtoToolStripMenuItem1_Click(object sender, EventArgs e) {
+             string name = GetString("", "Název pronomenu");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try{
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "deklinace pronomen", ref tables);
+
+                    if (tables.Count>=1) { 
+                        Table table=tables[0];
+                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+                            ItemPatternPronoun pattern = new ItemPatternPronoun {
+                                Name = name,
+                                Type = PronounType.DeklinationWithGender,
+                                Shapes = new string[8*7]
+                            };
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
+
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
+                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+   
+                            pattern.Optimize();
+                            itemsPatternPronounFrom.Add(pattern);
+                            PatternPronounFromRefresh();
+
+                            ItemPatternPronoun pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternPronounTo.Add(pattern2);
+                            PatternPronounToRefresh();
+
+                            ItemPronoun pronoun = new ItemPronoun {
+                                PatternFrom = pattern.Name,
+                                PatternTo = pattern2.Name,
+                                From=pattern.GetPrefix(),
+                                To=pattern2.GetPrefix(),
+                            };
+
+                            Edited=true;
+                            itemsPronouns.Add(pronoun);
+                            PronounRefresh();
+                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
+                            ItemPatternPronoun pattern = new ItemPatternPronoun {
+                                Name = name,
+                                Type = PronounType.DeklinationOnlySingle,
+                                Shapes = new string[7]
+                            };
+                            for (int c=0; c<7; c++) {  
+                                pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
+                            }
+
+                            pattern.Optimize();
+                            itemsPatternPronounFrom.Add(pattern);
+                            PatternPronounFromRefresh();
+
+                            ItemPatternPronoun pattern2=pattern.Clone();
+                            pattern2.AddQuestionMark();
+                            itemsPatternPronounTo.Add(pattern2);
+                            PatternPronounToRefresh();
+
+                            ItemPronoun pronoun = new ItemPronoun {
+                                PatternFrom = pattern.Name,
+                                PatternTo = pattern2.Name,
+                                From=pattern.GetPrefix(),
+                                To=pattern2.GetPrefix(),
+                            };
+                            itemsPronouns.Add(pronoun);
+                            Edited=true;
+                            PronounRefresh();
+
+                        }
+                    }
+                };
+            }catch{ MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void addFromtoToolStripMenuItem4_Click(object sender, EventArgs e) {
+             string name = GetString("", "Název verb");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try{
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    List<Table> tables=new List<Table>();
+                    Computation.FindTableInHTML(html, "konjugace verbum", ref tables);
+
+                    ItemPatternVerb pattern = new ItemPatternVerb {
+                        Name = name,
+                        Infinitive = name
+                    };
+                    if (Computation.FindTableInListByName(tables, "Oznamovací způsob", out Table ozn)) { 
+                        if (ozn.Rows[2].Cells[0].Text=="Přítomný čas") { 
+                            pattern.SContinous=true;
+                            pattern.Continous=new string[6];
+                            for (int i=0; i<6; i++) {
+                                pattern.Continous[i]=ozn.Rows[2].Cells[1+i].Text;
+                            }
+                        }
+                        if (ozn.Rows.Count==4){
+                            if (ozn.Rows[3].Cells[0].Text=="Budoucí čas") { 
+                                pattern.SFuture=true;
+                                pattern.Future=new string[6];
+                                for (int i=0; i<6; i++) {
+                                    pattern.Future[i]=ozn.Rows[3].Cells[1+i].Text;
+                                }
+                            }
+                        }
+                    }else{ 
+                        MessageBox.Show("Špatné jméno");
+                        return;
+                    }
+
+                    if (Computation.FindTableInListByName(tables, "Rozkazovací způsob", out Table roz)) { 
+                        pattern.Imperative=new string[3];
+                        pattern.SImperative=true;
+                        for (int i=0; i<3; i++) {
+                            pattern.Imperative[i]=roz.Rows[2].Cells[1+i].Text;
+                        }
+                    }
+
+                if (Computation.FindTableInListByName(tables, "Příčestí", out Table tr)) { 
+                    if (tr.Rows[2].Cells[0].Text=="Činné") {
+                        pattern.SPastActive=true;
+                        pattern.PastActive=new string[8];
+                        if (tr.Rows[2].Cells.Count==7){ 
+                            pattern.PastActive[0]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastActive[1]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastActive[2]=tr.Rows[2].Cells[2].Text;
+                            pattern.PastActive[3]=tr.Rows[2].Cells[3].Text;
+                            pattern.PastActive[4]=tr.Rows[2].Cells[4].Text;
+                            pattern.PastActive[5]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastActive[6]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastActive[7]=tr.Rows[2].Cells[6].Text;
+                        }else{
+                            for (int i=0; i<8; i++) {
+                                pattern.PastActive[i]=tr.Rows[2].Cells[1+i].Text;
+                            }
+                        }
+                    }
+                    if (tr.Rows[2].Cells[0].Text=="Trpné") { 
+                        pattern.SPastPassive=true;
+                        pattern.PastPassive=new string[8];
+                        if (tr.Rows[2].Cells.Count==7) { 
+                            pattern.PastPassive[0]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastPassive[1]=tr.Rows[2].Cells[1].Text;
+                            pattern.PastPassive[2]=tr.Rows[2].Cells[2].Text;
+                            pattern.PastPassive[3]=tr.Rows[2].Cells[3].Text;
+                            pattern.PastPassive[4]=tr.Rows[2].Cells[4].Text;
+                            pattern.PastPassive[5]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastPassive[6]=tr.Rows[2].Cells[5].Text;
+                            pattern.PastPassive[7]=tr.Rows[2].Cells[6].Text;
+                        }else{
+                            for (int i=0; i<8; i++) {
+                                pattern.PastPassive[i]=tr.Rows[2].Cells[1+i].Text;
+                            }
+                        }
+                    }
+                    if (tr.Rows.Count>=4) {  
+                        if (tr.Rows[3].Cells[0].Text=="Činné") {
+                            pattern.SPastActive=true;
+                            pattern.PastActive=new string[8];
+                            if (tr.Rows[2].Cells.Count==7) { 
+                                pattern.PastActive[0]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastActive[1]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastActive[2]=tr.Rows[3].Cells[2].Text;
+                                pattern.PastActive[3]=tr.Rows[3].Cells[3].Text;
+                                pattern.PastActive[4]=tr.Rows[3].Cells[4].Text;
+                                pattern.PastActive[5]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastActive[6]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastActive[7]=tr.Rows[3].Cells[6].Text;
+                            } else {
+                                for (int i=0; i<8; i++) {
+                                    pattern.PastActive[i]=tr.Rows[3].Cells[1+i].Text;
+                                }
+                            }
+                        }
+                        if (tr.Rows[3].Cells[0].Text=="Trpné") { 
+                            pattern.SPastPassive=true;
+                            pattern.PastPassive=new string[8];
+                            if (tr.Rows[2].Cells.Count==7) {
+                                pattern.PastPassive[0]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastPassive[1]=tr.Rows[3].Cells[1].Text;
+                                pattern.PastPassive[2]=tr.Rows[3].Cells[2].Text;
+                                pattern.PastPassive[3]=tr.Rows[3].Cells[3].Text;
+                                pattern.PastPassive[4]=tr.Rows[3].Cells[4].Text;
+                                pattern.PastPassive[5]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastPassive[6]=tr.Rows[3].Cells[5].Text;
+                                pattern.PastPassive[7]=tr.Rows[3].Cells[6].Text;
+                            } else {
+                                for (int i=0; i<8; i++) {
+                                    pattern.PastPassive[i]=tr.Rows[3].Cells[1+i].Text;
+                                }
+                            }
+                        }
+                    }
+                } 
+                
+                if (Computation.FindTableInListByName(tables, "Přechodníky", out Table pre)) { 
+                    if (pre.Rows.Count>=4) {
+                        if (pre.Rows[2].Cells[0].Text=="Přítomný") {
+                            pattern.TransgressiveCont=new string[3];
+                            pattern.STransgressiveCont=true;
+                            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[2].Cells[1+i].Text;
+                        } else if (pre.Rows[2].Cells[0].Text=="Minulý") {
+                            pattern.TransgressivePast=new string[3];
+                            pattern.STransgressivePast=true;
+                            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[2].Cells[1+i].Text;
+                        }
+
+                        if (pre.Rows[3].Cells[0].Text=="Přítomný") {
+                            pattern.TransgressiveCont=new string[3];
+                            pattern.STransgressiveCont=true;
+                            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[3].Cells[1+i].Text;
+                         } else if (pre.Rows[3].Cells[0].Text=="Minulý") {
+                            pattern.TransgressivePast=new string[3];
+                            pattern.STransgressivePast=true;
+                            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[3].Cells[1+i].Text;
+                        }
+                    }
+                }
+
+                pattern.Optimize();
+
+                itemsPatternVerbFrom.Add(pattern);
+                PatternVerbFromRefresh();
+
+                ItemPatternVerb pattern2 =pattern.Clone();
+                pattern2.AddQuestionMark();
+
+                itemsPatternVerbTo.Add(pattern2);
+                PatternVerbToRefresh();
+
+                itemsVerbs.Add(new ItemVerb{ 
+                    From=pattern.GetPrefix(),
+                    To=pattern2.GetPrefix(),
+                    PatternFrom=pattern.Name,
+                    PatternTo=pattern2.Name                    
+                });
+
+                VerbRefresh();
+            };
+            }catch{ MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void BÝTToolStripMenuItem1_Click(object sender, EventArgs e) {
+            SaveCurrentVerb();
+            ItemVerb verb =new ItemVerb{ 
+                PatternFrom="BÝT",
+                PatternTo="BÝT",
+            };
+                      
+            if (!itemsPatternVerbFrom.ExistsWithName("BÝT")) {//exist 
+                itemsPatternVerbFrom.Add(ItemPatternVerb.BÝT);
+                PatternVerbFromRefreshFilteredList();
+                PatternVerbFromSetListBox();
+                PatternVerbFromSetCurrent();
+
+                ItemPatternVerb v= ItemPatternVerb.BÝT;
+                v.AddQuestionMark();
+                itemsPatternVerbTo.Add(v);
+                PatternVerbToRefreshFilteredList();
+                PatternVerbToSetListBox();
+                PatternVerbToSetCurrent();
+            }
+
+            itemsVerbs.Add(verb);
+            VerbRefreshFilteredList();
+            VerbSetListBox();
+            SetCurrentVerb();
+        }
+
         void SetListBoxReplaceE() { 
             int index=listBoxReplaceE.SelectedIndex;
             listBoxReplaceE.Items.Clear();
@@ -14902,7 +15780,7 @@ namespace TranslatorWritter {
                 ItemReplaceE item = itemsReplaceEFiltered[i];
                                 
                 string textToAdd=item.GetText();
-                if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
+             //   if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxReplaceE.Items.Add(textToAdd);
             }
@@ -15000,33 +15878,19 @@ namespace TranslatorWritter {
         
         void SaveCurrentReplaceE() {
             if (CurrentReplaceE==null) return;
-
             CurrentReplaceE.From =textBoxReplaceEFrom.Text;
-            CurrentReplaceE.To   =textBoxReplaceETo.Text;
-         //   CurrentReplaceE.Fall =textBoxReplaceEFall.Text;
-           
+            CurrentReplaceE.To   =textBoxReplaceETo.Text;           
         } 
               
         void SetNoneReplaceE(){ 
             textBoxReplaceEFrom.Text="";
             textBoxReplaceETo.Text="";
-          //  textBoxReplaceEFall.Text="";
 
             textBoxReplaceEFrom.Visible=false;
             textBoxReplaceETo.Visible=false;
-         //   textBoxReplaceEFall.Visible=false;
 
             labelReplaceEFrom.Visible=false;
             labelReplaceETo.Visible=false;
-        //    labelReplaceEFall.Visible=false;
-        }
-                
-        void ClearReplaceE() { 
-            listBoxReplaceE.Items.Clear();
-            SetNoneReplaceE();
-            itemsReplaceEFiltered?.Clear();
-            itemsReplaceE?.Clear();
-            CurrentReplaceE=null;
         }
         #endregion
     }

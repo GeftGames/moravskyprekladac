@@ -1,41 +1,232 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace TranslatorWritter {
-    //abstract class TranslatingItem {
-    //    public static TranslatingItem Load(string data) {
-    //        return null;
-    //    }
 
-    //    public abstract string Save();
-    //}
+    abstract class ItemTranslating { 
+        internal string From, To;
+        protected static readonly char[] notAllowed=new char[]{' ', ' ', '|', '\t', ';', '_', '/', '"'};
 
-    class ItemSentence {
-        public string From, To;
-
-        public ItemSentence() { 
-            From="";
-            To="";
-        }
-
-        public string Save() {
+        internal virtual string Save() {
             if (From==To) return From;
             return From+"|"+To;
         }
 
-        public bool Filter(string filter) {
+        internal virtual bool Filter(string filter) {
             if (From!=null) if (From.Contains(filter)) return true;
-            if (To!=null) if (To.Contains(filter)) return true;
+            if (To  !=null) if (To  .Contains(filter)) return true;
             return false;
         }
 
-        public string GetText() {
+        protected virtual bool Valid() {
+            if (From.Contains(notAllowed)) return false;
+            if (To.  Contains(notAllowed)) return false;
+            if (string.IsNullOrEmpty(To)) return false;
+
+            return true;
+        }
+
+        internal virtual string GetText() {
+            if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+            if (!Valid()) return "⚠"+From;
             return From;
         }
+    }
+
+    abstract class ItemTranslatingUsingPatterns: ItemTranslating { 
+        public string PatternFrom, PatternTo;
+        internal new virtual string Save() {
+            if (From==To && From=="") return PatternFrom+"|"+PatternTo;
+            else if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
+            else return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+        }
+
+        protected new virtual bool Valid() {
+            if (string.IsNullOrEmpty(PatternFrom)) return false;
+            if (string.IsNullOrEmpty(PatternTo)) return false;
+
+            if (From.Contains(notAllowed)) return false;
+            if (To.  Contains(notAllowed)) return false;
+
+            if (PatternFrom.Contains(notAllowed)) return false;
+            if (PatternTo.  Contains(notAllowed)) return false;
+
+            return true;
+        }
+
+        internal new virtual string GetText() {
+            if (string.IsNullOrEmpty(From)) {
+                if (string.IsNullOrEmpty(PatternFrom)) {
+                    return "<Neznámé>";
+                } else {
+                    return "{"+PatternFrom+"}";
+                }
+            } else {
+                if (string.IsNullOrEmpty(PatternFrom)) {
+                    if (!Valid()) return "⚠"+From;
+                    return From;
+                } else {
+                    if (string.IsNullOrEmpty(PatternTo)) {
+                        if (PatternFrom.StartsWith(From)) {
+                            return "⚠"+PatternFrom;
+                        } else return "⚠"+From;
+                    }else{ 
+                        if (PatternFrom.StartsWith(From)) {
+                            return PatternFrom;
+                        } else return From;
+                    }
+                }
+            }
+        }
+    }
+
+    abstract class ItemTranslatingLong: ItemTranslating { 
+        internal static new char[] notAllowed=new char[]{'#', /*' ', */'|', '\t'};
+
+        protected override bool Valid() {
+            if (From.Contains(notAllowed)) return false;
+            if (To.Contains(notAllowed)) return false;
+            
+            if (From.EndsWith(" ")) return false;
+            if (To.EndsWith(" ")) return false;
+
+            return true;
+        }
+
+        //internal override string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+    }
+
+    abstract class ItemTranslatingPattern { 
+        internal string Name;
+        internal static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
+
+        protected virtual bool Valid() {
+            if (Name=="") return false;
+            if (Name.Contains(notAllowed)) return false;
+
+            return true;
+        }
+
+        internal virtual bool Filter(string filter) {
+            return Name.Contains(filter);
+        }
+
+        internal virtual string GetText() {
+            if (string.IsNullOrEmpty(Name)) return "<Neznámé>";
+            if (!Valid()) return "⚠"+Name;
+            return Name;
+        }
+
+        internal string GetPrefix() { 
+            int i=0;
+            for (; i<Name.Length; i++) { 
+                if (IsLowerCase(Name[i])) i++;
+                else break;
+            }
+            if (i==0) return "";
+            if (i<Name.Length) return Name.Substring(0,i);
+            return Name; 
+        }
+
+        internal abstract void Optimize();
+        
+        internal abstract void AddQuestionMark();
+
+        static bool IsLowerCase(char ch) { 
+            switch (ch){ 
+                case 'a': return true; 
+                case 'á': return true; 
+                case 'b': return true; 
+                case 'c': return true; 
+                case 'č': return true; 
+                case 'd': return true; 
+                case 'ď': return true; 
+                case 'e': return true; 
+                case 'é': return true; 
+                case 'ê': return true; 
+                case 'f': return true; 
+                case 'g': return true; 
+                case 'h': return true; 
+                case 'i': return true; 
+                case 'í': return true; 
+                case 'j': return true; 
+                case 'k': return true; 
+                case 'l': return true; 
+                case 'ł': return true; 
+                case 'm': return true; 
+                case 'n': return true; 
+                case 'ň': return true; 
+                case 'o': return true; 
+                case 'ó': return true; 
+                case 'ô': return true; 
+                case 'p': return true; 
+                case 'q': return true; 
+                case 'r': return true; 
+                case 'ř': return true; 
+                case 'ŕ': return true; 
+                case 's': return true; 
+                case 't': return true; 
+                case 'ť': return true; 
+                case 'u': return true; 
+                case 'ů': return true; 
+                case 'ú': return true; 
+                case 'v': return true; 
+                case 'w': return true; 
+                case 'x': return true; 
+                case 'y': return true; 
+                case 'ý': return true; 
+                case 'z': return true; 
+                case 'ž': return true;
+            }
+            return false;
+        }
+    }
+
+    class ItemSentence : ItemTranslatingLong{
+      //  public string From, To;
+        //internal static new char[] notAllowed=new char[]{'#', ' ', '|', '\t'};
+
+        //protected virtual bool Valid() {
+        //    if (From=="") return false;
+        //    if (To=="") return false;
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        public ItemSentence() {
+            From="";
+            To="";
+        }
+
+        //bool Valid(){
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (From.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        //internal override string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
+
+        //internal override bool Filter(string filter) {
+        //    if (From!=null) if (From.Contains(filter)) return true;
+        //    if (To!=null) if (To.Contains(filter)) return true;
+        //    return false;
+        //}
+
+        //public override string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public static ItemSentence Load(string data) {
             string[] raw = data.Split('|');
@@ -55,28 +246,44 @@ namespace TranslatorWritter {
         }
     }
 
-    class ItemSentencePart {
-        public string From, To;
+    class ItemSentencePart : ItemTranslatingLong{
+       // public string From, To;
+      //  static char[] notAllowed=new char[]{'#', ' ', '|', '\t'};
 
-        public ItemSentencePart() { 
+        //bool Valid() {
+        //    if (To.Contains(notAllowed)) return false;
+        //    if (From.Contains(notAllowed)) return false;
+        //    return true;
+        //}
+        //internal static new char[] notAllowed=new char[]{'#', ' ', '|', '\t'};
+        //protected virtual bool Valid() {
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        public ItemSentencePart() {
             From="";
             To="";
         }
 
-        public string Save() {
-            if (From==To) return From;
-            else return From+"|"+To;
-        }
+        //public override string Save() {
+        //    if (From==To) return From;
+        //    else return From+"|"+To;
+        //}
 
-        public bool Filter(string filter) {
-            if (From!=null) if (From.Contains(filter)) return true;
-            if (To!=null) if (To.Contains(filter)) return true;
-            return false;
-        }
+        //public override bool Filter(string filter) {
+        //    if (From!=null) if (From.Contains(filter)) return true;
+        //    if (To!=null) if (To.Contains(filter)) return true;
+        //    return false;
+        //}
 
-        public string GetText() {
-            return From;
-        }
+        //public override string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public static ItemSentencePart Load(string data) {
             string[] raw = data.Split('|');
@@ -90,109 +297,142 @@ namespace TranslatorWritter {
                     From = raw[0],
                     To = raw[1]
                 };
-            } 
+            }
             throw new Exception("SentencePattern - chybná délka");
         }
-    }  
+    }
 
-    class ItemSentencePattern {   
-        public string PatternSource, PatternOutput;
+    class ItemSentencePattern : ItemTranslatingLong {
+      //  public string PatternSource, PatternOutput;
+        //protected new static char[] notAllowed=new char[]{'#', ' ', '|', '\t'};
 
+        //protected virtual bool Valid() {
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        //new bool Valid(){
+        //    if (PatternSource=="") return false;
+        //    if (PatternOutput=="") return false;
+
+        //    if (PatternSource.Contains(notAllowed)) return false;
+        //    if (PatternOutput.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
         public ItemSentencePattern() {
-            PatternSource="";
-            PatternOutput="";
+            From="";
+            To="";
         }
-                       
-        public string Save() {
-            if (PatternSource==PatternOutput) return PatternSource;
-            else return PatternSource+"|"+PatternOutput;
-        }
+
+        //public override string Save() {
+        //    if (PatternSource==PatternOutput) return PatternSource;
+        //    else return PatternSource+"|"+PatternOutput;
+        //}
 
         public static ItemSentencePattern Load(string data) {
             string[] raw = data.Split('|');
             if (raw.Length==2) {
                 ItemSentencePattern item = new ItemSentencePattern {
-                    PatternSource = raw[0],
-                    PatternOutput = raw[1]
+                    From = raw[0],
+                    To = raw[1]
                 };
                 return item;
-            } 
+            }
             if (raw.Length==1) {
                 ItemSentencePattern item = new ItemSentencePattern {
-                    PatternSource = data,
-                    PatternOutput = data
-                };
-                return item;
-            } 
-            throw new Exception("SentencePattern - chybná délka");
-        }
-
-        public bool Filter(string filter) {
-            if (PatternSource!=null) if (PatternSource.Contains(filter)) return true;
-            if (PatternOutput!=null) if (PatternOutput.Contains(filter)) return true;
-            return false;
-        }
-
-        public string GetText() {
-            return PatternSource;
-        }
-    }      
-    
-    class ItemSentencePatternPart {   
-        public string PatternSource, PatternOutput;
-
-        public ItemSentencePatternPart() {
-            PatternSource="";
-            PatternOutput="";
-        }
-                       
-        public string Save() {
-            if (PatternSource==PatternOutput) return PatternSource;
-            else return PatternSource+"|"+PatternOutput;
-        }
-
-        public static ItemSentencePatternPart Load(string data) {
-            string[] raw = data.Split('|');
-            if (raw.Length==2) {
-                ItemSentencePatternPart item = new ItemSentencePatternPart {
-                    PatternSource = raw[0],
-                    PatternOutput = raw[1]
-                };
-                return item;
-            } 
-            if (raw.Length==1) {
-                ItemSentencePatternPart item = new ItemSentencePatternPart {
-                    PatternSource = data,
-                    PatternOutput = data
+                    From = data,
+                    To = data
                 };
                 return item;
             }
             throw new Exception("SentencePattern - chybná délka");
         }
 
-        public bool Filter(string filter) {
-            if (PatternSource!=null) if (PatternSource.Contains(filter)) return true;
-            if (PatternOutput!=null) if (PatternOutput.Contains(filter)) return true;
-            return false;
+        //public bool Filter(string filter) {
+        //    if (PatternSource!=null) if (PatternSource.Contains(filter)) return true;
+        //    if (PatternOutput!=null) if (PatternOutput.Contains(filter)) return true;
+        //    return false;
+        //}
+
+        //public string GetText() {
+        //    return PatternSource;
+        //}
+    }
+
+    class ItemSentencePatternPart : ItemTranslatingLong {
+       // public string PatternSource, PatternOutput;
+        //internal new char[] notAllowed=new char[]{'#', ' ', '|', '\t'};
+
+        public ItemSentencePatternPart() {
+            From="";
+            To="";
         }
 
-        public string GetText() {
-            return PatternSource;
+        //protected virtual bool Valid() {
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        //public string Save() {
+        //    if (PatternSource==PatternOutput) return PatternSource;
+        //    else return PatternSource+"|"+PatternOutput;
+        //}
+
+        public static ItemSentencePatternPart Load(string data) {
+            string[] raw = data.Split('|');
+            if (raw.Length==2) {
+                ItemSentencePatternPart item = new ItemSentencePatternPart {
+                    From = raw[0],
+                    To = raw[1]
+                };
+                return item;
+            }
+            if (raw.Length==1) {
+                ItemSentencePatternPart item = new ItemSentencePatternPart {
+                    From = data,
+                    To = data
+                };
+                return item;
+            }
+            throw new Exception("SentencePattern - chybná délka");
         }
-    }  
-    
-    class ItemPhrase {   
-        public string From, To;
+
+        //public bool Filter(string filter) {
+        //    if (PatternSource!=null) if (PatternSource.Contains(filter)) return true;
+        //    if (PatternOutput!=null) if (PatternOutput.Contains(filter)) return true;
+        //    return false;
+        //}
+
+        //public string GetText() {
+        //    return PatternSource;
+        //}
+    }
+
+    class ItemPhrase : ItemTranslatingLong {
+      //  public string From, To;
 
         public ItemPhrase() {
             From="";
             To="";
         }
-                       
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+      
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
         public static ItemPhrase Load(string data) {
             string[] raw = data.Split('|');
@@ -201,45 +441,57 @@ namespace TranslatorWritter {
                     From = raw[0],
                     To = raw[1]
                 };
-            } 
+            }
             if (raw.Length==1) {
                 return new ItemPhrase {
                     From = data,
                     To = data
                 };
-            } 
+            }
             throw new Exception("SentencePattern - chybná délka");
         }
 
-        public bool Filter(string filter) {
-            if (From!=null) if (From.Contains(filter)) return true;
-            if (To!=null) if (To.Contains(filter)) return true;
-            return false;
-        }
+        //public bool Filter(string filter) {
+        //    if (From!=null) if (From.Contains(filter)) return true;
+        //    if (To!=null) if (To.Contains(filter)) return true;
+        //    return false;
+        //}
 
-        public string GetText() {
-            return From;
-        }
-    }  
-    
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+    }
+
     // For convert, sample: "i" -> "aji" (non pattern sentences)
-    class ItemSimpleWord{
-        public string From, To;
+    class ItemSimpleWord : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
-        public bool Filter(string filter) {
-            if (From==null) return true; //New
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public string GetText() {
-            return From;
-        }
-        
+        //    return true;
+        //}
+
+        //public bool Filter(string filter) {
+        //    if (From==null) return true; //New
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemSimpleWord Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -258,22 +510,32 @@ namespace TranslatorWritter {
         }
     }
 
-    class ItemReplaceS{
-        public string From, To;
+    class ItemReplaceS : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //    return true;
+        //}
 
-        public string GetText() {
-            return From;
-        }
-        
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemReplaceS Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -281,7 +543,7 @@ namespace TranslatorWritter {
                     From = raw[0],
                     To = raw[1]
                 };
-            } 
+            }
             if (raw.Length==1) {
                 return new ItemReplaceS {
                     From = data,
@@ -290,25 +552,35 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
+    }
 
-    class ItemReplaceG{
-        public string From, To;
+    class ItemReplaceG : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public bool Filter(string filter) {
-            if (From==null)return false;
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //    return true;
+        //}
 
-        public string GetText() {
-            return From;
-        }
-        
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
+
+        //public bool Filter(string filter) {
+        //    if (From==null)return false;
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemReplaceG Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -316,7 +588,7 @@ namespace TranslatorWritter {
                     From = raw[0],
                     To = raw[1]
                 };
-            } 
+            }
             if (raw.Length==1) {
                 return new ItemReplaceG {
                     From = data,
@@ -325,26 +597,36 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
+    }
 
-     class ItemReplaceE{
-        public string From, To;
+     class ItemReplaceE : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
-        public bool Filter(string filter) {
-            if (string.IsNullOrEmpty(From)) return false;
-            if (string.IsNullOrEmpty(To)) return false;
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //bool Valid(){
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public string GetText() {
-            return From;
-        }
-        
+        //    return true;
+        //}
+
+        //public bool Filter(string filter) {
+        //    if (string.IsNullOrEmpty(From)) return false;
+        //    if (string.IsNullOrEmpty(To)) return false;
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemReplaceE Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -361,24 +643,34 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
-    
-    class ItemInterjection{
-        public string From, To;
+    }
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+    class ItemInterjection : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
-        public string GetText() {
-            return From;
-        }
-        
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemInterjection Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -395,24 +687,34 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
+    }
 
-    class ItemConjunction{
-        public string From, To;
+    class ItemConjunction : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public string GetText() {
-            return From;
-        }
-        
+        //    return true;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemConjunction Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -420,7 +722,7 @@ namespace TranslatorWritter {
                     From = raw[0],
                     To = raw[1]
                 };
-            } 
+            }
             if (raw.Length==1) {
                 return new ItemConjunction {
                     From = data,
@@ -429,24 +731,34 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
+    }
 
-    class ItemParticle{
-        public string From, To;
+    class ItemParticle : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
 
-        public string GetText() {
-            return From;
-        }
-        
+        //bool Valid(){
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
         public static ItemParticle Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -463,24 +775,34 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
+    }
 
-    class ItemAdverb{
-        public string From, To;
+    class ItemAdverb : ItemTranslating{
+        //public string From, To;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
-            if (From==To) return From;
-            return From+"|"+To;
-        }
+        //public string Save() {
+        //    if (From==To) return From;
+        //    return From+"|"+To;
+        //}
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
 
-        public string GetText() {
-            return From;
-        }
-        
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
+
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
         public static ItemAdverb Load(string data) {
             string[] raw=data.Split('|');
             if (raw.Length==2) {
@@ -497,12 +819,13 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
-    
-    class ItemPatternNoun{
-        public string Name;
+    }
+
+    class ItemPatternNoun:ItemTranslatingPattern{
+     //   public string Name;
         public GenderNoun Gender;
         public string[] Shapes;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
         public ItemPatternNoun() {
             Name="";
@@ -511,22 +834,30 @@ namespace TranslatorWritter {
             for (int i=0; i<Shapes.Length; i++) Shapes[i]="";
         }
 
+        //bool Valid() {
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+        //    return true;
+        //}
+
         public string Save() {
             string data=Name+'|'+(int)Gender+'|';
-            foreach (string s in Shapes) { 
+            foreach (string s in Shapes) {
                 data+=s+'|';
             }
             data=data.Substring(0, data.Length-1);
             return data;
         }
 
-        public bool Filter(string filter) {
-            return Name.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return Name.Contains(filter);
+        //}
 
-        public string GetText() {
-            return Name;
-        }
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(Name)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+Name;
+        //    return Name;
+        //}
 
         public static ItemPatternNoun Load(string data) {
             string[] raw=data.Split('|');
@@ -548,10 +879,24 @@ namespace TranslatorWritter {
             return ret;
         }
 
-        internal void Optimize() {
+        public ItemPatternNoun Clone() {
+            ItemPatternNoun ret = new ItemPatternNoun {
+                Name = Name,
+                Gender = Gender,
+                Shapes = (string[])Shapes.Clone()
+            };
+            return ret;
+        }
+
+        internal override void Optimize() {
             if (Shapes==null)return;
             int i = 0;
             int same = 0;
+
+            for (int a = 0; a < Shapes.Length; a++) {
+                if (Shapes[a].EndsWith(" ")) Shapes[a] = Shapes[a].Substring(0, Shapes[a].Length - 1);
+            }
+
             for (; i < Shapes[0].Length; i++) {
                 bool isFirstCharSimilar = true;
                 char ch = Shapes[0][i];
@@ -564,7 +909,7 @@ namespace TranslatorWritter {
                     if (s == "—") { Shapes[j] = "-"; continue; }
                     if (s.Contains(",")) {
                         string[] variants = s.Split(',');
-                        //for (int j=0; j<variants.Length; j++) { 
+                        //for (int j=0; j<variants.Length; j++) {
                         //    variants[j];
                         //}
                     }
@@ -599,45 +944,55 @@ namespace TranslatorWritter {
                     if (Shapes[a].Contains(",")) {
                         string[] variants = Shapes[a].Split(',');
                         string n="";
-                        for (int j=0; j<variants.Length; j++) { 
+                        for (int j=0; j<variants.Length; j++) {
                             n+=variants[j].Substring(same);
                             if (j!=variants.Length-1)n+=',';
                         }
                         Shapes[a]=n;
-                    }
-                    if (Shapes[a].EndsWith(" ")) Shapes[a] = Shapes[a].Substring(0, Shapes[a].Length - 1);
-                    Shapes[a] = Shapes[a].Substring(same);
+                    } else Shapes[a] = Shapes[a].Substring(same);
                 }
             }
         }
 
-        internal void AddQuestionMark() {
-            for (int i=0; i<Shapes.Length; i++) { 
-                Shapes[i]=Shapes[i]+'?';
+        internal override void AddQuestionMark() {
+            for (int i=0; i<Shapes.Length; i++) {
+                if (Shapes[i]!="-") Shapes[i]=Shapes[i]+'?';
             }
         }
-    } 
-    
-    class ItemNoun{
-        public string From, To, PatternFrom, PatternTo;
-        
-        public string Save() {
-            if (From==To && From=="") return PatternFrom+"|"+PatternTo;
-            else if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
-            else return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
-        }
+    }
 
-        public bool Filter(string filter) {
-            if (From==null) return false;
-            if (To==null)return false;
-            if (From.Contains(filter)) return true;
-            if (To.Contains(filter)) return true;
-            return false;
-        }
+    class ItemNoun : ItemTranslatingUsingPatterns{
+      //  public string From, To, PatternFrom, PatternTo;
+      //  static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string GetText() {
-            return From;
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+        //public string Save() {
+        //    if (From==To && From=="") return PatternFrom+"|"+PatternTo;
+        //    else if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
+        //    else return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+        //}
+
+        //public bool Filter(string filter) {
+        //    if (From==null) return false;
+        //    if (To==null)return false;
+        //    if (From.Contains(filter)) return true;
+        //    if (To.Contains(filter)) return true;
+        //    return false;
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) {
+        //        if (string.IsNullOrEmpty(PatternFrom)) return "<Neznámé>";
+        //        else return "{"+PatternFrom+"}";
+        //    }
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public static ItemNoun Load(string data) {
             string[] raw=data.Split('|');
@@ -673,16 +1028,25 @@ namespace TranslatorWritter {
         public int CompareTo(ItemNoun other) {
             return From.CompareTo(other.From);
         }
-    } 
-    
-    class ItemPatternPronoun{
-        public string Name;
+    }
+
+    class ItemPatternPronoun:ItemTranslatingPattern{
+     //   public string Name;
         public GenderPronoun Gender;
+      //  static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
         PronounType type;
 
-        public static ItemPatternPronoun tEN => new ItemPatternPronoun{ 
+        //bool Valid() {
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        public static ItemPatternPronoun tEN => new ItemPatternPronoun{
                 Name="tEN",
-                Shapes=new string[]{ 
+                type=PronounType.DeklinationWithGender,
+                Shapes=new string[]{
                     // M Ž
                     "en",
                     "oho",
@@ -691,6 +1055,15 @@ namespace TranslatorWritter {
                     "-",
                     "om",
                     "ím",
+
+                    // M Ž
+                    "y",
+                    "ěch",
+                    "ěm",
+                    "y",
+                    "-",
+                    "ěch",
+                    "ěmi",
 
                     // M N
                     "en",
@@ -701,6 +1074,15 @@ namespace TranslatorWritter {
                     "om",
                     "ím",
 
+                    // M n
+                    "y",
+                    "ěch",
+                    "ěm",
+                    "y",
+                    "-",
+                    "ěch",
+                    "ěmi",
+
                     // ž
                     "a",
                     "é",
@@ -710,33 +1092,6 @@ namespace TranslatorWritter {
                     "é",
                     "ou",
 
-                    // s
-                    "o",
-                    "oho",
-                    "omu",
-                    "o",
-                    "-",
-                    "om",
-                    "ím",
-                                        
-                    // M Ž
-                    "y",
-                    "ěch",
-                    "ěm",
-                    "y",
-                    "-",
-                    "ěch",
-                    "ěmi",
-                                        
-                    // M n
-                    "y",
-                    "ěch",
-                    "ěm",
-                    "y",
-                    "-",
-                    "ěch",
-                    "ěmi",
-                                        
                     // ž
                     "y",
                     "ěch",
@@ -745,7 +1100,16 @@ namespace TranslatorWritter {
                     "-",
                     "ěch",
                     "ěmi",
-                                        
+
+                    // s
+                    "o",
+                    "oho",
+                    "omu",
+                    "o",
+                    "-",
+                    "om",
+                    "ím",
+
                     // stř
                     "y",
                     "ěch",
@@ -757,36 +1121,36 @@ namespace TranslatorWritter {
                 }
             };
 
-        public PronounType Type{ 
+        public PronounType Type{
             get{ return type; }
-            set{ 
+            set{
                 if (type==value) return;
-                if (type==PronounType.Unknown) { 
-                    if (value==PronounType.NoDeklination) Shapes=new string[0];    
-                    else if (value==PronounType.DeklinationOnlySingle) Shapes=new string[7];    
-                    else if (value==PronounType.Deklination) Shapes=new string[14];    
+                if (type==PronounType.Unknown) {
+                    if (value==PronounType.NoDeklination) Shapes=new string[0];
+                    else if (value==PronounType.DeklinationOnlySingle) Shapes=new string[7];
+                    else if (value==PronounType.Deklination) Shapes=new string[14];
                     else if (value==PronounType.DeklinationWithGender) Shapes=new string[14*4];
                     type = value;
                     return;
                 }
                 string[] newArray=null;
                 if (value==PronounType.NoDeklination) {
-                    newArray=new string[1]; 
+                    newArray=new string[1];
                 }
                 if (value==PronounType.DeklinationOnlySingle) {
-                    newArray=new string[7]; 
+                    newArray=new string[7];
                 }
                 if (value==PronounType.Deklination) {
-                    newArray=new string[14]; 
+                    newArray=new string[14];
                 }
                 if (value==PronounType.DeklinationWithGender) {
-                    newArray=new string[14*4]; 
+                    newArray=new string[14*4];
                 }
-                for (int i=0; i<newArray.Length && i<Shapes.Length; i++) { 
+                for (int i=0; i<newArray.Length && i<Shapes.Length; i++) {
                     newArray[i]=Shapes[i];
                 }
                 Shapes=newArray;
-                type = value; 
+                type = value;
             }
         }
         public string[] Shapes;
@@ -799,24 +1163,38 @@ namespace TranslatorWritter {
 
         public string Save() {
             string data=Name+"|"+(int)Gender+"|";
-            foreach (string s in Shapes) { 
+            foreach (string s in Shapes) {
                 data+=s+"|";
             }
             data=data.Substring(0, data.Length-1);
             return data;
         }
 
-        public bool Filter(string filter) {
-            return Name.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return Name.Contains(filter);
+        //}
 
-        public string GetText() {
-            return Name;
-        }
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(Name)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+Name;
+        //    return Name;
+        //}
 
         public ItemPatternPronoun Duplicate() {
             ItemPatternPronoun item = new ItemPatternPronoun {
                 Name = Name + "_dup",
+                Gender = Gender,
+                type = type,
+
+                Shapes = Shapes.Clone() as string[]
+            };
+
+            return item;
+        }
+        
+        public ItemPatternPronoun Clone() {
+            ItemPatternPronoun item = new ItemPatternPronoun {
+                Name = Name,
                 Gender = Gender,
                 type = type,
 
@@ -835,7 +1213,7 @@ namespace TranslatorWritter {
                     Gender = (GenderPronoun)int.Parse(raw[1]),
                     Shapes = new string[14] { raw[2], raw[3], raw[4], raw[5], raw[6], raw[7], raw[8], raw[9], raw[10], raw[11], raw[12], raw[13], raw[14], raw[15] }
                 };
-                return item; 
+                return item;
             }
             if (raw.Length==7+2){
                 ItemPatternPronoun item = new ItemPatternPronoun {
@@ -844,7 +1222,7 @@ namespace TranslatorWritter {
                     Gender = (GenderPronoun)int.Parse(raw[1]),
                     Shapes = new string[7] { raw[2], raw[3], raw[4], raw[5], raw[6], raw[7], raw[8] }
                 };
-                return item; 
+                return item;
             }
             if (raw.Length==1+2){
                 ItemPatternPronoun item = new ItemPatternPronoun {
@@ -853,7 +1231,7 @@ namespace TranslatorWritter {
                     Gender = (GenderPronoun)int.Parse(raw[1]),
                     Shapes = new string[1] { raw[2] }
                 };
-                return item; 
+                return item;
             }
             if (raw.Length==14*4+2){
                 ItemPatternPronoun item = new ItemPatternPronoun {
@@ -867,48 +1245,57 @@ namespace TranslatorWritter {
                     raw[44], raw[45], raw[46], raw[47], raw[48], raw[49], raw[50], raw[51], raw[52], raw[53], raw[54], raw[55], raw[56], raw[57]
                 }
                 };
-                return item; 
+                return item;
             }
             throw new Exception("PatternPronoun - Chybná délka");
         }
 
-        internal void Optimize() {
+        internal override void Optimize() {
             int i=0;
             int same=0;
-            for (; i<Shapes[0].Length; i++) { 
+            for (; i<Shapes[0].Length; i++) {
                 bool isFirstCharSimilar=true;
                 char ch=Shapes[0][i];
-                
-             
+
+
                 for (int j=0; j<Shapes.Length/*(Type==PronounType.NoDeklination ? 1: (Type==PronounType.DeklinationOnlySingle?7: ( Type==PronounType.Deklination?14: (Type==PronounType.DeklinationWithGender?14*4:0))))*/; j++) {
                     string s = Shapes[j];
 
                     if (s==null)continue;
                     if (s=="-") continue;
                     if (s=="—") { Shapes[j]="-"; continue; }
-                    if (s.Contains(",")) { 
-                        string[] variants=s.Split(',');
+                    if (s.Contains(",")) {
+                        //string txt = "";
+                        //string[] variants = s.Split(',');
+                        //foreach (string v in variants) {
+                        //    string t = v;
+                        //    if (t.StartsWith(" ")) t=t.Substring(1);
+                        //    if (t.EndsWith(" ")) t=t.Substring(0, t.Length-1);
+                        //    txt+=t;
+                        //    if (v!=variants[variants.Length-1]) txt+=',';
+                        //}
+                        //Shapes[j] = txt;
                     }
-                    if (s.Length<=i){ 
+                    if (s.Length<=i){
                         isFirstCharSimilar=false;
-                        break; 
+                        break;
                     }
                     if (s[i]!=ch) {
                         isFirstCharSimilar=false;
-                        break;    
+                        break;
                     }
                 }
                 if (!isFirstCharSimilar) break;
-                  
+
                 same++;
             }
 
-            
-            if (same>0) { 
+
+            if (same>0) {
                 // OK optimize
                 Name=Name.Substring(0,same).ToLower()+Name.Substring(same).ToUpper();
 
-              
+
                 for (int a=0; a<Shapes.Length; a++) {
                     if (Shapes[a]==null)continue;
                     if (Shapes[a]=="-") continue;
@@ -916,35 +1303,85 @@ namespace TranslatorWritter {
                         Shapes[a]="-";
                         continue;
                     }
+                    if (Shapes[a].Contains(",")) {
+                        string txt="";
+                        string[] variants=Shapes[a].Split(',');
+                        foreach (string v in variants) {
+                            string t=v;
+                            if (t.StartsWith(" ")) t=t.Substring(1);
+                            if (t.EndsWith(" ")) t=t.Substring(0,t.Length-1);
+                            txt+=t.Substring(same);
+                            if (v!=variants[variants.Length-1])txt+=',';
+                        }
+                        Shapes[a]=txt;
+                    }
                     if (Shapes[a].EndsWith(" ")) Shapes[a]=Shapes[a].Substring(0, Shapes[a].Length-1);
                     Shapes[a]=Shapes[a].Substring(same);
+                }
+            }else{
+                // OK optimize
+                Name=Name.ToUpper();
+
+                for (int a=0; a<Shapes.Length; a++) {
+                    if (Shapes[a]==null)continue;
+                    if (Shapes[a]=="-") continue;
+                    if (Shapes[a]=="—") {
+                        Shapes[a]="-";
+                        continue;
+                    }
+                    if (Shapes[a].Contains(",")) {
+                        string txt="";
+                        string[] variants=Shapes[a].Split(',');
+                        foreach (string v in variants) {
+                            string t=v;
+                            if (t.StartsWith(" ")) t=t.Substring(1);
+                            if (t.EndsWith(" ")) t=t.Substring(0,t.Length-1);
+                            txt+=t.Substring(same);
+                            if (v!=variants[variants.Length-1])txt+=',';
+                        }
+                        Shapes[a]=txt;
+                    }
                 }
             }
         }
 
-        internal void AddQuestionMark() {
-            for (int i=0; i<Shapes.Length; i++) { 
-                Shapes[i]=Shapes[i]+'?';
+        internal override void AddQuestionMark() {
+            for (int i=0; i<Shapes.Length; i++) {
+                if (Shapes[i]!="-") Shapes[i]=Shapes[i]+'?';
             }
         }
-    } 
-    
-    class ItemPronoun{
-        public string From, To, PatternFrom, PatternTo;
+    }
 
-        public string Save() {
-            if (From==To && From=="") return PatternFrom+"|"+PatternTo;
-            else if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
-            else return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
-        }
+    class ItemPronoun : ItemTranslatingUsingPatterns{
+       // public string From, To, PatternFrom, PatternTo;
+     //   static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public string GetText() {
-            return From;
-        }
+        //    return true;
+        //}
+
+        //public string Save() {
+        //    if (From==To && From=="") return PatternFrom+"|"+PatternTo;
+        //    else if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
+        //    else return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) {
+        //        if (string.IsNullOrEmpty(PatternFrom)) return "<Neznámé>";
+        //        else return "{"+PatternFrom+"}";
+        //    }
+
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public static ItemPronoun Load(string data) {
             string[] raw=data.Split('|');
@@ -975,12 +1412,13 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
-    
-    class ItemPatternAdjective{
-        public string Name;
+    }
+
+    class ItemPatternAdjective:ItemTranslatingPattern{
+      //  public string Name;
         public AdjectiveType adjectiveType;
         public string[] Middle, Feminine, MasculineAnimate, MasculineInanimate;
+       // static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
         public ItemPatternAdjective() {
             Name="";
@@ -993,29 +1431,38 @@ namespace TranslatorWritter {
 
         public string Save() {
             string data=Name+"|"+(int)adjectiveType+"|";
-            foreach (string s in Middle) { 
+            foreach (string s in Middle) {
                 data+=s+"|";
             }
-            foreach (string s in Feminine) { 
+            foreach (string s in Feminine) {
                 data+=s+"|";
             }
-            foreach (string s in MasculineAnimate) { 
+            foreach (string s in MasculineAnimate) {
                 data+=s+"|";
             }
-            foreach (string s in MasculineInanimate) { 
+            foreach (string s in MasculineInanimate) {
                 data+=s+"|";
             }
             data=data.Substring(0, data.Length-1);
             return data;
         }
 
-        public bool Filter(string filter) {
-            return Name.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return Name.Contains(filter);
+        //}
 
-        public string GetText() {
-            return Name;
-        }
+       //bool Valid(){
+       //     if (Name=="") return false;
+       //     if (Name.Contains(notAllowed)) return false;
+
+       //     return true;
+       // }
+
+       // public string GetText() {
+       //     if (string.IsNullOrEmpty(Name)) return "<Neznámé>";
+       //     if (!Valid()) return "⚠"+Name;
+       //     return Name;
+       // }
 
         public ItemPatternAdjective Duplicate(){
             ItemPatternAdjective item = new ItemPatternAdjective {
@@ -1045,44 +1492,45 @@ namespace TranslatorWritter {
             return item;
         }
 
-        internal void Optimize() {
+        internal override void Optimize() {
             string[][] toforeach;
 
             toforeach=new string[][]{ Middle, Feminine, MasculineAnimate, MasculineInanimate};
-         
+
             int i=0;
             int same=0;
-            for (; i<Middle[0].Length; i++) { 
+            for (; i<Middle[0].Length; i++) {
                 bool isFirstCharSimilar=true;
                 char ch=Middle[0][i];
-                
+
                 foreach (string[] arr in toforeach) {
                     foreach (string s in arr) {
                         if (s==null)continue;
                         if (s=="-") continue;
-                        if (s.Contains(",")) { 
+                        if (s.Contains(",")) {
                             string[] variants=s.Split(',');
                         }
-                        if (s.Length<=i){ 
+                        if (s.Length<=i){
                             isFirstCharSimilar=false;
-                            break; 
+                            break;
                         }
                         if (s[i]!=ch) {
                             isFirstCharSimilar=false;
-                            break;    
+                            break;
                         }
                     }
                     if (!isFirstCharSimilar) break;
-                    
+
                 }
                 if (!isFirstCharSimilar) break;
                 same++;
             }
 
-            
-            if (same>0) { 
-                // OK optimize
-                Name=Name.Substring(0,Name.Length-same).ToLower()+Name.Substring(Name.Length-same).ToUpper();
+
+            if (same>0) {
+                // OK optimize.ToLower()
+                if (same==Name.Length)Name=Name.ToLower();
+                else Name=Name.Substring(0, /*Name.Length-*/same/*-1*/).ToLower() + Name.Substring(same,Name.Length-same/*-1*/).ToUpper();
 
                 foreach (string[] arr in toforeach) {
                     for (int a=0; a<arr.Length; a++) {
@@ -1095,36 +1543,49 @@ namespace TranslatorWritter {
             }
         }
 
-        internal void AddQuestionMark() {
-            for (int i=0; i<Middle.Length; i++) { 
-                Middle[i]=Middle[i]+'?';
+        internal override void AddQuestionMark() {
+            for (int i=0; i<Middle.Length; i++) {
+                if (Middle[i]!="-")Middle[i]=Middle[i]+'?';
             }
-            for (int i=0; i<Feminine.Length; i++) { 
-                Feminine[i]=Feminine[i]+'?';
+            for (int i=0; i<Feminine.Length; i++) {
+                if (Feminine[i]!="-")Feminine[i]=Feminine[i]+'?';
             }
-            for (int i=0; i<MasculineAnimate.Length; i++) { 
-                MasculineAnimate[i]=MasculineAnimate[i]+'?';
+            for (int i=0; i<MasculineAnimate.Length; i++) {
+                if (MasculineAnimate[i]!="-")MasculineAnimate[i]=MasculineAnimate[i]+'?';
             }
-            for (int i=0; i<MasculineInanimate.Length; i++) { 
-                MasculineInanimate[i]=MasculineInanimate[i]+'?';
+            for (int i=0; i<MasculineInanimate.Length; i++) {
+                if (MasculineInanimate[i]!="-")MasculineInanimate[i]=MasculineInanimate[i]+'?';
             }
         }
-    } 
-    
-    class ItemAdjective{
-        public string From, To, PatternFrom, PatternTo;
+    }
 
-        public string Save() {
-            return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
-        }
+    class ItemAdjective:ItemTranslatingUsingPatterns{
+        //public string From, To, PatternFrom, PatternTo;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
 
-        public string GetText() {
-            return From;
-        }
+        //bool Valid(){
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+        //public string Save() {
+        //    return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) {
+        //        if (string.IsNullOrEmpty(PatternFrom)) return "<Neznámé>";
+        //        else return "{"+PatternFrom+"}";
+        //    }
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public ItemAdjective Duplicate() {
             ItemAdjective item = new ItemAdjective {
@@ -1149,28 +1610,58 @@ namespace TranslatorWritter {
                 };
                 return item;
             }
+            if (raw.Length==3) {
+                ItemAdjective item = new ItemAdjective {
+                    From = raw[0],
+                    To = raw[0],
+                    PatternFrom = raw[1],
+                    PatternTo = raw[2]
+                };
+                return item;
+            }
+            if (raw.Length==2) {
+                return new ItemAdjective {
+                    From = "",
+                    To = "",
+                    PatternFrom = raw[0],
+                    PatternTo = raw[1]
+                };
+            }
             return null;
         }
-    } 
-    
-    class ItemNumber{
-        public string From, PatternFrom, To, PatternTo;
+    }
 
-        public string Save() {
-            return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
-        }
+    class ItemNumber:ItemTranslatingUsingPatterns{
+        //public string From, PatternFrom, To, PatternTo;
+        //static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //bool Valid(){
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public string GetText() {
-            return From;
-        }
+        //    return true;
+        //}
+
+        //public string Save() {
+        //    return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) {
+        //        if (string.IsNullOrEmpty(PatternFrom)) return "<Neznámé>";
+        //        else return "{"+PatternFrom+"}";
+        //    }
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public static ItemNumber Load(string data) {
             string[] raw=data.Split('|');
-            if (raw.Length==4) {
+             if (raw.Length==4) {
                 ItemNumber item = new ItemNumber {
                     From = raw[0],
                     To = raw[1],
@@ -1179,41 +1670,66 @@ namespace TranslatorWritter {
                 };
                 return item;
             }
+            if (raw.Length==3) {
+                ItemNumber item = new ItemNumber {
+                    From = raw[0],
+                    To = raw[0],
+                    PatternFrom = raw[1],
+                    PatternTo = raw[2]
+                };
+                return item;
+            }
+            if (raw.Length==2) {
+                return new ItemNumber {
+                    From = "",
+                    To = "",
+                    PatternFrom = raw[0],
+                    PatternTo = raw[1]
+                };
+            }
             return null;
         }
-    } 
-    
-    class ItemPatternNumber{
-        public string Name;
+    }
+
+    class ItemPatternNumber:ItemTranslatingPattern{
+    //    public string Name;
         NumberType type;
-        public NumberType ShowType{ 
+       // static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
+
+        //bool Valid(){
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+        public NumberType ShowType{
             get{ return type; }
-            set{ 
+            set{
                 if (type==value) return;
-               /* if (type==NumberType.Unknown) { 
-                    if (value==NumberType.NoDeklination) Shapes=new string[1];    
-                    else if (value==NumberType.DeklinationOnlySingle) Shapes=new string[7];    
-                    else if (value==NumberType.Deklination) Shapes=new string[14];    
+               /* if (type==NumberType.Unknown) {
+                    if (value==NumberType.NoDeklination) Shapes=new string[1];
+                    else if (value==NumberType.DeklinationOnlySingle) Shapes=new string[7];
+                    else if (value==NumberType.Deklination) Shapes=new string[14];
                     else if (value==NumberType.DeklinationWithGender) Shapes=new string[14*4];
                     type = value;
                  //   return;
                 }*/
                 string[] newArray=null;
                 if (value==NumberType.NoDeklination) {
-                    newArray=new string[1]; 
+                    newArray=new string[1];
                 }else if (value==NumberType.DeklinationOnlySingle) {
-                    newArray=new string[7]; 
+                    newArray=new string[7];
                 }else if (value==NumberType.Deklination) {
-                    newArray=new string[14]; 
+                    newArray=new string[14];
                 }else if (value==NumberType.DeklinationWithGender) {
-                    newArray=new string[14*4]; 
+                    newArray=new string[14*4];
                 }
 
-                for (int i=0; i<newArray.Length && i<Shapes.Length; i++) { 
+                for (int i=0; i<newArray.Length && i<Shapes.Length; i++) {
                     newArray[i]=Shapes[i];
                 }
                 Shapes=newArray;
-                type = value; 
+                type = value;
             }
         }
         public string[] Shapes;
@@ -1227,20 +1743,22 @@ namespace TranslatorWritter {
         public string Save() {
             string data=Name+"|"+(int)ShowType+"|";
             if (Shapes.Length==0) return "";
-            foreach (string s in Shapes) { 
+            foreach (string s in Shapes) {
                 data+=s+"|";
             }
             data=data.Substring(0, data.Length-1);
             return data;
         }
 
-        public bool Filter(string filter) {
-            return Name.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return Name.Contains(filter);
+        //}
 
-        public string GetText() {
-            return Name;
-        }
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(Name)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+Name;
+        //    return Name;
+        //}
 
         public static ItemPatternNumber Load(string data) {
             string[] raw=data.Split('|');
@@ -1275,13 +1793,13 @@ namespace TranslatorWritter {
             return item;
         }
 
-        internal void Optimize() {
+        internal override void Optimize() {
             int i=0;
             int same=0;
-            for (; i<Shapes[0].Length; i++) { 
+            for (; i<Shapes[0].Length; i++) {
                 bool isFirstCharSimilar=true;
                 char ch=Shapes[0][i];
-                
+
                for (int j=0; j<Shapes.Length; j++){
                     string s = Shapes[j];
 
@@ -1291,26 +1809,26 @@ namespace TranslatorWritter {
                     if (s.Contains("&#91;2&#93;")) {Shapes[j]=Shapes[j].Replace("&#91;1&#93;","[!2]"); }
                     if (s=="-") continue;
 
-                    if (s.Contains(",")) { 
+                    if (s.Contains(",")) {
                         string[] variants=s.Split(',');
-                        foreach (string s2 in variants) { 
-                            if (s.Length<=i){ 
+                        foreach (string s2 in variants) {
+                            if (s.Length<=i){
                                 isFirstCharSimilar=false;
-                                break; 
+                                break;
                             }
                             if (s[i]!=ch) {
                                 isFirstCharSimilar=false;
-                                break;    
+                                break;
                             }
                         }
                     }else{
-                        if (s.Length<=i){ 
+                        if (s.Length<=i){
                             isFirstCharSimilar=false;
-                            break; 
+                            break;
                         }
                         if (s[i]!=ch) {
                             isFirstCharSimilar=false;
-                            break;    
+                            break;
                         }
                     }
                 }
@@ -1318,8 +1836,8 @@ namespace TranslatorWritter {
                 same++;
             }
 
-            
-            if (same>0) { 
+
+            if (same>0) {
                 // OK optimize
                 Name=Name.Substring(0,same).ToLower()+Name.Substring(same).ToUpper();
 
@@ -1327,6 +1845,13 @@ namespace TranslatorWritter {
                     for (int a=0; a<Shapes.Length; a++) {
                         if (Shapes[a]==null)continue;
                         if (Shapes[a]=="-") continue;
+                        if (Shapes[a].Contains(',')) { 
+                            string add="";
+                            foreach (string s in Shapes[a].Split(',')){
+                                add+=Shapes[a].Substring(same)+",";
+                            }
+                            Shapes[a]=add.Substring(0,add.Length-1);
+                        }
                         if (Shapes[a]=="—") Shapes[a]="-";
                         if (Shapes[a].EndsWith(" "))Shapes[a]=Shapes[a].Substring(0, Shapes[a].Length-1);
                         Shapes[a]=Shapes[a].Substring(same);
@@ -1341,28 +1866,119 @@ namespace TranslatorWritter {
             ItemPatternNumber item = new ItemPatternNumber {
                 Name = Name + "_dup",
                 ShowType = ShowType,
+                type=type,
+                Shapes = (string[])Shapes.Clone()
+            };
+
+            return item;
+        }
+        
+        internal ItemPatternNumber Clone() {
+            ItemPatternNumber item = new ItemPatternNumber {
+                Name = Name,
+                ShowType = ShowType,
+                type=type,
                 Shapes = (string[])Shapes.Clone()
             };
 
             return item;
         }
 
-        internal void AddQuestionMark() {
-            for (int i=0; i<Shapes.Length; i++) { 
-                Shapes[i]=Shapes[i]+'?';
+        internal override void AddQuestionMark() {
+            for (int i=0; i<Shapes.Length; i++) {
+                if (Shapes[i]!="-") {
+                    if (Shapes[i].Contains(',')) { 
+                        string add="";
+                        foreach (string s in Shapes[i].Split(',')) { 
+                            add+=s+"?,";
+                        }
+                        Shapes[i]=add.Substring(0, add.Length-1);
+                    } else { 
+                        Shapes[i]=Shapes[i]+'?';
+                    }
+                }
             }
         }
-    } 
-    
-    class ItemPatternVerb{
-        public string Name, Infinitive;
+    }
+
+    class ItemPatternVerb: ItemTranslatingPattern{
+        public string Infinitive;
         public VerbType Type;
         public string[] Continous, Future, Imperative, PastActive, TransgressiveCont, TransgressivePast, PastPassive, Auxiliary;
-      //  public VerbTypeShow TypeShow;
-
+       // static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
         public bool SUnknown, SContinous, SFuture, SImperative, SPastActive, STransgressiveCont, STransgressivePast, SPastPassive, SAuxiliary;
 
-        public unsafe void SetShowType(int num) { 
+
+        //bool Valid(){
+        //    if (Name=="") return false;
+        //    if (Name.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        public static ItemPatternVerb BÝT => new ItemPatternVerb{
+                Name="BÝT",
+                Infinitive="být",
+
+                SContinous=true,
+                Continous=new string[]{
+                    "jsem",
+                    "jsi",
+                    "je",
+                    "jsme",
+                    "jste",
+                    "jsou"
+                },
+                SAuxiliary=true,
+                Auxiliary=new string[]{
+                    "bych",
+                    "bys",
+                    "by",
+                    "bychom",
+                    "byste",
+                    "by"
+                },
+                SPastActive=true,
+                PastActive=new string[]{
+                    "byl",
+                    "byl",
+                    "byla",
+                    "bylo",
+                    "byli",
+                    "byly",
+                    "byly",
+                    "byla",
+                },
+                SFuture=true,
+                Future=new string[]{
+                    "budu",
+                    "budeš",
+                    "bude",
+                    "budeme",
+                    "budete",
+                    "budou"
+                },
+                SImperative=true,
+                Imperative=new string[]{
+                    "buď",
+                    "buďme",
+                    "buďte"
+                },
+                STransgressiveCont=true,
+                TransgressiveCont=new string[]{
+                    "jsa",
+                    "jsouc",
+                    "jsouce"
+                },
+                STransgressivePast=true,
+                TransgressivePast=new string[]{
+                    "byv",
+                    "byvši",
+                    "byvše"
+                }
+            };
+
+        public unsafe void SetShowType(int num) {
             if (num<0 || num>255) {
                 SUnknown=true;
                 num=0;
@@ -1376,7 +1992,7 @@ namespace TranslatorWritter {
             STransgressivePast  = (num &  64) == 64;
             SAuxiliary          = (num & 128) ==128;
         }
-        public unsafe int GetShowType() { 
+        public unsafe int GetShowType() {
             //if (SUnknown) {
             //    return -1;
             //}
@@ -1409,7 +2025,7 @@ namespace TranslatorWritter {
 
         public string Save() {
             string data=Name+"|"+(int)GetShowType()+"|"+(int)Type+"|";
-       //     if (TypeShow==VerbTypeShow.All || TypeShow==VerbTypeShow.Unknown) { 
+       //     if (TypeShow==VerbTypeShow.All || TypeShow==VerbTypeShow.Unknown) {
             data+=Infinitive+"|";
             if (SContinous         ) { foreach (string c in Continous) data+=c+"|"; }
             if (SFuture            ) { foreach (string c in Future)  data+=c+"|"; }
@@ -1423,97 +2039,97 @@ namespace TranslatorWritter {
             //}else
             //if (TypeShow==VerbTypeShow.Trpne) {
             //    data+=Infinitive+"|";
-            //    foreach (string c in Continous) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Continous) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in Imperative) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Imperative) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in PastPassive) { 
-            //        data+=c+"|";    
+            //    foreach (string c in PastPassive) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressiveCont) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressiveCont) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressivePast) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressivePast) {
+            //        data+=c+"|";
             //    }
             //    data=data.Substring(0, data.Length-1);
             //}else
             //if (TypeShow==VerbTypeShow.Cinne) {
             //    data+=Infinitive+"|";
-            //    foreach (string c in Continous) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Continous) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in Imperative) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Imperative) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in PastActive) { 
-            //        data+=c+"|";    
+            //    foreach (string c in PastActive) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressiveCont) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressiveCont) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressivePast) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressivePast) {
+            //        data+=c+"|";
             //    }
             //    data=data.Substring(0, data.Length-1);
             //}else
             //if (TypeShow==VerbTypeShow.TrpneCinne) {
             //    data+=Infinitive+"|";
-            //    foreach (string c in Continous) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Continous) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in Imperative) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Imperative) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in PastActive) { 
-            //        data+=c+"|";    
+            //    foreach (string c in PastActive) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in PastPassive) { 
-            //        data+=c+"|";    
+            //    foreach (string c in PastPassive) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressiveCont) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressiveCont) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressivePast) { 
-            //        data+=c+"|";    
-            //    }
-            //    data=data.Substring(0, data.Length-1);
-            //} else if (TypeShow==VerbTypeShow.FutureActive) { 
-            //    data+=Infinitive+"|";
-            //    foreach (string c in Future) { 
-            //        data+=c+"|";    
-            //    }
-            //    foreach (string c in Imperative) { 
-            //        data+=c+"|";    
-            //    }
-            //    foreach (string c in PastActive) { 
-            //        data+=c+"|";    
-            //    }
-            //    foreach (string c in TransgressiveCont) { 
-            //        data+=c+"|";    
-            //    }
-            //    foreach (string c in TransgressivePast) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressivePast) {
+            //        data+=c+"|";
             //    }
             //    data=data.Substring(0, data.Length-1);
-            //} else if (TypeShow==VerbTypeShow.FuturePassive) { 
+            //} else if (TypeShow==VerbTypeShow.FutureActive) {
             //    data+=Infinitive+"|";
-            //    foreach (string c in Future) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Future) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in Imperative) { 
-            //        data+=c+"|";    
+            //    foreach (string c in Imperative) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in PastPassive) { 
-            //        data+=c+"|";    
+            //    foreach (string c in PastActive) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressiveCont) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressiveCont) {
+            //        data+=c+"|";
             //    }
-            //    foreach (string c in TransgressivePast) { 
-            //        data+=c+"|";    
+            //    foreach (string c in TransgressivePast) {
+            //        data+=c+"|";
+            //    }
+            //    data=data.Substring(0, data.Length-1);
+            //} else if (TypeShow==VerbTypeShow.FuturePassive) {
+            //    data+=Infinitive+"|";
+            //    foreach (string c in Future) {
+            //        data+=c+"|";
+            //    }
+            //    foreach (string c in Imperative) {
+            //        data+=c+"|";
+            //    }
+            //    foreach (string c in PastPassive) {
+            //        data+=c+"|";
+            //    }
+            //    foreach (string c in TransgressiveCont) {
+            //        data+=c+"|";
+            //    }
+            //    foreach (string c in TransgressivePast) {
+            //        data+=c+"|";
             //    }
             //    data=data.Substring(0, data.Length-1);
             //}
@@ -1521,15 +2137,17 @@ namespace TranslatorWritter {
             return data;
         }
 
-        public bool Filter(string filter) {
-            return Name.Contains(filter);
-        }
+        //public bool Filter(string filter) {
+        //    return Name.Contains(filter);
+        //}
 
-        public string GetText() {
-            return Name;
-        }
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(Name)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+Name;
+        //    return Name;
+        //}
 
-        public static ItemPatternVerb Load(string data) {
+        internal static ItemPatternVerb Load(string data) {
             string[] raw=data.Split('|');
             //  if (raw.Length!=6+6+3+8+8+2+6+1) throw new Exception("PatternVerb - Chybná délka");
             ItemPatternVerb item = new ItemPatternVerb {
@@ -1537,63 +2155,63 @@ namespace TranslatorWritter {
                 //TypeShow = (VerbTypeShow),
                 Type = (VerbType)int.Parse(raw[2])
             };
-            
+
             item.SetShowType(int.Parse(raw[1]));
             int index=4;
-          //  if (item.TypeShow==VerbTypeShow.All || item.TypeShow==VerbTypeShow.Unknown) { 
+          //  if (item.TypeShow==VerbTypeShow.All || item.TypeShow==VerbTypeShow.Unknown) {
                 item.Infinitive=raw[3];
-            if (item.SContinous)        item.Continous         = GetArray(raw, index, 6); 
-            if (item.SFuture)           item.Future            = GetArray(raw, index, 6); 
-            if (item.SImperative)       item.Imperative        = GetArray(raw, index, 3); 
-            if (item.SPastActive)       item.PastActive        = GetArray(raw, index, 8); 
-            if (item.SPastPassive)      item.PastPassive       = GetArray(raw, index, 8); 
-            if (item.STransgressiveCont)item.TransgressiveCont = GetArray(raw, index, 3); 
-            if (item.STransgressivePast)item.TransgressivePast = GetArray(raw, index, 3); 
-            if (item.SAuxiliary)        item.Auxiliary         = GetArray(raw, index, 6); 
-            //} else if (item.TypeShow==VerbTypeShow.Trpne) { 
+            if (item.SContinous)        item.Continous         = GetArray(raw, index, 6);
+            if (item.SFuture)           item.Future            = GetArray(raw, index, 6);
+            if (item.SImperative)       item.Imperative        = GetArray(raw, index, 3);
+            if (item.SPastActive)       item.PastActive        = GetArray(raw, index, 8);
+            if (item.SPastPassive)      item.PastPassive       = GetArray(raw, index, 8);
+            if (item.STransgressiveCont)item.TransgressiveCont = GetArray(raw, index, 3);
+            if (item.STransgressivePast)item.TransgressivePast = GetArray(raw, index, 3);
+            if (item.SAuxiliary)        item.Auxiliary         = GetArray(raw, index, 6);
+            //} else if (item.TypeShow==VerbTypeShow.Trpne) {
             //    item.Infinitive=raw[3];
-            //    item.Continous      = GetArray(raw, index, 6); 
-            //    item.Imperative     = GetArray(raw, index, 3); 
-            //    item.PastPassive    = GetArray(raw, index, 8); 
-            //    item.TransgressiveCont  = GetArray(raw, index, 3); 
-            //    item.TransgressivePast  = GetArray(raw, index, 3); 
-            //} else if (item.TypeShow==VerbTypeShow.Cinne) { 
+            //    item.Continous      = GetArray(raw, index, 6);
+            //    item.Imperative     = GetArray(raw, index, 3);
+            //    item.PastPassive    = GetArray(raw, index, 8);
+            //    item.TransgressiveCont  = GetArray(raw, index, 3);
+            //    item.TransgressivePast  = GetArray(raw, index, 3);
+            //} else if (item.TypeShow==VerbTypeShow.Cinne) {
             //    item.Infinitive=raw[3];
-            //    item.Continous      = GetArray(raw, index, 6); 
-            //    item.Imperative     = GetArray(raw, index, 3); 
-            //    item.PastActive     = GetArray(raw, index, 8); 
-            //    item.TransgressiveCont  = GetArray(raw, index, 3); 
-            //    item.TransgressivePast  = GetArray(raw, index, 3); 
-            //} else if (item.TypeShow==VerbTypeShow.TrpneCinne) { 
+            //    item.Continous      = GetArray(raw, index, 6);
+            //    item.Imperative     = GetArray(raw, index, 3);
+            //    item.PastActive     = GetArray(raw, index, 8);
+            //    item.TransgressiveCont  = GetArray(raw, index, 3);
+            //    item.TransgressivePast  = GetArray(raw, index, 3);
+            //} else if (item.TypeShow==VerbTypeShow.TrpneCinne) {
             //    item.Infinitive=raw[3];
-            //    item.Continous      = GetArray(raw, index, 6); 
-            //    item.Imperative     = GetArray(raw, index, 3); 
-            //    item.PastActive     = GetArray(raw, index, 8); 
-            //    item.PastPassive    = GetArray(raw, index, 8); 
-            //    item.TransgressiveCont  = GetArray(raw, index, 3); 
-            //    item.TransgressivePast  = GetArray(raw, index, 3); 
-            //} else if (item.TypeShow==VerbTypeShow.FutureActive) { 
+            //    item.Continous      = GetArray(raw, index, 6);
+            //    item.Imperative     = GetArray(raw, index, 3);
+            //    item.PastActive     = GetArray(raw, index, 8);
+            //    item.PastPassive    = GetArray(raw, index, 8);
+            //    item.TransgressiveCont  = GetArray(raw, index, 3);
+            //    item.TransgressivePast  = GetArray(raw, index, 3);
+            //} else if (item.TypeShow==VerbTypeShow.FutureActive) {
             //    item.Infinitive=raw[3];
-            //   // item.Continous      = GetArray(raw, index, 6); 
-            //    item.Imperative     = GetArray(raw, index, 3); 
-            //    item.PastActive     = GetArray(raw, index, 8); 
-            //   // item.PastPassive    = GetArray(raw, index, 8); 
-            //    item.TransgressiveCont  = GetArray(raw, index, 3); 
-            //    item.TransgressivePast  = GetArray(raw, index, 3); 
-            //} else if (item.TypeShow==VerbTypeShow.FuturePassive) { 
+            //   // item.Continous      = GetArray(raw, index, 6);
+            //    item.Imperative     = GetArray(raw, index, 3);
+            //    item.PastActive     = GetArray(raw, index, 8);
+            //   // item.PastPassive    = GetArray(raw, index, 8);
+            //    item.TransgressiveCont  = GetArray(raw, index, 3);
+            //    item.TransgressivePast  = GetArray(raw, index, 3);
+            //} else if (item.TypeShow==VerbTypeShow.FuturePassive) {
             //    item.Infinitive=raw[3];
-            //   // item.Continous      = GetArray(raw, index, 6); 
-            //    item.Imperative     = GetArray(raw, index, 3); 
-            //   // item.PastActive     = GetArray(raw, index, 8); 
-            //    item.PastPassive    = GetArray(raw, index, 8); 
-            //    item.TransgressiveCont  = GetArray(raw, index, 3); 
-            //    item.TransgressivePast  = GetArray(raw, index, 3); 
-            //} 
+            //   // item.Continous      = GetArray(raw, index, 6);
+            //    item.Imperative     = GetArray(raw, index, 3);
+            //   // item.PastActive     = GetArray(raw, index, 8);
+            //    item.PastPassive    = GetArray(raw, index, 8);
+            //    item.TransgressiveCont  = GetArray(raw, index, 3);
+            //    item.TransgressivePast  = GetArray(raw, index, 3);
+            //}
            // else throw new Exception("Unknown ShowType");
-                     
+
             return item;
 
-            string[] GetArray(string[] source, int pos, int len) { 
+            string[] GetArray(string[] source, int pos, int len) {
                 string[] arr = new string[len];
                 for (int i = 0; i < len; i++) arr[i]=source[pos+i];
                 index+=len;
@@ -1601,7 +2219,7 @@ namespace TranslatorWritter {
             }
         }
 
-        public ItemPatternVerb Duplicate() {
+        internal ItemPatternVerb Duplicate() {
             ItemPatternVerb item = new ItemPatternVerb {
                 Name = Name + "_dup",
                 Infinitive = Infinitive,
@@ -1627,8 +2245,35 @@ namespace TranslatorWritter {
 
             return item;
         }
+        
+        internal ItemPatternVerb Clone() {
+            ItemPatternVerb item = new ItemPatternVerb {
+                Name = Name,
+                Infinitive = Infinitive,
+                Type = Type,
+                SUnknown = SUnknown,
+                SContinous = SContinous,
+                SFuture = SFuture,
+                SImperative = SImperative,
+                SAuxiliary = SAuxiliary,
+                SPastActive = SPastActive,
+                SPastPassive = SPastPassive,
+                STransgressiveCont = STransgressiveCont,
+                STransgressivePast = STransgressivePast,
+                Continous = (string[])Continous.Clone(),
+                Future = (string[])Future.Clone(),
+                Imperative = (string[])Imperative.Clone(),
+                PastActive = (string[])PastActive.Clone(),
+                PastPassive = (string[])PastPassive.Clone(),
+                TransgressiveCont = (string[])TransgressiveCont.Clone(),
+                TransgressivePast = (string[])TransgressivePast.Clone(),
+                Auxiliary = (string[])Auxiliary.Clone()
+            };
 
-        public void Optimize() {  
+            return item;
+        }
+
+        internal override void Optimize() {
             var toforeach=new List<string[]>();
             if (SContinous)toforeach.Add(Continous);
             if (SImperative)toforeach.Add(Imperative);
@@ -1637,7 +2282,7 @@ namespace TranslatorWritter {
             if (SFuture)toforeach.Add(Future);
             if (STransgressiveCont)toforeach.Add(TransgressiveCont);
             if (STransgressivePast)toforeach.Add(TransgressivePast);
-            
+
             //switch (TypeShow){
             //    case VerbTypeShow.All:
             //        toforeach=new string[][]{ Continous, Imperative, PastActive, PastPassive, Future, TransgressiveCont, TransgressivePast};
@@ -1669,35 +2314,35 @@ namespace TranslatorWritter {
             //}
             int i=0;
             int same=0;
-            for (; i<Infinitive.Length; i++) { 
+            for (; i<Infinitive.Length; i++) {
                 bool isFirstCharSimilar=true;
                 char ch=Infinitive[i];
-                
+
                 foreach (string[] arr in toforeach) {
                     foreach (string s in arr) {
                         if (s==null)continue;
                         if (s=="-") continue;
-                        if (s.Contains(",")) { 
+                        if (s.Contains(",")) {
                             string[] variants=s.Split(',');
                         }
-                        if (s.Length<=i){ 
+                        if (s.Length<=i){
                             isFirstCharSimilar=false;
-                            break; 
+                            break;
                         }
                         if (s[i]!=ch) {
                             isFirstCharSimilar=false;
-                            break;    
+                            break;
                         }
                     }
                     if (!isFirstCharSimilar) break;
-                    
+
                 }
                 if (!isFirstCharSimilar) break;
                 same++;
             }
 
-            
-            if (same>0) { 
+
+            if (same>0) {
                 // OK optimize
                 Name=Name.Substring(0,same).ToLower()+Name.Substring(same).ToUpper();
 
@@ -1711,61 +2356,79 @@ namespace TranslatorWritter {
                 }
                 if (Infinitive.EndsWith(" ")) Infinitive=Infinitive.Substring(0, Infinitive.Length-1);
                 Infinitive=Infinitive.Substring(same);
+            }else{ 
+                Name=Name.ToUpper();
             }
         }
 
-        internal void AddQuestionMark() {
-            for (int i=0; i<Future.Length; i++) { 
-                Future[i]=Future[i]+'?';
+        internal override void AddQuestionMark() {
+            for (int i=0; i<Future.Length; i++) {
+                if (Future[i]!="-")Future[i]=Future[i]+'?';
             }
-            for (int i=0; i<Continous.Length; i++) { 
-                Continous[i]=Continous[i]+'?';
+            for (int i=0; i<Continous.Length; i++) {
+                if (Continous[i]!="-")Continous[i]=Continous[i]+'?';
             }
-            for (int i=0; i<Auxiliary.Length; i++) { 
-                Auxiliary[i]=Auxiliary[i]+'?';
+            for (int i=0; i<Auxiliary.Length; i++) {
+                if (Auxiliary[i]!="-")Auxiliary[i]=Auxiliary[i]+'?';
             }
-            for (int i=0; i<Imperative.Length; i++) { 
-                Imperative[i]=Imperative[i]+'?';
+            for (int i=0; i<Imperative.Length; i++) {
+                if (Imperative[i]!="-")Imperative[i]=Imperative[i]+'?';
             }
-            for (int i=0; i<PastActive.Length; i++) { 
-                PastActive[i]=PastActive[i]+'?';
+            for (int i=0; i<PastActive.Length; i++) {
+                if (PastActive[i]!="-")PastActive[i]=PastActive[i]+'?';
             }
-            for (int i=0; i<PastPassive.Length; i++) { 
-                PastPassive[i]=PastPassive[i]+'?';
+            for (int i=0; i<PastPassive.Length; i++) {
+                if (PastPassive[i]!="-")PastPassive[i]=PastPassive[i]+'?';
             }
-        }
-    } 
-    
-    class ItemVerb{
-        public string From, To, PatternFrom, PatternTo;
-
-        public string Save() {
-            if (From==To && From=="") return PatternFrom+"|"+PatternTo;
-            if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
-            return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+            for (int i=0; i<TransgressiveCont.Length; i++) {
+                if (TransgressiveCont[i]!="-")TransgressiveCont[i]=TransgressiveCont[i]+'?';
+            }
+            for (int i=0; i<TransgressivePast.Length; i++) {
+                if (TransgressivePast[i]!="-")TransgressivePast[i]=TransgressivePast[i]+'?';
+            }
+            if (Infinitive!="-")Infinitive+='?';
         }
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+    }
 
-        public string GetText() {
-            if (string.IsNullOrEmpty(From)) { 
-                if (string.IsNullOrEmpty(PatternFrom)) { 
-                    return "<Neznámé>";
-                } else {
-                    return "{"+PatternFrom+"}";
-                }
-            } else { 
-                if (string.IsNullOrEmpty(PatternFrom)) { 
-                    return From;
-                } else {
-                    if (PatternFrom.StartsWith(From)) { 
-                        return PatternFrom;
-                    }else return From;
-                }
-            }
-        }
+    class ItemVerb : ItemTranslatingUsingPatterns{
+     //   public string /*From, To,*/ PatternFrom, PatternTo;
+      //  static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
+
+        //protected override bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
+
+        //    if (PatternFrom.Contains(notAllowed)) return false;
+        //    if (PatternTo.Contains(notAllowed)) return false;
+
+        //    return true;
+        //}
+
+        //public override string Save() {
+        //    if (From==To && From=="") return PatternFrom+"|"+PatternTo;
+        //    if (From==To) return From+"|"+PatternFrom+"|"+PatternTo;
+        //    return From+"|"+To+"|"+PatternFrom+"|"+PatternTo;
+        //}
+
+        //public override string GetText() {
+        //    if (string.IsNullOrEmpty(From)) {
+        //        if (string.IsNullOrEmpty(PatternFrom)) {
+        //            return "<Neznámé>";
+        //        } else {
+        //            return "{"+PatternFrom+"}";
+        //        }
+        //    } else {
+        //        if (string.IsNullOrEmpty(PatternFrom)) {
+        //            if (!Valid()) return "⚠"+From;
+        //            return From;
+        //        } else {
+        //            if (PatternFrom.StartsWith(From)) {
+        //                return PatternFrom;
+        //            }else return From;
+        //        }
+        //    }
+        //}
 
         public static ItemVerb Load(string data) {
             string[] raw=data.Split('|');
@@ -1797,23 +2460,33 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
+    }
 
-    class ItemPreposition{
-        public string From, To, Fall;
+    class ItemPreposition : ItemTranslating{
+        public string /*From, To,*/ Fall;
+      //  static char[] notAllowed=new char[]{'#', ' ', ' ', '|', '\t'};
 
-        public string Save() {
+        internal override string Save() {
             if (From==To) return From+"|"+Fall;
             return From+"|"+To+"|"+Fall;
         }
 
-        public bool Filter(string filter) {
-            return From.Contains(filter) || To.Contains(filter);
-        }
+        //bool Valid() {
+        //    if (From.Contains(notAllowed)) return false;
+        //    if (To.Contains(notAllowed)) return false;
 
-        public string GetText() {
-            return From;
-        }
+        //    return true;
+        //}
+
+        //public bool Filter(string filter) {
+        //    return From.Contains(filter) || To.Contains(filter);
+        //}
+
+        //public string GetText() {
+        //    if (string.IsNullOrEmpty(From)) return "<Neznámé>";
+        //    if (!Valid()) return "⚠"+From;
+        //    return From;
+        //}
 
         public static ItemPreposition Load(string data) {
             string[] raw=data.Split('|');
@@ -1835,38 +2508,31 @@ namespace TranslatorWritter {
             }
             return null;
         }
-    } 
-    
-    public enum GenderNoun{ 
+    }
+
+    public enum GenderNoun{
         Unknown=-1,
         Neuter,
-        Feminine, 
+        Feminine,
         MasculineAnimal,
         MasculineInanimate,
     }
 
-    public enum GenderPronoun{ 
+    public enum GenderPronoun{
         Unknown=-1,
         Neuter,
-        Feminine, 
+        Feminine,
         Masculine
     }
 
-    //public enum GenderNumber{ 
-    //    Unknown=-1,
-    //    Neuter,
-    //    Feminine, 
-    //    Masculine
-    //}
-
-    public enum AdjectiveType{ 
+    public enum AdjectiveType{
         Unknown=-1,
         Hard,
         Soft,
         Possessive,
     }
-    
-    public enum VerbType{ 
+
+    public enum VerbType{
         Unknown=-1,
         None,
         OnlySe,
@@ -1874,15 +2540,7 @@ namespace TranslatorWritter {
         Both
     }
 
-    public enum PronounType{ 
-        Unknown=0,
-        NoDeklination,
-        DeklinationOnlySingle,
-        Deklination,
-        DeklinationWithGender,
-    }
-    
-    public enum NumberType{ 
+    public enum PronounType{
         Unknown=0,
         NoDeklination,
         DeklinationOnlySingle,
@@ -1890,13 +2548,11 @@ namespace TranslatorWritter {
         DeklinationWithGender,
     }
 
-    //public enum VerbTypeShow{ 
-    //    Unknown=0,
-    //    Trpne=1,
-    //    Cinne=2,
-    //    TrpneCinne=3,
-    //    All=4,
-    //    FuturePassive,
-    //    FutureActive,
-    //}
+    public enum NumberType{
+        Unknown=0,
+        NoDeklination,
+        DeklinationOnlySingle,
+        Deklination,
+        DeklinationWithGender,
+    }
 }
