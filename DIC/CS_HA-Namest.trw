@@ -26,6 +26,8 @@ nakonec však nebylo žádné <id=1,prid,rod=stř,pád=1> <id=2,pods,rod=stř,p�
 Achich.|Achej.
 Nebudu se s tím srát!|Nebôdô se s tym prčit!
 Nejsem moc mluvka!|Nésô moc na mlôveňi!
+Včera jsem se najezdil.|Včera sem bêl dlóhá trasa.
+Včera jsem se ale najezdil.|Včera sem bêl ale dlóhá trasa.
 -
 s nimi|z něma
 asi má zpoždění|asê má spožďeni
@@ -9163,6 +9165,7 @@ jeno|jené
 ovými|ovéma
 ský|ské
 řeji|řejô
+rást|rast
 -
 lÉTO|1|éto|éta|étu|éto|éto|étu,étě|étem|éta|et|étům,etům|éta|éta|étech,etech|éty,ety
 dÍTĚ|1|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
@@ -9694,6 +9697,7 @@ ohřÁT|15|-1|át|eji|eješ|eje|ejeme|ejete|ejí|ej|ejme|ejte|ál|ál|ála|álo|
 děkOVAT|7|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala
 smÁT|7|-1|át|ěji|ěješ|ěje|ějeme|ějete|ějí|ěj|ějme|ějte|ál|ál|ála|álo|áli|ály|ály|ála
 mOCT|5|-1|oct|ohu,ůžu|ůžeš|ůže|ůžeme|ůžete|ohou,ůžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+ukrÁST|15|-1|ást|adnu|adneš|adne|adneme|adnete|adnou|adni|adněme|adněte|adl|adl|adla|adlo|adli|adly|adly|adla|aden|aden|adena|adeno|adeni|adeny|adeny|adena
 -
 žET|7|-1|ê|êjô|êješ|êje|êjeme|êjete|êjó|é|éme|éte|êl|êl|êla|êlo|êlê|êlê|êlê|êla
 slavIT|7|-1|it|im|iš|i|ime|ite|ijó||me|te|il|il|ila|ilo|ilê|ilê|ilê|ila
@@ -9722,6 +9726,7 @@ děkOVAT|7|-1|ovat|ôjô|ôješ|ôje|ôjem|ôjete|ôjó|ôj|ôjme|ôjte|oval|ova
 smÁT|7|-1|át|ějô|ěješ|ěje|ějeme|ějete|ějó|ňé|ňéme|ňéte|ál|ál|ála|álo|álê|álê|álê|ála
 miŠET|7|-1|šet|šim|šiš|ši|šime|šite|chijó|ché|chéme|chéte|šel|šel|šela|šelo|šelê|šelê|šelê|šela
 mUCT|5|-1|uct?|užô|užeš?|uže?|užeme?|užete?|užó|uhl|uhl|uhla|uhlo|uhlê|uhlê|uhlê|uhla
+okrAST|15|-1|ást?|adno|adneš|adne|adneme|adnete|adnó|adňi|adňime|adňite|adl|adl|adla|adlo|adlê|adlê|adlê|adla|aden|aden|adena|adené|adeni?|adeny?|adeny?|adena
 -
 dělat|dělat|dělat
 uděl|ôděl,poděl|dělat|dělat
@@ -9766,6 +9771,7 @@ mích|mi|schovávAT|miŠET
 vzd|zd|smÁT|stÁT
 m|mOCT|mUCT
 př|smÁT|smÁT
+ukr|okr|ukrÁST|okrAST
 -
 hezky|pěkně
 rychle|alovante,hebno,ražmo
