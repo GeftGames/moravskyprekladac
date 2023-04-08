@@ -188,7 +188,7 @@ langs["cs"] = {
 	TextFiles	: "Textové soubory",
 	SubtitlesFiles: "Titulky k filmu",
 
-	VideoNote	: "Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte."
+	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS a ty semka načtěte."
 };
 
 langs["en"] = {

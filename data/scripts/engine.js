@@ -1,4 +1,5 @@
 ﻿const serverName="https://moravskyprekladac.pages.dev/";
+var imgMap;
 /*class Word {
 	constructor() {
 	    this.selectedIndex = 0;
@@ -908,6 +909,33 @@ function CloseAboutPage(){
 	}
 	setTimeout(setNodeAboutPage, 300);
 }
+function ShowPageMapper(){
+	document.getElementById("mapperPage").style.display="block";
+	document.getElementById("mapperPage").style.opacity="1";
+	document.getElementById("mapperPage").style.position="absolute";
+//	document.getElementById("translatingPage").style.display="none";
+	document.getElementById("mapperPage").style.top="52px";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+}
+function ClosePageMapper(){
+	document.getElementById("mapperPage").style.opacity="0";
+	document.getElementById("mapperPage").style.top="500px";
+	document.getElementById("mapperPage").style.position="fixed";
+	//document.getElementById("aboutPage").style.display="none";
+	//document.getElementById("translatingPage").style.display="block";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+	setTimeout(setNodeAboutPage, 300);
+}
 function ShowMapPage(){
 	document.getElementById("mapPage").style.display="block";
 	document.getElementById("mapPage").style.opacity="1";
@@ -950,7 +978,7 @@ let langFile;
 function SetLanguage() {
     if (language == "default") {
         var userLang = navigator.language || navigator.userLanguage;
-        if (userLang == "cs") language = "cs";
+        if (userLang == "cs") language = "mo";
         else if (userLang == "de") language = "de";
         else if (userLang == "sk") language = "sk";
         else if (userLang == "jp") language = "jp";
@@ -962,6 +990,8 @@ function SetLanguage() {
 		console.log("Unknown lang: "+lang+", userLang"+language);
 		return;
 	}
+
+	localStorage.setItem('setting-language', language);
   
   document.documentElement.lang = language;
 
@@ -1208,6 +1238,7 @@ function hideNav() {
 function Load() {
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cache */
+	//if (window.location=="https://geftgames.github.io/moravskyprekladac/") window.location="https://moravskyprekladac.pages.dev/"
     if (window.location.hash == "#reload") {
         console.log("INFO|Reloading...");
         /*caches.keys().then(function (names) {
@@ -1325,7 +1356,7 @@ function Load() {
 
     RegisterSpecialTextarea();
 
-    let zlanguage = "mo";
+    let zlanguage = "default";
     let zautoTranslate;
     let zstyleOutput;
     let zdev;
@@ -1467,6 +1498,7 @@ function Load() {
         if (userLang == "de") language = "de";
         else if (userLang == "sk") language = "sk";
         else if (userLang == "jp") language = "jp";
+		else if (userLang == "cs") language = "cs";
         else language = "en";
 
 		let el=document.getElementById("manifest");
@@ -1555,7 +1587,8 @@ function Load() {
     		document.getElementById('refresh').style.display = 'none';
     	}*/
     loaded = true;
-
+	imgMap = new Image();
+	imgMap.src="data/images/map.svg";
     SetSavedTranslations();
 	customTheme();
 
@@ -4444,3 +4477,4 @@ function auto_grow() {
     document.getElementById("specialTextarea").style.minHeight = "5px";
     document.getElementById("specialTextarea").style.minHeight = (document.getElementById('specialTextarea').scrollHeight) + "px";
 }
+
