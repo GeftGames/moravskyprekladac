@@ -1,20 +1,4 @@
 User-agent: *
-Allow: *
-Allow: /index.html
 
-User-agent: Baiduspider
-Disallow: *
-
-User-agent: Baidu #China
-Disallow: *
-
-User-agent: Yahoo #Ru
-Disallow: *
-
-User-agent: Yahoo MM #Ru
-Disallow: *
-
-User-agent: Yahoo Blogs
-Disallow: *
 
 Sitemap: https://moravskyprekladac.pages.dev/sitemap.xml
