@@ -303,7 +303,7 @@ function init() {
 		}
 	}
 }
-let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
+//let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
 
 
 let totalDirFiles=-1;
@@ -313,9 +313,11 @@ function GetFilesInDir() {
 	xhttp.timeout=4000;
 
 	let select2= document.getElementById("selectorTo");
-	let pointsL2=document.getElementById('layer2');
+	//let pointsL2=document.getElementById('layer2');
 
 	xhttp.onload = function() {		
+		document.getElementById("textDownloadingList").style.display="none";
+		document.getElementById("textDownloadingDic").style.display="block";
 		let json=JSON.parse(this.responseText);
 		stepEnd=json.length;
 		
@@ -331,6 +333,7 @@ function GetFilesInDir() {
 	xhttp.send();
 	
 	function DownloadLang(url) {
+		// ne takto, max 4 stahování zároveň, udělé frontu
 		const xhttp2 = new XMLHttpRequest();
 		xhttp2.timeout=50000;
 
@@ -398,9 +401,9 @@ function GetFilesInDir() {
 		//	nodeLang2.className = "selectGroupLang" + level;
 			category.appendChild(nodeLang2);
 		//	console.log(lang);
-			if (!isNaN(lang.locationX) && !isNaN(lang.locationY)) {
-				let locX=lang.locationX;
-				let locY=lang.locationY;
+		/*	if (!isNaN(lang.locationX) && !isNaN(lang.locationY)) {
+			//	let locX=lang.locationX;
+			//	let locY=lang.locationY;
 
 				let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
 				circle.classList.add("mapDot");
@@ -414,17 +417,17 @@ function GetFilesInDir() {
 					Translate();
 				});
 				circle.setAttribute("data-name", lang.Name);
-				circle.setAttribute("cx",((locY-originX)/scX)*170*1.21-20.92);
-				circle.setAttribute("cy",(-(locX-originY)/scY)*150*1.0367+3.4);
+				circle.setAttribute("cx",/*((locY-originX)/scX)*170*1.21-20.92*//*lang.locationX);
+				circle.setAttribute("cy",/*(-(locX-originY)/scY)*150*1.0367+3.4*//*lang.locationY);
 				pointsL2.appendChild(circle);
 
 				let txt=document.createElement("span");
 				txt.classList.add("mapTitle");
 				txt.innerHTML=lang.Name;
-				txt.style.left="calc("+(((locY-originX)/scX)*170*1.21-20.92)+"mm)";
-				txt.style.top=((-(locX-originY)/scY)*150*1.0367+3.4)+"mm";
+				txt.style.left="calc("+(lang.locationX)+"mm)";
+				txt.style.top=lang.locationY+"mm";
 				document.getElementById('mapZoom').appendChild(txt);
-			}
+			}*/
 		}
 	}else{
 		if (dev)console.log("This lang has problems",lang);
@@ -487,6 +490,7 @@ function TranslateSimpleText(input) {
 	console.log("input: ", input);
 
 	if (lang !== null){
+		
 		let out=lang.Translate(input,false);
 		if (dev) console.log("Transtated as: ", out);
 		return out;

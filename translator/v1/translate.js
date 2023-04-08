@@ -2364,20 +2364,6 @@ class LanguageTr {
 		this.state="instanced";
 		this.html=true;
 		this.SelectReplace=[];
-		//this.ReplacesEnding=[];
-	//	this.ReplacesEndingT=[];
-	//	this.ReplacesEndingF=[];
-
-	//	this.ReplacesStarting=[];
-	//	this.ReplacesStartingF=[];
-	//	this.ReplacesStartingT=[];
-	//	this.Replaces=[];
-	//	this.ReplacesT=[];
-	///	this.ReplacesC=[];
-		//this.RepairsT=[];
-		//this.RepairsF=[];
-
-		//this.prepositions=[];
 		this.SentencePatterns=[];
 		this.SentencePatternParts=[];
 		this.SentenceParts=[];
@@ -2420,6 +2406,8 @@ class LanguageTr {
 		
 		this.locationX=NaN;
 		this.locationY=NaN;
+		this.gpsX=NaN;
+		this.gpsY=NaN;
 		this.Quality=0;
 		this.Author="";
 		this.LastDateEdit="";
@@ -2520,8 +2508,12 @@ class LanguageTr {
 						//console.log(GPS);
 						if (GPS.includes(',')) {
 							let rawPos=GPS.split(',');
-							this.locationX=parseFloat(rawPos[0]);
-							this.locationY=parseFloat(rawPos[1]);
+							this.gpsX=parseFloat(rawPos[0]);
+							this.gpsY=parseFloat(rawPos[1]);
+
+							let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
+							this.locationX=((this.gpsY-originX)/scX)*170*1.21-20.92;
+							this.locationY=(-(this.gpsX-originY)/scY)*150*1.0367+3.4;
 						}
 					}
 					break;
