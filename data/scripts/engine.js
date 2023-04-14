@@ -948,6 +948,7 @@ function ShowMapPage(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
+	mapRedraw();
 }
 function CloseMapPage(){
 	document.getElementById("mapPage").style.opacity="0";
@@ -1631,15 +1632,78 @@ function Load() {
     document.getElementById("rte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("header").style.transition="background-color .3s, color .3s;";*/
 
-	let el=document.getElementById("mapSelector");
-	let zoom=1;
-	let ZOOM_SPEED=1.2;
-	let positionX=0;
-	let positionY=0;
-	let mapZoom=document.getElementById("map");
+	mapSelectLang.addEventListener("wheel", function(e) {
+		e.preventDefault();
+		let dX=e.clientX-map_LocX, dY=e.clientY-map_LocY;	
+		let prevZoom=map_Zoom;
+		let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
+
+		if (delta > 0) map_Zoom *= 1.2; else  map_Zoom /= 1.2;
+		if (map_Zoom<=0.2)map_Zoom=0.2;
+		if (map_Zoom>5)map_Zoom=5;
+
+		const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
+		const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
+		const mouseY = e.clientY - rect.top;
+
+		const imgMX = mouseX-map_LocX,
+			  imgMY = mouseY-map_LocY;	
+
+		const imgPMX = imgMX/(imgMap.width*prevZoom),
+			  imgPMY = imgMY/(imgMap.height*prevZoom);		
+		
+		map_LocX-=(map_Zoom-prevZoom)*imgMap.width*imgPMX;
+		map_LocY-=(map_Zoom-prevZoom)*imgMap.height*imgPMY;
+
+		mapRedraw();
+	});
+
+	mapSelectLang.addEventListener('mousedown', (e) => {
+		e.preventDefault();
+		moved = true;
+		map_LocTmpX=e.offsetX-map_LocX;
+		map_LocTmpY=e.offsetY-map_LocY;	
+		
+		mapRedraw();
+	});
+	mapSelectLang.addEventListener('mouseup', (e) => {
+		moved = false;	
+		mapRedraw();
+	});
+
+	mapSelectLang.addEventListener('click', (e) => {
+		mapClick(e.offsetX,e.offsetY);
+		mapRedraw();
+	});
+
+	mapSelectLang.addEventListener('mousemove', (e) => {
+		e.preventDefault();
+		if (moved) {
+			
+		//	console.log('moved');
+			map_LocX=e.offsetX-map_LocTmpX;
+			map_LocY=e.offsetY-map_LocTmpY;
+			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
+			//setTransform();	
+			mapRedraw();
+			//mapZoom.style.top=positionY+"px";
+			//mapZoom.style.left=positionX+"px";
+		} else {
+			//console.log('not moved')
+			mapMove(e.offsetX,e.offsetY);
+		}
+	});
+	
+
+//	let el=document.getElementById("mapSelector");
+//	var zoom=1;
+//	let ZOOM_SPEED=1.2;
+//	var positionX=0;
+	//var positionY=0;
+	//let mapZoom=document.getElementById("map");
 	let moved;
-	let dPosX=0,dPosY=0;
-	el.addEventListener("wheel", function(e) {
+//	let dPosX=0,dPosY=0;
+	/*el.addEventListener("wheel", function(e) {
 		//positionX=e.pageX-dPosX;
 		//positionY=e.pageY-dPosY;
 		e.preventDefault();
@@ -1686,17 +1750,18 @@ if (zoom>10)zoom=10;
 		setTransform();
 	//	mapZoom.style.top=positionY+"px";
 	//	mapZoom.style.left=positionX+"px";
+//	mapRedraw();
 	});
 
 	el.addEventListener('mousedown', (e) => {
 		e.preventDefault();
 		moved = true;
 		dPosX=e.clientX-positionX;
-		dPosY=e.clientY-positionY;
+		dPosY=e.clientY-positionY;	mapRedraw();
 	});
 	
 	el.addEventListener('mouseup', (e) => {
-		moved = false;
+		moved = false;	mapRedraw();
 	});
 
 	el.addEventListener('mousemove', (e) => {
@@ -1707,7 +1772,7 @@ if (zoom>10)zoom=10;
 			positionX=e.clientX-dPosX;
 			positionY=e.clientY-dPosY;
 			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
-			setTransform();
+			setTransform();	mapRedraw();
 			//mapZoom.style.top=positionY+"px";
 			//mapZoom.style.left=positionX+"px";
 		} else {
@@ -1715,7 +1780,7 @@ if (zoom>10)zoom=10;
 		}
 	});
 	el.addEventListener('mouseup', () => {
-		moved = false;
+		moved = false;mapRedraw();
 	});
 
 	function setTransform() {
@@ -1745,12 +1810,7 @@ if (zoom>10)zoom=10;
 	 //mapZoom.style.height=(100*zoom) + "%";
 	 //mapZoom.style.top=positionY + "px";
 	 //mapZoom.style.left=positionX + "px";
-      }
-}
-
-function drawMap(){
-
-
+      }*/
 }
 
 function AddToVocabHA(str) {
