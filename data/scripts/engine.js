@@ -1666,6 +1666,14 @@ function Load() {
 		
 		mapRedraw();
 	});
+	mapSelectLang.addEventListener('touchstart', (e) => {
+		e.preventDefault();
+		moved = true;
+		map_LocTmpX=e.offsetX-map_LocX;
+		map_LocTmpY=e.offsetY-map_LocY;	
+		
+		mapRedraw();
+	});
 	mapSelectLang.addEventListener('mouseup', (e) => {
 		moved = false;	
 		mapRedraw();
@@ -1675,8 +1683,29 @@ function Load() {
 		mapClick(e.offsetX,e.offsetY);
 		mapRedraw();
 	});
+	mapSelectLang.addEventListener('touchend', (e) => {
+		mapClick(e.offsetX,e.offsetY);
+		mapRedraw();
+	});
 
 	mapSelectLang.addEventListener('mousemove', (e) => {
+		e.preventDefault();
+		if (moved) {
+			
+		//	console.log('moved');
+			map_LocX=e.offsetX-map_LocTmpX;
+			map_LocY=e.offsetY-map_LocTmpY;
+			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
+			//setTransform();	
+			mapRedraw();
+			//mapZoom.style.top=positionY+"px";
+			//mapZoom.style.left=positionX+"px";
+		} else {
+			//console.log('not moved')
+			mapMove(e.offsetX,e.offsetY);
+		}
+	});
+	mapSelectLang.addEventListener('touchmove', (e) => {
 		e.preventDefault();
 		if (moved) {
 			
