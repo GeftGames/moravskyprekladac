@@ -395,6 +395,7 @@ function GetFilesInDir() {
 			languagesList.push(lang);
 			
 			let nodeLang2 = document.createElement('option');
+			lang.option=nodeLang2;
 			nodeLang2.value=lang.Name;
 			nodeLang2.innerText = name;
 		//	console.log("z",lang);
@@ -434,6 +435,128 @@ function GetFilesInDir() {
 
 	}
 	}
+}
+var map_Zoom=1;
+var map_LocX=0, map_LocY=0;
+var map_LocTmpX=0, map_LocTmpY=0;
+var map_DisplayWidth, map_DisplayHeight;
+function mapRedraw(){
+	let canvasMap=document.getElementById("mapSelectLang");
+
+	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
+	map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
+	//var scale = 1;
+	mapSelectLang.width = map_DisplayWidth;//displayWidth;
+	mapSelectLang.height = map_DisplayHeight;
+
+	let ctx = canvasMap.getContext("2d");
+
+	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
+	
+	
+	ctx.save();
+
+	ctx.drawImage(imgMap, map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
+	ctx.fillStyle="rgba(255,255,255,.5)";	
+	ctx.fillRect(map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
+	ctx.font = "16px sans-serif";
+	//ctx.font="bold 20px serif";
+
+	ctx.imageSmoothingEnabled= true;
+
+	// point of location
+	let circleRadius=3*map_Zoom;
+	if (circleRadius<2)circleRadius=2;
+	if (circleRadius>8)circleRadius=8;
+	ctx.lineCap = 'round';
+	// generate dots
+	for (let p of languagesList){
+		ctx.fillStyle="Black";		
+		ctx.beginPath();		
+		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
+		ctx.stroke();
+
+		if (p.Quality==5) ctx.fillStyle="Gold";		
+		else if (p.Quality==4) ctx.fillStyle="Yellow";		
+		else if (p.Quality==3) ctx.fillStyle="Orange";		
+		else if (p.Quality==2) ctx.fillStyle="#cd7f32";		
+		else if (p.Quality==1) ctx.fillStyle="Red";		
+		else if (p.Quality==0) ctx.fillStyle="Gray";
+		else ctx.fillStyle="Black";
+
+		ctx.beginPath();
+		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
+		ctx.fill();
+	}
+
+	// generate texts
+	for (let p of languagesList){
+		ctx.fillStyle="Black";
+		let w=ctx.measureText(p.Name).width;
+		ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
+	}
+
+	ctx.restore();
+}
+
+function mapClick(mX,mY)　{
+	let canvasMap=document.getElementById("mapSelectLang");
+
+	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
+	map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
+
+	//mapSelectLang.width = map_DisplayWidth;
+	//mapSelectLang.height = map_DisplayHeight;
+
+	// point of location
+	let circleRadius=3*map_Zoom;
+	if (circleRadius<2)circleRadius=2;
+	if (circleRadius>8)circleRadius=8;
+
+	// generate dots
+	for (let p of languagesList){
+		if (isNaN(p.locationX)) continue;
+		if (入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2)) {
+			p.option.selected=true;
+			CloseMapPage();
+			Translate();
+			return;
+		}	
+	}
+}
+
+function mapMove(mX,mY) {
+	let canvasMap=document.getElementById("mapSelectLang");
+
+	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
+	map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
+
+	//mapSelectLang.width = map_DisplayWidth;
+	//mapSelectLang.height = map_DisplayHeight;
+
+	// point of location
+	let circleRadius=3*map_Zoom;
+	if (circleRadius<2)circleRadius=2;
+	if (circleRadius>8)circleRadius=8;
+
+	// generate dots
+	for (let p of languagesList) {
+		if (isNaN(p.locationX)) continue;
+		if (入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2, circleRadius*2)) {
+			if (canvasMap.style.cursor!="pointer")canvasMap.style.cursor="pointer";
+			return;
+		}	
+	}
+	if (canvasMap.style.cursor!="move")canvasMap.style.cursor="move";
+}
+
+function 入っちゃった(mx, my, x, y, w, h) {
+	//console.log(mx,my, x, y, w, h);
+	if (mx<x) return false;
+	if (my<y) return false;
+	if (mx>x+w) return false;
+	if (my>y+h) return false;
+	return true;
 }
 
 function DisableLangTranslate(search) {

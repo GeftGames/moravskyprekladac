@@ -2389,7 +2389,7 @@ class LanguageTr {
 		this.Particles=[];
 		this.Adverbs=[];
 		this.Conjunctions=[];
-
+		this.option=undefined;
 		this.ReplaceS=[];
 		this.ReplaceG=[];
 		this.ReplaceE=[];
@@ -2512,8 +2512,8 @@ class LanguageTr {
 							this.gpsY=parseFloat(rawPos[1]);
 
 							let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
-							this.locationX=((this.gpsY-originX)/scX)*170*1.21-20.92;
-							this.locationY=(-(this.gpsX-originY)/scY)*150*1.0367+3.4;
+							this.locationX=(((this.gpsY-originX)/scX)*170*1.21-20.92)*3.8;
+							this.locationY=((-(this.gpsX-originY)/scY)*150*1.0367+3.4)*3.8;
 						}
 					}
 					break;
