@@ -122,6 +122,7 @@ html{
 	transition: background-color var(--transitionSlow);
 	z-index: 50;
     position: relative;
+	border-bottom: 1px solid #58585827;
 }
 .ib{
 	height: 24px;
@@ -359,6 +360,7 @@ span{
 textarea, #specialTextarea {
 	width: 100%;
 	outline: none;
+	outline: 1px solid #58585827;
 	max-height: 70vh;
 	line-height: 32px;
 	user-select: text;
@@ -944,6 +946,44 @@ circle{
 	text-rendering: optimizeSpeed;
 	color: var(--ColorOrig);
 	user-select: none;
-	color-rendering: optimizeSpeed;
+	/*color-rendering: optimizeSpeed;*/
 	transition: none;
+}
+.settingLink{
+	cursor: pointer;
+	margin-left:10px;
+	margin-bottom:10px;
+	text-decoration: underline; 
+	color: var(--ColorOrig);
+	display: block;
+	user-select: none;
+}
+#mapperCanvas {
+	width: 100%;
+}
+input[type="text"]{
+	color: var(--ColorText);
+	background-color: var(--ConBack);
+	border: 1px solid #88888863;
+	padding: 5px;
+	font-size: 5mm;
+	text-shadow: var(--tsh);
+	border-radius: 4px;
+	font: medium -moz-fixed;
+	font-family: system-ui, artifakt element, sans-serif;
+	box-shadow: var(--ksh);
+}
+#mapperOuter{
+	box-shadow: var(--ksh);
+	border: 1px solid #88888863;
+	background-color: white;
+}
+#mapperInner{
+	margin-left: 1cm;
+	margin-right: 1cm;
+}
+.listButtons{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
