@@ -2475,7 +2475,7 @@ class LanguageTr {
 			switch(subtype) {
 				// Comment info
 				case "i":
-					this.Info = line.substring(1).replace("\\n","<br>");
+					this.Info = line.substring(1).replaceAll('\\n',"<br>");
 					break;
 
 				case "a":
@@ -2499,7 +2499,29 @@ class LanguageTr {
 					break;
 
 				case "c":
-					this.Comment=line.substring(1);
+					{
+						let l=line.substring(1).replaceAll('\\n',"\n").replaceAll("->","➔").split('\n');
+						let text="";
+						let ul=false;
+						for (let i of l){
+							if (i.startsWith("#")) {
+								if (ul) {text+='</ul>';ul=false;}
+								text+='<p style="display:inline-block" class="settingHeader">'+i.substring(1)+'</p>';
+							}else if (i.startsWith("-")) {
+								if (!ul) text+='<ul>';
+								text+='<li>'+i.substring(1)+'</li>';
+								ul=true;
+							}else if (i==""){
+								if (ul) {text+='</ul>';ul=false;}
+								text+='<br>';
+							}else {
+								if (ul) {text+='</ul>';ul=false;}
+								text+='<p>'+i+'</p>';
+							}
+
+						}
+						this.Comment = text;
+					}
 					break;
 					
 				case "g":

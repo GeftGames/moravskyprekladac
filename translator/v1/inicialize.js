@@ -471,11 +471,8 @@ function mapRedraw(){
 	ctx.lineCap = 'round';
 	// generate dots
 	for (let p of languagesList){
-		ctx.fillStyle="Black";		
-		ctx.beginPath();		
-		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
-		ctx.stroke();
 
+//ctx.fillStyle="Black";	
 		if (p.Quality==5) ctx.fillStyle="Gold";		
 		else if (p.Quality==4) ctx.fillStyle="Yellow";		
 		else if (p.Quality==3) ctx.fillStyle="Orange";		
@@ -486,7 +483,12 @@ function mapRedraw(){
 
 		ctx.beginPath();
 		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
-		ctx.fill();
+		ctx.fill();		
+		
+			
+		ctx.beginPath();		
+		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
+		ctx.stroke();
 	}
 
 	// generate texts
@@ -511,7 +513,7 @@ function mapClick(mX,mY)　{
 	// point of location
 	let circleRadius=3*map_Zoom;
 	if (circleRadius<2)circleRadius=2;
-	if (circleRadius>8)circleRadius=8;
+	if (circleRadius>12)circleRadius=12;
 
 	// generate dots
 	for (let p of languagesList){
@@ -591,10 +593,16 @@ function DisableLangTranslate(search) {
 		//}
 	}
 }
-
+function ClearTextbox(){
+	document.getElementById("specialTextarea").value="";
+	Translate();
+}
 function Translate() {	
+	textAreaAdjust();
 	let lang = GetCurrentLanguage();
 	let input=document.getElementById("specialTextarea").value;
+	if (input=="")document.getElementById("ClearTextbox").style.display="none";
+	else document.getElementById("ClearTextbox").style.display="block";
 	//console.log("input: ", input);
 
 	if (lang !== null) {
