@@ -1,5 +1,6 @@
 # moravskyprekladac
-- Web app for translating from čzech to moravian
+## Description
+- Web app for translating from czech to moravian
 
 ## Site
 - Official site: https://moravskyprekladac.pages.dev/ 
