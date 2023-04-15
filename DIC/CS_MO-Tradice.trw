@@ -5,10 +5,8 @@ aGG
 d17.12.2022 20:05:31
 iMoravština test\n\n\nx => ks\nch => x\nou -> ú  (možná by nenbylo špatné i ó)\n\nAsimilace\ns vodou->z vodou\nk oknu ->g oknu\n\nHlásky\nVZ->Z: vzlétnout -> zlétnout\nCHC->SC: chcípnout -> scípnout\nŠŤ->ŠČ: štěstí->ščestí, ještě -> ešče\nS->Z: sežrat -> zežrat\nJ proteze: jíva->jíva, jiskra->iskra, \nPoznámka: habr->hrab\nřemen->hřemen\nalmara->halmara, olomouc->holomouc\nhříbatům->hříbjatům\nměsto->mjesto\nhanba->haňba\nkaval->gaval, kořalka->gořalka, katě->gatě,cikán->cigán, guláš, brigáda, \nhdo,\nmůra->mura, stůl.>stul, kůň->kuň, peníze->penize\nmotor->motór, kod->kód, \nstrniště->strnisko\nvlaštovka->vlaštufka\nvýměnkář->výměnař, truhlář->stolář\nzebrat->zobrat, zeptat->zoptat\nnead->nerád,nerada->naráda,\npaví->páví, kázání->kázaní\nděravý->diravý\nmůstek->mostek, schůdek->schodek\nlávka->lafka, krúpka\npísnička->pěsnička\npero->péro\nvýko->věko\nfara->fára, mraky->mráky, \nPodstatná jména\nMoravská krátkost: lípa -> lipa, mák->mak, hrách -> hrach, skála ->skala, žába->žaba, sáně->saně, kláda->klada, bláto->blato, vrána->vrana, dát->dat, být->byt, strouha->struha, bříza->březa, křída->křida, ...\nZjednodušení délky: ík -> ik, zedník -> zedňik, rybník->rybňik\nZměna e na y: krev->kryf, déšť -> dyšť,nést->nyst, růst->rust\nmalina->malena\nv zímě\nlůj -> loj\nnehet->neht\nlenu->lnu\nbez keře->kře\nMěkčení na konci: den -> deň, kámen -> kameň, loket -> lokeť, kost -> kosť, ...\nvítr->větr\nZměna rodu: botka -> botek\nnominativ vzor růže E->A: kaše->kaša\nkočky->kočke\nsíto->sito\nSlovesa\nbýt: su, ...\ntrpný rod: určeno -> určené\nimperativ: umyj -> umý, zabij->zabi  (tam gde neexistuje umaj, zabaj)\npokoj->pokuj, neboj->nebuj, \n\nkupuji->kupujo\ndájev->dávé\nnej->né\n\nkošila->košula, břicho->břuch, klička->klučka\n\n
 eou>ú,ó,ou
-cMoravština test\n\n\nx => ks\nch => x\nou -> ú  (možná by nenbylo špatné i ó)\n\nAsimilace\ns vodou->z vodou\nk oknu ->g oknu\n\nHlásky\nVZ->Z: vzlétnout -> zlétnout\nCHC->SC: chcípnout -> scípnout\nŠŤ->ŠČ: štěstí->ščestí, ještě -> ešče\nS->Z: sežrat -> zežrat\nJ proteze: jíva->jíva, jiskra->iskra, \nPoznámka: habr->hrab\nřemen->hřemen\nalmara->halmara, olomouc->holomouc\nhříbatům->hříbjatům\nměsto->mjesto\nhanba->haňba\nkaval->gaval, kořalka->gořalka, katě->gatě,cikán->cigán, guláš, brigáda, \nhdo,\nmůra->mura, stůl.>stul, kůň->kuň, peníze->penize\nmotor->motór, kod->kód, \nstrniště->strnisko\nvlaštovka->vlaštufka\nvýměnkář->výměnař, truhlář->stolář\nzebrat->zobrat, zeptat->zoptat\nnead->nerád,nerada->naráda,\npaví->páví, kázání->kázaní\nděravý->diravý\nmůstek->mostek, schůdek->schodek\nlávka->lafka, krúpka\npísnička->pěsnička\npero->péro\nvýko->věko\nfara->fára, mraky->mráky, \nPodstatná jména\nMoravská krátkost: lípa -> lipa, mák->mak, hrách -> hrach, skála ->skala, žába->žaba, sáně->saně, kláda->klada, bláto->blato, vrána->vrana, dát->dat, být->byt, strouha->struha, bříza->březa, křída->křida, ...\nZjednodušení délky: ík -> ik, zedník -> zedňik, rybník->rybňik\nZměna e na y: krev->kryf, déšť -> dyšť,nést->nyst, růst->rust\nmalina->malena\nv zímě\nlůj -> loj\nnehet->neht\nlenu->lnu\nbez keře->kře\nMěkčení na konci: den -> deň, kámen -> kameň, loket -> lokeť, kost -> kosť, ...\nvítr->větr\nZměna rodu: botka -> botek\nnominativ vzor růže E->A: kaše->kaša\nkočky->kočke\nsíto->sito\nSlovesa\nbýt: su, ...\ntrpný rod: určeno -> určené\nimperativ: umyj -> umý, zabij->zabi  (tam gde neexistuje umaj, zabaj)\npokoj->pokuj, neboj->nebuj, \n\nkupuji->kupujo\ndájev->dávé\nnej->né\n\nkošila->košula, břicho->břuch, klička->klučka\n\n
-z
+cMoravština pouze nedokončený návrh, podle typičnosti Moravy\n\n#Zápis písmen\n-x => ks\n-ch => x\n-ou -> ú  (možná by nebylo špatné i to ó)\n\n<b>Asimilace</b>\n<ul>\n<li>s vodou->z vodú</li>\n<li>k oknu ->g oknu</li>\n</ul>\n\n<b>Hlásky</b>\n<ul>\n<li>VZ->Z: VZlétnout -> Zlétnút</li>\n<li>CHC->SC: CHcípnout -> Scípnút</li>\n<li>ŠŤ->ŠČ: ŠŤěstí->ŠČestí, jeŠTě -> eŠČe</li>\n<li>S->Z: Sežrat -> Zežrat</li>\n<li>Podle výslovnosti: vlaštoVka->vlaštuFka</li>\n</ul>\n\n<b>Slovotvorné předpony/přípony</b>\n<ul>\n<li>ZEbrat->ZObrat, ZEptat->ZOptat</li>\n<li>strnIŠTĚ->strnISKO</li>\n</ul>\n\n<b>Proteze</b>\n<ul>\n<li>J: jíva->jíva, jiskra->iskra</li>\n<li>H: řemen->hřemen</li>\n<li>H: almara->halmara, olomouc->holomúc</li>\n</ul>\n\n<b>Moravská krátkost</b>\n<p>lípa -> lipa, mák->mak, hrách -> hrach, skála ->skala, žába->žaba, sáně->saně, kláda->klada, bláto->blato, vrána->vrana, dát->dat, být->byt, strouha->struha, bříza->březa, křída->křida, lávka->lafka, síto->sito, ...</p>\n<p>můstek->mostek, schůdek->schodek, ...</p>\n\n<b>Doužení</b>\n<p>paví->páví, kázání->kázaní, pero->péro, fara->fára, mraky->mráky, ...</p>\n<p>motor->motór, kod->kód, ...</p>\n\n<b>Měkčení na konci</b>\n<p>den -> deň, kámen -> kameň, loket -> lokeť, kost -> kosť, ...</p>\n\n<b>Někde K->G</b>\n<p>kaval->gaval, kořalka->gořalka, katě->gatě, cikán->cigán, guláš, brigáda, ...</p>\n\n<b>Ě <-> I</b>\n<ul>\n<li>děravý->diravý, ...</li>\n<li>písnička->pěsnička, výko->věko, vítr->větr, ...</li>\n</ul>\n\nPoznámka: \nhabr->hrab\nhříbatům->hříbjatům\nměsto->mjesto\nhanba->haňba\nhdo?\nmůra->mura, stůl.>stul, kůň->kuň, peníze->penize\nvýměnkář->výměnař, truhlář->stolář\nnead->nerád,nerada->naráda,\nkrúpka\n\nPodstatná jména\nZjednodušení délky: ík -> ik, zedník -> zedňik, rybník->rybňik\nZměna e na y: krev->kryf, déšť -> dyšť,nést->nyst, růst->rust\nmalina->malena\nv zímě\nlůj -> loj\nnehet->neht\nlenu->lnu\nbez keře->kře\nZměna rodu: botka -> botek\nnominativ vzor růže E->A: kaše->kaša\nkočky->kočke\n\nSlovesa\nbýt: su, ...\ntrpný rod: určeno -> určené\nimperativ: umyj -> umý, zabij->zabi  (tam gde neexistuje umaj, zabaj)\npokoj->pokuj, neboj->nebuj, \n\nkupuji->kupujo\ndávej->dávé\nnej->né\n\nkošila->košula, břicho->břuch, klička->klučka\n\n
 lMoravština
-g
 xjazyky
 q3
 oMorava
@@ -2772,14 +2770,14 @@ zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
 -
 ohřát|zehřit|zelenÝ|zelenÝ
-zelen|zelen|zelenÝ|zelenÝ
-dob|dob|dobRÝ|dobRÝ
+zelen|zelenÝ|zelenÝ
+dob|dobRÝ|dobRÝ
 děrav|ďirav|zelenÝ|zelenÝ
 hez|pěkn|hezKÝ|zelenÝ
 sněden|snězen|zelenÝ|zelenÝ
 zapřežen|zapřihnut|zelenÝ|zelenÝ
 zapjat|zapnut|zelenÝ|zelenÝ
-začat|začat|zelenÝ|zelenÝ
+začat|zelenÝ|zelenÝ
 vzat|vzit|zelenÝ|zelenÝ
 utřen|utřit|zelenÝ|zelenÝ
 otevřen|otevřit|zelenÝ|zelenÝ
@@ -2808,11 +2806,11 @@ první|4||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||
 štyřI|4|i|ech|em|i|i|ech|mi|||||||||||||||||||||||||||||||||||||||||||||||||
 třI|4|e|třech|em|e|e|ech|emi|||||||||||||||||||||||||||||||||||||||||||||||||
 -
-první|první|první|první
-jed|jed|jedEN|jedEN
-tř|tř|třI|třI
+první|první|první
+jed|jedEN|jedEN
+tř|třI|třI
 pět|pjet|pět|pět
-čtyř|čtyř|čtyřI|čtyřI
+čtyř|čtyřI|čtyřI
 -
 mít|39|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce
 existOVAT|7|-1|ovat|uji,(hovorově) existuju|uješ|uje|ujeme|ujete|ují,(hovorově) existujou|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala
