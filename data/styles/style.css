@@ -192,6 +192,7 @@ html{
 	margin-left: 10px;
 	margin-right: 10px;
 	flex-direction: column;
+	background-color: var(--ConBack);
 }
 #rte{
 	display: table-cell;
@@ -360,7 +361,7 @@ span{
 textarea, #specialTextarea {
 	width: 100%;
 	outline: none;
-	outline: 1px solid #58585827;
+/*	outline: 1px solid #58585827;*/
 	max-height: 70vh;
 	line-height: 32px;
 	user-select: text;
@@ -369,14 +370,14 @@ ul, ol {
 	margin:5px;
 	padding:5px;
 }
-li{
+/*li{
 	margin: 5px;
 	color: darkblue;
 	transition: color var(--transitionSlow);
 }
 li:focus, li:active, li:hover{
 	color: blue;
-}
+}*/
 .dropdown-content{
 	display:none;
 	position:absolute;
