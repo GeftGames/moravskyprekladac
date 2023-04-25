@@ -168,7 +168,7 @@ langs["cs"] = {
 		MoravštinaC: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Překladač Česko-Moravský",
+	TranslatorCM : "Moravský Překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
@@ -359,7 +359,7 @@ langs["en"] = {
 		Moravština: "Moravian C, převaha",
 
 	// Header
-	TranslatorCM : "Translator Czech-Moravian",
+	TranslatorCM : "Moravian Translator",
 	TranslatorMC : "Translator Moravian-Czech",
 
 	// About
@@ -738,7 +738,7 @@ langs["mor"] = {
 		Moravština: "Moravšina C, převaha",
 
 	// Header
-	TranslatorCM : "Překladač Česko-Moravský",
+	TranslatorCM : "Moravský Překladač",
 	TranslatorMC : "Překladač Moravsko-český",
 
 	// About
@@ -929,7 +929,7 @@ langs["pl"] = {
 		Moravština: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Překladač Česko-Moravský",
+	TranslatorCM : "Moravský Překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
@@ -1119,7 +1119,7 @@ langs["sk"] = {
 		Moravština: "Moravčina C, převaha",
 
 	// Header
-	TranslatorCM : "Prekladač Česko-Moravský",
+	TranslatorCM : "Moravský Prekladač",
 	TranslatorMC : "Prekladač Moravsko-český",
 
 	// About
@@ -1309,7 +1309,7 @@ langs["de"] = {
 		Moravština: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Tschechisch-Mährische Übersetzerin",
+	TranslatorCM : "Mährische Übersetzerin",
 	TranslatorMC : "Übersetzer Mährisch-Tschechisch",
 
 	// About
@@ -1499,7 +1499,7 @@ langs["hanak"] = {
 		Moravština: "Moravštěna C, převaha",
 
 	// Header
-	TranslatorCM : "Překladač Česko-Moravské",
+	TranslatorCM : "Moravské Překladač",
 	TranslatorMC : "Překladač Moravsko-České",
 
 	// About
@@ -1689,7 +1689,7 @@ langs["valach"] = {
 		MoravštinaC: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Překladač Česko-Moravský",
+	TranslatorCM : "Moravský Překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
