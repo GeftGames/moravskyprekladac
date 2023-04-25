@@ -3,28 +3,38 @@ function mapper_next(){
 	document.getElementById("areaStartGenerate").style.display="block";
 }
 
+function mapper_zoomIn(){
+	mapper_scale*=1.2;
+	mapperRedraw();
+}
+
+function mapper_zoomOut(){
+	mapper_scale/=1.2;
+	mapperRedraw();
+}
+
 function mapper_init(){
+	mapper_scale=1;
 	document.getElementById("mapperPreview").style.display="block";
 	document.getElementById("areaStartGenerate").style.display="none";
+
+	mapperRedraw();
+}
+let mapper_scale=1;
+
+function mapperRedraw(){	
 	canvasMap = document.getElementById('mapperCanvas');
 	let mapperOuter=document.getElementById("mapperOuter");
 	let displayWidth  = mapperOuter.clientWidth;
 	let displayHeight = mapperOuter.clientHeight;
-//	canvasMap.style.width = displayWidth + 'px';
-//canvasMap.style.height = displayHeight + 'px';
 	canvasMap.width = displayWidth;
 	canvasMap.height = displayHeight;
-	
 
-//	canvasMap.width = canvasMap.clientWidth;
-//	canvasMap.height = canvasMap.clientHeight;
-
-	ctx = canvasMap.getContext('2d');
-	//ctx.save();
-	if (mapper_compute()) {
-		alert(status);
-		return;
-	}
+	ctx = canvasMap.getContext('2d', {willReadFrequently:true});
+	const start = performance.now();
+	mapper_compute();
+	const end = performance.now();
+	console.log('Execution time: '+(end - start)+' ms');
 
 	document.getElementById("downloadMap").style.display="unset";
 }
@@ -39,7 +49,7 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 		//	let word=lang.searchWordAdverb(w);
 			if (word!=undefined) {
 				found=true;
-				points.push([lang.locationX, lang.locationY, word]);
+				points.push([lang.locationX*mapper_scale, lang.locationY*mapper_scale, word]);
 				continue;
 			}
 		//	break;
@@ -87,42 +97,43 @@ function Voronoi(points) {
 			}
 		}
 	//	console.log("rgb("+(id/types.length*255)+",255,255)");
-		c.push('rgb('+Math.round(id/types.length*100+150)+','+Math.round(id/types.length*100+150)+',255)');
+		c.push(Math.round(id/types.length*100+150));//'rgb('+Math.round(id/types.length*100+150)+','+Math.round(id/types.length*100+150)+',255)');
 	}
-//console.log(c);
-	//var cvs=document.getElementById("cvsId");
-	//var ctx=cvs.getContext("2d")
-//	var C=[];
 	var w=canvasMap.clientWidth, h=canvasMap.clientHeight;
-	var x=y=d=dm=j=0, w1=w-2, h1=h-2;
-	var n=points.length;//document.getElementById("sites").value;
-	var mt=1;//document.getElementById("mt").value;
-	//var X=new Array(n), Y=new Array(n), C=new Array(n);
+	var x=y=d=dm=j=0;
+	var n=points.length;
+	let imageData = ctx.createImageData(canvasMap.width, canvasMap.height);
 
-	ctx.fillStyle="gray"; 
 	
-	for(y=0; y<h1; y++) {
-		for(x=0; x<w1; x++) {
-			dm=Metric(h1,w1,mt); 
-			j=-1;
-			for(var i=0; i<n; i++) {
-				d=Metric(points[i][0]-x, points[i][1]-y, mt);
-				if(d<dm) {dm=d; j=i;}
-			}
-			ctx.fillStyle=c[j];//c[i];
-			ctx.fillRect(x,y,1,1);
-		}//fend x
-	}//fend y
+	var img_read = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
+
+	let data = imageData.data, data_r=img_read.data;
+	var i=3;
+
+	for (y = 0; y < h; y++) {
+		for (x = 0; x < w; x++) {
+			if (data_r[i]>0) {			
+				dm=Number.MAX_VALUE;
+				j=-1;
+				for (let k=0; k<n; k++) {
+					let p=points[k];
+					let mapper_xx=p[0]-x, mapper_yy=p[1]-y;
+					d=mapper_xx*mapper_xx+mapper_yy*mapper_yy;
+					if(d<dm) {dm=d; j=k;}
+				}
+				data[i-3] = c[j]; 			
+				data[i-2] = c[j]; 			
+				data[i-1] = 255; 			
+				data[i] = data_r[i];			
+			} 
+			i+=4;
+		}
+	}
+	ctx.putImageData(imageData, 0, 0);
 
 	ctx.fillStyle="black";
 	for(var i=0; i<n; i++) {
 		ctx.fillRect(points[i][0],points[i][1],3,3);
-	}
-
-	function Metric(x,y,mt) {
-		if(mt==1) {return Math.sqrt(x*x + y*y)}
-		if(mt==2) {return Math.abs(x) + Math.abs(y)}
-		if(mt==3) {return(Math.pow(Math.pow(Math.abs(x),3) + Math.pow(Math.abs(y),3),0.33333))}
 	}
 }
 
@@ -144,45 +155,29 @@ function mapper_compute() {
 	}
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
 	ctx.save();
-
+	ctx.drawImage(imgMap, 0, 0, imgMap.width*mapper_scale, imgMap.height*mapper_scale);
 	Voronoi(points);
 	
-
-	// Create triangles
-//	Delaunator.from(points);
-//	delaunay.triangles
-
-ctx.globalCompositeOperation="destination-in";
-ctx.drawImage(imgMap, 0, 0/*,400,400,canvasMap.width,canvasMap.height*/);
-ctx.globalCompositeOperation="source-over";
 	// filter
-	let xx=0,yy=0,mapper_Zoom=1,radius=8;
-	for (let p of points){
+	let xx=0,yy=0, radius=8;
+	for (let p of points) {
 		ctx.fillStyle = "blue";
-	//	ctx.fillRect(p[0], p[1], 10, 10);
-
 		ctx.beginPath();
-		ctx.arc(xx+p[0]*mapper_Zoom, yy+p[1]*mapper_Zoom, radius, 0, 2 * Math.PI);
+		ctx.arc(xx+p[0], yy+p[1], radius, 0, 2 * Math.PI);
 		ctx.fill();
-	}/**/
+	}
 
 	for (let p of points){
 		ctx.fillStyle="Black";
 		let w=ctx.measureText(p.Name).width;
-		ctx.fillText(p[2], xx+p[0]*mapper_Zoom-w/2, yy+p[1]*mapper_Zoom-radius-5);
+		ctx.fillText(p[2], xx+p[0]-w/2, yy+p[1]-radius-5);
 	}
 
 	ctx.restore();
 	return false;
 }
-/*
-	function draw() {
-		if (canvas.getContext) {
-			
-		}
-	}
-*/
-	var points;
+
+var points;
 
 function getPointBetween(p1, p2, p3) {
 		return new Point(X=(p1.X+p2.X+p3.X)/2, X=(p1.X+p2.X+p3.X)/2);
