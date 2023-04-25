@@ -4610,3 +4610,10 @@ function auto_grow() {
     document.getElementById("specialTextarea").style.minHeight = (document.getElementById('specialTextarea').scrollHeight) + "px";
 }
 
+function mapper_download(){
+	let canvas= document.getElementById('mapperCanvas');
+	var a = document.createElement("a");
+	a.href = canvas.toDataURL("image/png");
+	a.download = "Mapa.png";
+	a.click();
+}
