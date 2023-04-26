@@ -1,3 +1,4 @@
+var mapper_ShowNote=true;
 function mapper_next(){
 	document.getElementById("mapperPreview").style.display="none";
 	document.getElementById("areaStartGenerate").style.display="block";
@@ -22,11 +23,17 @@ function mapper_init(){
 }
 let mapper_scale=1;
 
-function mapperRedraw(){	
+function mapperRedraw(){ 	
 	canvasMap = document.getElementById('mapperCanvas');
 	let mapperOuter=document.getElementById("mapperOuter");
+mapperOuter.style.width=Math.round(imgMap.width*mapper_scale)+"px";
+mapperOuter.style.height=Math.round(imgMap.width*mapper_scale)+"px";
+	
 	let displayWidth  = mapperOuter.clientWidth;
 	let displayHeight = mapperOuter.clientHeight;
+
+	//, imgMap.height*mapper_scale);
+
 	canvasMap.width = displayWidth;
 	canvasMap.height = displayHeight;
 
@@ -48,9 +55,11 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 		let word=lang.Translate(w,false);
 		//	let word=lang.searchWordAdverb(w);
 			if (word!=undefined) {
-				found=true;
-				points.push([lang.locationX*mapper_scale, lang.locationY*mapper_scale, word]);
-				continue;
+				if (!word.includes('undefined')){ // Toto by se stávat nemělo
+					found=true;
+					points.push([lang.locationX*mapper_scale, lang.locationY*mapper_scale, word]);
+					continue;
+				}
 			}
 		//	break;
 		//}		
@@ -104,11 +113,136 @@ function Voronoi(points) {
 	var n=points.length;
 	let imageData = ctx.createImageData(canvasMap.width, canvasMap.height);
 
-	
 	var img_read = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
 
 	let data = imageData.data, data_r=img_read.data;
 	var i=3;
+
+	//500ms
+	let cpuCores=navigator.hardwareConcurrency;
+	let arr =[];
+
+/*	for(let c=0; c<cpuCores; c++) {
+		arr.push(c);
+	}*/
+	// získání dat z obrázku
+	//const imageData = ctx.getImageData(0, 0, canvasMap.width, canvasMap.height).data;
+
+	// určení počtu Web Workers
+	/*	const numWorkers = cpuCores;
+	const chunkSize = Math.floor(data.length / numWorkers);
+
+	// vytvoření a spuštění Web Workers
+	const workers = [];
+	for (let i = 0; i < numWorkers; i++) {
+		const start = i * chunkSize;
+		const end = (i + 1) * chunkSize;
+
+		const worker = new Worker('data/scripts/worker.js');	
+		
+		worker.onmessage = function(e) {
+			// uložení zpracovaných dat zpět do imageData
+			const start = e.data.start, end = e.data.end;
+			const imageDataChunk = e.data.dataOut;
+			console.log(imageDataChunk)	;
+			for (let i = start; i < end; i++) {
+				imageData.data[i] = imageDataChunk[i-start];
+			}
+
+			// kontrola, zda jsou všechna vlákna hotová
+			const done = workers.every(function(worker) {
+				return worker.isDone;
+			});
+		}
+		
+		worker.postMessage({
+			start: start,
+			end: end,
+			imageData: data_r.slice(start, end),
+			dataOut: data.slice(start, end),
+		});
+	}
+    // pokud jsou všechna vlákna hotová, vy
+const promises = arr.map(() => {
+		// Create a promise for each item in the array
+		return new Promise((resolve, reject) => {
+		  // Do some work with item and resolve the promise when finished
+		 // console.log(item);
+		  doJob(Math.round(c/cpuCores*h), Math.round((c+1)/cpuCores*h));
+			resolve();
+		 
+		});
+	  });
+	  
+	  Promise.all(promises).then(() => {
+		console.log("All tasks completed");
+	  });
+	await mainWithForEach();
+	async function mainWithForEach() {
+	//	const start = Date.now();
+	//	const logger = getLogger("mainWithForEach");
+		promises.forEach(async (item) => {
+		//  await waitFor(2);
+		//  const later = Date.now();
+		//  logger(item, later - start);
+		  doJob(Math.round(c/cpuCores*h), Math.round((c+1)/cpuCores*h));
+		//  console.log('Processed ' + element);
+		});
+	  }
+
+	/*await promises.forEachParallel(async (c) => {
+		doJob(Math.round(c/cpuCores*h), Math.round((c+1)/cpuCores*h));
+		  console.log('Processed ' + element);
+		
+	  });
+/*
+	async function handler() {
+		for(let c=0; c<cpuCores; c++) {
+			promises.push(makeRequest(Math.round(c/cpuCores*h), Math.round((c+1)/cpuCores*h)));
+		}
+		
+		await process(promises);
+		console.log(`processing is complete`);
+	}
+	async function process(arrayOfPromises) {
+		console.time(`process`);
+		let responses = await Promise.all(arrayOfPromises);
+		for(let r of responses) {}
+		console.timeEnd(`process`);
+		return;
+	}
+
+	function makeRequest() {
+		return new Promise((doJob) => {
+		  setTimeout(() => doJob({ 'status': 'done' }), 2000);
+		});
+	}
+
+	handler();
+*/
+/*
+	function doJob(from, to) {
+		for (y = from; y < to; y++) {
+			for (x = 0; x < w; x++) {
+				if (data_r[i]>0) {			
+					dm=Number.MAX_VALUE;
+					j=-1;
+					for (let k=0; k<n; k++) {
+						let p=points[k];
+						let mapper_xx=p[0]-x, mapper_yy=p[1]-y;
+						d=mapper_xx*mapper_xx+mapper_yy*mapper_yy;
+						if(d<dm) {dm=d; j=k;}
+					}
+					data[i-3] = c[j]; 			
+					data[i-2] = c[j]; 			
+					data[i-1] = 255; 			
+					data[i] = data_r[i];			
+				} 
+				i+=4;
+			}
+		}
+		return;
+	}*/
 
 	for (y = 0; y < h; y++) {
 		for (x = 0; x < w; x++) {
@@ -129,12 +263,12 @@ function Voronoi(points) {
 			i+=4;
 		}
 	}
-	ctx.putImageData(imageData, 0, 0);
+	ctx.putImageData(/*data*/imageData, 0, 0);
 
-	ctx.fillStyle="black";
+	/*ctx.fillStyle="black";
 	for(var i=0; i<n; i++) {
 		ctx.fillRect(points[i][0],points[i][1],3,3);
-	}
+	}*/
 }
 
 let status;
@@ -159,24 +293,32 @@ function mapper_compute() {
 	Voronoi(points);
 	
 	// filter
-	let xx=0,yy=0, radius=8;
+	let xx=0,yy=0, radius=6;
+	ctx.fillStyle = "blue";
 	for (let p of points) {
-		ctx.fillStyle = "blue";
 		ctx.beginPath();
 		ctx.arc(xx+p[0], yy+p[1], radius, 0, 2 * Math.PI);
 		ctx.fill();
 	}
 
+	ctx.fillStyle="Black";
 	for (let p of points){
-		ctx.fillStyle="Black";
 		let w=ctx.measureText(p.Name).width;
 		ctx.fillText(p[2], xx+p[0]-w/2, yy+p[1]-radius-5);
 	}
-
+	if (mapper_ShowNote) {
+		ctx.fillStyle="Black";
+		let text="Vygenerováné "+serverName;
+		let w=ctx.measureText(text);
+		ctx.fillText(text,canvasMap.width-w.width-4, canvasMap.height-1-10);
+	}
 	ctx.restore();
 	return false;
 }
-
+function mapper_Note(){
+	var checkBox = document.getElementById("mapperNote");
+	mapper_ShowNote=checkBox.checked;
+}
 var points;
 
 function getPointBetween(p1, p2, p3) {
