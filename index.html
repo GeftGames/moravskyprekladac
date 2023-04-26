@@ -9,6 +9,7 @@
 		<script src="translator/v1/translate.js"></script>
 		<script src="data/scripts/langs.js"></script>
 		<script src="translator/v1/mapper.js"></script>
+		<link rel="prefetch" href="data/scripts/worker.js" as="worker" />
 
 		<!-- Theme -->
 		<meta name="theme-color" content="#66ccff">
@@ -454,24 +455,28 @@
 						</div>
 						<div><p class="mapperPageHeader" id="mapperGanerateMap">Generátor map</p></div>
 					</div>
-					<div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;*/height: -webkit-fill-available;display: flex; justify-content: center;">
+					<div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;height: -webkit-fill-available;*/display: flex; justify-content: center;">
 						<div id="areaStartGenerate" class="listButtons">
 							<p id="mapperSearchWord">Hledaná fráze</p>
 							<input type="text" id="mapperInput" value="" style="font-size: 5mm;">
 							<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="margin-top: 5mm;" >Vytvořit mapu</a>
 							
 						</div>
+						
 						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;">
-							<div class="listButtons">
+							<div class="listButtons;	flex-wrap: wrap;							flex-direction: row;">
 								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_download()" style="margin-top: 5px;">Stáhnout mapu</a>
 								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()" style="margin-top: 5px;">Generovat další mapu</a>
 								<a rel="nofollow" class="button" id="mapperZoomIn" onclick="mapper_zoomIn()" style="margin-top: 5px;">Přiblížit</a>
 								<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapper_zoomOut()" style="margin-top: 5px;">Oddálit</a>
+								<p><input type="checkbox" checked id="mapperNote" onclick="mapper_Note()">Poznámka vygenerované</p>
 								<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>
 							</div>
-							<div id="mapperOuter" style="width: -webkit-fill-available;   height: -webkit-fill-available">
+							<div style="    max-width: 100%;    overflow: scroll;    max-height: 100vh;    width: fit-content;">
+							<div id="mapperOuter" style="width: -webkit-fill-available;   height: -webkit-fill-available;border:none">
 								<canvas id="mapperCanvas" style="/*width:400px; height: 400px*/height: -webkit-fill-available;"></canvas>
 							</div>
+						</div>
 						</div>
 					</div>
 				</div>			
