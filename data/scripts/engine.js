@@ -850,9 +850,10 @@ function ChangeDev() {
     if (dev) {
         document.getElementById('whiteabout').style.display = 'block';
         document.getElementById('refresh').style.display = 'block';
-
+		document.getElementById('uploadown').style.display = 'block';
     } else {
         document.getElementById('whiteabout').style.display = 'none';
+		document.getElementById('uploadown').style.display = 'none';
         document.getElementById('refresh').style.display = 'none';
     }
 }
@@ -1003,34 +1004,40 @@ function setNodeAboutPage(){
 function setNodeMapPage(){
 	document.getElementById("mapPage").style.display="none";
 }
-function SelectLang(){
-
-
-}
 
 let langFile;
 function SetLanguage() {
+	let tmpLang;
     if (language == "default") {
         var userLang = navigator.language || navigator.userLanguage;
-        if (userLang == "cs") language = "mo";
-        else if (userLang == "de") language = "de";
-        else if (userLang == "sk") language = "sk";
-        else if (userLang == "jp") language = "jp";
-        else language = "en";
-    }
+		let defc=localStorage.getItem("DefaultCountry");
+        if (userLang == "cs") {
+			if (defc === null) {
+				tmpLang = "cs";
+			} else {
+				if (defc=="Morava") tmpLang = "mor";
+				else if (defc=="Slezsko") tmpLang = "slz";
+				else if (defc=="Slezsko") tmpLang = "ces";
+				tmpLang = "cs";//console.log(defc=="Morava");
+			}			
+		} else if (userLang == "de") tmpLang = "de";
+        else if (userLang == "sk") tmpLang = "sk";
+        else if (userLang == "jp") tmpLang = "jp";
+        else tmpLang = "en";
+    }else tmpLang=language;
 
-	langFile=langs[language];
+	langFile=langs[tmpLang];
 	if (langFile==undefined) {
-		console.log("Unknown lang: "+lang+", userLang"+language);
+		console.log("Unknown lang: "+lang+", userLang"+tmpLang);
 		return;
 	}
-
+	
 	localStorage.setItem('setting-language', language);
   
-  document.documentElement.lang = language;
+    document.documentElement.lang = tmpLang;
 
 	var headID = document.getElementsByTagName('manifest');
-	headID.href = "data/manifests/manifest" + language.toUpperCase() + ".json";
+	headID.href = "data/manifests/manifest" + tmpLang.toUpperCase() + ".json";
 
     document.getElementById("from").innerText = langFile.From;
     document.getElementById("to").innerText = langFile.To;
@@ -1070,7 +1077,7 @@ function SetLanguage() {
 	document.getElementById("textSettings").innerText = langFile.Settings;
 	document.getElementById("closeAbout").innerText = langFile.Close;
 	document.getElementById("aboutTranslator").innerText = langFile.About;
-	document.getElementById("privacy").innerText = langFile.Privacy;
+	//document.getElementById("privacy").innerText = langFile.Privacy;
 	document.getElementById("comment").innerText = langFile.Comment;
 	document.getElementById("contact").innerText = langFile.Contact;
 	document.getElementById("forGoodComputerUsers").innerText = langFile.CommentForDev;
@@ -1082,35 +1089,61 @@ function SetLanguage() {
 	document.getElementById("supportFiles").innerText = langFile.FileSupport;
 	document.getElementById("textbetaFunctionsDetails").innerText = langFile.MoreInfoBetaTranslate;
 	document.getElementById("czech").innerText = langFile.Czech;
+	document.getElementById("aboutTranslatorText").innerText = langFile.AboutTranslator;
+	document.getElementById("textItsNotBest").innerText = langFile.ItsNotBest;
+	document.getElementById("textNoMoney").innerText = langFile.NoMoney;
+	//document.getElementById("textItsPrivate").innerText = langFile.ItsPrivate;
+	document.getElementById("textWhatIsQ").innerText = langFile.WhatIsQ;
+	document.getElementById("textStillWorking").innerText = langFile.StillWorking;
+	document.getElementById("textWhatWeUse").innerText = langFile.WhatWeUse;
+	document.getElementById("textHowWeTranslate").innerText = langFile.HowWeTranslate;
+	document.getElementById("textWeFree").innerText = langFile.WeFree;
+	document.getElementById("tabDic").innerText = langFile.Dic;
+
     if (document.getElementById('specialTextarea').value == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' +  langFile.HereShow + '</span>';
 
     let headername = document.getElementById('headername');
     headername.innerText = langFile.TranslatorCM;
     document.title = langFile.TranslatorCM;
+
+	let manifest=document.getElementById("manifest");
+	if (manifest==null) {
+		manifest=document.createElement("link");
+		manifest.href="data/manifests/manifest" + langFile.Code.toUpperCase() + ".json";
+		manifest.rel="manifest";
+		manifest.id="manifest";
+		document.getElementsByTagName('head')[0].appendChild(manifest);	
+	} else {
+		manifest.href = "data/manifests/manifest" + langFile.Code.toUpperCase() + ".json";
+	}
 }
 
 function TabSelect(enableElement, tab) {
 	if (tab==tabText){
 		tabText.classList.add("tabSelected");
 		tabSubs.classList.remove("tabSelected");
+		tabDic.classList.remove("tabSelected");
 		tabTxtFiles.classList.remove("tabSelected");
-		// return;
-	}else
-	if (tab==tabSubs) {
+	}else if (tab==tabSubs) {
 		tabText.classList.remove("tabSelected");
 		tabSubs.classList.add("tabSelected");
+		tabDic.classList.remove("tabSelected");
 		tabTxtFiles.classList.remove("tabSelected");
-		///return;
-   	}else
-   	if (tab==tabTxtFiles){
+   	}else if (tab==tabTxtFiles){
 		tabText.classList.remove("tabSelected");
+		tabDic.classList.remove("tabSelected");
 		tabSubs.classList.remove("tabSelected");
 		tabTxtFiles.classList.add("tabSelected");
-	//	return;
+	}else if (tab==tabDic){
+		tabText.classList.remove("tabSelected");
+		tabTxtFiles.classList.remove("tabSelected");
+		tabSubs.classList.remove("tabSelected");
+		tabDic.classList.add("tabSelected");
 	}
 
 	// Disable all
 	translateText.style.display='none'; 
+	translateDic.style.display='none'; 
 	translateSubs.style.display='none';
 	translateFiles.style.display='none';
 
@@ -1270,6 +1303,7 @@ function hideNav() {
 }
 
 function Load() {
+	//geolocation();
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cache */
 	//if (window.location=="https://geftgames.github.io/moravskyprekladac/") window.location="https://moravskyprekladac.pages.dev/"
@@ -1286,6 +1320,7 @@ function Load() {
         window.location = hashless_url;
         return;
     }
+
     /*
     	if ('serviceWorker' in navigator) {
     		window.addEventListener('load', function () {
@@ -1468,94 +1503,36 @@ function Load() {
         language = zlanguage;
         if (document.getElementById("manifest")!==null) document.getElementById("manifest").href = "data/manifests/manifest" + zlanguage.toUpperCase() + ".json";
     } else {
-        // By navigator
-        /*
-
-        		var morava = false;
-
-        		// By ip
-        		if (userLangNavigator == "cs") {
-        			var city = "";
-        			var region = "";
-        			var country = "";
-        			if (document.getElementById("clientLocationCity")) city = document.getElementById("clientLocationCity").innerText;
-        			if (document.getElementById("clientLocationRegion")) region = document.getElementById("clientLocationRegion").innerText;
-        			if (document.getElementById("clientLocationCountry")) country = document.getElementById("clientLocationCountry").innerText;
-
-
-        			//var langs = [];
-
-        			if (region == "Olomoucký") {
-        				morava = true;
-        			}
-
-        			if (region == "Jihomoravský") {
-        				morava = true;
-        			}
-
-        			if (region == "Zlínský") {
-        				morava = true;
-        			}
-
-        			if (region == "Moravskosloezský") {
-        				// Po nasymu
-        				if (city == "Český Těšín") oblast = "ceskytesin";
-        				else if (city == "Karviná") oblast = "ceskytesin";
-        				else if (city == "Bohumín") oblast = "ceskytesin";
-        				else if (city == "Jablunkov") oblast = "ceskytesin";
-        				else morava = true;
-        			}
-
-        			if (region == "Pardubický") {
-        				if (city == "Svitavy") morava = true;
-        				if (city == "Moravská Třebová") morava = true;
-        			}
-
-        			if (region == "Vysočina") {
-        				if (city == "Jihlava") morava = true;
-        				if (city == "Telč") morava = true;
-        				if (city == "Třebíč") morava = true;
-        				if (city == "Velké Meziříčí") morava = true;
-        				if (city == "Žďár nad Sázavou") morava = true;
-        			}
-        			if (region == "Jihočeský") {
-        				if (city == "Dačice") morava = true;
-        				if (city == "Slavonice") morava = true;
-        			}
-        			if (morava) language = "mo"; else language = "cs";
-        			document.getElementById("manifest").href="manifest"+language.toUpperCase()+".json";
-        		} else {
-        			
-        			
-        		}*/
+      
         var userLang = navigator.language || navigator.userLanguage;
-        if (userLang == "de") language = "de";
-        else if (userLang == "sk") language = "sk";
-        else if (userLang == "jp") language = "jp";
-		else if (userLang == "cs") language = "cs";
-        else language = "en";
+		language="default";
+		let l="";
+        if (userLang == "de") l = "de";
+        else if (userLang == "sk") l = "sk";
+        else if (userLang == "jp") l = "jp";
+		else if (userLang == "cs") l = "cs";
+        else l = "en";/**/
 
 		let el=document.getElementById("manifest");
 		if (el==undefined) {
 			let manifest = document.createElement("link");
-			manifest.link= "data/manifests/manifest" + language.toUpperCase() + ".json";
+			manifest.link= "data/manifests/manifest" + l.toUpperCase() + ".json";
 			manifest.id  = "manifest";
 			manifest.rel = "manifest";
 			document.head.appendChild(manifest);
-		} else el.href = "data/manifests/manifest" + language.toUpperCase() + ".json";
-
-        //if (userLang == "cs") { textDefault = "Výchozí"; } else if (userLang == "de") { textDefault = "Ursprünglich"; } else if (userLang == "sk") { textDefault = "Predvolené"; } else if (userLang == "jp") { textDefault = "ディフォルト"; } else { textDefault = "Default"; }
-        //document.getElementById('textDefault').innerText = textDefault;
-
-    }
+		} else el.href = "data/manifests/manifest" + l.toUpperCase() + ".json";
+    }	
+	DetectLoacation();
     if (zdev == null) dev = false;
     else dev = (zdev == "true");
 	if (dev) {
         document.getElementById('whiteabout').style.display = 'block';
         document.getElementById('refresh').style.display = 'block';
+		document.getElementById('uploadown').style.display = 'block';
     } else {
         document.getElementById('whiteabout').style.display = 'none';
         document.getElementById('refresh').style.display = 'none';
+		document.getElementById('uploadown').style.display = 'none';
     }
 
 	   if (zbetaFunctions == null) betaFunctions = false;
@@ -4616,4 +4593,358 @@ function mapper_download(){
 	a.href = canvas.toDataURL("image/png");
 	a.download = "Mapa.png";
 	a.click();
+}
+
+function geolocation(){
+/*1	https://geolocation-db.com/json/
+-1	https://ip-api.io/json/
+https://lite.ip2location.com/czechia-ip-address-ranges
+geoip_isp_by_name
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {*/
+  if (navigator.geolocation) {
+ let pos =   navigator.geolocation.getCurrentPosition(showPosition);
+ console.log(navigator.geolocation);
+  } else {
+    console.log(  "Geolocation is not supported by this browser.");
+ }
+
+ function showPosition(position) {
+	console.log(position);
+//	x.innerHTML = "Latitude: " + position.coords.latitude +
+	//"<br>Longitude: " + position.coords.longitude;
+  }
+
+}
+
+// function showPosition(position) {
+	// if (navigator.geolocation) {
+// - x.innerHTML = "Latitude: " + position.coords.latitude +
+  //"<br>Longitude: " + position.coords.longitude;
+//}
+//</script>
+//
+//}
+
+function DetectLoacation() {
+	if (!navigator.languages.includes('cs') && !navigator.languages.includes('cz')) return;
+	if (language != "default") return;
+	if (localStorage.getItem('DefaultCountry') !== null) return;
+	
+	//https://api.criminalip.io/v1/ip/data?ip=1.1.1.1&full=true
+	let url="http://ip-api.com/json";
+	
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		
+		let json=this.responseText;	
+		let data=JSON.parse(json);
+		if (data.status=="success") {
+			if (data.countryCode=="CZ") {			
+				let country=LocationNormalize(data);
+				localStorage.setItem('DefaultCountry', country);
+				SetLanguage();
+			}
+		}
+	}
+	xhttp.open("GET", url, true);
+	xhttp.send();
+
+	function LocationNormalize(data) {
+		let country="";
+
+		switch (data.regionName) {
+			case "Zlínský kraj":
+				country="Morava";
+				break;
+
+			case "Olomoucky kraj":
+				switch (data.city) {
+					case "Uničov":
+						country="Morava";
+						break;
+
+					case "Olomouc":
+						country="Morava";
+						break;
+
+					case "Přerov":
+						country="Morava";
+						break;
+
+					case "Prostějov":
+						country="Morava";
+						break;
+
+					case "Zábřeh":
+						country="Morava";
+						break;
+
+					case "Šumperk":
+						country="Morava";
+						break;
+
+					case "Bruntál":
+						country="Slezsko";
+						break;
+
+					case "Krnov":
+						country="Slezsko";
+						break;
+
+					case "Jeseník":
+						country="Slezsko";
+						break;
+					
+					case "Rýmařov":
+						country="Morava";
+						break;
+					
+					case "Šternberk":
+						country="Morava";
+						break;
+
+					case "Osoblaha":
+						country="Morava";
+						break;
+
+					default:
+						country="Morava";
+						break;
+				}
+				break;
+
+			case "Moravskoslezský kraj":
+				switch (data.city) {
+					case "Ostrava":
+						country="Morava";
+						break;
+
+					case "Příbor":
+						country="Morava";
+						break;
+
+					case "Nový Jíčín":
+						country="Morava";
+						break;
+
+					case "MOravský Beroun":
+						country="Morava";
+						break;
+
+					case "Budišov nad Budišovkou":
+						country="Morava";
+						break;
+
+					case "Bruntál":
+						country="Slezsko";
+						break;
+
+					case "Krnov":
+						country="Slezsko";
+						break;
+
+					case "Opava":
+						country="Slezsko";
+						break;
+
+					case "Bohumín":
+						country="Slezsko";
+						break;
+					
+					case "Karviná":
+						country="Slezsko";
+						break;
+					
+					case "Havířov":
+						country="Slezsko";
+						break;
+
+					case "Český Těšín":
+						country="Slezsko";
+						break;
+							
+					case "Jablunkov":
+						country="Slezsko";
+						break;
+						
+					case "Šenov":
+						country="Slezsko";
+						break;
+
+					case "Bílovec":
+						country="Slezsko";
+						break;
+
+					case "Vítkov":
+						country="Slezsko";
+						break;
+
+					case "Horní Benešov":
+						country="Slezsko";
+						break;
+
+					default:
+						country="Slezsko";
+						break;
+				}
+				break;
+
+			case "Jihomoravský kraj":
+				country="Morava";
+				break;
+
+			case "Pardubický kraj":
+				switch (data.city) {
+					case "Svitavy":
+						country="Morava";
+						break;
+
+					case "Moravská Třebová":
+						country="Morava";
+						break;
+
+					case "Březová nad Svitavou":
+						country="Morava";
+						break;
+
+					case "Jevíčko":
+						country="Morava";
+						break;
+
+					default:
+						country="Čechy";
+						break;
+				}
+				break;
+
+			case "Kraj Vysočina":
+				switch (data.city) {
+					case "Telč":
+						country="Morava";
+						break;
+
+					case "Jihlava":
+						country="Morava";
+						break;
+
+					case "Třebíč":
+						country="Morava";
+						break;
+
+					case "Ždár nad Sázavou":
+						country="Morava";
+						break;
+
+					case "nové Město na Moravě":
+						country="Morava";
+						break;
+
+					case "Velké Meziříčí":
+						country="Morava";
+						break;
+
+					case "Třebíč":
+						country="Morava";
+						break;
+
+					case "Náměšť nad Oslavou":
+						country="Morava";
+						break;
+
+					case "Třešť":
+						country="Morava";
+						break;
+					
+					case "Bystřice nad Perštejnem":
+						country="Morava";
+						break;
+					
+					case "Moravské Budějovice":
+						country="Morava";
+						break;
+					
+					case "Humpolec":
+						country="Čechy";
+						break;
+				
+					case "Pelhřimoc":
+						country="Čechy";
+						break;
+			
+					case "Havlíčkův Brod":
+						country="Čechy";
+						break;
+		
+					case "Chotěboř":
+						country="Čechy";
+						break;
+	
+					case "Pacov":
+						country="Čechy";
+						break;
+
+					case "Habry":
+						country="Čechy";
+						break;
+
+					case "Světlá nad Sázavou":
+						country="Čechy";
+						break;
+
+					case "Přybyslav":
+						country="Čechy";
+						break;
+
+					case "Horní Cerekev":
+						country="Čechy";
+						break;
+
+					default:
+						country="Morava";
+						break;
+				}
+				break;
+
+			case "Jihočeský kraj":
+				switch (data.city) {
+					case "Dačice":
+						country="Morava";
+						break;
+
+					case "Slavonice":
+						country="Morava";
+						break;
+
+					case "Staré Hobzí":
+						country="Morava";
+						break;
+
+					case "Dešná":
+						country="Morava";
+						break;
+
+					case "Písečné":
+						country="Morava";
+						break;
+
+					case "Budíškovice":
+						country="Morava";
+						break;
+
+					default:
+						country="Čechy";
+						break;
+				}
+				break;
+
+			default:
+				country="Čechy";
+				break;
+		}
+
+		return country;
+	}
 }
