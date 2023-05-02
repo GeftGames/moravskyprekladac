@@ -4,13 +4,12 @@ tStarý Hrozenkov
 aGG
 d02.03.2023 8:42:10
 iZde malá ukázka z knihy:\nReta, Ludzja, reta  (reta = pomoc)\nIšli raz chlapci na Rovně na fotbál, Na prjékope sedzeli cetka a bedákali: „Reta, ludzja, reta!“ Chlapci k nim prišli a pítajů sa: „Teti, čo sa vám stalo? »Ále, němá mí gdo otvóric pivo. Tož jéj ho otvorili a cetka im povedá: „Vjece čo chlapci, otvorce mi ešče jedno, čo keby duho nigdo něšól,“\nhttps://kopanice.com/o-kopanicich/o-kopanickem-nareci-a-kroji\n\n Ej,  dajce vy si pokoj aj s vašú řepú! Repa je repa, repú bola a repů ostaně.“\n\nhttp://www.kopanicar.cz/index.php/odkazy/cd/cd-1-okolo-hrozenka\n\nhttps://slovacky.denik.cz/tydenik_slovacko/starostka-vapenic-s-mistostarostu-v-kancelari-recnujem-len-po-kopanicky-30150826.html\n\nhttps://www.karaoketexty.cz/texty-pisni/cimbalky/kdo-ma-pocernu-galanku-142883
-e
-c
-z
+c#Zdroje\n-https://kopanice.com/o-kopanicich/o-kopanickem-nareci-a-kroji\n-http://www.kopanicar.cz/index.php/odkazy/cd/cd-1-okolo-hrozenka\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str. 53
 lKopanická nářečí
 g48.9653422,17.8640403
 xmístní mluva
 q0
+oSlovácko>Kopanice
 -
 -
 -
@@ -36,6 +35,7 @@ cích|cách
 dila|dzila
 bit|bic
 dší|dšia
+al|ał
 -
 člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,lidi|lidí|lidem|lidi|lidé,lidi|lidech|lidmi
 les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
@@ -68,6 +68,7 @@ k|kŮŇ|kŮŇ
 město|mesto||
 milenka|galánka||
 ječmen|jačmeň||
+slovák|słovák||
 -
 -
 -
@@ -76,16 +77,23 @@ tmavovlasá|počerná||
 -
 kDO|-1|do|oho|omu|oho|-|om|ým
 něCO|-1|co|čeho|čemu|co|co|čem|čím
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
 kDO|-1|do|oho|omu|oho|-|om|ým
 ňéČO|-1|čo|čeho|čemu|čo|čo|čem|čím
+tEN|-1|en?|eho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|eho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+ON|-1|vón|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
 -
 něk|ňég|kDO|kDO
 ně|ňé|něCO|ňéČO
+něCO|ňéČO
+t|tEN|tEN
+ON|ON
 -
 -
 -
-|||
+|
 -
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 otevřÍT|14|-1|ít|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
@@ -99,6 +107,8 @@ být|119|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 růst|23|-1|růst|rostu|rosteš|roste|rosteme|rostete|rostou|porostu,budu růst|porosteš,budeš růst|poroste,bude růst|porosteme,budeme růst|porostete,budete růst|porostou,budou růst|rosť|rosťme|rosťte|rostl|rostl|rostla|rostlo|rostli|rostly|rostly|rostla
 bydlET|15|-1|et|ím|íš|í|íme|íte|í,bydlejí|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+chTÍT|15|-1|tít|ci,(nářečně) chcu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 -
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|jece|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 otevřÍT|14|-1|ít|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
@@ -107,10 +117,12 @@ jESC|15|-1|esc|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|ed
 kÚPIC|15|-1|úpic|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
 ostávAT|7|-1|at|ám|áš|á|áme|ajce|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 pÁSC|15|-1|ásc|asu|aseš|ase|aseme|asete|asou|as|asme|aste|ásl|ásl|ásla|áslo|ásli|ásly|ásly|ásla|asen|asen|asena|aseno|aseni|aseny|aseny|asena
-být|119|-1|být|som|jsi|je[p 2],jest|sme|ste|sou|budu|budeš|bude|budeme|budzece|budou|buď,budiž[p 3]|buďme,buďmež[p 3]|buďte,buďtež[p 3]|byl|byl|bola|bolo|boli|boly|boly|bola|jsa|jsouc|jsouce|byv|byvši|byvše
+být|119|-1|být|som|jsi|je[p 2],jest|sme|ste|sou|budu|budeš|bude|budeme|budzece|budou|buď,budiž[p 3]|buďme,buďmež[p 3]|buďte,buďtež[p 3]|byl|byl|bola|boło|boli|boly|boly|bola|jsa|jsouc|jsouce|byv|byvši|byvše
 růst|23|-1|růst|rostu|rosteš|roste|rosteme|rostete|rostou|porostu,budu růst|porosteš,budeš růst|poroste,bude růst|porosteme,budeme růst|porostete,budete růst|porostou,budou růst|rosť|rosťme|rosťte|róstl|róstl|rostla|rostlo|rostli|rostly|rostly|rostla
 bývAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 vĚDĚT|7|-1|ědět|ím|íš|jé|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+chTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce?|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|ceł|ceł|těla?|tělo?|těli?|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
+MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|majú|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 -
 v|vĚDĚT|vĚDĚT
 otevř|otevr|otevřÍT|otevřÍT
@@ -129,6 +141,8 @@ bydl|býv|bydlET|bývAT
 jmenovat|menovat||
 v|vĚDĚT|vĚDĚT
 nev|něv|vĚDĚT|vĚDĚT
+ch|chTÍT|chTÍT
+MÍT|MÍT
 -
 jednou|raz
 ještě|ešče
@@ -138,6 +152,8 @@ jinak|ináč
 hned|hnedz
 -
 mezi|medzi|
+i|aj|
+pod|pot|
 -
 i|aj
 když|kedz
