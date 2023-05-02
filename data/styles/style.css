@@ -49,7 +49,7 @@
 span{
 	transition: color var(--transitionSlow);
 }
-#specialTextarea {
+#specialTextarea,textarea {
 	color: var(--ColorText);
 	background-color: var(--ConBack);
     -moz-appearance: textfield-multiline;
@@ -164,7 +164,7 @@ html{
 	z-index: 5;
 	position: relative;
 }
-#lte, #rte{
+#lte, #rte, #dicRte,#dicLte{
 	max-height: 70vh;
 	text-shadow: 0.5px 0.5px 2px #00000030;
 	transition: background-color var(--transitionSlow), box-shadow var(--transitionSlow), outline var(--transitionRFast), outline-offset var(--transitionRFast);
@@ -182,7 +182,7 @@ html{
 	max-height: 75vh;
 	max-width: 50vw;
 }
-#lte{
+#lte,#dicLte{
 	display: table-cell;
 	margin-right: 5px;
 	margin-left: 10px;
@@ -194,13 +194,13 @@ html{
 	flex-direction: column;
 	background-color: var(--ConBack);
 }
-#rte{
+#rte, #dicRte{
 	display: table-cell;
 	margin-right: 10px;
 	margin-left: 10px;
 	background-color: var(--ConBack);
 }
-#lte:focus-visible{
+#lte:focus-visible,#dicLte:focus-visible{
 	outline: var(--tDash);
 	outline-offset: 5px;
 }
@@ -406,10 +406,10 @@ a:hover{
 	filter: blur(0.5px);
 	user-select: none;
 }
-#lte:focus-within {
+#lte:focus-within,#dicLte:focus-within {
 	box-shadow: 0px 0px 3px rgb(99,167,255);
 }
-#lte:focus-visible {
+#lte:focus-visible ,#dicLte:focus-visible{
 	box-shadow: 0px 0px 3px rgb(99,167,255);
 	outline: var(--tDash);
 	outline-offset: 5px;
@@ -618,6 +618,10 @@ a:focus-visible {
 	font-size: medium;
 	padding-left: 10px; 
 }
+.selectGroup3{  
+	font-size: medium;
+	padding-left: 8px; 
+}
 .selectGroupLang0{font-size: medium;}
 .selectGroupLang1{ font-size: medium;}
 .selectGroupLang2{ font-size: medium;}
@@ -810,18 +814,19 @@ option,optgroup{
 		margin-top: 15px;
 		padding: 10px;
 	}
-	#lte, #rte {
+	#lte, #rte , #dicRte,#dicLte{
 		width: calc(100vw - 20px);
 		margin-left: 0;
 		margin-right: 0;
 		max-width: 100vw;
+
 	}
-	#lte {
+	#lte,#dicLte {
 		margin-bottom: 20px;
-		margin-top: 20px;
+		margin-top: 0px;/**/
 		width: auto;
 	}
-	#rte {
+	#rte, #dicRte {
 		margin-right: 0px;
 		margin-left: 0px;
 		margin-top: 15px;
@@ -836,6 +841,9 @@ option,optgroup{
 @media only screen and (max-width:600px) {
 	.settingHeader{
 		font-size: 6mm;
+	}
+	.tab{
+		font-size:5mm;
 	}
 	p{
 		margin:10px;
@@ -879,7 +887,7 @@ option,optgroup{
 	#transarea {
 		margin-top: 5px;
 	}
-	#rte{
+	#rte, #dicRte{
 		max-height: 40vh;
 	}
 	#changeLangSection{
@@ -987,4 +995,9 @@ input[type="text"]{
 	display: flex;
     flex-direction: column;
     align-items: flex-start;
+	/*flex-wrap: wrap;
+	flex-direction: row;*/
+}
+#note{
+	font-style: italic;
 }
