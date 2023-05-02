@@ -1,4 +1,4 @@
-var mapper_ShowNote=true;
+var mapper_ShowNote=true,mapper_OylyGood=true;
 function mapper_next(){
 	document.getElementById("mapperPreview").style.display="none";
 	document.getElementById("areaStartGenerate").style.display="block";
@@ -26,8 +26,8 @@ let mapper_scale=1;
 function mapperRedraw(){ 	
 	canvasMap = document.getElementById('mapperCanvas');
 	let mapperOuter=document.getElementById("mapperOuter");
-mapperOuter.style.width=Math.round(imgMap.width*mapper_scale)+"px";
-mapperOuter.style.height=Math.round(imgMap.width*mapper_scale)+"px";
+	mapperOuter.style.width=Math.round(imgMap.width*mapper_scale+20)+"px";
+	mapperOuter.style.height=Math.round(imgMap.width*mapper_scale+20)+"px";
 	
 	let displayWidth  = mapperOuter.clientWidth;
 	let displayHeight = mapperOuter.clientHeight;
@@ -39,7 +39,7 @@ mapperOuter.style.height=Math.round(imgMap.width*mapper_scale)+"px";
 
 	ctx = canvasMap.getContext('2d', {willReadFrequently:true});
 	const start = performance.now();
-	mapper_compute();
+	if (mapper_compute())return;
 	const end = performance.now();
 	console.log('Execution time: '+(end - start)+' ms');
 
@@ -47,24 +47,29 @@ mapperOuter.style.height=Math.round(imgMap.width*mapper_scale)+"px";
 }
 
 function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pád=X", "číslo=m"]
-	let points=[];
+	let pts=[];
 	for (const lang of langs) {
 		let found=false;
-	//	for (const a in lang.Adverbs) {
-	//	console.log(lang);
 		let word=lang.Translate(w,false);
-		//	let word=lang.searchWordAdverb(w);
-			if (word!=undefined) {
-				if (!word.includes('undefined')){ // Toto by se stávat nemělo
+		//console.log(lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated);
+		
+		if (word!=undefined) {
+			if (!word.includes('undefined')) { // Toto by se stávat nemělo
+				if (mapper_OylyGood){
+					if (lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated>0){
+						found=true;
+						pts.push([lang.locationX*mapper_scale, lang.locationY*mapper_scale, word]);
+						continue;
+					}
+				}else{
 					found=true;
-					points.push([lang.locationX*mapper_scale, lang.locationY*mapper_scale, word]);
+					pts.push([lang.locationX*mapper_scale, lang.locationY*mapper_scale, word]);
 					continue;
 				}
-			}
-		//	break;
-		//}		
+			}				
+		}
 	}
-	return points;
+	return pts;
 }
 //https://rosettacode.org/wiki/Voronoi_diagram
 // HF#1 Like in PARI/GP: return random number 0..max-1
@@ -276,8 +281,6 @@ let status;
 var canvasMap;
 var ctx;
 
-
-
 function mapper_compute() {
 	// Get points
 	let inputText=document.getElementById("mapperInput").value;
@@ -308,7 +311,8 @@ function mapper_compute() {
 	}
 	if (mapper_ShowNote) {
 		ctx.fillStyle="Black";
-		let text="Vygenerováné "+serverName;
+		let date=new Date();
+		let text="Vygenerováné '"+inputText+"', "+(date.toLocaleString('cs-CZ'))+", "+serverName;
 		let w=ctx.measureText(text);
 		ctx.fillText(text,canvasMap.width-w.width-4, canvasMap.height-1-10);
 	}
@@ -318,6 +322,11 @@ function mapper_compute() {
 function mapper_Note(){
 	var checkBox = document.getElementById("mapperNote");
 	mapper_ShowNote=checkBox.checked;
+}
+
+function mapper_OnlyGood(){
+	var checkBox = document.getElementById("mapperOnlyGood");
+	mapper_OylyGood=checkBox.checked;
 }
 var points;
 

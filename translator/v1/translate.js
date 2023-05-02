@@ -14,6 +14,9 @@ class ItemSentence {
         item.output=raw[1];
 		return item;
     }
+	GetDicForm(name) {		
+		return [this.input, this.output, "", name];
+	}
 }
 
 class ItemSentencePart {
@@ -29,6 +32,11 @@ class ItemSentencePart {
         item.output=raw[1];
 		return item;
     }
+
+	
+	GetDicForm(name) {		
+		return [this.input, this.output, "", name];
+	}
 }
 
 class ItemPatternNoun {
@@ -165,6 +173,12 @@ class ItemNoun {
 		
 		if (dev) console.log("⚠️ function 'GetWordTo' has unknown parameter 'number' with value '"+number+"'");
 		return [this.From+this.PatternFrom.Shapes[fall-1], this.PatternFrom.Gender];
+	}
+
+	
+
+	GetDicForm(name) {		
+		return [this.From+this.PatternFrom[0], this.To+this.PatternTo.Shapes[0], this.PatternTo.Gender, name];
 	}
 	
 	/*GetWordTo(number, fall, gender) {
@@ -320,6 +334,16 @@ class ItemSimpleWord {
 		}
 		return null;
     }
+
+	GetDicForm(name) {
+		let out = "";
+		if (Array.isArray(this.output)) {
+			out=this.output.join(", ");
+		} else {
+			out+=this.output;
+		}
+		return [this.input, out, "", name];
+	}
 }
 
 class ItemPhrase {
@@ -418,6 +442,24 @@ class ItemPhrase {
 		}
 		// for example [["true", "He"], [false, " "], [true, "is"], [false, " "], [true, "guy"], [false, "!"]]
 		return arr;
+	}
+
+	GetDicForm(name) {
+		let inp = "";
+		let out = "";
+				
+		for (let o of this.output) {
+			out+=o.join(" ");
+			//for (let o2 of o) o2+" ";
+		}
+		for (let i of this.input) {
+			inp+=i.join(" ");
+			//for (let i2 of i) inp+=i2+" ";
+		}
+		//out=out.substring(0, out.length-1);
+		//inp=inp.substring(0, out.length-1);
+		
+		return [inp, out, "", name];
 	}
 }
 
@@ -533,6 +575,11 @@ class ItemPreposition {
 		}
 		return null;
 	}
+
+	GetDicForm(name) {
+		if (this.fall!="") return [this.input, this.output.join(', '), "pád: "+this.fall, name];
+		else return [this.input, this.output.join(', '), "", name];
+	}
 }
 
 class SentencePatternWordSubstitution {
@@ -557,16 +604,7 @@ class SentencePatternWordSubstitutionSimple {
 		this.GramaticalNumber=-1;
 	}
 }
-/*
-class WordWithFalls {
-	constructor() {
-		this.selectedIndex = 0;
-		this.input = [];
-		this.output = [];
-		this.def = [];
-	}
-}
-*/
+
 class ItemSentencePattern {
 	constructor() {
 		this.selectedIndex = 0;
@@ -1409,6 +1447,10 @@ class ItemPronoun{
 	
 		return null;
 	}
+
+	GetDicForm(name) {
+		return [this.From+this.PatternFrom.Shapes[0], this.To+this.PatternTo.Shapes[0], "", name];
+	}
 } 
 
 class ItemPatternAdjective{
@@ -1706,6 +1748,10 @@ class ItemAdjective{
 		}
 		return null;
 	}
+
+	GetDicForm(name) {		
+		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], "", name];
+	}
 }
 
 class ItemPatternNumber{
@@ -1747,8 +1793,8 @@ class ItemPatternNumber{
 } 
 
 class ItemNumber{
-	static pattensFrom=[];
-	static pattensTo=[];
+	static PatternFrom=[];
+	static PatternTo=[];
 
 	constructor() {
 		this.From; 
@@ -1942,6 +1988,10 @@ class ItemNumber{
 		}
 
 		if (ret.length==0) return null; else return [ret, this];
+	}
+	
+	GetDicForm(name) {		
+		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], "", name];
 	}
 } 
 
@@ -2344,6 +2394,10 @@ class ItemVerb{
 			if (p.Name==name) return p;
 		}
 	}
+
+	GetDicForm(name) {		
+		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], "", name];
+	}
 } 
 
 class Replace {
@@ -2357,8 +2411,8 @@ class LanguageTr {
 	constructor() {
 		this.Name="";
 	//	this.myVocab=[];
-		this.Words=[];
-		this.SameWords=[];
+	//	this.Words=[];
+		//this.SameWords=[];
 		this.Sentences=[];
 		this.Phrases=[];
 		this.state="instanced";
@@ -2899,6 +2953,144 @@ class LanguageTr {
 		this.state="loaded";
 	}
 
+	GetDic(input) {
+		function IsWordIncluded(w) {
+			if (Array.isArray(w)) {
+				for (let c of w){
+					if (c.includes(input)) {
+						return true;
+					}
+				}
+				return false;
+			}else{
+				return w.startsWith(input);
+			}
+		}
+		
+		function IsWordComIncluded(w) {
+			if (w.PatternFrom==undefined) return false;
+			let ww=w.From+w.PatternFrom[0];
+			return ww.startsWith(input);
+		}
+
+		let out=[];
+		let total=0;
+		for (let w of this.Phrases) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm("fráze"));
+				total++;
+			}
+		}	
+		for (let w of this.Adverbs) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm(" (přís.)"));
+				total++;
+			}
+		}
+		for (let w of this.Particles) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm(" (část.)"));
+				total++;
+			}
+		}
+		for (let w of this.Conjunctions) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm(" (spoj.)"));
+				total++;
+			}
+		}
+		for (let w of this.Interjections) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm(" (cito.)"));
+				total++;
+			}
+		}	
+
+		for (let w of this.SimpleWords) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm(""));
+				total++;
+			}
+		}
+
+		for (let w of this.Sentences) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm("věta"));
+				total++;
+			}
+		}
+		
+		for (let w of this.SentenceParts) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm("část věty"));
+				total++;
+			}
+		}
+		
+		for (let w of this.Nouns) {
+			if (IsWordComIncluded(w)) {
+				out.push(w.GetDicForm("(pods.)"));
+				total++;
+			}
+		}
+		
+		for (let w of this.Pronouns) {
+			if (IsWordComIncluded(w)) {
+				out.push(w.GetDicForm("(zájm.)"));
+				total++;
+			}
+		}
+		for (let w of this.Verbs) {
+			if (IsWordComIncluded(w)) {
+				out.push(w.GetDicForm("(slov.)"));
+				total++;
+			}
+		}
+	
+		for (let w of this.Adjectives) {
+			if (IsWordComIncluded(w)) {
+				out.push(w.GetDicForm("(příd.)"));
+				total++;
+			}
+		}
+		
+		for (let w of this.Numbers) {
+			if (IsWordComIncluded(w)) {
+				out.push(w.GetDicForm("(čísl.)"));
+				total++;
+			}
+		}
+		
+		for (let w of this.Prepositions) {
+			if (IsWordIncluded(w.input)) {
+				out.push(w.GetDicForm("(před.)"));
+				total++;
+			}
+		}		
+		
+		let display="";
+
+		if (out=="") 		display= "<p style='font-style: italic'>Nenalezen žádný záznam.</p>";
+		else if (total==1)	display= "<p style='font-style: italic'>Nalezen "+total+" záznam.</p>";
+		else if (total<5)	display= "<p style='font-style: italic'>Nalezeny "+total+" záznamy.</p>";
+		else 				display= "<p style='font-style: italic'>Nalezeno celkem "+total+" záznamů.</p>";
+		out=out.sort((a, b) => {
+			if (a[0] instanceof String) return a[0].localeCompare(b[0]);
+			return  false;
+		});
+		let zkr=false;
+		if (out.length>50){ out.splice(50,out.length-50);zkr=true;}
+
+		if (out.length!=0) {
+			for (let z of out) {
+				if (z[2]=="")display+="<p>"+z[0]+" → "+z[1]+"  <i>"+z[3]+"</i></p>";
+				else display+="<p>"+z[0]+" → "+z[1]+"; "+z[2]+"  <i>"+z[3]+"</i></p>";
+			}
+		}
+		if (zkr) display+="<p style='font-style: italic'>Seznam zkrácen.</p>";
+		return display;
+	}
+
 	Translate(input, html) {
 		this.qualityTrTotalTranslatedWell=0;
 		this.qualityTrTotalTranslated=0;
@@ -3149,11 +3341,11 @@ class LanguageTr {
 					printableString=string;
 				}
 
-				if (html){
+			//	if (html) {
 					// Write how well translated
-					if (type!=="Unknown" && type!=="Symbol")this.qualityTrTotalTranslatedWell++;
+					if (type!=="Unknown" && type!=="Symbol") this.qualityTrTotalTranslatedWell++;
 					if (type!=="Symbol")this.qualityTrTotalTranslated++;
-				}
+			//	}
 				let resStr=this.PrepareText(printableString);
 				let retText;
 

@@ -6,55 +6,43 @@
 // 5 - really good
 
 let translations = [
-	/*"Iterdialekty", [
-		"Západomoravský",
-		"Východomoravský",
-		"Severovýchodomoravský",
-	],*/
-
-	"Moravské oblasti", [
+	"Morava", [
 		"Slovácko", [
-			"Podluží|CS_SL-Poluzi|2|48.7260869,16.9665312",
-
+		/*	"Podluží",
 			"Horňácko",
 			"Hanácké Slovácko",
 
 			// Dolňácko
 			"Kyjovsko",
-			"Uherskohradišstko severní",
-			"Uherskohradišstko jižní",
+			"Uherskohradišstko",
 
-			"Strážnicko Severozápadní",
-			"Strážnicko Jihovýchodní",
+			"Strážnicko",
 
 			//Klobouvsko
-			"Severní Klobukovsko",
-			"Jižní Klobukovsko",
+			"Klobukovsko",
 
 			// nekdy k Valachách
-			"Luhačovické Zálesí|CS_SL-Preckovice|0|49.0727915,17.7640433",
+			"Luhačovické Zálesí",
 
-			"Moravské Kopanice|CS_SL-Kopanice|1|48.9586267,17.8553823"
+			"Moravské Kopanice"*/
 		],
 
 		"Valašsko", [
-			"Uherskohradišťské Závrší",
+			/*"Uherskohradišťské Závrší",
 			"Podřevnicko",
-			"Rožnovsko|CS_VA-Roznov|3|49.4592277,18.143427",
-			"Meziříčsko|CS_VA-ValMez|1|49.4718861,17.9719137",
-			"Klouboukovsko|CS_VA-Klobouky|0|49.1408306,18.0089423",
-			"Vsetínsko|CS_VA-Vsetin|0|49.3398493,17.9948236",
+			"Rožnovsko",
+			"Meziříčsko",
+			"Klouboukovsko",
+			"Vsetínsko",
 			"Visovicko",
-			"Frenštátsko|CS_VA-Frenstat|0|49.5481647,18.2116154",
-			// nekdy zvlášť k Hranicku
-		//	"Kelečsko|CS_VA-Kelc|0",
+			"Frenštátsko",*/
 		],
 
 		"Moravské Horácko", [
 			"Horácko", [
-				//Severní
+			/*	//Severní
 				"Žďársko",
-				"Kunštátsko|CS_PH-Kunstat|0|49.5037014,16.4348512",
+				"Kunštátsko",
 
 				// Střední
 				"Jihlavsko",
@@ -63,257 +51,132 @@ let translations = [
 				"Želetavsko",
 				"Telč",
 				"Dačice",
-				"Jemnicko|CS_HO-Jemnice|1|49.0193216,15.5738121",
+				"Jemnicko",*/
 			],
 
 			"Podhorácko", [
-				// Severní Podhorácko
+			/*	// Severní Podhorácko
 				"Tišnovsko",
 				"Nedvědicko",
 				"Velkomeziříčsko",
 				"Náměšťsko",
 				"Velkobítešsko",
 
-				"Okřížky|CS_PH-Okrizky|0|49.2415278,15.7220176",
-
 				// Jižní Podhorácko
-				"Třebíčsko|CS_PH_Trebicsko|0|49.2160815,15.8822029",
+				"Třebíčsko",
 				"Oslovansko",
 				"Hrotovicko",
 
 				// Pod Brnem
 				"Moravskobudějovicko",
-				"Židlochovicko|CS_PH-Zidlochovicko|1|49.0398171,16.617251",
-
-				"Studenec|CS_PH-Studenec|0|49.1997571,16.0592562"
+				"Židlochovicko",*/
 			],
 
-			"Malá haná", [
-				// Severní
-				"Boskovicko|CS_MH-Boskovicko|2|49.4890528,16.6591199",
+			"Malá haná", 
 
-				// Jižní
-				"Jevíčko",
-
-				"Trnávka",
-			],
-
-			"Horácké Dolsko", [
-				"Znojemsko|CS_PH-Znojmo|1|48.8568601,16.056278",
-			]
+			"Horácké Dolsko", 
 		],
 
 		"Haná", [
-			// nekdy k samostatny
-			"Zábřežsko SZ|CS_HA-ZabrehSZ|0|49.8828721,16.8733299",
-			"Zábřežsko",
+		/*	"Zábřežsko",
 			"Litovelsko",
-			"Olomoucko|CS_HA-Namest|4|49.6040848,17.0646083",
-			"Čuhácko|CS_HA-Cuhacko|2|49.5027837,17.225739",
-			"Prostějovsko Severní",
-			"Prostějovsko Jižní",
+			"Olomoucko",
+			"Čuhácko",
+			"Prostějovsko",
 			"Přerovsko",
-			"Hostýn|CS_HA-Hostyn|0|49.4017719,17.6479803",
-			"Kroměřížsko|CS_HA-Kromeriz|1|49.299031,17.3942005",
+			"Kroměřížsko",
 			"Vyškovsko",
-			"Slavkovsko-Bučovicko|CS_Ha-SlavkovskoBucovicko|1|49.1526485,16.9494219",
+			"Slavkovsko-Bučovicko",*/
 		],
 
-		"Kelečsko, Záhoří, Pobečví", [
-			"Hranicko|CS_KZ-Hranicko|0|49.5896673,17.7119718",
-			"Hostýnské závrší",
-			"Kelečsko|CS_KZ-Kelc|0|49.4791212,17.8183097",
-			"Spálov|CS_Spalov|0|49.7040566,17.7220418"
+		"Hranicko", 
+
+		"Hostýnské záhoří, Pobečví", [
+			//"Pobečví",
+		//	"Kelečsko",
 		],
 
-		"Drahansko, Blansko, Hřebečsko", [
-			"Konicko",
+		"Drahany", [
+		/*	"Konicko",
 			"Protivansko",
 			"Blansko",
-			"Jedovnicko",
+			"Jedovnicko",*/
+		],
+		"Hřebečsko",
+
+		"Lašsko", [
+		/*  "Frýdecko-Mýstecko",
+			"Ostravsko",
+			"Frendštátsko",*/
+		],
+		"Kravařsko", [
+		//	"Jíčinsko",
 		],
 
-		"Lašsko, Kravařsko", // Moravská brána,
-		[
-			// Lašsko
-			"Jižní Frýdecko-Mýstecko|CS_LA-FrydekMistek|1|49.686399,18.3479846",
-			"Ostravsko|CS_LA-Ostrava|0|49.806989,18.2737574",
-			"Frendštátsko",
-			"Novojíčinsko|CS_KR-Jicin|1|49.5950059,18.0108946",
-			//"Staré hamry"
-		],
-
-		"Brněnsko", [
-			"Brněnský hantec|CS_BR-Hantec|0|49.1955339,16.6104917",
-		],
+		"Brněnsko", 
 	],
 
-	"Slezské oblasti", [
+	"Slezsko", [
 		"Těšínské Slezsko", [
-			"Goralsko",
+		/*	"Goralsko",
 			"Karvinsko",
-			"Těšínsko|CS_SZ-Tesin|1|49.7490544,18.6288868",
+			"Těšínsko",
 			"Bohumínsko",
-			"Havířovsko",
+			"Havířovsko",*/
 		],
 
 		"Hlučínsko", [
-			"Hlučínsko",
+		//	"Hlučínsko",
 		],
 
 		"Opavské Slezsko", [
-			"Opavsko",
+		//	"Opavsko",
 		]
 	],
 
-	"Moravský jazyk", [
-	//	"Moravština, nenápadná|CS_MO-Nenapadna|1",
-		"Moravština, návrh|CS_MO-Tradice|2",
-		//"Moravština C, převaha|CS_MO_medium",
-	],
+	"Moravský jazyk",
 
-	/*"Okolní jazyky", [
-		"Čeština",
-		"Slovenština",
-		"Slezština",
-	],*/
+	"Ostatní"
 ];
 
 var languagesList = [];
 
 function init() {
 	if (dev)console.log("Translator inicializating starting...");
-	//let select = document.getElementById('selectorFrom');
-	let select2= document.getElementById("selectorTo");
-	let pointsL2=document.getElementById('layer2');
+	let select2 = document.getElementById("selectorTo");
+
+	InnerSearch(translations, select2, 0);
 	GetFilesInDir();
-	InnerSearch(translations, /*select,*/select2, 0);
-	function InnerSearch(arr, /*parent,*/ parent2, level) {
-	//	select2.innerHTML = '';
-		let onlyStr = true;
-		for (const a of arr) {//const i = 0; i < arr.length; i++
-			if (typeof a !== 'string') {
-				onlyStr = false;
-				break;
-			}
+
+	function InnerSearch(arr, parent, level) {
+		if (typeof arr === 'string') {
+			let group = document.createElement('optgroup');
+			group.label = arr;
+			group.className = "selectGroup" + level;
+			parent.appendChild(group);
+			return;
 		}
-
-		// Nové jazyky
-		if (onlyStr) {
-			//for (let i = 0; i < arr.length; i++) {
-			//	let lang = arr[i];
-			for (const lang of arr) {
-
-				//// Add text to comboBox
-				//if (lang.includes('|')) {
-				//	let s=lang.split('|');
-				//	
-				//	let quality=s[2];//0=nothing, 1=something basic, 2=low quality; 3=medium; 4=good; 5=well done
-				//	if ((!betaFunctions && quality>=2) || (betaFunctions && quality>0) || dev) {
-				//		let name=s[0];
-				//		if (quality<=1) name+=" 👎";
-				//		if (quality>=4) name+=" 👍";
-				//		let file=s[1];
-//
-				//		let tr=new LanguageTr(file);
-				//		tr.quality=quality;
-				//		languagesList.push(tr);
-				//		tr.GetVocabulary(/*dev*/);
-				//		//AllLang.push(file);
-//
-				//		/*let nodeLang = document.createElement('option');
-				//		nodeLang.value=file;
-				//		nodeLang.innerText = name;
-				//		nodeLang.className = "selectGroupLang" + level;
-				//		parent.appendChild(nodeLang);*/
-				//		
-				//		let nodeLang2 = document.createElement('option');
-				//		nodeLang2.value=file;
-				//		nodeLang2.innerText = name;
-				//		nodeLang2.className = "selectGroupLang" + level;
-				//		parent2.appendChild(nodeLang2);
-//
-				//		if (s.length>=4){
-				//			let p=s[3].split(',');
-				//			let locX=parseFloat(p[0]);
-				//			let locY=parseFloat(p[1]);
-				//			//AddPoint(points, name, parseInt(p[0]), parseInt(p[1]));
-//
-				//			let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-				//			circle.classList.add("mapDot");
-				//			circle.setAttribute("r", 3+quality/5);
-				//			circle.addEventListener("click", ()=>{
-				//				//document.getElementById('selectorTo').value=name;
-				//				nodeLang2.selected=true;
-				//				CloseMapPage();
-				//				Translate();
-				//			});
-				//			circle.setAttribute("data-name",s[0]);
-				//			circle.setAttribute("cx",((locY-originX)/scX)*170*1.21-20.92);//((locY-14.888642)/3.8791)*170)
-				//			circle.setAttribute("cy",(-(locX-originY)/scY)*150*1.0367+3.4);
-				//			pointsL2.appendChild(circle);
-//
-				//			/*let txt=document.createElementNS("http://www.w3.org/2000/svg", 'text');
-				//			txt.classList.add("mapTitle");
-				//			txt.setAttribute("text-anchor","middle");
-				//			txt.setAttribute("fill","red");
-				//			txt.innerHTML=s[0];
-				//			txt.setAttribute("data-name",s[0]);
-				//			txt.setAttribute("x",((locY-originX)/scX)*170*1.21-20.92);//((locY-14.888642)/3.8791)*170)
-				//			txt.setAttribute("y",(-(locX-originY)/scY)*150*1.0367+3.4);
-				//			pointsL2.appendChild(txt);*/
-//
-				//			let txt=document.createElement("span");
-				//			txt.classList.add("mapTitle");
-				//			txt.innerHTML=s[0];
-				//			txt.style.left="calc("+(((locY-originX)/scX)*170*1.21-20.92)+"mm)";//((locY-14.888642)/3.8791)*170)
-				//			txt.style.top=((-(locX-originY)/scY)*150*1.0367+3.4)+"mm";
-				//		//	txt.style.position="absolute";
-				//			document.getElementById('mapZoom').appendChild(txt);
-				//		}
-				//	}
-				//} 
+		for (const name of arr) {
+			if (typeof name === 'string') {
+				group = document.createElement('optgroup');
+				group.label = name;
+				group.className = "selectGroup" + level;
+				parent.appendChild(group);
+			} else {
+				if (Array.isArray(name)) InnerSearch(name, parent, level + 1);
 			}
-			return;
-		} else {
-			// Kategorie
-			for (let i = 0; i < arr.length; i += 2) {
-				let name = arr[i];
-				let next = null;
-				if (i + 1 < arr.length) next = arr[i+1];
-				//let nodeLang;
-				let nodeLang2;
-
-				// Add text of category
-				if (typeof name === 'string') {
-					/*nodeLang = document.createElement('optgroup');
-					nodeLang.label = name;
-					nodeLang.className = "selectGroup" + level;
-					select.appendChild(nodeLang);*/
-					
-					nodeLang2 = document.createElement('optgroup');
-					nodeLang2.label = name;
-					nodeLang2.className = "selectGroup" + level;
-					select2.appendChild(nodeLang2);
-				}
-
-				if (Array.isArray(next)) InnerSearch(next, /*nodeLang,*/nodeLang2, level + 1);
-			}
-			return;
 		}
 	}
 }
-//let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
-
 
 let totalDirFiles=-1;
 let downloadedFiles=0;
+
 function GetFilesInDir() {
 	const xhttp = new XMLHttpRequest();
 	xhttp.timeout=4000;
 
 	let select2= document.getElementById("selectorTo");
-	//let pointsL2=document.getElementById('layer2');
 
 	xhttp.onload = function() {		
 		document.getElementById("textDownloadingList").style.display="none";
@@ -327,13 +190,13 @@ function GetFilesInDir() {
 		}
 	}
 	xhttp.addEventListener('error', (e)=>{
-		console.log('error',e);
+		console.log('error', e);
 	});
 	xhttp.open("GET", "https://api.github.com/repositories/417226915/contents/DIC", true);
 	xhttp.send();
 	
 	function DownloadLang(url) {
-		// ne takto, max 4 stahování zároveň, udělé frontu
+		// ne takto, max 4 stahování zároveň, udělé frontu-doplň
 		const xhttp2 = new XMLHttpRequest();
 		xhttp2.timeout=50000;
 
@@ -360,107 +223,86 @@ function GetFilesInDir() {
 
 		let tr=new LanguageTr();
 		tr.Load(lines);
-	//	console.log(tr.Quality);
 		AddLang(tr);
 	}
 
-	function AddLang(lang) {	
-
-		
-//console.log(category);
-		function insideSearch(div) {
+	function AddLang(lang) {
+		function insideSearch(div,cat) {
 			for (let n of div.childNodes) {
 				if (n.nodeName!="#text"){
-					if (n.text==lang.lang) {
+					if (n.label==cat) {
 						return n;
 					}
-				}else insideSearch(n);
+				}
+			}
+			for (let n of div.childNodes) {
+				if (n.nodeName!="#text"){
+					insideSearch(n,cat);
+				}
 			}	
 			return select2;	
 		}
-		let category = insideSearch(select2);
-		
-	//	languagesList.push(tr);
-		//
-		//0=nothing, 1=something basic, 2=low quality; 3=medium; 4=good; 5=well done
-		//console.log("b",lang.Quality);
+
+	
 		if (lang.Name!="") {
-		if ((!betaFunctions && lang.Quality>1) || (betaFunctions && lang.Quality>0) || dev) {
-		//	console.log("a",lang.Quality);
-			let name=lang.Name;
-			if (lang.Quality<=1) name+=" 👎";
-			else if (lang.quality>=4) name+=" 👍";
-			//let file=s[1];
-			//tr.Quality=lang.Quality;
-			languagesList.push(lang);
-			
-			let nodeLang2 = document.createElement('option');
-			lang.option=nodeLang2;
-			nodeLang2.value=lang.Name;
-			nodeLang2.innerText = name;
-		//	console.log("z",lang);
-		//	nodeLang2.className = "selectGroupLang" + level;
-			category.appendChild(nodeLang2);
-		//	console.log(lang);
-		/*	if (!isNaN(lang.locationX) && !isNaN(lang.locationY)) {
-			//	let locX=lang.locationX;
-			//	let locY=lang.locationY;
+			if ((!betaFunctions && lang.Quality>1) || (betaFunctions && lang.Quality>0) || dev) {
+				let name=lang.Name;
+				if (lang.Quality<=1) name+=" 👎";
+				else if (lang.quality>=4) name+=" 👍";
+				languagesList.push(lang);	
+				
+				let category;
+				if (Array.isArray(lang.Category)) {
+					for (let c of lang.Category.reverse()) {
+						let cat=insideSearch(select2,c);
+						if (cat!=select2) {
+							category=cat;
+							break;
+						}
+					}
+					if (category==undefined)category=select2
+				} else {//console.log("ncat");
+					category=insideSearch(select2,lang.Category);			
+				}
+//				console.log(category);
+				
+				let nodeLang = document.createElement('option');
+				lang.option=nodeLang;
+				nodeLang.value=lang.Name;
+				nodeLang.innerText = name;
+				category.appendChild(nodeLang);
+			}
+		}else{
+			if (dev)console.log("This lang has problems", lang);
 
-				let circle=document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-				circle.classList.add("mapDot");
-				if (lang.Quality>3) circle.classList.add("mapDotSoGood");
-				else if (lang.Quality>1) circle.classList.add("mapDotGood");
-				if (lang.Quality==1) circle.classList.add("mapDotNotSoGood");
-				circle.setAttribute("r", lang.Quality>0 ? 3+lang.Quality/5 :1);
-				circle.addEventListener("click", ()=>{
-					nodeLang2.selected=true;
-					CloseMapPage();
-					Translate();
-				});
-				circle.setAttribute("data-name", lang.Name);
-				circle.setAttribute("cx",/*((locY-originX)/scX)*170*1.21-20.92*//*lang.locationX);
-				circle.setAttribute("cy",/*(-(locX-originY)/scY)*150*1.0367+3.4*//*lang.locationY);
-				pointsL2.appendChild(circle);
-
-				let txt=document.createElement("span");
-				txt.classList.add("mapTitle");
-				txt.innerHTML=lang.Name;
-				txt.style.left="calc("+(lang.locationX)+"mm)";
-				txt.style.top=lang.locationY+"mm";
-				document.getElementById('mapZoom').appendChild(txt);
-			}*/
 		}
-	}else{
-		if (dev)console.log("This lang has problems",lang);
-
-	}
 	}
 }
 var map_Zoom=1;
 var map_LocX=0, map_LocY=0;
 var map_LocTmpX=0, map_LocTmpY=0;
 var map_DisplayWidth, map_DisplayHeight;
+
 function mapRedraw(){
 	let canvasMap=document.getElementById("mapSelectLang");
 
 	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
 	map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
-	//var scale = 1;
-	mapSelectLang.width = map_DisplayWidth;//displayWidth;
+
+	mapSelectLang.width = map_DisplayWidth;
 	mapSelectLang.height = map_DisplayHeight;
 
 	let ctx = canvasMap.getContext("2d");
 
-	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
-	
+	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);	
 	
 	ctx.save();
 
 	ctx.drawImage(imgMap, map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
-	ctx.fillStyle="rgba(255,255,255,.5)";	
+	ctx.fillStyle="rgba(255,255,255,.5)";
+
 	ctx.fillRect(map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
 	ctx.font = "16px sans-serif";
-	//ctx.font="bold 20px serif";
 
 	ctx.imageSmoothingEnabled= true;
 
@@ -522,6 +364,7 @@ function mapClick(mX,mY)　{
 			p.option.selected=true;
 			CloseMapPage();
 			Translate();
+			GetDic()
 			return;
 		}	
 	}
@@ -618,13 +461,22 @@ function Translate() {
 
 function TranslateSimpleText(input) {	
 	let lang = GetCurrentLanguage();
-	console.log("input: ", input);
+	//console.log("input: ", input);
 
-	if (lang !== null){
-		
+	if (lang !== null) {		
 		let out=lang.Translate(input,false);
 		if (dev) console.log("Transtated as: ", out);
 		return out;
+	}
+}
+
+function GetDic() {	
+	let lang = GetCurrentLanguage();
+	let input = dicInput.value;
+	if (input=="") document.getElementById("dicOut").innerHTML="";
+	else if (lang !== null) {
+		let out=lang.GetDic(input);
+		document.getElementById("dicOut").innerHTML=out;
 	}
 }
 
