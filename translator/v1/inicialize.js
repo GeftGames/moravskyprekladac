@@ -225,7 +225,7 @@ function GetTranslations() {
 		console.log('error', e);
 	});
 	console.log("send",languagesPackage);
-	xhttp.open("GET", languagesPackage, true);
+	xhttp.open("GET", languagesPackage/*, true*/);
 	xhttp.send();
 
 
