@@ -179,7 +179,7 @@ function GetTranslations() {
 	let select2= document.getElementById("selectorTo");
 
 	xhttp.onload = function() {		
-		console.log("get");
+	
 	//	document.getElementById("textDownloadingList").style.display="none";
 	//	document.getElementById("textDownloadingDic").style.display="block";
 	//	let json=JSON.parse(this.responseText);
@@ -204,7 +204,7 @@ function GetTranslations() {
 	}
 		const delimiter='§'
 		let fileContents = this.responseText.split(delimiter);
-
+	console.log("get",fileContents);
 		// Po souborech
 		for (let i = 0; i < fileContents.length; i += 2) {
 			let //fileName = fileContents[i], 
