@@ -224,7 +224,7 @@ function GetTranslations() {
 	xhttp.addEventListener('error', (e)=>{
 		console.log('error', e);
 	});
-	console.log("send");
+	console.log("send",languagesPackage);
 	xhttp.open("GET", languagesPackage, true);
 	xhttp.send();
 
