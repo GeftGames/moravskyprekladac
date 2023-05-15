@@ -4,7 +4,7 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = "v1.trw_a";
+const languagesPackage = serverName+"v1.trw_a";
 let translations = [
 	"Morava", [
 		"Slovácko", [
@@ -201,16 +201,16 @@ function GetTranslations() {
 		//let rybnik=new LanguageTr();
 	//	rybnik.Load("TW v0.1\ntRybnik\ncTesting point\ng50.1097,18.4668673".split('\n'));
 	//	AddLang(rybnik);
-	}
-		const delimiter='§'
-		let fileContents = this.responseText.split(delimiter);
+}
+	const delimiter='§'
+	let fileContents = this.responseText.split(delimiter);
 	console.log("get",fileContents);
-		// Po souborech
-		for (let i = 0; i < fileContents.length; i += 2) {
-			let //fileName = fileContents[i], 
-				fileText = fileContents[i + 1];
-//console.log(fileText);
-if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText);
+	// Po souborech
+	for (let i = 0; i < fileContents.length; i += 2) {
+		let //fileName = fileContents[i], 
+		fileText = fileContents[i + 1];
+		//console.log(fileText);
+		if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText);
 			// Zápis souboru
 			//using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
 		}
