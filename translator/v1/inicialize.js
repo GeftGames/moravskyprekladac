@@ -4,7 +4,7 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = serverName+"v1.trw_a";
+const languagesPackage = "https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.tw_a";
 let translations = [
 	"Morava", [
 		"Slovácko", [
