@@ -179,6 +179,7 @@ function GetTranslations() {
 	let select2= document.getElementById("selectorTo");
 
 	xhttp.onload = function() {		
+		console.log("get");
 	//	document.getElementById("textDownloadingList").style.display="none";
 	//	document.getElementById("textDownloadingDic").style.display="block";
 	//	let json=JSON.parse(this.responseText);
@@ -223,6 +224,7 @@ if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fil
 	xhttp.addEventListener('error', (e)=>{
 		console.log('error', e);
 	});
+	console.log("send");
 	xhttp.open("GET", languagesPackage, true);
 	xhttp.send();
 
