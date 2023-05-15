@@ -76,6 +76,7 @@ class ItemNoun {
 	}
 	
 	static Load(data) {
+		if (data.includes('?')) return null;
 		let raw = data.split('|');
 		if (raw.length == 4) {
 			let item = new ItemNoun();
@@ -178,6 +179,7 @@ class ItemNoun {
 	
 
 	GetDicForm(name) {		
+		if (this.PatternTo.Shapes[0]=="?") return null;	
 		return [this.From+this.PatternFrom[0], this.To+this.PatternTo.Shapes[0], this.PatternTo.Gender, name];
 	}
 	
@@ -319,12 +321,15 @@ class ItemSimpleWord {
 		let raw = data.split('|');
 		if (raw[0]=='') return null;
 		if (raw.length==1){
+			if (raw[0].includes('?')) return null;
 			let item = new ItemSimpleWord();
 			item.input = raw[0];
 			item.output = raw[0];
 			return item;
 		} 
 		if (raw.length==2){
+			if (raw[0].includes('?')) return null;
+			if (raw[1].includes('?')) return null;
 			let item = new ItemSimpleWord();
 			let inp=raw[0].split(',');
 			if (inp.length==1) item.input = inp[0];
@@ -549,20 +554,30 @@ class ItemPreposition {
 	static Load(data) {
 		let raw = data.split('|');
 		if (raw.length==2){
+			if (raw[0].includes('?')) return null;
 			let item = new ItemPreposition();
 			item.input = raw[0];
 			item.output.push(raw[0]);
-			for (const f of raw[1].split(',')) {
-				item.fall.push(parseInt(f));
+			if (raw[1]!="") {
+				for (const f of raw[1].split(',')) {
+					let num=parseInt(f);
+					if (!isNaN(num))item.fall.push(num);
+				}
 			}
 			return item;
 		} 
 		if (raw.length==3){
+			if (raw[0].includes('?')) return null;
+			if (raw[1].includes('?')) return null;
+
 			let item = new ItemPreposition();
 			item.input  = raw[0];
 			item.output = raw[1].split(',');
-			for (const f of raw[2].split(',')) {
-				item.fall.push(parseInt(f));
+			if (raw[2]!="") {
+				for (const f of raw[2].split(',')) {
+					let num=parseInt(f);
+					if (!isNaN(num)) item.fall.push(num);
+				}
 			}
 			return item;
 		}
@@ -577,7 +592,7 @@ class ItemPreposition {
 	}
 
 	GetDicForm(name) {
-		if (this.fall!="") return [this.input, this.output.join(', '), "pád: "+this.fall, name];
+		if (this.fall.length>0) return [this.input, this.output.join(', '), "pád: "+this.fall.join(', '), name];
 		else return [this.input, this.output.join(', '), "", name];
 	}
 }
@@ -1449,6 +1464,7 @@ class ItemPronoun{
 	}
 
 	GetDicForm(name) {
+		if (this.PatternTo.Shapes[0]=="?") return null;
 		return [this.From+this.PatternFrom.Shapes[0], this.To+this.PatternTo.Shapes[0], "", name];
 	}
 } 
@@ -1749,7 +1765,8 @@ class ItemAdjective{
 		return null;
 	}
 
-	GetDicForm(name) {		
+	GetDicForm(name) {	
+		if (this.PatternTo.Shapes[0]=="?") return null;	
 		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], "", name];
 	}
 }
@@ -1990,7 +2007,8 @@ class ItemNumber{
 		if (ret.length==0) return null; else return [ret, this];
 	}
 	
-	GetDicForm(name) {		
+	GetDicForm(name) {	
+		if (this.PatternTo.Shapes[0]=="?") return null;	
 		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], "", name];
 	}
 } 
@@ -2011,9 +2029,15 @@ class ItemPatternVerb{
 	
 	static GetArray(source, pos, len) { 
 		let arr = [len];
-		for (let i=0; i<len; i++) {
-			if (source[pos+i].includes(",")) arr[i]=source[pos+i].split(',');
-			else if (raw[2+i].include('?')) arr[i]='?'; 
+		for (let i=0; i<len; i++) {			
+			if (source[pos+i].includes(",")) {
+				arr[i]=[];
+				for (let f of source[pos+i].split(',')) {
+					if (f.includes('?')) arr[i].push('?'); 
+					else arr[i].push(f); 
+				}
+			}//arr[i]=source[pos+i].split(',');
+			else if (source[pos/*2*/+i].includes('?')) arr[i]='?'; 
 			else arr[i]=source[pos+i];
 		}
 		return arr;
@@ -2036,55 +2060,55 @@ class ItemPatternVerb{
 		let STransgressiveCont  = (num &  32) == 32;
 		let STransgressivePast  = (num &  64) == 64;
 		let SAuxiliary          = (num & 128) ==128;
-	try {
-  		if (SContinous) {	    item.Continous 		 	= this.GetArray(raw, index, 6); index+=6;}
-		if (SFuture) {      	item.Future 			= this.GetArray(raw, index, 6); index+=6;}
-		if (SImperative) {      item.Imperative 		= this.GetArray(raw, index, 3); index+=3;}
-		if (SPastActive) {      item.PastActive 		= this.GetArray(raw, index, 8); index+=8;}
-		if (SPastPassive) {     item.PastPassive 	 	= this.GetArray(raw, index, 8); index+=8;}
-		if (STransgressiveCont) {item.TransgressiveCont	= this.GetArray(raw, index, 3); index+=3;}
-		if (STransgressivePast) {item.TransgressivePast	= this.GetArray(raw, index, 3); index+=3;}
-		if (SAuxiliary) {        item.Auxiliary 		= this.GetArray(raw, index, 6); index+=6;}
-	} catch {
-		return null;
-	}
-	/*	let index=4;
-		if (item.TypeShow==4 || item.TypeShow==0) { 
-			item.Infinitive=raw[3];
-			item.Continous      = this.GetArray(raw, index, 6); index+=6;
-			item.Future         = this.GetArray(raw, index, 6); index+=6;
-			item.Imperative     = this.GetArray(raw, index, 3); index+=3;
-			item.PastActive     = this.GetArray(raw, index, 8); index+=8;
-			item.PastPassive    = this.GetArray(raw, index, 8); index+=8;
-			item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
-			item.Auxiliary      = this.GetArray(raw, index, 6); index+=6;
-		} else if (item.TypeShow==1) { 
-			item.Infinitive=raw[3];
-			item.Continous      = this.GetArray(raw, index, 6); index+=6;
-			item.Imperative     = this.GetArray(raw, index, 3); index+=3;
-			item.PastPassive    = this.GetArray(raw, index, 8); index+=8;
-			item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
-		} else if (item.TypeShow==2) { 
-			item.Infinitive=raw[3];
-			item.Continous      = this.GetArray(raw, index, 6); index+=6;
-			item.Imperative     = this.GetArray(raw, index, 3); index+=3;
-			item.PastActive     = this.GetArray(raw, index, 8); index+=8;
-			item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
-		} else if (item.TypeShow==3) { 
-			item.Infinitive=raw[3];
-			item.Continous      = this.GetArray(raw, index, 6); index+=6;
-			item.Imperative     = this.GetArray(raw, index, 3); index+=3;
-			item.PastActive     = this.GetArray(raw, index, 8); index+=8;
-			item.PastPassive    = this.GetArray(raw, index, 8); index+=8;
-			item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
-		} else {
-			//throw new Exception("Unknown ShowType");
-			return null;
-		}*/
+	//	try {
+			if (SContinous) {	    item.Continous 		 	= this.GetArray(raw, index, 6); index+=6;}
+			if (SFuture) {      	item.Future 			= this.GetArray(raw, index, 6); index+=6;}
+			if (SImperative) {      item.Imperative 		= this.GetArray(raw, index, 3); index+=3;}
+			if (SPastActive) {      item.PastActive 		= this.GetArray(raw, index, 8); index+=8;}
+			if (SPastPassive) {     item.PastPassive 	 	= this.GetArray(raw, index, 8); index+=8;}
+			if (STransgressiveCont) {item.TransgressiveCont	= this.GetArray(raw, index, 3); index+=3;}
+			if (STransgressivePast) {item.TransgressivePast	= this.GetArray(raw, index, 3); index+=3;}
+			if (SAuxiliary) {        item.Auxiliary 		= this.GetArray(raw, index, 6); index+=6;}
+//			console.log(item);
+			return item;
+	//} catch {
+	//		return null;
+	//	}
+		/*	let index=4;
+			if (item.TypeShow==4 || item.TypeShow==0) { 
+				item.Infinitive=raw[3];
+				item.Continous      = this.GetArray(raw, index, 6); index+=6;
+				item.Future         = this.GetArray(raw, index, 6); index+=6;
+				item.Imperative     = this.GetArray(raw, index, 3); index+=3;
+				item.PastActive     = this.GetArray(raw, index, 8); index+=8;
+				item.PastPassive    = this.GetArray(raw, index, 8); index+=8;
+				item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
+				item.Auxiliary      = this.GetArray(raw, index, 6); index+=6;
+			} else if (item.TypeShow==1) { 
+				item.Infinitive=raw[3];
+				item.Continous      = this.GetArray(raw, index, 6); index+=6;
+				item.Imperative     = this.GetArray(raw, index, 3); index+=3;
+				item.PastPassive    = this.GetArray(raw, index, 8); index+=8;
+				item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
+			} else if (item.TypeShow==2) { 
+				item.Infinitive=raw[3];
+				item.Continous      = this.GetArray(raw, index, 6); index+=6;
+				item.Imperative     = this.GetArray(raw, index, 3); index+=3;
+				item.PastActive     = this.GetArray(raw, index, 8); index+=8;
+				item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
+			} else if (item.TypeShow==3) { 
+				item.Infinitive=raw[3];
+				item.Continous      = this.GetArray(raw, index, 6); index+=6;
+				item.Imperative     = this.GetArray(raw, index, 3); index+=3;
+				item.PastActive     = this.GetArray(raw, index, 8); index+=8;
+				item.PastPassive    = this.GetArray(raw, index, 8); index+=8;
+				item.Transgressive  = this.GetArray(raw, index, 6); index+=6;
+			} else {
+				//throw new Exception("Unknown ShowType");
+				return null;
+			}*/
 		return item;
 	}
-
-
 } 
 
 class ItemVerb{
@@ -2171,14 +2195,17 @@ class ItemVerb{
 			// Multiple choises in source array
 			if (Array.isArray(shape)) {
 				for (const s of shape) {
+					if (s=='?') continue;
 					let shape=this.From+s;
 					
 					if (shape==match) {
 						if (Array.isArray(toArr[i])) {
 							for (const e of toArr[i]) {
+								if (e=='?') continue;
 								this.ret.push([this.To+e, num, 1+i-fromIndex, name]);
 							}
 						} else {
+							if (toArr[i]=='?') continue;
 							this.ret.push([this.To+toArr[i], num, 1+i-fromIndex, name]);
 							break;
 						}
@@ -2186,22 +2213,24 @@ class ItemVerb{
 				}
 			} else {
 				if (fromArr[i]=="-") continue;
+				if (fromArr[i]=='?') continue;
 
 				let shape=this.From+fromArr[i];
 					
 				if (shape==match) {
 					if (Array.isArray(toArr[i])) {
 						for (const e of toArr[i]) {
+							if (e=='?') continue;
 							this.ret.push([this.To+e, num, 1+i-fromIndex, name]);
 						}
 					} else {
+						if (toArr[i]=='?') continue;
 						this.ret.push([this.To+toArr[i], num, 1+i-fromIndex, name]);
 						break;
 					}
 				}
 			}
 		}
-	//	return ret;
 	}
 	
 
@@ -2587,9 +2616,14 @@ class LanguageTr {
 							this.gpsX=parseFloat(rawPos[0]);
 							this.gpsY=parseFloat(rawPos[1]);
 
-							let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
-							this.locationX=(((this.gpsY-originX)/scX)*170*1.21-20.92)*3.8;
-							this.locationY=((-(this.gpsX-originY)/scY)*150*1.0367+3.4)*3.8;
+							//let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
+						//	this.locationX=(((this.gpsY-originX)/scX)*170*1.21-20.92)*3.8;
+							//this.locationY=((-(this.gpsX-originY)/scY)*150*1.0367+3.4)*3.8;
+							let xZ=686/3.6173147-5, xM=14.87480,
+							    yZ=415/1.4573454, yM=48.41226;
+							this.locationX=(this.gpsY-xM)*xZ-15;
+							this.locationY=566-(this.gpsX-yM)*yZ+30;
+						//	if (this.Name=="Nymburk" || this.Name=="Rybnik" || this.Name=="Handlova")console.log(this.Name, this.gpsY, this.locationY);
 						}
 					}
 					break;
@@ -2977,99 +3011,119 @@ class LanguageTr {
 		let total=0;
 		for (let w of this.Phrases) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm("fráze"));
+				let g=w.GetDicForm("fráze");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}	
 		for (let w of this.Adverbs) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm(" (přís.)"));
+				let g=w.GetDicForm(" (přís.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		for (let w of this.Particles) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm(" (část.)"));
+				let g=w.GetDicForm(" (část.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		for (let w of this.Conjunctions) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm(" (spoj.)"));
+				let g=w.GetDicForm(" (spoj.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		for (let w of this.Interjections) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm(" (cito.)"));
+				let g=w.GetDicForm(" (cito.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}	
 
 		for (let w of this.SimpleWords) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm(""));
+				let g=w.GetDicForm("");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 
 		for (let w of this.Sentences) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm("věta"));
+				let g=w.GetDicForm("věta");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		
 		for (let w of this.SentenceParts) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm("část věty"));
+				let g=w.GetDicForm("část věty");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		
 		for (let w of this.Nouns) {
 			if (IsWordComIncluded(w)) {
-				out.push(w.GetDicForm("(pods.)"));
+				let g=w.GetDicForm("(pods.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		
 		for (let w of this.Pronouns) {
 			if (IsWordComIncluded(w)) {
-				out.push(w.GetDicForm("(zájm.)"));
+				let g=w.GetDicForm("(zájm.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		for (let w of this.Verbs) {
 			if (IsWordComIncluded(w)) {
-				out.push(w.GetDicForm("(slov.)"));
+				let g=w.GetDicForm("(slov.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 	
 		for (let w of this.Adjectives) {
 			if (IsWordComIncluded(w)) {
-				out.push(w.GetDicForm("(příd.)"));
+				let g=w.GetDicForm("(příd.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		
 		for (let w of this.Numbers) {
 			if (IsWordComIncluded(w)) {
-				out.push(w.GetDicForm("(čísl.)"));
+				let g=w.GetDicForm("(čísl.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}
 		
 		for (let w of this.Prepositions) {
 			if (IsWordIncluded(w.input)) {
-				out.push(w.GetDicForm("(před.)"));
+				let g=w.GetDicForm("(před.)");
+				if (g!=null) out.push(g);
 				total++;
 			}
 		}		
 		
 		let display="";
-
+		if (!dev){
+			for (let i=0; i<out.length; i++) {
+				if (out[i].join("").includes("undefined")) {
+					out.splice(i, 1);
+				}
+			}
+		}
 		if (out=="") 		display= "<p style='font-style: italic'>Nenalezen žádný záznam.</p>";
 		else if (total==1)	display= "<p style='font-style: italic'>Nalezen "+total+" záznam.</p>";
 		else if (total<5)	display= "<p style='font-style: italic'>Nalezeny "+total+" záznamy.</p>";
@@ -3078,6 +3132,7 @@ class LanguageTr {
 			if (a[0] instanceof String) return a[0].localeCompare(b[0]);
 			return  false;
 		});
+
 		let zkr=false;
 		if (out.length>50){ out.splice(50,out.length-50);zkr=true;}
 

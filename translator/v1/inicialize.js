@@ -4,7 +4,7 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-
+const languagesPackage = "v1.trw_a";
 let translations = [
 	"Morava", [
 		"Slovácko", [
@@ -146,7 +146,7 @@ function init() {
 	let select2 = document.getElementById("selectorTo");
 
 	InnerSearch(translations, select2, 0);
-	GetFilesInDir();
+	GetTranslations();
 
 	function InnerSearch(arr, parent, level) {
 		if (typeof arr === 'string') {
@@ -172,33 +172,66 @@ function init() {
 let totalDirFiles=-1;
 let downloadedFiles=0;
 
-function GetFilesInDir() {
+function GetTranslations() {
 	const xhttp = new XMLHttpRequest();
 	xhttp.timeout=4000;
 
 	let select2= document.getElementById("selectorTo");
 
 	xhttp.onload = function() {		
-		document.getElementById("textDownloadingList").style.display="none";
-		document.getElementById("textDownloadingDic").style.display="block";
-		let json=JSON.parse(this.responseText);
-		stepEnd=json.length;
+	//	document.getElementById("textDownloadingList").style.display="none";
+	//	document.getElementById("textDownloadingDic").style.display="block";
+	//	let json=JSON.parse(this.responseText);
+	//	stepEnd=json.length;
 		
-		for (const file of json) {
-			//console.log(file);
-			DownloadLang(file.download_url);
+	//	for (const file of json) {
+	//		//console.log(file);
+	//		DownloadLang(file.download_url);
+	//	}
+		if (false) {
+		let handlova=new LanguageTr();
+		handlova.Load("TW v0.1\ntHandlova\ncTesting point\ng48.7283153,18.7590888".split('\n'));
+		AddLang(handlova);
+
+		let nymburk=new LanguageTr();
+		nymburk.Load("TW v0.1\ntNymburk\ncTesting point\ng50.1856607,15.0428904".split('\n'));
+		AddLang(nymburk);
+
+		//let rybnik=new LanguageTr();
+	//	rybnik.Load("TW v0.1\ntRybnik\ncTesting point\ng50.1097,18.4668673".split('\n'));
+	//	AddLang(rybnik);
+	}
+		const delimiter='§'
+		let fileContents = this.responseText.split(delimiter);
+
+		// Po souborech
+		for (let i = 0; i < fileContents.length; i += 2) {
+			let //fileName = fileContents[i], 
+				fileText = fileContents[i + 1];
+//console.log(fileText);
+if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText);
+			// Zápis souboru
+			//using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
 		}
+		document.getElementById("translatingPage").style.display="block";
+		document.getElementById("translatingPage").style.opacity="0%";
+		setTimeout(function () {
+			document.getElementById("translatingPage").style.opacity="100%";
+			document.getElementById("loadingPage").style.display="none";
+		}, 100)
 	}
 	xhttp.addEventListener('error', (e)=>{
 		console.log('error', e);
 	});
-	xhttp.open("GET", "https://api.github.com/repositories/417226915/contents/DIC", true);
+	xhttp.open("GET", languagesPackage, true);
 	xhttp.send();
+
+
 	
-	function DownloadLang(url) {
+	/*function DownloadLang(url) {
 		// ne takto, max 4 stahování zároveň, udělé frontu-doplň
 		const xhttp2 = new XMLHttpRequest();
-		xhttp2.timeout=50000;
+		xhttp2.timeout=10000;
 
 		xhttp2.onload = function() {
 			RegisterLang(this.responseText);
@@ -211,7 +244,7 @@ function GetFilesInDir() {
 		});
 		xhttp2.open("GET", url, true);
 		xhttp2.send();
-	}
+	}*/
 
 	function RegisterLang(content){
 		let lines=content.split('\r\n');
@@ -343,7 +376,7 @@ function mapRedraw(){
 	ctx.restore();
 }
 
-function mapClick(mX,mY)　{
+function mapClick(mX,mY) {
 	let canvasMap=document.getElementById("mapSelectLang");
 
 	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
