@@ -4631,7 +4631,7 @@ function DetectLoacation() {
 	if (!navigator.languages.includes('cs') && !navigator.languages.includes('cz')) return;
 	if (language != "default") return;
 	if (localStorage.getItem('DefaultCountry') !== null) return;
-	
+	/*
 	//https://api.criminalip.io/v1/ip/data?ip=1.1.1.1&full=true
 	let url="http://ip-api.com/json";
 	
@@ -4649,7 +4649,7 @@ function DetectLoacation() {
 		}
 	}
 	xhttp.open("GET", url, true);
-	xhttp.send();
+	//xhttp.send();
 
 	function LocationNormalize(data) {
 		let country="";
@@ -4945,7 +4945,7 @@ function DetectLoacation() {
 		}
 
 		return country;
-	}
+	}*/
 }
 /*
 function ExtractMergedFiles(inputFile) {
