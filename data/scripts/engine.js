@@ -1647,17 +1647,16 @@ function Load() {
 	});
 	mapSelectLang.addEventListener("wheel", function(e) {
 		e.preventDefault();
-	//	let dX=e.clientX-map_LocX, dY=e.clientY-map_LocY;	
 		let prevZoom=map_Zoom;
 		let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
 
 		if (delta > 0) map_Zoom *= 1.2; else  map_Zoom /= 1.2;
 		if (map_Zoom<=0.2)map_Zoom=0.2;
-		if (map_Zoom>5)map_Zoom=5;
+		if (map_Zoom>10)map_Zoom=10;
 
 		const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
 		const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-		const mouseY = e.clientY  -rect.top/*-*/;
+		const mouseY = e.clientY -rect.top;
 
 		const imgMX = mouseX-map_LocX,
 			  imgMY = mouseY-map_LocY;	
@@ -4948,3 +4947,19 @@ function DetectLoacation() {
 		return country;
 	}
 }
+/*
+function ExtractMergedFiles(inputFile) {
+	const delimiter='§'
+	let fileContents = inputFile.split(delimiter);
+
+	// Po souborech
+	for (let i = 0; i < fileContents.Length; i += 2) {
+		let fileName = fileContents[i], 
+			fileText = fileContents[i + 1];
+
+
+		// Zápis souboru
+		using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
+	}
+	return 
+}*/
