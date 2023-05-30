@@ -348,7 +348,7 @@ function mapRedraw(){
 	ctx.lineCap = 'round';
 	// generate dots
 	for (let p of languagesList){
-
+		
 //ctx.fillStyle="Black";	
 		if (p.Quality==5) ctx.fillStyle="Gold";		
 		else if (p.Quality==4) ctx.fillStyle="Yellow";		
@@ -370,9 +370,11 @@ function mapRedraw(){
 
 	// generate texts
 	for (let p of languagesList){
-		ctx.fillStyle="Black";
-		let w=ctx.measureText(p.Name).width;
-		ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
+		if (zoom>0.5 && p.Quality>1){
+			ctx.fillStyle="Black";
+			let w=ctx.measureText(p.Name).width;
+			ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
+		}
 	}
 
 	ctx.restore();
