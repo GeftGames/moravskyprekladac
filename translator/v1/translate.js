@@ -2017,14 +2017,6 @@ class ItemPatternVerb{
 	constructor() {
 		this.Name;
 		this.Infinitive="";
-		//this.Type;
-		//this.Continous=[];
-		//this.Future=[];
-		//this.Imperative=[];
-		//this.PastActive=[];
-		//this.PastPassive=[];
-		//this.Transgressive=[];
-		//this.Auxiliary=[];
 	}	
 	
 	static GetArray(source, pos, len) { 
@@ -2050,7 +2042,8 @@ class ItemPatternVerb{
 		//item.TypeShow=parseInt(raw[1]);
 		let num=parseInt(raw[1]);
 		item.Type=parseInt(raw[2]);
-		item.Infinitive=raw[3];
+		if (raw[3].includes('?'))item.Infinitive='?';
+		else item.Infinitive=raw[3];
 		let index=4;
 		let SContinous          = (num &   1) ==  1;
 		let SImperative         = (num &   2) ==  2;
@@ -2255,7 +2248,7 @@ class ItemVerb{
 		{	
 			if (this.From+this.PatternFrom.Infinitive==str) {
 				if (this.PatternTo.Infinitive!='?') {
-				this.ret.push([this.To+this.PatternTo.Infinitive, -1, -1, "Infinitive"]);
+					this.ret.push([this.To+this.PatternTo.Infinitive, -1, -1, "Infinitive"]);
 				}
 			}
 		}
