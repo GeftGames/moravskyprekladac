@@ -2233,7 +2233,6 @@ class ItemVerb{
 		}
 	}
 	
-
 	IsStringThisWord(str) {
 		if (!str.startsWith(this.From)) return null;
 		this.ret=[];
@@ -2255,7 +2254,9 @@ class ItemVerb{
 	
 		{	
 			if (this.From+this.PatternFrom.Infinitive==str) {
+				if (this.PatternTo.Infinitive!='?') {
 				this.ret.push([this.To+this.PatternTo.Infinitive, -1, -1, "Infinitive"]);
+				}
 			}
 		}
 /*
@@ -2583,27 +2584,30 @@ class LanguageTr {
 
 				case "c":
 					{
-						let l=line.substring(1).replaceAll('\\n',"\n").replaceAll("->","➔").split('\n');
-						let text="";
-						let ul=false;
-						for (let i of l){
-							if (i.startsWith("#")) {
-								if (ul) {text+='</ul>';ul=false;}
-								text+='<p style="display:inline-block" class="settingHeader">'+i.substring(1)+'</p>';
-							}else if (i.startsWith("-")) {
-								if (!ul) text+='<ul>';
-								text+='<li>'+i.substring(1)+'</li>';
-								ul=true;
-							}else if (i==""){
-								if (ul) {text+='</ul>';ul=false;}
-								text+='<br>';
-							}else {
-								if (ul) {text+='</ul>';ul=false;}
-								text+='<p>'+i+'</p>';
-							}
+						let stri=line.substring(1);
+						if (stri instanceof  String || typeof myVar === 'string') {
+							let l=stri.replaceAll('\\n',"\n").replaceAll("->","➔").split('\n');
+							let text="";
+							let ul=false;
+							for (let i of l){
+								if (i.startsWith("#")) {
+									if (ul) {text+='</ul>';ul=false;}
+									text+='<p style="display:inline-block" class="settingHeader">'+i.substring(1)+'</p>';
+								}else if (i.startsWith("-")) {
+									if (!ul) text+='<ul>';
+									text+='<li>'+i.substring(1)+'</li>';
+									ul=true;
+								}else if (i==""){
+									if (ul) {text+='</ul>';ul=false;}
+									text+='<br>';
+								}else {
+									if (ul) {text+='</ul>';ul=false;}
+									text+='<p>'+i+'</p>';
+								}
 
+							}
+							this.Comment = text;
 						}
-						this.Comment = text;
 					}
 					break;
 					
