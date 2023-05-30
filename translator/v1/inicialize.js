@@ -370,7 +370,7 @@ function mapRedraw(){
 
 	// generate texts
 	for (let p of languagesList){
-		if ((map_Zoom>0.5 && p.Quality<2) || p.Quality>=2) {
+		if ((map_Zoom>1 && p.Quality<2) || p.Quality>=2) {
 			ctx.fillStyle="Black";
 			let w=ctx.measureText(p.Name).width;
 			ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
