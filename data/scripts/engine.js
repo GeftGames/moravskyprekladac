@@ -968,7 +968,7 @@ function ClosePageInfoLang(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
-	setTimeout(setNodeAboutPage, 300);
+	setTimeout(setNodeInfoPage, 300);
 }
 function ShowMapPage(){
 	document.getElementById("mapPage").style.display="block";
@@ -1003,6 +1003,10 @@ function setNodeAboutPage(){
 }
 function setNodeMapPage(){
 	document.getElementById("mapPage").style.display="none";
+}
+
+function setNodeInfoPage(){
+	document.getElementById("pageInfoLang").style.display="none";
 }
 
 let langFile;
