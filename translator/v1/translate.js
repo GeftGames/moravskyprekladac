@@ -2042,8 +2042,10 @@ class ItemPatternVerb{
 		//item.TypeShow=parseInt(raw[1]);
 		let num=parseInt(raw[1]);
 		item.Type=parseInt(raw[2]);
-		if (raw[3].includes('?'))item.Infinitive='?';
+
+		if (raw[3].includes('?')) item.Infinitive='?';
 		else item.Infinitive=raw[3];
+
 		let index=4;
 		let SContinous          = (num &   1) ==  1;
 		let SImperative         = (num &   2) ==  2;
@@ -2054,16 +2056,16 @@ class ItemPatternVerb{
 		let STransgressivePast  = (num &  64) == 64;
 		let SAuxiliary          = (num & 128) ==128;
 	//	try {
-			if (SContinous) {	    item.Continous 		 	= this.GetArray(raw, index, 6); index+=6;}
-			if (SFuture) {      	item.Future 			= this.GetArray(raw, index, 6); index+=6;}
-			if (SImperative) {      item.Imperative 		= this.GetArray(raw, index, 3); index+=3;}
-			if (SPastActive) {      item.PastActive 		= this.GetArray(raw, index, 8); index+=8;}
-			if (SPastPassive) {     item.PastPassive 	 	= this.GetArray(raw, index, 8); index+=8;}
-			if (STransgressiveCont) {item.TransgressiveCont	= this.GetArray(raw, index, 3); index+=3;}
-			if (STransgressivePast) {item.TransgressivePast	= this.GetArray(raw, index, 3); index+=3;}
-			if (SAuxiliary) {        item.Auxiliary 		= this.GetArray(raw, index, 6); index+=6;}
+		if (SContinous) {	    item.Continous 		 	= this.GetArray(raw, index, 6); index+=6;}
+		if (SFuture) {      	item.Future 			= this.GetArray(raw, index, 6); index+=6;}
+		if (SImperative) {      item.Imperative 		= this.GetArray(raw, index, 3); index+=3;}
+		if (SPastActive) {      item.PastActive 		= this.GetArray(raw, index, 8); index+=8;}
+		if (SPastPassive) {     item.PastPassive 	 	= this.GetArray(raw, index, 8); index+=8;}
+		if (STransgressiveCont) {item.TransgressiveCont	= this.GetArray(raw, index, 3); index+=3;}
+		if (STransgressivePast) {item.TransgressivePast	= this.GetArray(raw, index, 3); index+=3;}
+		if (SAuxiliary) {        item.Auxiliary 		= this.GetArray(raw, index, 6); index+=6;}
 //			console.log(item);
-			return item;
+		return item;
 	//} catch {
 	//		return null;
 	//	}
@@ -2100,7 +2102,7 @@ class ItemPatternVerb{
 				//throw new Exception("Unknown ShowType");
 				return null;
 			}*/
-		return item;
+	//	return item;
 	}
 } 
 
@@ -2570,6 +2572,13 @@ class LanguageTr {
 				case "t":
 					this.Name = line.substring(1);
 					break;
+					
+				case "r":
+					this.Names = [];
+					for (let l of line.substring(1).split(",")){
+						this.Names.push(l.split("="));
+					}
+					break;
 
 				case "e":
 					//this.BuildSelect(line.substring(1));
@@ -2578,7 +2587,7 @@ class LanguageTr {
 				case "c":
 					{
 						let stri=line.substring(1);
-						if (stri instanceof  String || typeof myVar === 'string') {
+				//		if (stri instanceof String || typeof myVar === 'string') {
 							let l=stri.replaceAll('\\n',"\n").replaceAll("->","➔").split('\n');
 							let text="";
 							let ul=false;
@@ -2600,7 +2609,7 @@ class LanguageTr {
 
 							}
 							this.Comment = text;
-						}
+					//	}
 					}
 					break;
 					
