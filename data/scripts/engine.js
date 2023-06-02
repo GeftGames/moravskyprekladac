@@ -4946,6 +4946,7 @@ function DetectLoacation() {
 
 		return country;
 	}*/
+	return "Morava";
 }
 /*
 function ExtractMergedFiles(inputFile) {
