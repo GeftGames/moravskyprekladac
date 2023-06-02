@@ -908,7 +908,9 @@ function CloseAboutPage(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
-	setTimeout(setNodeAboutPage, 300);
+	setTimeout(()=>{ 
+		document.getElementById("aboutPage").style.display="none";
+	}, 300);
 }
 function ShowPageMapper(){
 	document.getElementById("mapperPage").style.display="block";
@@ -935,7 +937,9 @@ function ClosePageMapper(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
-	setTimeout(setNodeAboutPage, 300);
+	setTimeout(()=>{ 
+		document.getElementById("mapperPage").style.display="none";
+	}, 300);
 }
 function ShowPageInfoLang(){
 	let lang=GetCurrentLanguage();
@@ -968,7 +972,9 @@ function ClosePageInfoLang(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
-	setTimeout(setNodeInfoPage, 300);
+	setTimeout(()=>{ 
+		document.getElementById("pageInfoLang").style.display="none";
+	}, 300);
 }
 function ShowMapPage(){
 	document.getElementById("mapPage").style.display="block";
@@ -996,17 +1002,9 @@ function CloseMapPage(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
-	setTimeout(setNodeMapPage, 300);
-}
-function setNodeAboutPage(){
-	document.getElementById("aboutPage").style.display="none";
-}
-function setNodeMapPage(){
-	document.getElementById("mapPage").style.display="none";
-}
-
-function setNodeInfoPage(){
-	document.getElementById("pageInfoLang").style.display="none";
+	setTimeout(()=>{
+		document.getElementById("mapPage").style.display="none";
+	}, 300);
 }
 
 let langFile;
