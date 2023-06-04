@@ -1,7 +1,7 @@
 var mapper_ShowNote=true,mapper_OylyGood=true;
 function mapper_next(){
 	document.getElementById("mapperPreview").style.display="none";
-	document.getElementById("areaStartGenerate").style.display="block";
+	document.getElementById("areaStartGenerate").style.display="flex";
 }
 
 function mapper_zoomIn(){
@@ -16,7 +16,7 @@ function mapper_zoomOut(){
 
 function mapper_init(){
 	mapper_scale=1;
-	document.getElementById("mapperPreview").style.display="block";
+	document.getElementById("mapperPreview").style.display="flex";
 	document.getElementById("areaStartGenerate").style.display="none";
 
 	mapperRedraw();
@@ -276,6 +276,25 @@ const promises = arr.map(() => {
 	}*/
 }
 
+function CreateBorders(data, editedData){
+	for (y = 0; y < h-1; y++) {
+		for (x = 0; x < w-1; x++) {
+			// detect by wrap image
+			let dX=data[x]-data[x+1];
+			let dY=data[y]-data[y+1];
+
+			if (dX>0 || dY>0) {
+				editedData[i-3] = 0; 			
+				editedData[i-2] = 0; 			
+				editedData[i-1] = 255; 		
+				editedData[i] = 255;	
+			}
+			i+=4;
+		}
+	}
+	return editedData;
+}
+
 let status;
 
 var canvasMap;
@@ -284,7 +303,7 @@ var ctx;
 function mapper_compute() {
 	// Get points
 	let inputText=document.getElementById("mapperInput").value;
-	let points=mapper_GetPointsTranslated(languagesList, inputText);
+	let points=mapper_GetPointsTranslated(languagesListAll, inputText);
 
 	if (points.length<=3) {
 		status="Not enough data to create map";

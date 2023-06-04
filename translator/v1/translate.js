@@ -2539,6 +2539,41 @@ class LanguageTr {
 			}
 		};
 	}*/
+	Stats() {
+		let stats=0;
+		stats+=this.Sentences.length;
+		stats+=this.SentencePatterns.length;
+		stats+=this.SentencePatternParts.length;
+		stats+=this.SentenceParts.length;
+
+		for (let s of this.Phrases) { if (s.To!="?") stats++; }
+		for (let s of this.Nouns) { if (s.PatternTo!="?") stats++; }
+		for (let s of this.Pronouns) { if (s.PatternTo!="?") stats++; }
+		for (let s of this.SimpleWords) { if (s.To!="?") stats++; }
+		for (let s of this.Verbs) { if (s.PatternTo!="?") stats++; }
+		for (let s of this.Adjectives) { if (s.PatternTo!="?") stats++; }
+		for (let s of this.Numbers) { if (s.PatternTo!="?") stats++; }
+		for (let s of this.Prepositions) { if (s.To!="?") stats++; }
+		for (let s of this.Interjections) { if (s.To!="?") stats++; }
+		for (let s of this.Particles) { if (s.To!="?") stats++; }
+		for (let s of this.Conjunctions) { if (s.To!="?") stats++; }
+		for (let s of this.ReplaceS) { if (s.To!="?") stats++; }
+		for (let s of this.ReplaceG) { if (s.To!="?") stats++; }
+		for (let s of this.ReplaceE) { if (s.To!="?") stats++; }
+		for (let s of this.PatternNounsFrom) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternNounsTo) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternAdjectivesTo) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternAdjectivesFrom) { if (s.Name!="?") stats++; }
+		for (let s of this.Adverbs) { if (s.To!="?") stats++; }
+		for (let s of this.PatternAdjectivesTo) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternPronounsFrom) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternPronounsTo) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternNumbersFrom) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternNumbersTo) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternVerbsFrom) { if (s.Name!="?") stats++; }
+		for (let s of this.PatternVerbsTo) { if (s.Name!="?") stats++; }
+		return stats;
+	}
 
 	Load(lines) {
 		this.state="loading";

@@ -140,6 +140,7 @@ let translations = [
 ];
 
 var languagesList = [];
+var languagesListAll = [];
 
 function init() {
 	if (dev)console.log("Translator inicializating starting...");
@@ -278,7 +279,7 @@ function GetTranslations() {
 			return select2;	
 		}
 
-	
+		languagesListAll.push(lang);
 		if (lang.Name!="") {
 			if ((!betaFunctions && lang.Quality>1) || (betaFunctions && lang.Quality>0) || dev) {
 				let name=lang.Name;
@@ -307,6 +308,7 @@ function GetTranslations() {
 				nodeLang.innerText = name;
 				category.appendChild(nodeLang);
 			}
+		
 		}else{
 			if (dev)console.log("This lang has problems", lang);
 
@@ -348,30 +350,32 @@ function mapRedraw(){
 	ctx.lineCap = 'round';
 	// generate dots
 	for (let p of languagesList){
-		
+		ctx.strokeStyle = 'Black';
 //ctx.fillStyle="Black";	
 		if (p.Quality==5) ctx.fillStyle="Gold";		
 		else if (p.Quality==4) ctx.fillStyle="Yellow";		
 		else if (p.Quality==3) ctx.fillStyle="Orange";		
-		else if (p.Quality==2) ctx.fillStyle="#cd7f32";		
-		else if (p.Quality==1) ctx.fillStyle="Red";		
-		else if (p.Quality==0) ctx.fillStyle="Gray";
+		else if (p.Quality==2){ ctx.fillStyle="#cd7f32";		ctx.strokeStyle = 'rgb(0,0,0,.9)';}	
+		else if (p.Quality==1) {ctx.fillStyle="Red";	ctx.strokeStyle = 'rgb(0,0,0,.8)';}	
+		else if (p.Quality==0) {ctx.fillStyle="rgb(128,128,128,.1)";ctx.strokeStyle = 'rgb(0,0,0,.5)';}
 		else ctx.fillStyle="Black";
 
 		ctx.beginPath();
 		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
 		ctx.fill();		
 		
-			
+		
 		ctx.beginPath();		
 		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
 		ctx.stroke();
 	}
-
+	ctx.strokeStyle = 'Black';
 	// generate texts
+	let z= dev? 2:1;
 	for (let p of languagesList){
-		if ((map_Zoom>1 && p.Quality<2) || p.Quality>=2) {
-			ctx.fillStyle="Black";
+		if ((map_Zoom>z && p.Quality<2) || p.Quality>=2) {
+			if (p.Quality==0) ctx.fillStyle="Gray";
+			else ctx.fillStyle="Black";
 			let w=ctx.measureText(p.Name).width;
 			ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
 		}
