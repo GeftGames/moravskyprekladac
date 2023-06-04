@@ -945,7 +945,14 @@ function ShowPageInfoLang(){
 	let lang=GetCurrentLanguage();
 	if (lang==null) return;
 	document.getElementById("langName").innerText=lang.Name;
-	document.getElementById("infoLangText").innerHTML=lang.Comment;
+	if (dev){
+		document.getElementById("infoLangText").innerHTML="Umístění: ";	
+		if (lang.Category === undefined) document.getElementById("infoLangText").innerHTML+="neznámé";
+		else document.getElementById("infoLangText").innerHTML+=lang.Category.join(" > ");
+		document.getElementById("infoLangText").innerHTML+="<br>"+"Počet zázamů: "+lang.Stats()+"<br>"+lang.Comment;	
+	}else{
+		document.getElementById("infoLangText").innerHTML=lang.Comment;
+	}
 	document.getElementById("pageInfoLang").style.display="block";
 	document.getElementById("pageInfoLang").style.opacity="1";
 	document.getElementById("pageInfoLang").style.position="absolute";
@@ -4966,3 +4973,8 @@ function ExtractMergedFiles(inputFile) {
 	}
 	return 
 }*/
+
+function navrhClick(text) {
+	mapperInput.value=text;
+	mapper_init();
+}
