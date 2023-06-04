@@ -1001,3 +1001,21 @@ input[type="text"]{
 #note{
 	font-style: italic;
 }
+.mapperNavrh{
+	background-color: var(--ColorThemeAccentBack);
+	color: var(--ColorText);
+	font-size: 8mm;
+	padding: 5mm;
+	transition: background-color, color .3s;
+	border-radius: 3px;
+	user-select: none;
+	cursor: pointer;
+	text-shadow: var(--tsh);
+	color:var(--ColorText);
+	margin: 2px;
+	font-weight: 300;
+}
+.mapperNavrh:hover{
+	background-color: var(--ColorTheme);
+	/*color: var(--ColorOrig);*/
+}
