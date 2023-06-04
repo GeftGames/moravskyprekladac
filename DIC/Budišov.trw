@@ -1,0 +1,100 @@
+TW v0.1
+fSpisovná čeština
+tBudišov
+aGG
+d25.04.2023 18:55:22
+c#Zdroje\n-kniha Nářečí západ moravy, vratislav bělík, str. 31
+g49.2711446,16.0024224
+xlokální mluva
+q0
+oPodhorácko
+-
+-
+-
+-
+-
+-
+-
+on|von
+u|o
+vype|vepe
+nej|né
+-
+ej|é
+ou|ó
+í|i
+ý|y
+-
+du|do
+vejte|véte
+ím|im
+u|o
+-
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+-
+ženA|1|a?|e|ě?|u?|o|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+dceRA|1|ra|re|ři|ru|ro|ři|rou|ry|r|rám|ry|ry|rách|rami
+pohádKA|1|ka?|ky?|ce?|ku?|ko|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+-
+panímám|pajmám|ženA|ženA
+dcer|ce|ženA|dceRA
+mamin|pohádKA|pohádKA
+obilí|vobili||
+-
+-
+-
+-
+ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+vY|-1|y|ás|ám|ás|y|ás|ámi
+-
+VONA|-1|vona|jí,ní*?|jí,ní*?|ji,ni*?|-|ní*?|jí,ní*?
+JÁ|-1|já|mě,(knižně) mne[2]?|mňe|mě,(knižně) mne[2]?|já?|mně?|mnou?
+vY|-1|y?|ás?|ám|ás?|y?|ás?|ámi?
+-
+ONA|VONA
+JÁ|JÁ
+vY|vY|vY
+-
+-
+-
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+bydlET|15|-1|et|ím|íš|í|íme|íte|í,bydlejí|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+povídAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+uvařIT|14|-1|it||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+ukliDIT|14|-1|dit|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+RŮST|23|-1|růst|rostu|rosteš|roste|rosteme|rostete|rostou|porostu,budu růst|porosteš,budeš růst|poroste,bude růst|porosteme,budeme růst|porostete,budete růst|porostou,budou růst|rosť|rosťme|rosťte|rostl|rostl|rostla|rostlo|rostli|rostly|rostly|rostla
+ORAT|31|-1|rat|řu,orám|řeš,oráš|ře,orá|řeme,oráme|řete,oráte|řou,orají|?|?|poorá|?|?|?|ř,orej|řme,orejme|řte,orejte|ral|ral|rala|ralo|rali|raly|raly|rala|rán|rán|rána|ráno|ráni|rány|rány|rána
+-
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|bodo|budeš?|bude?|budeme?|bodete|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+bévAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ajó?|é?|éme?|éte|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+povídAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?
+uvařIT|14|-1|it?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+oklǝDIT|30|-1|dit?|ďim|ďiš?|ďi?|?|?|?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
+RŮST|23|-1|růst?|rostu?|rosteš?|ruste|rosteme?|rostete?|rostou?|porostu,budu růst?|porosteš,budeš růst?|poroste,bude růst?|porosteme,budeme růst?|porostete,budete růst?|porostou,budou růst?|rosť?|rosťme?|rosťte?|rostl?|rostl?|rostla?|rostlo?|rostli?|rostly?|rostly?|rostla?
+ORAT|31|-1|rat?|řu,orám?|řeš,oráš?|ře,orá?|řeme,oráme?|řete,oráte?|řou,orají?|?|?|ooře|?|?|?|ř,orej?|řme,orejme?|řte,orejte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráni?|rány?|rány?|rána?
+-
+BÝT|BÝT
+bydl|bydlET|bévAT
+povídA|povidA|povídAT|povídAT
+uvař|uvařIT|uvařIT
+ukli|ukliDIT|ukliDIT
+RŮST|RŮST
+zasít||
+oRAT|ORAT
+-
+kde|gde
+pak
+jen,jenom|jen
+nejspíše|néspiš
+potom|potum
+teprve|teprvá
+hezky|pjekňe
+-
+u|o|
+-
+a
+-
+-

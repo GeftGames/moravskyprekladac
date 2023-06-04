@@ -1,0 +1,341 @@
+TW v0.1
+fSpisovná čeština
+tbrno
+aGG
+d24.02.2023 7:50:51
+i
+e
+cZměna: ej->é\n7. Pád unifikace ama
+z
+lHantec
+g49.1940277,16.6062405
+xměstká mluva
+q1
+-
+-
+-
+S kým momentálně žiješ?|S kým dejcháš?
+Přeji hezký den!|Zdar jak sviňa!
+Jak se dostanu na hlavní nádraží?|Kudy se tu dostanu na rolu?
+-
+-
+odskákat si něco|vyžrat neco
+vysokoškolský klub|vekson
+severní a západní čechy|švédsko
+severočeši|švédi
+posadila se|hodila sicnu
+výborný den|špicové den
+voják z povolání|guma
+duševně postižený člověk|guma
+nahý|na ádoša
+nudistická pláž|nuda
+opalovat se|lapat bronz
+orální sex|kuřim
+průkazka mhd|šalinkarta
+brněnská přehrada|prýgl
+nádherné město brno|betálný štatl
+slunce ostře svítí|zoncna rubluje
+koukat se po ženách|hodit čuz na filáče
+krásná dívka|vozubená koňa
+centrum města|štatl
+brněnská přehrada|prigl
+vlakové nádraží|rola
+hrad veveří|gracna nad Prýglem
+královo pole|Kénig
+lažánky|L.A.žánky
+masarykův okruh|Masec
+medlánecký kopec|Medlaňák
+mniší hora|Mnichálový bergl
+mokrá hora|Mokec
+sokolské koupaliště|Sokolák
+veverská bítýška|betlém
+wilsonův les|vilzoňák
+zamilovaný hájek|zámilec
+areál lodní dopravy|šíftechna
+běžky|běžkařský bretle
+dopravní podnik|glajzové podnik
+fotit|kropit kanónama
+kapitán lodě|šíffýra
+loď s elektrickým pohonem|šíf na baterky,šalinový šíf
+nafukovací loď|šíf nafólované luftem
+plavat prsa|pudlovat
+trávit čas na přehradě|vylepené na Prýglu
+vodní plocha|vasrplac
+menstruační vložka|bitýška
+-
+vyčerpán|hyn
+se
+-
+ok|vok
+sh|zh
+nej|né
+kte|ke
+od|vod
+o|vo
+-
+jd|nd
+ou|ó
+eo|ejo
+ej|é
+-
+ami|ama
+cuji|cuju
+ový|ové
+vého|výho
+ávný|ávné
+ými|éma
+ýmu|ému
+ých|éch
+ie|ije
+ea|eja
+ii|iju
+ého|ýho
+ňují|ňujó
+ají|ajó
+ký|ké
+ské|ský
+-
+NESKLONNÉ|-1||||||||||||||
+městO|0|o|a|u|o|o|ě|em|a||ům|a|a|ech|ama
+mořE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+kuřE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+dEN|0|en|ne|ni,dnu|en|ne,dni|ni,dnu,dne|nem|ni,dny,dnové|ní,dnů|nům|ni,dny|ni,dny,dnové|nech|ny
+přístavišTĚ|0|tě|tě|ti|tě|tě|ti|těm|tě|ť|tím|tě|tě|tích|ti
+růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+písEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
+kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+soudcE|1|e|e|i,ovi|e|e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+tramvaj|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+předsedA|2|a|y|ovi|u|o|ovi|ou|ové|ů|ům|y|ové|ech|y
+pÁN|2|án|ána,páně|ánu,pánovi|ána|ane|ánu,pánovi|ánem|áni,pánové|ánů|ánům|ány|áni,pánové|ánech|ány
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
+muž|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+předsedA|2|a|y|ovi|u|o|ovi|ou|ové|ů|ům|y|ové|ech|y
+hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
+stroj|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách/cích|ky
+kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cách|cama
+dÍTĚ|0|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
+loĎ|1|ď|di,dě|di|ď|di|di|dí|di,dě|dí|dím|di,dě|di,dě|dích|děmi,ďmi
+těšeticE|-1|-|-|-|-|-|-|-|e||ím|e|e|ích|emi
+-
+NESKLONNÉ|-1||||||||||||||
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+mořE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|ama
+kuřE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|atama
+růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|ema
+ženA|1|a|y|ě|u|o|ě|ó|y||ám|y|y|ách|ama
+kost|1||i|i||i|i|í|i|í|em|i|i|ech|ma
+písEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|něma
+pohádKA|1|ka|ky|ce|ku|ko|ce|kó|ky|ek|kám|ky|ky|kách|kama
+předsedA|2|a|y|ovi|u|o|ovi|em|ové|ů|ům|y|ové|ech|y
+soudcE|2|e|e|i,ovi|e|e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+předsedA|2|a|y|ovi|u|o|ovi|em|ové|ů|ům|y|ové|ech|ama
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|ama
+stroj|3||e|i||i|i|em|e|ů|ům|e|e|ách|ama
+hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|ama
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách|kama
+les|3||a|u||e|e|em|y|ů|ům|y|y|ích|ama
+těšeticE|-1|-|-|-|-|-|-|-|e||ám|e|e|ách|ema
+muž|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i,ové|ách|ama
+-
+alimenty|aloše||
+aut|měst|městO|městO
+benzín|beneli||
+bolíst|bebin|pohádKA|městO
+boul|hrč|růžE|ženA
+brn|brnisk|městO|městO
+brýle|čočky||
+břich|bauch|městO|
+býk|bék|syn|syn
+bystrc|bástr||
+čech|čížek|syn|
+d|sysel|dÍTĚ|syn
+darebák|dacan|syn|syn
+děck|netopýr|městO|syn
+detail|detajl|stroj|hrad
+děvč|debrecin|kuřE|pohádKA
+dolary|dolcky||
+hlav|dózn|ženA|ženA
+hodinky|cibul||růžE
+hor|bergl|ženA|ženA
+hospod|paluš|ženA|ženA
+jirk|předsedA|předsedA
+kaňk|předsedA|předsedA
+klouzač|šlind|pohádKA|ženA
+kop|bergl|kopEC|hrad
+krádež|vidl|tramvaj|ženA
+led|ajsův|hrad|pohádKA
+legrac|čurin|růžE|ženA
+listin|canc|ženA|NESKLONNÉ
+matk|mutr|ženA|ženA
+měsíc|metr|stroj|hrad
+měst|štatl|městO|hrad
+míst|tympl|městO|
+noh|haksn|ženA|ženA
+obličej|ciferník|stroj|hrad
+oči|augle||
+okolky|cavyky||
+opas|řemeň|stromEK|les
+opletač|córes|pohádKA|těšeticE
+penis|caban|hrad|hrad
+peníz|love|stroj|NESKLONNÉ
+pes|čokl|syn|syn
+piv|bahn|městO|městO
+piv|čechr|městO|hrad
+pivovar|pivec||
+plav|šwimhozn|pohádKA|ženA
+policajti|švestky||
+postel|betl|tramvaj|ženA
+pražák|cajzl|syn|syn
+prsa|dudy||
+předsed|předsedA|předsedA
+příběh|story||
+přístaviš|port|přístavišTĚ|hrad
+rán|řach|ženA|ženA
+rán|dack|ženA|ženA
+roh|ekl|hrad|hrad
+rok|jár |hrad|
+roky|jařiny ||
+ryb|fišl|ženA|ženA
+řek|len|ženA|ženA
+sluh|dýnstman|předsedA|syn
+slunc|zoncn|mořE|ženA
+smích|lochec|hrad|
+smrad|rychn|hrad|ženA
+sraz|scu|hrad|pohádKA
+srdc|hercn|mořE|ženA
+taxi|taxál|NESKLONNÉ|hrad
+televizor|idiotbox ||
+tramvaj|šalin|tramvaj|ženA
+uch|ovar|městO|hrad
+úředník|ingóst|syn|
+vedr|hic|městO|hrad
+vod|vasrův|ženA|pohádKA
+vod|vasr|ženA|hrad
+výš|véš|pohádKA|pohádKA
+vzduch|luft|hrad|hrad
+wc|retych|NESKLONNÉ|hrad
+záchod|retych|hrad|hrad
+zim|krut|ženA|ženA
+jinačovic|jinačky|těšeticE|
+jundrovic|jóbsk|těšeticE|městO
+jundrovan|jóbáli|muž|
+kohoutovice|kohótky|těšeticE|
+myslivn|jégrhaus|ženA|hrad
+ostopovic|ostopky|růžE|
+pisárky|šrajbec||
+riviéra |rivec|ženA|hrad
+rozdrojovic|rozdrojky|těšeticE|
+řečkovice|řečky||
+svratka|švarcav|pohádKA|ženA
+tišnov|tygál|les|hrad
+žabovřesky|žabiny||
+žebětín|žebál|les|les
+brusl|ryg|růžE|ženA
+hrad|gracna||
+elektrárn|šalintechn|ženA|ženA
+fotograf|bléskač||
+kamenolom|šutrotechn|hrad|ženA
+lan|štran|městO|stromEK
+lo|šíf|loĎ|hrad
+tchán|švirgrfotr|syn|syn
+sestr|švic|ženA|ženA
+-
+-
+-
+cel|cel||
+výborná|špicová ||
+-
+něCO|-1|co|čeho|čemu|co|co|čem|čím
+já|-1|já|mě,mne|mně,mi|mě,mne|já|mně|mnou
+kteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|y|-|ěch|ěmi|y|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|y|oho|omu|o|-|om|ím|a|ěch|ěm|a|-|ěch|ěmi
+-
+neCO|-1|co|čeho|čemu|co|co|čem|čím
+já|-1|já|mě|ně|mě|já|ně|mnó
+keRĚ|-1|ré|rýho|rýmu|rýho|-|rým|rém|ří|réch|rém|ré|-|réch|réma|ré|rýho|rýmu|ré|-|rým|rém|ré|réch|rém|ré|-|réch|réma|rá|ré|ré|ró|-|ré|ró|ré|réch|rém|ré|-|réch|rémi|ré|rýho|rýmu|ré|-|rým|rém|rá|réch|rém|rá|-|réch|réma
+ňáKÝ|-1|ké|kýho|kýmu|kýho|-|kým|kém|cí|kéch|kém|ký|-|kéch|kéma|ký|kého|kému|ký|-|kým|kém|ký|kéch|kém|ký|-|kéch|kéma|ká|ké|ké|kó|-|ké|kó|ké|kých|kým|ké|-|kéch|kéma|ké|kého|kému|ké|-|kým|kém|ká|kých|kým|ká|-|kéch|kéma
+tEN|-1|en|eho|emu|eho|-|em|ím|i|ech|em|y|-|ech|ema|y|eho|emu|en|-|em|ím|y|ech|em|y|-|ech|ema|a|é|é|u|-|é|ó|y|ech|em|y|-|ech|ema|y|eho|emu|o|-|em|ím|a|ech|em|a|-|ech|ema
+-
+něCO|neCO
+já|já
+kte|ke|kteRÝ|keRĚ
+něja|ňá|nějaKÝ|ňáKÝ
+t|tEN|tEN
+-
+mnohO|4|o|a|a|o|o|a|a|||||||||||||||||||||||||||||||||||||||||||||||||
+-
+mnohO|4|o|a|a|o|o|a|a|||||||||||||||||||||||||||||||||||||||||||||||||
+-
+mnoh|haf|mnohO|mnohO
+-
+být|119|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+mluvIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+chTÍT|15|-1|tít|ci|ceš|ce|ceme|cete|tějí|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+dělAT|111|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|aje|ajíc|ajíce|av|avši|avše
+chápAT|15|-1|at|u|eš|e|eme|ete|ou|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+mít|39|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|mějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|aje|ajíc|ajíce
+pomOCT|30|-1|ct|ůžu|ůžeš|ůže|ůžeme|ůžete|ůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+spÁT|7|-1|át|ím|íš|í|íme|íte|í|i|ěme|ěte|al|al|ala|alo|ali|aly|aly|ala
+-
+bet|119|-1|bet|su,sem|si|je|sme|ste|só|budu|budeš|bude|budeme|budete|budó|buď,budiž|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+mluvIT|15|-1|it|ím|íš|í|íme|íte|ijó||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+chTÍT|15|-1|tít|cu|ceš|ce|ceme|cete|có|těj|tějme|tějte|cel|cel|cela|celo|celi|cely|cely|cela|těn|těn|těna|těno|těni|těny|těny|těna
+dělAT|111|-1|at|ám|áš|á|áme|áte|ajó|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|aje|ajíc|ajíce|av|avši|avše
+chápAT|15|-1|at|u|eš|e|eme|ete|ó|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+mět|7|-1|ět|ám|áš|á|áme|áte|ajó|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+helfnÓT|21|-1|ót|u|eš|e|em|ete|ó|u|eš|e|em|ete|ó|ul|ul|ula|ulo|uli|uly|uly|ula
+-
+být|bet
+mluv|mluvIT|bet
+ch|chTÍT|chTÍT
+cháp|góm|chápAT|chápAT
+děl|dělAT|dělAT
+pomáh|helfn|dělAT|mluvIT
+sp|šlofn|spÁT|helfnÓT
+rozsvítit|rožnout||
+koupání|cébračka||
+chodit|córat||
+chytit|čapnout||
+uvidět|zbliknót||
+zahrát|zavařit||
+zaplatit|zacálovat||
+vypít|vyžahnót||
+žít|vegetit||
+udělat|uvařit||
+m|mít|mět
+pom|helfn|pomOCT|helfnÓT
+plavat |švimčit ||
+-
+neustále|imrvére
+teď|fčil
+hezky|pěkně
+pěšky|šórem
+taky
+ještě|ešče
+odsud|vocať
+hodně|hafo
+téměř|skoro
+samozdžejmě|jasnačka
+-
+o|vo|
+i|aji|
+od|vod|
+do|
+na|
+z|
+ze|
+-
+jestli|esi
+a
+ale
+když
+-
+prý|pré
+-
+ahoj|zdarec,zdar
