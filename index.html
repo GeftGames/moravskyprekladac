@@ -486,14 +486,27 @@
 						<div><p class="mapperPageHeader" id="mapperGanerateMap">Generátor map</p></div>
 					</div>
 					<div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;height: -webkit-fill-available;*/display: flex; justify-content: center;">
-						<div id="areaStartGenerate" class="listButtons">
-							<p id="mapperSearchWord">Hledaná fráze</p>
-							<input type="text" id="mapperInput" value="" style="font-size: 5mm;">
-							<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="margin-top: 5mm;" >Vytvořit mapu</a>							
+						<div id="areaStartGenerate" class="listButtons" style="width: -webkit-fill-available;display: flex; justify-content: center;flex-direction: column; align-items: center;">
+							<div>
+								<p id="mapperSearchWord">Hledaná fráze</p>
+								<input type="text" id="mapperInput" value="" style="font-size: 5mm;">
+								<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="margin-top: 5mm;" >Vytvořit mapu</a>
+									<br><br><br>
+								<p id="">Návrhy</p>	
+							</div>
+							
+							<div id="mapperNavrh" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;" >
+								<div class="mapperNavrh" onclick="navrhClick('ještě')">JEŠTĚ</div>
+								<div class="mapperNavrh" onclick="navrhClick('potom')">POTOM</div>
+								<div class="mapperNavrh" onclick="navrhClick('jen')">JEN</div>
+								<div class="mapperNavrh" onclick="navrhClick('toho')">bez TOHO</div>
+								<div class="mapperNavrh" onclick="navrhClick('vždy')">VŽDY</div>
+								<div class="mapperNavrh" onclick="navrhClick('teď')">TEĎ</div>
+							</div>
 						</div>
 						
-						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;">
-							<div class="listButtons;	flex-wrap: wrap;							flex-direction: row;">
+						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;flex-wrap: wrap;justify-content: space-between;">
+							<div class="listButtons; flex-wrap: wrap; flex-direction: row;">
 								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_download()" style="margin-top: 5px;">Stáhnout mapu</a>
 								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()" style="margin-top: 5px;">Generovat další mapu</a>
 								<a rel="nofollow" class="button" id="mapperZoomIn" onclick="mapper_zoomIn()" style="margin-top: 5px;">Přiblížit</a>
@@ -501,8 +514,9 @@
 								<p><input type="checkbox" checked id="mapperNote" onclick="mapper_Note()">Poznámka vygenerované</p>
 								<p><input type="checkbox" checked id="mapperOnlyGood" onclick="mapper_OnlyGood()">Pouze kvalitní překlady</p>
 								<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>
+								<p style="margin-bottom: 1cm;">Mapa nemusí mít přesné hranice, může obsahovat chyby</p>
 							</div>
-							<div style="    max-width: 100%;    overflow: scroll;    max-height: 100vh;    width: fit-content;">
+							<div style="max-width: 100%; overflow: scroll; max-height: 100vh; width: fit-content;">
 							<div id="mapperOuter" style="width: -webkit-fill-available;   height: -webkit-fill-available;border:none">
 								<canvas id="mapperCanvas" style="/*width:400px; height: 400px*/height: -webkit-fill-available;"></canvas>
 							</div>
@@ -569,17 +583,17 @@
 					</div>
 				</div>
 			</div>	
-			<div id="pageInfoLang" class="pageFromDown" style="display: none; top:500px;z-index: 9;    height: inherit;min-height: -webkit-fill-available;">
+			<div id="pageInfoLang" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
 				<div class="pageInside" id="infolang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
 					<div onclick="ClosePageInfoLang()" class="pageFromDownClose" id="closeSelectorPage">
 						<div rel="nofollow" onclick="ClosePageInfoLang()">
-							<svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
 						</div>
 						<p style="display:inline;" id="closeSelector">Zavřít</p>
 					</div>
-					<div><p class="mapPageHeader" id="mapPlace">Překlad: <span id="langName"></span></p></div>
+					<div><p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p></div>
 					<p id="infoLangText"></p>
 				</div>
 			</div>	
