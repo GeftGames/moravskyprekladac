@@ -1,0 +1,80 @@
+TW v0.1
+d05.05.2023 10:10:04
+c#Zdroje dat\n-Kellner, Adolf - Východolašská nářečí; str.87
+g49.8309656,18.3892153
+q0
+-
+-
+-
+-
+-
+navečer|ku večoru
+-
+-
+-
+-
+ného|nego
+át|ać
+pil|pił
+čil|čył
+šel|šoł
+kat|kać
+lo|ło
+-
+hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+stroj|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+lůžKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+noc|1||i|i||i|i|í|i,řečně) noce|í|ím|i,řečně) noce|i,řečně) noce|ích|emi
+-
+hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+stroj|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
+městO|0|o?|a|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+lůžKO|0|ko?|ka|ku?|ko?|ko?|ku?|kem?|ka?|ek?|kům?|ka?|ka?|kách?|ky?
+pohádKA|1|ka?|ky|ce?|ke|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+ženA|1|a?|y|ě?|u?|o?|ě|ou?|y?|?|ám?|y?|y?|ách?|ami?
+noc|1|?|i?|i?|?|i?|y|í?|i,řečně) noce?|í?|ím?|i,řečně) noce?|i,řečně) noce?|ích?|emi?
+-
+postel|łuš|stroj|lůžKO
+písnič|pjeśňič|pohádKA|pohádKA
+hodin|godzun|ženA|ženA
+noc|noc|noc
+vod|ženA|ženA
+-
+-
+-
+-
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+-
+JÁ|-1|jo|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+-
+JÁ|JÁ
+-
+-
+-
+-
+dělAT|111|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|aje|ajíc|ajíce|av|avši|avše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
+-
+robIT|111|-1|it?|im|áš?|á?|áme?|iće|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|aje?|ajíc?|ajíce?|av?|avši?|avše?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+MÍT|103|-1|mít?|mum|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+JÍT|127|-1|jít?|idym|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+-
+děl|dělAT|dělAT
+|BÝT|BÝT
+MÍT|MÍT
+JÍT|JÍT
+-
+potom|pytym,potym
+ještě|ešče
+dost|dość
+-
+-
+a
+-
+-
