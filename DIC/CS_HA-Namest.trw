@@ -9678,7 +9678,6 @@ JÍT|255|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|||||||||||||||||||||||||||||||||
 lHÁT|255|-1|hát|||||||||||||||||||||||||||||||||||||||||||
 mÍT|255|-1|ít|||||||||||||||||||||||||||||||||||||||||||
 naroDIT|255|2|dit|||||||||||||||||||||||||||||||||||||||||||
-neBÝT|255|0|být|||||||||||||||||||||||||||||||||||||||||||
 přičtíst|255|-1|íst|ítám|ítáš|ítá|ítáme|||||||||||||||||||||||||||||||||||||||
 přijít|255|-1|jít|||||||||||||||||||||||||||||||||||||||||||
 připravUJE|255|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|||||||||||||||||||||||||||||||||||||
@@ -9690,7 +9689,7 @@ tÉCT|255|1|éct|||||||||||||||||||||||||||||||||||||||||||
 umĚT|255|-1|ět|||||||||||||||||||||||||||||||||||||||||||
 viDĚT|255|-1|dět|dím|díš|dí|díme|díte|dí|||||||||||||||||||||||||||||||||||||
 žÍT|5|-1|ít|iju|iješ|ije|ijeme|ijete|ijí|il|il|ila|ilo|ili|ily|ily|ila
-být|119|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 smÁT|3|-1|át|ěji,ěju|eješ|eje|ejeme|ejete|ejí|ej|ejme|ejte
 oblÉCT|30|-1|éct|eču|ečeš|eče|eme|ete|ečou|eč|ečme|ečte|ékl|ékl|ékla|éklo|ékli|ékly|ékly|ékla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
 ohřÁT|15|-1|át|eji|eješ|eje|ejeme|ejete|ejí|ej|ejme|ejte|ál|ál|ála|álo|áli|ály|ály|ála|át|át|áta|áto|áti|áty|áty|áta
@@ -9698,6 +9697,7 @@ děkOVAT|7|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|o
 smÁT|7|-1|át|ěji|ěješ|ěje|ějeme|ějete|ějí|ěj|ějme|ějte|ál|ál|ála|álo|áli|ály|ály|ála
 mOCT|5|-1|oct|ohu,ůžu|ůžeš|ůže|ůžeme|ůžete|ohou,ůžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 ukrÁST|15|-1|ást|adnu|adneš|adne|adneme|adnete|adnou|adni|adněme|adněte|adl|adl|adla|adlo|adli|adly|adly|adla|aden|aden|adena|adeno|adeni|adeny|adeny|adena
+neBÝT|119|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
 -
 žET|7|-1|ê|êjô|êješ|êje|êjeme|êjete|êjó|é|éme|éte|êl|êl|êla|êlo|êlê|êlê|êlê|êla
 slavIT|7|-1|it|im|iš|i|ime|ite|ijó||me|te|il|il|ila|ilo|ilê|ilê|ilê|ila
@@ -9734,7 +9734,7 @@ uděl|ôděl,poděl|dělat|dělat
 st|stát|stÁT
 t|tÉCT|tICT
 přič|přeč|C_přičti|
-být|BÊT
+BÝT|BÊT
 st|stát|stÁT
 j|jET|jET
 ch|chtít|chTĚT
