@@ -59,7 +59,22 @@ class ItemPatternNoun {
 		if (raw[1]=="2") item.Gender = "muz ziv";
 		if (raw[1]=="3") item.Gender = "muz neziv";
 		
-		item.Shapes = [raw[2].split(','), raw[3].split(','), raw[4].split(','), raw[5].split(','), raw[6].split(','), raw[7].split(','), raw[8].split(','), raw[9].split(','), raw[10].split(','), raw[11].split(','), raw[12].split(','), raw[13].split(','), raw[14].split(','), raw[15].split(',')];
+		item.Shapes = [];
+		for (let i=2; i<=15; i++) {
+			let add=[];
+			let unknown=false;
+
+			for (let r of raw[i].split(',')) {
+				if (r.includes("?")) unknown=true;
+				else add.push(r);
+			}
+
+			if (unknown) {
+				 if (add.length>0) item.Shapes.push(add);
+				 else item.Shapes.push("?");
+			} else item.Shapes.push(add);
+		}
+	//	item.Shapes = [raw[2].split(','), raw[3].split(','), raw[4].split(','), raw[5].split(','), raw[6].split(','), raw[7].split(','), raw[8].split(','), raw[9].split(','), raw[10].split(','), raw[11].split(','), raw[12].split(','), raw[13].split(','), raw[14].split(','), raw[15].split(',')];
 		return item;
 	}
 }
@@ -175,8 +190,6 @@ class ItemNoun {
 		if (dev) console.log("⚠️ function 'GetWordTo' has unknown parameter 'number' with value '"+number+"'");
 		return [this.From+this.PatternFrom.Shapes[fall-1], this.PatternFrom.Gender];
 	}
-
-	
 
 	GetDicForm(name) {		
 		if (this.PatternTo.Shapes[0]=="?") return null;	
@@ -2185,11 +2198,11 @@ class ItemVerb{
 		if (toArr===undefined) return;
 				
 		for (let i=fromIndex; i<toIndex; i++) {
-			let shape=fromArr[i];
+			let shapes=fromArr[i];
 
 			// Multiple choises in source array
-			if (Array.isArray(shape)) {
-				for (const s of shape) {
+			if (Array.isArray(shapes)) {
+				for (const s of shapes) {
 					if (s=='?') continue;
 					let shape=this.From+s;
 					
@@ -2207,10 +2220,10 @@ class ItemVerb{
 					}
 				}
 			} else {
-				if (fromArr[i]=="-") continue;
-				if (fromArr[i]=='?') continue;
+				if (shapes=="-") continue;
+				if (shapes=='?') continue;
 
-				let shape=this.From+fromArr[i];
+				let shape=this.From+shapes;
 					
 				if (shape==match) {
 					if (Array.isArray(toArr[i])) {
@@ -2229,7 +2242,7 @@ class ItemVerb{
 	}
 	
 	IsStringThisWord(str) {
-		if (!str.startsWith(this.From)) return null;
+		if (!str.startsWith(this.From)) { return null; }
 		this.ret=[];
 
 		this.ForeachArr(this.PatternFrom.Continous, this.PatternTo.Continous, 0, 3, 1, "Continous", str);
@@ -2244,6 +2257,9 @@ class ItemVerb{
 		this.ForeachArr(this.PatternFrom.PastPassive, this.PatternTo.PastPassive, 0, 4, 1, "PastPassive", str);
 		this.ForeachArr(this.PatternFrom.PastPassive, this.PatternTo.PastPassive, 4, 8, 2, "PastPassive", str);
 
+		
+		this.ForeachArr(this.PatternFrom.Auxiliary, this.PatternTo.Auxiliary, 0, 3, 1, "Auxiliary", str);
+		this.ForeachArr(this.PatternFrom.Auxiliary, this.PatternTo.Auxiliary, 3, 6, 2, "Auxiliary", str);
 		// Return all possible falls with numbers
 		// [[tvar, číslo, osoba], rod]
 	
@@ -2384,7 +2400,7 @@ class ItemVerb{
 			}
 		}*/
 		
-		if (this.PatternTo.Auxiliary!==undefined && this.PatternFrom.Auxiliary!==undefined) {
+	/*	if (this.PatternTo.Auxiliary!==undefined && this.PatternFrom.Auxiliary!==undefined) {
 			for (let i=0; i<3; i++) {
 				let shape=this.PatternFrom.Auxiliary[i];
 				//if (shape=="-") continue;
@@ -2403,7 +2419,7 @@ class ItemVerb{
 					break;
 				}
 			}
-		}
+		}*/
 		if (this.ret.length==0) return null; else return this.ret;
 
 	}
