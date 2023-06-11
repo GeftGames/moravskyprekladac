@@ -2,7 +2,7 @@ TW v0.1
 tVelké Karlovice
 aGG
 d31.05.2023 8:56:46
-c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
+c#Zdroje dat\n-<a href="http://eyetracking.upol.cz/naki_vystava_nareci/">eyetracking.upol.cz/naki_vystava_nareci</a>\n-Karlovické nářečí-Svěrák, František
 g49.3641389,18.3054295
 q0
 -
@@ -13,23 +13,31 @@ q0
 do čtvrnácti let|do štrnásti rokú
 -
 -
+ně|ne
 -
 -
-
+pít|piť
+pil|pił
+lat|lať
 -
 -
 -
 obilí|zbožú||
 žně|žňa||
+doktor|dochtor||
+sklo|skło||
 -
 -
 -
 -
 JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
 JÁ|-1|já?|mě,(knižně) mne[2]?|mně,mi?|mňa|já?|mně?|mnou?
+tEN|-1|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
 JÁ|JÁ
+t|tEN|tEN
 -
 -
 -
@@ -38,18 +46,40 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 přiJÍT|6|-1|jít|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
 chyTNOUT|14|-1|tnout|ť|ťme|tněte|tnul,chytil|tnul,chytil|tla,chytnula,chytila|tnulo,chytilo,chytlo|tli,chytnuli,chytili|tly,chytnuly,chytily|tly,chytnuly,chytily|tla,chytnula,chytila|cen,chytnut|cen,chytnut|cena,chytnuta|ceno,chytnuto|ceni,chytnuti|ceny,chytnuty|ceny,chytnuty|cena,chytnuta
 pÁST|15|-1|ást|asu|aseš|ase|aseme|asete|asou|as|asme|aste|ásl|ásl|ásla|áslo|ásli|ásly|ásly|ásla|asen|asen|asena|aseno|aseni|aseny|aseny|asena
+dělAT|111|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|aje|ajíc|ajíce|av|avši|avše
+JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|byť|sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|były|byly?|była|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 přiJÍT|6|-1|jít?|jď?|jďme?|jďte?|šéł|šéł|šla?|šlo?|šli?|šly?|šly?|šla?
 chyTNOUT|14|-1|tnout?|ť?|ťme?|tněte?|tnúl|tnúl|tla,chytnula,chytila?|tnulo,chytilo,chytlo?|tli,chytnuli,chytili?|tly,chytnuly,chytily?|tly,chytnuly,chytily?|tla,chytnula,chytila?|cen,chytnut?|cen,chytnut?|cena,chytnuta?|ceno,chytnuto?|ceni,chytnuti?|ceny,chytnuty?|ceny,chytnuty?|cena,chytnuta?
 pÁST|15|-1|ást?|asu?|aceš|ase?|aseme?|asete?|asou?|as?|asme?|aste?|ásl?|ásl?|ásla?|áslo?|ásli?|ásly?|ásly?|ásla?|asen?|asen?|asena?|aseno?|aseni?|aseny?|aseny?|asena?
+dělAT|111|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|áł|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|aje?|ajíc?|ajíce?|av?|avši?|avše?
+JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šeł|šeł|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+musET|5|-1|et?|ím?|íš?|í?|íme?|ite|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
+dÁT|94|-1|át?|ám?|áš?|á?|áme|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|oh|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 -
 BÝT|BÝT
 přiJ|přiJÍT|přiJÍT
 chyT|chyTNOUT|chyTNOUT
 pÁ|pÁST|pÁST
+dělA|dělAT|dělAT
+JÍT|JÍT
+musE|musET|musET
+dÁ|dÁT|dÁT
+mO|mOCT|mOCT
 -
+potom
+zítra|zajtra
+tady
+ještě|ješče
 -
+do|
 -
+ale|aĺe
+když|dyž,dyš
 -
 -

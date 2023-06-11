@@ -1,38 +1,66 @@
 TW v0.1
 tHlohovec
 d31.05.2023 9:30:47
-c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-https://theses.cz/id/qt9lag/17149671\n-https://www.rmm.cz/regiom/2012/11_matuszkova.pdf\n-České nářeční texty - Lamprecht, Arnošt; str.258\n\n#Popis\n-Neexistence ř\n-slovesa v 1. osobě singuláru koncovku -m
 g48.7746977,16.7621669
 q0
 -
 -
 -
+Tak běž sloužit!|Tak tahňi slúžit!
 -
 -
 z té|z téj
+z kostela|s kostela
 -
 -
 -
+ř|r
+ou|ú
+ů|ú
 -
+šel|šél
 -
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+výbor|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 -
-školA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+školA|1|a?|e|e?|u?|o?|e?|ou?|y?||ám?|y?|y?|ách?|ami?
+výboR|3|?|u?|u?|?|e?|ře|em?|y?|ů?|ům?|y?|y?|ech?|y?
+dEN|0|eň|ne?|ni,nu?|en?|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
 -
 škol|školA|školA
+budova||
+výbor|výbo|výbor|výboR
+učitel||
+němci|nemci||
+válka||
+valtice|do válčic||
+vesnice|ďeďina||
+štěpán|ščepán||
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
 čeSKÝ|-1|ské|ského|skému|ské|ské|ském|ským|ská|ských|ským|ská|ská|ských|skými|ská|ské|ské|skou|ská|ské|skou|ské|ských|ským|ské|ské|ských|skými|ský|ského|skému|ského|ský|ském|ským|ští|ských|ským|ské|ští|ských|skými|ský|ského|skému|ský|ský|ském|ským|ské|ských|ským|ské|ské|ských|skými
 -
-zelenÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ích|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+zelenÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|ej|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ích|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
 čeSKÝ|-1|ské?|ského?|skému?|ské?|ské?|ském?|ským?|ská?|ských?|ským?|ská?|ská?|ských?|skými?|ská?|ské?|ské?|skú|ská?|ské?|skou?|ské?|ských?|ským?|ské?|ské?|ských?|skými?|ský?|ského?|skému?|ského?|ský?|ském?|ským?|ští?|ských?|ským?|ské?|ští?|ských?|skými?|ský?|ského?|skému?|ský?|ský?|ském?|ským?|ské?|ských?|ským?|ské?|ské?|ských?|skými?
 -
 hloup|hlúp|zelenÝ|zelenÝ
 blb|hlúp|zelenÝ|zelenÝ
 če|čeSKÝ|čeSKÝ
+cel||
 -
+MY|-1|my|nás|nám|nás|my|nás|námi
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+MY|-1|mi|nás?|nám?|nás?|my?|nás?|námi?
+SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+tEN|-1|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a|ej|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
+MY|MY
+SE|SE
+t|tEN|tEN
 -
 -
 -
@@ -41,11 +69,23 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 vzpomENOUT|14|-1|enout|eň|eňme|eňte|něl,vzpomenul|něl,vzpomenul|něla,vzpomenula|nělo,vzpomenulo|něli,vzpomenuli|něly,vzpomenuly|něly,vzpomenuly|něla,vzpomenula|enut|enut|enuta|enuto|enuti|enuty|enuty|enuta
 chTÍT|15|-1|tít|ci,(nářečně) chcu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+tÁHNOUT|15|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl (hov. táhnul)|áhl (hov. táhnul)|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
-JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|išli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+BÝT|247|-1|být?|sem|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bilo|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|išla|šlo|išli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 spomENOUT|30|-1|enout?|enu|?|?|?|?|?|eň?|eňme?|eňte?|něl,vzpomenul?|něl,vzpomenul?|něla,vzpomenula?|nělo,vzpomenulo?|něli,vzpomenuli?|něly,vzpomenuly?|něly,vzpomenuly?|něla,vzpomenula?|enut?|enut?|enuta?|enuto?|enuti?|enuty?|enuty?|enuta?
 chTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce?|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|těl?|těl?|těla?|tělo?|celi|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
+udělAT|30|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+řÍCT|30|-1|íct?|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla|eklo?|ikali|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
+vĚDĚT|7|-1|ědět?|im|íš?|í?|íme?|íte?|ědí?|ěz?|ězme?|ězte?|ěděl?|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
+MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|mňeli|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+mOCT|5|-1|oct?|ožu|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+tÁHNOUT|15|-1|áhnout?|áhnu?|áhneš?|áhne?|áhneme?|áhnete?|áhnou?|ahňi|áhněme?|áhněte?|áhl (hov. táhnul)?|áhl (hov. táhnul)?|áhla?|áhlo?|áhli?|áhly?|áhly?|áhla?|ažen?|ažen?|ažena?|aženo?|aženi?|aženy?|aženy?|ažena?
 -
 BÝT|BÝT
 JÍT|JÍT
@@ -53,9 +93,34 @@ vzpom|spom|vzpomENOUT|spomENOUT
 ch|chTÍT|chTÍT
 nech|chTÍT|chTÍT
 povolit||
-budova||
+udel|uďel|udělAT|udělAT
+ř|r|řÍCT|řÍCT
+v|vĚDĚT|vĚDĚT
+MÍT|MÍT
+mO|mOCT|mOCT
+nem|mOCT|mOCT
+t|tÁHNOUT|tÁHNOUT
+ne|JÍT|JÍT
 -
+potom
+tady|tadi
+ještě|ešče
+více|víc
+semka,sem|senkaj
+však|šak
+teď|fčíl
+tak
+domů|dom
 -
+do|
+napřed|napret|
+od|
+i|aj,aji|
+přes|pres|
 -
+kdyby|bi
+protože
+že
+jak
 -
 -

@@ -1,0 +1,108 @@
+TW v0.1
+tMilotice nad Bečvou
+d11.06.2023 20:16:30
+c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 262\n\n#Symboly\n-ĭ krátké i
+g49.5367487,17.8387193
+q0
+-
+-
+-
+-
+-
+jak teď|fčylej
+-
+-
+-
+-
+těl|ťéł
+dal|dáł
+dat|dať
+jel|jéł
+-
+snídanĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+-
+snídaNĚ|1|ě?|ě?|i?|ňĭ|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
+pastviSKO|-1|||ščy||||||šč|skech||||
+-
+kafé|kafe||
+snídan|sňída|snídanĚ|
+pastvin|pastvi|ženA|pastviSKO
+pol|role|polE|
+živobití|žyvobyťí||
+brambol|kobzál||
+metrák|metrág||
+hlávka|hłávka||
+otec|otedz||
+-
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
+-
+zelenÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|ké|kých?|kým?|ké?|ké?|kých?|kými?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|ké?|kých?|kým?|ké?|ké?|kých?|kými?
+-
+žlut|žułt|zelenÝ|zelenÝ
+mal|mał|zelenÝ|zelenÝ
+úz|ús|hezKÝ|hezKÝ
+lacin|lacyn|zelenÝ|zelenÝ
+-
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|-1|on|ho,jej,něj,jeho,něho|mu,jemu,#němu|ho,jej,něj,jeho,něho|-|#něm|jím,ním
+-
+SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+tEN|-1|en?|oho?|omu?|oho?|-|em|ím?|y?|ych|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|em|ím?|y?|ych|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ych|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o|-|em|ím?|y?|ych|ěm?|y?|-|ěch?|ěmi?
+ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+-
+SE|SE
+t|tEN|tEN
+ON|ON
+-
+šest|2||i|i|||i|i
+-
+šest|2|?|i?|i?||?|i?|i?
+-
+šest|šezd|šest|šest
+-
+žÍT|15|-1|ít|iji|iješ|ije|ijeme|ijete|ijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+chTÍT|15|-1|tít|ci,(nářečně) chcu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
+prodAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojedeme|pojedete|pojedou|jeď|jeďme|jeďte|jel|jel|jela|jelo|jeli|jely|jely|jela|jet|jet|jeta|jeto|jeti|jety|jety|jeta
+-
+žÍT|15|-1|ít?|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij?|ijme?|ijte?|il?|il?|ila?|yło|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+BÝT|247|-1|být?|jsem?|jsi?|jest|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býł|byl?|była|było|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|mjéł|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+chTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce?|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|těl?|těl?|těla?|tělo?|těli?|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
+kOUPIT|15|-1|úpiď|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|oupila?|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
+prodAT|15|-1|ať|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+JET|31|-1|jet?|jedu?|jedeš?|jede?|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jéł|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
+-
+ž|žÍT|žÍT
+BÝT|BÝT
+MÍT|MÍT
+ch|chTÍT|chTÍT
+k|kOUPIT|kOUPIT
+prod|prodAT|prodAT
+JET|JET
+-
+dříve|prf
+jinak|inádž
+teď,nyní|fčylej
+třebas|baj
+ještě|ešče
+domů|dom
+jen,jenom|enem
+potom|potem
+-
+na|
+v|
+kolem|
+-
+a
+že
+-
+-

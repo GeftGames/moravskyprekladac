@@ -1,0 +1,141 @@
+TW v0.1
+tČejč
+d09.06.2023 13:02:20
+iŠél sem na vojnu ve štrnástém a bil sem tam štiri roki. Já sem toho pochodil.\nRok a půl sem bil na fronte a dva a půl v ruském zajeťí, patnást verst od Kaspického\njezera. Pracoval sem tam u chazaja, to je hospodář po česki, u Tatara. Tatar to bil,\nbili to hodní liďi. Tam vůbec nesaďili, enom opsívali pšeňicu, jačmeň a oves a to\nseli každí rok, řepu a erteple nesadili. Orali volama, mňeli tři pári volů. Obila mňeli\npjekné. Víno vozili s Kafkazu na velbúdách v ofčích kožách a lacino, za pjet kopejek\nbutilku, to bilo tak slabého půl litra. Bilo tam moc teplo. Zima bila strnást dní; to sa\nzamračilo, fúkal vjetr, napadlo sňehu. Bívali v hliňeních chalupách, říkali jim\nzemlanki. Fčíl to majů jisté lepší, ale tenkrát za cár a...\nDo Kaspického jezera teče Volha třema prúdama. Tam je ribl Tam chitajú\nribi do sítě, tam ribi střílajů a zajíců chitajú na koňech; na koňovi teho zajíca žene\na takú knutú ho zabije. Tam sú ohromné rovini a zem jílovitá. Tam aš po Kaspické\njezero néňi kopeček ani stromi, tam je enom tráva. Tam sa pásli stáda ofcí, kraf a\nkoňe; ti koňe bili celí deň venku. Diž napadlo sňehu, dali je do ohradí. Po Volze\nsme jeli skoro tídeň od Gorkij až do Kazaňe. 
+c#Zdroje dat\n-https://dspace.cuni.cz/bitstream/handle/20.500.11956/22359/DPTX_2008_2_11410_OSZD001_76504_0_71830.pdf?sequence=1&isAllowed=y 
+g48.9457684,16.9629891
+q0
+-
+-
+-
+-
+foukal vítr|fúkal vjetr
+když napadl sníh|diž napadlo sňehu
+-
+do války|na vojnu
+téměř půl litru|slabého púl litra
+-
+-
+-
+ou|ú
+ů|ú
+ami|ama
+-
+tají|tajú
+lejí|lajú
+náct|nást
+-
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+vŮL|2|ůl|ola|olu,olovi|ola|ole|olu,olovi|olem|oli,olové|olů|olům|oly|oli,olové|olech|oly
+vÍTR|3|ítr|ětru|ětru|ítr|ětře,ětre|ětru|ětrem|ětry|ětrů|ětrům|ětry|ětry|ětrech|ětry
+hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+pšenicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+-
+ženA|1|a|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+vŮL|2|ůl?|ola?|olu,olovi?|ola?|ole?|olu,olovi?|olem?|oli,olové?|olú|olům?|oly?|oli,olové?|olech?|olama
+vÍTR|3|jetr|ětru?|ětru?|ítr?|ětře,ětre?|ětru?|ětrem?|ětry?|ětrů?|ětrům?|ětry?|ětry?|ětrech?|ětry?
+hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|ama
+kŮŇ|3|ůň?|oně?|oni,oňovi?|oně,archaicky) kůň[4][5]?|oni?|oňovi|oněm?|oně?|oní,oňů?|oním,oňům?|oně?|oně?|oňech|oni,oňmi?
+dEN|0|eň|ne?|ni,nu?|en?|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
+strom|3|?|u?|u?|?|e?|u,ě?|em?|i|ů?|ům?|y?|y?|ech?|y?
+pšenicE|1|e?|e?|i?|u|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+-
+hospodář|chazaj||
+ječmen|jačmeň||
+oves||
+řep|ženA|ženA
+brambory|erteple||
+v|vŮL|vŮL
+kavkaz|kafkaz||
+velboud|velbúd||
+v|vÍTR|vÍTR
+proud|prúd|hrad|hrad
+k|kŮŇ|kŮŇ
+země|zem||
+tráva||
+d|dEN|dEN
+rok||
+jezero||
+strom|strom|strom
+kopeček||
+pšeňic|pšenicE|pšenicE
+-
+hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
+-
+pěknÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+-
+hez|pjekn|hezKÝ|pěknÝ
+-
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+-
+tEN|-1|en?|eho|omu?|eho|-|om?|ím?|i|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|eho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+takÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ú|-|é?|ú|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+-
+t|tEN|tEN
+SE|SE
+takovÝ|takovÝ|takovÝ
+-
+pět|2||i|i|||i|i
+třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
+čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
+dvA|2|a|ou|ěma|a|a|ou|ěma
+-
+pět|2|?|i?|i?|?|?|i?|i?
+třI|2|i|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
+styrI|2|i?|vorově) čtyřech[1]?,?,(hovorově) čtyřech[1]?|em?|i?|i?|ech?|tyřma[2]?,mi?,čtyřma[2]?
+dvA|2|a|ou?|ěma?|a?|a?|ou?|ěma?
+-
+čtyři|štiri|čtyřI|styrI
+půl|púl||
+tř|třI|třI
+čtrnáct|strnást|pět|pět
+pět|pjet|pět|pět
+dv|dvA|dvA
+patnáct|patnást|pět|pět
+-
+JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+neBÝT|119|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+sÍT|15|-1|ít|eji|eješ|eje|ejeme|ejete|ejí|ej|ejme|ejte|el,sil|el,sil|ela,sila|elo,silo|eli,sili|ely,sily|ely,sily|ela,sila|et|et|eta|eto|eti|ety|ety|eta
+sázET|15|-1|et|ím|íš|í|íme|íte|í,sázejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+zabÍT|15|-1|ít|iji|iješ|ije|ijeme|ijete|ijí|ij, (v&#160;obecném jazyce) zab|ijme, (v&#160;obecném jazyce) zabme|ijte, (v&#160;obecném jazyce) zabte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+-
+JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šél|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+BÝT|247|-1|být?|sem|jsi?|je?|sme|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bil|byl?|byla?|bilo|bili|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+MÍT|39|-1|mít?|mám?|máš?|má?|máme?|máte?|majú|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|mňeli|měly?|měly?|měla?|maje?|majíc?|majíce?
+nEBÝT|119|-1|být?|jsem?|jsi?|éňi|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
+sÍT|15|-1|ít?|eji?|eješ?|eje?|ejeme?|ejete?|ejí?|ej?|ejme?|ejte?|el,sil?|el,sil?|ela,sila?|elo,silo?|eli|ely,sily?|ely,sily?|ela,sila?|et?|et?|eta?|eto?|eti?|ety?|ety?|eta?
+sÁZET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í,sázejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|adili|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+zabÍT|15|-1|ít?|iji?|iješ?|ije|ijeme?|ijete?|ijí?|ij, (v&#160;obecném jazyce) zab?|ijme, (v&#160;obecném jazyce) zabme?|ijte, (v&#160;obecném jazyce) zabte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+-
+JÍT|JÍT
+BÝT|BÝT
+MÍT|MÍT
+ne|n|neBÝT|nEBÝT
+s|sÍT|sÍT
+sáz|s|sázET|sÁZET
+nesáz|nes|sázET|sÁZET
+zab|zabÍT|zabÍT
+-
+vůbec
+jen,jenom|enom
+moc
+téměř|skoro
+teď|fčíl
+tam
+-
+po|
+do|
+u|
+za|
+-
+když|diž
+-
+-
