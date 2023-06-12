@@ -1,0 +1,74 @@
+TW v0.1
+tSlavkov
+d12.06.2023 11:12:27
+c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 292
+g49.9221079,17.8361169
+q0
+-
+-
+-
+-
+-
+v tom|f tym
+-
+-
+-
+-
+náct|nast
+-
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
+roK|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
+-
+pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+žeNA|1|na|ny|ě?|nu|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+kŮŇ|3|ůň?|oňa|oni,oňovi?|oně,archaicky) kůň[4][5]?|oni?|oni,oňovi?|oněm?|oně?|oní,oňů?|oním,oňům?|oně?|oně?|oních?|oňma
+roK|3|k?|ku,ka?|ku?|k?|ku?|ku|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+-
+vál|voj|pohádKA|žeNA
+k|kŮŇ|kŮŇ
+-
+-
+-
+-
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+-
+SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+tEN|-1|en?|oho?|omu?|oho?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+ON|-1|un|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+-
+SE|SE
+t|tEN|tEN
+ON|ON
+-
+třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
+-
+třI|2|i?|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
+-
+tř|třI|třI
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
+-
+BÝT|247|-1|být?|sem|jsi?|je?|smy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|mjeła|mělo?|mjeli|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šeł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+-
+BÝT|BÝT
+MÍT|MÍT
+JÍT|JÍT
+smát|smit||
+-
+brzy|skoro
+ještě|ešče
+potom|potem
+zas
+-
+-
+ale
+-
+-
