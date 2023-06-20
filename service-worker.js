@@ -1,4 +1,5 @@
-var cacheName = 'moravskyprekladac-ver-1';
+var version="1.0";
+var cacheName = 'moravskyprekladac-ver-'+version;
 var filesToCache = [
     "index.php",
 
@@ -9,23 +10,17 @@ var filesToCache = [
     "data/styles/themes/nightdark.css",
     "data/styles/themes/light.css",
 
-    "DIC/ListHA.txt",
-    "DIC/ListMO.txt",
-    "DIC/ListVA.txt",
-    "DIC/ListSO.txt",
-    "DIC/ListSLez.txt",
-
     "favicon.ico",
 
     "data/images/icon64.png",
     "data/images/icon96.png",
     "data/images/icon512.png",
 
-    "data/errorPages/index400.php",
-    "data/errorPages/index401.php",
-    "data/errorPages/index403.php",
-    "data/errorPages/index404.php",
-    "data/errorPages/index503.php",
+    "data/errorPages/index400.html",
+    "data/errorPages/index401.html",
+    "data/errorPages/index403.html",
+    "data/errorPages/index404.html",
+    "data/errorPages/index503.html",
 
     "data/manifests/manifestEN.json",
     "data/manifests/manifestHA.json",
@@ -97,3 +92,10 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (e) {
    e.respondWith(caches.match(e.request).then(function (response) { return response || fetch(e.request); }));
 });
+
+function CleanCache() {
+	caches.keys().then(function(names) {
+		for (let name of names)
+			caches.delete(name);
+	});
+}
