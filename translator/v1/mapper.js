@@ -325,8 +325,10 @@ function mapper_compute() {
 
 	ctx.fillStyle="Black";
 	for (let p of points){
-		let w=ctx.measureText(p.Name).width;
-		ctx.fillText(p[2], xx+p[0]-w/2, yy+p[1]-radius-5);
+	//	if (xx+p[0]-w/2>0 && yy+p[1]-radius-5>0) { //<-optimalizace, mimo plochu
+			let w=ctx.measureText(p.Name).width;
+			ctx.fillText(p[2], xx+p[0]-w/2, yy+p[1]-radius-5);
+	//	}
 	}
 	if (mapper_ShowNote) {
 		ctx.fillStyle="Black";

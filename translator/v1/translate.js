@@ -81,62 +81,90 @@ class ItemPatternNoun {
 
 class ItemNoun {
 	static pattensFrom;
-	static pattensTo;
+	static To;
+	static From="";
 
 	constructor() {
 		this.From = "";
-		this.To = "";
+		this.To = [];
+		this.UppercaseType=-1;
 		this.PatternFrom = null;
-		this.PatternTo = null;
 	}
 	
 	static Load(data) {
-		if (data.includes('?')) return null;
-		let raw = data.split('|');
-		if (raw.length == 4) {
+		if (loadedversion=="TW v1.0") {
+			if (data.includes('?')) return null;
+			let raw = data.split('|');
+			if (raw.length == 4) {
+				let item = new ItemNoun();
+				item.From = raw[0];
+				item.To = raw[1];
+
+				let paternFrom = this.GetPatternByNameFrom(raw[2]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+
+				let paternTo = this.GetPatternByNameTo(raw[3]);
+				if (paternTo == null) return null;
+				else item.PatternTo = paternTo;
+
+				return item;
+			} else if (raw.length == 3) {
+				let item = new ItemNoun();
+				item.From = raw[0];
+				item.To = raw[0];
+
+				let paternFrom = this.GetPatternByNameFrom(raw[1]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+
+				let paternTo = this.GetPatternByNameTo(raw[2]);
+				if (paternTo == null) return null;
+				else item.PatternTo = paternTo;
+
+				return item;
+			} else if (raw.length == 2) {
+				let item = new ItemNoun();
+				item.From = "";
+				item.To = "";
+
+				let paternFrom = this.GetPatternByNameFrom(raw[0]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+
+				let paternTo = this.GetPatternByNameTo(raw[1]);
+				if (paternTo == null) return null;
+				else item.PatternTo = paternTo;
+
+				return item;
+			}
+			return null;
+		} else {
+			if (data.includes('?')) return null;
+			let raw = data.split('|');
+	
 			let item = new ItemNoun();
 			item.From = raw[0];
-			item.To = raw[1];
-
-			let paternFrom = this.GetPatternByNameFrom(raw[2]);
-			if (paternFrom == null) return null;
-			else item.PatternFrom = paternFrom;
-
-			let paternTo = this.GetPatternByNameTo(raw[3]);
-			if (paternTo == null) return null;
-			else item.PatternTo = paternTo;
-
-			return item;
-		} else if (raw.length == 3) {
-			let item = new ItemNoun();
-			item.From = raw[0];
-			item.To = raw[0];
-
+			
 			let paternFrom = this.GetPatternByNameFrom(raw[1]);
 			if (paternFrom == null) return null;
 			else item.PatternFrom = paternFrom;
 
-			let paternTo = this.GetPatternByNameTo(raw[2]);
-			if (paternTo == null) return null;
-			else item.PatternTo = paternTo;
+			item.UppercaseType=parseInt(raw[2]);
 
-			return item;
-		} else if (raw.length == 2) {
-			let item = new ItemNoun();
-			item.From = "";
-			item.To = "";
+			for (let i=3; i<raw.length; i++) {
+				let ptn=[];
 
-			let paternFrom = this.GetPatternByNameFrom(raw[0]);
-			if (paternFrom == null) return null;
-			else item.PatternFrom = paternFrom;
+				ptn[0]=raw[i];
 
-			let paternTo = this.GetPatternByNameTo(raw[1]);
-			if (paternTo == null) return null;
-			else item.PatternTo = paternTo;
+				let paternTo = this.GetPatternByNameTo(raw[i+1]);
+				if (paternTo == null) return null;
+				else ptn[1] = paternTo;
 
-			return item;
+				To.push(ptn);
+			}
+			return null;
 		}
-		return null;
 	}
 
 	static GetPatternByNameFrom(name) {
@@ -1493,19 +1521,46 @@ class ItemPatternAdjective{
 	}
 
 	static Load(data) {
-		let raw=data.split('|');
-		if (raw.length!=14*4+2) {
-			if (dev) console.log("PatternPronoun - Chybná délka");
-			return null;
+		if (loadedversion=="TW v0.1"){
+			let raw=data.split('|');
+			if (raw.length!=14*4+2) {
+				if (dev) console.log("PatternPronoun - Chybná délka");
+				return null;
+			}
+			let item=new ItemPatternAdjective();
+			item.Name=raw[0];
+			item.adjectiveType=parseInt(raw[1]);
+			item.Middle             =[raw[2],  raw[3],  raw[4],  raw[5],  raw[6],  raw[7],  raw[8],  "", "", raw[ 9], raw[10], raw[11], raw[12], raw[13], raw[14], raw[15], "", ""];
+			item.Feminine           =[raw[16], raw[17], raw[18], raw[19], raw[20], raw[21], raw[22], "", "", raw[23], raw[24], raw[25], raw[26], raw[27], raw[28], raw[29], "", ""];
+			item.MasculineAnimate   =[raw[30], raw[31], raw[32], raw[33], raw[34], raw[35], raw[36], "", "", raw[37], raw[38], raw[39], raw[40], raw[41], raw[42], raw[43], "", ""];
+			item.MasculineInanimate =[raw[44], raw[45], raw[46], raw[47], raw[48], raw[49], raw[50], "", "", raw[51], raw[52], raw[53], raw[54], raw[55], raw[56], raw[57], "", ""];
+			return item;
+		} else {
+			let raw=data.split('|');
+			if (raw.length!=18*4+2) {
+				if (dev) console.log("PatternPronoun - Chybná délka");
+				return null;
+			}
+			let pos=2;
+			let item=new ItemPatternAdjective();
+			item.Name=raw[0];
+			item.adjectiveType=parseInt(raw[1]);
+			item.Middle             = GetArray();
+			item.Feminine           = GetArray();
+			item.MasculineAnimate   = GetArray();
+			item.MasculineInanimate = GetArray();
+			return item;	
+			
+			function GetArray() {
+				let arr=[];
+				let len=18;
+				for (let i=0; i<len; i++) {
+					arr.push(raw[i+pos]);
+				}
+				pos+=len;
+				return arr;
+			}
 		}
-		let item=new ItemPatternAdjective();
-		item.Name=raw[0];
-		item.adjectiveType=parseInt(raw[1]);
-		item.Middle             =[ raw[2],  raw[3],  raw[4],  raw[5],  raw[6],  raw[7],   raw[8],  raw[9],  raw[10], raw[11], raw[12], raw[13], raw[14], raw[15]];
-		item.Feminine           =[ raw[16], raw[17], raw[18], raw[19], raw[20], raw[21],  raw[22], raw[23], raw[24], raw[25], raw[26], raw[27], raw[28], raw[29]];
-		item.MasculineAnimate   =[ raw[30], raw[31], raw[32], raw[33], raw[34], raw[35],  raw[36], raw[37], raw[38], raw[39], raw[40], raw[41], raw[42], raw[43]];
-		item.MasculineInanimate =[ raw[44], raw[45], raw[46], raw[47], raw[48], raw[49],  raw[50], raw[51], raw[52], raw[53], raw[54], raw[55], raw[56], raw[57]];
-		return item;
 	}
 } 
 
@@ -1562,8 +1617,9 @@ class ItemAdjective{
 			return item;
 		}
 		if (dev) console.log("Cannot load pattern, wrong len");
-		return null;
+		return null;		
 	}
+
 	IsStringThisWord(str) {
 		// Return all possible falls with numbers
 		// [[tvar, číslo, pád], rod]

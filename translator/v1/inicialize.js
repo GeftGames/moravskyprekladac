@@ -258,8 +258,13 @@ function GetTranslations() {
 		}
 
 		let tr=new LanguageTr();
-		tr.Load(lines);
-		AddLang(tr);
+		loadedversion=lines[0];
+		if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1"){
+			tr.Load(lines);
+			AddLang(tr);
+		} else {
+			console.log("Incorrect file version",lines);
+		}
 	}
 
 	function AddLang(lang) {
@@ -334,11 +339,11 @@ function mapRedraw(){
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);	
 	
 	ctx.save();
-
+	ctx.globalAlpha = 0.5;
 	ctx.drawImage(imgMap, map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
 	ctx.fillStyle="rgba(255,255,255,.5)";
-
-	ctx.fillRect(map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
+	ctx.globalAlpha = 1;
+	//ctx.fillRect(map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
 	ctx.font = "16px sans-serif";
 
 	ctx.imageSmoothingEnabled= true;
@@ -369,13 +374,18 @@ function mapRedraw(){
 		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
 		ctx.stroke();
 	}
-	ctx.strokeStyle = 'Black';
+	
+	if (ThemeLight=="dark") ctx.strokeStyle = 'White'; else ctx.strokeStyle = 'Black';
+
 	// generate texts
 	let z= dev? 2:1;
 	for (let p of languagesList){
 		if ((map_Zoom>z && p.Quality<2) || p.Quality>=2) {
+			// Text color
 			if (p.Quality==0) ctx.fillStyle="Gray";
-			else ctx.fillStyle="Black";
+			else {
+				if (ThemeLight=="dark") ctx.fillStyle="White"; else ctx.fillStyle="Black";
+			}
 			let w=ctx.measureText(p.Name).width;
 			ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
 		}
@@ -477,7 +487,7 @@ function DisableLangTranslate(search) {
 		//}
 	}
 }
-function ClearTextbox(){
+function ClearTextbox() {
 	document.getElementById("specialTextarea").value="";
 	Translate();
 }
@@ -485,7 +495,7 @@ function Translate() {
 	textAreaAdjust();
 	let lang = GetCurrentLanguage();
 	let input=document.getElementById("specialTextarea").value;
-	if (input=="")document.getElementById("ClearTextbox").style.display="none";
+	if (input=="") document.getElementById("ClearTextbox").style.display="none";
 	else document.getElementById("ClearTextbox").style.display="block";
 	//console.log("input: ", input);
 
@@ -523,10 +533,11 @@ function GetDic() {
 
 function GetCurrentLanguage() {
 	let ele2=document.getElementById("selectorTo").value;
-	
+	if (ele2=="*own*" && loadedOwnLang) {
+		return ownLang;
+	}
 	for (let e of languagesList) {
 		if (e.Name==ele2){
-			//console.log(e.name);
 			return e;
 		}
 	}
@@ -558,9 +569,7 @@ function BuildSelect(lang) {
 	if (lang.SelectReplace==undefined) return;
 	if (lang.SelectReplace==null) return;
 
-	
-
-	 // lang.SelectReplace = např. [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]
+    // lang.SelectReplace = např. [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]
 	for (let i=0; i<lang.SelectReplace.length; i++){
 		const l = lang.SelectReplace[i];
 		let to=l[1];
