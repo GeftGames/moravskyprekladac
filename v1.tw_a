@@ -1,4 +1,142 @@
-Želatovice.trw§TW v1.0
+Loučka.trw§TW v1.0
+tLoučka
+d20.06.2023 13:59:47
+iLoučka OL - sncj.ujc.cas.cz\n\npapučáři, to je nélepši vojsko, keri eksistôje\nnélepši só ajbišovi kořinkê\ndobró chôť přejô\ncôlêbrine côlêbrincovité, dávno zvoňilê do kostela, a on se tahne jak smrat\ntak s teh oči mô cêcórovalo\njá nevim, ot čeho tê bakôlajdê mužó bêt\nKatrina je brčna\nje oznámeňi na četňické staňicê\nrosa dneská nedosichá, to čeká drôhó \nno, dêď mê zme ho ôřezalê až v drviskô\na tož ňi to došévám \nčuňičkê, huši huš! \njôš sem zas cárovala naspátek\nto bêlo toť ke Slavjeťinô, jag je ta bažantňice\npozor, na dvoře je takovi bařêsko\non si mňe to dovoli řict\ntam maji daňkê s tema lopatečkama\na Skulil to otpřêsáhl, že to slêšel, a fčêl broji proťi ňim\nvê bôdete plaťit s teho pořbivaňi ešče véďelečnó daň\nto dêcki veteráňi bóchajó z ďela\nčuňičkê, huši huš!\ntê darebákô, né že bê sez ôčêl ďelat!\nôdeřêl sem se do člaňka\ndávno zvoňilê do kostela, a on se tahne jak smrat\nMařenka je řečná, docela faň\nona jag dôch, jak cára choďi po ďeďiňe \nno, skôs ten burnus, jak ťe padne\npapučáři, to je nélepši vojsko, keri eksistôje\nnélepši só ajbišovi kořinkê\nvêlivané brôtvan glazuró máš?\nčlovjeg je staré, o̬táhané, to je amen\nto dêcki veteráňi bóchajó z ďela\ndêť to je nejaká dilka\nna Boži ťelo do vodê smňelo
+c#Zdroje dat\n-sncj.ujc.cas.cz
+g49.6568604,17.0111513
+q0
+-
+-
+-
+-
+-
+z těch|s teh
+od čeho|ot čeho
+a hned|a fčêl
+chodí po vesnici|choďi po ďeďiňe
+pekáč s glazurou|vêlivané brôtvan glazuró
+dvůr je jak bažina|dvuř je takovi bařêsko
+-
+-
+nej|né
+exi|eksi
+řeji|řejô
+-
+-
+kové|kovi
+čil|čêl
+eřil|eřêl
+nili|ňilê
+dí|ďi
+-
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+vesnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+-
+městO|0|o?|a|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+žeNA|1|na?|nê|ně?|nu?|no?|ňe|ou?|y?|?|ám?|y?|y?|ách?|ami?
+školA|1|a?|ê|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+hrad|3|?|u?|ô|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+strom|3|?|u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+-
+vojsko||0|vojsko|
+chuť||0|chôť|
+daň||0|daň|
+děl|městO|0|ďel|městO
+fajn||0|faň|
+duch||0|dôch|
+vesni|vesnicE|0|ďeďi|žeNA
+pekáč||0|brôtvan|
+amen||0|amen|
+vod|školA|0|vod|školA
+||0|brčna|
+||0|rosa|
+||0|drvisko|
+slavětín|hrad|2|slavjeťin|hrad
+-
+dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+-
+dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|?|?|?|?|?|?|?|?|?|?|rá?|rá?|ré?|ré?|rou?|rá?|ré?|ró|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?|rý?|rého?|rému?|rého?|rý?|rém?|rým?|?|?|ří?|rých?|rým?|ré?|ří?|rých?|rými?|?|?|rý?|rého?|rému?|rý?|rý?|rém?|rým?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|?|?|?|?|?|?|á?|ých?|ým?|á?|é?|é?|ou?|á?|é?|ó|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|é|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
+-
+nejlepší|nélepši||
+dob|dobRÝ|dobRÝ
+výdělečn|véďelečn|zelenÝ|zelenÝ
+vylívan|vêlivan|zelenÝ|zelenÝ
+starý|staré||
+utahaný|o̬táhané||
+-
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+kteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+vY|-1|y|ás|ám|ás|y|ás|ámi
+tY|-1|y|ě,ebe|i,obě|ě,ebe|y|obě|ebou
+nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
+-
+TEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|teh|ěm?|y?|-|ěch?|tema|en?|oho?|omu?|en?|-|om?|ím?|y?|teh|ěm?|y?|-|ěch?|tema|a|é?|é?|u?|-|é?|ou?|y?|teh|ěm?|y?|-|ěch?|tema|o|oho?|omu?|o?|-|om?|ím?|y?|teh|ěm?|y?|-|ěch?|tema
+kteRÝ|-1|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+vY|-1|ê|ás?|ám?|ás?|y?|ás?|ámi?
+TY|-1|y?|ě?,ebe?|ťê,obě?|ě?,ebe?|y?|obě?|ebou?
+nějaKÝ|-1|ký?|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
+-
+t|tEN|TEN
+kteR|kteRÝ|kteRÝ
+vY|vY|vY
+tY|tY|tY
+něja|neja|nějaKÝ|nějaKÝ
+-
+-
+-
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+přÁT|15|-1|át|eji,(hovorově) přeju|eješ|eje|ejeme|ejete|ejí,(hovorově) přejou|ej|ejme|ejte|ál|ál|ála|álo|áli|ály|ály|ála|án|án|ána|áno|áni|ány|ány|ána
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
+učIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+tÁHNOUT|15|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl (hov. táhnul)|áhl (hov. táhnul)|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
+zkusIT|22|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila
+padNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la
+slyšET|15|-1|et|ím|íš|í|íme|íte|í|,poslyš|me,poslyšme|te,poslyšte|el|el|ela|elo|eli|ely|ely|ela|en,(archaicky) slyšán|en,(archaicky) slyšán|ena|eno|eni|eny|eny|ena
+-
+BÝT|247|-1|bêt|sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|bôdete|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bêlo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+přÁT|15|-1|át?|ejô|eješ?|eje?|ejeme?|ejete?|ejí,(hovorově) přejou?|ej?|ejme?|ejte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|užó?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+řÍCT|30|-1|ict|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
+učIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|êl|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+tÁHNOUT|15|-1|áhnout?|áhnu?|áhneš?|ahne|áhneme?|áhnete?|áhnou?|áhni?|áhněme?|áhněte?|áhl (hov. táhnul)?|áhl (hov. táhnul)?|áhla?|áhlo?|áhli?|áhly?|áhly?|áhla?|ažen?|ažen?|ažena?|aženo?|aženi?|aženy?|aženy?|ažena?
+zkusIT|22|-1|it?|ím?|íš?|í?|íme?|íte?|í?||me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?
+padNOUT|22|-1|nout?|nu?|neš?|ne|neme?|nete?|nou?|ni?|něme?|něte?|l?|l?|la?|lo?|li?|ly?|ly?|la?
+slêšET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|,poslyš?|me,poslyšme?|te,poslyšte?|el|el?|ela?|elo?|eli?|ely?|ely?|ela?|en,(archaicky) slyšán?|en,(archaicky) slyšán?|ena?|eno?|eni?|eny?|eny?|ena?
+-
+BÝT|BÝT
+př|přÁT|přÁT
+m|mOCT|mOCT
+ř|řÍCT|řÍCT
+uč|ôč|učIT|učIT
+t|tÁHNOUT|tÁHNOUT
+zkus|skôs|zkusIT|zkusIT
+pad|padNOUT|padNOUT
+slyš|slêš|slyšET|slyšET
+-
+dnes,dneska|dneská
+nazpátek|naspátek
+nyní,teď|fčêl
+ještě|ešče
+vždy|dêcki
+dávno
+zase,zas|zas
+-
+proti|proťi|
+po|
+-
+vždyť|dêď
+jak|jak,jag
+-
+-
+§Želatovice.trw§TW v1.0
 tŽelatovice
 d20.06.2023 12:15:25
 c#Zdroje dat\n-Stavba věty v mluvených projevech (Syntax hanáckých nářečí) - Šipková, Milena, str. 174-175
