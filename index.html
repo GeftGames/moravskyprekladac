@@ -107,7 +107,7 @@
 					<div style="display: flex;">
 					
 					<!--my dev-->	
-					<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="">
+					<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="ShowPageOwnLang()">
 						<svg class="ib" viewBox="0 0 24 24" >
 							<path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
 						</svg>
@@ -523,6 +523,15 @@
 								<div class="mapperNavrh" onclick="navrhClick('když')">KDYŽ</div>
 								<div class="mapperNavrh" onclick="navrhClick('jestli')">JESTLI</div>
 								<div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
+								<div class="mapperNavrh" onclick="navrhClick('protože')">PROTOŽE</div>
+								<div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
+								<div class="mapperNavrh" onclick="navrhClick('bylo')">BYLO</div>
+								<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
+								<div class="mapperNavrh" onclick="navrhClick('těch')">o TĚCH</div>
+								<div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
+								<div class="mapperNavrh" onclick="navrhClick('taky')">TAKY</div>
+								<div class="mapperNavrh" onclick="navrhClick('on')">ON</div>
+								<div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
 							</div>
 						</div>
 						
@@ -616,6 +625,23 @@
 					</div>
 					<div><p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p></div>
 					<p id="infoLangText"></p>
+				</div>
+			</div>		
+			<div id="pageOwnLang" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+				<div class="pageInside" id="ownpagelang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+					<div onclick="ClosePageOwnLang()" class="pageFromDownClose" id="closeOwnLangPage">
+						<div rel="nofollow" onclick="ClosePageOwnLang()">
+							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+							</svg>
+						</div>
+						<p style="display:inline;" id="closeSelector">Zavřít</p>
+					</div>
+					<div><p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p></div>
+					<input type="file" id="ownLangFile">
+					<a class="button" onclick="loadLang()" id="ownLangFileLoad">Načíst překlad</a>
+					<a class="button" style="display: none" onclick="removeLang()">Uvolnit překlad</a>
+					<br>
 				</div>
 			</div>	
 
