@@ -701,20 +701,27 @@ function customTheme() {
 				styles.setProperty('--transitionFast','.15s');
 				styles.setProperty('--transitionRFast','50ms');
 				styles.setProperty('--tsh', '.5px .5px 2px rgba(var(--RawColorBack), .2)');
+				styles.setProperty('-filterShadow1', 'drop-shadow(0px 0px 5px var(--RawColorBack1));');
+				styles.setProperty('--filterShadow2', 'drop-shadow(0px 0px 5px var(--RawColorBack2));');
 			} else if (Power=="fast") {
 				styles.setProperty('--transitionSlow','0s');
 				styles.setProperty('--transitionFast','0s');
 				styles.setProperty('--transitionRFast','0s');
 				styles.setProperty('--tsh', 'none');
+				styles.setProperty('-filterShadow1', 'none');
+				styles.setProperty('--filterShadow2', 'none');
 			} else {//Optimal
 				styles.setProperty('--transitionSlow','.25s');
 				styles.setProperty('--transitionFast','.15s');
 				styles.setProperty('--transitionRFast','0s');
 				styles.setProperty('--tsh', '.5px .5px 1.5px rgba(var(--RawColorBack), .2)');
+				styles.setProperty('-filterShadow1', 'none');
+				styles.setProperty('--filterShadow2', 'drop-shadow(0px 0px 5px var(--RawColorBack2));');
 			} 
 			break;
 		}
 	}
+	mapRedraw();
 }
 
 function toggleTransitionOn() {
@@ -805,7 +812,7 @@ function SaveTrans() {
 function ChangeDic() {
    // let selFrom = document.getElementById('selectorFrom');
     let selTo = document.getElementById('selectorTo');
-
+	if (selTo.value!="*own*")
    // localStorage.setItem('trFrom', selFrom.value);
     localStorage.setItem('trTo', selTo.value);
 
@@ -939,6 +946,34 @@ function ClosePageMapper(){
 	}
 	setTimeout(()=>{ 
 		document.getElementById("mapperPage").style.display="none";
+	}, 300);
+}
+function ShowPageOwnLang(){
+	document.getElementById("pageOwnLang").style.display="block";
+	document.getElementById("pageOwnLang").style.opacity="1";
+	document.getElementById("pageOwnLang").style.position="absolute";
+	document.getElementById("pageOwnLang").style.top="52px";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+}
+function ClosePageOwnLang(){
+	document.getElementById("pageOwnLang").style.opacity="0";
+	document.getElementById("pageOwnLang").style.top="500px";
+	document.getElementById("pageOwnLang").style.position="fixed";
+	//document.getElementById("aboutPage").style.display="none";
+	//document.getElementById("translatingPage").style.display="block";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+	setTimeout(()=>{ 
+		document.getElementById("pageOwnLang").style.display="none";
 	}, 300);
 }
 function ShowPageInfoLang(){
@@ -4978,3 +5013,46 @@ function navrhClick(text) {
 	mapperInput.value=text;
 	mapper_init();
 }
+
+let ownLang;
+let loadedOwnLang=false;
+
+function loadLang() {		
+	if (loadedOwnLang) {
+		loadedOwnLang=false;
+		ownLang=undefined;
+
+	//	document.getElementById("ownLangType").innerText ="Nenačtené";
+		//document.getElementById("ownLangFile").style.display="block";
+	//	document.getElementById("ownLangFileLoad").innerText ="Načíst překlad";
+	} else {
+		var file = document.getElementById("ownLangFile").files[0];
+		if (file) {
+		//	alert("loaded");
+			var reader = new FileReader();
+			reader.readAsText(file, "UTF-8");
+			reader.onload = function (event) {
+				loadedOwnLang=true;
+				let ownLangContent = event.target.result;
+
+				let lines=ownLangContent.split('\r\n');
+				ownLang=new LanguageTr();
+				loadedversion=lines[0];
+				if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1"){
+					ownLang.Load(lines);
+					//AddLang(ownLang);
+				} else {
+					console.log("Incorrect file version", lines);
+				}
+				let ele=document.createElement("option");
+				ele.innerText="*own*";
+
+				document.getElementById("selectorTo").appendChild(ele);
+				//document.getElementById("ownLangType").innerText ="Načtené";
+				document.getElementById("ownLangFile").style.display="none";
+				document.getElementById("ownLangFileLoad").innerText ="Uvolnit";
+			}
+		} else alert("Načti soubor přes horní tlačítko - Vybrat soubor");
+	}			
+}
+		
