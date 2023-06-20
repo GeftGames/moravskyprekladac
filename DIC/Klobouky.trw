@@ -1,0 +1,95 @@
+TW v1.0
+fSpisovná čeština
+tValašské Klobouky
+aGG
+d17.02.2023 18:18:08
+c#Zdroje dat\n-https://is.muni.cz/th/lb7u2/Bakalarska_prace.pdf
+zCS_VA-Rožnov
+lvalaština
+g49.1405837,18.0077201
+xměstká mluva
+q0
+oValašsko
+-
+-
+-
+-
+no a tak|no a toš
+-
+s tou|s tú
+v každém|f každém
+-
+-
+js|s
+-
+pě|pje
+krát|kráď
+ou|ú
+ů|ú
+ej|aj
+-
+den|deň
+čil|číł
+šel|šéł
+nách|náh
+ila|iła
+dal|dáł
+děl|ďéł
+želo|žało
+-
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+vesnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+-
+žeNA|1|na?|ny?|ně?|nu?|no?|ňe|nú?|y?|?|ám?|y?|y?|ách?|ami?
+školA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+růžE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+-
+vesnic|vesnicE|0|ďeďi|ženA
+mou|pohádKA|0|mú|pohádKA
+-
+-
+-
+-
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+-
+ON|-1|on|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+-
+ON|ON
+-
+-
+-
+-
+MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+pamatOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+držET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+-
+MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|mňeli|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+pamatOVAT|15|-1|ovat?|uju|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+držET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|ało|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+-
+MÍT|MÍT
+pamatO|pamatOVAT|pamatOVAT
+|BÝT|BÝT
+držE|držET|držET
+-
+hned|hneď
+vždy|dycky
+téměř|skoro
+úplně|upłňe
+potom
+jen,jenom|enom
+-
+po|6,4
+i|aj|
+-
+ale|ále
+i|aji
+když|dyš
+-
+-

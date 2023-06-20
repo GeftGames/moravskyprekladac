@@ -1,12 +1,9 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tLitovel
 aGG
 d18.03.2023 21:20:15
-i
-e
-c
-z
+c#Zdroje dat\n-https://dalsimoravak.wordpress.com/2013/06/16/ten-olomouc-ta-olomouc/
 lHanáčtina
 g49.7014636,17.0749618
 xměstká mluva
@@ -38,13 +35,16 @@ ku|kô
 -
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+olomouc|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 -
 dědinA|1|a?|y?|ě?|u?|o?|ě?|ó?|y?|?|ám?|y?|y?|ách?|ama?
 kosŤ|1|ť?|ti?|ti?|ť?|ti?|ti?|tí?|ti?|tí?|tem?|ti?|ti?|tech?|ťama?
+olomouc|3||e?|e?|?|i?|i?|em?|e?|í?|ím?|e?|e?|ích?|emi?
 -
-vesnice|dědin|růžE|dědinA
-kost|kost|kost
-zvyklost|zvêklos|kost|kosŤ
+vesnice|růžE|0|dědin|dědinA
+kost|kost|0|kost|kost
+zvyklost|kost|0|zvêklos|kosŤ
+olomouc|olomouc|2|olomóc|olomouc
 -
 -
 -

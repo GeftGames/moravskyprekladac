@@ -1,8 +1,8 @@
-TW v0.1
+TW v1.0
 tLažany
 aGG
 d14.04.2023 14:45:17
-cZdroje\n- České nářeční texty - Lamprecht, Arnošt; str 171\n- Bělič, Jaromír - Přehled nářečí českého jazyka; str. 36
+cZdroje\n- České nářeční texty - Lamprecht, Arnošt; str 171\n- Bělič, Jaromír - Přehled nářečí českého jazyka; str. 36\n-Stavba věty v mluvených projevech-syntax hanáckých nářečí -Šipková, Milena
 g49.3544603,16.5492466
 q0
 -
@@ -35,15 +35,15 @@ syn|2|?|a?|u,ovi?|a?|u?|u,ovi?|em?|i|ů?|ům?|y?|ové?|ech?|y?
 hrad|3|?|u?|u?|?|e?|ě,u?|em|e|ů?|ům?|e|y?|ech?|ama
 stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ke|ků?|kům?|ke|ky?|kách,cích?|ky?
 -
-partizán|parťizáň|syn|syn
-noc|nuc|noc|noc
-trafi|pohádKA|pohádKA
-cigaret|cigár|ženA|pohádKA
-příděl|příďel|hrad|hrad
-zub|zob|hrad|hrad
-peřin|dochn|ženA|ženA
-strach|hrad|hrad
-líst|stromEK|stromEK
+partizán|syn|0|parťizáň|syn
+noc|noc|0|nuc|noc
+trafi|pohádKA|0|trafi|pohádKA
+cigaret|ženA|0|cigár|pohádKA
+příděl|hrad|0|příďel|hrad
+zub|hrad|0|zob|hrad
+peřin|ženA|0|dochn|ženA
+strach|hrad|0|strach|hrad
+líst|stromEK|0|líst|stromEK
 -
 -
 -
@@ -88,7 +88,7 @@ dělAT|79|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|a
 přidAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ál|ál|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
 JÍT|JÍT
-|BÝT|BÝT
+BÝT|BÝT
 MÍT|MÍT
 vyptáv|veptáv|přidAT|přidAT
 nachyst|nechest|přidAT|přidAT
