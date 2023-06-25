@@ -1,4 +1,4 @@
-TW v0.1
+TW v1.0
 tBukovec
 aGG
 d06.04.2023 9:25:43
@@ -6,7 +6,7 @@ ikniha - České nářeční texty - Lamprecht, Arnošt 325
 c#Zdroje dat\n-Kellner, Adolf - Východolašská nářečí; str. 120\n\nZápis slov\n-ňo -> nio (hnízdo -> gniozdo)
 g49.5566901,18.8212782
 q0
-oGoralsko
+oSlezsko>Goralsko
 -
 -
 -
@@ -29,10 +29,11 @@ las|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
 hrad|3|?|u?|u|?|e?|ie|em?|y?|ů?|ům?|y?|y?|ach|y?
 městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 -
-hodin|godžin|ženA|ženA
-les|las|les|las
-strom|strum|hrad|hrad
-hnízd|gniozd|městO|městO
+hodin|ženA|0|godžin|ženA
+les|les|0|las|las
+strom|hrad|0|strum|hrad
+hnízd|městO|0|gniozd|městO
+angrešt||0|agrest |
 -
 -
 -

@@ -1,4 +1,4 @@
-TW v0.1
+TW v1.0
 tHeřmanice
 aGG
 d05.05.2023 9:56:47
@@ -20,14 +20,25 @@ q0
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 podzim|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 stavení|0|||||||m|||m|||ch|mi
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+polednE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ech|y
+člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
 -
 škoLA|1|a?|ły|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 podzim|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 stavení|0|?|?|?|?|?||m?|?|?|m?|?|?|ch?|mi?
+městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+polE|0|e?|e?|i?|e|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
+poledNE|0|ne?|ňa|ni?|ne?|ne?|ni?|nem?|ne?|ní?|ním?|ne?|ne?|nech?|ny?
+člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|lue|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
 -
-stodol|stodo|školA|škoLA
-podzim|podzim|podzim
-obilí|obiľi|stavení|stavení
+stodol|školA|0|stodo|škoLA
+podzim|podzim|0|podzim|podzim
+obilí|stavení|0|obiľi|stavení
+rán|městO|0|ran|městO
+pol|polE|0|pol|polE
+poledn|polednE|0|połed|poledNE
 -
 -
 -
@@ -35,7 +46,7 @@ obilí|obiľi|stavení|stavení
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-SE|-1|-|sebe?|si?,sobě?|se,sebe?|-|sobě?|sebou?
+SE|-1|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
 tEN|-1|en?|oho?|omu?|oho?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
 SE|SE
@@ -46,17 +57,25 @@ t|tEN|tEN
 -
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 vstÁT|22|-1|át|anu|aneš|ane|aneme|anete|anou|aň|aňme|aňte|al|al|ala|alo|ali|aly|aly|ala
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 JÍT|127|-1|jít?|jdym|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 stÁT|22|-1|át?|anym|?|?|?|?|?|aň?|aňme?|aňte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+BÝT|247|-1|být?|jsem?|jsi?|je|sum|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
 JÍT|JÍT
 vst|vs|vstÁT|stÁT
+|BÝT|BÝT
 -
 kam |kaj
 potom|potym
 -
+na|
+kolem|kole|
+|
 -
 nebo|alebo
+jak
 -
+tak|tuš
 -
