@@ -1,9 +1,11 @@
-TW v0.1
+TW v1.0
 tBřezová
 d06.05.2023 18:04:45
+ibumbig z huby ňechcu Březová OP\nnašemu małemu najlepšy idu bombičky Březová OP\nmačyčka mjeli enem olmaryj Březová OP
 ePolské#České|rz>ř
 c#Zdroje dat\n-ČJA, Dotatky, str. 388\n-České nářeční texty - Lamprecht, Arnošt; str. 299\n\n#Zápis slov\n
 g49.7912257,17.8638987
+rSlezsko
 q0
 -
 -
@@ -12,8 +14,10 @@ Však víš, jak jsme se všichni lekli.|To visz, jak sme se fszecy polekali.
 Chytili ho.|A jeho chytli.
 -
 -
+z pusy|z huby
 -
 -
+nej|naj
 -
 ou|u
 -
@@ -26,23 +30,39 @@ it|ič
 -
 vesnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 -
 vesnicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+hrad|3||u?|u?||e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky|ků?|kům?|ky?|ky?|kách,cích?|ky?
+almaRA|1|ra?|ry?|ře?|ryj|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 -
-půda|huřa/e||
-neděla|nedželu||
-tatínek|tačynek||
-vesnic|dziedzin|vesnicE|ženA
+půda||0|huřa/e|
+neděla||0|nedželu|
+tatínek||0|tačynek|
+vesnic|vesnicE|0|dziedzin|ženA
+bonbon|hrad|0|bumbig|hrad
+bonbon|stromEK|0|bombič|stromEK
+||0|mačyčka |
+alma|almaRA|0|olma|almaRA
 -
+malÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+malÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|emu|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
+mal|mał|malÝ|malÝ
 -
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
 -
 tEN|-1|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|e|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+nÁŠ|-1|áš?|ašeho?|ašemu|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 -
 t|tEN|tEN
+nÁ|nÁŠ|nÁŠ
 -
 -
 -
@@ -51,16 +71,20 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 spÁT|7|-1|át|ím|íš|í|íme|íte|í|i|ěme|ěte|al|al|ala|alo|ali|aly|aly|ala
+chTÍT|15|-1|tít|cu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|mjeli|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
-JÍT|127|-1|išč|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šeł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+JÍT|127|-1|išč|jdu?|jdeš?|jde?|jdeme?|jdete?|idu|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šeł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 spÁT|7|-1|ač|ím?|íš?|í?|íme?|íte?|í?|i?|ěme?|ěte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+chTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce?|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|těl?|těl?|těla?|tělo?|těli?|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
 -
 BÝT|BÝT
 MÍT|MÍT
 JÍT|JÍT
 sp|spÁT|spÁT
+ch|chTÍT|chTÍT
+nech|ňech|chTÍT|chTÍT
 -
 tady|tu
 vždy|dycky
@@ -72,6 +96,8 @@ pryč|preč
 jednou|raz
 večer
 ještě|ešče
+nejlíp,nejlépe|nejlepšy
+jen,jenom|enem
 -
 -
 -

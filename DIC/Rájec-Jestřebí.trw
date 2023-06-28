@@ -1,6 +1,7 @@
 TW v1.0
 tRájec-Jestřebí
 d25.06.2023 17:06:32
+iSlátkuvi mňeli autu, takuvó škatolo, muc s ňó nejezďili Rájec-Jestřebí BK
 c#Zdroje dat\n-sncj.ujc.cas.cz
 g49.4110344,16.6391459
 q0
@@ -9,37 +10,60 @@ q0
 -
 -
 -
+s ní|s ňó
+-
+sládkovi|slátkuvi
 -
 -
 -
--
+kovi|kuvi
 -
 zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 -
 zimA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|e|y?|ách?|ami?
 plán|1|?|u?|u?|?|e?|u?|em?|e|ů?|ům?|y?|y?|ech?|y?
+městO|0|o?|a?|u?|u|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+školA|1|a?|y?|e?|o|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
 aeroplán|plán|0|éropláne|plán
 pum|zimA|0|pum|zimA
+aut|městO|0|aut|městO
+škatul|školA|0|škatol|školA
 -
 -
 -
 -
+takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 -
+takuvÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ó|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+ONA|-1|ona?|jí,ní*?|jí,ní*?|ji,ni*?|-|ní*?|jí?,#ňó
 -
+takov|takuv|takovÝ|takovÝ
+ONA|ONA
 -
 -
 -
 -
 pouštĚT|15|-1|ět|ím|íš|í|íme|íte|í,pouštějí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
+MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+jezdIT|15|-1|it|ím|íš|í|íme|íte|í|i|ěme|ěte|il|il|ila|ilo|ili|ily|ily|ila|ěn,ježděn|ěn,ježděn|ěna,ježděna|ěno,ježděno|ěni,ježděni|ěny,ježděny|ěny,ježděny|ěna,ježděna
 -
 pouščET|15|-1|ět?|ím?|íš?|í?|íme?|íte?|í,pouštějí?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ele?|ele|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
+MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+jezďIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|i?|ěme?|ěte?|il?|il?|ila?|ilo?|ili|ily?|ily?|ila?|ěn,ježděn?|ěn,ježděn?|ěna,ježděna?|ěno,ježděno?|ěni,ježděni?|ěny,ježděny?|ěny,ježděny?|ěna,ježděna?
 -
 pouštĚ|pouštĚT|pouštĚT
+MÍT|MÍT
+jezd|jezď|jezdIT|jezďIT
 -
 najednou|najednó
+moc|muc
 -
+s|
 -
 a
 -

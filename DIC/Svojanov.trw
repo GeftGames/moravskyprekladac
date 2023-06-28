@@ -1,0 +1,52 @@
+TW v1.0
+tPředměstí (Svojanov)
+aGG
+d28.06.2023 8:15:07
+ivečír sednou na outo a budou prič Hrachoviště JH; postavili silňicu a jezďili tam ťeškejma autama Svojanov SY (Předměstí)
+c#Zdroje dat\n-sncj.ujc.cas.cz
+g49.6136535,16.4213321
+q0
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+silnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+-
+městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|ama
+silnicE|1|e?|e?|i?|u|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+-
+aut|městO|0|aut|městO
+silnic|silnicE|0|silňic|silnicE
+-
+těžKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+-
+těžKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kejma|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kejma|?|?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kejma|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kejma|?|?
+-
+těž|těžKÝ|těžKÝ
+-
+-
+-
+-
+-
+-
+-
+sedNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+-
+-
+sed|sedNOUT|sedNOUT
+|BÝT|BÝT
+-
+-
+na|
+-
+a
+-
+-
