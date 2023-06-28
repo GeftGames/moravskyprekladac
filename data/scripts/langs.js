@@ -59,6 +59,26 @@ langs["cs"] = {
 	// Jazyky
 	Czech 	: "Češtiny",
 	Dic: "Slovník",
+
+	Noun: "Podstatné jméno",
+	Adjective: "Přídavné jméno",
+	Pronoun: "Zájmena",
+	Number: "Číslovky",
+	Verb: "Slovesa",
+	Adverb: "Příslovce",
+	Preposition: "Předložka",
+	Conjustion: "Spojky",
+	Particle: "Částice",
+	Interjection: "Citoslovce",
+	Fall: "Pád",
+	Single: "Jednotné",
+	Multiple: "Množné",
+	Person: "Osoba",
+	Continous: "Přůběhový",
+	Future: "Budoucí",
+	Imperative: "Rozkazovací",
+	Infinitive: "Infinitiv",
+	Gender: "Rod",
 	
 	"Moravské oblasti": "Moravské oblasti",
 	Slovácko: "Slovácko",
@@ -188,7 +208,7 @@ langs["cs"] = {
 	TextFiles	: "Textové soubory",
 	SubtitlesFiles: "Titulky k filmu",
 
-	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS a ty semka načtěte.",
+	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtěte.",
 
 	AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
 	ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.",
@@ -394,7 +414,7 @@ langs["slz"] = {
 	TextFiles	: "Textové soubory",
 	SubtitlesFiles: "Titulky k filmu",
 
-	VideoNote	: "Pokavaď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS a ty semka načtite.",
+	VideoNote	: "Pokavaď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtite.",
 
 	AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
 	ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.",
@@ -2450,7 +2470,7 @@ langs["ces"] = {
 	TextFiles	: "Textové soubory",
 	SubtitlesFiles: "Titulky k filmu",
 
-	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS a ty semka načtěte.",
+	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtěte.",
 
 	AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
 	ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalý.",

@@ -816,7 +816,6 @@ function ChangeDic() {
    // localStorage.setItem('trFrom', selFrom.value);
     localStorage.setItem('trTo', selTo.value);
 
-
     //let n;
     //let headername = document.getElementById('headername');
 
@@ -964,6 +963,39 @@ function ClosePageOwnLang(){
 	document.getElementById("pageOwnLang").style.opacity="0";
 	document.getElementById("pageOwnLang").style.top="500px";
 	document.getElementById("pageOwnLang").style.position="fixed";
+	//document.getElementById("aboutPage").style.display="none";
+	//document.getElementById("translatingPage").style.display="block";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+	setTimeout(()=>{ 
+		document.getElementById("pageOwnLang").style.display="none";
+	}, 300);
+}
+function ShowPageLangD(element){
+	if (typeof element == undefined) return;
+	const pagelangDFill = document.getElementById("pagelangDFill");
+	pagelangDFill.innerHTML="";
+	pagelangDFill.appendChild(element)
+
+	document.getElementById("pageLangD").style.display="block";
+	document.getElementById("pageLangD").style.opacity="1";
+	document.getElementById("pageLangD").style.position="absolute";
+	document.getElementById("pageLangD").style.top="52px";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+}
+function ClosePageLangD(){
+	document.getElementById("pageLangD").style.opacity="0";
+	document.getElementById("pageLangD").style.top="500px";
+	document.getElementById("pageLangD").style.position="fixed";
 	//document.getElementById("aboutPage").style.display="none";
 	//document.getElementById("translatingPage").style.display="block";
 	if (document.getElementById('nav').style.opacity=='1') {
@@ -1200,7 +1232,7 @@ function TabSelect(enableElement, tab) {
 	//tabTxtFiles.style.backgroundColor="white";
 
 	// Enable
-	enableElement.style.display='contents'; 
+	enableElement.style.display='block'; 
 	//tab.style.zIndex=3;
 	//tab.style.backgroundColor="aliceBlue";
 }
@@ -5055,4 +5087,3 @@ function loadLang() {
 		} else alert("Načti soubor přes horní tlačítko - Vybrat soubor");
 	}			
 }
-		
