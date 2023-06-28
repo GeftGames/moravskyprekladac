@@ -205,7 +205,7 @@ function GetTranslations() {
 }
 	const delimiter='§'
 	let fileContents = this.responseText.split(delimiter);
-	console.log("get",fileContents);
+//	console.log("get",fileContents);
 	// Po souborech
 	for (let i = 0; i < fileContents.length; i += 2) {
 		let //fileName = fileContents[i], 
@@ -491,8 +491,9 @@ function ClearTextbox() {
 	document.getElementById("specialTextarea").value="";
 	Translate();
 }
+
 function Translate() {	
-	textAreaAdjust();
+//	textAreaAdjust();
 	let lang = GetCurrentLanguage();
 	let input=document.getElementById("specialTextarea").value;
 	if (input=="") document.getElementById("ClearTextbox").style.display="none";
@@ -524,10 +525,15 @@ function TranslateSimpleText(input) {
 function GetDic() {	
 	let lang = GetCurrentLanguage();
 	let input = dicInput.value;
+	
+	if (lang.Quality<2) document.getElementById("nodeTranslateTextLowQuality").style.display="block";
+	else document.getElementById("nodeTranslateTextLowQuality").style.display="none";
+
 	if (input=="") document.getElementById("dicOut").innerHTML="";
 	else if (lang !== null) {
 		let out=lang.GetDic(input);
-		document.getElementById("dicOut").innerHTML=out;
+		document.getElementById("dicOut").innerHTML="";
+		document.getElementById("dicOut").appendChild(out);
 	}
 }
 
@@ -593,34 +599,79 @@ function BuildSelect(lang) {
 		parent.appendChild(node);
 	}
 }
-function translateContentsSubs(contents) {
+function translateContentsSubs(contents,name) {
 	console.log("Translating file...");
 
 	let lines=contents.split("\r\n").join('\n').split("\n");
+
+	if (lines.length>=1){
+		if (name.endsWith(".srt")) {
+			if (lines[0]=="1") return translateContentsSubsSRT(lines);
+		}else if (name.endsWith(".ass")) {
+			return translateContentsSubsASS(lines);
+		}else alert("Unknown subs format");
+	}else alert("Subs file too small");
+
+	return output;
+}
+
+function translateContentsSubsASS(lines) {
 	let output="";
-	//let events=false;
 
 	for (const line of lines){
-		//if (events) {
-			if (line.startsWith("Dialogue")) {
-				let lineCont=ToXOcur(",", 7, line);
-				output+=lineCont[0];
+		if (line.startsWith("Dialogue")) {
+			let lineCont=ToXOcur(",", 7, line);
+			output+=lineCont[0];
 
-				let linesOfSubs=lineCont[1].split("\\n");
-				
-				for (const sl of linesOfSubs){
-					let translated=TranslateSimpleText(sl);
-					if (linesOfSubs[linesOfSubs.length-1]==sl)output+=translated;
-					else output+=translated+"\\n";
-				}
-				output+="\n";
-			} else output+=line+"\n";
-		//}else output+=line+"\n";
-		
-		//if (line=="[Events]") events=true;
+			let linesOfSubs=lineCont[1].split("\\n");
+			
+			for (const sl of linesOfSubs){
+				let translated=TranslateSimpleText(sl);
+				if (linesOfSubs[linesOfSubs.length-1]==sl)output+=translated;
+				else output+=translated+"\\n";
+			}
+			output+="\n";
+		} else output+=line+"\n";
 	}
-console.log(output);
+	console.log(output);
 	return output;
+}
+
+function translateContentsSubsSRT(lines) {
+	let output="";
+
+	let dialogue=true;
+
+	output+=lines[0]+"\n"+lines[1]+"\n";	
+
+	for (let i=2; i<lines.length; i++){
+		const line = lines[i];
+		if (dialogue) {
+			if (line=="") {
+				dialogue=false;
+				output+="\n";
+			}else{
+				let translated=TranslateSimpleText(line);
+				output+=translated+"\n";
+				console.log(line,translated);
+			}
+		}else{
+			//if (isNumeric(lines[i])) {
+			//	let num=parseInt(lines[i+1]);
+			//	if (num==number+1) {
+					output+=line+"\n"+lines[i+1]+"\n";				
+					i++;
+					dialogue=true;
+			//	}
+		//	}else console.log("error");
+		}
+	}
+	return output;
+}
+
+function isNumeric(str) {
+	if (typeof str != "string") return false;
+	return !isNaN(str) && !isNaN(parseFloat(str));
 }
   
 function ToXOcur(char, ocur, string){
@@ -708,7 +759,7 @@ function TranslateSubs() {
 
 	reader.addEventListener('load', function(e) {
 	    let text = e.target.result;
-		let translated=translateContentsSubs(text);
+		let translated=translateContentsSubs(text,document.querySelector("#subs-input").files[0].name);
 		
 		var link = document.getElementById('downloadSubs');
 		link.setAttribute('download', file_name);
