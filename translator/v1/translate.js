@@ -1364,7 +1364,7 @@ class ItemPatternPronoun{
 			item.Type=3;
 			item.Gender=parseInt(raw[1]);
 			item.Shapes=raw[2].split(',');
-			if (raw[2].includes('?')) item.Shapes[i]='?';
+			if (raw[2].includes('?')) item.Shapes[0]='?';
 			return item; 
 		}
 		if (raw.length==14*4+2){
