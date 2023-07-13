@@ -1,8 +1,8 @@
 TW v1.0
 tŠtěpánov
 d25.06.2023 9:49:21
-i#Znaky\n-ê a ô mohou být vynechány ve zdrojích, upravit
-c#Zdroje dat\n-Stavba věty v mluvených projevech-syntax hanáckých nářečí -Šipková, Milena; str. 166\n
+i#Znaky\n-ê a ô mohou být vynechány ve zdrojích, upravit\n\n\na ten kuň hoďil čapó dozad a on se svall a t pantofle m přeleťel přez hlav Štěpánov OL
+c#Zdroje dat\n-Stavba věty v mluvených projevech-syntax hanáckých nářečí -Šipková, Milena; str. 166\n-https://sncj.ujc.cas.cz
 g49.6842321,17.2197452
 q0
 -
@@ -34,12 +34,16 @@ stavení|0|||||||m|||m|||ch|mi
 noc|1||i|i||i|i|í|i,řečně) noce|í|ím|i,řečně) noce|i,řečně) noce|ích|emi
 hromadA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
+hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 stavení|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|leďi|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
 noc|1|?|i?|i?|?|i?|e|í?|i,řečně) noce?|í?|ím?|i,řečně) noce?|i,řečně) noce?|ích?|emi?
-hromadA|1|a?|y?|ě?|o|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
-zemA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+hromadA|1|a?|y?|ě?|o|o?|ě?|ó|y?|?|ám?|y?|y?|ách?|ami?
+zemA|1|a|y?|ě?|u?|o?|ě?|ó|y?|?|ám?|y?|y?|ách?|ami?
+kŮŇ|3|uň|oně?|oni,oňovi?|oně,archaicky) kůň[4][5]?|oni?|oni,oňovi?|oněm?|oně?|oní,oňů?|oním,oňům?|oně?|oně?|oních?|oni,oňmi?
+hlavA|1|a?|y?|ě?|ô|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
 počasí|stavení|0|počasi|stavení
 |člověk|0||člověk
@@ -48,10 +52,13 @@ hotel||0|hotel|
 uhlí|stavení|0|hohli|stavení
 hromad|hromadA|0|hromad|hromadA
 zim|zimA|0|zem|zemA
+k|kŮŇ|0|k|kŮŇ
+noh|zimA|0|čap|zemA
+hlav|hlavA|0|hlav|hlavA
 -
 -
 -
-||
+|
 -
 MY|-1|my|nás|nám|nás|my|nás|námi
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -63,10 +70,11 @@ něCO|-1|co|čeho|čemu|co|co|čem|čím
 tolik|-1||a|a|||a|a
 ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 sÁM|-1|ám|amého|amému|mého,ama|-|amém|amým|ami|amých|amým|amy|-|amých|amými|ám|amého|amému|ám|-|amém|amým|amy|amých|amým|amy|-|amých|amými|ama|amé|amé|amu|-|amé|amou|amy|amých|amým|amy|-|amých|amými|amo|amého|amému|amo|-|amém|amým|ama|amých|amým|ama|-|amých|amými
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
 MY|-1|me|nás?|nám?|nás?|my?|nás?|námi?
 SE|-1|-|sebe?|si|se|-|sobě?|sebou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ém|i|eh|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|y?|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|eh|ěm?|y?|-|ěch?|ěmi?
+tEN|-1|en|oho?|omu?|oho?|-|om?|ém|i|eh|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|ê|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|eh|ěm?|y?|-|ěch?|ěmi?
 JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mňe|já?|mně?|mnou?
 vY|-1|e|ás?|ám?|ás?|y?|ás?|ámi?
 CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
@@ -74,6 +82,7 @@ něCO|-1|co|čeho?|čemu?|co?|co?|čem?|čím?
 tol|-1|i?|ika?|ika?|i|ik?|ika?|ika?
 ONA|-1|ona|jí?,#ní*?|ji,#ní*?|ji?,#ni?|-|ní*?|jí?,ní*?
 sÁM|-1|ám?|amého?|amému?|mého,ama?|-|amém?|amým?|ami?|amých?|amým?|amy?|-|amých?|amými?|ám?|amého?|amému?|ám?|-|amém?|amým?|amy?|amých?|amým?|amy?|-|amých?|amými?|ama|amé?|amé?|amu?|-|amé?|amou?|amy?|amých?|amým?|amy?|-|amých?|amými?|amo?|amého?|amému?|amo?|-|amém?|amým?|ama?|amých?|amým?|ama?|-|amých?|amými?
+ON|-1|on|ho*,jej,něj**jeho,něho**?|mô|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
 -
 MY|MY
 SE|SE
@@ -86,6 +95,7 @@ až|aš||
 tolik|tol|tolik|tolik
 ONA|ONA
 s|sÁM|sÁM
+ON|ON
 -
 -
 -
@@ -150,17 +160,20 @@ tak|tag
 sem
 pak
 klidně|klidňe
+
 -
 s|
 i|aji,i|
 do|
 v|
 u|o|
+přes|přez|
 -
 ještli|eše
 že
 vždyť|deď
 ale
+a
 -
 no
 ne|né

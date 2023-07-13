@@ -1,0 +1,48 @@
+TW v1.0
+tSlušovice
+aGG
+d11.07.2023 8:42:58
+iza jeden večér dva grejcary a štvrtku gořałky Slušovice ZL
+c#Zdroje dat\n-sncj.ujc.cas.cz\n\n#Popis jevů\n-původní G místo K na začátku slov\n-kořalka->gořalka, krejcar->grejcar
+g49.2488083,17.7991544
+q0
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+krejcar|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+-
+pohádKA|1|ka?|ky|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+krejcar|3|?|u?|u?|?|e?|u?|em?|y|ů?|ům?|y?|y?|ech?|y?
+-
+čtvrt|pohádKA|0|štvrt|pohádKA
+kořal|pohádKA|0|gořał|pohádKA
+krejcar|krejcar|0|grejcar|krejcar
+-
+-
+-
+-
+-
+-
+-
+-
+-
+jeden||
+dva||
+-
+-
+-
+-
+večer|večér
+-
+-
+a
+-
+-

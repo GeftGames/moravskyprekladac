@@ -1,7 +1,8 @@
-TW v0.1
+TW v1.0
 tŽebetín
 aGG
 d14.04.2023 14:58:59
+ibech já s tém bévala neďelala ňic, tak to belo dobré Brno BM (Žebětín);
 g49.2072081,16.4861743
 q0
 oBrněnsko
@@ -10,6 +11,7 @@ oBrněnsko
 -
 -
 -
+s tím|s tém
 -
 -
 -
@@ -18,18 +20,41 @@ oBrněnsko
 -
 -
 -
+dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
+-
+dobRÝ|-1|ré|rého?|rému?|ré?|ré?|rém?|rým?|?|?|rá?|rých?|rým?|rá?|rá?|rých?|rými?|?|?|rá?|ré?|ré?|rou?|rá?|ré?|rou?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?|rý?|rého?|rému?|rého?|rý?|rém?|rým?|?|?|ří?|rých?|rým?|ré?|ří?|rých?|rými?|?|?|rý?|rého?|rému?|rý?|rý?|rém?|rým?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?
+-
+dob|dobRÝ|dobRÝ
+-
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+niC|-1|c|čeho|čemu|c|c|čem|čím
+-
+JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ém|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+niC|-1|c|čeho?|čemu?|c?|c?|čem?|čím?
+-
+JÁ|JÁ
+t|tEN|tEN
+ni|niC|niC
 -
 -
 -
 -
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+bývAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+dělAT|79|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 -
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|belo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bech|bys?|by?|bychom?|byste?|by?
+bévAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?
+dělAT|79|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 -
+BÝT|BÝT
+býv|bév|bývAT|bévAT
+děl|ďel|dělAT|dělAT
+neděl|neďel|dělAT|dělAT
 -
--
--
--
--
--
+tak
 -
 -
 -

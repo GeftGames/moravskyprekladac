@@ -1,6 +1,7 @@
-TW v0.1
+TW v1.0
 tOlšany u Prostějova
 d02.06.2023 14:07:47
+i\nhttps://theses.cz/id/1tmdiz/15008735\nne vokno\nne a, ě kaše\nnaše, vaše\nk frantô, vidím frantô\nfrantův kabát->frantu kabát\nne ť
 c#Zdroje dat\n- Základové dialektologie československé - Šembera, Alois Vojtěch
 g49.5366158,17.1617913
 q0
@@ -52,28 +53,28 @@ polE|0|e?|e?|i?|e?|e?|i?|em?|e?|í?|ím?|a|e?|ích?|i?
 borovicE|1|e|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 stavení|0|?|?|?|?|?|?|m?|?|?|m|?|?|ch?|mi?
 -
-dub|dob|strom|strom
-jív|iv|ženA|ženA
-osy|ose|pohádKA|pohádKA
-třešně|střešně|třešnĚ|třešnĚ
-líp|lep|ženA|ženA
-strom|strom|strom
-borovic|borovicE|borovicE
-vesnic|děnin|vesnicE|ženA
-měst|městO|městO
-pol|polE|polE
-pšenice|pšenica|růžE|růžA
-ječmen|ječmeň||
-větev|haloz|ženA|ženA
-listí|lésti|stavení|stavení
+dub|strom|0|dob|strom
+jív|ženA|0|iv|ženA
+osy|pohádKA|0|ose|pohádKA
+třešně|třešnĚ|0|střešně|třešnĚ
+líp|ženA|0|lep|ženA
+strom|strom|0|strom|strom
+borovic|borovicE|0|borovic|borovicE
+vesnic|vesnicE|0|děnin|ženA
+měst|městO|0|měst|městO
+pol|polE|0|pol|polE
+pšenice|růžE|0|pšenica|růžA
+ječmen||0|ječmeň|
+větev|ženA|0|haloz|ženA
+listí|stavení|0|lésti|stavení
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
-hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
-jarní|-1||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|é|ých?|ým?|y|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|y|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|yho|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
-hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|ké?|kých?|kým?|ké?|ké?|kých?|kými?
-jarní|-1|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|ho?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||é|ých?|ým?|y|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||y|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|yho|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
+hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|||ká?|kých?|kým?|ká?|ká?|kých?|kými?|||ká?|ké?|ké?|kou?|ká?|ké?|kou?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?|||ký?|kého?|kému?|kého?|ký?|kém?|kým?|||cí?|kých?|kým?|ké?|cí?|kých?|kými?|||ký?|kého?|kému?|ký?|ký?|kém?|kým?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?||
+jarní|-1|?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|?|?|?|?|?|?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|ho?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?||
 -
 plan|plen|zelenÝ|zelenÝ
 hlučn|hločn|zelenÝ|zelenÝ

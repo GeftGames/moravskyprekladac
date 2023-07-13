@@ -1,7 +1,9 @@
-TW v0.1
-tBrno-Žabovřesky
+TW v1.0
+fSpisovná čeština
+tŽabovřesky
 aGG
 d25.03.2023 21:15:20
+sBrno
 g49.2141655,16.5727164
 q0
 oBrněnsko
@@ -83,20 +85,20 @@ pohádKA|1|ka?|ky?|ce|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 sukŇE|1|ňe|ňe?|i?|i?|ňe?|i?|í?|ňe?|í?|ím?|ňe?|ňe?|ích?|ěmi?
 kopEC|3|ec|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 -
-košila||
-sukn|suk|pohádKA|sukŇE
-muzi|pohádKA|pohádKA
-mašl|růžE|růžE
-sošk|ženA|ženA
-věn|vjen|kopEC|kopEC
-hlav|ženA|ženA
-tištění|tiščení|stavení|stavení
-květin|kvjetin|ženA|ženA
-bot|ženA|stromEK
+košila||0|košila|
+sukn|pohádKA|0|suk|sukŇE
+muzi|pohádKA|0|muzi|pohádKA
+mašl|růžE|0|mašl|růžE
+sošk|ženA|0|sošk|ženA
+věn|kopEC|0|vjen|kopEC
+hlav|ženA|0|hlav|ženA
+tištění|stavení|0|tiščení|stavení
+květin|ženA|0|kvjetin|ženA
+bot|ženA|0|bot|stromEK
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zelenÝ|-1|ý|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ýma|á?|é?|é?|ó|á?|é?|ó|é?|ých?|ým?|é?|é?|ých?|ýma|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ýma|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ýma
+zelenÝ|-1|ý|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ýma|||á?|é?|é?|ó|á?|é?|ó|||é?|ých?|ým?|é?|é?|ých?|ýma|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ýma|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ýma||
 -
 kávov|zelenÝ|zelenÝ
 stejn|zelenÝ|zelenÝ
