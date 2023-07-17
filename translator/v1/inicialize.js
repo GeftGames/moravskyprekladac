@@ -4,7 +4,7 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = "https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.tw_a";
+const languagesPackage = "https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
 let translations = [
 	"Morava", [
 		"Slovácko", [
@@ -286,7 +286,7 @@ function GetTranslations() {
 
 		languagesListAll.push(lang);
 		if (lang.Name!="") {
-			if ((!betaFunctions && lang.Quality>1) || (betaFunctions && lang.Quality>0) || dev) {
+			if ((!betaFunctions && lang.Quality>=1) || (betaFunctions && lang.Quality>=0) || dev) {
 				let name=lang.Name;
 				if (lang.Quality<=1) name+=" 👎";
 				else if (lang.quality>=4) name+=" 👍";
@@ -529,8 +529,8 @@ function GetDic() {
 	if (lang.Quality<2) document.getElementById("nodeTranslateTextLowQuality").style.display="block";
 	else document.getElementById("nodeTranslateTextLowQuality").style.display="none";
 
-	if (input=="") document.getElementById("dicOut").innerHTML="";
-	else if (lang !== null) {
+	//if (input=="") document.getElementById("dicOut").innerHTML="";
+	/*else*/ if (lang !== null) {
 		let out=lang.GetDic(input);
 		document.getElementById("dicOut").innerHTML="";
 		document.getElementById("dicOut").appendChild(out);

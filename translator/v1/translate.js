@@ -18,14 +18,17 @@ class ItemSentence {
 	GetDicForm(name) {
 		let p = document.createElement("p");
 		
+		// from
 		let f = document.createElement("span");
 		f.innerText=this.input;
 		p.appendChild(f);
 
+		// arrow
 		let e = document.createElement("span");
 		e.innerText=" → ";
 		p.appendChild(e);
 
+		// ro
 		let t = document.createElement("span");
 		t.innerText=this.output;
 		p.appendChild(t);
@@ -35,7 +38,7 @@ class ItemSentence {
 		});
 		t.class="dicCustom";
 
-		p.appedChild(s1);
+	//	p.appedChild(s1);
 		return [this.input, this.output, name, p];
 	}
 }
