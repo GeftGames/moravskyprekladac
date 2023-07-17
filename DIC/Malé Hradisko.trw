@@ -1,21 +1,28 @@
 TW v1.0
 tMalé Hradisko
+aGG
 d11.07.2023 15:37:15
-iexpr. ozývat se: tuť seť a haňi nebřnké Malé Hradisko PV
+iexpr. ozývat se: tuť seť a haňi nebřnké Malé Hradisko PV\njš necgaň a z barvó ven! Malé Hradisko PV
 c#Zdroje dat\n-https://sncj.ujc.cas.cz
+g49.4932293,16.8760021
 q0
 -
 -
 -
 -
 -
+ukaž pravdu|z barvó ven
 -
 -
 -
+ou|ó
 -
 -
+barVA|1|va|vy|vě|vu|vo|vě|vou|vy|ev|vám|vy|vy|vách|vami
 -
+barVA|1|va?|vy?|vě?|vu?|vo?|vě?|vó|vy?|ev?|vám?|vy?|vy?|vách?|vami?
 -
+bar|barVA|0|bar|barVA
 -
 -
 -
@@ -27,14 +34,24 @@ q0
 -
 -
 seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen, seděn|zen, seděn|zena, seděna|zeno, seděno|zeni, seděni|zeny, seděny|zeny, seděny|zena, seděna
+lHÁT|7|-1|hát|žu|žeš|že|žeme|žete|žou|ži|žeme|žete|hal|hal|hala|halo|hali|haly|haly|hala
+podváděT|2|-1|t|j|jme|jte
 -
 seDĚT|15|-1|dět?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|děl?|děl?|děla?|dělo?|děli?|děly?|děly?|děla?|zen, seděn?|zen, seděn?|zena, seděna?|zeno, seděno?|zeni, seděni?|zeny, seděny?|zeny, seděny?|zena, seděna?
+cêgANIT|7|-1|hát?|žu?|aň|že?|žeme?|žete?|žou?|ži?|žeme?|žete?|hal?|hal?|hala?|halo?|hali?|haly?|haly?|hala?
 -
 se|seDĚT|seDĚT
 nebřinkat| nebřônké ||
+l|lHÁT|lHÁT
+nel|necêg|lHÁT|cêgANIT
+podvádě|cêg|podváděT|cêgANIT
+nepodvádě|necêg|podváděT|cêgANIT
 -
 tady|tuť
+již|jôš
+ven
 -
+s|z|
 -
 ani|haňi
 a

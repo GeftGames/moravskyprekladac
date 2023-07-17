@@ -11,39 +11,54 @@ q0
 -
 -
 s ní|s ňó
+s ním|s ňím
 -
 sládkovi|slátkuvi
 -
 -
+ou|ó
 -
 kovi|kuvi
+žel|žél
+hý|hé
+kal|kál
 -
 zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+ruKA|1|ka|ky|ce|ku|ko|ce|kou|ce|kou|kám|ce|ce|kou,kách|kama
 -
 zimA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|e|y?|ách?|ami?
 plán|1|?|u?|u?|?|e?|u?|em?|e|ů?|ům?|y?|y?|ech?|y?
 městO|0|o?|a?|u?|u|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 školA|1|a?|y?|e?|o|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+roKA|1|ka?|ky?|ce|ku?|ko?|ce?|kou?|ce?|kou?|kám?|ce?|ce?|kou,kách?|kama?
 -
 aeroplán|plán|0|éropláne|plán
 pum|zimA|0|pum|zimA
 aut|městO|0|aut|městO
 škatul|školA|0|škatol|školA
+ru|ruKA|0|ro|roKA
+provaz||0|špagát|
 -
+dlouHÝ|-1|hé|hého|hému|hé|hé|hém|hým|||há|hých|hým|há|há|hých|hými|||há|hé|hé|hou|há|hé|hou|||hé|hých|hým|hé|hé|hých|hými|||hý|hého|hému|hého|hý|hém|hým|||zí|hých|hým|hé|zí|hých|hými|||hý|hého|hému|hý|hý|hém|hým|||hé|hých|hým|hé|hé|hých|hými||
 -
+dlouHÝ|-1|hé?|hého?|hému?|hé?|hé?|hém?|hým?|?|?|há?|hých?|hým?|há?|há?|hých?|hými?|?|?|há?|hé?|hé?|hou?|há?|hé?|hou?|?|?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|?|?|hý?|hého?|hému?|hého?|hý?|hém?|hým?|?|?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|?|?|hé|hého?|hému?|hý?|hý?|hém?|hým?|?|?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|?|?
 -
+dlou|dló|dlouHÝ|dlouHÝ
 -
 takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
 takuvÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ó|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
 ONA|-1|ona?|jí,ní*?|jí,ní*?|ji,ni*?|-|ní*?|jí?,#ňó
+ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím?,#ňím
 -
 takov|takuv|takovÝ|takovÝ
 ONA|ONA
+ON|ON
 -
 -
 -
@@ -51,19 +66,26 @@ ONA|ONA
 pouštĚT|15|-1|ět|ím|íš|í|íme|íte|í,pouštějí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 jezdIT|15|-1|it|ím|íš|í|íme|íte|í|i|ěme|ěte|il|il|ila|ilo|ili|ily|ily|ila|ěn,ježděn|ěn,ježděn|ěna,ježděna|ěno,ježděno|ěni,ježděni|ěny,ježděny|ěny,ježděny|ěna,ježděna
+držET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+blinkAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 pouščET|15|-1|ět?|ím?|íš?|í?|íme?|íte?|í,pouštějí?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ele?|ele|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 jezďIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|i?|ěme?|ěte?|il?|il?|ila?|ilo?|ili|ily?|ily?|ila?|ěn,ježděn?|ěn,ježděn?|ěna,ježděna?|ěno,ježděno?|ěni,ježděni?|ěny,ježděny?|ěny,ježděny?|ěna,ježděna?
+držET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|él|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+blinkAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ál|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
 pouštĚ|pouštĚT|pouštĚT
 MÍT|MÍT
 jezd|jezď|jezdIT|jezďIT
+drž|držET|držET
+blink|blinkAT|blinkAT
 -
 najednou|najednó
 moc|muc
 -
 s|
+v|
 -
 a
 -

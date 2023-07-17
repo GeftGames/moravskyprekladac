@@ -1,9 +1,12 @@
-TW v0.1
+TW v1.0
 tLoučany
+aGG
 d12.06.2023 11:39:27
-c#Zdroje dat\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4309
+iřasa -  brvê Loučany O\ndarmovis Loučany OL\nmřenka - břenek Loučany OL\nozdobná část koňského postroje patřící k chomoutu: darmovis Loučany OL\nmřenka- břenek Loučany OL
+c#Zdroje dat\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4309\n-https://sncj.ujc.cas.cz
 g49.6017043,17.0814787
 q0
+oHaná
 -
 -
 -
@@ -15,10 +18,19 @@ q0
 -
 -
 kašE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+brvA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 -
 kašE|1|e|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+brvA|1|a?|y?|ě?|u?|o?|ě?|ou?|ê|?|ám?|y?|y?|ách?|ami?
+pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+stromEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 -
-kaš|kašE|kašE
+kaš|kašE|0|kaš|kašE
+brv|brvA|0|brv|brvA
+řas|brvA|0|brv|brvA
+mřen|pohádKA|0|břen|stromEK
 -
 -
 -

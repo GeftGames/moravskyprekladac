@@ -3,11 +3,12 @@ fSpisovná čeština
 tLitovel
 aGG
 d18.03.2023 21:20:15
-c#Zdroje dat\n-https://dalsimoravak.wordpress.com/2013/06/16/ten-olomouc-ta-olomouc/
+iten vám mi cgáňit, že b o to posledňi človjeka ocgáňil Litovel OL
+c#Zdroje dat\n-https://dalsimoravak.wordpress.com/2013/06/16/ten-olomouc-ta-olomouc/\n-https://sncj.ujc.cas.cz/
 lHanáčtina
 g49.7014636,17.0749618
 xměstká mluva
-q1
+q0
 oHaná
 -
 -
@@ -36,42 +37,61 @@ ku|kô
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 olomouc|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
 -
 dědinA|1|a?|y?|ě?|u?|o?|ě?|ó?|y?|?|ám?|y?|y?|ách?|ama?
 kosŤ|1|ť?|ti?|ti?|ť?|ti?|ti?|tí?|ti?|tí?|tem?|ti?|ti?|tech?|ťama?
 olomouc|3||e?|e?|?|i?|i?|em?|e?|í?|ím?|e?|e?|ích?|emi?
+člověk|2|člověk?|človjeka|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|lidé,(v&#160;obecném jazyce) lidi?|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
 -
 vesnice|růžE|0|dědin|dědinA
 kost|kost|0|kost|kost
 zvyklost|kost|0|zvêklos|kosŤ
 olomouc|olomouc|2|olomóc|olomouc
+|člověk|0||člověk
 -
+jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
+jarní|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|ho?|mu?|ho?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?
 -
+poslední|posledňi|jarní|jarní
 -
 nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 my|-1|my|nás|nám|nás|my|nás|námi
 svŮJ|-1|ůj|ého|ému|ého|ůj|ém|ým|oji,sví|ých|ým|oje,své|oji,sví|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|oje,své|ých|ým|oje,své|oje,své|ých|ými|oje,svá|ojí,své|ojí,své|oji,svou|oje,svá|ojí,své|ojí,svou|oje,své|ých|ým|oje,své|oje,své|ých|ými|oje,své|ého|ému|oje,své|oje,své|ém|ým|oje,svá|ých|ým|oje,svá|oje,svá|ých|ými
+vY|-1|y|ás|ám|ás|y|ás|ámi
 -
 nÁŠ|-1|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašé|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 tEN|-1|en|eho|emô|eho?|-|ém|ím?|y?|ech|ěm?|y?|-|ech|ěmi?|en?|eho|emô|en?|-|ém|ím?|y?|ech|ěm?|y?|-|ech|ěmi?|a?|é|é?|u?|-|é?|ou?|y?|ech|ěm?|y?|-|ech|ěmi?|o|eho|emô|o?|-|ém|ím?|y?|ech|ěm?|y?|-|ech|ěmi?
 mê|-1|mê|nás?|nám?|nás|mê|nás?|nama?
 svŮJ|-1|ůj?|ého?|ému?|ého?|ůj?|ém?|ým?|oji,sví?|ých?|ým?|oje,své?|oji,sví?|ých?|ými?|ůj?|ého?|ému?|uj|ůj?|ém?|ým?|oje,své?|ých?|ým?|oje,své?|oje,své?|ých?|ými?|oje,svá?|ojí,své?|ojí,své?|oji,svou?|oje,svá?|ojí,své?|ojí,svou?|oje,své?|ých?|ým?|oje,své?|oje,své?|ých?|ými?|oje,své?|ého?|ému?|oje,své?|oje,své?|ém?|ým?|oje,svá?|ých?|ým?|oje,svá?|oje,svá?|ých?|ými?
+vY|-1|y?|ás?|ám?|ás?|y?|ás?|ámi?
 -
 n|nÁŠ|nÁŠ
 t|tEN|tEN
 my|mê
 sv|svŮJ|svŮJ
+v|vY|vY
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+umĚT|7|-1|ět|ím|íš|í|íme|íte|ějí,umí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+lHÁT|7|-1|hát|žu|žeš|že|žeme|žete|žou|ži|žeme|žete|hal|hal|hala|halo|hali|haly|haly|hala
+podvádĚT|15|-1|ět|ím|íš|í|íme|íte|í|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 -
 BÝT|247|-1|být|jsem?|jsi?|je?|jsme?|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa|jsouc|jsouce|byv|byvši|byvše|bych?|bys?|by?|bychom?|byste?|by?
+umĚT|7|-1|ět?|ím?|íš?|i|íme?|íte?|ějí,umí?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+lHÁT|7|-1|hát?|žu?|žeš?|že?|žeme?|žete?|žou?|ži?|žeme?|žete?|hal?|hal?|hala?|halo?|hali?|haly?|haly?|hala?
+podvádĚT|15|-1|ět?|ím?|íš?|í?|íme?|íte?|í?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 -
 BÝT|BÝT
+um|ôm|umĚT|umĚT
+l|lHÁT|lHÁT
+podvád|podvádĚT|podvádĚT
+ulhat|ocêgáňit||
 -
 dnes
 pořád|pořáď
