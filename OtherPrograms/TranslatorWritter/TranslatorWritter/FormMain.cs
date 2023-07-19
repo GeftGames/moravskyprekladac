@@ -470,6 +470,10 @@ namespace TranslatorWritter {
                     case "z":
                         textBoxZachytne.Text = line.Substring(1);
                         break;
+
+                    case "s":
+                        textBoxSpadaPod.Text = line.Substring(1);
+                        break;
              
                     case "l":
                         textBoxLang.Text = line.Substring(1);
@@ -783,6 +787,7 @@ namespace TranslatorWritter {
             if (!string.IsNullOrEmpty(textBoxSelect.Text)) data += "e" + textBoxSelect.Text + Environment.NewLine;
             if (!string.IsNullOrEmpty(textBoxComment.Text)) data += "c" + textBoxComment.Text.Replace(Environment.NewLine, "\\n") + Environment.NewLine;
             if (!string.IsNullOrEmpty(textBoxZachytne.Text)) data += "z" + textBoxZachytne.Text + Environment.NewLine;
+            if (!string.IsNullOrEmpty(textBoxSpadaPod.Text)) data += "s" + textBoxSpadaPod.Text + Environment.NewLine;
             if (!string.IsNullOrEmpty(textBoxLang.Text)) data += "l" + textBoxLang.Text + Environment.NewLine;
             if (!string.IsNullOrEmpty(textBoxGPS.Text)) data += "g" + textBoxGPS.Text + Environment.NewLine;
             if (!string.IsNullOrEmpty(textBoxtypeLang.Text)) data += "x" + textBoxtypeLang.Text + Environment.NewLine;
@@ -5820,6 +5825,8 @@ namespace TranslatorWritter {
             //bool useFilter = filter!="" && filter!="*"; 
            
             int index=listBoxPatternNounFrom.SelectedIndex;
+
+            listBoxPatternNounFrom.SuspendLayout();
             listBoxPatternNounFrom.Items.Clear();
             for (int i=0; i<itemsPatternNounFromFiltered.Count; i++) {
                 ItemPatternNoun item = itemsPatternNounFromFiltered[i];
@@ -5832,6 +5839,7 @@ namespace TranslatorWritter {
 
             if (index>=listBoxPatternNounFrom.Items.Count)index=listBoxPatternNounFrom.Items.Count-1;
             listBoxPatternNounFrom.SelectedIndex=index;
+            listBoxPatternNounFrom.ResumeLayout();
         }
 
         void PatternNounFromRefreshFilteredList() {
@@ -8084,7 +8092,9 @@ namespace TranslatorWritter {
                     break;
 
                 case PronounType.NoDeklination:
+                    if (CurrentPatternPronounFrom.Shapes.Length>0) {
                     CurrentPatternPronounFrom.Shapes[0]=textBoxPatternPronounFromMuzJ1.Text;
+                    } else CurrentPatternPronounFrom.Shapes=new string[]{ "" };
                     break;
                     
                 case PronounType.DeklinationOnlySingle:
@@ -15462,6 +15472,45 @@ namespace TranslatorWritter {
             
         }
 
+        private void addStartingStringToolStripMenuItem2_Click(object sender, EventArgs e) {
+            if (CurrentPatternNounTo!=null) { 
+                FormString form=new FormString();
+                form.LabelText="Přidat na začátek pronoma string";
+                form.ShowDialog();
+                string str=form.ReturnString;
+                if (!string.IsNullOrEmpty(str)) { 
+                    PatternNounToSaveCurrent();
+                    CurrentPatternNounTo.AddStartingString(str);
+                    PatternNounToSetCurrent();
+                }
+            }
+        }
+
+        private void addStartingStringToolStripMenuItem3_Click(object sender, EventArgs e) {
+            if (CurrentPatternAdjectiveTo!=null) { 
+                PatternAdjectiveToSaveCurrent();
+                FormString form=new FormString();
+                form.LabelText="Přidat na začátek pronoma string";
+                form.ShowDialog();
+                string str=form.ReturnString;
+                if (!string.IsNullOrEmpty(str)) CurrentPatternAdjectiveTo.AddStartingString(str);
+                PatternAdjectiveToSetCurrent();
+            }
+        }
+
+        private void toolStripMenuItem54_Click(object sender, EventArgs e) {
+            if (CurrentPatternAdjectiveTo!=null){
+                PatternAdjectiveToSaveCurrent();
+
+                ItemPatternAdjective item =CurrentPatternAdjectiveTo.Duplicate();
+               
+                itemsPatternAdjectiveTo.Add(item);
+                PatternAdjectiveToRefreshFilteredList();
+                PatternAdjectiveToSetListBox();
+                PatternAdjectiveToSetCurrent();
+            }
+        }
+
         void addFromToToolStripMenuItem2_Click(object sender, EventArgs e) {
             string name = GetString("", "Název verb");
             if (name == null) return;
@@ -16399,11 +16448,13 @@ namespace TranslatorWritter {
 
         private void addStartingStringToolStripMenuItem1_Click(object sender, EventArgs e) {
             if (CurrentPatternPronounTo!=null) { 
+                PatternPronounToSaveCurrent();
                 FormString form=new FormString();
                 form.LabelText="Přidat na začátek pronoma string";
                 form.ShowDialog();
                 string str=form.ReturnString;
                 if (!string.IsNullOrEmpty(str)) CurrentPatternPronounTo.AddStartingString(str);
+                PatternPronounToSetCurrent();
             }
         }
 

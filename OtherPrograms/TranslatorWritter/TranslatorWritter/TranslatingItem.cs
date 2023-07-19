@@ -90,6 +90,9 @@ namespace TranslatorWritter {
             if (From.EndsWith(" ")) return false;
             if (To.EndsWith(" ")) return false;
 
+            if (To.StartsWith(" ")) return false;
+            if (From.StartsWith(" ")) return false;
+
             return true;
         }
 
@@ -148,6 +151,7 @@ namespace TranslatorWritter {
                 case 'e': return true; 
                 case 'é': return true; 
                 case 'ê': return true; 
+                case 'ě': return true; 
                 case 'f': return true; 
                 case 'g': return true; 
                 case 'h': return true; 
@@ -169,6 +173,7 @@ namespace TranslatorWritter {
                 case 'ř': return true; 
                 case 'ŕ': return true; 
                 case 's': return true; 
+                case 'š': return true; 
                 case 't': return true; 
                 case 'ť': return true; 
                 case 'u': return true; 
@@ -966,6 +971,21 @@ namespace TranslatorWritter {
         internal void ChangeShow() {
             
         }
+
+        internal void AddStartingString(string str) {
+            for (int i=0; i<Shapes.Length; i++) {
+                var shape = Shapes[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Shapes[i]=set.Substring(0, set.Length-1);
+                    } else Shapes[i]=str+shape;
+                }
+            }
+        }
     }
 
     public class ItemNoun {
@@ -1334,7 +1354,7 @@ namespace TranslatorWritter {
             set{
                 if (type==value) return;
                 if (type==PronounType.Unknown) {
-                    if (value==PronounType.NoDeklination) Shapes=new string[0];
+                    if (value==PronounType.NoDeklination) Shapes=new string[1];
                     else if (value==PronounType.DeklinationOnlySingle) Shapes=new string[7];
                     else if (value==PronounType.Deklination) Shapes=new string[14];
                     else if (value==PronounType.DeklinationWithGender) Shapes=new string[14*4];
@@ -1425,7 +1445,7 @@ namespace TranslatorWritter {
             if (raw.Length==1+2){
                 ItemPatternPronoun item = new ItemPatternPronoun {
                     Name = raw[0],
-                    Type = PronounType.DeklinationOnlySingle,
+                    Type = PronounType.NoDeklination,
                     Gender = (GenderPronoun)int.Parse(raw[1]),
                     Shapes = new string[1] { raw[2] }
                 };
@@ -1437,11 +1457,11 @@ namespace TranslatorWritter {
                     Type = PronounType.DeklinationWithGender,
                     Gender = (GenderPronoun)int.Parse(raw[1]),
                     Shapes = new string[14 * 4]{
-                    raw[2], raw[3], raw[4], raw[5], raw[6], raw[7], raw[8], raw[9], raw[10], raw[11], raw[12], raw[13], raw[14], raw[15],
-                    raw[16], raw[17], raw[18], raw[19], raw[20], raw[21], raw[22], raw[23], raw[24], raw[25], raw[26], raw[27], raw[28], raw[29],
-                    raw[30], raw[31], raw[32], raw[33], raw[34], raw[35], raw[36], raw[37], raw[38], raw[39], raw[40], raw[41], raw[42], raw[43],
-                    raw[44], raw[45], raw[46], raw[47], raw[48], raw[49], raw[50], raw[51], raw[52], raw[53], raw[54], raw[55], raw[56], raw[57]
-                }
+                        raw[2], raw[3], raw[4], raw[5], raw[6], raw[7], raw[8], raw[9], raw[10], raw[11], raw[12], raw[13], raw[14], raw[15],
+                        raw[16], raw[17], raw[18], raw[19], raw[20], raw[21], raw[22], raw[23], raw[24], raw[25], raw[26], raw[27], raw[28], raw[29],
+                        raw[30], raw[31], raw[32], raw[33], raw[34], raw[35], raw[36], raw[37], raw[38], raw[39], raw[40], raw[41], raw[42], raw[43],
+                        raw[44], raw[45], raw[46], raw[47], raw[48], raw[49], raw[50], raw[51], raw[52], raw[53], raw[54], raw[55], raw[56], raw[57]
+                    }
                 };
                 return item;
             }
@@ -1545,7 +1565,15 @@ namespace TranslatorWritter {
 
         internal override void AddQuestionMark() {
             for (int i=0; i<Shapes.Length; i++) {
-                if (Shapes[i]!="-") Shapes[i]=Shapes[i]+'?';
+                if (Shapes[i]!="-") {
+                    if (Shapes[i].Contains(',')) { 
+                        string set="";
+                        foreach (string s in Shapes[i].Split(',')) { 
+                            set+=s+"?,";    
+                        }
+                        Shapes[i]=set.Substring(0,set.Length-1);
+                    } else Shapes[i]=Shapes[i]+'?';
+                }
             }
         }
 
@@ -1792,16 +1820,104 @@ namespace TranslatorWritter {
 
         internal override void AddQuestionMark() {
             for (int i=0; i<Middle.Length; i++) {
-                if (Middle[i]!="-")Middle[i]=Middle[i]+'?';
+                if (Middle[i]==null)Middle[i]="";
+                if (Middle[i]!="-") {
+
+                    if (Middle[i].Contains(',')) { 
+                        string s="";
+                        foreach (string m in Middle[i].Split(',')){ 
+                            s+=m+"?,";                            
+                        } 
+                        Middle[i]=s.Substring(0,s.Length-1);
+                    } else Middle[i]=Middle[i]+'?';
+                }
             }
             for (int i=0; i<Feminine.Length; i++) {
-                if (Feminine[i]!="-")Feminine[i]=Feminine[i]+'?';
+                if (Feminine[i]==null)Feminine[i]="";
+                if (Feminine[i]!="-") {
+                    if (Feminine[i].Contains(',')) { 
+                        string s="";
+                        foreach (string m in Feminine[i].Split(',')){ 
+                            s+=m+"?,";                            
+                        } 
+                        Feminine[i]=s.Substring(0,s.Length-1);
+                    } else Feminine[i]=Feminine[i]+'?';
+                }
             }
             for (int i=0; i<MasculineAnimate.Length; i++) {
-                if (MasculineAnimate[i]!="-")MasculineAnimate[i]=MasculineAnimate[i]+'?';
+                if (MasculineAnimate[i]==null)MasculineAnimate[i]="";
+                if (MasculineAnimate[i]!="-") {
+                    if (MasculineAnimate[i].Contains(',')) { 
+                        string s="";
+                        foreach (string m in MasculineAnimate[i].Split(',')){ 
+                            s+=m+"?,";                            
+                        } 
+                        MasculineAnimate[i]=s.Substring(0,s.Length-1);
+                    } else MasculineAnimate[i]=MasculineAnimate[i]+'?';
+                }
             }
             for (int i=0; i<MasculineInanimate.Length; i++) {
-                if (MasculineInanimate[i]!="-")MasculineInanimate[i]=MasculineInanimate[i]+'?';
+                if (MasculineInanimate[i]==null)MasculineInanimate[i]="";
+                if (MasculineInanimate[i]!="-") {
+                    if (MasculineInanimate[i].Contains(',')) { 
+                        string s="";
+                        foreach (string m in MasculineInanimate[i].Split(',')){ 
+                            s+=m+"?,";                            
+                        } 
+                        MasculineInanimate[i]=s.Substring(0,s.Length-1);
+                    } else MasculineInanimate[i]=MasculineInanimate[i]+'?';
+                }
+            }
+        }
+
+        internal void AddStartingString(string str) {              
+            for (int i=0; i<Middle.Length; i++) {
+                var shape = Middle[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")){ 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Middle[i]=set.Substring(0, set.Length-1);
+                    } else Middle[i]=str+shape;
+                }
+            }
+            for (int i=0; i<Feminine.Length; i++) {
+                var shape = Feminine[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")){ 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Feminine[i]=set.Substring(0, set.Length-1);
+                    } else Feminine[i]=str+shape;
+                }
+            }
+            for (int i=0; i<MasculineAnimate.Length; i++) {
+                var shape = MasculineAnimate[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")){ 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        MasculineAnimate[i]=set.Substring(0, set.Length-1);
+                    } else MasculineAnimate[i]=str+shape;
+                }
+            }
+            for (int i=0; i<MasculineInanimate.Length; i++) {
+                var shape = MasculineInanimate[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")){ 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        MasculineInanimate[i]=set.Substring(0, set.Length-1);
+                    } else MasculineInanimate[i]=str+shape;
+                }
             }
         }
     }
