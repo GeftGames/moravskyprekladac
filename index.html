@@ -79,7 +79,7 @@
 			<div style="padding: 0px; height: -webkit-fill-available;z-index: 10;">
 
 				<!-- Header -->
-				<div id="header" style="display: flex">
+				<div id="header" style="display: flex;align-items: center;">
 					<button class="butIc"
 						aria-label="Toggle settings"
 						onclick="
@@ -103,7 +103,7 @@
 						</svg>
 					</button>
 
-					<h1  rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="text-decoration: none;display: flex; align-items: center; text-shadow: var(--tsh);margin-right: auto;">Moravský překladač</h1>
+					<h1  rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">Moravský překladač</h1>
 					<div style="display: flex;">
 					
 					<!--my dev-->	
@@ -417,8 +417,8 @@
 
 						<!-- Slovník-->
 						<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
-							<div style="display: flex; justify-content: center;">
-								<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;">
+							<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;">
+								<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available; margin-bottom: 1cm;">
 									<textarea oninput="GetDic()" spellcheck="true" id="dicInput" autofocus placeholder="Zadejte slovo"></textarea>
 									<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox();">
 										<svg id="butclose" class="ib" viewBox="0 0 24 24">
@@ -500,53 +500,93 @@
 								<p id="">Návrhy</p>	
 							</div>
 							
-							<div id="mapperNavrh" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;" >
-								<div class="mapperNavrh" onclick="navrhClick('ten')">TEN kluk</div>
-								<div class="mapperNavrh" onclick="navrhClick('toho')">bez TOHO</div>
-								<div class="mapperNavrh" onclick="navrhClick('tomu')">k TOMU</div>
-								<div class="mapperNavrh" onclick="navrhClick('tom')">při TOM</div>
-								<div class="mapperNavrh" onclick="navrhClick('se')">podívat SE</div>
-								<div class="mapperNavrh" onclick="navrhClick('něco')">NĚCO jako</div>
-								<div class="mapperNavrh" onclick="navrhClick('já')">JÁ</div>
-								<div class="mapperNavrh" onclick="navrhClick('jsou')">oni JSOU</div>
-								<div class="mapperNavrh" onclick="navrhClick('si')">sedl SI</div>
-								<div class="mapperNavrh" onclick="navrhClick('byl')">on BYL</div>
-								<div class="mapperNavrh" onclick="navrhClick('by')">já BY</div>
-								<div class="mapperNavrh" onclick="navrhClick('ještě')">JEŠTĚ</div>
-								<div class="mapperNavrh" onclick="navrhClick('jen')">JEN</div>
-								<div class="mapperNavrh" onclick="navrhClick('vždy')">VŽDY</div>
-								<div class="mapperNavrh" onclick="navrhClick('teď')">TEĎ</div>
-								<div class="mapperNavrh" onclick="navrhClick('nyní')">NYNÍ</div>
-								<div class="mapperNavrh" onclick="navrhClick('však')">VŠAK</div>
-								<div class="mapperNavrh" onclick="navrhClick('domů')">jdu DOMŮ</div>
-								<div class="mapperNavrh" onclick="navrhClick('jednou')">JEDNOU</div>
-								<div class="mapperNavrh" onclick="navrhClick('najednou')">NAJEDNOU</div>
-								<div class="mapperNavrh" onclick="navrhClick('do')">DO školy</div>
-								<div class="mapperNavrh" onclick="navrhClick('u')">U okna</div>
-								<div class="mapperNavrh" onclick="navrhClick('za')">ZA</div>
-								<div class="mapperNavrh" onclick="navrhClick('i')">I toto</div>
-								<div class="mapperNavrh" onclick="navrhClick('potom')">POTOM</div>
-								<div class="mapperNavrh" onclick="navrhClick('když')">KDYŽ</div>
-								<div class="mapperNavrh" onclick="navrhClick('jestli')">JESTLI</div>
-								<div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
-								<div class="mapperNavrh" onclick="navrhClick('protože')">PROTOŽE</div>
-								<div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
-								<div class="mapperNavrh" onclick="navrhClick('bylo')">BYLO</div>
-								<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
-								<div class="mapperNavrh" onclick="navrhClick('těch')">o TĚCH</div>
-								<div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
-								<div class="mapperNavrh" onclick="navrhClick('taky')">TAKY</div>
-								<div class="mapperNavrh" onclick="navrhClick('on')">ON</div>
-								<div class="mapperNavrh" onclick="navrhClick('zase')">ZASE</div>
-								<div class="mapperNavrh" onclick="navrhClick('hned')">HNED</div>
-								<div class="mapperNavrh" onclick="navrhClick('nahorů')">NAHORŮ</div>
-								<div class="mapperNavrh" onclick="navrhClick('až')">AŽ</div>
-								<div class="mapperNavrh" onclick="navrhClick('od')">OD</div>
-								<div class="mapperNavrh" onclick="navrhClick('mít')">MÍT</div>
-								<div class="mapperNavrh" onclick="navrhClick('měl')">MĚL</div>
-								<div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
-								<div class="mapperNavrh" onclick="navrhClick('celý')">CELÝ</div>
-								<div class="mapperNavrh" onclick="navrhClick('šel')">ŠEL</div>
+							<div id="mapperNavrh" style="display: flex;flex-wrap: wrap;justify-content: flex-start;width: -webkit-fill-available;flex-direction: column;" >
+								<p>Podstatná jména</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
+								</div>
+								<p>Přídavná jména</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('celý')">CELÝ</div>
+								</div>
+								<p>Zájmena</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('já')">JÁ</div>
+									<div class="mapperNavrh" onclick="navrhClick('on')">ON</div>
+									<div class="mapperNavrh" onclick="navrhClick('oni')">ONI</div>
+
+									<div class="mapperNavrh" onclick="navrhClick('ten')">TEN kluk</div>
+									<div class="mapperNavrh" onclick="navrhClick('toho')">bez TOHO</div>
+									<div class="mapperNavrh" onclick="navrhClick('tomu')">k TOMU</div>
+									<div class="mapperNavrh" onclick="navrhClick('tom')">při TOM</div>
+									<div class="mapperNavrh" onclick="navrhClick('těch')">o TĚCH</div>
+
+									<div class="mapperNavrh" onclick="navrhClick('se')">podívat SE</div>
+									<div class="mapperNavrh" onclick="navrhClick('si')">sedl SI</div>
+
+									<div class="mapperNavrh" onclick="navrhClick('něco')">NĚCO jako</div>
+								</div>
+								<p>Číslovky</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('jeden')">JEDEN</div>
+								</div>
+								<p>Slovesa</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('jsou')">oni JSOU</div>
+									<div class="mapperNavrh" onclick="navrhClick('byl')">on BYL</div>
+									<div class="mapperNavrh" onclick="navrhClick('bylo')">BYLO</div>
+									<div class="mapperNavrh" onclick="navrhClick('by')">já BY</div>
+
+									<div class="mapperNavrh" onclick="navrhClick('mít')">MÍT</div>
+									<div class="mapperNavrh" onclick="navrhClick('měl')">MĚL</div>
+									<div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
+									<div class="mapperNavrh" onclick="navrhClick('šel')">ŠEL</div>
+								</div>
+								<p>Příslovce</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('jen')">JEN</div>
+									<div class="mapperNavrh" onclick="navrhClick('teď')">TEĎ</div>
+									<div class="mapperNavrh" onclick="navrhClick('nyní')">NYNÍ</div>
+									<div class="mapperNavrh" onclick="navrhClick('potom')">POTOM</div>
+									<div class="mapperNavrh" onclick="navrhClick('hned')">HNED</div>
+									<div class="mapperNavrh" onclick="navrhClick('zase')">ZASE</div>									
+									<div class="mapperNavrh" onclick="navrhClick('domů')">jdu DOMŮ</div>
+									<div class="mapperNavrh" onclick="navrhClick('nahorů')">NAHORŮ</div>									
+									<div class="mapperNavrh" onclick="navrhClick('až')">AŽ</div>
+									<div class="mapperNavrh" onclick="navrhClick('však')">VŠAK</div>
+									<div class="mapperNavrh" onclick="navrhClick('ještě')">JEŠTĚ</div>									
+									<div class="mapperNavrh" onclick="navrhClick('najednou')">NAJEDNOU</div>
+									<div class="mapperNavrh" onclick="navrhClick('jednou')">JEDNOU</div>
+									<div class="mapperNavrh" onclick="navrhClick('vždy')">VŽDY</div>									
+									<div class="mapperNavrh" onclick="navrhClick('taky')">TAKY</div>
+									<div class="mapperNavrh" onclick="navrhClick('kde')">KDE</div>
+									<div class="mapperNavrh" onclick="navrhClick('večer')">VEČÉR</div>
+									<div class="mapperNavrh" onclick="navrhClick('dolů')">DOLŮ</div>
+								</div>
+								<p>Předložky</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('do')">DO školy</div>
+									<div class="mapperNavrh" onclick="navrhClick('u')">U okna</div>
+									<div class="mapperNavrh" onclick="navrhClick('od')">OD</div>
+									<div class="mapperNavrh" onclick="navrhClick('za')">ZA</div>
+								</div>
+								<p>Spojky</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('i')">I toto</div>
+									<div class="mapperNavrh" onclick="navrhClick('když')">KDYŽ</div>
+									<div class="mapperNavrh" onclick="navrhClick('jestli')">JESTLI</div>
+									<div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
+									<div class="mapperNavrh" onclick="navrhClick('protože')">PROTOŽE</div>
+									<div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
+									<div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
+								</div>
+								<p>Částice</p>
+								<div class="navrhCat">
+									<div class="mapperNavrh" onclick="navrhClick('ne')">NE</div>
+								</div>
+								<p>Citoslovce</p>
+								<div class="navrhCat">
+								</div>
 							</div>
 						</div>
 						
