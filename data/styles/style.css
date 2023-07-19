@@ -1,5 +1,5 @@
 :root {
-	--f: system-ui, artifakt element, sans-serif;
+	--f: 'Noto Sans', system-ui, 'artifakt element', sans-serif;
 	
 	--RawColorForw: 0, 0, 0;
 	--RawColorBack: 255, 255, 255;
@@ -32,10 +32,21 @@
 	--RawColorForw5: rgba(var(--RawColorForw), .5);
 
 	--RawColorBack05: rgba(var(--RawColorBack), .05);
-	--RawColorBack1: rgba(var(--RawColorBak), .1);
-	--RawColorBack2: rgba(var(--RawColorBak), .2);
-	--RawColorBack3: rgba(var(--RawColorBak), .3);
-	--RawColorBack5: rgba(var(--RawColorBak), .5);
+	--RawColorBack1: rgba(var(--RawColorBack), .1);
+	--RawColorBack2: rgba(var(--RawColorBack), .2);
+	--RawColorBack3: rgba(var(--RawColorBack), .3);
+	--RawColorBack5: rgba(var(--RawColorBack), .5);
+
+	--filterShadow1: drop-shadow(0px 0px 5px var(--RawColorBack1));
+	--filterShadow2: drop-shadow(0px 0px 5px var(--RawColorBack1));
+}
+.navrhCat{
+	display: flex;
+    flex-wrap: wrap;
+}
+h1{
+	font-family: var(--f);
+	font-weight: 400;
 }
 .disabled-transition, .disabled-transition * {
 	transition: none !important;
@@ -76,7 +87,7 @@ span{
     text-size-adjust: 100%;
     font-size: 6mm;
     line-height: 28px;
-    font-family: system-ui, artifakt element, sans-serif;
+    font-family: var(--f);
 	height: -webkit-fill-available;
 	border-radius: 4px;
 }
@@ -131,8 +142,8 @@ html{
 	opacity: 1;
 	fill: currentColor;
 	overflow: hidden;
-	transition: opacity 0.15s;
-	filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, .3));
+	transition: opacity 0.15s, filter 0.15s;
+	filter: var(--filterShadow1);
 }
 .butIc{
 	cursor: pointer;
@@ -156,6 +167,9 @@ html{
 .butIc:hover{
 	background-color: rgba(var(--ColorThemeAccent), .4)/* #66ccff55*/;
 }
+.butIc:hover .ib{	
+	filter: var(--filterShadow2);
+}
 #transarea{
 	display: grid;
 	grid-auto-flow: column;
@@ -171,7 +185,7 @@ html{
 	border-radius: 3px;
 	border: none;
 	border-color: transparent;
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	text-shadow: var(--tsh);
 	max-height: 300px;
 	box-shadow: var(--ksh);
@@ -244,7 +258,7 @@ li {
 }
 .button {
 	color: var(--ColorText);
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	border: 1px solid #353535;
 	text-decoration: none;
 	padding: 4px 4px;
@@ -261,7 +275,7 @@ li {
 	box-shadow: 0 1px 0 var(--RawColorBack3), 1.25px 2.25px 2.5px -1px var(--RawColorBack5), 0 1px 0 var(--RawColorBack1) inset;
 	text-shadow: var(--tsh);
 	transition-duration: var(--transitionSlow);
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	outline: 2px transparent dashed;
 	outline-offset: 3px;
 }
@@ -302,7 +316,7 @@ select {
 	font-size: 6mm;
 	box-shadow: var(--ksh);
 	padding: 4px;
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	outline: 2px transparent dashed;
 	outline-offset: 3px;
 }
@@ -327,7 +341,7 @@ select option:hover{
 a{
 	color: rgb(var(--ColorThemeAccent));
 	transition: color var(--transitionSlow), outline 80ms;
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	outline-offset: 1px;
 	transition: color var(--transitionSlow);
 }
@@ -335,14 +349,14 @@ p{
 	margin: 10px;
 	text-shadow: var(--tsh);
 	font-size: 6mm;
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	transition: color var(--transitionSlow);
 	color: var(--ColorText);
 }
 span{
 	text-shadow: var(--tsh);
 	font-size: 6mm;
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	transition: color var(--transitionSlow);
 	color: var(--ColorText);
 }
@@ -626,7 +640,7 @@ a:focus-visible {
 .selectGroupLang1{ font-size: medium;}
 .selectGroupLang2{ font-size: medium;}
 option,optgroup{
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 }
 #errorMessage{
 	max-height: 20vh;
@@ -672,7 +686,7 @@ option,optgroup{
 	margin-top: 1cm;
 }
 .pageFromDown{
-    background-color: var(--ConBack);
+    background-color: var(--ColorBack);
 /*	position: fixed;*/
 	top: 52px;
 	opacity:0;
@@ -833,7 +847,7 @@ option,optgroup{
 		width: auto;
 		max-height: 40vh;
 	}
-	textarea, #specialTextarea {
+	/*textarea, */#specialTextarea {
 		max-height: 40vh;
 		height: 40vh;
 	}
@@ -880,7 +894,7 @@ option,optgroup{
 		margin-left: 5px;
 		margin-right: 5px;
 	}
-	textarea, #specialTextarea {
+	/*textarea, */#specialTextarea {
 		max-height: 40vh;
 		height: 40vh;
 	}
@@ -966,6 +980,10 @@ circle{
 	color: var(--ColorOrig);
 	display: block;
 	user-select: none;
+	transition: color .3s;
+}
+.settingLink:hover{
+	color: var(--ColorThemeForward);
 }
 #mapperCanvas {
 	width: 100%;
@@ -979,13 +997,13 @@ input[type="text"]{
 	text-shadow: var(--tsh);
 	border-radius: 4px;
 	font: medium -moz-fixed;
-	font-family: system-ui, artifakt element, sans-serif;
+	font-family: var(--f);
 	box-shadow: var(--ksh);
 }
 #mapperOuter{
 	box-shadow: var(--ksh);
 	border: 1px solid #88888863;
-	background-color: white;
+	background-color: var(--ColorBack);
 }
 #mapperInner{
 	margin-left: 1cm;
@@ -1002,7 +1020,7 @@ input[type="text"]{
 	font-style: italic;
 }
 .mapperNavrh{
-	background-color: var(--ColorThemeAccentBack);
+	background-color: var(--ConBack);
 	color: var(--ColorText);
 	font-size: 8mm;
 	padding: 5mm;
@@ -1018,4 +1036,15 @@ input[type="text"]{
 .mapperNavrh:hover{
 	background-color: var(--ColorTheme);
 	/*color: var(--ColorOrig);*/
+}
+.dicCustom{
+	text-decoration: underline dotted gray 2px;
+	transition: color .2s;
+	color: black;
+}
+.dicCustom:hover{
+	color: var(--ColorThemeForward);
+}
+.dicMoreInfo{
+	font-style: italic;
 }
