@@ -2,7 +2,7 @@ TW v1.0
 tPartutovice
 aGG
 d17.07.2023 10:06:37
-ipotem do Vídňa a tam zme byli dva mjesýce f českej škole Partutovice PR
+ipotem do Vídňa a tam zme byli dva mjesýce f českej škole Partutovice PR\nv podstatě: celkovje musým řécť Partutovice PR\ndožírka f. (dožyrka) expr. trápení, nepříjemnost: toš sem se vráťił, nebyło uš tolkyh dožyrek\nčérd býł ďivoký, řynčéł řetazama, hde se mu posmívali a dožýrali Partutovice PR
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
 g49.6311062,17.7078415
 q0
@@ -13,31 +13,61 @@ q0
 -
 v české|f českej
 tam jsme byli|tam zme byli
+v podstatě|celkovje
+už tolik trápení|uš tolkyh dožyrek
 -
 -
 -
 -
+sím|sým
+ct|cť
+čel|čéł
+byl|býł
+
 -
 vídEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
 měsíc|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+stavení|0|||||||m|||m|||ch|mi
+čert|3||a|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
+řetěz|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
 -
 vídEŇ|1|eň?|ňa|ni?|eň?|ni?|ni?|ní?|ně?|ní?|ním?|ně?|ně?|ních?|němi?
 mjesýc|3|?|e?|i?|?|i?|i?|em?|e|ů?|ům?|e?|e?|ích?|i?
 školA|1|a?|y?|e?|u?|o?|e|ou?|y?|?|ám?|y?|y?|ách?|ami?
+pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek|kám?|ky?|ky?|kách?|kami?
+stavení|0|?|?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+čérD|3|d|ta?|tu,tovi?|ta?|te?|tu,tovi?|tem?|ti,tové?|tů?|tům?|ty?|ti,tové?|tech?|ty?
+řetaz|3|?|u?|u?|?|e?|u,e?|em?|y?|ů?|ům?|y?|y?|ech?|ama
 -
 ví|vídEŇ|2|ví|vídEŇ
 měsíc|měsíc|0|mjesýc|mjesýc
 škol|školA|0|škol|školA
+trápení|stavení|0|dožyr|pohádKA
+čert|čert|0|čér|čérD
+řetěz|čert|0|řetaz|řetaz
 -
 čeSKÝ|-1|ské|ského|skému|ské|ské|ském|ským|||ská|ských|ským|ská|ská|ských|skými|||ská|ské|ské|skou|ská|ské|skou|||ské|ských|ským|ské|ské|ských|skými|||ský|ského|skému|ského|ský|ském|ským|||ští|ských|ským|ské|ští|ských|skými|||ský|ského|skému|ský|ský|ském|ským|||ské|ských|ským|ské|ské|ských|skými||
+divoKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
 čeSKÝ|-1|ské?|ského?|skému?|ské?|ské?|ském?|ským?|?|?|ská?|ských?|ským?|ská?|ská?|ských?|skými?|?|?|ská?|ské?|ské?|skou?|ská?|skej|skou?|?|?|ské?|ských?|ským?|ské?|ské?|ských?|skými?|?|?|ský?|ského?|skému?|ského?|ský?|ském?|ským?|?|?|ští?|ských?|ským?|ské?|ští?|ských?|skými?|?|?|ský?|ského?|skému?|ský?|ský?|ském?|ským?|?|?|ské?|ských?|ským?|ské?|ské?|ských?|skými?|?|?
+divoKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|ký|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
 -
 če|čeSKÝ|čeSKÝ
+divo|ďivo|divoKÝ|divoKÝ
 -
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tolik|-1||a|a|||a|a
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
+SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+toIIK|-1|ik?|kyh|ka?|k?|k?|ka?|ka?
+ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
 -
+SE|SE
+tolik|tolik|tolik
+ON|ON
 -
 dvA|2|a|ou|ěma|a|a|ou|ěma
 -
@@ -46,13 +76,32 @@ dvA|2|a|ou?|ěma?|a?|a?|ou?|ěma?
 dv|dvA|dvA
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
+vrÁTIT|30|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|átil|átil|átila|átilo|átili|átily|átily|átila|ácen|ácen|ácena|áceno|áceni|áceny|áceny|ácena
+neBÝT|87|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|byv|byvši|byvše
+řinčET|15|-1|et|ím|íš|í|íme|íte|í|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|sem|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býł|býł|byla?|było|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+musET|5|-1|et?|ým|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
+řÍCT|30|-1|écť|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
+vrÁTIT|30|-1|átit?|átím?|átíš?|átí?|átíme?|átíte?|átí?|ať?|aťme?|aťte?|áťił|átil?|átila?|átilo?|átili?|átily?|átily?|átila?|ácen?|ácen?|ácena?|áceno?|áceni?|áceny?|áceny?|ácena?
+neBÝT|87|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|byv?|byvši?|byvše?
+řynčET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|i?|eme?|ete?|éł|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 -
-|BÝT|BÝT
+BÝT|BÝT
+mus|musET|musET
+ř|řÍCT|řÍCT
+vr|vrÁTIT|vrÁTIT
+ne|neBÝT|neBÝT
+řinč|řynč|řinčET|řynčET
+zlobit|dožýrali||
+posmívali ||
 -
 potom|potem
 tam
+už|uš
+kde|hde
 -
 do|
 v|f|

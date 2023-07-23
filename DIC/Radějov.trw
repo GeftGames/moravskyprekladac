@@ -1,8 +1,10 @@
-TW v0.1
+TW v1.0
 tRadějov
 aGG
 d31.03.2023 11:33:45
+ibar bi aj hned doje ten doktor, uš to nepomože Radějov HO
 eVýchozí|ł>u#Odborné|ł>ł
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site:sncj.ujc.cas.cz+Radějov">sncj.ujc.cas.cz</a>
 g48.859573,17.3435198
 xlokálnímluva
 q0
@@ -13,6 +15,8 @@ q0
 -
 jedl jsi|jedus
 no ale|nale
+i kdyby|bar by aj
+i když|bar
 -
 -
 někd|negd
@@ -27,10 +31,13 @@ al|ał
 kla|kła
 -
 krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
 -
 krÉF|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+syn|2||a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 -
-sluníčko|sunéčko||
+sluníčko||0|sunéčko|
+doktor|syn|0|doktor|syn
 -
 -
 -
@@ -40,7 +47,7 @@ mŮJ|-1|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 JÁ|-1|já|mě|mně,mi|mě|já|mně|mnou
 -
-tEN|-1|en|eho|omu?|oho?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|ú|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o?|eho|omu?|o?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?
+tEN|-1|en|eho|omu?|oho?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|ú|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o|eho|omu?|o?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?
 mŮJ|-1|uj|ého?|ému?|ého?|ůj?|ém?|ým?|ji,í?|ých?|ým?|je,é?|ji,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,á?|jí,é?|jí,é?|ji,ou?|je,á?|jí,é?|jí,ou?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,é?|ého?|ému?|je,é?|je,é?|ém?|ým?|je,á?|ých?|ým?|je,á?|je,á?|ých?|ými?
 SE|-1|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
 JÁ|-1|já?|mě?|mně,mi?|mňa|já?|mně?|mnou?
@@ -56,22 +63,30 @@ JÁ|JÁ
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 neBÝT|119|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
 jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
+dojeT|30|-1|t|du|deš|de|deme|dete|dou|ď|ďme|ďte|l|l|la|lo|li|ly|ly|la|t|t|ta|to|ti|ty|ty|ta
+pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
 -
 BÝT|247|-1|být?|su,sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 nEBÝT|119|-1|ebyt?|ésu|ési?|éní?|ézme?|ézte?|ésú?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|ebył?|ebył?|ebyła?|ebyło|ebyli?|ebyły?|ebyły?|ebyła?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edl?|jedus?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
+dojeT|30|-1|t?|du?|deš?|de?|deme?|dete?|dou?|ď?|ďme?|ďte?|ṵ|l?|la?|lo?|li?|ly?|ly?|la?|t?|t?|ta?|to?|ti?|ty?|ty?|ta?
+pomOCT|30|-1|oct?|ohu,(hovorově) pomůžu?|ůžeš?|ože|ůžeme?|ůžete?|ohou,(hovorově) pomůžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|oženi?|oženy?|oženy?|ožena?
 -
 BÝT|BÝT
 síct|séct||
 ne|n|neBÝT|nEBÝT
+doje|dojeT|dojeT
+pom|pomOCT|pomOCT
+nepom|pomOCT|pomOCT
 -
 pořád|furd
-hned|hnet
+hned|hnet,hned
 potom|potem
 ještě|ešce
 zase|zas
 jenom|enom
 tak|tag
+už|uš
 -
 přes||
 s|

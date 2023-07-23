@@ -1,23 +1,27 @@
-TW v0.1
+TW v1.0
 tBohdalov
 d06.04.2023 9:37:47
-ikniha České nářeční texty - Lamprecht, Arnošt str 139
-c#Zdroje\n-kniha České nářeční texty - Lamprecht, Arnošt; str 139\n-Základové dialektologie československé;Šembera, Alois Vojtěch\n
+ikniha České nářeční texty - Lamprecht, Arnošt str 139\n\nhrómski ďilo, to sem to zas jednou vivet! Bohdalov ZR
+c#Zdroje\n-kniha České nářeční texty - Lamprecht, Arnošt; str 139\n-Základové dialektologie československé;Šembera, Alois Vojtěch\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Bohdalov">sncj.ujc.cas.cz</a>
 g49.479789,15.874843
 q0
+oHorácko
+-
+-
+-
+-
+zase jsem to jednou udělal|to sem to zas jednou vivet
 -
 -
 -
 -
 -
 -
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
+městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 -
--
--
--
--
-||
+díl|městO|0|ďil|městO
 -
 -
 -
@@ -29,13 +33,18 @@ q0
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+vyvÉST|30|-1|ést|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 -
 BÝT|247|-1|být?|sem|jsi?|je?|sme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+vivÉST|30|-1|ést?|edu?|edeš?|ede?|edeme?|edete?|edou?|eď?|eďme?|eďte?|et|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 -
 BÝT|BÝT
+vyv|viv|vyvÉST|vivÉST
 -
 najednou
 večer|večir
+zase,zas|zas
+jednou
 -
 na|
 pro|

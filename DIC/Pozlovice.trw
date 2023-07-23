@@ -2,7 +2,7 @@ TW v1.0
 tPozlovice
 aGG
 d13.07.2023 11:06:23
-ipodaj bíłko, natřu vdolečky, aby sa błyščały Pozlovice ZL
+ipodaj bíłko, natřu vdolečky, aby sa błyščały Pozlovice ZL\nnedožíraj, lebo ťi nabřáňám Pozlovice ZL
 c#Zdroje dat\n-sncj.ujc.cas.cz
 g49.1299587,17.7691551
 q0
@@ -12,6 +12,8 @@ oSlovácko
 -
 -
 -
+nebo ti dám na zadek|lebo ťi nabřáňám
+dám ti na zadek|
 -
 -
 -
@@ -19,6 +21,7 @@ oSlovácko
 odej|odaj
 dej|daj
 aly|ały 
+rej|raj
 -
 -
 -
@@ -28,26 +31,37 @@ aly|ały
 -
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 -
 SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+TY|-1|ty?|t[1],tebe?|ťi,tobě?|t[1],tebe?|ty?|tobě?|tebou?
 -
 SE|SE
+t|tEN|tEN
+t||tY|TY
 -
 -
 -
 -
 podAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 natřÍT|30|-1|ít|u|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 -
 podAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 natřÍT|30|-1|ít?|u|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+dožírAT|15|-1|ovat?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|aj|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 -
 pod|podAT|podAT
 natř|natřÍT|natřÍT
 blýzkaly|błyščały 
+otrav|dožír|otravOVAT|dožírAT
+neotrav|nedožír|otravOVAT|dožírAT
 -
 -
 -
 aby
+
 -
 -

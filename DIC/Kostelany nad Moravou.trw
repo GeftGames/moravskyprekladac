@@ -3,7 +3,7 @@ fSpisovná čština
 tKostelany nad Moravou
 aGG
 d24.03.2023 7:52:23
-iuderíl sem sa do lokta, až ňe ruka bŕňí Kostelany nad Moravou UH\nlačnejma slinama potahovali spadlé čepi navrch Kostelany nad Moravou UH\nuťekáł, enom bzikot Kostelany nad Moravou UH – velmi rychle\nbezvjereg aňi nevi, gde má kostel Kostelany nad Moravou UH\ncukrovanej koláč Kostelany nad Moravou UH\nstiďí se, aš se červeňá Kostelany nad Moravou UH\nto nejsou liďi, to je dobitek Kostelany nad Moravou UH
+iuderíl sem sa do lokta, až ňe ruka bŕňí Kostelany nad Moravou UH\nlačnejma slinama potahovali spadlé čepi navrch Kostelany nad Moravou UH\nuťekáł, enom bzikot Kostelany nad Moravou UH – velmi rychle\nbezvjereg aňi nevi, gde má kostel Kostelany nad Moravou UH\ncukrovanej koláč Kostelany nad Moravou UH\nstiďí se, aš se červeňá Kostelany nad Moravou UH\nto nejsou liďi, to je dobitek Kostelany nad Moravou UH\nnedožejrej teho psa, uviďíš, že ťe kousne Kostelany nad Moravou UH
 c#Zdroje\n-https://sncj.ujc.cas.cz/\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str. 52
 lSlováčtina
 g49.0455699,17.4066918
@@ -27,6 +27,7 @@ z toho|s teho
 na nohy šel chlad,nohy se trásly zimou|v nohy zábło
 -
 se|sa
+kousne
 -
 brní|bŕňí
 kd|gd
@@ -54,13 +55,14 @@ snÍH|3|íh|ěhu|ěhu|íh|ěhu|ěhu|ěhem|ěhy|ěhů|ěhům|ěhy|ěhy|ězích|ě
 zedníK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 nohavicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+pES|0|es|sa|sovi,su|sa|se|sovi,su|sem|si,sové|sů|sům|sy|si,sové|sech|sy
 -
 stromEK|3|ek|ku?|ku?|ek|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
 dobytEK|2|ek?|ka?|ku?|ek?|ku?|ku?|kem?|-|-|-|-|-|-|-
 růžE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 roK|3|k|ku,ka?|ku?|k?|ku?|ku,ce?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
-metr|3|?|u?|u?|?|e,e?|u?|em?|y?|ou|ům?|y|y?|ech?|y?
+metr|3||u?|u?|?|e,e?|u?|em?|y?|ou|ům?|y|y?|ech?|y?
 stavení|0|?||?||?|?|m?|?|?|m?|?|?|ch?|mi?
 les|3|?|a|u?|?|e?|i|em?|y?|ů?|ům?|y|y?|ích?|y?
 městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a|a?|ech?|y?
@@ -70,6 +72,7 @@ snÍH|3|ich|ěhu?|ěhu?|íh?|ěhu?|ěhu?|ěhem?|ěhy?|ěhů?|ěhům?|ěhy?|ěhy?
 zedníK|2|k?|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci|ků?|kům?|ky?|ci?|cích?|ky?
 nohavicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ách|emi?
 krEV|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+pES|0|es?|sa|sovi,su?|sa?|se?|sovi,su?|sem?|si,sové?|sů?|sům?|sy?|si,sové?|sech?|sy?
 -
 ruka||0|ruka|
 nevěřící||0|bezvjereg|
@@ -100,6 +103,7 @@ výrostek|zedníK|0|vejrosci|zedníK
 kr|krEV|0|kr|krEV
 rýma||0|réma|
 ||0|hlt|
+p|pES|0|p|pES
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
@@ -124,7 +128,7 @@ CO|-1|co|čeho|čemu|co,-č|-|čem|čím
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
 já|-1|já?|mě,mne?|ňe|mě,mne?|já?|mně?|mnou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+tEN|-1|en?|eho|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|eho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
 SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
 -
@@ -150,6 +154,8 @@ dělAT|79|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|al
 zpívAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 smÁT_SE|7|-1|át_se|ěji se,směju se|ěješ se|ěje se|ějeme se|ějete se|ějí se,smějou se|ěj se|ějme se|ějte se|ál se|ál se|ála se|álo se|áli se|ály se|ály se|ála se
+otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+uvidĚT|28|-1|ět|ím|íš|í|íme|íte|í|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 -
 BÝT|151|-1|být|sem|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býł|byl?|byla?|było|byli?|byly?|byly?|byla?|bych?|bys?|by?|bychom?|byste?|by?
 uťekAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|áł|áł|ala?|alo?|ali?|aly?|aly?|ala?
@@ -165,6 +171,8 @@ zháňAT|15|-1|at|ím?|íš?|í?|íme?|íte?|í,shánějí?|ěj?|ějme?|ějte?|�
 zpívAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 uťekAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|áł|al?|ala?|alo?|ali?|aly?|aly?|ala?
 smÁT_SE|7|-1|ít?|ěji se,směju se?|ěješ se?|ěje se?|ějeme se?|ějete se?|ějí se,smějou se?|ěj se?|ějme se?|ějte se?|ál se?|ál se?|ála se?|álo se?|íli|ály se?|ály se?|ála se?
+dožejrAT|15|-1|ovat?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|ej|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+uvidĚT|28|-1|ět?|ím?|íš?|í?|íme?|íte?|í?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 -
 utíkAT|uťekAT
 BÝT|BÝT
@@ -185,6 +193,9 @@ spus|plaTIT|płaTIT
 utík|utíkAT|uťekAT
 zahřát|zahřejł||
 sm|smÁT_SE|smÁT_SE
+otrav|dožejr|otravOVAT|otravOVAT
+|kousne||
+uvid|uviď|uvidĚT|uvidĚT
 -
 až
 kde|gde
@@ -204,7 +215,7 @@ od|ot|
 v|
 -
 proto
-najednou
 ale
+že
 -
 -

@@ -1,0 +1,47 @@
+TW v1.0
+tDobrochov
+d17.07.2023 16:11:07
+idožiral ju, až dostal fack Dobrochov PV
+c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+g49.3855523,17.1064766
+q0
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+-
+pohádKA|1|ka?|ky?|ce?|kô|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+-
+fac|pohádKA|0|fac|pohádKA
+-
+-
+-
+-
+ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+-
+ONA|-1|ona?|jí,ní*?|jí,ní*?|ju,ni*?|-|ní*?|jí,ní*?
+-
+ONA|ONA
+-
+-
+-
+-
+otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+-
+dožirAT|15|-1|at?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|al|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+-
+otrav|dožir|otravOVAT|dožirAT
+škádlit|dožir||dožirAT
+-
+až
+-
+-
+-
+-

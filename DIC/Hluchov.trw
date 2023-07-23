@@ -1,0 +1,68 @@
+TW v1.0
+tHluchov
+aGG
+d17.07.2023 15:18:36
+i nedožiré, co já za to muž, že jazéček chce pit? Hluchov PV
+c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+g49.5419784,16.9960973
+q0
+-
+-
+-
+-
+-
+-
+-
+-
+-
+zýček|zéček
+íček|éček
+ýček|éček
+-
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+-
+stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
+-
+jazýč|stromEK|0|jazéč|stromEK
+-
+-
+-
+-
+CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+-
+CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+-
+CO|CO
+JÁ|JÁ
+t|tEN|tEN
+-
+-
+-
+-
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+chTÍT|15|-1|tít|ci,(nářečně) chcu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+pÍT|15|-1|ít|iju,piji|iješ|ije|ijeme|ijete|ijou,pijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+-
+mOCT|5|-1|oct?|užô|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+chTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|těl?|těl?|těla?|tělo?|těli?|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
+pÍT|15|-1|yt|iju,piji?|iješ?|ije?|ijeme?|ijete?|ijou,pijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+dožirAT|15|-1|ovat?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|é|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+-
+m|mOCT|mOCT
+ch|chTÍT|chTÍT
+p|pÍT|pÍT
+otrav|dožir|otravOVAT|dožirAT
+otrav|nedožir|otravOVAT|dožirAT
+-
+-
+i|ê|
+za|
+-
+že
+-
+-

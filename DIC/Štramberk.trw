@@ -1,7 +1,8 @@
-TW v0.1
+TW v1.0
 tŠtramberk
 d30.05.2023 10:04:40
-c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str. 294
+iokna se museły zavřyť, aby ťi kraťošy usnuli a ňedožyrali Štramberk NJ
+c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str. 294\n-https://sncj.ujc.cas.cz/
 g49.5914701,18.1168952
 q0
 -
@@ -12,6 +13,7 @@ q0
 a či|acy
 -
 -
+ne|ňe
 -
 ou|u
 á|a
@@ -23,23 +25,34 @@ ral|rał
 zal|zał
 ník|ňik
 dil|ďił
+ely|eły
+řít|řyť
+žírali|žyrali
 -
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 šaty|3|-|-|-|-|-|-|-|šaty|šatů|šatům|šaty|šaty|šatech|šaty
+okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
+kalhotY|1|-|-|-|-|-|-|-|y||ám|y|y|ách|ami
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
 -
 pohádKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 šaty|3|-|-|-|-|-|-|-|šaty?|šatů?|šatům?|šaty?|šaty?|šatech?|šatama
 robA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+okNO|0|no?|na?|nu?|no?|no?|nu,ně?|nem?|na|en?|nům?|na?|na?|nech?|ny?
+kalhotY|1|-|-|-|-|-|-|-|y?|?|ám?|y?|y?|ách?|ami?
+syn|2|?|a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 -
-manžel|rop|pohádKA|pohádKA
-muž|chłap||
-šaty|šaty
-žen|ženA|robA
+manžel|pohádKA|0|rop|pohádKA
+muž||0|chłap|
+|šaty|0||šaty
+žen|ženA|0|žen|robA
+ok|okNO|0|ok|okNO
+prccek||0|kraťoš,kraťošy|
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|u|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|u|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
 bohat|zelenÝ|zelenÝ
 -
@@ -48,7 +61,7 @@ SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 CO|-1|co|čeho|čemu|co,-č|-|čem|čím
 ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 mŮJ|-1|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|je,é|ých|ým|je,é|je,é|ých|ými|je,á|jí,é|jí,é|ji,ou|je,á|jí,é|jí,ou|je,é|ých|ým|je,é|je,é|ých|ými|je,é|ého|ému|je,é|je,é|ém|ým|je,á|ých|ým|je,á|je,á|ých|ými
-tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+tY|-1|y|[1],ebe|i,obě|[1],ebe|y|obě|ebou
 niC|-1|c|čeho|čemu|c|c|čem|čím
 -
 ON|-1|un|#ňeho|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím?,#ňim
@@ -56,7 +69,7 @@ SE|-1|-|sebe?|sy|se|-|sobě?|sebou?
 CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
 ONA|-1|ona?|jí,ní*?|jí,ní*?|ju|-|ní*?|#ňu
 mŮJ|-1|ůj?|ého?|ému?|ého?|ůj?|ém?|ým?|ji,í?|ých?|ým?|je,é?|ji,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|oja|jí,é?|jí,é?|ji,ou?|je,á?|jí,é?|jí,ou?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,é?|ého?|ému?|je,é?|je,é?|ém?|ým?|je,á?|ých?|ým?|je,á?|je,á?|ých?|ými?
-tY|-1|y|[1],ebe?|[1],obě?|[1],ebe?|y?|obě?|ebou?
+tY|-1|ty|t[1],tebe?|ťi,tobě?|t[1],tebe?|ty?|tobě?|tebou?
 niC|-1|c?|čeho?|čemu?|c?|c?|čem?|čím?
 -
 ON|ON
@@ -82,6 +95,10 @@ puSTIT|30|-1|stit|stím|stíš|stí|stíme|stíte|stí|sť|sťme|sťte|stil|stil
 bRÁT|111|-1|rát|eru|ereš|ere|ereme|erete|erou|er|erme|erte|ral|ral|rala|ralo|rali|raly|raly|rala|rán|rán|rána|ráno|ráni|rány|rány|rána|era|erouc|erouce|rav|ravši|ravše
 NÉST|31|-1|nést|nesu|neseš|nese|neseme|nesete|nesou|ponesu,budu nést|poneseš,budeš nést|ponese,bude nést|poneseme,budeme nést|ponesete,budete nést|ponesou,budou nést|nes|nesme|neste|nesl|nesl|nesla|neslo|nesli|nesly|nesly|nesla|nesen|nesen|nesena|neseno|neseni|neseny|neseny|nesena
 sebRAT|15|-1|rat|eru|ereš|ere|ereme|erete|erou|er|erme|erte|ral|ral|rala|ralo|rali|raly|raly|rala|rán|rán|rána|ráno|ráni|rány|rány|rána
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+zavřÍT|30|-1|ít|u|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+usnOUT|30|-1|out|u|eš|e|eme|ete|ou|i|ěme|ěte|ul|ul|ula|ulo|uli|uly|uly|ula|ut|ut|uta|uto|uti|uty|uty|uta
+otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 -
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by|bychom?|byste?|by?
 MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|mjeła|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
@@ -95,6 +112,10 @@ puSTIT|30|-1|stit?|stím?|stíš?|sťi|stíme?|stíte?|stí?|sť?|sťme?|sťte?|
 bRÁT|111|-1|rát?|eru?|ereš?|ere?|ereme?|erete?|erou?|er?|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráni?|rány?|rány?|rána?|era?|erouc?|erouce?|rav?|ravši?|ravše?
 NÉST|31|-1|nést?|nesu?|neseš?|nese?|neseme?|nesete?|nesou?|ponesu,budu nést?|poneseš,budeš nést?|ponese,bude nést?|poneseme,budeme nést?|ponesete,budete nést?|ponesou,budou nést?|nes?|nesme?|neste?|nesl?|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseni?|neseny?|neseny?|nesena?
 zebRAT|15|-1|rat?|eru?|ereš?|ere|ereme?|erete?|erou?|er?|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráni?|rány?|rány?|rána?
+musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|eły|ely,musily?|ela,musila?
+zavřYŤ|30|-1|yť|u?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+usnOUT|30|-1|out?|u?|eš?|e?|eme?|ete?|ou?|i?|ěme?|ěte?|ul?|ul?|ula?|ulo?|uli|uly?|uly?|ula?|ut?|ut?|uta?|uto?|uti?|uty?|uty?|uta?
+dožyrAT|15|-1|dožyrat?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ali|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 -
 BÝT|BÝT
 MÍT|MÍT
@@ -109,6 +130,11 @@ pu|puSTIT|puSTIT
 b|bRÁT|bRÁT
 NÉST|NÉST
 seb|zeb|sebRAT|zebRAT
+mus|musET|musET
+zavř|zavřÍT|zavřYŤ
+usn|usnOUT|usnOUT
+otrav|dožyr|otravOVAT|dožyrAT
+neotrav|ňedožyr|otravOVAT|dožyrAT
 -
 až|eš
 nejprve|najprem
@@ -126,6 +152,7 @@ na|
 ale
 jak
 či|cy
+aby
 -
 ať|aď
 -

@@ -1,7 +1,7 @@
 TW v1.0
 tBlatnička
 d25.06.2023 16:58:49
-is tebú młúvid a ze starú bránkú vŕzaď je jedno Blatnička HO – je to zbytečná řeč\ngalán z galánkú seďí pod bránkú a galánka płáče, že bi jedła kołáče Blatnička\n do Słafkova sa jede š čupka do čupka Blatnička HO\n\ndvúkolajka Blatnička HO
+is tebú młúvid a ze starú bránkú vŕzaď je jedno Blatnička HO – je to zbytečná řeč\ngalán z galánkú seďí pod bránkú a galánka płáče, že bi jedła kołáče Blatnička\n do Słafkova sa jede š čupka do čupka Blatnička HO\ndvúkolajka Blatnička HO\nďecka sa enom pořáď dožírajú Blatnička HO\nžadonit: ďecka furd dožírajú, abih ím kúpiła bombósú Blatnička HO
 c#Zdroje dat\n-sncj.ujc.cas.cz
 g48.9353811,17.5305455
 rSlovácko
@@ -15,6 +15,7 @@ a se starou|a ze starú
 je to zbytečná řeč s tebou mluvit|s tebú młúvid a ze starú bránkú vŕzaď je jedno
 milenec s milenkou|galán z galánkú
 z kopce do kopce|š čupka do čupka
+tkalcovský výrobek|kadlecké ďílo
 -
 -
 -
@@ -26,12 +27,16 @@ plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+dÍTĚ|0|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
+bonbón|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 stroj|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e|e?|ích?|i?
 plán|1|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 stromEK|3|ek?|ka|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 kopEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+ďÍTĚ|0|ítě?|ítěte?|ítěti?|ítě?|ítě?|ítěti?|ítětem?|ecka|ětí?|ětem?|ěti?|ěti?|ětech?|ětmi?
+bonbóN|3|?|u?|u?|?|e?|u?|em?|y?|sú|ům?|y?|y?|ech?|y?
 -
 aeroplán|plán|0|ajroplán|plán
 nápadník||0|galán|
@@ -39,18 +44,23 @@ koláč|stroj|0|kołáč|stroj
 slavkov||2|słafkov|
 kop|kopEC|0|čup|stromEK
 dvoukolej|pohádKA|0|dvúkolaj|pohádKA
+d|dÍTĚ|0|ď|ďÍTĚ
+bonbón|bonbón|0|bonbó|bonbóN
 -
 -
 -
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+ONI|-1|oni|jich,#nich|jim,#nim|je,#ně|-|#nich|jimi,#nimi
 -
 SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 tY|-1|y?|[1],ebe?|[1],obě?|[1],ebe?|y?|obě?|ebú
+ONI|-1|oni?|jich,nich*?|ím|je,ně*?|-|nich*?|jimi,nimi*?
 -
 SE|SE
 tY|tY|tY
+ONI|ONI
 -
 -
 -
@@ -60,12 +70,16 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 plAKAT|7|-1|akat|áču|áčeš|áče|áčeme|áčete|áčou|ač,plakej|ačme,plakejme|ačte,plakejte|akal|akal|akala|akalo|akali|akaly|akaly|akala
 jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojedeme|pojedete|pojedou|jeď|jeďme|jeďte|jel|jel|jela|jelo|jeli|jely|jely|jela|jet|jet|jeta|jeto|jeti|jety|jety|jeta
+otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
 -
 mluvIT|15|-1|id|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
 płAKAT|7|-1|akat?|áču?|áčeš?|áče|áčeme?|áčete?|áčou?|ač,plakej?|ačme,plakejme?|ačte,plakejte?|akal?|akal?|akala?|akalo?|akali?|akaly?|akaly?|akala?
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edl?|edl?|edła|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 JET|31|-1|jet?|jedu?|jedeš?|jede|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel?|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
+dožírAT|15|-1|at|uji?|uješ?|uje?|ujeme?|ujete?|ajú|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+kÚPIT|15|-1|úpit|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|úpiła|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
 -
 mluv|młúv|mluvIT|mluvIT
 BÝT|BÝT
@@ -73,12 +87,18 @@ vrzat|vŕzaď||
 pl|pł|plAKAT|plAKAT
 jÍ|jÍST|jÍST
 JET|JET
+škádlí|dožír||dožírAT
+otrav|dožír|otravOVAT|dožírAT
+k|kOUPIT|kÚPIT
 -
+jen,jenom|enom
+pořád|pořáď,furd
 -
 se|ze|
 pod|
 -
 a
 že
+abych|abyh
 -
 -

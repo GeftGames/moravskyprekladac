@@ -1,0 +1,69 @@
+TW v1.0
+tHnojice
+aGG
+d23.07.2023 16:51:15
+iburcovat, zprav. ze spaní: msela t pacholk burkaď aji třikrát Hnojice OL
+c#Zdroje dat\n-sncj.ujc.cas.cz
+g49.7161655,17.2227114
+q0
+-
+-
+-
+-
+-
+poli po sklizené řepě|burďiskô
+-
+-
+-
+-
+-
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+silnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kytaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
+-
+pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+silnicE|1|e?|e?|i?|i?|e?|i?|ó|e?|?|ím?|e?|e?|ích?|emi?
+městO|0|o?|a?|u?|o|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+žeNA|1|na|ny?|ně?|nu?|no?|ně?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+kytaRA|1|ra?|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
+-
+klouzač|pohádKA|0|čôndrovač|pohádKA
+||0|pacholek|
+silnic|silnicE|0|sêlňic|silnicE
+pšenic|silnicE|0|žêt|městO
+ostružin|ženA|0|bé|kytaRA
+-
+-
+-
+-
+-
+-
+-
+-
+-
+třikrát||
+-
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+burcOVAT|15|-1|ovat|uji,burcuju|uješ|uje|ujeme|ujete|ují,burcujou|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+-
+môsET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
+burkAT|15|-1|aď|uji,burcuju?|uješ?|uje?|ujeme?|ujete?|ují,burcujou?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bôde|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+MÍT|71|-1|mňeď|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+-
+mus|môs|musET|môsET
+burc|burcOVAT|burcOVAT
+BÝT|BÝT
+MÍT|MÍT
+-
+-
+za|
+-
+i|aji
+-
+-
+kač|babele

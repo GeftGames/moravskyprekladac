@@ -1,7 +1,7 @@
 TW v1.0
 tMezice-Náklo
 d08.06.2023 16:45:14
-iádijé, ať ťe ž rači neviďim Náklo OL (Mezice)
+iádijé, ať ťe ž rači neviďim Náklo OL (Mezice)\n\n\nPříkladem může svědčit zápis z obce Mezic u Litovle: „Léta\nPáně 1776 dne 9. máje Jiřík Babička kópil nějaké místečko od celé obce\nmezické na trávníku (tj. na občině, na pastvině ležící nejblíže obci) na 8\nsáhův zdéli a 5 šířky (přibližně 14 x 9 m), a to na budoucí časy při dobrém\nchování. Tak on je povinen dávať ročně platu 3 rénský, von i potomci jeho,\ntj. obci mezické.“ (Kniha zápisů obce Mezic u Litovle).\nhttps://www.nmvp.cz/file/40ad876bb94e69a7a49cbadcc507a0b3/6382/KUNZ-Ludv%C3%ADk.-Spole%C4%8Denstv%C3%AD-vesnice.-Ro%C5%BEnov-pod-Radho%C5%A1t%C4%9Bm.-Vala%C5%A1sk%C3%A9-muzeum-2007..pdf
 c#Zdroje dat\n-<a="https://www.naklo.cz/e_download.php?file=data/editor/70cs_1.pdf&original=Mezeck%C3%A9+slovni%C4%8Dek.pdf"></a>\n-sncj.ujc.cas.cz
 g49.6600185,17.1193348
 rnář=Mezêce
@@ -13,6 +13,8 @@ oHaná
 -
 -
 v tomto|f tymto
+v tom|f tym
+jako samotářka|jag abatêša
 -
 -
 ur|ôr
@@ -32,12 +34,14 @@ konEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 -
 konEC|3|ec?|ce?|ci?|ec?|ci?|cô|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ó|y?|?|ám?|y?|y?|ách?|ami?
 kost|1|?|i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 školA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+růžE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 -
 úvod||0|óvod|
 těžko||0|těško|
@@ -93,14 +97,16 @@ pšenice||0|žêto|
 lžič|pohádKA|0|žêčen|pohádKA
 život||0|žêvot|
 žně||0|žňa|
+hábit||0|v hábitô|
+samotář|pohádKA|0|abatêš|růžE
 -
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
-hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|||ká?|kých?|kým?|ká?|ká?|kých?|kéma|||ká?|ké?|ké?|kou?|ká?|ké?|kou?|||ké?|kých?|kým?|ké?|ké?|kých?|kéma|||ký?|kého?|kému?|kého?|ký?|kém?|kým?|||cí?|kéch|kým?|ké?|cí?|kých?|kéma|||ký?|kého?|kému?|ký?|ký?|kém?|kým?|||ké?|kých?|kým?|ké?|ké?|kých?|kéma||
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|éma|||á?|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|éma|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|éma|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|éma||
-jarní|-1|?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|?|?|?|?|?|?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|ho?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?||
+hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|-|-|ká?|kých?|kým?|ká?|ká?|kých?|kéma|-|-|ká?|ké?|ké?|kou?|ká?|ké?|kou?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kéma|-|-|ký?|kého?|kému?|kého?|ký?|kém?|kým?|-|-|cí?|kéch|kým?|ké?|cí?|kých?|kéma|-|-|ký?|kého?|kému?|ký?|ký?|kém?|kým?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kéma|-|-
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|éma|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|éma|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|éma|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|éma|-|-
+jarní|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
 -
 nejdelší|nédelši|jarní|jarní
 zásadní|zásadni|jarní|jarní
@@ -115,6 +121,7 @@ nadutý|nadôté||
 nejmenší|némenši||
 největší|névěči||
 nevychovaný|nevêcválané||
+čern|zelenÝ|zelenÝ
 -
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 tENHLE|-1|enhle|ohohle|omuhle|ohohle |-|omhle|ímhle|yhle|ěchhle|ěmhle|yhle|-|ěchhle|ěmihle|enhle|ohohle|omuhle|enhle|-|omhle|ímhle|yhle|ěchhle|ěmhle|yhle|-|ěchhle|ěmihle|ahle|éhle|éhle|uhle|-|éhle|ouhle|yhle|ěchhle|ěmhle|yhle|-|ěchhle|ěmihle|ohle|ohohle|omuhle|ohle|-|omhle|ímhle|ahle|ěchhle|ěmhle|ahle|-|ěchhle|ěmihle
@@ -129,7 +136,6 @@ MÁLOKDO|-1|málogdo|málokoho?|málokomu?|málokoho?|kdo?|málokom?|málokým?
 t|tEN|tEN
 t|tENHLE|tENHLE
 nÁ|nÁŠ|nÁŠ
-|
 MÁLOKDO|MÁLOKDO
 -
 -
@@ -149,6 +155,7 @@ pSÁT|15|-1|sát|íši,píšu|íšeš|íše|íšeme|íšete|íší,píšou|iš|i
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 viDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|z|zme|zte|děl|děl|děla|dělo|děli|děly|děly|děla|děn|děn|děna|děno|děni|děny|děny|děna
+vypadAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 -
 BÝT|247|-1|být?|sem|jsi?|je|jsme?|jste?|só|budu?|budeš?|bôde|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bêlo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bê|bychom?|byste?|bê
 ôrčIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|i?|eme?|ete?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|ené|eni?|eny?|eny?|ena?
@@ -164,6 +171,7 @@ pSÁT|15|-1|sat|íši,píšu?|íšeš?|íše?|íšeme?|íšete?|íší,píšou?|
 MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 mUCT|5|-1|uct|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 viDĚT|15|-1|dět?|ďim|díš?|dí?|díme?|díte?|dí?|z?|zme?|zte?|děl?|děl?|děla?|dělo?|děli?|děly?|děly?|děla?|děn?|děn?|děna?|děno?|děni?|děny?|děny?|děna?
+vypadAT|7|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 -
 BÝT|BÝT
 určI|určIT|určIT
@@ -183,6 +191,7 @@ vřískat|břéskat||
 m|mOCT|mUCT
 vi|viDĚT|viDĚT
 nevi|viDĚT|viDĚT
+vypad|vêpad|vypadAT|vypadAT
 -
 jen,jenom|jenom
 podle|podlevá
@@ -220,6 +229,7 @@ mezi|mezê|
 -
 ale
 byť,ačkoli,ač|bêť
+jako|jako,jag
 -
 ať
 -
