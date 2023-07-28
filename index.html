@@ -135,13 +135,13 @@
 
 					<!-- Current translation, only transtation page -->
 					<div class="settingSection">
-						<p style="display:inline-block;" id="textTranslator" class="settingHeader">Překladač</p>
+						<p style="display:inline-block;" id="textTranslator" class="settingHeader">Funkce</p>
 						<div class="sisetting">
 						
 
 						<!-- Copy current translation -->
-						<span id="textAbout"  onclick="ShowAboutPage()" class="settingLink">O překladači</span>
-						<span id="textMapper" onclick="ShowPageMapper()" class="settingLink" style="display:block">Generátor map</span>
+						
+						<span id="textMapper" onclick="ShowPageMapper()" class="settingLink" style="display:block" data-href="#mapper">Generátor map</span>
 					
 						<!--<p><a id="textAbout">Kontakt</a></p>-->
 						
@@ -283,22 +283,30 @@
 								<p id="textSaved">Uložené překlady</p>
 								<button id="textRemove" class="button" onclick="RemoveTrans()">Vymazat</button>
 							</div>
-
-							<!-- Nedělané funkce -->
-							<div class="settingItem" style="display:none">
-								<p id="textTesting">Testovací fce</p>
-
-								<label class="switch">
-									<input id="testingFunc" type="checkbox" onchange="ChangeTesting()">
-									<span class="slider round"></span>
-								</label>
+						</div>
+					</div>
+					
+					<!-- Translate options-->
+					<div class="settingSection">
+						<div class="sisetting">
+							<p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
+							
+							<span id="textAbout"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">O překladači</span>
+							<!--<span id="textNews"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">Novinky</span>-->
+							<!-- report -->
+							<div class="settingItem">
+								<p>
+									<span id="textReport">Nahlásit&nbsp;problém</span>
+									<span class="moreinfo" id="textMoreReport">nebo návrh ke zlepšení</span>
+								</p>
+								<a  class="button" href="https://github.com/GeftGames/moravskyprekladac/issues">Nahlásit</a>
 							</div>
 						</div>
 					</div>
 
 					<!-- Poznámka -->
 					<div class="settingSection">
-						<p style="display:inline-block;" id="textPCSaving" class="settingHeader">Ukládání do počítače</p>
+						<p style="display:inline-block" id="textPCSaving" class="settingHeader">Ukládání do počítače</p>
 						<p style="display:inline-block" id="textCookies">Tato stránka nepoužívá cookies. K&nbsp;ukládání do&nbsp;nastavení se používá localStorage. Žádné informace se nesdílí s dalšími suběkty.</p>
 					</div>
 				</div>
@@ -335,11 +343,9 @@
 							<!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->				
 								<p id="czech" style="display: flex">Češtiny</p>
 							</div>
-							<div style="display: flex">
-								<p id="to" style="display: inline">do</p>
-								<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();">
-								
-								</select>
+							<div style="display: flex" id="rowSelectTo">
+								<p id="to" style="display: inline;display: flex;align-items: center;">do</p>
+								<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
 							</div>
 							<div>
 								<button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
@@ -374,9 +380,9 @@
 					<div id="transarea" style="justify-content: center;display: flex">
 						<div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">							
 							<span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu tohoto překladu nebude nejlepší, z důvodu nedostatku dat.</span>
-							<div style="display: flex;align-items: stretch;justify-content: space-evenly;">
+							<div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
 								<!-- Source translated text -->
-								<div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;">
+								<div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
 									<textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
 									<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox();">
 										<svg id="butclose" class="ib" viewBox="0 0 24 24">
@@ -400,7 +406,7 @@
 								</div>
 
 								<!-- Translated text out -->
-								<div id="rte" style="display: flex;flex-direction: column;  min-height:50px;margin-bottom: 0px;margin-top: 0px;width: -webkit-fill-available;">
+								<div id="rte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;">
 									<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
 										<p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
 									</div>
@@ -417,8 +423,8 @@
 
 						<!-- Slovník-->
 						<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
-							<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;">
-								<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available; margin-bottom: 1cm;">
+							<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
+								<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;width: -moz-available; ">
 									<textarea oninput="GetDic()" spellcheck="true" id="dicInput" autofocus placeholder="Zadejte slovo"></textarea>
 									<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox();">
 										<svg id="butclose" class="ib" viewBox="0 0 24 24">
@@ -428,7 +434,7 @@
 								</div>
 
 								<!-- Translated text out -->
-								<div id="dicRte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;margin-top: 0px">
+								<div id="dicRte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;margin-top: 0px">
 									<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
 										<p id="dicOut" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
 									</div>
@@ -560,7 +566,7 @@
 									<div class="mapperNavrh" onclick="navrhClick('vždy')">VŽDY</div>									
 									<div class="mapperNavrh" onclick="navrhClick('taky')">TAKY</div>
 									<div class="mapperNavrh" onclick="navrhClick('kde')">KDE</div>
-									<div class="mapperNavrh" onclick="navrhClick('večer')">VEČÉR</div>
+									<div class="mapperNavrh" onclick="navrhClick('večer')">VEČER</div>
 									<div class="mapperNavrh" onclick="navrhClick('dolů')">DOLŮ</div>
 								</div>
 								<p>Předložky</p>
@@ -600,12 +606,14 @@
 								<p><input type="checkbox" checked id="mapperOnlyGood" onclick="mapper_OnlyGood()">Pouze kvalitní překlady</p>
 								<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>
 								<p style="margin-bottom: 1cm;">Mapa nemusí mít přesné hranice, může obsahovat chyby</p>
+								<span id="noteMapperNotFound" style="font-size:6mm;color: var(--ColorOrig);">Nenalezen žádný záznam, nelze vytvořit mapa.</span>
 							</div>
-							<div style="max-width: 100%; overflow: scroll; max-height: 100vh; width: fit-content;">
-							<div id="mapperOuter" style="width: -webkit-fill-available;   height: -webkit-fill-available;border:none">
-								<canvas id="mapperCanvas" style="/*width:400px; height: 400px*/height: -webkit-fill-available;"></canvas>
+
+							<div id="mapperAreaMap" style="max-width: 100%; overflow: scroll; max-height: 100vh; width: fit-content;">
+								<div id="mapperOuter" style="width: -webkit-fill-available;   height: -webkit-fill-available;border:none">
+									<canvas id="mapperCanvas" style="/*width:400px; height: 400px*/height: -webkit-fill-available;"></canvas>
+								</div>
 							</div>
-						</div>
 						</div>
 					</div>
 				</div>			
@@ -624,10 +632,10 @@
 					<p id="textItsNotBest">Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.</p>
 					<p id="textNoMoney">Projekt není finacován. Reklamy zde umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněn od 2023, doufáme, že jeho vývoj bude pokračovat.</p>
 
-					<div><p class="aboutPageHeader">K dělení Moravy</p></div>
-					<p>Moravu dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
+					<div><p class="aboutPageHeader">K dělení na regiony</p></div>
+					<p>Moravu a Slezsko dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
 					<div style="display: flex; justify-content: center">
-					<img src="data/images/morava s popisky.svg" style="max-width: 16cm">
+					<img src="data/images/morava s popisky.svg" style="max-width: 16cm;width: -webkit-fill-available;">
 					</div>
 					
 					<div><p class="aboutPageHeader" id="comment">Poznámka</p></div>
@@ -637,7 +645,7 @@
 					<p id="textStillWorking">Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači pracujeme, ještě není úplně hotový.</p>
 					<p>E-mail: <a href="mailto:geftgames@gmail.com">geftgames@gmail.com</a></p>
 					<p>Další odkazy: <a href="https://github.com/GeftGames/moravskyprekladac">Github</a></p>
-					<p>Licence: <a href="Licence.md">MIT</a></p>
+					<p>Licence: <a href="LICENSE.md">MIT</a></p>
 
 					<div><p class="aboutPageHeader" id="forGoodComputerUsers">Komentář počítačově zkušenějším</p></div>
 					<p id="textWhatWeUse">Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.</p>
@@ -666,10 +674,10 @@
 					</div>
 					<div><p class="mapPageHeader" id="mapPlace">Výběr místa</p></div>
 					<div>
-						<div id="mapSelector" style="position: fixed; width: -webkit-fill-available; overflow: hidden;height: -webkit-fill-available;">
-							<div id="map" style="display: flex;transform-origin: left 0px; height: -webkit-fill-available;">
-								<div id="mapZoom" style="width: -webkit-fill-available;height: -webkit-fill-available;">
-									<canvas id="mapSelectLang" style="width: -webkit-fill-available;height: -webkit-fill-available;"></canvas>		  
+						<div id="mapSelector" style="position: fixed; width: 100%; overflow: hidden;height: 100%;">
+							<div id="map" style="display: flex;transform-origin: left 0px; height: 100%;">
+								<div id="mapZoom" style="width: 100%;height: 100%;">
+									<canvas id="mapSelectLang" style="width: 100%;height: 100%;"></canvas>		  
 								</div>
 							</div>
 						</div>
@@ -709,8 +717,8 @@
 			</div>	
 			<div id="pageLangD" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
 				<div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="CloseLangD()" class="pageLangD" id="closeLangD">
-						<div rel="nofollow" onclick="CloseLangD()">
+					<div onclick="ClosePageLangD()" class="pageFromDownClose" id="closeLangD">
+						<div rel="nofollow" onclick="ClosePageLangD()">
 							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
