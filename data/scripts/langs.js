@@ -30,8 +30,8 @@ langs["cs"] = {
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	BetaTranslate : "Testovací funkce",
-	MoreInfoBetaTranslate : "Nehotové překlady, ...",
+	UnfinishedTranslate : "Rané překlady",
+	MoreInfoBetaTranslate : "Tj. mají málo dat",
 
 	TranslateOptions : "Nastavení překladu",
 	AutoTranslate : "Automatický překlad",
@@ -188,7 +188,7 @@ langs["cs"] = {
 		MoravštinaC: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
@@ -256,7 +256,7 @@ langs["slz"] = {
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	BetaTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Testovací funkce",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions : "Nastavení překladu",
@@ -394,7 +394,7 @@ langs["slz"] = {
 		MoravštinaC: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
@@ -462,7 +462,7 @@ langs["en"] = {
 	MoreInfo 	: "Extended information",
 	MoreInfoDev : "For developers",
 
-	BetaTranslate : "Beta functions",
+	UnfinishedTranslate : "Beta functions",
 	MoreInfoBetaTranslate : "Unfinished translations, ...",
 
 	TranslateOptions : "Options of translating",
@@ -669,7 +669,7 @@ langs["jp"] = {
 	MoreInfo 	: "拡張情報",
 	MoreInfoDev : "開発者向け",
 
-	BetaTranslate : "テスト機能",
+	UnfinishedTranslate : "テスト機能",
 	MoreInfoBetaTranslate : "未完成の翻訳、...",
 
 	TranslateOptions : "翻訳設定",
@@ -875,7 +875,7 @@ langs["mor"] = {
 	MoreInfo 	: "Rozšírené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	BetaTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Testovací funkce",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions: "Nastavení překladu",
@@ -1012,7 +1012,7 @@ langs["mor"] = {
 		Moravština: "Moravšina C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-český",
 
 	// About
@@ -1079,7 +1079,7 @@ langs["pl"] = {
 	MoreInfo 	: "Informacje rozszerzone",
 	MoreInfoDev : "Dla programistów",
 
-	BetaTranslate : "Funkcja testowa",
+	UnfinishedTranslate : "Funkcja testowa",
 	MoreInfoBetaTranslate : "Niedokończone tłumaczenia,...",
 
 	TranslateOptions: "Ustawienia tłumaczenia",
@@ -1218,7 +1218,7 @@ langs["pl"] = {
 		Moravština: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
@@ -1285,7 +1285,7 @@ langs["sk"] = {
 	MoreInfo 	: "Rozšírené informácie",
 	MoreInfoDev : "Pre vývojárov",
 
-	BetaTranslate : "Testovacie funkcie",
+	UnfinishedTranslate : "Testovacie funkcie",
 	MoreInfoBetaTranslate : "Nehotové preklady, ...",
 
 	TranslateOptions: "Nastavenie prekladu",
@@ -1491,7 +1491,7 @@ langs["de"] = {
 	MoreInfo : "Erweiterte Informationen",
 	MoreInfoDev : "Für Entwickler",
 
-	BetaTranslate : "Testfunktion",
+	UnfinishedTranslate : "Testfunktion",
 	MoreInfoBetaTranslate : "Unfertige Übersetzungen, ...",
 
 	TranslateOptions: "Übersetzungseinstellungen",
@@ -1697,7 +1697,7 @@ langs["hanak"] = {
 	MoreInfo 	: "Rozšiřeny info",
 	MoreInfoDev : "Pro vévojáře",
 
-	BetaTranslate : "Testovaci funkce",
+	UnfinishedTranslate : "Testovaci funkce",
 	MoreInfoBetaTranslate : "Nehotovy překladê, ...",
 
 	TranslateOptions : "Nastaveňi překladô",
@@ -1836,7 +1836,7 @@ langs["hanak"] = {
 		Moravština: "Moravštěna C, převaha",
 
 	// Header
-	TranslatorCM : "Moravské Překladač",
+	TranslatorCM : "Moravské překladač",
 	TranslatorMC : "Překladač Moravsko-České",
 
 	// About
@@ -1903,7 +1903,7 @@ langs["valach"] = {
 	MoreInfo : "Povjecéj informací",
 	MoreInfoDev : "Pro vývojáře",
 
-	BetaTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Testovací funkce",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions : "Nastavení překladu",
@@ -2042,7 +2042,7 @@ langs["valach"] = {
 		MoravštinaC: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About
@@ -2109,7 +2109,7 @@ langs["mor_radikalni"] = {
 	MoreInfo 	: "Rozšírené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	BetaTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Testovací funkce",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions: "Nastaveňí překladu",
@@ -2245,7 +2245,7 @@ langs["mor_radikalni"] = {
 		Moravština: "Moravšina C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-český",
 
 	// About
@@ -2312,8 +2312,8 @@ langs["ces"] = {
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	BetaTranslate : "Testovací funkce",
-	MoreInfoBetaTranslate : "Nehotové překlady, ...",
+	UnfinishedTranslate : "Rané překlady",
+	MoreInfoBetaTranslate : "Obsahují málo dat",
 
 	TranslateOptions : "Nastavení překladu",
 	AutoTranslate : "Automatický překlad",
@@ -2322,7 +2322,7 @@ langs["ces"] = {
 	Remove : "Vymazat",
 
 	SavingToPC : "Ukládání do počítače",
-	CookiesMessage : "Tenhle web neužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.",
+	CookiesMessage : "Tenhle web neužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.",
 	
 	// Saved translaion
 	SavedTranslations : "Uložené překlady",
@@ -2450,7 +2450,7 @@ langs["ces"] = {
 		MoravštinaC: "Moravština C, převaha",
 
 	// Header
-	TranslatorCM : "Moravský Překladač",
+	TranslatorCM : "Moravský překladač",
 	TranslatorMC : "Překladač Moravsko-Český",
 
 	// About

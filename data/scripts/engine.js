@@ -815,7 +815,7 @@ function ChangeDic() {
 	if (selTo.value!="*own*")
    // localStorage.setItem('trFrom', selFrom.value);
     localStorage.setItem('trTo', selTo.value);
-
+location.hash.to=selTo.value;
     //let n;
     //let headername = document.getElementById('headername');
 
@@ -890,6 +890,9 @@ function SwitchHide(e) {
 }
 
 function ShowAboutPage(){
+	location.hash="about";
+//	e.preventDefault();
+
 	document.getElementById("aboutPage").style.display="block";
 	document.getElementById("aboutPage").style.opacity="1";
 	document.getElementById("aboutPage").style.position="absolute";
@@ -903,6 +906,9 @@ function ShowAboutPage(){
 	}
 }
 function CloseAboutPage(){
+	location.hash="";
+//	e.preventDefault();
+
 	document.getElementById("aboutPage").style.opacity="0";
 	document.getElementById("aboutPage").style.top="500px";
 	document.getElementById("aboutPage").style.position="fixed";
@@ -919,6 +925,10 @@ function CloseAboutPage(){
 	}, 300);
 }
 function ShowPageMapper(){
+	location.hash="mapper";
+	//location.hash = "mapper";
+	//e.preventDefault();
+
 	document.getElementById("mapperPage").style.display="block";
 	document.getElementById("mapperPage").style.opacity="1";
 	document.getElementById("mapperPage").style.position="absolute";
@@ -932,6 +942,9 @@ function ShowPageMapper(){
 	}
 }
 function ClosePageMapper(){
+	location.hash="";
+//	e.preventDefault();
+
 	document.getElementById("mapperPage").style.opacity="0";
 	document.getElementById("mapperPage").style.top="500px";
 	document.getElementById("mapperPage").style.position="fixed";
@@ -976,10 +989,13 @@ function ClosePageOwnLang(){
 	}, 300);
 }
 function ShowPageLangD(element){
+	document.body.style.overflow="clip";
+	window.scrollTo({ top: 0});
+
 	if (typeof element == undefined) return;
 	const pagelangDFill = document.getElementById("pagelangDFill");
 	pagelangDFill.innerHTML="";
-	pagelangDFill.appendChild(element)
+	pagelangDFill.appendChild(element);
 
 	document.getElementById("pageLangD").style.display="block";
 	document.getElementById("pageLangD").style.opacity="1";
@@ -993,6 +1009,7 @@ function ShowPageLangD(element){
 	}
 }
 function ClosePageLangD(){
+	document.body.style.overflow="unset";
 	document.getElementById("pageLangD").style.opacity="0";
 	document.getElementById("pageLangD").style.top="500px";
 	document.getElementById("pageLangD").style.position="fixed";
@@ -1005,7 +1022,7 @@ function ClosePageLangD(){
 		document.getElementById('nav').style.opacity='0.1';
 	}
 	setTimeout(()=>{ 
-		document.getElementById("pageOwnLang").style.display="none";
+		document.getElementById("pageLangD").style.display="none";
 	}, 300);
 }
 function ShowPageInfoLang(){
@@ -1149,7 +1166,7 @@ function SetLanguage() {
 	document.getElementById("tabTxtFiles").innerText = langFile.TextFiles;
 	document.getElementById("tabSubs").innerText = langFile.SubtitlesFiles;
 	document.getElementById("textSettingsTranstale").innerText = langFile.TranslateOptions;
-	document.getElementById("textbetaFunctions").innerText = langFile.BetaTranslate;
+	document.getElementById("textbetaFunctions").innerText = langFile.UnfinishedTranslate;
 	document.getElementById("textSettings").innerText = langFile.Settings;
 	document.getElementById("closeAbout").innerText = langFile.Close;
 	document.getElementById("aboutTranslator").innerText = langFile.About;
@@ -1195,22 +1212,26 @@ function SetLanguage() {
 }
 
 function TabSelect(enableElement, tab) {
-	if (tab==tabText){
+	if (tab==tabText) {
+		location.hash="text";
 		tabText.classList.add("tabSelected");
 		tabSubs.classList.remove("tabSelected");
 		tabDic.classList.remove("tabSelected");
 		tabTxtFiles.classList.remove("tabSelected");
 	}else if (tab==tabSubs) {
+		location.hash="subs";
 		tabText.classList.remove("tabSelected");
 		tabSubs.classList.add("tabSelected");
 		tabDic.classList.remove("tabSelected");
 		tabTxtFiles.classList.remove("tabSelected");
    	}else if (tab==tabTxtFiles){
+		location.hash="files";
 		tabText.classList.remove("tabSelected");
 		tabDic.classList.remove("tabSelected");
 		tabSubs.classList.remove("tabSelected");
 		tabTxtFiles.classList.add("tabSelected");
 	}else if (tab==tabDic){
+		location.hash="dic";
 		tabText.classList.remove("tabSelected");
 		tabTxtFiles.classList.remove("tabSelected");
 		tabSubs.classList.remove("tabSelected");
@@ -1381,7 +1402,7 @@ function hideNav() {
 function Load() {
 	//geolocation();
     /* document.documentElement.style.visibility="unset";
-    Reload hash - need twice refresh for new page without cache */
+    Reload hash - need twice refresh for new page without cacheTabSelect */
 	//if (window.location=="https://geftgames.github.io/moravskyprekladac/") window.location="https://moravskyprekladac.pages.dev/"
     if (window.location.hash == "#reload") {
         console.log("INFO|Reloading...");
@@ -1396,7 +1417,20 @@ function Load() {
         window.location = hashless_url;
         return;
     }
-
+	//console.log(location.hash);
+	if (location.hash=="#about") {
+		ShowAboutPage()
+	} else if (location.hash=="#mapper") {
+		ShowPageMapper()
+	} else if (location.hash=="#dic") {
+		TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
+	} else if (location.hash=="#files") {
+		TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));
+	} else if (location.hash=="#subs") {
+		TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
+	} else if (location.hash=="#text") {
+		TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
+	}
     /*
     	if ('serviceWorker' in navigator) {
     		window.addEventListener('load', function () {
@@ -1411,6 +1445,13 @@ function Load() {
     		});
     	}
     */
+
+	document.getElementById("mapperInput").addEventListener("keydown", (e) => {
+		if(e.key === 'Enter') {
+			mapper_init();        
+		}
+	});
+
     // Load setting
     let ztheme;
     try {
@@ -1661,7 +1702,7 @@ function Load() {
     document.getElementById('lang').value = language;
     document.getElementById('manual').checked = autoTranslate;
     document.getElementById('styleOutput').checked = styleOutput;
-    document.getElementById('testingFunc').checked = testingFunc;
+   /* document.getElementById('testingFunc').checked = testingFunc;*/
     document.getElementById('dev').checked = dev;
 
 
@@ -5087,3 +5128,98 @@ function loadLang() {
 		} else alert("Načti soubor přes horní tlačítko - Vybrat soubor");
 	}			
 }
+
+function HashSet(varibleName, value) {
+	if (typeof value == "undefined") {
+		HashDelete(varibleName);
+	} else if (typeof value == "boolean") {
+		if (!value) HashDelete(varibleName);
+	} else if (value="") HashDelete(varibleName);
+
+	// if exist overwrite
+	let overwrite=false;
+	let varsRaw=location.hash.split('&');
+	let vars=[];
+
+	for (let i=0; i<varsRaw.length; i++) {
+		if (varsRaw[i].includes('=')) {
+			vars[i] = varsRaw[i].split("=");
+			if (vars[i][0]==varibleName) {
+				vars[i][0]=value;
+				overwrite=true;
+			}
+		// bool types
+		} else if (varsRaw[i]==varibleName) {
+			vars[i]=varibleName;
+			overwrite=true;
+		}
+	}
+	if (overwrite) {
+		let str="";
+		for (let i=0; i<vars.length; i++) {
+			if (i!=0)str+="&";
+			if (Array.isArray(vars[i])) {
+				str+=vars[i][0]+"="+vars[i][1];
+			} else {
+				str+=vars[i];
+			}			
+		}
+		return;
+	}
+
+	// new attach
+	let set="";
+	if (location.hash!="" && location.hash!="#") set+="&";
+
+	if (typeof value == "boolean") set+=varibleName;
+	else set+=varibleName+"="+value;
+	location.hash+=set;
+}
+
+function HashDelete(varibleName) {
+	// if exist overwrite
+	let vars=location.hash.split('&');
+	for (let i=0; i<vars.length; i++) {
+		if (vars[i].includes('=')) {
+			vars[i]=vars[i].split("=");
+			if (vars[i][0]==varibleName) {
+				if (value=="") vars[i][1]="";
+				vars[i][0]=value;
+				overwrite=true;
+			}
+		// bool types
+		} else if (vars[i]==varibleName) {
+			if (!value) vars[i]="";
+			overwrite=true;
+		}
+	}
+	if (overwrite) {
+		let str="";
+		for (let i=0; i<vars.length; i++) {
+			if (i!=0)str+="&";
+			if (Array.isArray(vars[i])) {
+				if (vars[i][0]!="") {
+					str+=vars[i][0]+"="+vars[i][1];
+				}
+			} else {
+				//if (i==0)str+="&";
+				if (vars[i]!="") str+="&"+vars[i];
+			}			
+		}
+		return;
+	}
+}
+
+function HashGet(varibleName) {
+	for (const hashpart in location.hash.split('&')) {
+		// values types
+		if (hashpart.includes('=')){
+			let parts=hashpart.split("=");
+			if (parts[0]==varibleName) return parts[0];
+
+		// bool types
+		} else if (hashpart==varibleName) return true;
+	}
+	return;
+}
+
