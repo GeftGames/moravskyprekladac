@@ -66,7 +66,7 @@ class ItemSentencePart {
 class ItemPatternNoun {
 	constructor() {
 		this.Name = "";
-		this.Gender = -1;
+		this.Gender = "";
 		this.Shapes = [];
 	}
 
@@ -102,29 +102,65 @@ class ItemPatternNoun {
 		return item;
 	}
 
-	GetTable() {
+	GetTable(starting) {
 		let table=document.createElement("table");
+		table.className="tableDic";
+		let caption=document.createElement("caption");
+		caption.innerText="Podstatné jméno";
+		table.appendChild(caption);
+
 		let tbody=document.createElement("tbody");
-		tbody.appendChild(document.createTextNode("Podstatné jméno"));
+	//	tbody.appendChild(document.createTextNode("Podstatné jméno"));
+		
+		{
+			let trh=document.createElement("tr");
+			let tdph=document.createElement("td");
+			tdph.innerText="pád";
+			trh.appendChild(tdph);
+
+			let tdnh=document.createElement("td");
+			tdnh.innerText="Jednotné";
+			trh.appendChild(tdnh);
+			
+			let tdmh=document.createElement("td");
+			tdmh.innerText="Množné";
+			trh.appendChild(tdmh);
+
+			tbody.appendChild(trh);
+		}
 
 		for (let c=0; c<14; c+=2) {	
 			let tr=document.createElement("tr");
 
+			let tdp=document.createElement("td");
+			tdp.innerText=c/2+1;
+			tr.appendChild(tdp);
+
 			let td1=document.createElement("td");
-			td1.innerText=Shapes[c];
-			tr.appenChild(td1);
+			let endingS="";
+			if (Array.isArray(this.Shapes[c])) {
+				endingS=this.Shapes[c].join(", ");
+				td1.innerText=starting+endingS;
+			} else {
+				if (this.Shapes[c]=="?")td1.innerText="?";
+				else td1.innerText=starting+this.Shapes[c];
+			}
+			tr.appendChild(td1);
 
 			let td2=document.createElement("td");
-			td2.innerText=Shapes[c+1];
-			tr.appenChild(td2);
+			let endingP="";
+			if (Array.isArray(this.Shapes[c+1])) {
+				endingP=this.Shapes[c+1].join(", ");
+				td2.innerText=starting+this.Shapes[c+1];
+			} else {
+				if (this.Shapes[c+1]=="?") td2.innerText="?";
+				else td2.innerText=starting+this.Shapes[c+1];
+			}
+			tr.appendChild(td2);
 
-			tbody.appenChild(tr);
+			tbody.appendChild(tr);
 		}
 		table.appendChild(tbody);
-
-		let caption=document.createElement("caption");
-		caption.innerText="Podstatné jméno";
-		table.appendChild(caption);
 
 		return table;
 	}
@@ -271,15 +307,26 @@ class ItemNoun {
 
 	GetDicForm() {
 		let to=this.To[0];
-		
-		if (to[1].Shapes[0]=="?") return null;
 
+		let body=to[0], pattern=to[1];
+		if (typeof(pattern) == "undefined") return null;
+
+		let str_form="", str_to="";
+		
+		if (pattern.Shapes[0]!="?") {
+			str_form=this.From+this.PatternFrom.Shapes[0];
+			str_to=body+pattern.Shapes[0];
+		} else if (pattern.Shapes[7]!="?") {
+			str_form=this.From+this.PatternFrom.Shapes[7];
+			str_to=body+pattern.Shapes[7];
+		} else return null;
+			
+		// Create p snap
 		let p = document.createElement("p");
 		let f = document.createElement("span");
-		let textFrom=this.From+this.PatternFrom[0];
-		if (this.UppercaseType==1) f.innerText=textFrom.toUpperCase();
-		else if (this.UppercaseType==2) f.innerText=textFrom[0].toUpperCase()+textFrom.substring(1);
-		else f.innerText=textFrom;
+		if (this.UppercaseType==1) f.innerText=str_form.toUpperCase();
+		else if (this.UppercaseType==2) f.innerText=str_form[0].toUpperCase()+str_form.substring(1);
+		else f.innerText=str_form;
 		p.appendChild(f);
 
 		let e = document.createElement("span");
@@ -287,20 +334,24 @@ class ItemNoun {
 		p.appendChild(e);
 
 		let t = document.createElement("span");
-		t.innerText=to[0]+to[1][0];
+		t.innerText=str_to;
 		t.addEventListener("click", () => {
-			ShowPageLangD(t.GetTable());
+			ShowPageLangD(pattern.GetTable(body));
 		});
-		t.class="dicCustom";
+		t.className="dicCustom";
 		p.appendChild(t);
 
 		let r = document.createElement("span");
-		r.innerText=" (podst., rod "+to[1].Gender+")";
+		let info=" (podst.";
+		if (pattern.Gender=="zen") info+=", rod žen.";
+		else if (pattern.Gender=="str") info+=", rod stř.";
+		else if (pattern.Gender=="muz ziv") info+=", rod muž. ž.";
+		else if (pattern.Gender=="muz neziv") info+=", rod muž. n.";
+		r.innerText=info+")";
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 
-	//	if (this.PatternTo.Shapes[0]=="?") return null;	
-		return [this.From+this.PatternFrom[0], to[0]+to[1][0], "", p];
+		return [str_form, str_to, "", p];
 	}
 	
 	/*GetWordTo(number, fall, gender) {
@@ -430,9 +481,9 @@ class ItemNoun {
 		return null;
 	}
 
-	GetTable() {
-		this.PatternTo.GetTable(this.To);
-	}
+	/*GetTable(pattern, starting) {
+		return pattern.GetTable(this.To);
+	}*/
 }
 
 class ItemSimpleWord {
@@ -492,6 +543,7 @@ class ItemSimpleWord {
 		if (name!=""){
 			let r = document.createElement("span");
 			r.innerText="("+name+")";
+			r.className="dicMoreInfo";
 			p.appendChild(r);
 		}
 		return [this.input, out, "", p];
@@ -769,11 +821,12 @@ class ItemPreposition {
 		p.appendChild(t);
 
 		let r = document.createElement("span");
-		t.innerText="(předl.";
+		r.innerText=" (předl.";
 		if (this.fall.length>0) {
 			t.innerText+=", pád: "+this.fall.join(", ");
 		}
-		t.innerText+=")";
+		r.innerText+=")";
+		r.className="dicMoreInfo";
 		p.appendChild(r);
 
 		if (this.fall.length>0) return [this.input, this.output.join(', '), langFile.Fall+": "+this.fall.join(', '), p];
@@ -1745,6 +1798,8 @@ class ItemPronoun{
 	}
 
 	GetDicForm(name) {		
+		if (this.PatternTo.Shapes[0]=="-") return null;
+		if (this.PatternFrom.Shapes[0]=="?") return null;
 		if (this.PatternTo.Shapes[0]=="?") return null;
 
 		let p = document.createElement("p");
@@ -1765,9 +1820,13 @@ class ItemPronoun{
 				ShowPageLangD(t.GetTable());
 			});
 			t.class="dicCustom";
-		}
+		}		
 
-		if (this.PatternTo.Shapes[0]=="?") return null;
+		let r = document.createElement("span");
+		r.innerText=" (zájm.)";
+		r.className="dicMoreInfo";
+		p.appendChild(r);
+
 		return [this.From+this.PatternFrom.Shapes[0], this.To+this.PatternTo.Shapes[0], name, p];
 	}
 	
@@ -1821,7 +1880,9 @@ class ItemPatternAdjective{
 				let arr=[];
 				let len=18;
 				for (let i=0; i<len; i++) {
-					arr.push(raw[i+pos]);
+					let str=raw[i+pos];
+					if (str.includes('?')) str="?";
+					arr.push(str);
 				}
 				pos+=len;
 				return arr;
@@ -2173,13 +2234,24 @@ class ItemAdjective{
 		return null;
 	}
 
-	GetDicForm(name) {		
-		if (typeof this.PatternTo != undefined) return null;
-		if (this.PatternTo.Shapes[0]=="?") return null;
+	GetDicForm(name) {
+		if (typeof this.PatternTo == undefined) return null;
+		if (this.PatternTo.Shapes==undefined) return null;
+		if (this.PatternTo.Shapes[0]=="-") return null;
+
+		let from="", to="";
+
+		if (this.PatternTo.Shapes[0]!="?") {
+			to=this.To+this.PatternTo.Shapes[0];
+		} else return null;
+		
+		if (this.PatternFrom.Shapes[0]!="?") {
+			from=this.From+this.PatternFrom.Shapes[0];
+		} else return null;
 
 		let p = document.createElement("p");
 		let f = document.createElement("span");
-		f.innerText=this.From+this.PatternFrom[0];
+		f.innerText=from;
 		p.appendChild(f);
 
 		let e = document.createElement("span");
@@ -2187,7 +2259,7 @@ class ItemAdjective{
 		p.appendChild(e);
 
 		let t = document.createElement("span");
-		t.innerText=this.To+this.PatternTo[0];
+		t.innerText=to;
 		p.appendChild(t);
 
 		t.addEventListener("click", () => {
@@ -2195,9 +2267,12 @@ class ItemAdjective{
 		});
 		t.class="dicCustom";
 
-		if (this.PatternTo.Shapes==undefined) return null;
-		if (this.PatternTo.Shapes[0]=="?") return null;	
-		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], name, p];
+		let r = document.createElement("span");
+		r.innerText=" (příd.)";
+		r.className="dicMoreInfo";
+		p.appendChild(r);
+
+		return [from, to, name, p];
 	}
 
 	GetTable() {
@@ -2464,6 +2539,7 @@ class ItemNumber{
 	}
 	
 	GetDicForm(name) {	
+		if (this.PatternTo==undefined || this.PatternTo==null) return null;
 		if (this.PatternTo.Shapes[0]=="?") return null;
 
 		let p = document.createElement("p");
@@ -2485,6 +2561,11 @@ class ItemNumber{
 			});
 			t.class="dicCustom";
 		}
+
+		let r = document.createElement("span");
+		r.innerText=" (čísl.)";
+		r.className="dicMoreInfo";
+		p.appendChild(r);
 
 		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], name, p];
 	}
@@ -3187,9 +3268,18 @@ class ItemVerb{
 	}
 
 	GetDicForm(name) {
+		if (typeof this.PatternFrom==undefined) return null;
+		if (typeof this.PatternTo==undefined) return null;
+		let from, to;
+
+		if (this.PatternFrom.Infinitive!="?" && this.PatternTo.Infinitive!="?") {
+			from=this.From+this.PatternFrom.Infinitive;
+			to=this.To+this.PatternTo.Infinitive;
+		} else return null;
+
 		let p = document.createElement("p");
 		let f = document.createElement("span");
-		f.innerText=this.From+this.PatternFrom[0];
+		f.innerText=from;
 		p.appendChild(f);
 
 		let e = document.createElement("span");
@@ -3197,14 +3287,20 @@ class ItemVerb{
 		p.appendChild(e);
 
 		let t = document.createElement("span");
-		t.innerText=this.To+this.PatternTo[0];
+		t.innerText=to;
 		p.appendChild(t);
 
 		t.addEventListener("click", () => {
 			ShowPageLangD(t.GetTable());
 		});
 		t.class="dicCustom";
-		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], name, p];
+		
+		let r = document.createElement("span");
+		r.innerText=" (slov.)";
+		r.className="dicMoreInfo";
+		p.appendChild(r);
+
+		return [from, to, name, p];
 	}
 } 
 

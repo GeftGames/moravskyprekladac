@@ -23,7 +23,10 @@ function mapper_init(){
 }
 let mapper_scale=1;
 
-function mapperRedraw(){ 	
+function mapperRedraw(){ 		
+	document.getElementById("noteMapperNotFound").style.display="none";
+	document.getElementById("mapperAreaMap").style.display="block";
+	
 	canvasMap = document.getElementById('mapperCanvas');
 	let mapperOuter=document.getElementById("mapperOuter");
 	mapperOuter.style.width=Math.round(imgMap.width*mapper_scale+20)+"px";
@@ -39,7 +42,11 @@ function mapperRedraw(){
 
 	ctx = canvasMap.getContext('2d', {willReadFrequently:true});
 	const start = performance.now();
-	if (mapper_compute())return;
+	if (mapper_compute()) {
+		document.getElementById("noteMapperNotFound").style.display="block";
+		document.getElementById("mapperAreaMap").style.display="none";
+		return;
+	}
 	const end = performance.now();
 	console.log('Execution time: '+(end - start)+' ms');
 
@@ -295,20 +302,22 @@ function CreateBorders(data, editedData){
 	return editedData;
 }
 
-let status;
+let status_mapper;
 
 var canvasMap;
 var ctx;
 
 function mapper_compute() {
+	status_mapper="";
 	// Get points
 	let inputText=document.getElementById("mapperInput").value;
 	let points=mapper_GetPointsTranslated(languagesListAll, inputText);
 
-	if (points.length<=3) {
-		status="Not enough data to create map";
+	if (points.length==0) {
+		status_mapper="Not enough data to create map";
 		return true;
 	}
+
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
 	ctx.save();
 	ctx.drawImage(imgMap, 0, 0, imgMap.width*mapper_scale, imgMap.height*mapper_scale);
