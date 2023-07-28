@@ -308,6 +308,8 @@ class ItemNoun {
 	GetDicForm() {
 		let to=this.To[0];
 
+		if (to==undefined) return null;
+
 		let body=to[0], pattern=to[1];
 		if (typeof(pattern) == "undefined") return null;
 
