@@ -569,7 +569,7 @@ class ItemPhrase{
 		if (raw.length==2){
 			let item = new ItemPhrase();
 			item.input  = this.DoubleSplit(raw[0]);
-			item.output = this.DoubleSplit(raw[1]);
+			item.output = /*this.DoubleSplit(*/raw[1].split(',')/*)*/;
 			return item;
 		}
 		
@@ -577,10 +577,10 @@ class ItemPhrase{
     }
 
 	static DoubleSplit(str) {
-		// "k moři,k mořu" ->> [["k", "moři"], ["k", "mořu"]]
+		// "k moři,k mořu" ->> [["k", " ", "moři"], ["k", " ", "mořu"]]
 		let arr=[];
 		for (const w of str.split(",")){
-			arr.push(this.MultipleSplit(w," -"));
+			arr.push(this.MultipleSplit(w, " -"));
 		}	
 		return arr;
 	}
@@ -3497,7 +3497,7 @@ class LanguageTr {
 					break;
 
 				case "e":
-					//this.BuildSelect(line.substring(1));
+					this.BuildSelect(line.substring(1));
 					break;
 
 				case "c":
@@ -4847,7 +4847,7 @@ class LanguageTr {
 	AddTextOne(string, parentElement, className) {
 		if (this.html) {
 			let span = document.createElement("span");
-			span.innerText = AfterReplace(string);
+			span.innerText = ApplyPostRules(string);
 			if (styleOutput) span.className = className;
 			parentElement.appendChild(span);
 		}else{
@@ -4882,10 +4882,10 @@ class LanguageTr {
 			for (let i = 0; i < variants.length; i++) {
 				let tag = document.createElement("li");
 				tag.style = "cursor: pointer;";
-				tag.innerHTML = AfterReplace(variants[i]);
+				tag.innerHTML = ApplyPostRules(variants[i]);
 				tag.addEventListener('click', function () {
 					selectedIndex = i;
-					span.innerText = AfterReplace(variants[i]);
+					span.innerText = ApplyPostRules(variants[i]);
 					box.style.opacity = "0";
 					box.style.display = "none";
 					box.setAttribute("canHide", false);
@@ -5190,18 +5190,31 @@ class LanguageTr {
 	}
 
 	BuildSelect(rawStr){
-	/*	if (rawStr=="") return [];
+		if (rawStr=="") return [];
 
 		let arr=[];
-		for (const t of rawStr.split('|')) {
-			let o=t.split(">");
-			arr.push([o[0], o[1].split(",")]);
-		}
-		this.SelectReplace=arr; // = [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]*/
+		for (const selector of rawStr.split('#')) {
+			let sel = new Selector();
+			let parts=selector.split('|');
+			sel.name=parts[0];
+
+			for (let i=1; i<parts.length; i++) {
+				let o=parts[i].split(">");
+				arr.push([o[0], o[1].split(",")]);
+			}
+			this.SelectReplace=sel.Replaces=arr;
+		}		
 	}
 
 	
 }
+class Selector{
+	constructor(){	
+		this.Name="";
+		this.Replaces=[];
+	}
+}
+/*
 function AfterReplace(html) {
 	let ret=html;
 
@@ -5210,7 +5223,8 @@ function AfterReplace(html) {
 	}
 
 	return ret;
-}
+}*/
+// By custom defined in lang from select
 
 function PrepareReplaceRules() {
 	SimplyfiedReplacedRules=[];
@@ -5225,5 +5239,185 @@ function PrepareReplaceRules() {
 			if (replace==search) continue;
 			SimplyfiedReplacedRules.push([search,replace]);
 		}		
+	}
+}
+
+// Vytvoření volitelností
+function CustomChoosenReplacesCreate(){
+	let area=document.getElementById("optionsSelect");
+	area.innerHTML="";
+
+	for (const rule of currentLang.SelectReplace) {
+		let select=document.createElement("select");
+		select.name=rule.Name;
+
+		for (const v of rule.Replaces) {
+			let option=document.createElement("option");
+			option.value=v;
+			option.innerText=v;
+			select.appendChild(option);
+		}
+		area.appendChild(select);
+	}
+
+}
+
+preparedLocalRules=[];
+function PrepareRulesLocal(){
+	if (TextStyle=="textObv") {
+		if (lang.Name=="Slezština") {
+			// Podle http://www.blaf.cz/index.php?body=slovnik
+			preparedLocalRules=[
+				["š", "sz"],  
+				["č", "cz"],
+				["ř", "rz"],
+				["ž", "ż"],
+				
+				["v", "w"],
+			];
+			return;
+		} else if (lang.Name=="Hanáčtina") {
+			// Dle furtovniku
+			preparedLocalRules=[
+				["viho", "vyho"],  
+				["biho", "biho"],
+				["kiho", "kyho"],
+				["niho", "nyho"],
+				["riho", "ryho"],
+
+				["ďe", "dě"],  
+				["ňe", "ně"],
+				["ťe", "tě"],
+
+				["ti", "ty"],
+				["tí", "tý"],
+				["ťi", "ti"],
+				["tí", "tí"],
+
+				["ni", "ny"],
+				["ní", "ný"],
+				["ňi", "ni"],
+				["ňí", "ní"],
+
+				["di", "dy"],
+				["dí", "dý"],
+				["ďi", "di"],
+				["ďí", "dí"],
+
+				["ri", "ry"],
+				["ki", "ky"],
+				["chi", "chy"],
+				["hi", "hy"],
+
+			];
+			return;
+		} else if (lang.Name=="Laština") {
+			preparedLocalRules=[
+				["v", "w"], 
+			];
+			return;
+		} else if (lang.Name=="Slováčtina") {
+			preparedLocalRules=[
+				["ṵ", "u"], 
+			];
+			return;
+		} else if (lang.Name=="Moravština") {
+			preparedLocalRules=[
+					["ch", "x"],
+					["x", "ch"],
+
+					["ďe", "dje"],  
+					["ňe", "nje"],
+					["ťe", "tje"],
+			];
+			return;
+		}
+	}else{ 
+		switch (style) {
+			case 'cfo': preparedLocalRules=[]; return;
+
+			case 'ces': 
+				preparedLocalRules=[ 
+					["mňe", "mě"],
+					["bje", "bě"],
+					["vje", "vě"],
+					["pje", "pě"],
+
+					["ďe", "dě"],  
+					["ňe", "ně"],
+					["ťe", "tě"],
+
+					["ti", "ty"],
+					["tí", "tý"],
+					["ťi", "ti"],
+					["tí", "tí"],
+
+					["ni", "ny"],
+					["ní", "ný"],
+					["ňi", "ni"],
+					["ňí", "ní"],
+
+					["di", "dy"],
+					["dí", "dý"],
+					["ďi", "di"],
+					["ďí", "dí"],
+				];
+			
+			case 'mor': 
+				preparedLocalRules=[ 
+					["ch", "x"],
+					["x", "ch"],
+				];
+		}
+	}
+}
+
+function ApplyPostRules(text) {
+	let ret=text;
+	// 1=nahrazeno, 0=nenahrazeno
+	let pattern = CreatePattern(text.length);
+
+	for (let rule of preparedLocalRules) {
+		let from=rule[0];
+		
+		// No overlap replaces
+		if (inside.includes(from)) {
+			let startOfReplace=inside.indexOf(from);
+			
+			let doReplace=true;
+			for (let i=startOfReplace; i<from.length; i++) {
+				if (pattern[i]==1) {
+					doReplace=false;
+					break;
+				}
+			}
+			
+			if (doReplace) {
+				let to=rule[1];
+				ret=ret.replace(from, to);
+
+				for (let i=startOfReplace; i<from.length; i++) {
+					pattern[i]=1;
+				}
+
+				let delta=from.length-to.length;
+				// Zkrácení
+				if (delta>0) {
+					pattern.slice(startOfReplace, 1);
+				} 
+				// Zdelšení
+				else if (delta<0) {
+					pattern.insert(startOfReplace,1);
+				}
+			}
+		}			
+		
+	}
+
+	return ret;
+	function CreatePattern(len) {
+		let p=[];
+		for (let i=0; i<len; i++) p.push(0);
+		return p;
 	}
 }
