@@ -52,8 +52,8 @@
 		if ('serviceWorker' in navigator) {
 			let location=window.location;
 			// !localhost
-			if (location=="https://moravskyprekladac.ga/" 
-			||  location=="https://moravskyprekladac.pages.dev/" 
+			if (/*location=="https://moravskyprekladac.ga/" 
+			||*/  location=="https://moravskyprekladac.pages.dev/" 
 			||  location=="https://geftgames.github.io/moravskyprekladac/") {
 				window.addEventListener('load', function () {
 					navigator.serviceWorker.register(location+'service-worker.js')
@@ -282,6 +282,21 @@
 							<div class="settingItem">
 								<p id="textSaved">Uložené překlady</p>
 								<button id="textRemove" class="button" onclick="RemoveTrans()">Vymazat</button>
+							</div>
+
+							
+							<!-- Zápis -->
+							<div style="display: flex; justify-content: space-between; align-items: center">
+								<p style="flex-direction: column">
+									<span id="textText">Transkripce</span>
+								</p>
+								<select id="textStyle" style="margin: 5px;text-align: center;" onchange="customText();">
+									<option id="textDefaultText" value="default" style="font-weight: bold">Výchozí</option>
+									<option id="textObv" value="obv">Dle bližší obvyklosti</option>
+									<option id="textCesFont" value="cfo">Český fonetický</option>
+									<option id="textCes" value="ces">Český</option>
+									<option id="textMor" value="mor">Moravský</option>
+								</select>
 							</div>
 						</div>
 					</div>
@@ -635,7 +650,7 @@
 					<div><p class="aboutPageHeader">K dělení na regiony</p></div>
 					<p>Moravu a Slezsko dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
 					<div style="display: flex; justify-content: center">
-					<img src="data/images/morava s popisky.svg" style="max-width: 16cm;width: -webkit-fill-available;">
+					<img src="data/images/morava s popisky.svg" decoding="async" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy">
 					</div>
 					
 					<div><p class="aboutPageHeader" id="comment">Poznámka</p></div>
@@ -660,6 +675,7 @@
 					<p>duben 2023-Přidán generátor map překladů.</p>
 					<p>květen 2023-Přidán slovník.</p>
 					<p>červen 2023-podpora titulků SRT.</p>
+					<p>léto 2023-pracujeme na zlepšení překladů.</p>
 				</div>
 			</div>
 			<div id="mapPage" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;height: -webkit-fill-available;">
