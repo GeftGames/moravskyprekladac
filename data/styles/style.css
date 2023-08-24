@@ -44,6 +44,9 @@
 	display: flex;
     flex-wrap: wrap;
 }
+#mapperNavrh{
+	background-color: var(--ColorBack);
+}
 h1{
 	font-family: var(--f);
 	font-weight: 400;
@@ -199,12 +202,10 @@ html{
 
 #lte,#dicLte{
 	display: table-cell;
-	margin-right: 5px;
-	margin-left: 10px;
 	outline: 2px transparent dashed;
 	outline-offset: 3px;
 	display: flex;
-	margin-left: 10px;
+/*	margin-left: 10px;*/
 	margin-right: 10px;
 	flex-direction: column;
 	background-color: var(--ConBack);
@@ -216,7 +217,6 @@ html{
 	margin-left: 10px;
 	background-color: var(--ConBack);
 }
-
 
 #lte:focus-visible,#dicLte:focus-visible{
 	outline: var(--tDash);
@@ -731,6 +731,7 @@ option,optgroup{
 	transition: all 300ms ease-in;
     transition-property: opacity, top;
 	width: 100%;
+	height: auto;
 }
 .pageFromDownClose{
 	margin-top: 20px;
@@ -1062,6 +1063,7 @@ circle{
 }
 #mapperCanvas {
 	width: 100%;
+	filter: drop-shadow(2px 2px 2px #00000015);
 }
 input[type="text"]{
 	color: var(--ColorText);
@@ -1098,8 +1100,8 @@ input[type="text"]{
 .mapperNavrh{
 	background-color: var(--ConBack);
 	color: var(--ColorText);
-	font-size: 8mm;
-	padding: 5mm;
+	font-size: 6mm;
+	padding: 4mm;
 	transition: background-color, color .3s;
 	border-radius: 3px;
 	user-select: none;
