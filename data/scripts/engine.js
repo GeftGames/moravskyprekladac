@@ -492,6 +492,11 @@ const HSLToRGB = (h, s, l) => {
 	return Math.round(255 * f(0))+", "+Math.round(255 * f(8))+", "+Math.round(255 * f(4));
   };
 
+function customText(){
+	TextStyle = document.getElementById("textStyle").value;
+	localStorage.setItem('TextStyle', TextStyle);
+}
+
 function customTheme() {
 	ThemeLight= document.getElementById("themeLight").value;
 	Power= document.getElementById("power").value;
@@ -905,6 +910,7 @@ function ShowAboutPage(){
 		document.getElementById('nav').style.opacity='0.1';
 	}
 }
+
 function CloseAboutPage(){
 	location.hash="";
 //	e.preventDefault();
@@ -924,6 +930,7 @@ function CloseAboutPage(){
 		document.getElementById("aboutPage").style.display="none";
 	}, 300);
 }
+
 function ShowPageMapper(){
 	location.hash="mapper";
 	//location.hash = "mapper";
@@ -941,6 +948,7 @@ function ShowPageMapper(){
 		document.getElementById('nav').style.opacity='0.1';
 	}
 }
+
 function ClosePageMapper(){
 	location.hash="";
 //	e.preventDefault();
@@ -960,6 +968,7 @@ function ClosePageMapper(){
 		document.getElementById("mapperPage").style.display="none";
 	}, 300);
 }
+
 function ShowPageOwnLang(){
 	document.getElementById("pageOwnLang").style.display="block";
 	document.getElementById("pageOwnLang").style.opacity="1";
@@ -972,6 +981,7 @@ function ShowPageOwnLang(){
 		document.getElementById('nav').style.opacity='0.1';
 	}
 }
+
 function ClosePageOwnLang(){
 	document.getElementById("pageOwnLang").style.opacity="0";
 	document.getElementById("pageOwnLang").style.top="500px";
@@ -988,6 +998,7 @@ function ClosePageOwnLang(){
 		document.getElementById("pageOwnLang").style.display="none";
 	}, 300);
 }
+
 function ShowPageLangD(element){
 	document.body.style.overflow="clip";
 	window.scrollTo({ top: 0});
@@ -1008,6 +1019,7 @@ function ShowPageLangD(element){
 		document.getElementById('nav').style.opacity='0.1';
 	}
 }
+
 function ClosePageLangD(){
 	document.body.style.overflow="unset";
 	document.getElementById("pageLangD").style.opacity="0";
@@ -1025,6 +1037,7 @@ function ClosePageLangD(){
 		document.getElementById("pageLangD").style.display="none";
 	}, 300);
 }
+
 function ShowPageInfoLang(){
 	let lang=GetCurrentLanguage();
 	if (lang==null) return;
@@ -1067,6 +1080,7 @@ function ClosePageInfoLang(){
 		document.getElementById("pageInfoLang").style.display="none";
 	}, 300);
 }
+
 function ShowMapPage(){
 	document.getElementById("mapPage").style.display="block";
 	document.getElementById("mapPage").style.opacity="1";
@@ -1081,6 +1095,7 @@ function ShowMapPage(){
 	}
 	mapRedraw();
 }
+
 function CloseMapPage(){
 	document.getElementById("mapPage").style.opacity="0";
 	document.getElementById("mapPage").style.top="500px";
@@ -1565,6 +1580,8 @@ function Load() {
         zmyvocabCS = localStorage.getItem('vocab-cs');
         trTo = localStorage.getItem('trTo');
         trFrom = localStorage.getItem('trFrom');
+
+		zTextStyle=localStorage.getItem('TextStyle');
     } catch {}
 
   /*  if (trFrom === null) {
@@ -1595,6 +1612,11 @@ function Load() {
         if (trTo == "ceskytesin") document.getElementById("selRevTceskytesin").selected = true;
         if (trTo == "slez") document.getElementById("selRevTslez").selected = true;
     }*/
+	
+	if (zTextStyle === null) {
+		TextStyle="";
+    } else TextStyle = zTextStyle;
+	document.getElementById("textStyle").value=TextStyle;
 
     if (zmyvocabCS === null) {
         myVocabCS = new Array();
@@ -2067,6 +2089,7 @@ function SetSavedTranslations() {
         document.getElementById("savedDiv").style.display = "none";
     }
 }
+
 /*
 function GetVocabulary() {
 	if (dev) console.log("INFO| Starting Downloading ListHa.txt");
@@ -2359,6 +2382,7 @@ function SetText(input) {
 
     return input;
 }
+
 /*
 function translate() {
     let from = document.getElementById('selectorFrom').value;
@@ -3559,6 +3583,16 @@ function insertAtCursor(myField, myValue) {
     EditorCursorStart = posssd;
     setCursor();
     myField.focus();
+}
+
+function MapperMode(mode) {
+	if (mode=="basic") {
+		expertModeMapper.style.display="none";
+		basicModeMapper.style.display="block";
+	} else if (mode=="expert") {
+		expertModeMapper.style.display="block";
+		basicModeMapper.style.display="none";		
+	}
 }
 
 function Copy() {
@@ -5065,6 +5099,7 @@ function DetectLoacation() {
 	}*/
 	return "Morava";
 }
+
 /*
 function ExtractMergedFiles(inputFile) {
 	const delimiter='§'
