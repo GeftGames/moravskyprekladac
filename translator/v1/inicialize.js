@@ -175,46 +175,37 @@ let downloadedFiles=0;
 
 function GetTranslations() {
 	const xhttp = new XMLHttpRequest();
-	xhttp.timeout=4000;
+	//xhttp.timeout=4000;
 
 	let select2= document.getElementById("selectorTo");
 
 	xhttp.onload = function() {		
-	
-	//	document.getElementById("textDownloadingList").style.display="none";
-	//	document.getElementById("textDownloadingDic").style.display="block";
-	//	let json=JSON.parse(this.responseText);
-	//	stepEnd=json.length;
-		
-	//	for (const file of json) {
-	//		//console.log(file);
-	//		DownloadLang(file.download_url);
-	//	}
+		// kalibrace mapy
 		if (false) {
-		let handlova=new LanguageTr();
-		handlova.Load("TW v0.1\ntHandlova\ncTesting point\ng48.7283153,18.7590888".split('\n'));
-		AddLang(handlova);
+			let handlova=new LanguageTr();
+			handlova.Load("TW v0.1\ntHandlova\ncTesting point\ng48.7283153,18.7590888".split('\n'));
+			AddLang(handlova);
 
-		let nymburk=new LanguageTr();
-		nymburk.Load("TW v0.1\ntNymburk\ncTesting point\ng50.1856607,15.0428904".split('\n'));
-		AddLang(nymburk);
+			let nymburk=new LanguageTr();
+			nymburk.Load("TW v0.1\ntNymburk\ncTesting point\ng50.1856607,15.0428904".split('\n'));
+			AddLang(nymburk);
+		}
+	//	console.log("Finished 1!");
 
-		//let rybnik=new LanguageTr();
-	//	rybnik.Load("TW v0.1\ntRybnik\ncTesting point\ng50.1097,18.4668673".split('\n'));
-	//	AddLang(rybnik);
-}
-	const delimiter='§'
-	let fileContents = this.responseText.split(delimiter);
-//	console.log("get",fileContents);
-	// Po souborech
-	for (let i = 0; i < fileContents.length; i += 2) {
-		let //fileName = fileContents[i], 
-		fileText = fileContents[i + 1];
-		//console.log(fileText);
-		if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText);
+		const delimiter='§'
+		let fileContents = this.responseText.split(delimiter);
+
+		// Po souborech
+		for (let i = 0; i < fileContents.length; i += 2) {
+			let //fileName = fileContents[i], 
+			fileText = fileContents[i + 1];
+			//console.log(fileText);
+			if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText);
 			// Zápis souboru
 			//using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
 		}
+
+		//console.log("Finished!");
 		document.getElementById("translatingPage").style.display="block";
 		document.getElementById("translatingPage").style.opacity="0%";
 		setTimeout(function () {
@@ -225,7 +216,18 @@ function GetTranslations() {
 	xhttp.addEventListener('error', (e)=>{
 		console.log('error', e);
 	});
-	console.log("send",languagesPackage);
+
+	// github nemá dnou maximální velkost souborů
+	function ProgressE(e) {
+		if (e.lengthComputable) {  
+			console.log(((e.loaded / e.total)*100)+"%");
+			document.getElementById("progness").style.width=((e.loaded / e.total)*100)+"%";
+		}
+	}
+	 
+	xhttp.onprogress = ProgressE;
+
+	console.log("Download lang package begin! ",languagesPackage);
 	xhttp.open("GET", languagesPackage/*, true*/);
 	xhttp.send();
 
@@ -382,8 +384,10 @@ function mapRedraw(){
 	for (let p of languagesList){
 		if ((map_Zoom>z && p.Quality<2) || p.Quality>=2) {
 			// Text color
-			if (p.Quality==0) ctx.fillStyle="Gray";
-			else {
+			if (p.Quality==0) {
+				if (p.Category===undefined)ctx.fillStyle="#996666";
+				else ctx.fillStyle="Gray";
+			} else {
 				if (ThemeLight=="dark") ctx.fillStyle="White"; else ctx.fillStyle="Black";
 			}
 			let w=ctx.measureText(p.Name).width;

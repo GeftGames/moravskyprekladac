@@ -94,7 +94,7 @@ class ItemPatternNoun {
 			}
 
 			if (unknown) {
-				 if (add.length>0) item.Shapes.push(add);
+				 if (add.length>0) item.Shapes.push(add); // např jeden neznámý + jeden známý
 				 else item.Shapes.push("?");
 			} else item.Shapes.push(add);
 		}
@@ -129,11 +129,11 @@ class ItemPatternNoun {
 			tbody.appendChild(trh);
 		}
 
-		for (let c=0; c<14; c+=2) {	
+		for (let c=0; c<7; c++) {	
 			let tr=document.createElement("tr");
 
 			let tdp=document.createElement("td");
-			tdp.innerText=c/2+1;
+			tdp.innerText=c+1;
 			tr.appendChild(tdp);
 
 			let td1=document.createElement("td");
@@ -149,12 +149,12 @@ class ItemPatternNoun {
 
 			let td2=document.createElement("td");
 			let endingP="";
-			if (Array.isArray(this.Shapes[c+1])) {
-				endingP=this.Shapes[c+1].join(", ");
-				td2.innerText=starting+this.Shapes[c+1];
+			if (Array.isArray(this.Shapes[c+7])) {
+				endingP=this.Shapes[c+7].join(", ");
+				td2.innerText=starting+this.Shapes[c+7];
 			} else {
-				if (this.Shapes[c+1]=="?") td2.innerText="?";
-				else td2.innerText=starting+this.Shapes[c+1];
+				if (this.Shapes[c+7]=="?") td2.innerText="?";
+				else td2.innerText=starting+this.Shapes[c+7];
 			}
 			tr.appendChild(td2);
 
@@ -185,7 +185,7 @@ class ItemNoun {
 			if (raw.length == 4) {
 				let item = new ItemNoun();
 				item.From = raw[0];
-				item.To = raw[1];
+				//item.To = raw[1];
 
 				let paternFrom = this.GetPatternByNameFrom(raw[2]);
 				if (paternFrom == null) return null;
@@ -194,12 +194,13 @@ class ItemNoun {
 				let paternTo = this.GetPatternByNameTo(raw[3]);
 				if (paternTo == null) return null;
 				else item.PatternTo = paternTo;
+				item.To.push([raw[1], paternTo]);
 
 				return item;
 			} else if (raw.length == 3) {
 				let item = new ItemNoun();
 				item.From = raw[0];
-				item.To = raw[0];
+				//item.To = raw[0];
 
 				let paternFrom = this.GetPatternByNameFrom(raw[1]);
 				if (paternFrom == null) return null;
@@ -208,12 +209,13 @@ class ItemNoun {
 				let paternTo = this.GetPatternByNameTo(raw[2]);
 				if (paternTo == null) return null;
 				else item.PatternTo = paternTo;
+				item.To.push([raw[0], paternTo]);
 
 				return item;
 			} else if (raw.length == 2) {
 				let item = new ItemNoun();
 				item.From = "";
-				item.To = "";
+				//item.To = "";
 
 				let paternFrom = this.GetPatternByNameFrom(raw[0]);
 				if (paternFrom == null) return null;
@@ -221,7 +223,8 @@ class ItemNoun {
 
 				let paternTo = this.GetPatternByNameTo(raw[1]);
 				if (paternTo == null) return null;
-				else item.PatternTo = paternTo;
+				//else item.PatternTo = paternTo;
+				item.To.push(["", paternTo]);
 
 				return item;
 			}
@@ -382,8 +385,13 @@ class ItemNoun {
 		// Return all possible falls with numbers
 		// [[tvar, číslo, pád], rod]
 		// console.log(str,this);
+		if (this.From!="") {
+			if (!str.startsWith(this.From)) {
+				return null;
+			}
+		}
 
-		if (this.From=="") {
+	/*	if (this.From=="") {
 			let ret=[];
 			for (let i=0; i<7; i++) {
 				let shapes=this.PatternFrom.Shapes[i];
@@ -426,61 +434,72 @@ class ItemNoun {
 			}
 
 			if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
-		} else {	
-			if (str.startsWith(this.From)) {
-				let ret=[];
+		} else {	*/
+			//if (str.startsWith(this.From)) {
+		let ret=[];
 
-				for (let i=0; i<7; i++) {
-					let shapes=this.PatternFrom.Shapes[i];
+		for (let i=0; i<7; i++) {
+			let shapes=this.PatternFrom.Shapes[i];
 
-					if (Array.isArray(shapes)) {
-						for (const s of shapes) {
-							if (this.From+s==str) {
-								if (Array.isArray(this.PatternTo.Shapes[i])) {
-									for (const z of this.PatternTo.Shapes[i]){
-										if (z!="?") ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
-									}
-								} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]);
-								break;
+			if (Array.isArray(shapes)) {
+				for (const s of shapes) {
+				//	console.log(this.From+s);
+					if (this.From+s == str) {
+						for (const to of this.To) {
+							let body=to[0];
+							let pattern=to[1];
+							//console.log(this.To);
+							//if (pattern==undefined)continue;
+							if (Array.isArray(pattern.Shapes[i])) {
+								for (const z of pattern.Shapes[i]) {
+									if (z!="?") ret.push([body+z, 1, i+1]); // [tvar, číslo, pád]	
+								}
+							} else if (pattern.Shapes[i]!="?") ret.push([body+pattern.Shapes[i], 1, i+1]);
+						}
+						//break;
+					}
+				}
+			} else {						
+			//	console.log(this.From+this.PatternFrom.Shapes[i]);
+				if (this.From+this.PatternFrom.Shapes[i] == str) {
+					for (const to of this.To) {
+						let body=to[0];
+						let pattern=to[1];
+						if (pattern==undefined)continue;
+						if (Array.isArray(pattern.Shapes[i])) {
+							for (const z of pattern.Shapes[i]){
+								if (z!="?") ret.push([body+z, 1, i+1]); // [tvar, číslo, pád]	
 							}
-						}
-					} else {
-						if (this.From+this.PatternFrom.Shapes[i]==str) {
-							if (Array.isArray(this.PatternTo.Shapes[i])) {
-								for (const z of this.PatternTo.Shapes[i]){
-									if (z!="?") ret.push([this.To+z, 1, i+1]); // [tvar, číslo, pád]	
-								}
-							} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1]);
-							break;
-						}
+						} else if (pattern.Shapes[i]!="?") ret.push([body+pattern.Shapes[i], 1, i+1]);
 					}
+					break;
 				}
-
-				for (let i=7; i<14; i++) {
-					let shapes=this.PatternFrom.Shapes[i];
-
-					for (let j=0; j<shapes.length; j++) {
-						let shape=this.From+shapes[j];
-					//	console.log(shape);
-
-						if (shape==str) {
-							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (Array.isArray(this.PatternTo.Shapes[i])) {
-								for (const z of this.PatternTo.Shapes[i]){
-									if (z!="?") ret.push([this.To+z, 2, i+1-7]); // [tvar, číslo, pád]	
-								}
-							} else if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1]);
-							break;
-						}
-					}
-				}
-
-				if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
-			} else {
-				return null;
 			}
 		}
-		return null;
+
+		for (let i=7; i<14; i++) {
+			let shapes=this.PatternFrom.Shapes[i];
+
+			for (let j=0; j<shapes.length; j++) {
+				let shape=this.From+shapes[j];
+
+				if (shape==str) {
+					for (const to of this.To) {
+						let body=to[0];
+						let pattern=to[1];
+						if (pattern==undefined)continue;
+						if (Array.isArray(pattern.Shapes[i])) {
+							for (const z of pattern.Shapes[i]) {
+								if (z!="?") ret.push([body+z, 2, i+1-7]); // [tvar, číslo, pád]	
+							}
+						} else if (pattern.Shapes[i]!="?") ret.push([body+pattern.Shapes[i], 2, i-7+1]);
+					}
+					break;
+				}
+			}
+		}
+
+		if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
 	}
 
 	/*GetTable(pattern, starting) {
