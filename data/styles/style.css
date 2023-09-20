@@ -1065,7 +1065,7 @@ circle{
 	width: 100%;
 	filter: drop-shadow(2px 2px 2px #00000015);
 }
-input[type="text"]{
+input[type="text"], textarea{
 	color: var(--ColorText);
 	background-color: var(--ConBack);
 	border: 1px solid #88888863;
