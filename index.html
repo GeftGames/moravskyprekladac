@@ -286,7 +286,7 @@
 
 							
 							<!-- Zápis -->
-							<div style="display: flex; justify-content: space-between; align-items: center">
+							<!--<div style="display: flex; justify-content: space-between; align-items: center">
 								<p style="flex-direction: column">
 									<span id="textText">Transkripce</span>
 								</p>
@@ -297,7 +297,7 @@
 									<option id="textCes" value="ces">Český</option>
 									<option id="textMor" value="mor">Moravský</option>
 								</select>
-							</div>
+							</div>-->
 						</div>
 					</div>
 					
@@ -509,7 +509,10 @@
 							</div>
 							<p style="display:inline;" id="closeMapper">Zavřít</p>
 						</div>
-						<div><p class="mapperPageHeader" id="mapperGanerateMap">Generátor map</p></div>
+						<div>
+							<p class="mapperPageHeader" id="mapperGanerateMap">Generátor map</p>
+							
+						</div>
 					</div>
 
 					<div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;height: -webkit-fill-available;*/display: flex; justify-content: center;">
@@ -522,6 +525,10 @@
 								<span class="settingLink" id="mapperSearchWord" onclick="MapperMode('expert')">Rozšířená tvorba map</span>
 								<br>
 								<br>	
+								<p id="">Uložené</p>	
+								<div id="mapperSaved" style="display: inline-block;">
+								</div>
+
 								<p id="">Návrhy</p>	
 								<div id="mapperNavrh" style="display: flex;flex-wrap: wrap;justify-content: flex-start;width: -webkit-fill-available;flex-direction: column;" >
 									<p>Podstatná jména</p>
@@ -621,6 +628,14 @@
 									<p>Obarvení pozadí</p>
 									<textarea id="mapperOptionColorBack" placeholder='->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red'></textarea>
 								</div>
+								<div>
+									<p>Doprovodný text</p>
+									<textarea id="mapperOptionText" placeholder='Přeložení slova dub, v česko-moravkých a východomoravských je tvar dub, ve střední části moravy je tvar dob, místy dôb.'></textarea>
+								</div>
+								<div>
+									<p>Zkratky míst</p>
+									<p><input type="checkbox" checked id="mapperOptionPlaceNames">Zobrazit zkratky míst</p>
+								</div>
 							<!--	<div>
 									<p>Minimální kvalita</p>
 									<input type="range" id="mapperOptionMinimalQuality" value="50" min="0" max="99">
@@ -638,10 +653,7 @@
 									<p>Hranice míst</p>
 									<textarea id="mapperOptionColorText" placeholder='"dub"->"dôb" x "dub"->"dob" => dash; "dub"->"dub" x "dub"->"dob" => solid; "dub"->def => none'></textarea>
 								</div>
-								<div>
-									<p>Doprovodný text</p>
-									<textarea id="mapperOptionText" placeholder='Přeložení slova <i>dub</i>, v česko-moravkých a východomoravských je tvar <i>dub</i>, ve střední části moravy je tvar <i>dob</i>, místy <i>dôb</i>.'></textarea>
-								</div>
+								
 								<div>
 									<p>Zobrazit v rohu podrobnosti o seřízení</p>
 									<p><input type="checkbox" checked id="mapperOptionInfoText">Poznámka vygenerované</p>
@@ -655,6 +667,10 @@
 									</select>
 								</div>-->
 								<div>
+									<p>Síla pozadí</p>
+									<input id='mapperOptionBackgroundOpacity' type="range" min="0" max="1" step="0.1">
+								</div>
+								<div>
 									<p>Limit vzdálenosti</p>
 									<select id="mapperOptionLimit">
 										<option value="0">Žádný</option>
@@ -667,8 +683,9 @@
 									<p>Geometrie sestavení hranic</p>
 									<select id="mapperOptionGeometry">
 										<option value="nearest">Nejbližší místo</option>
+										<option value="3x">Zaoblené hranaté</option>
 										<option value="45">Po 45°</option>
-										<option value="45max">Diagonály</option>
+										<option value="45max">Po 45° pootočeně</option>
 										<option value="none">Žádné hranice</option>
 									</select>
 								</div>
@@ -680,22 +697,29 @@
 							</div>
 						</div>
 						
-						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;flex-wrap: wrap;justify-content: space-between;">
-							<div class="listButtons; flex-wrap: wrap; flex-direction: row;">
-								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_download()" style="margin-top: 5px;">Stáhnout mapu</a>
+						
+						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
+							<div style="margin-bottom: 4mm;display: flex;justify-content: center;">
 								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()" style="margin-top: 5px;">Generovat další mapu</a>
-								<a rel="nofollow" class="button" id="mapperZoomIn" onclick="mapper_zoomIn()" style="margin-top: 5px;">Přiblížit</a>
-								<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapper_zoomOut()" style="margin-top: 5px;">Oddálit</a>
-								<p><input type="checkbox" checked id="mapperNote" onclick="mapper_Note()">Poznámka vygenerované</p>
-								<p><input type="checkbox" checked id="mapperOnlyGood" onclick="mapper_OnlyGood()">Pouze kvalitní překlady</p>
-								<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>
-								<p style="margin-bottom: 1cm;">Mapa nemusí mít přesné hranice, může obsahovat chyby</p>
-								<span id="noteMapperNotFound" style="font-size:6mm;color: var(--ColorOrig);">Nenalezen žádný záznam, nelze vytvořit mapa.</span>
 							</div>
+							<div style="display:flex;flex-wrap: wrap;flex-direction: column;">
+								<div class="listButtons" sytle="flex-direction: row;">
+									<a rel="nofollow" class="button" id="mapper_edit" onclick="mapper_edit()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 24 24"><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"></path></svg></a>
+									<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_download()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;">⇩</a>
+									<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapper_save()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;">☆</a>
+									<a rel="nofollow" class="button" id="mapperZoomIn" onclick="mapper_zoomIn()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;">+</a>
+									<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapper_zoomOut()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;">-</a>
+									<!--<p><input type="checkbox" checked id="mapperNote" onclick="mapper_Note()">Poznámka vygenerované</p>-->
+									<!--<p><input type="checkbox" checked id="mapperOnlyGood" onclick="mapper_OnlyGood()">Pouze kvalitní překlady</p>-->
+									<!--<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>-->
+									<!--<p style="margin-bottom: 1cm;">Mapa nemusí mít přesné hranice, může obsahovat chyby</p>-->
+								</div>
+								<span id="noteMapperNotFound" style="font-size:6mm;color: var(--ColorOrig);">Nenalezen žádný záznam, nelze vytvořit mapa.</span>
 
-							<div id="mapperAreaMap" style="max-width: 100%; overflow: scroll; max-height: 100vh; width: fit-content;">
-								<div id="mapperOuter" style="width: -webkit-fill-available;   height: -webkit-fill-available;border:none">
-									<canvas id="mapperCanvas" style="/*width:400px; height: 400px*/height: -webkit-fill-available;"></canvas>
+								<div id="mapperAreaMap" style="max-width: 100%; overflow: auto; max-height: 100vh; width: fit-content;">
+									<div id="mapperOuter" style="width: -webkit-fill-available; height: -webkit-fill-available; border: none;overflow: hidden;">
+										<canvas id="mapperCanvas" style="height: -webkit-fill-available;"></canvas>
+									</div>
 								</div>
 							</div>
 						</div>
