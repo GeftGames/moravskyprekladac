@@ -1,5 +1,6 @@
 ﻿const serverName="https://moravskyprekladac.pages.dev/";
 var imgMap;
+var imgMap_bounds;
 /*class Word {
 	constructor() {
 	    this.selectedIndex = 0;
@@ -947,6 +948,7 @@ function ShowPageMapper(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
+	CreateSavedList();
 }
 
 function ClosePageMapper(){
@@ -1616,7 +1618,7 @@ function Load() {
 	if (zTextStyle === null) {
 		TextStyle="";
     } else TextStyle = zTextStyle;
-	document.getElementById("textStyle").value=TextStyle;
+//	document.getElementById("textStyle").value=TextStyle;
 
     if (zmyvocabCS === null) {
         myVocabCS = new Array();
@@ -1739,6 +1741,9 @@ function Load() {
     loaded = true;
 	imgMap = new Image();
 	imgMap.src="data/images/map.svg";
+
+	imgMap_bounds = new Image();
+	imgMap_bounds.src="data/images/map_bounds.svg";
     SetSavedTranslations();
 	customTheme();
 
@@ -5117,9 +5122,9 @@ function ExtractMergedFiles(inputFile) {
 	return 
 }*/
 
-function navrhClick(text) {
+function navrhClick(text,customStyle) {
 	mapperInput.value=text;
-	mapper_init();
+	mapper_init(customStyle!=undefined, customStyle);
 }
 
 let ownLang;
