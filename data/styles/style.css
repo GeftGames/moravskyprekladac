@@ -1090,6 +1090,7 @@ input[type="text"], textarea{
 	display: flex;
     flex-direction: column;
     align-items: flex-start;
+	flex-direction: row;
 	/*flex-wrap: wrap;
 	flex-direction: row;*/
 }
@@ -1141,4 +1142,8 @@ caption{
 }
 .tableDic > tbody > tr > td{
 	padding: 4px;
+}
+.mapperPageHeader{
+	font-size: 6mm;
+    text-align: center;
 }
