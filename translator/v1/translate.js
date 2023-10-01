@@ -232,7 +232,6 @@ class ItemNoun {
 		} else {
 			if (data.includes('?')) return null;
 			let raw = data.split('|');
-		//	console.log("to4p",raw);
 	
 			let item = new ItemNoun();
 			item.From = raw[0];
@@ -244,14 +243,10 @@ class ItemNoun {
 			item.UppercaseType=parseInt(raw[2]);
 
 			for (let i=3; i<raw.length; i++) {
-				//let ptn=[];
-
-				//ptn[0]=raw[i];
-
 				let paternTo = this.GetPatternByNameTo(raw[i+1]);
-				if (paternTo != null) item.To.push([raw[i],paternTo]);
+				if (paternTo != null) item.To.push([raw[i], paternTo]);
 			}
-			if (item.To.length>0)return item;
+			if (item.To.length>0) return item;
 			return null;
 		}
 	}
@@ -5227,22 +5222,13 @@ class LanguageTr {
 
 	
 }
+
 class Selector{
 	constructor(){	
 		this.Name="";
 		this.Replaces=[];
 	}
 }
-/*
-function AfterReplace(html) {
-	let ret=html;
-
-	for (let rule of SimplyfiedReplacedRules) {
-		ret.replace(rule[0], rule[1]);
-	}
-
-	return ret;
-}*/
 // By custom defined in lang from select
 
 function PrepareReplaceRules() {

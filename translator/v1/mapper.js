@@ -1,7 +1,15 @@
-var mapper_ShowNote=true,mapper_OylyGood=true;
+const mapper_ShowNote=true,
+	mapper_OylyGood=true;
+
+let mapperAdvanced;
+let mapperRenderOptions;
+let currentEditId=-1
+
 function mapper_next(){
 	document.getElementById("mapperPreview").style.display="none";
 	document.getElementById("areaStartGenerate").style.display="flex";
+
+	CreateSavedList();
 }
 
 function mapper_zoomIn(){
@@ -14,17 +22,18 @@ function mapper_zoomOut(){
 	mapperRedraw();
 }
 
-let mapperAdvanced;
-let mapperRenderOptions;
 
-function mapper_init(advanced) {
+function mapper_init(advanced,customStyle) {
 	mapperAdvanced=advanced;
 	mapperRenderOptions=new RenderMapperOptions();
 	document.getElementById("mapperPreview").style.display="flex";
 	document.getElementById("areaStartGenerate").style.display="none";
-
-	if (mapperAdvanced){
+	
+	if (customStyle!=undefined){
+		mapperRenderOptions.Load(customStyle);
+	} else if (mapperAdvanced){
 		mapperRenderOptions.LoadCurrentSettins();
+		mapperRenderOptions.advanced=advanced;
 	}
 
 	mapperRedraw();
@@ -41,8 +50,6 @@ function mapperRedraw(){
 	
 	let displayWidth  = mapperOuter.clientWidth;
 	let displayHeight = mapperOuter.clientHeight;
-
-	//, imgMap.height*mapper_scale);
 
 	canvasMap.width = displayWidth;
 	canvasMap.height = displayHeight;
@@ -64,219 +71,439 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 	let pts=[];
 	for (const lang of langs) {
 		let found=false;
-		if (isNaN(lang.locationX))continue;
-		if (isNaN(lang.locationY))continue;
+		if (isNaN(lang.locationX)) continue;
+		if (isNaN(lang.locationY)) continue;
 		let word=lang.Translate(w,false).trim();
 		//console.log(lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated);
 		
 		if (word!=undefined) {
 			if (!word.includes('undefined')) { // Toto by se stávat nemělo
-				if (mapper_OylyGood){
-					if (lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated>0){
+				if (word!="") { // Toto by se stávat nemělo
+					if (mapper_OylyGood){
+						if (lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated>0) {
+							found=true;
+							pts.push({
+								x: lang.locationX*mapperRenderOptions.scale, 
+								y: lang.locationY*mapperRenderOptions.scale, 
+								text: word,
+								name: lang.Name,
+								id: -1
+							});
+							continue;
+						}
+					}else{
 						found=true;
-						pts.push([lang.locationX*mapperRenderOptions.scale, lang.locationY*mapperRenderOptions.scale, word]);
+						pts.push({
+							x: lang.locationX*mapperRenderOptions.scale, 
+							y: lang.locationY*mapperRenderOptions.scale, 
+							text: word,
+							name: lang.Name,
+							id: -1
+						});
 						continue;
 					}
-				}else{
-					found=true;
-					pts.push([lang.locationX*mapperRenderOptions.scale, lang.locationY*mapperRenderOptions.scale, word]);
-					continue;
-				}
-			}				
+				}			
+			}	
 		}
 	}
+	pts=mapper_pointsFilter(pts);
 	return pts;
 }
 //https://rosettacode.org/wiki/Voronoi_diagram
-// HF#1 Like in PARI/GP: return random number 0..max-1
-function randgp(max) {return Math.floor(Math.random()*max)}
-// HF#2 Random hex color
-function randhclr() {
-  return "#"+
-  ("00"+randgp(256).toString(16)).slice(-2)+
-  ("00"+randgp(256).toString(16)).slice(-2)+
-  ("00"+randgp(256).toString(16)).slice(-2)
+
+// Nastavit: stejné texty stejné id
+function mapper_pointsFilter(points) {
+	let countOfTypes=0;
+	let existingTypes = [];
+
+	for (let p of points) {
+		// Already exist id
+		if (existingTypes.indexOf(p.text)>=0) {
+			p.id=existingTypes.indexOf(p.text)+1;
+		}else{			
+			p.id=countOfTypes+1;
+			countOfTypes++;
+			existingTypes.push(p.text);
+		}
+	}
+	return points;
 }
-// HF#3 Metrics: Euclidean, Manhattan and Minkovski 3/20/17
-/*function Metric(x,y,mt) {
-  if(mt==1) {return Math.sqrt(x*x + y*y)}
-  if(mt==2) {return Math.abs(x) + Math.abs(y)}
-  if(mt==3) {return(Math.pow(Math.pow(Math.abs(x),3) + Math.pow(Math.abs(y),3),0.33333))}
-}*/
-// Plotting Voronoi diagram. aev 3/10/17
-function Voronoi(points) {
-	
-	let types=[];
-	//console.log(points);
-	for (let p of points){
-		let nexists=true;
-		for (let t of types){
-			if (p[2]==t){types.push(p[2]);
-				nexists=false;
-				break;
+
+function Voronoi_borders(points, imageDataBounds) {	
+	/*let c=[];
+	for (let p of points) {		
+		c.push([p.id, 0,  255]);		
+	}*/
+	//console.log(c);
+
+	var w=canvasMap.clientWidth, 
+		h=canvasMap.clientHeight;
+
+	DrawMaskForBorders();
+
+	function DrawMaskForBorders() {
+		var x=y=d=dm=j=0;
+		//var n=points.length;
+
+
+		let imageData = ctx.createImageData(canvasMap.width, canvasMap.height);
+		
+
+		//var img_read = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
+
+		let data = imageData.data, 
+			data_r=imageDataBounds.data;
+		var i=3;
+
+		let limit=mapperRenderOptions.limit>0;
+		//let lenCol=c.length;
+
+		//let defColOutside=0;
+
+		if (mapperRenderOptions.style=="45max") { 
+			if (limit) c.push(0);
+
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+					if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						let col=0;
+
+						for (let p of points) {
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+							
+							if (mapper_xx<0) mapper_xx=-mapper_xx;
+							if (mapper_yy<0) mapper_yy=-mapper_yy;
+
+							if (mapper_xx>mapper_yy) d=mapper_xx;
+							else d=mapper_yy;
+
+							if(d<dm) {dm=d; col=p.id;}
+						}
+						//if (limit) if (dm>w/mapperRenderOptions.limit) { col=defColOutside; }
+						data[i] = data_r[i];			
+						data[i+1] = 255; 			
+						data[i+2] = 0; 			
+						data[i+3] = col; 			
+					} 
+					i+=4;
+				}
+			}
+		} else if (mapperRenderOptions.style=="45") { 
+			//if (limit) c.push(0);
+
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+					if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						let col=0;
+						for (let p of points) {
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+
+							if (mapper_xx<0) mapper_xx=-mapper_xx;
+							if (mapper_yy<0) mapper_yy=-mapper_yy;
+
+							d=mapper_xx+mapper_yy;
+							if(d<dm) {dm=d; col=p.id;}
+						}
+						//if (limit) if (dm/Math.sqrt(2)>w/mapperRenderOptions.limit){j=lenCol;}
+						data[i] = data_r[i];			
+						data[i+1] = 255;  			
+						data[i+2] = 0; 			
+						data[i+3] = col; 			
+					} 
+					i+=4;
+				}
+			}
+		} else if (mapperRenderOptions.style=="3x") { 
+			//if (limit) c.push(0);
+
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+					if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						let col=0;
+
+						for (let p of points) {
+							//let p=points[k];
+							
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+
+							d=Math.pow(Math.pow(Math.abs(mapper_xx),3) + Math.pow(Math.abs(mapper_yy),3), 0.33333);
+
+							if(d<dm) { dm=d; col=p.id; }
+						}
+						//if (limit) if (dm>w/mapperRenderOptions.limit){j=lenCol;}
+						data[i] = data_r[i];			
+						data[i+1] = 255;  			
+						data[i+2] = 0; 			
+						data[i+3] = col; 			
+					} 
+					i+=4;
+				}
+			}
+		}else if (mapperRenderOptions.style=="none")  { 
+			
+		} else /*nearest*/{ 
+			//if (limit) c.push(0);
+		
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+				//	if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						let col=0;
+
+						for (let p of points) {
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+
+							d=mapper_xx*mapper_xx+mapper_yy*mapper_yy;
+
+							if(d<dm) { dm=d; col=p.id; }
+						}
+						//if (limit) if (Math.sqrt(dm)>w/mapperRenderOptions.limit){j=lenCol;}
+						data[i] = data_r[i];			
+						data[i-1] = 255; 			
+						//data[i-2] = 0; //0;			
+						data[i-3] = col; 			
+					//} 
+					i+=4;
+				}
 			}
 		}
-		if (nexists)types.push(p[2]);
+		
+		ctx.putImageData(imageData, 0, 0);
+	//	ctx.save();
+		//return imageData;
 	}
 	
-	let c=[];
-	for (let p of points){
-		let id=-1;
-		for (let t in types){
-			if (p[2]==types[t]){
-				id=t;
-				break;
+	CreateBorders();
+	
+	function CreateBorders() {		
+		var inputImageData = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
+		let imageDataBorders = ctx.createImageData(canvasMap.width, canvasMap.height);
+		
+		let data_read = inputImageData.data;
+		let data_write= imageDataBorders.data;
+		let i=0;
+
+		for (y=0; y<h-1; y++) {
+			for (x=0; x<w-1; x++) {
+				// outside map
+			//	if (/*data_read[i+3]==255 &&*/ data_read[i+w*4+3]==255 && data_read[i+4+3]==255 && data_read[i+w*4+4+3]==255
+			//	&&  data_read[i+2]==255 && data_read[i+w*4+2]==255 && data_read[i+4+2]==255 && data_read[i+w*4+4+2]==255) {
+					// detect by wrap image
+					let p_zero=data_read[i];
+					let dX	= p_zero - data_read[i+4];
+					let dY	= p_zero - data_read[i+w*4];
+					let dXY	= p_zero - data_read[i+w*4+4];
+					
+					if (dX!=0 || dY!=0 || dXY!=0) {
+						data_write[i] 	= 0;	
+						data_write[i+1] = 0; 		
+						data_write[i+2] = 0; 	
+						
+						data_write[i+3] = 155; 			
+					}
+				//}
+				i+=4;
 			}
 		}
+		ctx.putImageData(imageDataBorders, 0, 0);
+		ctx.drawImage(imgMap, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+	}
+}
+
+function Voronoi_backgrounds(points,imageDataBounds) {	
+	for (let p of points){ 
 		let def=true;
 
 		if (mapperAdvanced) {
-			//console.log(mapperAdvanced,mapperRenderOptions.backColor);
-			for (let col of mapperRenderOptions.backColor) {
-				//console.log("'"+col[0][1]+"'", "'"+types[id]+"'",col[0][1] == types[id]);				
-				if (col[0][1] == types[id]) {
-					c.push(col[1]);
+			for (let col of mapperRenderOptions.backColor) {			
+				if (col[0][1] == p.text) {
+					p.col=[col[1][0]/255, col[1][1], col[1][2], col[1][3]];
 					def=false;
 					break;
 				}
 			}
 			if (def) {
 				if (mapperRenderOptions.backColorOthers!=undefined){
-					c.push(mapperRenderOptions.backColorOthers);
+					p.col=[mapperRenderOptions.backColorOthers[0]/255, mapperRenderOptions.backColorOthers[1], mapperRenderOptions.backColorOthers[2], mapperRenderOptions.backColorOthers[3]];
 					def=false;
 				}
 			}			
 		} 
 		if (def) {
-			let xcol=Math.floor(id/types.length*100+150);
-			c.push([xcol, xcol, 255]);
+			// argb format
+			p.col=[255, 255, 255, 255];
 		}
-	//	console.log("rgb("+(id/types.length*255)+",255,255)");
-		//'rgb('+Math.round(id/types.length*100+150)+','+Math.round(id/types.length*100+150)+',255)');
 	}
-	console.log(c);
-	var w=canvasMap.clientWidth, h=canvasMap.clientHeight;
-	var x=y=d=dm=j=0;
-	var n=points.length;
-	let imageData = ctx.createImageData(canvasMap.width, canvasMap.height);
 
-	var img_read = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
+	var w=canvasMap.clientWidth, 
+		h=canvasMap.clientHeight;
 
-	let data = imageData.data, data_r=img_read.data;
-	var i=3;
+	DrawBackgrounds();
 
-	let limit=mapperRenderOptions.limit>0;
-	let lenCol=c.length;
-	if (mapperRenderOptions.style=="45max") { 
-		if (limit) c.push(0);
-		for (y = 0; y < h; y++) {
-			for (x = 0; x < w; x++) {
-				if (data_r[i]>0) {			
-					dm=Number.MAX_VALUE;
-					j=-1;
-					for (let k=0; k<n; k++) {
-						let p=points[k];
-						let mapper_xx=p[0]-x, mapper_yy=p[1]-y;
-						if (mapper_xx<0)mapper_xx=-mapper_xx;
-						if (mapper_yy<0)mapper_yy=-mapper_yy;
-						if (mapper_xx>mapper_yy) d=mapper_xx;
-						else d=mapper_yy;
-						if(d<dm) {dm=d; j=k;}
-					}
-					if (limit) if (dm>w/mapperRenderOptions.limit){j=lenCol;}
-					data[i-3] = c[j][0]; 			
-					data[i-2] = c[j][1]; 			
-					data[i-1] = c[j][2]; 			
-					data[i] = data_r[i];			
-				} 
-				i+=4;
+	function DrawBackgrounds(){
+		let colOutside=[0, 0, 0, 0];
+		var x=y=d=dm=j=0;
+		//var n=points.length;
+
+		let imageData = ctx.createImageData(canvasMap.width, canvasMap.height);		
+		var img_read  = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
+
+		let data   = imageData.data, 
+			data_r = /*imageDataBounds*/img_read.data;
+			//data_b = /*imageDataBounds*/imageDataBounds.data;
+
+		var i=3;
+	//	let defCol=[255,255,255,255];
+		let limit=mapperRenderOptions.limit>0;
+		//let lenCol=c.length;
+		if (mapperRenderOptions.style=="45max") { 
+			//if (limit) c.push(0);
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+					if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						//j=-1;
+						let col;
+						for (let p of points) {
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+
+							if (mapper_xx<0) mapper_xx=-mapper_xx;
+							if (mapper_yy<0) mapper_yy=-mapper_yy;
+
+							if (mapper_xx>mapper_yy) d=mapper_xx;
+							else d=mapper_yy;
+
+							if(d<dm) {dm=d; col=p.col; }
+						}
+						if (limit) if (dm>w/mapperRenderOptions.limit) { col=colOutside; }
+						data[i] = data_r[i];			
+						data[i+1] = col[0]; 			
+						data[i+2] = col[1]; 			
+						data[i+3] = col[2]; 			
+					} 
+					i+=4;
+				}
 			}
-		}
-	} else if (mapperRenderOptions.style=="45") { 
-		if (limit) c.push(0);
+		} else if (mapperRenderOptions.style=="45") { 
+			//if (limit) c.push(0);
 
-		for (y = 0; y < h; y++) {
-			for (x = 0; x < w; x++) {
-				if (data_r[i]>0) {			
-					dm=Number.MAX_VALUE;
-					j=-1;
-					for (let k=0; k<n; k++) {
-						let p=points[k];
-						let mapper_xx=p[0]-x, mapper_yy=p[1]-y;
-						if (mapper_xx<0)mapper_xx=-mapper_xx;
-						if (mapper_yy<0)mapper_yy=-mapper_yy;
-						d=mapper_xx+mapper_yy;
-						if(d<dm) {dm=d; j=k;}
-					}
-					if (limit) if (dm/Math.sqrt(2)>w/mapperRenderOptions.limit){j=lenCol;}
-					data[i-3] = c[j][0]; 			
-					data[i-2] = c[j][1]; 			
-					data[i-1] = c[j][2];  			
-					data[i] = data_r[i];			
-				} 
-				i+=4;
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+					if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						let col;
+						for (let p of points) {
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+
+							if (mapper_xx<0) mapper_xx=-mapper_xx;
+							if (mapper_yy<0) mapper_yy=-mapper_yy;
+
+							d=mapper_xx+mapper_yy;
+							if(d<dm) {dm=d; col=p.col;}
+						}
+						if (limit) if (dm/Math.sqrt(2)>w/mapperRenderOptions.limit) { col=colOutside; }
+						data[i] = col[0];			
+						data[i+1] = col[1];  			
+						data[i+2] = col[2]; 			
+						data[i+3] = data_r[i+3] * col[3]; 			
+					} 
+					i+=4;
+				}
 			}
-		}
-	} else if (mapperRenderOptions.style=="none")  { 
+		} else if (mapperRenderOptions.style=="3x") { 
+			//if (limit) c.push(0);
+
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {
+					if (data_r[i]>0) {			
+						dm=Number.MAX_VALUE;
+						//j=-1;
+						let col;
+						for (const p of points) {
+							//let p=points[k];
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+							
+								d=Math.pow(Math.pow(Math.abs(mapper_xx),3) + Math.pow(Math.abs(mapper_yy),3), 0.33333);
+
+							if (d<dm) {dm=d; /*j=k;*/ col=p.col; }
+						}
+						if (limit) if (dm>w/mapperRenderOptions.limit) { col=colOutside; }
+						data[i] = data_r[i];			
+						data[i+1] = col[0];  			
+						data[i+2] = col[1]; 			
+						data[i+3] = col[2]; 			
+					} 
+					i+=4;
+				}
+			}
+		}else if (mapperRenderOptions.style=="none")  { 
+			
+		} else /*nearest*/{ 
+			//if (limit) c.push(0);
 		
-	} else /*else if (mapperRenderOptions.style=="nearest")*/  { 
-		if (limit) c.push(0);
-	
-		for (y = 0; y < h; y++) {
-			for (x = 0; x < w; x++) {
-				if (data_r[i]>0) {			
-					dm=Number.MAX_VALUE;
-					j=-1;
-					for (let k=0; k<n; k++) {
-						let p=points[k];
-						let mapper_xx=p[0]-x, mapper_yy=p[1]-y;
-						d=mapper_xx*mapper_xx+mapper_yy*mapper_yy;
-						if(d<dm) {dm=d; j=k;}
+			for (y = 0; y < h; y++) {
+				for (x = 0; x < w; x++) {			
+					if (data_r[i]>0){
+						dm=Number.MAX_VALUE;
+						//j=-1;
+						let col=colOutside;
+						for (const p of points) {
+							let mapper_xx=p.x-x, 
+								mapper_yy=p.y-y;
+
+							d=mapper_xx*mapper_xx + mapper_yy*mapper_yy;
+
+							if (d<dm) { dm=d; col=p.col; }
+						}
+						if (limit) if (Math.sqrt(dm)>w/mapperRenderOptions.limit) { col=colOutside; }
+
+						// if not transparent color fill it
+						let aplhaNew=col[0];
+						if (aplhaNew>1)aplhaNew/=255;				
+						let aplhaPrev=data_r[i]/255;
+						let aplhaPrevM1 = 1 - aplhaPrev;
+				
+						data[i] = (              aplhaPrev  + (          aplhaNew * aplhaPrevM1))*255;
+						data[i-1] =	(data_r[i-1] * aplhaPrev) + (col[3] * aplhaNew * aplhaPrevM1);
+						data[i-2] =	(data_r[i-2] * aplhaPrev) + (col[2] * aplhaNew * aplhaPrevM1);
+						data[i-3] =	(data_r[i-3] * aplhaPrev) + (col[1] * aplhaNew * aplhaPrevM1);							
 					}
-					if (limit) if (Math.sqrt(dm)>w/mapperRenderOptions.limit){j=lenCol;}
-					data[i-3] = c[j][0]; 			
-					data[i-2] = c[j][1]; 			
-					data[i-1] = c[j][2]; 			
-					data[i] = data_r[i];			
-				} 
-				i+=4;
+						
+					i+=4;
+				}
 			}
 		}
+		
+		ctx.putImageData(imageData, 0, 0);
+		//ctx.save();
 	}
-
-	ctx.putImageData(imageData, 0, 0);
-}
-
-function CreateBorders(data, editedData){
-	for (y = 0; y < h-1; y++) {
-		for (x = 0; x < w-1; x++) {
-			// detect by wrap image
-			let dX=data[x]-data[x+1];
-			let dY=data[y]-data[y+1];
-
-			if (dX>0 || dY>0) {
-				editedData[i-3] = 0; 			
-				editedData[i-2] = 0; 			
-				editedData[i-1] = 255; 		
-				editedData[i] = 255;	
-			}
-			i+=4;
-		}
-	}
-	return editedData;
 }
 
 let status_mapper;
-
 var canvasMap;
 var ctx;
 
 function mapper_compute() {
+	ctx.font = "11px sans-serif";
 	status_mapper="";
+
 	// Get points
 	let inputText;
 	if (mapperAdvanced) inputText=document.getElementById("mapperSearchPattern").value;
 	else inputText=document.getElementById("mapperInput").value;
+
+	// Translate points
+	mapperRenderOptions.inputText=inputText;
 	let points=mapper_GetPointsTranslated(languagesListAll, inputText);
 
 	if (points.length==0) {
@@ -284,27 +511,67 @@ function mapper_compute() {
 		return true;
 	}
 
+	// Clear 
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
 	ctx.save();
-	ctx.drawImage(imgMap, 0, 0, imgMap.width*mapperRenderOptions.scale, imgMap.height*mapperRenderOptions.scale);
-	Voronoi(points);
+
+	// < Draw  stuff >
+	//ctx.globalCompositeOperation="destination-in";
+
+	// Draw regions map
+	ctx.drawImage(imgMap_bounds, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+	//let imageDataBounds = ctx.createImageData(canvasMap.width, canvasMap.height);
+	let imageDataBounds = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
+	//console.log(imageDataBounds);
+	//ctx.save();
+	/*let imgDataBorders=*/Voronoi_borders(points,imageDataBounds);
+	ctx.save();
+	/*let imgDataBackground=*/Voronoi_backgrounds(points,imageDataBounds);
+	
+	
+	
+	//	ctx.globalAlpha = mapperRenderOptions.backgroundRegionMapOpacity;
+	// Draw backdround fill colors
+	//ctx.drawImage(imgDataBackground, 0, 0);
+	
+	// Draw borders
+	//ctx.drawImage(imgDataBorders, 0, 0);
+	//ctx.globalAlpha = 1;
 	
 	// filter
 	let xx=0,yy=0, radius=6;
 	ctx.fillStyle = "blue";
 	for (let p of points) {
 		ctx.beginPath();
-		ctx.arc(xx+p[0], yy+p[1], radius, 0, 2 * Math.PI);
+		ctx.arc(xx+p.x, yy+p.y, radius, 0, 2 * Math.PI);
 		ctx.fill();
 	}
 
 	ctx.fillStyle="Black";
 	for (let p of points){
 	//	if (xx+p[0]-w/2>0 && yy+p[1]-radius-5>0) { //<-optimalizace, mimo plochu
-			let w=ctx.measureText(p.Name).width;
-			ctx.fillText(p[2], xx+p[0]-w/2, yy+p[1]-radius-5);
-	//	}
+		let w=ctx.measureText(p.text).width;
+		ctx.fillText(p.text, xx+p.x-w/2, yy+p.y-radius-5);
+			
+		// Název místa
+		if (this.ShowPlacesShorts) {
+			let name="";
+			if (p.name.length>=2) {
+				name=p.name.sunstring(0, 2).toUpperCase();
+			} else name=p.name;
+			//let w=ctx.measureText(p.text).width;
+
+			ctx.fillText(name, xx+w/2,+radius/2, yy-radius);		
+		}
 	}
+
+	if (mapperRenderOptions.text!="") {
+		ctx.fillStyle="Black";
+		let textSize=ctx.measureText(mapperRenderOptions.text);
+		//console.log(mapperRenderOptions.text);
+		ctx.fillText(mapperRenderOptions.text, 5, canvasMap.height/4*3);
+	}
+
 	if (mapper_ShowNote) {
 		ctx.fillStyle="Black";
 		let date=new Date();
@@ -315,43 +582,37 @@ function mapper_compute() {
 	ctx.restore();
 	return false;
 }
-function mapper_Note(){
-	var checkBox = document.getElementById("mapperNote");
-	mapper_ShowNote=checkBox.checked;
+function mapper_Note() {
+	//var checkBox = document.getElementById("mapperNote");
+	mapper_ShowNote=true;//checkBox.checked;
 }
 
-function mapper_OnlyGood(){
-	var checkBox = document.getElementById("mapperOnlyGood");
-	mapper_OylyGood=checkBox.checked;
+function mapper_OnlyGood() {
+	//var checkBox = document.getElementById("mapperOnlyGood");
+	mapper_OylyGood=true;//checkBox.checked;
 }
 var points;
 
 function getPointBetween(p1, p2, p3) {
 		return new Point(X=(p1.X+p2.X+p3.X)/2, X=(p1.X+p2.X+p3.X)/2);
-	}
+}
 //https://stackoverflow.com/questions/15968968/how-to-find-delaunay-triangulation-facets-containing-the-given-points
-	function sign(p1, p2, p3){
-		return (p1.X-p3.X)*(p2.Y-p3.Y)-(p2.X-p3.X)*(p1.Y-p3.Y);
-	}
+function sign(p1, p2, p3){
+	return (p1.X-p3.X)*(p2.Y-p3.Y)-(p2.X-p3.X)*(p1.Y-p3.Y);
+}
 
-	function Is(p1, p2 , p2){
-
-
-	}
-
-	function getNearests(points) {
-		for (let point in points) {
-			let bestmin=100000;
-			for (let p in points) {
-				let dis=point.Distance(p);
-				if (dis < bestmin) {
-					p.len=dis;
-					point.AddPt(p);
-				}
+function getNearests(points) {
+	for (let point in points) {
+		let bestmin=100000;
+		for (let p in points) {
+			let dis=point.Distance(p);
+			if (dis < bestmin) {
+				p.len=dis;
+				point.AddPt(p);
 			}
 		}
 	}
-
+}
 
 /*	class Point {
 		constructor() {
@@ -405,25 +666,53 @@ function getPointBetween(p1, p2, p3) {
 //};*/
 
 class RenderMapperOptions{
-	constructor(){
+	constructor() {
+		this.inputText="";
 		this.style="nearest";
 		this.scale=1;
 		this.limit=0;
 		this.backColors=[];
 		this.backColorOthers=undefined;
+		this.text="";
+		this.advanced=false;
+		this.backgroundRegionMapOpacity=0.5;
+
+		this.ShowPlacesShorts=true;
+		// For future
+		//this.font;
+		//this.fontSize;
+
+		// Saved string
+		this.rawBackColors="";
 	}
-
-	Load(rawdata) {
-
-	}
-
-	LoadCurrentSettins(rawdata) {
+	
+	LoadCurrentSettins() {
 		this.style=document.getElementById('mapperOptionGeometry').value;
 		this.limit=document.getElementById('mapperOptionLimit').value;
-		let rawCol=document.getElementById('mapperOptionColorBack').value;
-		this.backColor=[];
+		this.text=document.getElementById('mapperOptionText').value;
+		this.rawBackColors=document.getElementById('mapperOptionColorBack').value;	
+		this.backgroundRegionMapOpacity=document.getElementById('mapperOptionBackgroundOpacity').value;	
+		if (this.advanced) this.inputText=document.getElementById("mapperSearchPattern").value=mapperRenderOptions.inputText;
+		else this.inputText=document.getElementById("mapperInput").value;
+		this.ShowPlacesShorts=document.getElementById('mapperOptionPlaceNames').checked;
 
-		for (const part of rawCol.split(';')) {
+		this.ComputeColors();
+	}
+	
+	SetElements() {
+		document.getElementById('mapperOptionGeometry').value=this.style;
+		document.getElementById('mapperOptionLimit').value=this.limit;
+		document.getElementById('mapperOptionText').value=this.text;
+		document.getElementById('mapperOptionColorBack').value=this.rawBackColors;
+		document.getElementById('mapperOptionBackgroundOpacity').value=this.backgroundRegionMapOpacity;	
+		if (this.advanced) document.getElementById("mapperSearchPattern").value=mapperRenderOptions.inputText=this.inputText;
+		else document.getElementById("mapperInput").value=this.inputText;
+		document.getElementById('mapperOptionPlaceNames').checked=this.ShowPlacesShorts;
+	}
+	
+	ComputeColors(){
+		this.backColor=[];
+		for (const part of this.rawBackColors.split(';')) {
 			//"dub"->"dôb" => #000
 			let parts=part.split('=>');
 			if (parts.length==2){
@@ -431,7 +720,7 @@ class RenderMapperOptions{
 				if (translations.length==2){
 					let from=translations[0];
 					let to=translations[1];
-
+					
 					let color=parts[1];
 					if (to=="_") this.backColorOthers=[hexToRGB(color.trim())];
 					else this.backColor.push([[from.trim(), to.trim()], hexToRGB(color.trim())]);
@@ -440,14 +729,39 @@ class RenderMapperOptions{
 		}	
 	}
 
+	Load(rawdata) {
+		let parts = rawdata.split("|");
+		if (parts[0]=="v1"){
+			this.style=parts[1];
+			this.scale=parts[2];
+			this.limit=parts[3];
+			this.text =parts[4];
+			this.rawBackColors=parts[5];
+			this.advanced=parts[6]=="true";
+			this.inputText=parts[7];
+			this.backgroundRegionMapOpacity=parts[8];
+			this.ShowPlacesShorts=parts[8]=="true";
+
+			this.ComputeColors();
+		}
+	}
+	
 	Save() {
 		let data="v1|";
 		data+=this.style+"|";
 		data+=this.scale+"|";
 		data+=this.limit+"|";
+		data+=this.text+"|";
+		data+=this.rawBackColors+"|";
+		data+=this.advanced+"|";
+		data+=this.inputText+"|";
+		data+=this.backgroundRegionMapOpacity+"|";
+		data+=this.ShowPlacesShorts+="|";
+
 		return data;
 	}
-}	
+}
+
 function hexToRGB(color) {
 	if (!color.startsWith('#')) {
 		var colours = {"aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
@@ -484,16 +798,89 @@ function hexToRGB(color) {
 		const g = parseInt(color.slice(2, 3), 16);
 		const b = parseInt(color.slice(3, 4), 16);
 
-		return [r*16, g*16, b*16];
+		return [255, r*16, g*16, b*16];
 	}
 	if (color.length==7) {
 		const r = parseInt(color.slice(1, 3), 16);
 		const g = parseInt(color.slice(3, 5), 16);
 		const b = parseInt(color.slice(5, 7), 16);
 
-		return [r, g, b];
+		return [255, r, g, b];
 	}
 	//} 
 	
-	return [255, 255, 255];
+	return [255, 255, 255, 255];
+}
+
+function mapper_save() {
+	let rawAllItems=localStorage.getItem('MapperSaved');
+	let allItems;
+	if (rawAllItems==null) allItems=[];
+	else allItems=JSON.parse(rawAllItems);
+	
+	allItems.push(mapperRenderOptions.Save());
+
+	let savingAllItems=JSON.stringify(allItems);
+	localStorage.setItem('MapperSaved', savingAllItems);
+}
+
+function OpenAndSetAdvancedMapper(id) {
+	// Load saved maps
+	let rawAllItems=localStorage.getItem('MapperSaved');
+	let allItems=JSON.parse(rawAllItems);
+
+	//Set mapper
+	mapperRenderOptions=new RenderMapperOptions();
+	mapperRenderOptions.Load(allItems[id]);
+
+	// Nastav id upravujícího
+	currentEditId=id;
+		
+	console.log(mapperRenderOptions);
+	mapperRenderOptions.SetElements();
+	
+	mapper_init(mapperRenderOptions.advanced);
+}
+
+function mapper_removeSaved(id, e) {
+	// Load saved maps
+	let rawAllItems=localStorage.getItem('MapperSaved');
+	let allItems=JSON.parse(rawAllItems);
+
+	// Remove
+	allItems.splice(id, 1);
+
+	// Save
+	let savingAllItems=JSON.stringify(allItems);
+	localStorage.setItem('MapperSaved', savingAllItems);
+
+	// Remove element
+	e.parentElement.outerHTML="";
+}
+
+function CreateSavedList() {
+	// Load saved maps
+	let rawAllItems=localStorage.getItem('MapperSaved');
+	let allItems=JSON.parse(rawAllItems);
+
+	// Create elements
+	let ret="";
+	if (allItems!=null){
+		let id=0;
+		for (const rawOptions of allItems) {
+			let options=new RenderMapperOptions();
+			options.Load(rawOptions);
+			ret+="<div style='display: flex;align-items: center;'><div class='mapperNavrh' onclick='OpenAndSetAdvancedMapper("+id+");'>"+options.inputText+"</div> <div onclick='mapper_removeSaved("+id+",this)'>X</div></div>";
+		}
+	}
+	if (ret=="") ret="<span style='margin: 0px 0px 20px 10px;'>Nebyly nalezené žádné uložené mapy</span>";
+	
+	document.getElementById("mapperSaved").innerHTML=ret;
+}
+
+function mapper_edit() {
+	document.getElementById("mapperPreview").style.display="none";
+	document.getElementById("areaStartGenerate").style.display="flex";
+
+	if (mapperRenderOptions.advanced) MapperMode('expert');
 }
