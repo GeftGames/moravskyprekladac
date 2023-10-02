@@ -1,6 +1,8 @@
-TW v0.1
+TW v1.0
 tČehovice
+aGG
 d29.05.2023 21:15:49
+i z mêšleňim vidz na sestrô než na domáceg ôsinalê Čehovice PV
 c#Zdroje dat\n- Nástin české dialektologie-Bělič Jaromír; str.260
 g49.4326342,17.1742282
 q0
@@ -10,6 +12,8 @@ q0
 -
 počkejte chvíli|počkyte chvilu
 -
+na sestru|na sestrô
+s myšlením|z mêšleňim
 -
 -
 -
@@ -17,9 +21,16 @@ počkejte chvíli|počkyte chvilu
 ů|u
 -
 vejte|véte
+nali|nalê
 -
+domácnost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+myšlení|0|||||||m|||m|||ch|mi
 -
+domácEK|1|eg|i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
+myšlení|0|í?|í?|í?|í?|í?|í?|im|í?|í?|ím?|í?|í?|ích?|ími?
 -
+domácnost|domácnost|0|domác|domácEK
+myšlení|myšlení|0|mêšleň|myšlení
 -
 -
 -
@@ -43,13 +54,17 @@ počkAT|6|-1|at?|ej?|ejme?|yte|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 BÝT|247|-1|být?|sem,su|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
 počk|počkAT|počkAT
-|BÝT|BÝT
+BÝT|BÝT
+usínat|ôsinalê||
 -
 však|šak
 -
 před|
 i|aji|
+z|
+na|
 -
+než
 -
 aby|abe
 -

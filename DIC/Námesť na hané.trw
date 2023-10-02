@@ -9149,6 +9149,10 @@ ovými|ovéma
 ský|ské
 řeji|řejô
 rást|rast
+zují|zôjó
+níci|ňici
+rií|riji
+nií|niji
 -
 lÉTO|1|éto|éta|étu|éto|éto|étu,étě|étem|éta|et|étům,etům|éta|éta|étech,etech|éty,ety
 dÍTĚ|1|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
@@ -9198,11 +9202,11 @@ dEŇ|-1|eň|ňa|dňô|eň|dňe|ňô,ňe|dňem|dňê|dňi|dňom|dňê|dňê|dnech
 slunKO|0|ko|ka|kô|ko|ko|kô|kem|ka|ek|kám|ka|ka|kách|kama
 královstvI|1|i|i|i|i|i|i|im|i|i|im|i|i|ich|ima
 letišTĚ|1|ťě|ťa|ťô|ťe|ťe|ťô|ťem|ťa|ť|ťám|ťa|ťa|ťim|ťama
-lITO|1|ito|ita|itô|ito|ito|itě|item|eta|et|etám|eta|eta|etech|etama
+lITO|1|ito|ita|itô|ito|ito|iťe|item|eta|et|etám|eta|eta|etech|etama
 městO|1|o|ěte|ô|o|o|ě|em|a||ám|a|a|ách|ama
 stavenI|1|i|i|ó|i|i|i|im|a||ám|i|i|ách|ama
 děcko|1|ěcko,iťe|ěcka,iťete|ěckô|ěcko|ěcko|ěckô|ěckem|ěcka|ěcek|ěckám,iťum|ěcka|ěcka|ěckách|ěckama
-ministryNĚ|1|ně|ně|ni|ni|ně|ni|ní|ně|ň,ní|ním|ně|ně|ních|němi
+ministryNĚ|1|ňa|ňe|ňi|ňu|ně|ňi|ňó|ně|ň,ní|ňim|ňe|ňe|ňách|ňama
 čásť|2||i|ě||ô|i|ó|i|i|ám|i|i|ách|ama
 gatĚ|2|-|-|-|-|-|-|-|e|i|ám|e|e|ách|ama
 hanÁ|2|á|é|é|ó|á|é|ó|-|-|-|-|-|-|-
@@ -9225,11 +9229,11 @@ dŮM|3|um|omô|omô|um|ome|omě|omem|omê|omu|omom|omê|omê|omách|omama
 vlK|3|k|ka|kovi|ka|kô|kovi|kem|ci|ku|kám|kê|kê|kách|kama
 tédEŇ|3|eň|ňa|ňô|eň|ňi|ňo|ňem|ňê|ňu|ňum|ňe|ňe|ňech|ňama
 stUL|3|ul|ola|olô|ul|ole|olô|olem|olê|olu|olum|olê|olê|olech|olama
-hrad|4||a|o||e|ě|em|ê|u|om|e|e|ách|e
-kopEC|4|ec|ca|cô|ci|ec|cô|cem|ce|cu|om|ce|ce|cách|cama
+hrad|3||a|o||e|ě|em|ê|u|om|e|e|ách|ama
+kopEC|-1|ec|ca|cô|ci|ec|cô|cem|ce|cu|om|ce|ce|cách|cama
 roK|3|k|ka|ko|k|ke|kô|kem|kê|k|kám|kê|kê|kách|kama
 zmetEK|-1|ek|ka|kô|ek|kô|kách|kem|e|ku|kom|e|e|kách|kama
-haklék|4||a|ô||ô|ô|em|ê|u|om|ê|ê|ách|ama
+haklék|-1||a|ô||ô|ô|em|ê|u|om|ê|ê|ách|ama
 laFKA|1|fka|fkê|fce|fkô|fko|fce|fkó|fkê|fek|fkám|fkê|fkê|fkách|fkama
 -
 adam|pán|0|adam|pán
@@ -9261,7 +9265,7 @@ díl|městO|0|ďil|městO
 dívenk|ženA|0|divenk|ženA
 dn|městO|0|dn|městO
 doktor|pán|0|dochtor|pán
-drogeri|růžE|0|drogérij|ružA
+drogeri|růžE|0|drogérij|ružE
 důchod|hrad|0|rent|ženA
 dům|hrad|0|dum|hrad
 exploz|růžE|0|bóchan|hrad
@@ -9594,6 +9598,7 @@ všE|-1|e|eho|emu|e|e|em|ím
 co|-1|co|čeho|čemu|co,coč|-|čem|čím
 mnohO|-1|o|a|a|o|o|a|a
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
 -
 tEN|-1|en|eho|emô|eho|-|em|ym|i|ech|em|ê|-|ech|ema|en|eho|êmô|en|-|em|ym|ê|ech|em|ê|-|ech|ema|a|é|é|ô|-|é|ó|ê|ech|em|ê|-|ech|ema|o|eho|emô|o|-|em|ym|a|ech|em|a|-|ech|ema
 každÉ|-1|é|yho|ymô|yho|-|ym|ém|é|éch|ém|y|-|éch|éma|y|yho|ymô|é|-|ym|ém|y|éch|ém|y|-|éch|éma|a|ého|é|é|-|ém|ym|y|éch|ém|y|-|éch|éma|y|yho|ymô|ó|-|ym|ém|á|éch|ém|á|-|éch|éma
@@ -9611,6 +9616,7 @@ fšecKO|-1|ek|kyho|kymô|ek|ek|kém|kém|ê|kéch|kém|kéch|ê|kéch|kéma|ek|k
 keRÉ|-1|ré|ryho|rymô|ryho|-|rym|rém|ři|réch|rém|ry|-|réch|réma|ry|ryho|rymô|ré|-|rym|rém|ry|réch|rém|ry|-|réch|réma|ra|rého|ré|é|-|rém|rym|ry|réch|rém|ry|-|réch|réma|ry|ryho|rymô|ró|-|rym|rém|rá|réch|rém|rá|-|réch|réma
 ON|-1|on|něho|mô|ňé|-|něm|ňém
 SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+nÁŠ|-1|áš?|ašeho?|ašemô?|ašeho?|áš?|ašem?|ašim|aši?|ašich?|ašém|aše?|aši?|ašich?|ašema|áš?|ašeho?|ašemô?|áš?|áš?|ašem?|ašim|aše?|ašich?|ašém|aše?|aše?|ašich?|ašema|aše?|aší?|ašé|aši?|aše?|aší?|aší?|aše?|ašich?|ašém|aše?|aše?|ašich?|ašema|aše?|ašeho?|ašemô?|aše?|aše?|ašem?|ašim|aše?|ašich?|ašém|aše?|aše?|ašich?|ašema
 -
 každ|každÝ|každÉ
 ON|ON
@@ -9638,6 +9644,7 @@ nějak|nejak|každÝ|každÉ
 někter|neker|každÝ|každÉ
 mnoho|hodňe|mnohO|
 SE|SE
+n|nÁŠ|nÁŠ
 -
 jedNA|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 sedm|2||i|i|||i|i
@@ -9694,6 +9701,7 @@ mOCT|5|-1|oct|ohu,ůžu|ůžeš|ůže|ůžeme|ůžete|ohou,ůžou|ohl|ohl|ohla|o
 ukrÁST|15|-1|ást|adnu|adneš|adne|adneme|adnete|adnou|adni|adněme|adněte|adl|adl|adla|adlo|adli|adly|adly|adla|aden|aden|adena|adeno|adeni|adeny|adeny|adena
 neBÝT|119|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
 lÉZT|7|-1|ézt|ezu|ezeš|eze|ezeme|ezete|ezou|ez|ezme|ezte|ezl|ezl|ezla|ezlo|ezli|ezly|ezly|ezla
+rozsvÍTIT|30|-1|ítit|ítím|ítíš|ítí|ítme|ítte|ítí|iť|ítme|ítte|ítil|ítil|ítila|ítilo|ítili|ítily|ítily|ítila|ícen|ícen|ícena|íceno|íceni|íceny|íceny|ícena
 -
 žET|7|-1|ê|êjô|êješ|êje|êjeme|êjete|êjó|é|éme|éte|êl|êl|êla|êlo|êlê|êlê|êlê|êla
 slavIT|7|-1|it|im|iš|i|ime|ite|ijó||me|te|il|il|ila|ilo|ilê|ilê|ilê|ila
@@ -9725,6 +9733,7 @@ mUCT|5|-1|uct?|užô|užeš?|uže?|užeme?|užete?|užó|uhl|uhl|uhla|uhlo|uhlê
 okrAST|15|-1|ást?|adno|adneš|adne|adneme|adnete|adnó|adňi|adňime|adňite|adl|adl|adla|adlo|adlê|adlê|adlê|adla|aden|aden|adena|adené|adeni?|adeny?|adeny?|adena
 došólAT|0|-1|at
 lÉZT|7|-1|ézt?|ezu?|ezeš?|eze?|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ezl?|ezl?|ezla?|ezlo|ezli?|ezly?|ezly?|ezla?
+rožNOUT|30|-1|nót|nô|neš|ne|neme|nete|nó|ňi|ňime?|ňite?|l,nôl|l,nôl|la,nôla|lo,nôlo|lê,nôlê|lê,nôlê|lê,nôlê|la,nôla|nôt|nôt|nôta|nôté|nôtê|nôtê|nôtê|nota
 -
 BÝT|BÊT
 JÍT|JIT
@@ -9773,6 +9782,7 @@ vzd|zd|smÁT|stÁT
 zpravova|rechtovat||
 ž|žÍT|žET
 l|lÉZT|lÉZT
+rozs|rož|rozsvÍTIT|rožNOUT
 -
 hezky|pěkně
 rychle|alovante,hebno,ražmo

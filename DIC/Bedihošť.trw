@@ -1,0 +1,84 @@
+TW v1.0
+tBedihošť
+aGG
+d21.09.2023 14:59:31
+iNeznámé: kót, vidz \n\ndeštivý: pršlavé, ba ceďavé kót Bedihošť PV\ndôšnota Bedihošť PV\nexpr. oděv, zprav. roztrhaný, obnošený: tê vêpadáš! Neber si takovi cabachê Bedihošť PV\n tož žôchlalê vidz o domáckô Bedihošť PV
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Bediho%C5%A1%C5%A5+PV">sncj.ujc.cas.cz </a>
+g49.4480635,17.1660433
+q0
+-
+-
+-
+-
+-
+roztrhané oblečení|cabachê
+obnošené oblečení|cabachê
+nepodařených pečiv|cabachu
+nepodařené pečivo|cabach
+jednoduché pečivo|cabach
+jednoduchých pečiv|cabachu
+-
+|kót
+-
+vyp|vêp
+vy|vê
+up|ôp
+u|ô
+-
+-
+ali|alê
+-
+pár|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+domácnost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+hodnotA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+-
+pár|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+domácEK|1|ek?|i?|i?|?|i?|ko|í?|i?|í?|em?|i?|i?|ech?|mi?
+hodnotA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+-
+pár|pár|0|pár|pár
+dušnot|hodnotA|0|dôšnot|hodnotA
+domácnost|domácnost|0|domác|domácEK
+-
+-
+-
+deštivý|pršlavé||
+ceďavý|ceďavé||
+-
+tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+-
+TY|-1|tê|t[1]?,tebe?|t[1]?,tobě?|t[1]?,tebe?|ty?|tobě?|tebou?
+SE|-1|-|sebe?|si|se?,sebe?|-|sobě?|sebou?
+takovÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|i|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+-
+t||tY|TY
+SE|SE
+takov|takovÝ|takovÝ
+-
+-
+-
+-
+vypadAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+bRÁT|15|-1|rát|eru|ereš|ere|ereme|erete|erou|er|erme|erte|ral|ral|rala|ralo|rali|raly|raly|rala|rán|rán|rána|ráno|ráni|rány|rány|rána
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+-
+vypadAT|7|-1|at?|ám?|áš|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+bRÁT|15|-1|rát?|eru?|ereš?|ere?|ereme?|erete?|erou?|er|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráni?|rány?|rány?|rána?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+-
+vypad|vêpad|vypadAT|vypadAT
+b|bRÁT|bRÁT
+neb|bRÁT|bRÁT
+upéct|ôpekla||
+upíct|ôpekla||
+BÝT|BÝT
+|žôchlalê||
+-
+-
+o|
+-
+ba
+-
+-
