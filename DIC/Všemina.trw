@@ -1,7 +1,8 @@
-TW v0.1
+TW v1.0
 tVšemina
 d03.06.2023 10:35:27
-c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch; str. 114\n
+ijá pravím, zavołaj dochtora Všemi
+c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch; str. 114\nhttps://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf\n
 g49.2810116,17.876640
 q0
 -
@@ -9,6 +10,7 @@ q0
 -
 -
 -
+já říkám|já pravím
 -
 -
 nej|naj
@@ -18,62 +20,75 @@ ou|ú
 dují|dujú
 ými|ýma
 tají|tajú
+volej|vołaj
 -
 sluncE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 hoRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,lidi|lidí|lidem|lidi|lidé,lidi|lidech|lidmi
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
 -
 sluncE|0|e?|e?|i?|e|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
 strom|3|?|u?|u?|?|e?|u,ě?|em?|y?|ů?|om|y?|y?|ech?|ama
 ženA|1|a|y?|ě?|u?|o?|ě?|ou?|y|?|ám|y?|y?|ách?|ami?
 hoRA|1|ra?|ry?|ře?|ru?|ro?|ře?|rou?|ry|r?|rám?|ry?|ry?|rách?|rami?
 člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|ludé|lidí?|lidem?|lidi?|lidé,lidi?|lidech?|lidmi?
+syn|2|?|a|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 -
-slunc|sluncE|sluncE
-strom|strom|strom
-borovice|bory||
-líp|lip|ženA|ženA
-vrb|makyt|ženA|ženA
-olše||
-osyk||
-bříza|březa||
-javor||
-třešně|střešně||
-vesnice|dědina||
-ječmen|ječmeň||
-ho|hoRA|hoRA
-větev|haluz||
-štěstí|ščestí||
+slunc|sluncE|0|slunc|sluncE
+strom|strom|0|strom|strom
+borovice||0|bory|
+líp|ženA|0|lip|ženA
+vrb|ženA|0|makyt|ženA
+olše||0|olše|
+osyk||0|osyk|
+bříza||0|březa|
+javor||0|javor|
+třešně||0|střešně|
+vesnice||0|dědina|
+ječmen||0|ječmeň|
+ho|hoRA|0|ho|hoRA
+větev||0|haluz|
+štěstí||0|ščestí|
+doktor|syn|0|dochtor|syn
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|ej|ej|ou?|á?|ej|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|ej|ej|ou?|á?|ej|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
 smutn|zelenÝ|zelenÝ
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 ONI|-1|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
 SE|-1|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
 ONI|-1|oni?|jich,nich*?|jim,nim*?|je?,#ně|-|nich*?|jimi,nimi*?
 tEN|-1|en?|oho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
 -
 SE|SE
 ONI|ONI
 t|tEN|tEN
+JÁ|JÁ
 -
 -
 -
 -
 moct|0|-1|
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+pravIT|79|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena|iv|ivši|ivše
+zavolAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+pravIT|79|-1|it?|ím|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?|iv?|ivši?|ivše?
+zavoLAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|łaj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-|BÝT|BÝT
+BÝT|BÝT
+prav|pravIT|pravIT
+zavol|zavo|zavolAT|zavoLAT
 -
 jednou|jednúc
 zvlášť|zvlášče

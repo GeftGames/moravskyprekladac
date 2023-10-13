@@ -1,0 +1,50 @@
+TW v1.0
+tValašské Příkazy
+aGG
+d05.07.2023 10:24:07
+ia ptáł sa, co ho žádáš? Val. Příkazy 
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
+g49.1685982,18.0577676
+q0
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+-
+CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|něm**?|jím,ním*?
+-
+CO|CO
+ON|ON
+-
+-
+-
+-
+ptÁT_SE|22|-1|át_se|ám se|áš se|á se|áme se|áte se|ají se|ej se|ejme se|ejte se|al se|al se|ala se|alo se|ali se|aly se|aly se|ala se
+žádAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+-
+ptÁT_SE|22|2|át_se?|ám se?|áš se?|á se?|áme se?|áte se?|ají se?|ej se?|ejme se?|ejte se?|áł|al se?|ala se?|alo se?|ali se?|aly se?|aly se?|ala se?
+žádAT|15|-1|at?|ám?|áš|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+-
+pt|ptÁT_SE|ptÁT_SE
+žád|žádAT|žádAT
+-
+-
+-
+a
+-
+-

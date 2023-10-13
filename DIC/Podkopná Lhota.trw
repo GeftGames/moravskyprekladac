@@ -1,0 +1,73 @@
+TW v1.0
+tPodkopná Lhota
+d06.07.2023 15:11:15
+iříkáváł velebníček, že sa to zaříkało Podk. Lhota; \njá jářku, že hovno mi uďełá gdosi tamt\njá sem povídała, poďme, už nemłaďme! Podk. Lhota
+g49.3061059,17.8304083
+q0
+-
+-
+-
+-
+-
+já jsem říkala|já sem povídała
+-
+-
+-
+-
+valo|vało
+val|váł
+dala|dała
+-
+hovNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech,nách|ny
+-
+hovNO|0|no|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech,nách?|ny?
+-
+||0|velebňíček|
+hov|hovNO|0|hov|hovNO
+-
+-
+-
+-
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+-
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+-
+t|tEN|tEN
+SE|SE
+JÁ|JÁ
+-
+-
+-
+-
+říkávAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+povídAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+JÍT|95|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|šed|šedši|šedše
+mládNOUT|7|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la
+-
+říkávAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|áł|al?|ala?|ało|ali?|aly?|aly?|ala?
+uďeLAT|30|-1|at?|ám?|áš?|łá|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+povídAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ała|alo?|ali?|aly?|aly?|ala?
+JÍT|95|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|poďme|poďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|šed?|šedši?|šedše?
+młaDNOUT|7|-1|nout??|nu??|neš??|ne??|neme??|nete??|nou??|ni??|ďme|něte??|l??|l??|la??|lo??|li??|ly??|ly??|la??
+-
+říkáv|říkávAT|říkávAT
+uděl|uďe|udělAT|uďeLAT
+|BÝT|BÝT
+JÍT|JÍT
+mlád|mła|mládNOUT|młaDNOUT
+nemlád|nemła|mládNOUT|młaDNOUT
+-
+už
+-
+-
+že
+-
+-
+jářku

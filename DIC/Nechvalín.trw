@@ -1,7 +1,8 @@
-TW v0.1
+TW v1.0
 tNechvalín
 d29.05.2023 21:28:50
-c#Zdroje dat\n- Nástin české dialektologie - Bělič Jaromír; str. 261\n- Hláskosloví obce Nechvalína u Kyjova - Bělič, Jaromír\n\n#Poznámka\n-Tento překlad je věnován těm co místo OU říkali Ó, v této dědině někteří číkali i místo OU Ú, to tady v překladu není
+iSela sem já maryjánek 38\n- Nechvalín\n(hanácké)\nSela sem já maryjánek\nhore dolů na záhonek,\nsela sem ho z kapce\npro nechvalné chlapce.\nJak se chlapci dozvěděli,\nhneď na marjánek běželi,\nnatrhali ho moc,\nže byla světlá noc. 
+c#Zdroje dat\n- Nástin české dialektologie - Bělič Jaromír; str. 261\n- Hláskosloví obce Nechvalína u Kyjova - Bělič, Jaromír\n-https://is.muni.cz/th/eht4r/Bakalarkska_prace.pdf\n\n#Poznámka\n-Tento překlad je věnován těm co místo OU říkali Ó, v této dědině někteří číkali i místo OU Ú, to tady v překladu není
 g49.0541948,17.078696
 q0
 -
@@ -12,6 +13,7 @@ q0
 když jsme|dy sme
 z čech|š čech
 v tom|f tem
+nahoře dole|hore dolú
 -
 -
 ně|ne
@@ -46,17 +48,18 @@ kuřE|0|e?|ete?|eti?|e?|e?|eti?|etem?|ata?|at?|atům?|ata?|ata?|atech?|aty?
 klíšTĚ|0|tě?|těte?|těti?|tě?|tě?|těti?|tětem?|ťata?|ťat?|ťatům?|ťata?|ťata?|ťatech?|čama
 vŮZ|3|ůz?|ozu?|ozu?|ůz?|oze?|ozu,oze?|ozem?|ozy?|ozů?|ozům?|ozy?|ozy?|ozech?|ozy?
 -
-škol|školA|školA
-tříd|školA|školA
-správc|rechtor|soudcE|
-hor|školA|školA
-cest|školA|školA
-krabič|kisnič|pohádKA|pohádKA
-kafé||
-les|les|les
-klíš|klíšTĚ|klíšTĚ
-pec||
-půda|hůra||
+škol|školA|0|škol|školA
+tříd|školA|0|tříd|školA
+správc|soudcE|0|rechtor|
+hor|školA|0|hor|školA
+cest|školA|0|cest|školA
+krabič|pohádKA|0|kisnič|pohádKA
+kafé||0|kafé|
+les|les|0|les|les
+klíš|klíšTĚ|0|klíš|klíšTĚ
+pec||0|pec|
+půda||0|hůra|
+kaps|školA|0|kapc|školA
 -
 -
 -
@@ -111,8 +114,8 @@ JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojede
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 říkAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býl|býl|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
-chTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce?|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|těl?|těl?|těla?|tělo?|těli?|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
+BÝT|247|-1|být?|sem|jsi?|je?|sme|jste?|jsou?|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býl|býl|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+CHTÍT|15|-1|tít?|ci,(nářečně) chcu?|ceš?|ce?|ceme?|cete?|tějí,(zastarale) chtí,(nářečně) chcou?|těj?|tějme?|tějte?|těl?|těl?|scela|tělo?|těli?|těly?|těly?|těla?|těn?|těn?|těna?|těno?|těni?|těny?|těny?|těna?
 neJÍT|127|-1|jít|ndu?|jdeš?|nde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 bévAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?
@@ -124,7 +127,7 @@ MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají|měj?|mějme?|mějte?|m�
 říkAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
 BÝT|BÝT
-ch|chTÍT|chTÍT
+ch|chTÍT|CHTÍT
 JÍT|JÍT
 ne|JÍT|neJÍT
 býv|bév|bývAT|bévAT
@@ -155,6 +158,8 @@ tady
 včera|fčerá
 zítra|zétra
 jinak|ináč
+nohoře|hore
+hned|hneď
 -
 i|aji|
 do|

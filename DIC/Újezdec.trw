@@ -1,6 +1,8 @@
 TW v1.0
 tÚjezdec
 d25.06.2023 14:42:05
+ifčíl ten chłab začne fstávat a už neprší? Úje...\na dis sem vařiła, toš ten mładí, babi, kúšček trneg ňe dajte
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
 g49.0377434,17.2698897
 q0
 -
@@ -8,28 +10,77 @@ q0
 -
 -
 -
+tak ten|toš ten
+-
+babičko|babi
 -
 -
 -
+ila|iła
 -
+chlap|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+muž|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+mladÝ|2|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 -
--
+chłaB|2|b|pa?|povi,pu?|pa?|pe?|povi,pu?|pem?|pi,pové?|pů?|pům?|py?|pi,pové?|pech?|py?
+muž|2|?|e?|i,ovi?|e?|i?|i,ovi?|em?|i,ové?|ů?|ům?|e?|i,ové?|ích?|i?
+mladÝ|2|ý|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?
+stromEK|3|ek?|ku?|ku?|ek|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
+pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|eg|kám?|ky?|ky?|kách?|kami?
+školA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+trnKY|1|-|-|-|-|-|-|-|ky?|eg|kám?|ky?|ky?|kách?|kami?
 -
 angrešt||0|hegriš|
+chlap|chlap|0|chła|chłaB
+muž|muž|0|chła|chłaB
+kous|stromEK|0|kúšč|stromEK
+povidl|školA|0|trn|trnKY
 -
 -
 -
 -
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+-
+tEN|-1|en|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JÁ|-1|já?|mě,(knižně) mne[2]?|ňe|mě,(knižně) mne[2]?|já?|mně?|mnou?
+-
+t|tEN|tEN
+JÁ|JÁ
 -
 -
 -
 -
+začÍT|30|-1|ít|nu|neš|ne|neme|nete|nou|ni|něme|něte|al|al|ala|alo|ali|aly|aly|ala|at|at|ata|ato|ati|aty|aty|ata
+vstávAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+pršET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+vařIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+-
+začÍT|30|-1|ít?|nu?|neš?|ne|neme?|nete?|nou?|ni?|něme?|něte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|at?|at?|ata?|ato?|ati?|aty?|aty?|ata?
+fstávAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+pršET|7|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+vařIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|iła|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+-
+zač|začÍT|začÍT
+vstáv|vstávAT|fstávAT
+prš|pršET|pršET
+neprš|pršET|pršET
+|BÝT|BÝT
+vař|vařIT|vařIT
+d|dÁT|dÁT
+-
+teď,nyní|fčíl
+už
 -
 -
--
--
--
--
--
+a
+když|dys
 -
 -
