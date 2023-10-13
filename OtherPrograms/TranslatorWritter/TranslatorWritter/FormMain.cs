@@ -436,6 +436,7 @@ namespace TranslatorWritter {
                 string line = lines[i];
 
                 if (line == "-") break;
+                if (line=="") continue;
                 string subtype = line.Substring(0, 1);
                 switch (subtype) {
                     // Comment info
@@ -3252,7 +3253,7 @@ namespace TranslatorWritter {
             SaveCurrentNoun();
             itemsNouns = itemsNouns.OrderBy(a => a.From).ToList();
             NounRefreshFilteredList();
-            SetListBoxNoun();
+            NounSetListBox();
             doingJob = false;
         }
 
@@ -3261,7 +3262,7 @@ namespace TranslatorWritter {
             SaveCurrentNoun();
             itemsNouns = itemsNouns.OrderBy(a => itemsPatternNounFrom.GetItemWithName(a.PatternFrom)/* FindPatternFrom(a.PatternFrom)*/?.Gender).ToList();
             NounRefreshFilteredList();
-            SetListBoxNoun();
+            NounSetListBox();
             doingJob = false;
         }
 
@@ -3286,7 +3287,7 @@ namespace TranslatorWritter {
             SaveCurrentNoun();
             itemsNouns = itemsNouns.OrderBy(a =>itemsPatternNounFrom.GetItemWithName(a.PatternFrom)/*  FindPatternFrom(a.PatternFrom)*/?.Name).ToList();
             NounRefreshFilteredList();
-            SetListBoxNoun();
+            NounSetListBox();
             doingJob = false;
         }
 
@@ -5793,7 +5794,7 @@ namespace TranslatorWritter {
                 listBoxPatternNounFrom.Items.Add(textToAdd);
             }
 
-            //SetListBoxNoun();
+            //NounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){ 
@@ -6095,7 +6096,7 @@ namespace TranslatorWritter {
                 listBoxPatternNounTo.Items.Add(textToAdd);
             }
 
-            //SetListBoxNoun();
+            //NounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){ 
@@ -6335,7 +6336,7 @@ namespace TranslatorWritter {
            
             CurrentNoun=itemsNouns[index];
             SetCurrentNoun();
-            SetListBoxNoun();
+            NounSetListBox();
             doingJob=false;
         }  
         
@@ -6363,7 +6364,7 @@ namespace TranslatorWritter {
             for (int i=0; i<itemsNounsFiltered.Count; i++) {
                 ItemNoun item = itemsNounsFiltered[i];
                                 
-                string textToAdd=item.GetText();
+                string textToAdd=item.GetText(itemsPatternNounFrom, itemsPatternNounTo);
                 
                 //if (string.IsNullOrEmpty(textToAdd)) {
                 //    if (string.IsNullOrEmpty(item.PatternFrom)){ 
@@ -6374,7 +6375,7 @@ namespace TranslatorWritter {
                 listBoxNoun.Items.Add(textToAdd);
             }
 
-            //SetListBoxNoun();
+            //NounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){ 
@@ -6401,13 +6402,13 @@ namespace TranslatorWritter {
             itemsNouns.Remove(CurrentNoun);
         }
 
-        void SetListBoxNoun() { 
+        void NounSetListBox() { 
             int index=listBoxNoun.SelectedIndex;
             listBoxNoun.Items.Clear();
             for (int i=0; i<itemsNounsFiltered.Count; i++) {
                 ItemNoun item = itemsNounsFiltered[i];
                                 
-                string textToAdd=item.GetText();
+                string textToAdd=item.GetText(itemsPatternNounFrom, itemsPatternNounTo);
                 if (string.IsNullOrEmpty(textToAdd)) {
                     if (string.IsNullOrEmpty(item.PatternFrom)) {
                         textToAdd="<Neznámé>";
@@ -6455,8 +6456,8 @@ namespace TranslatorWritter {
             itemsNouns.Add(newItem);
             CurrentNoun=newItem;
             NounRefreshFilteredList();
-            SetListBoxNoun(); 
-            ListBoxSetCurrentNoun();
+            NounSetListBox(); 
+            NounListBoxSetCurrent();
             SetCurrentNoun(); 
             
             doingJob=false;
@@ -6467,7 +6468,7 @@ namespace TranslatorWritter {
             ChangeCaptionText();
             itemsNouns.Remove(item);
             NounRefreshFilteredList();
-            SetListBoxNoun();
+            NounSetListBox();
             SetCurrentNoun();
         } 
            
@@ -6514,7 +6515,7 @@ namespace TranslatorWritter {
             labelNounShowFrom.Visible=true;
         }
          
-        void ListBoxSetCurrentNoun() {
+        void NounListBoxSetCurrent() {
             for (int indexCur=0; indexCur<itemsNounsFiltered.Count; indexCur++) {
                 if (itemsNouns[indexCur]==CurrentNoun) { 
                     int indexList=listBoxNoun.SelectedIndex;
@@ -14294,10 +14295,14 @@ namespace TranslatorWritter {
         void toolStripMenuItem63_Click(object sender, EventArgs e) {
             string name = GetString("", "Název numery");
             if (name == null) return;
-
+            
+            if (name=="dvě" || name=="dva") {
+                AddNumber(ItemPatternNumber.Dve());
+                return;
+            }
             DownloadDataCompletedEventHandler handler=null;
         
-            try{
+            try {
                 handler += (sender2, e2) => {
                     if (e2.Error!=null) { 
                         MessageBox.Show("Error "+e2.Error.Message);
@@ -14306,60 +14311,86 @@ namespace TranslatorWritter {
                     var data = e2.Result;
                     string html = Encoding.UTF8.GetString(data);
                 
-                    List<Table> tables=new List<Table>();
-                    Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
-
-                    if (tables.Count==1) {
-                        Table table=tables[0];
-                
-                        if (table.Rows.Count==9 && table.Rows[2].Cells.Count==9) {
-                            ItemPatternNumber pattern = new ItemPatternNumber {
-                                Name = name,
-                                ShowType = NumberType.DeklinationWithGender,
-                                Shapes = new string[7 * 8]
-                            };
-
-
-                            for (int i=0; i<7; i++) pattern.Shapes[i+0*7]=table.Rows[2+i].Cells[1+0].Text;
-                            for (int i=0; i<7; i++) pattern.Shapes[i+2*7]=table.Rows[2+i].Cells[1+1].Text;
-                            for (int i=0; i<7; i++) pattern.Shapes[i+4*7]=table.Rows[2+i].Cells[1+2].Text;
-                            for (int i=0; i<7; i++) pattern.Shapes[i+6*7]=table.Rows[2+i].Cells[1+3].Text;
-                            
-                            for (int i=0; i<7; i++) pattern.Shapes[i+1*7]=table.Rows[2+i].Cells[1+4].Text;
-                            for (int i=0; i<7; i++) pattern.Shapes[i+3*7]=table.Rows[2+i].Cells[1+5].Text;
-                            for (int i=0; i<7; i++) pattern.Shapes[i+5*7]=table.Rows[2+i].Cells[1+6].Text;
-                            for (int i=0; i<7; i++) pattern.Shapes[i+7*7]=table.Rows[2+i].Cells[1+7].Text;
-                           
-                            
-                        
-                            pattern.Optimize();
-
-                            itemsPatternNumberFrom.Add(pattern);
-                            PatternNumberFromRefreshFilteredList();
-                            PatternNumberFromSetListBox();
-                            PatternNumberFromListBoxSetCurrent();
-                        } else if (table.Rows.Count==8 && table.Rows[2].Cells.Count==2) {
-                            ItemPatternNumber pattern = new ItemPatternNumber {
-                                Name = name,
-                                ShowType = NumberType.DeklinationOnlySingle,
-                                Shapes = new string[7 * 8]
-                            };
-
-                            for (int i=0; i<7; i++) {
-                                pattern.Shapes[i]=table.Rows[1+i].Cells[1].Text;
-                            } 
-                        
-                            pattern.Optimize();
-
-                            itemsPatternNumberFrom.Add(pattern);
-                            PatternNumberFromRefreshFilteredList();
-                            PatternNumberFromSetListBox();
-                            PatternNumberFromListBoxSetCurrent();
-                        }
+                    ItemPatternNumber pattern = ParseItemWikidirectonary.ItemPatternNumber(html, out string error, name);
+                    if (!string.IsNullOrEmpty(error)) MessageBox.Show(error);
+                    if (pattern!=null) {
+                        AddNumber(pattern);                       
                     }
                 };
             }catch{ MessageBox.Show("Error");}
             Computation.DownloadString(ref handler, name);
+
+            void AddNumber(ItemPatternNumber pattern) {
+                itemsPatternNumberFrom.Add(pattern);
+                PatternNumberFromRefreshFilteredList();
+                PatternNumberFromSetListBox();
+                PatternNumberFromListBoxSetCurrent();
+            }
+            //DownloadDataCompletedEventHandler handler=null;
+        
+            //try{
+            //    handler += (sender2, e2) => {
+            //        if (e2.Error!=null) { 
+            //            MessageBox.Show("Error "+e2.Error.Message);
+            //            return;    
+            //        }
+            //        var data = e2.Result;
+            //        string html = Encoding.UTF8.GetString(data);
+                
+            //        List<Table> tables=new List<Table>();
+            //        Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
+
+            //        if (tables.Count==1) {
+            //            Table table=tables[0];
+                
+            //            if (table.Rows.Count==9 && table.Rows[2].Cells.Count==9) {
+            //                ItemPatternNumber pattern = new ItemPatternNumber {
+            //                    Name = name,
+            //                    ShowType = NumberType.DeklinationWithGender,
+            //                    Shapes = new string[7 * 8]
+            //                };
+
+
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+0*7]=table.Rows[2+i].Cells[1+0].Text;
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+2*7]=table.Rows[2+i].Cells[1+1].Text;
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+4*7]=table.Rows[2+i].Cells[1+2].Text;
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+6*7]=table.Rows[2+i].Cells[1+3].Text;
+                            
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+1*7]=table.Rows[2+i].Cells[1+4].Text;
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+3*7]=table.Rows[2+i].Cells[1+5].Text;
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+5*7]=table.Rows[2+i].Cells[1+6].Text;
+            //                for (int i=0; i<7; i++) pattern.Shapes[i+7*7]=table.Rows[2+i].Cells[1+7].Text;
+                           
+                            
+                        
+            //                pattern.Optimize();
+
+            //                itemsPatternNumberFrom.Add(pattern);
+            //                PatternNumberFromRefreshFilteredList();
+            //                PatternNumberFromSetListBox();
+            //                PatternNumberFromListBoxSetCurrent();
+            //            } else if (table.Rows.Count==8 && table.Rows[2].Cells.Count==2) {
+            //                ItemPatternNumber pattern = new ItemPatternNumber {
+            //                    Name = name,
+            //                    ShowType = NumberType.DeklinationOnlySingle,
+            //                    Shapes = new string[7 * 8]
+            //                };
+
+            //                for (int i=0; i<7; i++) {
+            //                    pattern.Shapes[i]=table.Rows[1+i].Cells[1].Text;
+            //                } 
+                        
+            //                pattern.Optimize();
+
+            //                itemsPatternNumberFrom.Add(pattern);
+            //                PatternNumberFromRefreshFilteredList();
+            //                PatternNumberFromSetListBox();
+            //                PatternNumberFromListBoxSetCurrent();
+            //            }
+            //        }
+            //    };
+            //}catch{ MessageBox.Show("Error");}
+            //Computation.DownloadString(ref handler, name);
         }
 
         void toolStripMenuItem66_Click(object sender, EventArgs e) {
@@ -14548,7 +14579,25 @@ namespace TranslatorWritter {
             }
         }
 
-        void clearToolStripMenuItem4_Click(object sender, EventArgs e) {
+        void PatternNounFromRefresh() {
+            PatternNounFromRefreshFilteredList();
+            PatternNounFromSetListBox();
+            PatternNounFromListBoxSetCurrent();
+        }      
+        
+        void PatternNounToRefresh() {
+            PatternNounToRefreshFilteredList();
+            PatternNounToSetListBox();
+            PatternNounToListBoxSetCurrent();
+        } 
+        
+        void NounRefresh() {
+            NounRefreshFilteredList();
+            NounSetListBox();
+            NounListBoxSetCurrent();
+        }
+
+        void ClearToolStripMenuItem4_Click(object sender, EventArgs e) {
             if (CurrentPatternPronounFrom==null) return;
             switch (CurrentPatternPronounFrom.Type) { 
                 case PronounType.Unknown:
@@ -14983,7 +15032,7 @@ namespace TranslatorWritter {
                             }else itemsSimpleWords.Add(new ItemSimpleWord{ From=t.From[0],To=t.To[0]});
 
                             NounRefreshFilteredList();
-                            SetListBoxNoun();
+                            NounSetListBox();
                 
                             AdjectiveRefreshFilteredList();
                             AdjectiveSetListBox();
@@ -15511,6 +15560,93 @@ namespace TranslatorWritter {
             }
         }
 
+        private void AddLinkedFromtoToolStripMenuItem3_Click(object sender, EventArgs e) {
+            string name = GetString("", "Název substantiva");
+            if (name == null) return;
+
+            DownloadDataCompletedEventHandler handler=null;
+            #if !DEBUG
+            try{
+            #endif
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+
+                    ItemPatternNoun pattern = ParseItemWikidirectonary.ItemPatternNoun(html, out string error, name);
+                    if (!string.IsNullOrEmpty(error)) MessageBox.Show(error);
+                    if (pattern!=null) {
+                        itemsPatternNounFrom.Add(pattern);
+                        PatternNounFromRefresh();
+
+                        ItemPatternNoun patternTo=pattern.Clone();
+                        patternTo.AddQuestionMark();
+
+                        itemsPatternNounTo.Add(patternTo);
+
+                        PatternNounToRefresh();
+
+                        ItemNoun num = new ItemNoun {
+                            PatternFrom = pattern.Name,
+                            From = pattern.GetPrefix(),
+
+                            To = new List<(string,string)>(){(pattern.GetPrefix(), patternTo.Name)},
+                        };
+                        itemsNouns.Add(num);
+                      
+                        NounRefresh();
+                    }
+                };
+            #if !DEBUG
+            } catch { MessageBox.Show("Error");} 
+            #endif
+            Computation.DownloadString(ref handler, name);
+        }
+
+        private void addStartingStringToolStripMenuItem4_Click(object sender, EventArgs e) {
+            if (CurrentPatternVerbTo!=null) { 
+                PatternVerbToSaveCurrent();
+                FormString form=new FormString();
+                form.LabelText="Přidat na začátek verba string";
+                form.ShowDialog();
+                string str=form.ReturnString;
+                if (!string.IsNullOrEmpty(str)) CurrentPatternVerbTo.AddStartingString(str);
+                PatternVerbToSetCurrent();
+            }
+        }
+
+        private void toolStripMenuItemNumberAdd_Click(object sender, EventArgs e) {
+
+        }
+
+        private void addStartingStringToolStripMenuItem5_Click(object sender, EventArgs e) {
+             if (CurrentPatternNumberTo!=null) { 
+                PatternNumberToSaveCurrent();
+                FormString form=new FormString();
+                form.LabelText="Přidat na začátek pronoma string";
+                form.ShowDialog();
+                string str=form.ReturnString;
+                if (!string.IsNullOrEmpty(str)) CurrentPatternNumberTo.AddStartingString(str);
+                PatternNumberToSetCurrent();
+            }
+        }
+
+        private void tabControl1_Resize(object sender, EventArgs e) {
+            textBoxComment.Height=tabPage41.Height-textBoxComment.Location.Y;
+        }
+
+        private void toolStripMenuItem23_Click_1(object sender, EventArgs e) {
+            doingJob = true;
+            SaveCurrentAdverb();
+            itemsAdverbs = itemsAdverbs.OrderBy(a => a.From).ToList();
+            AdverbRefreshFilteredList();
+            SetListBoxAdverb();
+            doingJob = false;
+        }
+
         void addFromToToolStripMenuItem2_Click(object sender, EventArgs e) {
             string name = GetString("", "Název verb");
             if (name == null) return;
@@ -15708,79 +15844,6 @@ namespace TranslatorWritter {
         }
 
         void addFromtoToolStripMenuItem3_Click(object sender, EventArgs e) {
-             string name = GetString("", "Název numery");
-            if (name == null) return;
-
-            DownloadDataCompletedEventHandler handler=null;
-        
-            try{
-                handler += (sender2, e2) => {
-                    if (e2.Error!=null) { 
-                        MessageBox.Show("Error "+e2.Error.Message);
-                        return;    
-                    }
-                    var data = e2.Result;
-                    string html = Encoding.UTF8.GetString(data);
-                
-                    List<Table> tables=new List<Table>();
-                    Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
-
-                    if (tables.Count>=1) { 
-                        Table table=tables[0];
-                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
-                            ItemPatternNumber pattern = new ItemPatternNumber {
-                                Name = name,
-                                ShowType = NumberType.DeklinationWithGender,
-                                Shapes = new string[8*7]
-                            };
-
-                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
-
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
-   
-                            pattern.Optimize();
-                            itemsPatternNumberFrom.Add(pattern);
-                            PatternNumberFromRefresh();
-
-                            ItemPatternNumber pattern2=pattern.Clone();
-                            pattern2.AddQuestionMark();
-                            itemsPatternNumberTo.Add(pattern2);
-
-                            PatternNumberToRefresh();
-                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
-                            ItemPatternNumber pattern = new ItemPatternNumber {
-                                Name = name,
-                                ShowType = NumberType.DeklinationOnlySingle,
-                                Shapes = new string[7]
-                            };
-                            for (int c=0; c<7; c++) {  
-                                pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
-                            }
-
-                            pattern.Optimize();
-                            itemsPatternNumberFrom.Add(pattern);
-
-                            PatternNumberFromRefresh();
-
-                            ItemPatternNumber pattern2=pattern.Clone();
-                            pattern2.AddQuestionMark();
-                            itemsPatternNumberTo.Add(pattern2);
-
-                            PatternNumberToRefresh();
-                        }
-                    }
-                };
-            }catch{ MessageBox.Show("Error");}
-            Computation.DownloadString(ref handler, name);
-        }
-
-        void addLinkedFromtoToolStripMenuItem_Click(object sender, EventArgs e) {
             string name = GetString("", "Název numery");
             if (name == null) return;
 
@@ -15795,71 +15858,146 @@ namespace TranslatorWritter {
                     var data = e2.Result;
                     string html = Encoding.UTF8.GetString(data);
                 
-                    List<Table> tables=new List<Table>();
-                    Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
-
-                    if (tables.Count>=1) { 
-                        Table table=tables[0];
-                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
-                            ItemPatternNumber pattern = new ItemPatternNumber {
-                                Name = name,
-                                ShowType = NumberType.DeklinationWithGender,
-                                Shapes = new string[8*7]
-                            };
-
-                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
-
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
-   
-                            pattern.Optimize();
-                            itemsPatternNumberFrom.Add(pattern);
-                            PatternNumberFromRefresh();
-
-                            ItemPatternNumber pattern2=pattern.Clone();
-                            pattern2.AddQuestionMark();
-                            itemsPatternNumberTo.Add(pattern2);
-
-                            PatternNumberToRefresh();
-                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
-                            ItemPatternNumber pattern = new ItemPatternNumber {
-                                Name = name,
-                                ShowType = NumberType.DeklinationOnlySingle,
-                                Shapes = new string[7]
-                            };
-                            for (int c=0; c<7; c++) pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
-
-                            pattern.Optimize();
-                            itemsPatternNumberFrom.Add(pattern);
-
-                            PatternNumberFromRefresh();
-
-                            ItemPatternNumber pattern2=pattern.Clone();
-                            pattern2.AddQuestionMark();
-                            itemsPatternNumberTo.Add(pattern2);
-
-                            PatternNumberToRefresh();
-
-                            ItemNumber num = new ItemNumber {
-                                PatternFrom = pattern.Name,
-                                PatternTo = pattern2.Name,
-
-                                From = pattern.GetPrefix(),
-                                To = pattern.GetPrefix(),
-                            };
-                            itemsNumbers.Add(num);
-
-                            NumberRefresh();
-                        }
+                    ItemPatternNumber pattern = ParseItemWikidirectonary.ItemPatternNumber(html, out string error, name);
+                    if (!string.IsNullOrEmpty(error)) MessageBox.Show(error);
+                    if (pattern!=null) {
+                        AddNumber(pattern);                       
                     }
                 };
             }catch{ MessageBox.Show("Error");}
             Computation.DownloadString(ref handler, name);
+
+
+            void AddNumber(ItemPatternNumber pattern) {
+                itemsPatternNumberFrom.Add(pattern);
+                PatternNumberFromRefresh();
+
+                ItemPatternNumber pattern2 = pattern.Clone();
+                pattern2.AddQuestionMark();
+                itemsPatternNumberTo.Add(pattern2);
+                PatternNumberToRefresh();
+            }
+            
+            //                itemsPatternNumberFrom.Add(pattern);
+            //                PatternNumberFromRefreshFilteredList();
+            //                PatternNumberFromSetListBox();
+            //                PatternNumberFromListBoxSetCurrent();
+            //try{
+            //    handler += (sender2, e2) => {
+            //        if (e2.Error!=null) { 
+            //            MessageBox.Show("Error "+e2.Error.Message);
+            //            return;    
+            //        }
+            //        var data = e2.Result;
+            //        string html = Encoding.UTF8.GetString(data);
+                
+            //        List<Table> tables=new List<Table>();
+            //        Computation.FindTableInHTML(html, "deklinace numerale", ref tables);
+
+            //        if (tables.Count>=1) { 
+            //            Table table=tables[0];
+            //            if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+            //                ItemPatternNumber pattern = new ItemPatternNumber {
+            //                    Name = name,
+            //                    ShowType = NumberType.DeklinationWithGender,
+            //                    Shapes = new string[8*7]
+            //                };
+
+            //                for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
+
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
+            //                for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+   
+            //                pattern.Optimize();
+            //                itemsPatternNumberFrom.Add(pattern);
+            //                PatternNumberFromRefresh();
+
+            //                ItemPatternNumber pattern2=pattern.Clone();
+            //                pattern2.AddQuestionMark();
+            //                itemsPatternNumberTo.Add(pattern2);
+
+            //                PatternNumberToRefresh();
+            //            } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
+            //                ItemPatternNumber pattern = new ItemPatternNumber {
+            //                    Name = name,
+            //                    ShowType = NumberType.DeklinationOnlySingle,
+            //                    Shapes = new string[7]
+            //                };
+            //                for (int c=0; c<7; c++) {  
+            //                    pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
+            //                }
+
+            //                pattern.Optimize();
+            //                itemsPatternNumberFrom.Add(pattern);
+
+            //                PatternNumberFromRefresh();
+
+            //                ItemPatternNumber pattern2=pattern.Clone();
+            //                pattern2.AddQuestionMark();
+            //                itemsPatternNumberTo.Add(pattern2);
+
+            //                PatternNumberToRefresh();
+            //            }
+            //        }
+            //    };
+            //}catch{ MessageBox.Show("Error");}
+            //Computation.DownloadString(ref handler, name);
+        }
+
+        void addLinkedFromtoToolStripMenuItem_Click(object sender, EventArgs e) {
+            string name = GetString("", "Název numery");
+            if (name == null) return;
+            if (name=="dvě" || name=="dva") {
+                AddNumber(ItemPatternNumber.Dve());
+                return;
+            }
+            DownloadDataCompletedEventHandler handler=null;
+        
+            try {
+                handler += (sender2, e2) => {
+                    if (e2.Error!=null) { 
+                        MessageBox.Show("Error "+e2.Error.Message);
+                        return;    
+                    }
+                    var data = e2.Result;
+                    string html = Encoding.UTF8.GetString(data);
+                
+                    ItemPatternNumber pattern = ParseItemWikidirectonary.ItemPatternNumber(html, out string error, name);
+                    if (!string.IsNullOrEmpty(error)) MessageBox.Show(error);
+                    if (pattern!=null) {
+                        AddNumber(pattern);                       
+                    }
+                };
+            }catch{ MessageBox.Show("Error");}
+            Computation.DownloadString(ref handler, name);
+
+
+            void AddNumber(ItemPatternNumber pattern) { 
+                itemsPatternNumberFrom.Add(pattern);
+                PatternNumberFromRefresh();
+
+                ItemPatternNumber pattern2=pattern.Clone();
+                pattern2.AddQuestionMark();
+                itemsPatternNumberTo.Add(pattern2);
+
+                PatternNumberToRefresh();
+
+                ItemNumber num = new ItemNumber {
+                    PatternFrom = pattern.Name,
+                    PatternTo = pattern2.Name,
+
+                    From = pattern.GetPrefix(),
+                    To = pattern2.GetPrefix(),
+                };
+                itemsNumbers.Add(num);
+
+                NumberRefresh();
+            }
         }
 
         void tENToolStripMenuItem2_Click(object sender, EventArgs e) {

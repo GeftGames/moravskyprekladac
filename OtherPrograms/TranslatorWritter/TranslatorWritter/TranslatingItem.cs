@@ -930,8 +930,7 @@ namespace TranslatorWritter {
                         break;
                     }
                 }
-                if (!isFirstCharSimilar)
-                    break;
+                if (!isFirstCharSimilar) break;
 
                 same++;
             }
@@ -1063,23 +1062,50 @@ namespace TranslatorWritter {
             return data.Substring(0,data.Length-1);
         }
 
-        protected bool Valid() {
-            if (string.IsNullOrEmpty(PatternFrom)) return false;
-
+        protected bool Valid(List<ItemPatternNoun> pattersFrom, List<ItemPatternNoun> pattersTo) {
+            // From
             if (From.Contains(notAllowed)) return false;
 
+            // Pattern From
+            if (string.IsNullOrEmpty(PatternFrom)) return false;
             if (PatternFrom.Contains(notAllowed)) return false;
 
+            {
+                bool nexists=true;
+                foreach (ItemPatternNoun pattern in pattersFrom) { 
+                    if (pattern.Name==PatternFrom) { 
+                        nexists=false;
+                        break;    
+                    }
+                }
+                if (nexists) return false;
+            }
+
+            // To
+            if (To.Count<=0) return false;
+
             foreach ((string,string) d in To) { 
+                // To body
                 if (d.Item1.  Contains(notAllowed)) return false;
+
+                // To ending
                 if (string.IsNullOrEmpty(d.Item2)) return false;
                 if (d.Item2.  Contains(notAllowed)) return false;
+
+                bool nexists=true;
+                foreach (ItemPatternNoun pattern in pattersTo) { 
+                    if (pattern.Name==d.Item2) { 
+                        nexists=false;
+                        break;    
+                    }
+                }
+                if (nexists) return false;
             }
 
             return true;
         }
 
-        internal string GetText() {
+        internal string GetText(List<ItemPatternNoun> pattersFrom, List<ItemPatternNoun> pattersTo) {
             if (string.IsNullOrEmpty(From)) {
                 if (string.IsNullOrEmpty(PatternFrom)) {
                     return "<Neznámé>";
@@ -1088,21 +1114,24 @@ namespace TranslatorWritter {
                 }
             } else {
                 if (string.IsNullOrEmpty(PatternFrom)) {
-                    if (!Valid()) return "⚠"+From;
-                    return From;
-                } else {
-                   // if (string.IsNullOrEmpty(PatternTo)) {
-                        if (PatternFrom.StartsWith(From)) {
-                            return /*"⚠"+*/PatternFrom;
-                        } else return /*"⚠"+*/From;
-                    //}else{ 
-                   //     if (PatternFrom.StartsWith(From)) {
-                    //        return PatternFrom;
-                    //    } else return From;
-                   // }
+                    if (Valid(pattersFrom, pattersTo)) {
+                        return From;
+                    } else return "⚠"+From;
+                } else {    
+                    if (PatternFrom.StartsWith(From)) {
+                        if (Valid(pattersFrom, pattersTo)) {
+                            return PatternFrom;                           
+                        } else return "⚠"+From;
+                    } else {
+                        if (Valid(pattersFrom, pattersTo)) {
+                            return From+Methods.GetUpperCaseEnding(PatternFrom);
+                        } else return "⚠"+From+Methods.GetUpperCaseEnding(PatternFrom);
+                    }
                 }
             }
         }
+
+    
     }
 
     public enum WordUpperCaseType{ 
@@ -2077,6 +2106,77 @@ namespace TranslatorWritter {
 
         //    return true;
         //}
+        public static ItemPatternNumber Dve() => new ItemPatternNumber{ 
+            Name="dvA",
+            Shapes=new string[14*4] { 
+                "a",
+                "ou",
+                "ěma",
+                "a",
+                "a",
+                "ou",
+                "ěma",
+
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+
+                "a",
+                "ou",
+                "ěma",
+                "a",
+                "a",
+                "ou",
+                "ěma",
+
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+
+                "ě",
+                "ou",
+                "ěma",
+                "ě",
+                "ě",
+                "ou",
+                "ěma",
+
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+
+                "ě",
+                "ou",
+                "ěma",
+                "ě",
+                "ě",
+                "ou",
+                "ěma",
+
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",
+                "-",                
+            },
+            type=NumberType.DeklinationWithGender,
+        };
+
+
         public NumberType ShowType{
             get{ return type; }
             set{
@@ -2271,6 +2371,21 @@ namespace TranslatorWritter {
                     } else { 
                         Shapes[i]=Shapes[i]+'?';
                     }
+                }
+            }
+        }
+
+        internal void AddStartingString(string str) {
+            for (int i=0; i<Shapes.Length; i++) {
+                var shape = Shapes[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Shapes[i]=set.Substring(0, set.Length-1);
+                    } else Shapes[i]=str+shape;
                 }
             }
         }
@@ -2725,14 +2840,39 @@ namespace TranslatorWritter {
                     for (int a=0; a<arr.Length; a++) {
                         if (arr[a]==null)continue;
                         if (arr[a]=="-") continue;
-                        if (arr[a].EndsWith(" "))arr[a]=arr[a].Substring(0, arr[a].Length-1);
+                        if (arr[a].EndsWith(" se")) arr[a]=arr[a].Substring(0,arr[a].Length-3);
+                        else if (arr[a].EndsWith(" si")) arr[a]=arr[a].Substring(0,arr[a].Length-3);
+                        else if (arr[a].EndsWith("_se")) arr[a]=arr[a].Substring(0,arr[a].Length-3);
+                        else if (arr[a].EndsWith("_si")) arr[a]=arr[a].Substring(0,arr[a].Length-3);
+                        else if (arr[a].EndsWith(" se?")) arr[a]=arr[a].Substring(0,arr[a].Length-4)+"?";
+                        else if (arr[a].EndsWith(" si?")) arr[a]=arr[a].Substring(0,arr[a].Length-4)+"?";
+                        else if (arr[a].EndsWith(" "))arr[a]=arr[a].Substring(0, arr[a].Length-1);
                         arr[a]=arr[a].Substring(same);
                     }
                 }
                 if (Infinitive.EndsWith(" ")) Infinitive=Infinitive.Substring(0, Infinitive.Length-1);
                 Infinitive=Infinitive.Substring(same);
             }else{ 
+                foreach (string[] arr in toforeach) {
+                    for (int a=0; a<arr.Length; a++) {
+                        if (arr[a].EndsWith(" se")) arr[a]=arr[a].Substring(0,arr[a].Length-3);
+                        else if (arr[a].EndsWith(" si")) arr[a]=arr[a].Substring(0,arr[a].Length-3);
+                        else if (arr[a].EndsWith(" se?")) arr[a]=arr[a].Substring(0,arr[a].Length-4)+"?";
+                        else if (arr[a].EndsWith(" si?")) arr[a]=arr[a].Substring(0,arr[a].Length-4)+"?";
+                        else if (arr[a].EndsWith(" "))arr[a]=arr[a].Substring(0, arr[a].Length-1);
+                        arr[a]=arr[a].Substring(same);
+                    }
+                }
                 Name=Name.ToUpper();
+                if (Infinitive.EndsWith(" ")) Infinitive=Infinitive.Substring(0, Infinitive.Length-1);
+                else if (Infinitive.EndsWith(" se")) Infinitive=Infinitive.Substring(0,Infinitive.Length-3);
+                else if (Infinitive.EndsWith(" si")) Infinitive=Infinitive.Substring(0, Infinitive.Length-3);
+                else if (Infinitive.EndsWith("_se")) Infinitive=Infinitive.Substring(0,Infinitive.Length-3);
+                else if (Infinitive.EndsWith("_si")) Infinitive=Infinitive.Substring(0, Infinitive.Length-3);
+                else if (Infinitive.EndsWith("_se?")) Infinitive=Infinitive.Substring(0,Infinitive.Length-4)+"?";
+                else if (Infinitive.EndsWith("_si?")) Infinitive=Infinitive.Substring(0,Infinitive.Length-4)+"?";
+                else if (Infinitive.EndsWith(" se?")) Infinitive=Infinitive.Substring(0,Infinitive.Length-4)+"?";
+                else if (Infinitive.EndsWith(" si?")) Infinitive=Infinitive.Substring(0,Infinitive.Length-4)+"?";
             }
         }
 
@@ -2764,6 +2904,108 @@ namespace TranslatorWritter {
             if (Infinitive!="-")Infinitive+='?';
         }
 
+        internal void AddStartingString(string str) {
+            for (int i=0; i<Continous.Length; i++) {
+                var shape = Continous[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Continous[i]=set.Substring(0, set.Length-1);
+                    } else Continous[i]=str+shape;
+                }
+            }
+
+            for (int i=0; i<Future.Length; i++) {
+                var shape = Future[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Future[i]=set.Substring(0, set.Length-1);
+                    } else Future[i]=str+shape;
+                }
+            }
+
+            for (int i=0; i<PastActive.Length; i++) {
+                var shape = PastActive[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        PastActive[i]=set.Substring(0, set.Length-1);
+                    } else PastActive[i]=str+shape;
+                }
+            }
+
+            for (int i=0; i<PastPassive.Length; i++) {
+                var shape = PastPassive[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        PastPassive[i]=set.Substring(0, set.Length-1);
+                    } else PastPassive[i]=str+shape;
+                }
+            }
+
+            for (int i=0; i<Imperative.Length; i++) {
+                var shape = Imperative[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        Imperative[i]=set.Substring(0, set.Length-1);
+                    } else Imperative[i]=str+shape;
+                }
+            }
+
+            for (int i=0; i<TransgressiveCont.Length; i++) {
+                var shape = TransgressiveCont[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        TransgressiveCont[i]=set.Substring(0, set.Length-1);
+                    } else TransgressiveCont[i]=str+shape;
+                }
+            }
+
+            for (int i=0; i<TransgressivePast.Length; i++) {
+                var shape = TransgressivePast[i];
+                if (shape!="-") { 
+                    if (shape.Contains(",")) { 
+                        string set="";
+                        foreach (string s in shape.Split(',')) { 
+                            set+=str+s+",";
+                        }
+                        TransgressivePast[i]=set.Substring(0, set.Length-1);
+                    } else TransgressivePast[i]=str+shape;
+                }
+            }          
+             
+            if (Infinitive!="-") { 
+                if (Infinitive.Contains(",")) { 
+                    string set="";
+                    foreach (string s in Infinitive.Split(',')) { 
+                        set+=str+s+",";
+                    }
+                    Infinitive=set.Substring(0, set.Length-1);
+                } else Infinitive=str+Infinitive;
+            }          
+        }
     }
 
     class ItemVerb : ItemTranslatingUsingPatterns{
