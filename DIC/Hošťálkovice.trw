@@ -14,6 +14,9 @@ q0
 -
 nemám čas|ňemam času
 s tebou|s tebu
+posviť na|blinkňi tam
+lépe to uvidíš|lepšy to uvidžyš
+posviť mi na tu|blinkňi tam tu
 -
 -
 ne|ňe
@@ -27,17 +30,20 @@ okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 havíř|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
 čas|3||u|u||e|e,u|em|y|ů|ům|y|y|ech|y
 člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+světLO|0|lo|la|lu|lo|lo|le|lem|la|el|lům|la|la|lech|ly
 -
 okNO|0|no?|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech?|ny?
 haviř|2|?|e?|i,ovi?|e?|i?|i,ovi?|em?|i?|y|ům?|e?|i?|ích?|i?
 čas|3|?|u?|u?|?|e?|e,u?|em?|y?|ů?|ům?|u|y?|ech?|y?
 člověk|2|člověk?|čłovjeka|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|lidé,(v&#160;obecném jazyce) lidi?|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
+světLO|0|ło|la?|lu?|lo?|lo?|le?|lem?|la?|el?|lům?|la?|la?|lech?|ly?
 -
 pravda||0|pra|
 světnice||0|jizba|
 havíř|havíř|0|haviř|haviř
 čas|čas|0|čas|čas
 |člověk|0||člověk
+svět|světLO|0|svjet|světLO
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
@@ -54,7 +60,7 @@ SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 CO|-1|co|čeho|čemu|co,-č|-|čem|čím
 -
-tEN|-1|en|eho|emu|oho?|-|ym|ym|či|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|emu|en?|-|ym|ym?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|eho|emu|o?|-|ym|ym?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+TEN|-1|en|eho|emu|oho?|-|ym|ym|či|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|emu|en?|-|ym|ym?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|eho|emu|o|-|ym|ym?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 ONI|-1|oňi|jich,nich*?|jim,nim*?|je,ně*?|-|nich*?|jimi,nimi*?
 ONA|-1|ona?|jí,ní*?|jí,ní*?|ju,ni?|-|ní*?|jí,ní*?
 MY|-1|my?|naz|nám?|nás?|my?|nás?|námi?
@@ -63,7 +69,7 @@ SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
 tY|-1|y?|[1],ebe?|[1],obě?|[1],ebe?|y?|obě?|ebou?
 CO|-1|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-t||tEN|tEN
+t||tEN|TEN
 ONI|ONI
 ONA|ONA
 MY|MY
@@ -88,6 +94,8 @@ křičET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|
 bavIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+rozsvÍTIT|30|-1|ítit|ítím|ítíš|ítí|ítíme|ítíte|ítí|iť|iťme|iťte|ítil|ítil|ítila|ítilo|ítili|ítily|ítily|ítila|ícen|ícen|ícena|íceno|íceni|íceny|íceny|ícena
+uvidĚT|28|-1|ět|ím|íš|í|íme|íte|í|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|był|był|była|było|byli?|były|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 meškAT|15|-1|at?|ím?|íš?|í?|íme?|íte?|í,bydlejí?|i?|eme?|ete?|el?|el?|ela?|elo?|ali|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
@@ -99,6 +107,8 @@ křyčET|15|-1|et?|ím?|íš?|y|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?
 bavIT|15|-1|ič|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 dožyrAT|15|-1|at?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|aj|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 vĚDĚT|7|-1|ědět?|im|íš?|í?|íme?|íte?|ědí?|ěz?|ězme?|ězte?|ěděl?|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
+blinkNUČ|15|-1|nuč|ítím?|ítíš?|ňi|ítíme?|ítíte?|ítí?|iť?|iťme?|iťte?|ítil?|ítil?|ítila?|ítilo?|ítili?|ítily?|ítily?|ítila?|ícen?|ícen?|ícena?|íceno?|íceni?|íceny?|íceny?|ícena?
+uvidĚT|28|-1|ět?|ím?|žyš|í?|íme?|íte?|í?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 -
 BÝT|BÝT
 bydl|bydlET|bydlET
@@ -113,6 +123,8 @@ neotrav|ňedožyr|otravOVAT|dožyrAT
 ne|ňe|MÍT|MÍT
 v|vĚDĚT|vĚDĚT
 nev|ňev|vĚDĚT|vĚDĚT
+rozsv|rož|rozsvÍTIT|svÍTIT
+uvid|uvidĚT|uvidĚT
 -
 teď|fčyl
 jednou|raz
@@ -123,6 +135,7 @@ tam
 zas
 souhrnně|cełkovje
 pořád|furt
+lépe|lepšy
 -
 ve|
 za|
@@ -131,4 +144,3 @@ vždyť|dy
 aby|coby
 -
 -
-

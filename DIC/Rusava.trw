@@ -1,8 +1,9 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tRusava
 aGG
 d31.03.2023 17:54:33
+c#Zdroje dat\n-https://www.mubph.cz/clanek.php?id=2166&menu=0&web=4&pageID=19f71f750bd8310860e7fe5e1d0fee6b\n-https://www.mubph.cz/clanek.php?id=3227\n-https://www.rusava.cz/wcd/web/obec-zpravodaj/2017_4.pdf
 g49.3477166,17.6885815
 xlokální mluva
 q0
@@ -11,6 +12,9 @@ q0
 -
 -
 -
+ty šila|Tý šila
+a ne jen|a né enem
+ale i na|ale aj na
 -
 -
 nej|náj
@@ -32,39 +36,63 @@ les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 kostel|3||a|u||e|e|em|y|ů|ům|y|y|ech,ích|y
 člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,lidi|lidí|lidem|lidi|lidé,lidi|lidech|lidmi
+většinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+myslivEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 -
 les|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
 člověg|2|člov'eg|člov'eka?|člov'eku,člov'ekovi?|člov'eka?|člov'eče?|člov'eku,člověkovi?|člov'ekem?|lidé,lidi?|lidí?|lidem?|lidi?|lidé,lidi?|lidech?|lidmi?
+vječiNA|1|na|ny?|ně?|nu?|no?|ně?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+myslivEC|2|ec?|ca|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 -
-volno||
-kostel|kosteła|kostel|les
-hřbitov|řbitof||les
-člověk|člověk
-obklika|okluk||
-vrchol|vrch||
-plakát|plagád||
+volno||0|volno|
+kostel|kostel|0|kosteła|les
+hřbitov||0|řbitof|les
+|člověk|0||člověk
+obklika||0|okluk|
+vrchol||0|vrch|
+plakát||0|plagád|
+maminka||0|maminka|
+||0|z Klobúk|
+většin|většinA|0|vječi|vječiNA
+mysliv|myslivEC|0|mysliv|myslivEC
 -
 -
 -
+|
 -
 JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 někDO|-1|do|oho|omu|oho|-|om|ým
 kteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
 něCO|-1|co|čeho|čemu|co|co|čem|čím
+sÁM|-1|ám|amého|amému|mého,ama|-|amém|amým|ami|amých|amým|amy|-|amých|amými|ám|amého|amému|ám|-|amém|amým|amy|amých|amým|amy|-|amých|amými|ama|amé|amé|amu|-|amé|amou|amy|amých|amým|amy|-|amých|amými|amo|amého|amému|amo|-|amém|amým|ama|amých|amým|ama|-|amých|amými
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+někteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+jaKÝSI|-1|kýsi|kéhosi|kémusi|kéhosi|-|kémsi|kýmsi|císi|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kýsi|kéhosi|kémusi|kýsi|-|kémsi|kýmsi|kési|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kási|kési|kési|kousi|-|kési|kousi|kési|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kési|kéhosi|kémusi|kési|-|kémsi|kýmsi|kási|kýchsi|kýmsi|kási|-|kýchsi|kýmisi
+kDO|-1|do|oho|omu|oho|do|om|ým
 -
 JÁ|-1|já|mě?|mně,mi?|mě?|já?|mně?|mnou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|yh|ěm?|y?|-|ěch?|ěmi?|en|oho?|omu?|en?|-|om?|ím?|y|yh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u|-|é?|ou?|y?|yh|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y|yh|ěm?|y?|-|ěch?|ěmi?
+TEN|-1|ten?|teho|tomu?|toho?|-|tom?|tím?|ty?|tyh|těm?|ty?|-|těch?|těmi?|ten|teho|tomu?|ten?|-|tom?|tím?|ty|tyh|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu|-|té?|tou?|ty?|tyh|těm?|ty?|-|těch?|těmi?|to?|teho|tomu?|to?|-|tom?|tím?|ty|tyh|těm?|ty?|-|těch?|těmi?
 negDO|-1|do|oho?|omu?|oho?|-|om?|ým?
 keRÝ|-1|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré|ré|rou?|-|ré|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
 neCO|-1|co?|čeho?|čemu?|co?|co?|čem|čím?
+sÁM|-1|ám?|amého?|amému?|mého?,ama?|-|amém?|amým?|ami?|amých?|amým?|amy?|-|amých?|amými?|ám?|amého?|amému?|ám?|-|amém?|amým?|amy?|amých?|amým?|amy?|-|amých?|amými?|ama|amé?|amé?|amu?|-|amé?|amou?|amy?|amých?|amým?|amy?|-|amých?|amými?|amo?|amého?|amému?|amo?|-|amém?|amým?|ama?|amých?|amým?|ama?|-|amých?|amými?
+SE|-1|-|sebe?|si|se?,sebe?|-|sobě?|sebou?
+někteRÝ|-1|rý?|rého?|rému?|rého?|-|rém?|rým?|ří|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+jaKÝSI|-1|kýsi?|kéhosi?|kémusi?|kéhosi?|-|kémsi?|kýmsi?|císi?|kýchsi?|kýmsi?|kési?|-|kýchsi?|kýmisi?|kýsi?|kéhosi?|kémusi?|kýsi?|-|kémsi?|kýmsi?|kési?|kýchsi?|kýmsi?|kési?|-|kýchsi?|kýmisi?|kási?|kési?|kési?|kúsi|-|kési?|kousi?|kési?|kýchsi?|kýmsi?|kési?|-|kýchsi?|kýmisi?|kési?|kéhosi?|kémusi?|kési?|-|kémsi?|kýmsi?|kási?|kýchsi?|kýmsi?|kási?|-|kýchsi?|kýmisi?
+GDO|-1|kdo?|koho?|komu?|koho?|kdo?|kem?|kým?
 -
 JÁ|JÁ
-t|tEN|tEN
+t||tEN|TEN
 někD|někDO|negDO
 kte|ke|kteRÝ|keRÝ
 někte|neke|kteRÝ|keRÝ
 ně|ne|něCO|neCO
+s|sÁM|sÁM
+SE|SE
+někte|neke|někteRÝ|někteRÝ
+ja|jaKÝSI|jaKÝSI
+k||kDO|GDO
 -
 -
 -
@@ -74,18 +102,23 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 vZÍT|94|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata|zav|zavši|zavše
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 učIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 -
 JÍT|127|-1|jít?|idu,jidu|jdeš?|jide|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
-BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|ste|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 vZÍT|94|-1|zít?|eznu|ezmeš?|ezme?|ezmeme?|eznete?|eznou?|ezmi?|ezměme?|ezměte?|zal?|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zati?|zaty?|zaty?|zata?|zav?|zavši?|zavše?
 MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|majú|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 učIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|íja|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli|ely,musily?|ely,musily?|ela,musila?
 -
 JÍT|JÍT
-|BÝT|BÝT
+BÝT|BÝT
 vZ|vZÍT|vZÍT
 MÍT|MÍT
 uč|učIT|učIT
+|dovézl||
+ušít|pošila||
+mus|mos|musET|musET
 -
 potom|potem
 zase,zas|zas
@@ -94,6 +127,11 @@ hezky|p'ekne
 ještě|ešče
 přeci|přecaj
 přece|přeca
+jen,jenom|enem
+hodně|hodňe
+tam
+však|šak
+domů|dom
 -
 v|f|
 do|
@@ -105,5 +143,7 @@ když|dyž
 a
 tak|tož
 protože
+ale
+nebo|lebo
 -
 -

@@ -156,6 +156,7 @@ MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|m
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 viDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|z|zme|zte|děl|děl|děla|dělo|děli|děly|děly|děla|děn|děn|děna|děno|děni|děny|děny|děna
 vypadAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+rosvÍTIT|30|-1|it|ítím|ítíš|ítí|ítíme|ítíte|ítí|iť|iťme|iťte|ítil|ítil|ítila|ítilo|ítili|ítily|ítily|ítila|ícen|ícen|ícena|íceno|íceni|íceny|íceny|ícena
 -
 BÝT|247|-1|být?|sem|jsi?|je|jsme?|jste?|só|budu?|budeš?|bôde|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bêlo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bê|bychom?|byste?|bê
 ôrčIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|i?|eme?|ete?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|ené|eni?|eny?|eny?|ena?
@@ -172,6 +173,7 @@ MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|m
 mUCT|5|-1|uct|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 viDĚT|15|-1|dět?|ďim|díš?|dí?|díme?|díte?|dí?|z?|zme?|zte?|děl?|děl?|děla?|dělo?|děli?|děly?|děly?|děla?|děn?|děn?|děna?|děno?|děni?|děny?|děny?|děna?
 vypadAT|7|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+rožNOUT|30|-1|it,nót|nô?|neš?|ne?|neme?|nete?|nó?|ňi?|ňime?|ňite?|l,nôl?|l,nôl?|la,nôla?|lo,nôlo?|lê,nôlê?|nuly?|nuly?|nula?|nut?|nut?|nuta?|nuto?|nuti?|nuty?|nuty?|nuta?
 -
 BÝT|BÝT
 určI|určIT|určIT
@@ -192,6 +194,7 @@ m|mOCT|mUCT
 vi|viDĚT|viDĚT
 nevi|viDĚT|viDĚT
 vypad|vêpad|vypadAT|vypadAT
+rozsvít|rožn|rožnOUT|rožnOUT
 -
 jen,jenom|jenom
 podle|podlevá

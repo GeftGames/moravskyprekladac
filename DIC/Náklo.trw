@@ -2,7 +2,7 @@ TW v1.0
 tNáklo
 aGG
 d17.07.2023 15:22:19
-i nedožiré, Kačo Náklo OL
+i nedožiré, Kačo Náklo OL\n v lese pršňpávajó kňižeci adjunkťi a psi gdekeré kód desetkrád za deň Náklo OL
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
 g49.6541587,17.1284119
 q0
@@ -21,28 +21,48 @@ pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 cop|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 hřebíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
+pES|0|es|sa|sovi,su|sa|se|sovi,su|sem|si,sové|sů|sům|sy|si,sové|sech|sy
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 -
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 ženA|1|a?|y?|ě?|u?|o|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 cop|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 hřebíK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+les|3|?|a?|u?|?|e?|e|em?|y?|ů?|ům?|y?|y?|ích?|y?
+pES|0|es?|sa?|sovi,su?|sa?|se?|sovi,su?|sem?|si|sů?|sům?|sy?|si,sové?|sech?|sy?
+dEN|0|en?|ne?|ni,nu?|eň|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
 -
 kač|ženA|0|kač|ženA
 cop|cop|0|coplé|hřebíK
+les|les|0|les|les
+p|pES|0|p|pES
+d|dEN|0|d|dEN
+||0|kód|
+-
+jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
+-
+jarní|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?||ho?|mu?|ho?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?
+-
+knížecí|kňižeci|jarní|jarní
+-
+-
+-
+kdejaký|gdekeré||
+-
+nesklonné|1|
+-
+nesklonné|1|
+-
+desetkrát|desetkrád|nesklonné|nesklonné
+|
 -
 -
 -
 -
 -
+v|
 -
--
--
--
--
--
--
--
--
--
+a
 -
 -
