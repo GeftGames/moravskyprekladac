@@ -1,7 +1,8 @@
 TW v1.0
 tStrážnice
+aGG
 d20.06.2023 17:13:21
-c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Str%C3%A1%C5%BEnice">sncj.ujc.cas.cz</a>
 g48.8996642,17.3144728
 q0
 -
@@ -9,12 +10,16 @@ q0
 -
 -
 -
+jsem se|sen sa
+bodl koně|bodel koňe
 -
 -
 -
 -
 -
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
+pohádKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 sud||0|bečka|
 ||0|humna|
@@ -23,6 +28,7 @@ dědeček||0|stařeček|
 ||0|pilamidi|
 ||0|guličky|
 ||0|hřišťjé|
+skřip|pohádKA|0|skřip|pohádKA
 -
 -
 -
@@ -30,25 +36,44 @@ dědeček||0|stařeček|
 zastavení|zastavjaňi||
 -
 MY|-1|my|nás|nám|nás|my|nás|námi
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
 MY|-1|my|nás?|nám?|nás?|my?|nás?|námi?
+TEN|-1|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tú|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+SE|-1|-|sebe?|si?,sobě?|sa|-|sobě?|sebou?
 -
 MY|MY
+t||tEN|TEN
+SE|SE
 -
+Nesklonné|1|
 -
+Nesklonné|1|
 -
+desetkrát|Nesklonné|Nesklonné
 -
 dovÉST|30|-1|ést|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+bodAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 dovÉST|30|-1|ést?|edu?|edeš?|ede?|edeme?|edete?|edou?|eď?|eďme?|eďte?|edl?|edl?|edla?|edlo|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ňéł|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+bodAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|el|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
 udělat|nadělat||
 schout|schnút||
 cvrnkat|štrnkat||
 dovÉ|dovÉST|dovÉST
+m|mÍT|mÍT
+BÝT|BÝT
+bod|bodAT|bodAT
 -
 dneska
 všude|fšady
+aspoň
 -
 -
 -

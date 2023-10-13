@@ -1,7 +1,9 @@
-TW v0.1
+TW v1.0
 tHalenkov
 aGG
 d31.05.2023 9:05:03
+ihttps://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf; str 89\n\na toš praúvała, cap hop, koza fertyk, šestka na kafe Halenkov;\nvyprávjáł nám, jag býł gdysi při stavb'e Halenk
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf; str 89
 g49.3197009,18.1432191
 q0
 -
@@ -11,45 +13,81 @@ q0
 -
 pojď sem|poďcem
 za chalupou|zpoza chalupy
+a tak říkala|a toš praúvała
+na kafe
+ty máš|ty máž
+ty máš zdravé zuby|ty máž zuby jak kanec
+jako kanec|jak kanec
 -
 -
 -
 ou|ú
 -
+vala|vała
 -
 kalhotY|1|-|-|-|-|-|-|-|y||ám|y|y|ách|ami
 zub|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 pES|0|es|sa|sovi,su|sa|se|sovi,su|sem|si,sové|sů|sům|sy|si,sové|sech|sy
+stavBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
+zub|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 gatĚ|1|-|-|-|-|-|-|-|y?|?|ám?|ě|y?|ách?|ami?
 zub|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|ami
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 pES|0|es?|sa|sovi,su?|sa?|se?|sovi,su?|sem?|si,sové?|sů?|sům?|sy?|si,sové?|sech?|sy?
+stavBA|1|ba?|by?|bě?|bu?|bo?|b'e|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
+zub|3|?|u?|u?|?|e?|u?|em?|y|ů?|ům?|y?|y?|ech?|y?
 -
-kalhoty|gatě|kalhotY|gatĚ
-zub|zub|zub
-p|pES|pES
+kalhoty|kalhotY|0|gatě|gatĚ
+zub|zub|0|zub|zub
+p|pES|0|p|pES
+kozel||0|cap|
+koza||0|koza|
+kafe||0|kafe|
+stav|stavBA|0|stav|stavBA
+zub|zub|0|zub|zub
 -
 -
 -
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+MY|-1|my|nás|nám|nás|my|nás|námi
+nesklonné|-1|-
 -
 SE|-1|-|sebe?|sy,sobě?|sa,sebe?|-|sobě?|sebou?
+MY|-1|my?|nás?|nám|nás?|my?|nás?|námi?
+nesklonné|-1|my?
 -
 SE|SE
+MY|MY
+kdysi|gdysi|nesklonné|nesklonné
 -
 -
 -
+šestka||
 -
 přemýšlET|7|-1|et|ím|íš|í|íme|íte|í,přemýšlejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela
+vyprávĚT|15|-1|ět|ím|íš|í|íme|íte|ějí,vypráví|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 rozmýšlAT|7|-1|et?|ám?|íš?|í?|íme?|íte?|í,přemýšlejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+vyprávĚT|15|-1|ět?|ím?|íš?|í?|íme?|íte?|ějí,vypráví?|ěj?|ějme?|ějte?|jáł|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býł|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
 přemýšlE|přemýšlET|přemýšlET
+vypráv|vyprávĚT|vyprávĚT
+BÝT|BÝT
+m|mÍT|mÍT
+-
+hotovo|fertyk
+-
+na|
+při|
+-
+jak|jag
 -
 -
--
--
--
+hop

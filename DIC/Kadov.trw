@@ -1,9 +1,9 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tKadov
 aGG
 d30.04.2023 9:32:47
-c#Zdroje\n-<a href="https://cja.ujc.cas.cz/CJA-dodatky/files/Dodatky369.pdf">ČJA, Dotatky, str. 369</a>
+c#Zdroje dat\n-<a href="https://cja.ujc.cas.cz/CJA-dodatky/files/Dodatky369.pdf">ČJA, Dotatky, str. 369</a>; <a href="https://www.czechency.org/files/attachment/nareci/cd2/1.html">Alternativní url</a>
 g49.6325201,16.0798253
 xlokální mluva
 q0
@@ -55,31 +55,31 @@ stromEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 kost|1||i?|i?||i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 předsedA|2|a|y?|ovi?|u?|o?|ovi?|ou?|ové?|ů?|ům?|y?|ové?|ech?|y?
 -
-případ|hrad|hrad
-učitel|muž|muž
-vojťechov|les|les
-hol|pohádKA|pohádKA
-p|pÁN|pÁN
-okn|vokn|městO|městO
-škol|školA|školA
-paní|pan|paní|panÍ
-děvč|ďefč|kuřE|kuřE
-lím|límEC|límEC
-kous|stromEK|stromEK
-část|kost|kost
-chvil|pohádKA|pohádKA
-muž|muš-1p,muž?|muž|muž
-přeced|předsedA|předsedA
-krk|hrad|les
-potvor|školA|školA
+případ|hrad|0|případ|hrad
+učitel|muž|0|učitel|muž
+vojťechov|les|0|vojťechov|les
+hol|pohádKA|0|hol|pohádKA
+p|pÁN|0|p|pÁN
+okn|městO|0|vokn|městO
+škol|školA|0|škol|školA
+paní|paní|0|pan|panÍ
+děvč|kuřE|0|ďefč|kuřE
+lím|límEC|0|lím|límEC
+kous|stromEK|0|kous|stromEK
+část|kost|0|část|kost
+chvil|pohádKA|0|chvil|pohádKA
+muž|muž|0|muš-1p,muž?|muž
+přeced|předsedA|0|přeced|předsedA
+krk|hrad|0|krk|les
+potvor|školA|0|potvor|školA
 -
-hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
-pěknÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
-matčin|-1|o|a|u|o|o|ě,matčinu|ým|a|ých|ým|a|a|ých|ými|a|y|ě|u|a|ě|ou|y|ých|ým|y|y|ých|ými||a|u|a||ě,matčinu|ým|i|ých|ým|y|i|ých|ými||a|u|||ě,matčinu|ým|y|ých|ým|y|y|ých|ými
+hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+pěknÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+matčin|-1|o|a|u|o|o|ě,matčinu|ým|||a|ých|ým|a|a|ých|ými|||a|y|ě|u|a|ě|ou|||y|ých|ým|y|y|ých|ými||||a|u|a||ě,matčinu|ým|||i|ých|ým|y|i|ých|ými||||a|u|||ě,matčinu|ým|||y|ých|ým|y|y|ých|ými||
 -
-hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|kej|kého?|kému?|kého?|ký?|kém?|kým?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|kej|kého?|kému?|ký?|ký?|kém?|kým?|ké?|kých?|kým?|ké?|ké?|kých?|kými?
-pěknÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ej|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ej|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
-matčin|-1|o?|a?|u?|o|o?|ě,matčinu?|ým?|a?|ých?|ým?|a?|a?|ých?|ými?|a?|y?|ě?|u?|a?|ě?|ou?|y?|ých?|ým?|y?|y?|ých?|ými?|?|a?|u?|a?|?|ě,matčinu?|ým?|i?|ých?|ým?|y?|i?|ých?|ými?|?|a?|u?|?|?|ě,matčinu?|ým?|y?|ých?|ým?|y?|y?|ých?|ými?
+hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|||ká?|kých?|kým?|ká?|ká?|kých?|kými?|||ká?|ké?|ké?|kou?|ká?|ké?|kou?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?|||kej|kého?|kému?|kého?|ký?|kém?|kým?|||cí?|kých?|kým?|ké?|cí?|kých?|kými?|||kej|kého?|kému?|ký?|ký?|kém?|kým?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?||
+pěknÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ej|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ej|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
+matčin|-1|o?|a?|u?|o|o?|ě,matčinu?|ým?|||a?|ých?|ým?|a?|a?|ých?|ými?|||a?|y?|ě?|u?|a?|ě?|ou?|||y?|ých?|ým?|y?|y?|ých?|ými?|||?|a?|u?|a?|?|ě,matčinu?|ým?|||i?|ých?|ým?|y?|i?|ých?|ými?|||?|a?|u?|?|?|ě,matčinu?|ým?|||y?|ých?|ým?|y?|y?|ých?|ými?||
 -
 pěkn|hez|pěknÝ|hezKÝ
 cel|pěknÝ|pěknÝ

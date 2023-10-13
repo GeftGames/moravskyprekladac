@@ -1,0 +1,70 @@
+TW v1.0
+tHrubá Vrbka
+aGG
+d27.06.2023 14:32:25
+imoseli ti dobitki nakŕmit Hrubá Vrbka HO\ntaťíčeg róchli ďivokého kanca, toš si máte dójít pro hu̯avu a pajšl Hrubá Vrbka HO\n\nneznámé:\nróchli
+c#Zdroje dat\n-sncj.ujc.cas.cz
+g48.8715214,17.4770349
+q0
+-
+-
+-
+-
+-
+tak si máte|toš si máte
+-
+-
+-
+-
+-
+dobytEK|2|ek|ka|ku|ek|ku|ku|kem|-|-|-|-|-|-|-
+tatínEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
+kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+-
+dobytEK|2|-|-|-|-|-|-|-|ky|-?|-?|ky|-?|-?|-?
+tatínEK|2|eg|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci,kové?|ků?|kům?|ky?|ci,kové?|cích?|ky?
+kanEC|2|ec?|ca|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+hlavA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+-
+tatín|tatínEK|0|taťíč|tatínEK
+kan|kanEC|0|kan|kanEC
+hlav|hlavA|0|hṵav|hlavA
+pajšl||0|pajšl|
+-
+divoKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+-
+divoKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
+-
+divo|ďivo|divoKÝ|divoKÝ
+-
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+-
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+SE|-1|-|sebe?|si|se?,sebe?|-|sobě?|sebou?
+-
+t|tEN|tEN
+SE|SE
+-
+-
+-
+-
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+naKRMIT|15|-1|krmit|krmím|krmíš|krmí|rmíme|krmíte|krmí|krm|krmme|krmte|krmil|krmil|krmila|krmilo|krmili|krmily|krmily|krmila|krmen|krmen|krmena|krmeno|krmeni|krmeny|krmeny|krmena
+doJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+-
+musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli|ely,musily?|ely,musily?|ela,musila?
+naKRMIT|15|-1|kŕmit|krmím?|krmíš?|krmí?|rmíme?|krmíte?|krmí?|krm?|krmme?|krmte?|krmil?|krmil?|krmila?|krmilo?|krmili?|krmily?|krmily?|krmila?|krmen?|krmen?|krmena?|krmeno?|krmeni?|krmeny?|krmeny?|krmena?
+dOJÍT|30|-1|ójít|ójdu?|ójdeš?|ójde?|ójdeme?|ójdete?|ójdou?|ójdi?|ójděme?|ójděte?|óšel?|óšel?|óšla?|óšlo?|óšli?|óšly?|óšly?|óšla?|ójit?|ójit?|ójita?|ójito?|ójiti?|ójity?|ójity?|ójita?
+-
+mus|mos|musET|musET
+na|naKRMIT|naKRMIT
+do|d|doJÍT|doJÍT
+-
+-
+pro|
+-
+a
+-
+-

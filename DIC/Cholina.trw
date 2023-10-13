@@ -1,6 +1,8 @@
-TW v0.1
+TW v1.0
 tCholina
 d30.05.2023 10:27:56
+idé pozor na dvoře, je tam takové člpek Cholina OL\nmáte take̬ takovi hoďine̬ s kancem? Cholina OL\nzháňela kanečka na chof Cholina OL
+c#Zdroje dat\n-sncj.ujc.cas.cz
 g49.6571817,17.0521428
 q0
 oHaná
@@ -9,6 +11,8 @@ oHaná
 -
 -
 -
+dávej pozor|dé pozor
+s kancem
 -
 -
 -
@@ -18,24 +22,59 @@ ly|lê
 lý|lé
 -
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+dvŮR|3|ůr|ora,oru|oru|ůr|ore|oru,oře|orem|ory|orů|orům|ory|ory|orech|ory
+hodinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+chov|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 dEN|0|eň|ne?|ni,nu?|eň|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
+stromEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
+dvŮR|3|ůr?|ora,oru?|oru?|ůr?|ore?|oře|orem?|ory?|orů?|orům?|ory?|ory?|orech?|ory?
+hodinA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|ê|y?|ách?|ami?
+kanEC|2|ec?|ce?|ci,covi?|ce?|če?|ci,covi?|cem|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+choF|3|v?|vu?|vu?|f|ve?|vu?|vem?|vy?|vů?|vům?|vy?|vy?|vech?|vy?
 -
-d|dEN|dEN
+d|dEN|0|d|dEN
+schůd|stromEK|0|člôp|stromEK
+dv|dvŮR|0|dv|dvŮR
+pozor||0|pozor|
+hodin|hodinA|0|hoďin|hodinA
+kan|kanEC|0|kan|kanEC
+kaneček||0|kanečka|
+chov|chov|0|cho|choF
 -
 -
 -
 -
+takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+-
+takovÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|é|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|i|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+-
+takov|takovÝ|takovÝ
 -
 -
 -
 -
+dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+shánĚT|15|-1|ět|ím|íš|í|íme|íte|í,shánějí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 -
+dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+shánĚT|15|-1|ět?|ím?|íš?|í?|íme?|íte?|í,shánějí?|ěj?|ějme?|ějte?|ěl?|ěl?|ela|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 -
+d|dÁT|dÁT
+BÝT|BÝT
+m|mÍT|mÍT
+shán|zháň|shánĚT|shánĚT
 -
+tam
+taky|takê
 -
--
--
+na|
 -
 -
 -

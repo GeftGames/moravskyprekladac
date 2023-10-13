@@ -2,8 +2,8 @@ TW v1.0
 tNedašov
 aGG
 d17.07.2023 10:30:21
-ijá sem býł dostrašený ešče v’íc Nedašov ZL
-c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+ijá sem býł dostrašený ešče v’íc Nedašov ZL\ntak si třeťinu pecna ukrójił a litr mléka si nalíł a najedł sa (Nedašov ZL)
+c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n-https://www.avcr.cz/export/sites/avcr.cz/.content/galerie-souboru/pro-verejnost/Cechy-versus-Morava-tentokrat-v-jazyce.pdf
 g49.1076269,18.0699894
 q0
 -
@@ -11,13 +11,38 @@ q0
 -
 -
 -
+v kleci|f kleci
 -
 -
 -
 -
+jil|jił
+lil|líł
+jedl|jedł
 -
+písEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
+bochníK|3|k|ka,ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+litr|-1||u|u||e,e|u|em|y|ů|ům|y|y|ech|y
+mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
+klec|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+svinĚ|1|ě|ě|i|i|ě|i|í|ě|í,čeji) sviň|ím|ě|ě|ích|ěmi
+kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 -
+písEŇ|1|eň?|ně?|ni?|eň?|ni?|ni?|ní?|ně?|ní?|ním?|ně?|ně?|ních?|němi?
+pečEŇ|3|eň?|na|ni?|eň?|ni?|ni?|ní?|ně?|ní?|ním?|ně?|ně?|ních?|němi?
+bochníK|3|k?|ka,ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+litr|-1||u?|u?|?|e,e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+mléKO|0|ko?|ka|ku?|ko?|ko?|ku,ce?|kem?|ka?|k?|kům?|ka?|ka?|cích,kách?|ky?
+klec|1|?|e?|i?|?|i?|i|í?|e?|í?|ím?|e?|e?|ích?|emi?
+sviňE|1|e|ě?|i?|i?|ě?|i?|í?|ě?|í,čeji) sviň?|ím?|ě?|ě?|ích?|ěmi?
+kanEC|2|ec?|ce?|covi|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 -
+bochní|bochníK|0|pecna|pečEŇ
+litr|litr|0|litr|litr
+mlé|mléKO|0|mlé|mléKO
+klec|klec|0|klec|klec
+svin|svinĚ|0|sv'iň|sviňE
+kan|kanEC|0|kan|kanEC
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
@@ -26,23 +51,42 @@ zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?
 vyděšen|dostraše|zelenÝ|zeleNÝ
 -
 JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+CO|-1|co|čeho|čemu|co,-č|-|čem|čím
 -
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+JÁ|-1|já|mňa|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+SE|-1|-|sebe?|si|sa|-|sobě?|sebou?
+CO|-1|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
 JÁ|JÁ
+SE|SE
+CO|CO
 -
 -
 -
+třetina|třeťinu||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+ukrojIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+voZIT|15|-1|zit|zím|zíš|zí|zíme|zíte|zí|z|zme|zte|zil|zil|zila|zilo|zili|zily|zily|zila|žen|žen|žena|ženo|ženi|ženy|ženy|žena
 -
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býł|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+ukrojIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|ił|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+voZIT|15|-1|zit?|zím?|zíš?|zí?|zíme?|zíte?|zí?|z?|zme?|zte?|zil?|zil?|zila?|zilo?|zili|zily?|zily?|zila?|žen?|žen?|žena?|ženo?|ženi?|ženy?|ženy?|žena?
 -
-|BÝT|BÝT
+BÝT|BÝT
+ukroj|ukrój|ukrojIT|ukrojIT
+nalít|nalíł||
+najíst|najedł||
+|
+vo|voZIT|voZIT
 -
 ještě|ešče
 více,víc|v'íc
+tak
 -
+ke|
 -
+a
 -
 -

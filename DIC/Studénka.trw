@@ -1,4 +1,4 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tStudénka
 aGG
@@ -16,6 +16,7 @@ oLašsko
 -
 kyselé mléko|kyška
 udělané ze slámy|ze słamy džełane
+ve chlévě|ve chlivje
 -
 -
 při|přy
@@ -37,6 +38,8 @@ ezdili|eždžili
 dili|džili
 kovou|kovu
 dělalo|džełało
+íme|ymy
+náctero|nastero
 -
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 mlýn|3||a|u||e|u,ě|em|y|ů|ům|y|y|ech|y
@@ -49,6 +52,8 @@ večer|3||a|u||e|u|em|y|ů|ům|y|y|ech|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+chlév|3||a|u||e|ě|em|y|ů|ům|y|y|ech|y
+kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 -
 hrad|3|?|a?|u?|?|e?|ě,u?|em?|y?|uf|ům?|y?|y?|ach|y?
 mlýn|3|?|a|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
@@ -61,25 +66,30 @@ večer|3|?|a?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 žimA|1|a?|y?|ě?|u?|o?|je|ou?|y?|?|ám?|y?|y?|ách?|ami?
+chliV|3|v?|va?|vu?|v?|ve?|vje|vem?|vy?|vů?|vům?|vy?|vy?|fkoch|vy?
+kanEC|2|ec|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 -
-mlýn|młyn|mlýn|mlýn
-|
-vagón|vagon|hrad|hrad
-pytel|mjech|stroj|hrad
-pr|robot|prÁCE|ženA
-sedlá|sedláK|sedláK
-večer|večer|večer
-rán|ran|městO|městO
-klouzač|čundruf|pohádKA|pohádKA
-brusle|šlajfy?||
-tvaroh|sr||
-sotor?|brašna||
-škol|škoł|ženA|ženA
-zim|žimj|ženA|žimA
+mlýn|mlýn|0|młyn|mlýn
+||0||
+vagón|hrad|0|vagon|hrad
+pytel|stroj|0|mjech|hrad
+pr|prÁCE|0|robot|ženA
+sedlá|sedláK|0|sedlá|sedláK
+večer|večer|0|večer|večer
+rán|městO|0|ran|městO
+klouzač|pohádKA|0|čundruf|pohádKA
+brusle||0|šlajfy?|
+tvaroh||0|sr|
+sotor?||0|brašna|
+škol|ženA|0|škoł|ženA
+zim|ženA|0|žimj|žimA
+chlév|chlév|0|chli|chliV
+kan|kanEC|0|kaň|kanEC
+||0|na dodafku |
 -
-dřevěnÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+dřevěnÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-dřevjanY|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|e|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+dřevjanY|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||e|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
 -
 vY|-1|y|ás|ám|ás|y|ás|ámi
@@ -91,8 +101,15 @@ tEN|-1|en?|eho|omu?|oho?|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?|en?|eho|omu?|en?|-|
 vY|vY|vY
 t|tEN|tEN
 -
+čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
+nesklonné|1|
 -
+čtyřI|2|e|vorově) čtyřech[1]?,?,(hovorově) čtyřech[1]?|em?|i?|i?|ech?|tyřma[2]?,mi?,čtyřma[2]?
+nesklonné|1|
 -
+čtyř|štyř|čtyřI|čtyřI
+osmnáctero|osymnastero|nesklonné|nesklonné
+jedenáctero|jedenastero|nesklonné|nesklonné
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
@@ -100,13 +117,15 @@ musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,
 stÁT|7|-1|át|ojím|ojíš|ojí|ojíme|ojíte|ojí|ůj|ůjme|ůjte|ál|ál|ála|álo|áli|ály|ály|ála
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
+držET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
-BÝT|247|-1|být?|sem|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|sem|jsi?|je?|zmy,sme|jste?|su|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 choDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|džil?|džil?|džiła|ždilo?|ždili?|ždily?|ždily?|ždila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
-mušET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
+mušET|5|-1|et?|ím?|íš?|í?|ymy|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 stÁT|7|-1|át?|ojím?|ojíš?|oji|ojíme?|ojíte?|ojí?|ůj?|ůjme?|ůjte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
 MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|maju|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šeł|šeł|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+deržEDŽ|15|-1|edž|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 -
 BÝT|BÝT
 choD|choDIT|choDIT
@@ -115,12 +134,13 @@ musE|musET|musET
 st|stÁT|stÁT
 MÍT|MÍT
 JÍT|JÍT
+drž|derž|držET|deržEDŽ
 -
 tak|tag
 ještě|ešče
 tam|tameg
 vždy|dycky
-nyní|fčil
+nyní|fčyl,fčil
 potom|potem
 kde|kaj
 -
@@ -129,8 +149,10 @@ po|
 na|
 z|s|
 v|f|
+ve|
 -
 než|eš
 jako
+a
 -
 -

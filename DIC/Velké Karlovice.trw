@@ -1,16 +1,18 @@
-TW v0.1
+TW v1.0
 tVelké Karlovice
 aGG
 d31.05.2023 8:56:46
 c#Zdroje dat\n-<a href="http://eyetracking.upol.cz/naki_vystava_nareci/">eyetracking.upol.cz/naki_vystava_nareci</a>\n-Karlovické nářečí-Svěrák, František
 g49.3641389,18.3054295
 q0
+oValašsko
 -
 -
 -
 -
 -
 do čtvrnácti let|do štrnásti rokú
+tam na kopce|hen na čupcy
 -
 -
 ně|ne
@@ -20,12 +22,15 @@ pít|piť
 pil|pił
 lat|lať
 -
+kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 -
+čupEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|cy?|ců?|cům?|cy|ce?|cích?|ci?
 -
-obilí|zbožú||
-žně|žňa||
-doktor|dochtor||
-sklo|skło||
+obilí||0|zbožú|
+žně||0|žňa|
+doktor||0|dochtor|
+sklo||0|skło|
+kop|kopEC|0|čup|čupEC
 -
 -
 -
@@ -76,6 +81,7 @@ potom
 zítra|zajtra
 tady
 ještě|ješče
+tam|hen
 -
 do|
 -
