@@ -1,12 +1,10 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tBohuslavice
 aGG
 d30.03.2023 23:01:30
-i
-e
-c
-z
+ido člpka přepřihňi Bohuslavice SU
+c#Zdroje dat\n-sncj.ujc.cas.cz
 lhanáčtina
 g49.8259844,16.940371
 xlokální mluva
@@ -31,10 +29,18 @@ livé|lêvi
 ky|kê
 vou|vó
 -
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
+stromEK|3|ek?|ka|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
+kopEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
+ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-honza|jeňik||
-válka|vojna||
+honza||0|jeňik|
+válka||0|vojna|
+vyvýšenin|ženA|0|člôp|stromEK
+kop|kopEC|0|člôp|stromEK
 -
 -
 -
@@ -52,7 +58,7 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 -
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|bêl|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-|BÝT|BÝT
+BÝT|BÝT
 -
 taky|takê
 vždy|dêckê
@@ -60,6 +66,7 @@ dneska|neska
 potom
 -
 přes|přez|
+do|
 -
 i|ê
 když|dêž

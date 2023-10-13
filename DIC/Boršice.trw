@@ -1,8 +1,9 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tBoršice
 aGG
 d31.03.2023 15:09:13
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
 lSlováčtina
 g49.0617222,17.3493834
 q0
@@ -40,15 +41,15 @@ bijí|bijú
 -
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-dcera|céra||
+dcera||0|céra|
 -
-pěknÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
-hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
+pěknÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
-pěknÝ|-1|é??|ého??|ému??|é??|é??|ém??|ým??|á??|ých??|ým??|á??|á??|ých??|ými??|á?|é?|é?|ou?|á?|é?|ou?|é??|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í??|ých??|ým??|é??|í??|ých?|ými?|ý??|ého??|ému??|ý??|ý??|ém??|ým??|é??|ých??|ým??|é??|é??|ých??|ými??
+pěknÝ|-1|é??|ého??|ému??|é??|é??|ém??|ým??|||á??|ých??|ým??|á??|á??|ých??|ými??|||á?|é?|é?|ou?|á?|é?|ou?|||é??|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í??|ých??|ým??|é??|í??|ých?|ými?|||ý??|ého??|ému??|ý??|ý??|ém??|ým??|||é??|ých??|ým??|é??|é??|ých??|ými??||
 -
 hezký|pěkný||
-||
+|
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
@@ -81,7 +82,7 @@ BÝT|247|-1|být?|sem|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budet
 mosET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 -
 říct|povjedět||
-|BÝT|BÝT
+BÝT|BÝT
 zůstat|ostat||
 musE|musET|mosET
 smát|smít||

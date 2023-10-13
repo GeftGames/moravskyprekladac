@@ -1,8 +1,8 @@
-TW v0.1
+TW v1.0
 tZbraslav
 aGG
 d14.04.2023 14:57:45
-cZdroje\nČeské nářeční texty - Lamprecht, Arnošt; str 176
+cZdroje\n-České nářeční texty - Lamprecht, Arnošt; str 176\n-http://eyetracking.upol.cz/naki_vystava_nareci/
 g49.2222405,16.293196
 q0
 oPodhorácko
@@ -11,27 +11,52 @@ oPodhorácko
 -
 -
 -
+s tím|z tem
 -
 -
 -
 -
+ou|ó
+-
+školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+-
+školA|1|a?|e|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+-
+poledne||0|napoledne|
+škol|školA|0|škol|školA
+||0|kafe|
+||0|vei?dličkó|
+||0|rechtor|
+-
+-
+-
+|zrnkovó||
+-
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+-
+tEN|-1|en?|oho?|omu?|oho?|-|om?|em|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|em|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|em|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+-
+t|tEN|tEN
 -
 -
 -
 -
+přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
+uvařIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+-
+přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
+uvařIT|30|-1|it|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+-
+přiJ|přiJÍT|přiJÍT
+uvař|hovař|uvařIT|uvařIT
+|BÝT|BÝT
+neuměli|neoměli||
+-
+vpoledne|fpoledne
 -
 -
--
--
--
--
--
--
--
--
--
--
--
--
+aby|habe
 -
 -

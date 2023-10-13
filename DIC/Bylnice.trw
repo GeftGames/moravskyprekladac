@@ -1,0 +1,72 @@
+TW v0.1
+tBylnice
+d11.06.2023 20:45:14
+c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str.249
+g49.0780822,18.0157459
+q0
+-
+-
+-
+-
+-
+s mojí|z mojí
+-
+-
+-
+-
+pil|píł
+-
+-
+-
+-
+-
+-
+-
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+ONI|-1|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+-
+SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|ú|-|é?|ú|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+ON|-1|on|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+ONI|-1|oni?|ich,nich*?|jim,nim*?|je,ně*?|-|nich*?|jimi,nimi*?
+-
+SE|SE
+t|tEN|tEN
+ON|ON
+ONI|ONI
+-
+-
+-
+-
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+mySLET|15|-1|slet|slím|slíš|slí|slíme|slíte|slí,myslejí|sli|sleme|slete|slel|slel|slela|slelo|sleli|slely|slely|slela|šlen|šlen|šlena|šleno|šleni|šleny|šleny|šlena
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+-
+MÍT|103|-1|mňet|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|mňeli|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+mySLET|15|-1|slet?|slim|slíš?|slí?|slíme?|slíte?|slí,myslejí?|sli?|sleme?|slete?|slel?|slel?|slela?|slelo?|sleli?|slely?|slely?|slela?|šlen?|šlen?|šlena?|šleno?|šleni?|šleny?|šleny?|šlena?
+vĚDĚT|7|-1|ědět?|ím?|íš?|í?|íme?|íte|ědí?|ěz?|ězme?|ězte?|ěděl?|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
+JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šła|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bíł|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+-
+MÍT|MÍT
+my|mySLET|mySLET
+v|vĚDĚT|vĚDĚT
+JÍT|JÍT
+|BÝT|BÝT
+-
+taky,také|také
+ještě|ečše
+dlouho|dłúho
+však|šag
+snad|snáť
+-
+i|aj|
+-
+anebo|alebo
+ale
+-
+-

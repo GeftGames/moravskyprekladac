@@ -1,0 +1,60 @@
+TW v1.0
+tJaroměřice nad Rokytnou
+d20.06.2023 16:46:39
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
+g49.0953115,15.8922325
+q0
+-
+-
+-
+-
+-
+do chlívu|do chlivka
+-
+-
+-
+-
+-
+-
+-
+prase||0|prase|
+maminka||0|maminka|
+žáby||0|žabe|
+pečínka||0|pečinka|
+vepři||0|vepří|
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+tÁHNOUT|15|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl (hov. táhnul)|áhl (hov. táhnul)|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+chyTNOUT|30|-1|tnout|tnu|tneš|tne|tneme|tnete|tnou|ť|ťme|tněte|tnul,chytil|tnul,chytil|tla,chytnula,chytila|tnulo,chytilo,chytlo|tli,chytnuli,chytili|tly,chytnuly,chytily|tly,chytnuly,chytily|tla,chytnula,chytila|cen,chytnut|cen,chytnut|cena,chytnuta|ceno,chytnuto|ceni,chytnuti|ceny,chytnuty|ceny,chytnuty|cena,chytnuta
+zabÍT|15|-1|ít|iji|iješ|ije|ijeme|ijete|ijí|ij, (v&#160;obecném jazyce) zab|ijme, (v&#160;obecném jazyce) zabme|ijte, (v&#160;obecném jazyce) zabte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+vytÁHNOUT|30|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl|áhl|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
+utÉCT|22|-1|éct|eču,(zastarale) uteku|ečeš|eče|ečeme|ečete|ečou,(zastarale) utekou|eč|ečme|ečte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla
+-
+tÁHNOUT|15|-1|áhnout?|áhnu?|áhneš?|áhne?|áhneme?|áhnete?|áhnou?|áhni?|áhněme?|áhněte?|áhl (hov. táhnul)?|áhl (hov. táhnul)?|áhla?|áhlo?|ahle|áhly?|áhly?|áhla?|ažen?|ažen?|ažena?|aženo?|aženi?|aženy?|aženy?|ažena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|beli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+cheTNOUT|30|-1|tnout?|tnu?|tneš?|tne?|tneme?|tnete?|tnou?|ť?|ťme?|tněte?|tnul,chytil?|tnul,chytil?|tla,chytnula,chytila?|tnulo,chytilo,chytlo?|tli|tly,chytnuly,chytily?|tly,chytnuly,chytily?|tla,chytnula,chytila?|cen,chytnut?|cen,chytnut?|cena,chytnuta?|ceno,chytnuto?|ceni,chytnuti?|ceny,chytnuty?|ceny,chytnuty?|cena,chytnuta?
+zabÍT|15|-1|íjat|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij, (v&#160;obecném jazyce) zab?|ijme, (v&#160;obecném jazyce) zabme?|ijte, (v&#160;obecném jazyce) zabte?|il?|il?|ila?|ilo?|íjale|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+vytÁHNOUT|30|-1|áhnout?|áhnu?|áhneš?|áhne?|áhneme?|áhnete?|áhnou?|áhni?|áhněme?|áhněte?|áhl?|áhl?|áhla?|áhlo?|áhli?|áhly?|áhly?|áhla?|ažen?|ažen?|ažena?|aženo?|aženi?|aženy?|aženy?|ažena?
+hotÉCT|22|-1|éct?|eču,(zastarale) uteku?|ečeš?|eče?|ečeme?|ečete?|ečou,(zastarale) utekou?|eč?|ečme?|ečte?|ekl|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?
+-
+tÁ|tÁHNOUT|tÁHNOUT
+|BÝT|BÝT
+chy|che|chyTNOUT|chyTNOUT
+zabÍ|zabÍT|zabÍT
+vytÁ|vytÁHNOUT|vytÁHNOUT
+ut|hot|utÉCT|hotÉCT
+-
+vždy|decki
+-
+-
+-
+-

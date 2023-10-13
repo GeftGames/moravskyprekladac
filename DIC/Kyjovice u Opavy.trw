@@ -1,0 +1,56 @@
+TW v1.0
+tKyjovice
+d27.06.2023 14:48:48
+iparu led ih ňechali otpočyvadž a dobytky se na ňich pašč Kyjovice OP
+c#Zdroje dat\n-sncj.ujc.cas.cz
+g49.8329671,18.0449124
+q0
+oSlezsko
+-
+-
+-
+-
+-
+pár let|paru led
+-
+-
+ne|ňe
+-
+-
+-
+-
+-
+-
+-
+-
+-
+ONI|-1|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+-
+ONI|-1|oni?|ih,#nich?|jim?,#nim?|je?,#ně?|-|#ňich|jimi?,#nimi?
+SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+-
+ONI|ONI
+SE|SE
+-
+-
+-
+-
+odpočívAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+nechAT|30|-1|at|ám|áš|á|áme|áte|ají|,nechej|me,nechejme|te,nechejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+pÁST|15|-1|ást|asu|aseš|ase|aseme|asete|asou|as|asme|aste|ásl|ásl|ásla|áslo|ásli|ásly|ásly|ásla|asen|asen|asena|aseno|aseni|aseny|aseny|asena
+-
+otpočyvAT|7|-1|adž|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+ňechAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|,nechej?|me,nechejme?|te,nechejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+pASČ|15|-1|ašč|asu?|aseš?|ase?|aseme?|asete?|asou?|as?|asme?|aste?|ásl?|ásl?|ásla?|áslo?|ásli?|ásly?|ásly?|ásla?|asen?|asen?|asena?|aseno?|aseni?|aseny?|aseny?|asena?
+-
+odpočív|otpočyv|odpočívAT|otpočyvAT
+nech|ňech|nechAT|ňechAT
+p|pÁST|pASČ
+-
+-
+na|
+-
+a
+-
+-

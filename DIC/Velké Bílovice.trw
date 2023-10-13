@@ -1,0 +1,78 @@
+TW v0.1
+tVelké Bílovice
+d11.06.2023 19:38:49
+i#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 256
+g48.8499203,16.8905079
+q0
+-
+-
+-
+-
+-
+v sokolu|f sokole
+-
+-
+ně|ne
+-
+ou|ú
+-
+řel|řél
+šel|šél
+kal|kál
+-
+-
+-
+hrdost|hrdosť||
+-
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+-
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|í|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+-
+slab||
+-
+nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
+-
+nějaKÝ|-1|kí|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
+-
+něja|neja|nějaKÝ|nějaKÝ
+-
+obA|2|a|ou|ěma|a|a|ou|ěma
+-
+obA|2|a?|ou?|ěma?|a?|a?|ou?|oma
+-
+ob|obA|obA
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+umřÍT|22|-1|ít|u,(zastarale) umru|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+doJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+-
+BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bíl|byl?|bila|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ál,al|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+umřÍT|22|-1|ít?|u,(zastarale) umru?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|él|el?|ela?|elo?|eli?|ely?|ely?|ela?
+MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|mňél|měl?|měla?|mělo?|mňeli|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+doJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jdi?|jděme?|jděte?|šél|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
+-
+BÝT|BÝT
+dÁ|dÁT|dÁT
+umřÍ|umřÍT|umřÍT
+MÍT|MÍT
+do|doJÍT|doJÍT
+-
+až|aš
+tam
+snad|sňáď?
+tedy|teda
+teď
+ještě|ešče
+potom
+jinak|inádž
+-
+-
+anebo
+když|diš
+jestli|esi
+ale
+-
+-

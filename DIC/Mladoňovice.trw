@@ -1,8 +1,8 @@
-TW v0.1
+TW v1.0
 tMladoňovice
 aGG
 d06.04.2023 9:29:34
-c#Zdroje\n-České nářeční texty - Lamprecht, Arnošt; strana 134
+c#Zdroje\n-České nářeční texty - Lamprecht, Arnošt; strana 134\n-http://eyetracking.upol.cz/naki_vystava_nareci/
 g49.0095569,15.6443778
 q0
 -
@@ -49,21 +49,21 @@ růžE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 dveře|1|-|-|-|-|-|-|-|dveře?|dveří?|dveřím?|dveře?|dveře?|dveřích?|dveřima
 -
-p|pÁN|pÁN
-škol|školA|školA
-vál|pohádKA|pohádKA
-ro|roK|roK
-vesnic|ďedin|růžE|ženA
-pivovar||
-městečk|mjestečk|městO|městO
-polév|polif|pohádKA|pohádKA
-světnic|sednice|růžE|
-jídl|jidl|městO|městO
-dveře|dveře
+p|pÁN|0|p|pÁN
+škol|školA|0|škol|školA
+vál|pohádKA|0|vál|pohádKA
+ro|roK|0|ro|roK
+vesnic|růžE|0|ďedin|ženA
+pivovar||0|pivovar|
+městečk|městO|0|mjestečk|městO
+polév|pohádKA|0|polif|pohádKA
+světnic|růžE|0|sednice|
+jídl|městO|0|jidl|městO
+|dveře|0||dveře
 -
-jarní|-1||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
+jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
-jarnI|-1|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|i|ho?|mu?|ho?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?
+jarnI|-1|?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|?|?|?|?|?|?|||?|ch?|m?|?|?|ch?|mi?|||i|ho?|mu?|ho?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?||
 -
 řídící|řidic|jarní|jarnI
 nejmladší|nejmlač|jarní|jarnI

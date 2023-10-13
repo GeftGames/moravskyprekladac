@@ -1,9 +1,10 @@
 TW v1.0
 tVelká nad Veličkou
 d30.05.2023 10:00:51
-iSymboly: ṵ  ʒ
-c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str. 284\n\n\nVýslovnost\n-Symbol ʒ se čte jako hláska mezi C a DZ\n-ṵ označuje souhlásku U (vznikla z L)
+iSymboly: ṵ  ʒ\n\n\nf čupku máme jatelinu Velká nad Veličkou HO
+c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str. 284\n-sncj.ujc.cas.cz\n\nVýslovnost\n-Symbol ʒ se čte jako hláska mezi C a DZ\n-ṵ označuje souhlásku U (vznikla z L)
 g48.8828208,17.5204541
+rSlovácko>Horňácko
 q0
 -
 -
@@ -15,6 +16,7 @@ z té|s téj
 nepijte vodu|nepite vody
 z té|s téj
 prosekávali mladý les|foštovali
+na kopci|f čupku
 -
 -
 -
@@ -28,16 +30,19 @@ pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 háj|3||e|i||i|i|em|e|ů|ům|e|e,snicky) hájové|ích|i
 kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 pohádKA|1|ka|ky|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
-ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+ženA|1|a?|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 háj|3|?|a|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e,snicky) hájové?|ích?|i?
 kopEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
+ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
 studán|pohádKA|0|studén|pohádKA
 vod|ženA|0|vod|ženA
 háj|háj|0|háj|háj
 angrešt||0|egrež|
+jetelin|ženA|0|jatelin|ženA
 -
 -
 -
@@ -70,11 +75,13 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 doJÍT|14|-1|jít|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 pÍT|15|-1|ít|iju,piji|iješ|ije|ijeme|ijete|ijou,pijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 -
 BÝT|247|-1|být?|sem|jsi?|je|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 dOJÍT|62|-1|jít?|?|?|ójda?|?|?|?|jdi?|jděme?|jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|ójda|?|?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 pÍT|15|-1|ít?|iju,piji?|iješ?|ije?|ijeme?|ijete?|ijou,pijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+MÍT|71|-1|mít?|mám?|máš?|má?|máme|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 -
 BÝT|BÝT
 do|doJÍT|dOJÍT
@@ -82,6 +89,7 @@ ptát||
 JÍT|JÍT
 pÍ|pÍT|pÍT
 napít|napid||
+MÍT|MÍT
 -
 potom
 pořád|furd

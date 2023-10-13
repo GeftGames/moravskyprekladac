@@ -1,7 +1,8 @@
-TW v0.1
+TW v1.0
 tHabrovany
 aGG
 d14.04.2023 17:47:08
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
 g49.2327809,16.8782832
 q0
 oHaná
@@ -17,6 +18,7 @@ oHaná
 -
 -
 -
+||0|Tomša |
 -
 -
 -
@@ -27,9 +29,16 @@ oHaná
 -
 -
 -
+přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
+domluvIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
+přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
+domluvIT|30|-1|it?|ím?|íš?|í?|íme?|íte?|ijó|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 -
+přiJ|přiJÍT|přiJÍT
+domluv|domluvIT|domluvIT
 -
+potom|potem
 -
 -
 -

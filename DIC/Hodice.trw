@@ -1,8 +1,8 @@
-TW v0.1
+TW v1.0
 tHodice
 aGG
 d30.04.2023 16:32:23
-c#Zdroje\n-ČJA, Dodatky, str. <a href="https://cja.ujc.cas.cz/CJA-dodatky/files/Dodatky370.pdf">370</a>
+c#Zdroje\n-ČJA, Dodatky, str. <a href="https://cja.ujc.cas.cz/CJA-dodatky/files/Dodatky370.pdf">370</a>\n-http://eyetracking.upol.cz/naki_vystava_nareci/
 g49.2703493,15.4765465
 xlokální mluva
 q0
@@ -35,18 +35,18 @@ hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y|y?|ech?|y?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 konEC|3|ec|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 -
-kamarát|pohádKA|pohádKA
-brambor|hrad|hrad
-placht|ženA|ženA
-kon|konEC|konEC
+kamarát|pohádKA|0|kamarát|pohádKA
+brambor|hrad|0|brambor|hrad
+placht|ženA|0|placht|ženA
+kon|konEC|0|kon|konEC
 -
-dlouHÝ|-1|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými
-velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+dlouHÝ|-1|hé|hého|hému|hé|hé|hém|hým|||há|hých|hým|há|há|hých|hými|||há|hé|hé|hou|há|hé|hou|||hé|hých|hým|hé|hé|hých|hými|||hý|hého|hému|hého|hý|hém|hým|||zí|hých|hým|hé|zí|hých|hými|||hý|hého|hému|hý|hý|hém|hým|||hé|hých|hým|hé|hé|hých|hými||
+velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-dlouHÝ|-1|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?|há?|hé?|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hy|hých?|hým?|hé?|hé?|hých?|hými?
-velKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|ká?|ké?|ké?|kou|ká?|ké?|kou?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|ky|kých?|kým?|ké?|ké?|kých?|kými?
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|y|ých?|ým?|é?|é?|ých?|ými?
+dlouHÝ|-1|hé?|hého?|hému?|hé?|hé?|hém?|hým?|||há?|hých?|hým?|há?|há?|hých?|hými?|||há?|hé?|hé?|hou?|há?|hé?|hou?|||hé?|hých?|hým?|hé?|hé?|hých?|hými?|||hý?|hého?|hému?|hého?|hý?|hém?|hým?|||zí?|hých?|hým?|hé?|zí?|hých?|hými?|||hý?|hého?|hému?|hý?|hý?|hém?|hým?|||hy|hých?|hým?|hé?|hé?|hých?|hými?||
+velKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|||ká?|kých?|kým?|ká?|ká?|kých?|kými?|||ká?|ké?|ké?|kou|ká?|ké?|kou?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?|||ký?|kého?|kému?|kého?|ký?|kém?|kým?|||cí?|kých?|kým?|ké?|cí?|kých?|kými?|||ký?|kého?|kému?|ký?|ký?|kém?|kým?|||ky|kých?|kým?|ké?|ké?|kých?|kými?||
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||y|ých?|ým?|é?|é?|ých?|ými?||
 -
 dlou|dlouHÝ|dlouHÝ
 velK|velKÝ|velKÝ

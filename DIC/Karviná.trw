@@ -1,4 +1,4 @@
-TW v0.1
+TW v1.0
 tKarviná
 d05.05.2023 10:45:07
 g49.8543186,18.5415012
@@ -8,6 +8,20 @@ q0
 -
 -
 -
+k dostání|ku dostańu
+-
+-
+-
+-
+-
+školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+-
+škoLA|1|a?|ły|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+-
+bída||0|byda|
+živnost||0|žyvnośći|
+jídlo||0|jedło|
+škol|školA|0|ško|škoLA
 -
 -
 -
@@ -18,17 +32,25 @@ q0
 -
 -
 -
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+neBÝT|87|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|byv|byvši|byvše
+pSÁT|15|-1|sát|íši,píšu|íšeš|íše|íšeme|íšete|íší,píšou|iš|išme|ište|sal|sal|sala|salo|sali|saly|saly|sala|sán|sán|sána|sáno|sáni|sány|sány|sána
+-
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+neBÝT|87|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|byv?|byvši?|byvše?
+pSÁT|15|-1|isać|íši,píšu?|íšeš?|íše?|íšeme?|íšete?|íší,píšou?|iš?|išme?|ište?|sal?|sal?|sala?|salo?|sali?|saly?|saly?|sala?|sán?|sán?|sána?|sáno?|sáni?|sány?|sány?|sána?
+-
+BÝT|BÝT
+ne|ňe|neBÝT|neBÝT
+p|pSÁT|pSÁT
+-
+tady|tu
+tehdy,tehdá|ftedy
+ještě|ješče
+potom|potym
 -
 -
--
--
--
--
--
--
--
--
--
--
+a
+protože|bo
 -
 -
