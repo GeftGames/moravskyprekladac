@@ -382,7 +382,7 @@ class ItemNoun {
 		// Return all possible falls with numbers
 		// [[tvar, číslo, pád], rod]
 		// console.log(str,this);
-		console.log(this.From,this);
+		//console.log(this.From,this);
 		if (this.From!="") {
 			if (!str.startsWith(this.From)) {
 				return null;
