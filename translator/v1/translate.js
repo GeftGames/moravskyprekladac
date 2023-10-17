@@ -172,16 +172,18 @@ class ItemNoun {
 //	static From="";
 
 	constructor() {
+		this.UppercaseType=-1;
+
 		this.From = "";
 		this.PatternFrom = null;
 		this.To = [];
-		this.UppercaseType=-1;
 	}
 	
 	static Load(data) {
 		if (loadedversion=="TW v0.1") {
 			if (data.includes('?')) return null;
 			let raw = data.split('|');
+
 			if (raw.length == 4) {
 				let item = new ItemNoun();
 				item.From = raw[0];
@@ -374,12 +376,13 @@ class ItemNoun {
 	}*/
 	
 	IsStringThisWord(str) {
-		if (this.PatternTo===undefined)  return null;
+		if (this.To===undefined)  return null;
 		if (this.PatternFrom===undefined)return null;
 
 		// Return all possible falls with numbers
 		// [[tvar, číslo, pád], rod]
 		// console.log(str,this);
+		console.log(this.From,this);
 		if (this.From!="") {
 			if (!str.startsWith(this.From)) {
 				return null;
@@ -433,6 +436,7 @@ class ItemNoun {
 			//if (str.startsWith(this.From)) {
 		let ret=[];
 
+
 		for (let i=0; i<7; i++) {
 			let shapes=this.PatternFrom.Shapes[i];
 
@@ -455,7 +459,7 @@ class ItemNoun {
 					}
 				}
 			} else {						
-			//	console.log(this.From+this.PatternFrom.Shapes[i]);
+				console.log(this.From+this.PatternFrom.Shapes[i]);
 				if (this.From+this.PatternFrom.Shapes[i] == str) {
 					for (const to of this.To) {
 						let body=to[0];
@@ -474,9 +478,26 @@ class ItemNoun {
 
 		for (let i=7; i<14; i++) {
 			let shapes=this.PatternFrom.Shapes[i];
+			if (Array.isArray(shapes)) {
+				for (let j=0; j<shapes.length; j++) {
+					let shape=this.From+shapes[j];
 
-			for (let j=0; j<shapes.length; j++) {
-				let shape=this.From+shapes[j];
+					if (shape==str) {
+						for (const to of this.To) {
+							let body=to[0];
+							let pattern=to[1];
+							if (pattern==undefined)continue;
+							if (Array.isArray(pattern.Shapes[i])) {
+								for (const z of pattern.Shapes[i]) {
+									if (z!="?") ret.push([body+z, 2, i+1-7]); // [tvar, číslo, pád]	
+								}
+							} else if (pattern.Shapes[i]!="?") ret.push([body+pattern.Shapes[i], 2, i-7+1]);
+						}
+						break;
+					}
+				}
+			}else{
+				let shape=this.From+shapes;
 
 				if (shape==str) {
 					for (const to of this.To) {
@@ -494,7 +515,8 @@ class ItemNoun {
 			}
 		}
 
-		if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
+		if (ret.length!=0) console.log(ret);
+		if (ret.length==0) return null; else return [ret, this.To.Gender, this];
 	}
 
 	/*GetTable(pattern, starting) {
@@ -3938,8 +3960,26 @@ class LanguageTr {
 		}
 		
 		function IsWordComIncluded(w) {
-			if (w.PatternFrom==undefined) return false;
-			let ww=w.From+w.PatternFrom[0];
+			if (w.PatternFrom == null) return false;
+			let shape=w.PatternFrom.Shapes[0];
+			let ww=w.From+shape;
+			
+			return ww.startsWith(input);
+		}
+
+		function IsWordVerbIncluded(w) {			
+			if (w.PatternFrom == null) return false;
+			let shape=w.PatternFrom.Infinitive;
+			let ww=w.From+shape;
+			
+			return ww.startsWith(input);
+		}
+
+		function IsWordAdjIncluded(w) {			
+			if (w.PatternFrom == null) return false;
+			let shape=w.PatternFrom.MasculineAnimate[0];
+			let ww=w.From+shape;
+			
 			return ww.startsWith(input);
 		}
 
@@ -4021,7 +4061,7 @@ class LanguageTr {
 			}
 		}
 		for (let w of this.Verbs) {
-			if (IsWordComIncluded(w)) {
+			if (IsWordVerbIncluded(w)) {
 				let g=w.GetDicForm();
 				if (g!=null) out.push(g);
 				total++;
@@ -4029,7 +4069,7 @@ class LanguageTr {
 		}
 	
 		for (let w of this.Adjectives) {
-			if (IsWordComIncluded(w)) {
+			if (IsWordAdjIncluded(w)) {
 				let g=w.GetDicForm();
 				if (g!=null) out.push(g);
 				total++;

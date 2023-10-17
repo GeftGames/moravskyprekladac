@@ -526,17 +526,18 @@ function mapper_compute() {
 	//ctx.save();
 	/*let imgDataBorders=*/Voronoi_borders(points,imageDataBounds);
 	ctx.save();
+	ctx.globalAlpha = mapperRenderOptions.backgroundRegionMapOpacity;
 	/*let imgDataBackground=*/Voronoi_backgrounds(points,imageDataBounds);
 	
+	ctx.drawImage(imgMap_hory, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+	ctx.globalAlpha = 1;
 	
-	
-	//	ctx.globalAlpha = mapperRenderOptions.backgroundRegionMapOpacity;
 	// Draw backdround fill colors
 	//ctx.drawImage(imgDataBackground, 0, 0);
 	
 	// Draw borders
 	//ctx.drawImage(imgDataBorders, 0, 0);
-	//ctx.globalAlpha = 1;
+	//
 	
 	// filter
 	let xx=0,yy=0, radius=6;
