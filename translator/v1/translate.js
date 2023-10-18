@@ -4195,7 +4195,7 @@ class LanguageTr {
 			let unknownPattern;
 	//		let sent=currentSentence.substring(currentSentence.length-1);
 
-			let words=this.MultipleSplit(currentSentence, "  ,-:;'\t_.!?„“\n");
+			let words=this.MultipleSplit(currentSentence, "  ,-:;'\t_.!?„“\n[]");
 			
 			let BuildingSentence=[];
 			/*
@@ -4208,7 +4208,13 @@ class LanguageTr {
 				let word=Zword.toLowerCase();
 
 				// Phrases?
-				
+
+				// Customword
+				let cw=this.CustomWord(word);
+				if (cw!=null){
+					BuildingSentence.push(cw);
+					continue;
+				}
 
 				// separator
 				if (!currentWord[0]) {
@@ -5260,6 +5266,205 @@ class LanguageTr {
 		}		
 	}
 
+	// přeložit text s daným slovem, které má speciální vlatnosti
+	CustomWord(str) {
+		//console.log(str);
+		const starting="<{", ending="}>";
+		if (str.startsWith(starting) && str.endsWith(ending)) {
+			//let listOfItems;
+			let body=str.substring(starting.length, str.length-starting.length);
+		//	console.log(body);
+			let vars=body.split('|');
+			//console.log(vars);
+
+			let word;
+			for (const p of vars) {
+				let rule=p.split("=");
+				if (rule.length == 2) {
+					if (rule[0]=="word"){
+						word=rule[1];
+						break;
+					}
+				} else return ["Unknown", word, str];
+			}
+		//	console.log("Custom word "+word);
+
+			for (const p of vars) {
+				let rule=p.split("=");
+			//	console.log(rule);
+				if (rule.length == 2) {
+					if (rule[0]=="typ") {
+						switch (rule[1]) {
+							case "pods":// <{word=den|typ=pods|cislo=j|pad=1}>  							
+								{
+									let cislo=-1, pad="";
+									for (const v of vars) {
+										let nrule=v.split("=");
+										//console.log(nrule[0]);
+										if (nrule[0]=="cislo") {
+											if (nrule[1]=="j") cislo=1;
+											else if (nrule[1]=="m") cislo=2;
+											else cislo=nrule[1];
+											break;
+										}
+									}
+									for (const v of vars) {
+										let nrule=v.split("=");
+									//	console.log(nrule);
+										if (nrule[0]=="pad") {
+											pad=parseInt(nrule[1]);
+											break;
+										}
+									}
+
+									let words=this.searchWordNoun(word);
+									//console.log(words);
+									if (words!=null){
+										for (let w of words[0]) {
+											//console.log(w,cislo,pad);
+											if (w[1]==cislo && w[2]==pad) {
+												//console.log("OK");
+												return ["Noun", [[w], undefined, w], word];
+												//["Noun", n, původní]
+											}
+										}
+									}
+								}
+								break;
+
+							case "prid":
+								{
+									let cislo=-1, pad=-1, rod=-1;
+									for (const nrule of vars) {
+										if (nrule[0]=="cislo") {
+											cislo=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="pad") {
+											pad=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="rod") {
+											rod=nrule[1];
+											break;
+										}
+									}
+
+									let words=this.searchWordAdjective(word);
+									for (let word of words[0]){
+										if (w[1]==cislo && w[2]==pad && w[3]==rod) {
+											return w;
+										}
+									}
+								}
+								break;
+
+							case "zajm":
+								{
+									let cislo=-1, pad=-1, rod="";
+									for (const nrule of vars) {
+										if (nrule[0]=="cislo") {
+											cislo=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="pad") {
+											pad=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="rod") {
+											rod=nrule[1];
+											break;
+										}
+									}
+
+									let words=this.searchWordPronoun(word);
+									for (let w of words[0]){
+										if ((w[1]==cislo || cislo==-1) && (w[2]==pad || pad==-1) && (w[3]==rod || rod=="")) {
+											return w;
+										}
+									}
+								}
+								break;
+
+							case "cisl":
+								{
+									let cislo=-1, pad=-1, rod="";
+									for (const nrule of vars) {
+										if (nrule[0]=="cislo") {
+											cislo=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="pad") {
+											pad=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="rod") {
+											rod=nrule[1];
+											break;
+										}
+									}
+
+									let words=this.searchWordNumber(word);
+									for (let w of words[0]) {
+										if ((cislo==-1 || w[1]==cislo) && (pad==-1 || w[1]==pad)  && (rod=="" || w[1]==rod)) {
+											return w;
+										}
+									}
+								}
+								break;
+
+							case "verb":
+								{
+									let cislo=-1, osoba=-1, cas="";
+									for (const nrule of vars) {
+										if (nrule[0]=="cislo") {
+											cislo=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="o") {
+											osoba=nrule[1];
+											break;
+										}
+									}
+									for (const nrule of vars) {
+										if (nrule[0]=="cas") {
+											cas=nrule[1];
+											break;
+										}
+									}
+
+									let words=this.searchWordVerb(word);
+									for (let w of words[0]){
+										if (w[1]==osoba && w[2]==pad && w[3]==cas) {
+											return w;
+										}
+									}
+								}
+								break;
+						}
+						break;
+					}
+				} else return ["Unknown", word, str];
+			}
+			// type=podst,prid,zajm,cisl
+			// 
+			return ["Unknown", word, str];
+		}
+	}
 	
 }
 
