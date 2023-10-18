@@ -532,8 +532,45 @@
 								<p id="">Návrhy</p>	
 								<div id="mapperNavrh" style="display: flex;flex-wrap: wrap;justify-content: flex-start;width: -webkit-fill-available;flex-direction: column;" >
 									<p>Podstatná jména</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
+									<div class="navrhCat">										
+										<!-- Unikátní slova-->
+										<div class="mapperNavrh" onclick="navrhClick('<{word=vesnice|typ=pods|cislo=j|pad=1}>')">VESNICE</div>
+										<div class="mapperNavrh" onclick="navrhClick('mrkev')">MRKEV</div>
+										<div class="mapperNavrh" onclick="navrhClick('jaro')">JARO</div>
+										<div class="mapperNavrh" onclick="navrhClick('polštář')">POLŠTÁŘ</div>
+										<div class="mapperNavrh" onclick="navrhClick('peřina')">PEŘINA</div>
+										<div class="mapperNavrh" onclick="navrhClick('postel')">POSTEL</div>
+										<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>
+										<div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>
+										<div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
+										<div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
+										<div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
+										
+										<!-- změna části slova-->
+										<div class="mapperNavrh" onclick="navrhClick('mraveniště')">MRAVENIŠTĚ</div>
+										<div class="mapperNavrh" onclick="navrhClick('slunce')">SLUNCE</div>
+										<div class="mapperNavrh" onclick="navrhClick('kachna')">KACHNA</div>
+																				
+										<!-- Atipické skloňování-->
+										<div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div>
+										
+										<!-- Krátkost-->
+										<div class="mapperNavrh" onclick="navrhClick('<{word=práce|typ=pods|cislo=j|pad=1}>')">PRÁCE</div>
+										<div class="mapperNavrh" onclick="navrhClick('bláto')">BLÁTO</div>
+										<div class="mapperNavrh" onclick="navrhClick('lípa')">LÍPA</div>
+										<div class="mapperNavrh" onclick="navrhClick('zima')">ZIMA</div>
+										<div class="mapperNavrh" onclick="navrhClick('růže')">RŮŽE</div>
+										
+										<!-- Změna -->
+										<div class="mapperNavrh" onclick="navrhClick('doktor')">DOKTOR</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{word=lidé|typ=pods|cislo=m|pad=1}>')">LIDÉ</div>
+										<div class="mapperNavrh" onclick="navrhClick('mlýn')">MLÝN</div>
+										<div class="mapperNavrh" onclick="navrhClick('břicho')">BŘICHO</div>
+										<div class="mapperNavrh" onclick="navrhClick('vítr')">VÍTR</div>
+
+										<!-- Měkčení na konci slov-->
+										<div class="mapperNavrh" onclick="navrhClick('<{word=den|typ=pods|cislo=j|pad=1}>')">DEN</div>
+										<div class="mapperNavrh" onclick="navrhClick('kost')">KOST</div>
 									</div>
 									<p>Přídavná jména</p>
 									<div class="navrhCat">
@@ -571,6 +608,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('měl')">MĚL</div>
 										<div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
 										<div class="mapperNavrh" onclick="navrhClick('šel')">ŠEL</div>
+										<div class="mapperNavrh" onclick="navrhClick('udělat')">UDĚLAT</div>
 									</div>
 									<p>Příslovce</p>
 									<div class="navrhCat">
@@ -622,7 +660,7 @@
 							<div id="expertModeMapper" style="display:none;width: 1000px;    max-width: -webkit-fill-available;">
 								<div>
 									<p id="mapperSearchWord">Hledaná fráze</p>
-									<input type="text" id="mapperSearchPattern" ><!--placeholder='To je <"dub"->"pods,č=j,pád=1">!; "buk"'-->
+									<input type="text" id="mapperSearchPattern"  placeholder="<{word=vesnice|typ=pods|cislo=j|pad=2}>" style="width: -webkit-fill-available;"><!--placeholder='To je <"dub"->"pods,č=j,pád=1">!; "buk"'-->
 								</div>
 								<div>
 									<p>Obarvení pozadí</p>
