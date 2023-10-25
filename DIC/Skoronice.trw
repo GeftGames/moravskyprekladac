@@ -1,7 +1,8 @@
 TW v1.0
 tSkoronice
+aGG
 d25.06.2023 18:36:49
-c#Zdroje dat\n-sncj.ujc.cas.cz
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n\n#Popis nářečí\n-Ú Ve Skoronicích ještě je slovo pauz a pauk, jinde všude púz (púza) a púk, v Pavlovicích púza a pabúk.\n-ve Skoronicích: majú, uklúzajú\nV Ježově, v Kostelci, Skoronicích, Bohuslavicích a v Bukovanech vládne ještě tvrdé a měkké l (ł a l)\n
 g48.981163,17.1525177
 q0
 -
@@ -15,6 +16,20 @@ pajasan žláznatý|agram
 -
 -
 -
+slzA|1|a|y|e|u|o|e|ou|y|,astarale) slzí|ám|y|y|ách|ami
+pavouK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+-
+slzA|1|a|y?|e?|u?|o?|e?|ou?|y?|,astarale) slzí?|ám?|y?|y?|ách?|ami?
+pavouK|2|k|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
+-
+slz|slzA|0|sľz|slzA
+pavou|pavouK|0|pau|pavouK
+-
+žlutÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+-
+žlutÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
+-
+žlut|žľut|žlutÝ|žlutÝ
 -
 -
 -
@@ -22,13 +37,14 @@ pajasan žláznatý|agram
 -
 -
 -
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+uklízET|15|-1|et|ím|íš|í|íme|íte|í,uklízejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ajú|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+uklízET|15|-1|et?|ím?|íš?|í?|íme?|íte?|ajú|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 -
--
--
--
--
--
+m|mÍT|mÍT
+uklíz|uklízET|uklízET
 -
 -
 -

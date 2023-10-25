@@ -3,7 +3,7 @@ tBuchlovice
 aGG
 d19.07.2023 12:59:39
 iv izbje biło vždicki čisťučko Buchlovice UH\nfčíl ti ďefčiska majú na sobje jakési cancori Buchlovice UH
-c#Zdroje dat\n-<a href="https://www.buchlovice.cz/modules/file_storage/download.php?file=84b7d128%7C391">BUCHLOVSKÝ\nZPRAVODAJ ČÍSLO 5 • ROČNÍK XXVII. ZÁŘÍ–ŘÍJEN 2021</a> Z buchlovského slovníku III str. 52-53\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Buchlovice">sncj.ujc.cas.cz</a>
+c#Zdroje dat\n-<a href="https://www.buchlovice.cz/modules/file_storage/download.php?file=84b7d128%7C391">BUCHLOVSKÝ\nZPRAVODAJ ČÍSLO 5 • ROČNÍK XXVII. ZÁŘÍ–ŘÍJEN 2021</a> Z buchlovského slovníku III str. 52-53\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Buchlovice">sncj.ujc.cas.cz</a>\n\nBUCHLOVSKÝ ZPRAVODAJ 6/2011 str.38 nevyčernáno
 g49.0860383,17.3377204
 q0
 -
@@ -86,6 +86,7 @@ zeď z jílu tlučeného mezi desky|nabijanica
 jehlice trnitá|bodláček
 prašivka|cigánova faja
 na sobě|na sobje
+
 -
 -
 -
@@ -100,6 +101,15 @@ konopí|0|||||||m|||m|||ch|mi
 stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 lucerNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
+sluncE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+slunKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
+snídanĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
+správcE|1|e|e|i,ovi|e|e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+třešEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
+třešnĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
+štěrK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+štiKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 -
 blatníK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 blatouCH|3|ch?|chu?|chu?|ch?|chu?|chu?|chem?|chy?|chů?|chům?|chy?|chy?|ších?|chy?
@@ -109,6 +119,15 @@ konopÍ|0|ja|?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 hlavA|1|a|y?|ě?|u?|o?|je?|ú?|y?|?|ám?|y?|y?|ách?|ami?
 laterŇA|1|ňa|ny?|ně?|nu?|no?|ně?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
+sluncE|0|e?|e?|i?|e?|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
+slunKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka?|ek?|kům?|ka?|ka?|kách?|ky?
+snídanĚ|1|í|ě?|i?|i?|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
+správCE|1|ec|e?|i,ovi?|e?|e?|i,ovi?|em?|i,ové?|ů?|ům?|e?|i,ové?|ích?|i?
+třešEŇ|1|ňa|ně?|ni?|eň?|ni?|ni?|ní?|ně?|ní?|ním?|ně?|ně?|ních?|němi?
+třešnĚ|1|e|ě?|i?|i?|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
+svatBA|1|ba|by?|bě?|bu?|bo?|bě?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
+štěrK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+štiKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 -
 apaty|pohádKA|0|apatí|pohádKA
 baby|pohádKA|0|klenec|
@@ -180,6 +199,28 @@ zahál|pohádKA|0|lelky|
 záchod||0|latrina|
 zuby||0|keláně|
 židle||0|legát|pohádKA
+řezanka||0|sečka|
+thoř||0|schoř|
+sklenice||0|sklínka|
+kvočna||0|skreča|
+svlačec||0|slak|
+slunc|sluncE|0|slún|slunKO
+slun|slunKO|0|slún|slunKO
+usoplenec||0|sopláň|
+snídan|snídanĚ|0|snídan|snídanĚ
+správc|správcE|0|správ|správCE
+dědeček||0|stařeček|
+babička||0|stařenka|
+třeš|třešEŇ|0|střeš|třešEŇ
+třešn|třešnĚ|0|střešň|třešnĚ
+tuberkulóza||0|súchoty|
+uzel||0|suk|
+svat|svatBA|0|svaj|svatBA
+darebák||0|syčák|
+zdání||0|šajn|
+šarže||0|šarža|
+štěr|štěrK|0|ščer|štěrK
+šti|štiKA|0|šču|štiKA
 -
 -
 -
@@ -209,10 +250,12 @@ ja|jaKÝSI|jaKÝSI
 klÁTIT|15|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|átil|átil|átila|átilo|átili|átily|átily|átila|ácen|ácen|ácena|áceno|áceni|áceny|áceny|ácena
 bývAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+stříkAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 gyglAT|15|-1|at|átím?|átíš?|átí?|átíme?|átíte?|átí?|ať?|aťme?|aťte?|átil?|átil?|átila?|átilo?|átili?|átily?|átily?|átila?|ácen?|ácen?|ácena?|áceno?|áceni?|áceny?|áceny?|ácena?
 bývAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo|ali?|aly?|aly?|ala?
 mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ajú|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+ščákAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
 kl|gygl|klÁTIT|gyglAT
 dohadovat|handrkovat||
@@ -246,6 +289,9 @@ chytit|načápat||
 dosoušet |dosúšat ||
 dosušit|dosúšat ||
 m|mÍT|mÍT
+vzkázat|skázat||
+střík|ščák|stříkAT|ščákAT
+||
 -
 tam|hen,henkaj
 jinak|ináč
@@ -253,6 +299,7 @@ dříve|indy,indá,indová
 tajně|kraďů
 sotva|ledvá
 nyní,teď|fčíl
+však|šak
 -
 -
 -

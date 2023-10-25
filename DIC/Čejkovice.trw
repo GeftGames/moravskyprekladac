@@ -2,7 +2,7 @@ TW v1.0
 tČejkovice
 d25.06.2023 18:57:05
 ibranki se tam dali navrch, a ešťe dekl takovej Čejkovice HO
-c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/dialektickyslov00bartgoog/page/434/mode/1up#page=434
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/dialektickyslov00bartgoog/page/434/mode/1up#page=434\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis nářečí\n-Střední L\nV Pavlovicích, Bořeticích, Čejkovicích a ve Vracově akkusativ mn. mužs. živ. zastoupen jest genitivem: Má dvúch bratrů, štyřech synů, dobrých rodičů. To je pro muzikantů. Šel mezi ženáčů. Zavolal mlatců. Na všecky cesty postavili vartýřů. Tech malých učil.\nv Čejkovicích tlustý, tlúct, tlačit\nČejkovicích dvoch, dvom, dvoma.\n
 g48.9037217,16.9413705
 q0
 -
@@ -13,20 +13,31 @@ q0
 -
 -
 -
+ou|ú
 -
+ouct|úct
 -
 kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 vinohrad|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
+bratR|2|r|ra|ru,rovi|ra|ře|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 kanEC|2|ec|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 šuby|3|šuby|u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+syn|2|?|a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
+bratR|2|r?|ra?|ru,rovi?|ra?|ře?|ru,rovi?|rem?|ři?|rů?|rům?|ry?|ři?|rech?|ry?
 -
 ||0|dekl|
 kan|kanEC|0|gan|kanEC
 vinohrad|vinohrad|0||šuby
+syn|syn|0|syn|syn
+brat|bratR|0|brat|bratR
 -
+tlustÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+tlustÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
+tlust|tlustÝ|tlustÝ
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
@@ -37,17 +48,25 @@ takovÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý
 SE|SE
 takovÝ|takovÝ|takovÝ
 -
+dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-
 -
+dvA|4|a?|och|om|a?|a?|ou?|oma|-|-|-|-|-|-|-|a?|och|om|a?|a?|ou?|oma|-|-|-|-|-|-|-|ě?|och|om|ě?|ě?|ou?|oma|-|-|-|-|-|-|-|ě?|och|om|ě?|ě?|ou?|oma|-|-|-|-|-|-|-
 -
+dv|dvA|dvA
 -
 dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|učme,tlucme|učte,tlucte|oukl|oukl|oukla|ouklo|oukli|oukly|oukly|oukla|učen|učen|učena|učeno|učeni|učeny|učeny|učena
 -
 dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+tlOUCT|15|-1|úct|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,tluc?|učme,tlucme?|učte,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeni?|učeny?|učeny?|učena?
 -
 dÁ|dÁT|dÁT
+tl|tlOUCT|tlOUCT
+tlačit||
 -
 ještě|ešťe
 nahorů|navrch
+doposud|dofčilku
 -
 -
 a

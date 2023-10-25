@@ -1,0 +1,57 @@
+TW v1.0
+tHostašovice
+aGG
+d21.10.2023 12:56:12
+iV Hostašovicích se říká: "Nechoďte po lúkech, nehažte po ptákech, choďte po chodníkech."
+c#Zdoje dat\n-<a href="https://www.hodslavice.cz/hodslavske-nareci">Stránky obce Hodloslavice - Hodslavské nářečí</a>
+g49.5343126,17.9971326
+q0
+-
+-
+-
+-
+-
+-
+-
+-
+ou|ú
+kách|kech
+-
+-
+louKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k,|kám|ky|ky|kách|kami
+ptáK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+chodníK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+-
+louKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k,?|kám?|ky?|ky?|kech|kami?
+ptáK|2|k?|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|kech|ky?
+chodníK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kech|ky?
+-
+lou|louKA|0|lú|louKA
+ptá|ptáK|0|ptá|ptáK
+chodní|chodníK|0|chodňí|chodníK
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+házET|15|-1|et|ím|íš|í|íme|íte|í,házejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+-
+choDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
+hÁZET|15|-1|ázet?|ázím?|ázíš?|ází?|ázíme?|ázíte?|ází,ázházejí?|ázej?|ázejme?|ažte|ázel?|ázel?|ázela?|ázelo?|ázeli?|ázely?|ázely?|ázela?|ázen?|ázen?|ázena?|ázeno?|ázeni?|ázeny?|ázeny?|ázena?
+-
+cho|choDIT|choDIT
+necho|choDIT|choDIT
+ház|h|házET|hÁZET
+neház|neh|házET|hÁZET
+-
+-
+po|
+-
+-
+-

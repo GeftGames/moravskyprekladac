@@ -1,6 +1,7 @@
-TW v0.1
+TW v1.0
 tLadná
 d03.06.2023 11:42:07
+c#Droje dat\n-https://www.obecladna.cz/obec-1/historie-obce/zajimavosti/\nhttps://www.obecladna.cz/modules/file_storage/download.php?file=5d9c1b51%7C436
 g48.8054125,16.8717119
 rnář=Lanštorf
 q0
@@ -9,6 +10,28 @@ q0
 -
 -
 -
+krajková zástěra|FJERTOCH 
+prostor pro náplň v buchtě|DUŠA 
+mužská kožešinová čepice|ASTRIKÁNKA
+ hejno drůbeže|KŔDEL 
+deska na válení těsta|NUDRPLÉT 
+okurková nať|OHAROVISKO
+ lakomý člověk|OBLHÚT 
+ kroupová polévka s krví|OBARŇICA 
+rumový zákusek|OŽRALÝ IZIDÓR
+zvýšené zápraží|PÉCKA
+dřevěná kolečka|PREŠKOBRTKY 
+skrojek chleba|SKIFKA 
+větrací otvor v klenbě sklepu|SOPÚCH
+ suchá tráva|ŠÁŠÍ 
+skříň na šaty|ŠIFONÉR 
+malý plstěný klobouk|ŠIRÚCH 
+náhubek pro psa|ŠKRAMUŠA 
+kamna s plotnou|ŠPORHELT 
+kulatá příčka u žebříku|ŠPRUŠLA 
+větší odřezek masa|ŠRÚTKA 
+židle bez opěradla |ŠTOKRLA 
+vařené fazole s kroupami a oškvarky|ŠURIMAJZL 
 -
 -
 -
@@ -23,52 +46,123 @@ sluncE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+angrešt|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+kapustA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+bodláK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+příkop|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+skořápKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+jazyK|3|k|ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
 -
 sunKO|0|ko?|ka?|ku?|ko|ko?|ku?|kem?|ka?|ek?|kům?|ka?|ka?|kách?|ky?
 les|3|?|a?|u?|?|e?|i|em?|y?|ů?|ům?|y?|y?|ích?|y?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y|?|ám?|y?|y?|ách?|ami?
 člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|lude|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
+egrešLA|3|la|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+kchel|1||y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+pcháč|3||ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+příkop|3|?|u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+skořápKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+jazyK|3|k|ka?|ku?|k?|ku?|ku,ce?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 -
-slun|sun|slunKO|sunKO
-slunc|sun|sluncE|sunKO
-les|les|les
-třešně|střešně||
-větev|haluz||
-člověk|člověk
+slun|slunKO|0|sun|sunKO
+slunc|sluncE|0|sun|sunKO
+les|les|0|les|les
+třešně||0|střešně|
+větev||0|haluz|
+|člověk|0||člověk
+medailonek||0|AGNÚSTEK |
+veš||0|BREBERKA|
+okoun||0|BRGOŠ |
+hrozinka||0|CIBÉBA |
+angrešt|angrešt|0|egreš|egrešLA
+záclona||0|FIRHUŇKA |
+kapust|kapustA|0|kchel|kchel
+škraloup ||0|KOŽA |
+topol||0|LINDA |
+židle||0|LEGÁTKA|
+opasek||0|LANCÚCH|
+kousek||0|KÚŠTĚK |
+ranec||0|NOŠA |
+nádobí||0|NÁČENÍ |
+meruňka||0|MARHULA |
+nůžky||0|NOŽÍCE |
+náušnice||0|ORINGLA |
+deštník||0|PALAZÓR |
+rajče||0|PARADAJKA |
+bodlá|bodláK|0|pcháč|pcháč
+drobenka||0|POSYPÁTKO |
+poklopec||0|PUNT |
+žito||0|RÉŽ |
+zákusek||0|ŠAMRDÓL |
+příkop|příkop|0|ŠKARPA|příkop
+skořáp|skořápKA|0|škařúp|skořápKA
+škraloup||0|škralúp|
+pažitka||0|ŠNYDLICH |
+kůlna||0|ŠOPKA |
+kapesník||0|ŠNUPTYCHL |
+provaz||0|ŠPAGÁT |
+špejle||0|ŠPIDLÍK |
+kvedlačka||0|ŠPRUGLOVAČKA |
+zábradlí||0|ŠRAŇK |
+závora||0|ŠRAŇK |
+||0||
+||0|otúk|
+jazy|jazyK|0|jazy|jazyK
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|é|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ú|é|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|é|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ú|||é|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
 plan|puan|zelenÝ|zelenÝ
 hlučn|hučn|zelenÝ|zelenÝ
 největší|najvětší||
 veliký||
 letní||
+neupravený|ROZGAJDANÝ ||
+|
 -
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
 -
 tEN|-1|en?|ého,eho|emu|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|ého,eho|emu|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|ého,eho|emu|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-SE|-1|-|sebe?|si,sobě?|se,sebe?|-|sobě?|sebou?
+SE|-1|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
+nějaKÝ|-1|ký?|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
 -
 t|tEN|tEN
 SE|SE
+něja|neja|nějaKÝ|nějaKÝ
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|ste|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+řÍCT|30|-1|íct?|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekeṵ|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
 -
-|BÝT|BÝT
+BÝT|BÝT
+trknout|DRCNÚT||
+rýpat |FRFŇIT ||
+nakrást |NAGABAT ||
+nabrat |NAGABAT ||
+čichat|ŇUCHAT ||
+žehlit|PIGLOVAT ||
+přiskřípnout |PŘIVŔZGNÚT ||
+|
+ř|řÍCT|řÍCT
+odpadnout|odpadeu||
 -
 zvlášť,zvláště|zuášče
 taky,také|take
 teď,nyní|fčil
 jenom|enom
+leda
+přeci,přece|přeca
+hned
 -
+i|aj|
 -
 -
 -
