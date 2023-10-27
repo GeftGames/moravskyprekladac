@@ -791,3 +791,35 @@ makeTextFile = function (text) {
 
 	return textFile;
 };
+
+
+function Transcription(html) {
+
+	let arr_ToBasicCzech = [
+		{ from: "mňe", to: "mě" },		
+		{ from: "fje", to: "fě" },
+		{ from: "pje", to: "pě" },
+
+		{ from: "ďe", to: "dě" },	
+		{ from: "ťe", to: "tě" },	
+		{ from: "ňe", to: "ně" },
+
+		{ from: "ijo", to: "io" },
+		{ from: "iju", to: "iu" },
+		{ from: "ije", to: "ie" },
+		{ from: "ija", to: "ia" },
+	];	
+
+	let arr_ToCzechPhonetics = [
+		{ from: "dz", to: "x" },
+		{ from: "dž", to: "x" },
+	];
+
+	let arr_ToMoravian = [
+		{ from: "ch", to: "x" },	
+		{ from: "x", to: "ks" },	
+		{ from: "ňe", to: "ně" },	
+	];	
+
+
+}
