@@ -2,7 +2,7 @@ TW v1.0
 tVracov
 aGG
 d25.10.2023 8:03:42
-c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis nářečí\n-velmi "mazlivě" znějící Ľ  volala\n
+c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\nNářečí na Břeclavsku a v dolním pomoraví, František Svěrák\n\n#Popis nářečí\n-velmi "mazlivě" znějící Ľ  volala\n-Výskyt tvrdého a měkkého L    Ł+Ľ
 g48.9751639,17.2099639
 q0
 -
@@ -14,6 +14,28 @@ q0
 -
 -
 -
+dil|ďíľ
+děl|ďéľ
+-
+hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+louKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k,|kám|ky|ky|kách|kami
+obilí|0|||||||m|||m|||ch|mi
+zelí|0|||||||m|||m|||ch|mi
+-
+hlavA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+louKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k,?|kám?|ky?|ky?|kách?|kami?
+obilí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+zelí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+-
+hlav|hlavA|0|hlav|hlavA
+lou|louKA|0|lú|louKA
+obilí|obilí|0|obiľí|obilí
+zelí|zelí|0|zeľí|zelí
+||0|sľípka|
+-
+-
+-
+|zdraví||
 -
 -
 -
@@ -21,14 +43,17 @@ q0
 -
 -
 -
+vzkazOVAT|15|-1|ovat|uji,vzkazuju|uješ|uje|ujeme|ujete|ují,vzkazujou|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 -
+vzkazOVAT|15|-1|ovat?|uji,vzkazuju?|uješ?|uje?|ujeme?|ujete?|ují,vzkazujou?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovaľi|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+choDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|ďíľ|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
+vĚDĚT|7|-1|ědět?|ím?|íš?|í?|íme?|íte?|ědí?|ěz?|ězme?|ězte?|jeďéľ|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
 -
--
--
--
--
--
--
+vzkaz|vzkazOVAT|vzkazOVAT
+cho|choDIT|choDIT
+v|vĚDĚT|vĚDĚT
 -
 -
 -

@@ -2,7 +2,7 @@ TW v1.0
 tNásedlovice
 aGG
 d25.10.2023 15:33:37
-c#Zdroj dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis\nj odsouvá: zavolé, zazpívé, nezavazé, nélepší, grécar, té našé bílé husi (v Nenkovicích, Želeticích, Veteřově a v Násedlovicích)\ný buď trvá nezměněno: dobrý člověk, rynský, bývajú (ve Vracově, Kyjově, Ježově, Kostelci, Nenkovicích, Želeticích, Násedlovicích)\n\n
+c#Zdroj dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\nNářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n\n#Popis\n-j odsouvá: zavolé, zazpívé, nezavazé, nélepší, grécar, té našé bílé husi (v Nenkovicích, Želeticích, Veteřově a v Násedlovicích)\n-ý buď trvá nezměněno: dobrý člověk, rynský, bývajú (ve Vracově, Kyjově, Ježově, Kostelci, Nenkovicích, Želeticích, Násedlovicích)¨\n-Hanácké É místo ej>é\n-políbit>políbnút\n\n
 g49.0125234,16.9600295
 q0
 oSlovácko>Hanácké Slovácko
@@ -14,13 +14,30 @@ oSlovácko>Hanácké Slovácko
 -
 -
 -
+ej|é
 -
 -
+vEJCE|0|ejce|ejce,v&#160;obecném jazyce) vejcete|ejci|ejce|ejce|ejci|ejcem|ejce|ajec|ejcím|ejce|ejce|ejcích|ejci
+ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+kožiCH|3|ch|chu,čeji) kožicha|chu|ch|chu|chu,čeji) kožiše|chem|chy|chů|chům|chy|chy|ších|chy
+kříž|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
+vEJCE|0|éce|ejce,v&#160;obecném jazyce) vejcete?|ejci?|ejce?|ejce?|ejci?|ejcem?|ejce?|ajec?|ejcím?|ejce?|ejce?|ejcích?|ejci?
+ČLOVĚK|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
+kožiCH|3|ch|chu,čeji) kožicha?|chu?|ch?|chu?|chu,čeji) kožiše?|chem?|chy?|chů?|chům?|chy?|chy?|ších?|chy?
+kříž|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
 -
+v|vEJCE|0|v|vEJCE
+|ČLOVĚK|0||ČLOVĚK
+koži|kožiCH|0|koži|kožiCH
+klička||0|klučka|
+kříž|kříž|0|kříž|kříž
 -
+největší|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
+největší|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?||ho?|mu?|ho?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?
 -
+největší|névječí|největší|největší
 -
 tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
@@ -34,9 +51,26 @@ n|nÁŠ|nÁŠ
 -
 -
 -
+zavolAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+polÍBIT|30|-1|íbit|íbím|íbíš|íbí|íbíme|íbíte|íbí|ib|ibme|ibte|íbil|íbil|íbila|íbilo|íbili|íbily|íbily|íbila|íben|íben|íbena|íbeno|íbeni|íbeny|íbeny|íbena
+dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+noSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
 -
+zavolAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+utíkAT|7|-1|tíkat?|tíkám?|tíkáš?|tíká?|tíkáme?|tíkáte?|tíkají?|ťéké|tíkejme?|tíkejte?|tíkal?|tíkal?|tíkala?|tíkalo?|tíkali?|tíkaly?|tíkaly?|tíkala?
+polÍBIT|30|-1|íbnút|íbím?|íbíš?|íbí?|íbíme?|íbíte?|íbí?|ib?|ibme?|ibte?|íbil?|íbil?|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?|íben?|íben?|íbena?|íbeno?|íbeni?|íbeny?|íbeny?|íbena?
+dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+noSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sijú|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeni?|šeny?|šeny?|šena?
 -
+zavol|zavolAT|zavolAT
+utík|u|utíkAT|utíkAT
+neutík|neu|utíkAT|utíkAT
+pol|polÍBIT|polÍBIT
+d|dÁT|dÁT
+no|noSIT|noSIT
 -
+nejvíce|névíc
 -
 -
 -

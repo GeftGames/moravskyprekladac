@@ -11,6 +11,7 @@ oHorácko
 -
 -
 -
+To byl ale hezký případ.|Ale pjeknej případ bil.
 -
 -
 ředitel|pan řídicí
@@ -86,6 +87,7 @@ cel|pěknÝ|pěknÝ
 zoufal|pěknÝ|pěknÝ
 přecedov|matčin|matčin
 předsedov|matčin|matčin
+pěkn|pjekn|pěknÝ|pěknÝ
 -
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
@@ -144,6 +146,8 @@ utÉCT|22|-1|éct|eču|ečeš|eče|ečeme|ečete|ečou|eč|ečme|ečte|ekl|ekl|e
 polÍBIT|14|-1|íbit|ib|ibme|ibte|íbil|íbil|íbila|íbilo|íbili|íbily|íbily|íbila|íben|íben|íbena|íbeno|íbeni|íbeny|íbeny|íbena
 děkOVAT|7|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala
 vyzrÁT|4|-1||ál|ál|?|?|?|?|?|?
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
 -
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl|byl|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 dostaT|6|-1|t?|ň?|ňme?|ňte?|l|l|la?|lo?|li?|ly?|ly?|la?
@@ -157,6 +161,8 @@ utÉCT|22|-1|éct?|eču|?|?|?|?|?|eč?|ečme?|ečte?|ekl?|ekl?|ekla?|eklo?|ekli?
 polÍBIT|14|-1|íbit?|ib?|ibme?|ibte?|ibil|ibil|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?|íben?|íben?|íbena?|íbeno?|íbeni?|íbeny?|íbeny?|íbena?
 děkOVAT|7|-1|ovat?|uju|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?
 vyzrÁT|4|-1||ál|ál|?|?|?|?|?|?
+vĚDĚT|7|-1|ědět?|ím?|íš?|i|íme?|íte?|ědí?|ěz?|ězme?|ězte?|ěděl?|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
+neBÝT|23|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?
 -
 BÝT|BÝT
 dostaT|dostaT|dostaT
@@ -170,6 +176,8 @@ ut|utÉCT|utÉCT
 polÍ|polÍBIT|polÍBIT
 děkO|děkOVAT|děkOVAT
 vyzr|vyzrÁT|vyzrÁT
+v|vĚDĚT|vĚDĚT
+ne|neBÝT|neBÝT
 -
 hezky|pjekňe
 tady
@@ -180,6 +188,7 @@ ven
 teď|teť,tejť
 zase
 až|aš
+mockrát
 -
 do|
 za|

@@ -2,7 +2,7 @@ TW v1.0
 tLiptál
 aGG
 d27.06.2023 16:10:14
-iuďełám sy čaj do bugála Liptál VS\ndosúšała sem ty gaťe na topéňí Liptál VS
+iuďełám sy čaj do bugála Liptál VS\ndosúšała sem ty gaťe na topéňí Liptál VS\npravíł nám, že mu to snáť čajzli u hospody Liptál VS
 g49.2903563,17.921073
 q0
 oValašsko
@@ -13,49 +13,80 @@ oValašsko
 -
 velký hrnek|bugál
 do velkého hrnku|do bugála
+říkal nám|pravíł nám
+že mu to asi ukradli u hospody|že mu to snáť čajzli u hospody
 -
 -
 -
 -
+vil|víł
 -
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 čaj|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+hospodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+dvojKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 růžE|1|e?|e?|i?|i?|e?|i?|í?|e|í?|ím?|e?|e?|ích?|emi?
 čaj|3||e?|i?||i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
+hospodA|1|a?|y|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+dvojKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 abatyš|růžE|0|habatyš|růžE
 vizovice||2|ve Vizovicáh|
 liptál||0|v Liptále|
 čaj|čaj|0|čaj|čaj
+hospod|hospodA|0|hospod|hospodA
+dvoj|dvojKA|0|dvoj|dvojKA
 -
+pěknÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+pěknÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
+pěkn|ṕekn|pěknÝ|pěknÝ
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+MY|-1|my|nás|nám|nás|my|nás|námi
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
 SE|-1|-|sebe?|sy|se,sebe?|-|sobě?|sebou?
+MY|-1|my?|nás?|nám|nás?|my?|nás?|námi?
+ON|-1|on?|ho*?,jej?,něj**jeho?,něho**?|mu,jemu?,němu**?|ho*?,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
+tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
 SE|SE
+MY|MY
+ON|ON
+t|tEN|tEN
 -
 -
 -
 -
 bývAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+pravIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 bývAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|ały|ala?
 uděłAT|30|-1|at?|ám|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+pravIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|íł|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
 bývA|bývAT|bývAT
 uděl|uďeł|udělAT|uděłAT
 dosušit|dosúšat? dosúšała||
+prav|pravIT|pravIT
+|hle||
+|BÝT|BÝT
 -
 tady|tu
+snad|snáť
 -
 i|aj|
 ve|
 do|
+u|
 -
+že
 -
 -

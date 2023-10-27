@@ -3,6 +3,7 @@ fSpisovná čeština
 tJundov
 aGG
 d26.03.2023 11:30:52
+c#Zdroje dat\n-Brněnská mluva - Svěrák, František
 sBrno
 g49.2077997,16.5551047
 xlokální mluva
@@ -73,6 +74,7 @@ kuřE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
 roK|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
 ruKA|1|ka|ky|ce|ku|ko|ce|kou|ce|kou|kám|ce|ce|kou,kách|kama
 noHA|1|ha|hy|ze|hu|ho|ze|hou|-|-|-|-|-|-|-
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 -
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 ženA|1|a|y?|ě?|o|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
@@ -96,8 +98,9 @@ kuřE|0|e?|ete?|eti?|e?|e?|eti?|etem?|ata|at?|atům?|ata?|ata?|atech?|aty?
 roK|3|k?|ku,ka?|ku?|k?|ku?|ku,ce?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 roKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ce?|kou?|kám?|ce?|ce?|kou,kách?|kama?
 nuHA|1|ha?|hy?|ze?|hu?|ho?|ze?|hou?|-|-|-|-|-|-|-
+svatBA|1|ba?|by?|bě?|bu?|bo?|be|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 -
-svatba||0|svarba|
+svat|svatBA|0|svar|svatBA
 kluk|syn|0|klok|syn
 provaz|hrad|0|sňúr|ženA
 děvč|kuřE|0|ďefč|kuřE
@@ -106,6 +109,7 @@ hra||0|hra|
 žid|syn|0|žit|syn
 kroj|les|0|kruj|les
 metr|hrad|0|metr|les
+slávobrána||0|slávobrána|
 -
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||

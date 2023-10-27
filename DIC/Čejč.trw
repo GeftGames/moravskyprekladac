@@ -1,8 +1,8 @@
-TW v0.1
+TW v1.0
 tČejč
 d09.06.2023 13:02:20
 iŠél sem na vojnu ve štrnástém a bil sem tam štiri roki. Já sem toho pochodil.\nRok a půl sem bil na fronte a dva a půl v ruském zajeťí, patnást verst od Kaspického\njezera. Pracoval sem tam u chazaja, to je hospodář po česki, u Tatara. Tatar to bil,\nbili to hodní liďi. Tam vůbec nesaďili, enom opsívali pšeňicu, jačmeň a oves a to\nseli každí rok, řepu a erteple nesadili. Orali volama, mňeli tři pári volů. Obila mňeli\npjekné. Víno vozili s Kafkazu na velbúdách v ofčích kožách a lacino, za pjet kopejek\nbutilku, to bilo tak slabého půl litra. Bilo tam moc teplo. Zima bila strnást dní; to sa\nzamračilo, fúkal vjetr, napadlo sňehu. Bívali v hliňeních chalupách, říkali jim\nzemlanki. Fčíl to majů jisté lepší, ale tenkrát za cár a...\nDo Kaspického jezera teče Volha třema prúdama. Tam je ribl Tam chitajú\nribi do sítě, tam ribi střílajů a zajíců chitajú na koňech; na koňovi teho zajíca žene\na takú knutú ho zabije. Tam sú ohromné rovini a zem jílovitá. Tam aš po Kaspické\njezero néňi kopeček ani stromi, tam je enom tráva. Tam sa pásli stáda ofcí, kraf a\nkoňe; ti koňe bili celí deň venku. Diž napadlo sňehu, dali je do ohradí. Po Volze\nsme jeli skoro tídeň od Gorkij až do Kazaňe. 
-c#Zdroje dat\n-https://dspace.cuni.cz/bitstream/handle/20.500.11956/22359/DPTX_2008_2_11410_OSZD001_76504_0_71830.pdf?sequence=1&isAllowed=y 
+c#Zdroje dat\n-https://dspace.cuni.cz/bitstream/handle/20.500.11956/22359/DPTX_2008_2_11410_OSZD001_76504_0_71830.pdf?sequence=1&isAllowed=y \n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 185 (nevyčerpáno)
 g48.9457684,16.9629891
 q0
 -
@@ -43,29 +43,29 @@ dEN|0|eň|ne?|ni,nu?|en?|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnov
 strom|3|?|u?|u?|?|e?|u,ě?|em?|i|ů?|ům?|y?|y?|ech?|y?
 pšenicE|1|e?|e?|i?|u|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 -
-hospodář|chazaj||
-ječmen|jačmeň||
-oves||
-řep|ženA|ženA
-brambory|erteple||
-v|vŮL|vŮL
-kavkaz|kafkaz||
-velboud|velbúd||
-v|vÍTR|vÍTR
-proud|prúd|hrad|hrad
-k|kŮŇ|kŮŇ
-země|zem||
-tráva||
-d|dEN|dEN
-rok||
-jezero||
-strom|strom|strom
-kopeček||
-pšeňic|pšenicE|pšenicE
+hospodář||0|chazaj|
+ječmen||0|jačmeň|
+oves||0|oves|
+řep|ženA|0|řep|ženA
+brambory||0|erteple|
+v|vŮL|0|v|vŮL
+kavkaz||0|kafkaz|
+velboud||0|velbúd|
+v|vÍTR|0|v|vÍTR
+proud|hrad|0|prúd|hrad
+k|kŮŇ|0|k|kŮŇ
+země||0|zem|
+tráva||0|tráva|
+d|dEN|0|d|dEN
+rok||0|rok|
+jezero||0|jezero|
+strom|strom|0|strom|strom
+kopeček||0|kopeček|
+pšeňic|pšenicE|0|pšeňic|pšenicE
 -
-hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
+hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
-pěknÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+pěknÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
 hez|pjekn|hezKÝ|pěknÝ
 -

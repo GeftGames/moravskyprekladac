@@ -2,7 +2,7 @@ TW v1.0
 tStrážnice
 aGG
 d20.06.2023 17:13:21
-c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Str%C3%A1%C5%BEnice">sncj.ujc.cas.cz</a>
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Str%C3%A1%C5%BEnice">sncj.ujc.cas.cz</a>\n\n#Popis nářečí\n-není se obalované U
 g48.8996642,17.3144728
 q0
 -
@@ -18,8 +18,12 @@ bodl koně|bodel koňe
 -
 -
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+mýdLO|0|lo|la|lu|lo|lo|lu,le|lem|la|el|lům|la|la|lech|ly
+hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 pohádKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+mýdLO|0|lo|la?|lu?|lo?|lo?|lu,le?|lem?|la?|el?|lům?|la?|la?|lech?|ly?
+hlavA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
 sud||0|bečka|
 ||0|humna|
@@ -29,6 +33,8 @@ dědeček||0|stařeček|
 ||0|guličky|
 ||0|hřišťjé|
 skřip|pohádKA|0|skřip|pohádKA
+mýd|mýdLO|0|mid|mýdLO
+hlav|hlavA|0|hlav|hlavA
 -
 -
 -

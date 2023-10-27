@@ -2,7 +2,7 @@ TW v1.0
 tSkoronice
 aGG
 d25.06.2023 18:36:49
-c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n\n#Popis nářečí\n-Ú Ve Skoronicích ještě je slovo pauz a pauk, jinde všude púz (púza) a púk, v Pavlovicích púza a pabúk.\n-ve Skoronicích: majú, uklúzajú\nV Ježově, v Kostelci, Skoronicích, Bohuslavicích a v Bukovanech vládne ještě tvrdé a měkké l (ł a l)\n
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n-Nářečí na Břeclavsku a v dolním Pomoraví\n\n#Popis nářečí\n-Ú Ve Skoronicích ještě je slovo pauz a pauk, jinde všude púz (púza) a púk, v Pavlovicích púza a pabúk.\n-ve Skoronicích: majú, uklúzajú\nV Ježově, v Kostelci, Skoronicích, Bohuslavicích a v Bukovanech vládne ještě tvrdé a měkké l (ł a l)\n
 g48.981163,17.1525177
 q0
 -
@@ -11,19 +11,39 @@ q0
 -
 -
 pajasan žláznatý|agram
+k našemu|g našému
+k vašemu|g vašému
 -
 -
 -
+ou|ú
 -
+ují|ujú
 -
 slzA|1|a|y|e|u|o|e|ou|y|,astarale) slzí|ám|y|y|ách|ami
 pavouK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
+ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+klíč|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+zelí|0|||||||m|||m|||ch|mi
+kožiCH|3|ch|chu,čeji) kožicha|chu|ch|chu|chu,čeji) kožiše|chem|chy|chů|chům|chy|chy|ších|chy
 -
 slzA|1|a|y?|e?|u?|o?|e?|ou?|y?|,astarale) slzí?|ám?|y?|y?|ách?|ami?
 pavouK|2|k|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
+mléKO|0|ko|ka?|ku?|ko?|ko?|ku,ce?|kem?|ka?|k?|kům?|ka?|ka?|cích,kách?|ky?
+ČLOVĚK|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
+klíč|3||e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
+zelí|0|?|?|?|?|?||m?|?|?|m?|?|?|ch?|mi?
+kožiCH|3|ch|chu,čeji) kožicha?|chu?|ch?|chu?|chu,čeji) kožiše?|chem?|chy?|chů?|chům?|chy?|chy?|ších?|chy?
 -
 slz|slzA|0|sľz|slzA
 pavou|pavouK|0|pau|pavouK
+mlé|mléKO|0|mlé|mléKO|mlí|mléKO
+|ČLOVĚK|0||ČLOVĚK
+klíč|klíč|0|klíč|klíč
+klička||0|klučka|
+zelí|zelí|0|zelí|zelí
+koži|kožiCH|0|kožu|kožiCH
 -
 žlutÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
@@ -31,22 +51,44 @@ pavou|pavouK|0|pau|pavouK
 -
 žlut|žľut|žlutÝ|žlutÝ
 -
+nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
+vÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
 -
+nÁŠ|-1|áš?|ašeho?|ašému|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašému|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
+vÁŠ|-1|áš?|ašeho?|ašému|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašému|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 -
+n|nÁŠ|nÁŠ
+v|vÁŠ|vÁŠ
 -
 -
 -
 -
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 uklízET|15|-1|et|ím|íš|í|íme|íte|í,uklízejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+noSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
+lÍBIT_SE|7|-1|íbit_se|íbím|íbíš|íbí|íbíme|íbíte|íbí|ib|ibme|ibte|íbil|íbil|íbila|íbilo|íbili|íbily|íbily|íbila
+dělAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+proSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
+kupOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 -
-mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ajú|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ajú,ají|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 uklízET|15|-1|et?|ím?|íš?|í?|íme?|íte?|ajú|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+noSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sijú|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeni?|šeny?|šeny?|šena?
+lÍBIT_SE|7|-1|íbit|íbím?|íbíš?|íbí?|íbíme?|íbíte?|íbí?|ib?|ibme?|ibte?|íbil?|íbil?|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?
+dělAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+proSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sijú|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeni?|šeny?|šeny?|šena?
+kupOVAT|15|-1|ovat?|uji?|uješ?|uje?|ujeme?|ujete?|ujú|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 -
 m|mÍT|mÍT
 uklíz|uklízET|uklízET
+no|noSIT|noSIT
+l|lÍBIT_SE|lÍBIT_SE
+děl|ďel|dělAT|dělAT
+pro|proSIT|proSIT
+kup|kupOVAT|kupOVAT
 -
 -
+k|g|
 -
 -
 -
