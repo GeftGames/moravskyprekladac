@@ -30,7 +30,7 @@ langs["cs"] = {
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	UnfinishedTranslate : "Rané překlady",
+	UnfinishedTranslate : "Všechny překlady",
 	MoreInfoBetaTranslate : "Tj. mají málo dat",
 
 	TranslateOptions : "Nastavení překladu",
@@ -256,7 +256,7 @@ langs["slz"] = {
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	UnfinishedTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Všechny překlady",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions : "Nastavení překladu",
@@ -462,7 +462,7 @@ langs["en"] = {
 	MoreInfo 	: "Extended information",
 	MoreInfoDev : "For developers",
 
-	UnfinishedTranslate : "Beta functions",
+	UnfinishedTranslate : "All translations",
 	MoreInfoBetaTranslate : "Unfinished translations, ...",
 
 	TranslateOptions : "Options of translating",
@@ -669,7 +669,7 @@ langs["jp"] = {
 	MoreInfo 	: "拡張情報",
 	MoreInfoDev : "開発者向け",
 
-	UnfinishedTranslate : "テスト機能",
+	UnfinishedTranslate : "すべての翻訳",
 	MoreInfoBetaTranslate : "未完成の翻訳、...",
 
 	TranslateOptions : "翻訳設定",
@@ -875,7 +875,7 @@ langs["mor"] = {
 	MoreInfo 	: "Rozšírené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	UnfinishedTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Fšecky funkce",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions: "Nastavení překladu",
@@ -1285,7 +1285,7 @@ langs["sk"] = {
 	MoreInfo 	: "Rozšírené informácie",
 	MoreInfoDev : "Pre vývojárov",
 
-	UnfinishedTranslate : "Testovacie funkcie",
+	UnfinishedTranslate : "Všetky funkcie",
 	MoreInfoBetaTranslate : "Nehotové preklady, ...",
 
 	TranslateOptions: "Nastavenie prekladu",
@@ -1491,7 +1491,7 @@ langs["de"] = {
 	MoreInfo : "Erweiterte Informationen",
 	MoreInfoDev : "Für Entwickler",
 
-	UnfinishedTranslate : "Testfunktion",
+	UnfinishedTranslate : "Alle Übersetzungen",
 	MoreInfoBetaTranslate : "Unfertige Übersetzungen, ...",
 
 	TranslateOptions: "Übersetzungseinstellungen",
@@ -1697,7 +1697,7 @@ langs["hanak"] = {
 	MoreInfo 	: "Rozšiřeny info",
 	MoreInfoDev : "Pro vévojáře",
 
-	UnfinishedTranslate : "Testovaci funkce",
+	UnfinishedTranslate : "Fšeckê překladê",
 	MoreInfoBetaTranslate : "Nehotovy překladê, ...",
 
 	TranslateOptions : "Nastaveňi překladô",
@@ -1903,7 +1903,7 @@ langs["valach"] = {
 	MoreInfo : "Povjecéj informací",
 	MoreInfoDev : "Pro vývojáře",
 
-	UnfinishedTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Šecky překlady",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions : "Nastavení překladu",
@@ -2109,7 +2109,7 @@ langs["mor_radikalni"] = {
 	MoreInfo 	: "Rozšírené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	UnfinishedTranslate : "Testovací funkce",
+	UnfinishedTranslate : "Fšecky překlady",
 	MoreInfoBetaTranslate : "Nehotové překlady, ...",
 
 	TranslateOptions: "Nastaveňí překladu",
@@ -2312,7 +2312,7 @@ langs["ces"] = {
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
 
-	UnfinishedTranslate : "Rané překlady",
+	UnfinishedTranslate : "Všechny překlady",
 	MoreInfoBetaTranslate : "Obsahují málo dat",
 
 	TranslateOptions : "Nastavení překladu",
