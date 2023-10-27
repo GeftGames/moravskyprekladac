@@ -140,9 +140,10 @@
 						
 
 						<!-- Copy current translation -->
-						
-						<span id="textMapper" onclick="ShowPageMapper()" class="settingLink" style="display:block" data-href="#mapper">Generátor map</span>
-					
+						<div class="btnSideApp" onclick="ShowPageMapper()">
+							<img src="data/images/logo_mapper.svg" style="width: 36px">
+							<span id="textMapper"   style="display:block" data-href="#mapper">Generátor map</span>
+						</div><!--class="settingLink"-->
 						<!--<p><a id="textAbout">Kontakt</a></p>-->
 						
 						<!-- Save current translation
@@ -545,6 +546,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
 										<div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
 										<div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
+										<div class="mapperNavrh" onclick="navrhClick('míč')">BALÓN</div>
 										
 										<!-- změna části slova-->
 										<div class="mapperNavrh" onclick="navrhClick('{word=mraveniště|typ=pods|cislo=j|pad=1}')">MRAVENIŠTĚ</div>
@@ -553,6 +555,7 @@
 																				
 										<!-- Atipické skloňování-->
 										<div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div>
+										<div class="mapperNavrh" onclick="navrhClick('stromům')">ke STROMŮM</div>
 										
 										<!-- Krátkost-->
 										<div class="mapperNavrh" onclick="navrhClick('<{word=práce|typ=pods|cislo=j|pad=1}>')">PRÁCE</div>
@@ -560,6 +563,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('lípa')">LÍPA</div>
 										<div class="mapperNavrh" onclick="navrhClick('zima')">ZIMA</div>
 										<div class="mapperNavrh" onclick="navrhClick('růže')">RŮŽE</div>
+										<div class="mapperNavrh" onclick="navrhClick('mák')">MÁK</div>
 										
 										<!-- Změna -->
 										<div class="mapperNavrh" onclick="navrhClick('doktor')">DOKTOR</div>
@@ -762,7 +766,78 @@
 							</div>
 						</div>
 					</div>
-				</div>			
+				</div>	
+				
+				
+			</div>
+			
+			<div id="phoneticsPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
+				<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
+					<div onclick="ClosePageMapper()" class="pageFromDownClose" id="closeMapperPage">
+						<div rel="nofollow" onclick="ClosePageMapper()">
+							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+							</svg>
+						</div>
+						<p style="display:inline;" id="closeMapper">Zavřít</p>
+					</div>
+					<div>
+						<p class="mapperPageHeader" id="mapperGanerateMap">Fonetika</p>
+						Fonetický zápis 		
+						<div>ďe, ťe, ňe</div>	značí dě, tě, ně, jsou psány z důvodu uniiverzálnosti př. existence dloužení (chťél, kvjéct)
+						<div>ďé, ťé, ňé</div>	dlouhé dě, tě, ně
+						<div>mňe, mje</div>		značí mě, čte se různě v nářečí
+						
+						Speciální znaky
+						<table>
+							<!--znak						výslovnost IPA				popis 			umístění-->
+							<tr><td>ạ́</td>		  <!--<div>ɔ???</div>-->	  <td>Zaokrouhlené dlouhé A</td> 			(Židlochovicko)</tr>
+							<tr><div>ê</div>		<!--<div>æ???</div>--> 		<div>široké e</div> 	(Haná)</tr>
+							<tr><div>ə</div>		<!--<div>ə</div>-->			<div>polovokál e</div> (Znojemsko, Šumpersko)	</tr>					
+							<tr><div>ô</div>		<!---->						<div>široké o</div> 	(Haná)</tr>
+							
+							<tr><div>ŕ</div>		<!--<div>rː</div>--> 		<div>dlouhé r</div> 			(Valašsko) př. vŕba</tr>
+							<tr><div>ĺ, Ĺ</div> 								<div>dlouhé l, L</div> (Slovácko, Valašsko)</tr>
+							
+							<tr><div>ľ, Ľ</div> 								<div>měkké l, L</div> (Slovácko, Valašsko)</tr>
+							<tr><div>ł, Ł</div> 								<div>tvrdé l, L</div> (Slovácko, Goralsko)</tr>
+							<tr><div>ṵ</div> 									<div>tvrdé ł, Ł přecházející do u, U</div> (Slovácko, Goralsko)</tr>
+							<tr><div>ů</div> 									<div>slezské O</div> (Slezsko)</tr>
+							
+							<tr><div>ṕe, ḿe, v́e ,́ b́e </div> 					<div>poloměkké, nevivinuté měkčení pě</div> (někde taky psané jako p'e )			 (Valašsko, Lašsko, Slezsko)</tr>			
+						</table>
+
+						ʒ... dz slezsko prostijovsko?
+
+						ve slezsku??? preferuj před formou m' (cepam'i)
+						ṕ... -
+						́b
+						ḱ
+						ḿ
+						v́
+						ʒ́
+						ǵ
+
+						valašsko ě
+						b'ežte
+
+						
+						
+						
+						slovácko y>i
+
+						Jemnicko
+						ŷ
+
+
+						nahrazení 
+					"z" - zpřeškový pro slezsko, polský pravopis
+						"j" - zjednodušení fonetického zápisu ďe -> dě apod.
+
+
+
+					</div>
+				</div>
 			</div>
 
 			<div id="aboutPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;">
