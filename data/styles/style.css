@@ -1147,3 +1147,18 @@ caption{
 	font-size: 6mm;
     text-align: center;
 }
+.btnSideApp{
+	display: flex;
+	align-items: center;
+	margin: 6px;
+	border-radius: 10px;	
+	cursor: pointer;
+	transition: var(--transitionSlow);
+	padding: 2px;
+}
+.btnSideApp:hover{
+	box-shadow: var(--ksh);
+	background-color: var(--ColorTheme);
+	box-shadow: var(--dsh);
+}
+.btnSideApp span{margin-left: 8px;}
