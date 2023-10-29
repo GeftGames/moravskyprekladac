@@ -22,6 +22,9 @@
 - Přeložení dokumentů *.docx, ...
 - Export *Generátora map* do gis formátů (ArcGIS?)
 - možná se budou dělat i nářečí v okolí Moravy - při hranicemi se Slovenskem, polským Slezskem a Čechy
+  
+### Poznámky
+- Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **dva lidé za den**, děkujeme
 
 # moravskyprekladac
 ## Description
