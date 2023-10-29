@@ -2,7 +2,7 @@ TW v1.0
 tNenkovice
 aGG
 d25.10.2023 15:18:39
-c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis\n-buď se j odsouvá: zavolé, zazpívé, nezavazé, nélepší, grécar, té našé bílé husi (v Nenkovicích, Želeticích, Veteřově a v Násedlovicích)\n-ý buď trvá nezměněno: dobrý člověk, rynský, bývajú (ve Vracově, Kyjově, Ježově, Kostelci, Nenkovicích, Želeticích, Násedlovicích)\n-infinitiv: upect,donest\n
+c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis\n-buď se j odsouvá: zavolé, zazpívé, nezavazé, nélepší, grécar, té našé bílé husi (v Nenkovicích, Želeticích, Veteřově a v Násedlovicích)\n-ý buď trvá nezměněno: dobrý člověk, rynský, bývajú (ve Vracově, Kyjově, Ježově, Kostelci, Nenkovicích, Želeticích, Násedlovicích)\n-infinitiv: upect,donest\n-na začátku slov tl za kl (klúct)\n-Některé slova mají protetické H (herteple)\n
 g49.0023888,17.0054104
 q0
 -
@@ -12,30 +12,37 @@ q0
 -
 -
 -
+tl|kl
 -
 -
 -
 krejcar|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 husA|1|a|y|e|u|o|e|ou|y|,sí|ám|y|y|ách|ami
 zelí|0|||||||m|||m|||ch|mi
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 krejcar|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 husA|1|a?|i|e?|u?|o?|e?|ou?|y?|,sí?|ám?|y?|y?|ách?|ami?
 zelí|0|?|?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+herpepEL|1|?|u?|u?|?|e?|u?|em?|le|ů?|ům?|y?|y?|ech?|y?
 -
 krejcar|krejcar|0|grécar|krejcar
 hus|husA|0|hus|husA
 zelí|zelí|0|zelí|zelí
 klička||0|klučka|
+brambor|brambor|0|hertep|herpepEL
 -
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 bílÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+tlustÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 jarní|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?||ho?|mu?|ho?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?
 bílÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
+tlustÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
 nejlepší|nélepší|jarní|jarní
 bíl|bílÝ|bílÝ
+tlust|klust|tlustÝ|tlustÝ
 -
 tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
@@ -54,12 +61,14 @@ lÍBIT_SE|7|-1|íbit_se|íbím|íbíš|íbí|íbíme|íbíte|íbí|ib|ibme|ibte|
 polÍBIT|30|-1|íbit|íbím|íbíš|íbí|íbíme|íbíte|íbí|ib|ibme|ibte|íbil|íbil|íbila|íbilo|íbili|íbily|íbily|íbila|íben|íben|íbena|íbeno|íbeni|íbeny|íbeny|íbena
 dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 voZIT|15|-1|zit|zím|zíš|zí|zíme|zíte|zí|z|zme|zte|zil|zil|zila|zilo|zili|zily|zily|zila|žen|žen|žena|ženo|ženi|ženy|ženy|žena
+tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|učme,tlucme|učte,tlucte|oukl|oukl|oukla|ouklo|oukli|oukly|oukly|oukla|učen|učen|učena|učeno|učeni|učeny|učeny|učena
 -
 zavolAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 lÍBIT_SE|7|-1|íbit|íbím?|íbíš?|íbí?|íbíme?|íbíte?|íbí?|ib?|ibme?|ibte?|íbil?|íbil?|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?
 polÍBIT|30|-1|úbit|íbím?|íbíš?|íbí?|íbíme?|íbíte?|íbí?|ib?|ibme?|ibte?|íbil?|íbil?|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?|íben?|íben?|íbena?|íbeno?|íbeni?|íbeny?|íbeny?|íbena?
 dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ajú|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 voZIT|15|-1|zit?|zím?|zíš?|zí?|zíme?|zíte?|zijú|z?|zme?|zte?|zil?|zil?|zila?|zilo?|zili?|zily?|zily?|zila?|žen?|žen?|žena?|ženo?|ženi?|ženy?|ženy?|žena?
+tlOUCT|15|-1|ouct?|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,tluc?|učme,tlucme?|učte,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeni?|učeny?|učeny?|učena?
 -
 zavol|zavolAT|zavolAT
 |zazpívé||
@@ -70,6 +79,8 @@ l|lÍBIT_SE|lÍBIT_SE
 pol|polÍBIT|polÍBIT
 d|dÁT|dÁT
 vo|voZIT|voZIT
+tlačit|klačit||
+tl|kl|tlOUCT|tlOUCT
 -
 -
 -

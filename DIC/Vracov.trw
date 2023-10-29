@@ -2,9 +2,10 @@ TW v1.0
 tVracov
 aGG
 d25.10.2023 8:03:42
-c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\nNářečí na Břeclavsku a v dolním pomoraví, František Svěrák\n\n#Popis nářečí\n-velmi "mazlivě" znějící Ľ  volala\n-Výskyt tvrdého a měkkého L    Ł+Ľ
+c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\nNářečí na Břeclavsku a v dolním pomoraví, František Svěrák\n\n#Popis nářečí\n-velmi "mazlivě" znějící Ľ  volala\n-Výskyt tvrdého a měkkého L    Ł+Ľ\n-Některé slova mají protetické H (hulička)
 g48.9751639,17.2099639
 q0
+oSlovácko
 -
 -
 -
@@ -21,17 +22,20 @@ hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 louKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k,|kám|ky|ky|kách|kami
 obilí|0|||||||m|||m|||ch|mi
 zelí|0|||||||m|||m|||ch|mi
+uličKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 hlavA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 louKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k,?|kám?|ky?|ky?|kách?|kami?
 obilí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 zelí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+uličKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 hlav|hlavA|0|hlav|hlavA
 lou|louKA|0|lú|louKA
 obilí|obilí|0|obiľí|obilí
 zelí|zelí|0|zeľí|zelí
 ||0|sľípka|
+ulič|uličKA|0|ulič|uličKA
 -
 -
 -

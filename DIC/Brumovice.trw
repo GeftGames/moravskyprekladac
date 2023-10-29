@@ -2,10 +2,10 @@ TW v1.0
 tBrumovice
 aGG
 d27.10.2023 22:48:15
-c#Zdroje dat\nNářečí na Břeclavsku a v dolním Pomoraví; František Svěrák\n\n
+c#Zdroje dat\nNářečí na Břeclavsku a v dolním Pomoraví; František Svěrák\n\n#Popis nářečí\n-Na začátku některých (jiskra, jísčerka, jinačí) slov se vyskytuje protetické J 
 g48.9615834,16.8962035
 q0
-oSlovácko
+oSlovácko>Hanácké Slovácko
 -
 -
 -
@@ -20,20 +20,40 @@ klíč|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
 kožiCH|3|ch|chu,čeji) kožicha|chu|ch|chu|chu,čeji) kožiše|chem|chy|chů|chům|chy|chy|ších|chy
 kříž|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+chlapEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+králíK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+evA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 klíč|3||e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
 ČLOVĚK|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
 kožiCH|3|ch?|chu,čeji) kožicha?|chu?|ch?|chu?|chu,čeji) kožiše?|chem?|chy?|chů?|chům?|chy?|chy?|ších?|chy?
 kříž|3|?|e?|u|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
+strom|3||u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+chlapEC|2|ec|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+králíK|2|k?|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
+evA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
 klíč|klíč|0|klíč|klíč
 klička||0|klučka|
 |ČLOVĚK|0||ČLOVĚK
 koži|kožiCH|0|koži|kožiCH
 kříž|kříž|0|kříž|kříž
+strom|strom|0|strom|strom
+chlap|chlapEC|0|chlap|chlapEC
+králí|králíK|0|králí|králíK
+ev|evA|2|hev|evA
 -
+mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+mokRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|?|?|rá?|rých?|rým?|rá?|rá?|rých?|rými?|?|?|rá?|ré?|ré?|rou?|rá?|ré?|rou?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?|rej|rého?|rému?|rého?|rý?|rém?|rým?|?|?|ří?|rých?|rým?|ré?|ří?|rých?|rými?|?|?|rej|rého?|rému?|rý?|rý?|rém?|rým?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?
+zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|nej|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|nej|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 -
+sta|mokRÝ|mokRÝ
+hodn|hod|zelenÝ|zelenÝ
+dob|mokRÝ|mokRÝ
+smažen|smaže|zelenÝ|zeleNÝ
 -
 -
 -
@@ -53,6 +73,7 @@ ukli|ukliDIT|ukliDIT
 děl|ďel|dělAT|dělAT
 pro|proSIT|proSIT
 -
+večer|večír
 -
 -
 -

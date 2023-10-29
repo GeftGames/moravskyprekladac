@@ -2,7 +2,7 @@ TW v1.0
 tŠardice
 aGG
 d20.06.2023 16:29:30
-c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n\n#Popis nářečí\n- infinitiv: donest, dovect
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n\n#Popis nářečí\n- infinitiv: donest, dovect\n-Některé slova mají protetické H (hulička)
 g48.9637387,17.0278446
 q0
 oSlovácko
@@ -19,14 +19,23 @@ v trní|f trňí,f trňú
 -
 krejcar|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 obilí|0|||||||m|||m|||ch|mi
+uličKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
+uzEL|3|el|lu|lu|el|le|lu|lem|ly|lů|lům|ly|ly|lech|ly
 -
 grejcar|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 obilí|0|?|?|?|?|?||m?|?|?|m?|?|?|ch?|mi?
+uličKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+almaRA|1|ra?|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
+uzEL|3|el?|lu?|lu?|el?|le?|lu?|lem?|ly?|lů?|lům?|ly?|ly?|lech?|ly?
 -
 ||0|trnky|
 krejcar|krejcar|0|grícar|grejcar|grejcar|grejcar
 obilí|obilí|0|obilí|obilí
 ||0|f trňí|
+ulič|uličKA|0|ulič|uličKA
+alma|almaRA|0|hal?ma|almaRA
+uz|uzEL|0|huz?|uzEL
 -
 -
 -

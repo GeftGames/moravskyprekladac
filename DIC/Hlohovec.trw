@@ -2,7 +2,7 @@ TW v1.0
 tHlohovec
 d31.05.2023 9:30:47
 ipřací; kéž by: bi bívala aspoň stála ta budova! Hlohovec BV\n\n\n\nHlohovec rýká: kadyma tadytok ideš? Rozumíte jim?\nKadyma tadytok ideš, ide sa hentama\n\n\nNezařezeno, neznámé\nhentama - tamtudy?\ntadytok - ?
-c#Zdroje dat\n-https://usedlostpodvinohrady.cz/lohovecky-slovnik/\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-https://theses.cz/id/qt9lag/17149671\n-https://www.rmm.cz/regiom/2012/11_matuszkova.pdf\n-České nářeční texty - Lamprecht, Arnošt; str.258\n-https://sncj.ujc.cas.cz\n-https://breclavsky.denik.cz/zpravy_region/hlohovec-ryka-kadyma-tadytok-ides-rozumite-jim-20211217.html\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 179 (nevyčerpáno)\n\n#Popis\n-Neexistence ř\n-slovesa v 1. osobě singuláru koncovku -m
+c#Zdroje dat\n-https://usedlostpodvinohrady.cz/lohovecky-slovnik/\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-https://theses.cz/id/qt9lag/17149671\n-https://www.rmm.cz/regiom/2012/11_matuszkova.pdf\n-České nářeční texty - Lamprecht, Arnošt; str.258\n-https://sncj.ujc.cas.cz\n-https://breclavsky.denik.cz/zpravy_region/hlohovec-ryka-kadyma-tadytok-ides-rozumite-jim-20211217.html\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 179 (nevyčerpáno)\n\n#Popis\n-Neexistence ř\n-slovesa v 1. osobě singuláru koncovku -m\n-pouze sem (není su)\n-slovesa končí v první osobě v plurálu na -em (nesem)
 g48.7746977,16.7621669
 q0
 -
@@ -59,6 +59,7 @@ pergola na vinnou révu|brajda
 vepřové nožičky|koty
 díra v ledu|žukno
 řádek vinohradu|trefy
+o kolikati|o koliki
 -
 -
 -
@@ -188,14 +189,17 @@ lenivý|shnilý ||
 MY|-1|my|nás|nám|nás|my|nás|námi
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tolik|-1||a|a|||a|a
 -
 MY|-1|mi|nás?|nám?|nás?|my?|nás?|námi?
 SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 tEN|-1|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a|ej|é?|u?|-|é?|ú|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+tolik|-1|?|a?|a?|?|?|a?|a?
 -
 MY|MY
 SE|SE
 t|tEN|tEN
+tolik|tolik|tolik
 -
 -
 -

@@ -4,12 +4,12 @@ tKobylí
 aGG
 d11.03.2023 21:30:30
 ihttps://web.archive.org/web/20071006062805/http://www.sepl.rulez.cz/slovniky/kobyli/slab.htm
-c#Zdroje dat\n-https://web.archive.org/web/20071006062805/http://www.sepl.rulez.cz/slovniky/kobyli/slab.htm\n-<a href="https://www.google.com/search?sca_esv=561614363&q=site:sncj.ujc.cas.cz+Kobyl%C3%AD">sncj.ujc.cas.cz</a>\nhttps://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\nutrácat, házat, zabíjat, nabízat, púščat, zacházat, snášat; v některých osadách (v Pavlovicích, v Kobylí) drží se původní a jen po j: zabíjat, stavjat, popíjat,\nZa néni (není) je v Kobylí a okolí tvar nejni.\n
+c#Zdroje dat\n-https://web.archive.org/web/20071006062805/http://www.sepl.rulez.cz/slovniky/kobyli/slab.htm\n-<a href="https://www.google.com/search?sca_esv=561614363&q=site:sncj.ujc.cas.cz+Kobyl%C3%AD">sncj.ujc.cas.cz</a>\nhttps://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis nářečí\n-utrácat, házat, zabíjat, nabízat, púščat, zacházat, snášat; v některých osadách (v Pavlovicích, v Kobylí) drží se původní a jen po j: zabíjat, stavjat, popíjat,\n-Za néni (není) je v Kobylí a okolí tvar nejni.\n-na začátku slov tl za kl (klúct)\n-Některé slova mají protetické H (hudit,hulička)
 lSlováčtina
 g48.9329464,16.8873628
 xlokální mluva
 q0
-oSlovácko
+oSlovácko>Hanácké Slovácko
 -
 -
 -
@@ -49,6 +49,7 @@ v kance|f kanca
 -
 -
 ně|ne
+tl|kl
 -
 ou|ú
 ů|ú
@@ -61,11 +62,23 @@ kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 faRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 čtverEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
+chlÉB|3|éb|eba|ebu|éb|ebe|ebu,ebě|ebem|eby|ebů|ebům|eby|eby|ebech|eby
+chlap|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+strýc|2||e|i,ovi|e|i,e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+mlýn|3||a|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+býK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+uličKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 kanEC|2|ec?|ce?|ci,covi?|ca|če?|ci,covi?|cem?|ci?|cú|cům?|ce?|ci?|cích?|ci?
 pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 faRA|1|ra?|ry?|ře?|ru|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 čtverEC|3|ec|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
+chlÉB|3|eba|eba?|ebu?|éb?|ebe?|ebu,ebě?|ebem?|eby?|ebů?|ebům?|eby?|eby?|ebech?|eby?
+chlap|2||a?|ovi,u?|a?|e?|ovi,u?|em?|i,ové?|ů?|ům?|y?|i,ové?|ech?|y?
+strýc|2||e?|i,ovi?|e?|i,e?|i,ovi?|em?|i,ové?|ů?|ům?|e?|i,ové?|ích?|i?
+mlýn|3||a?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+býK|2|k?|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
+uličKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 akát||0|agát|
 antikrist||0|anciáš|
@@ -132,12 +145,21 @@ podlaha||0|dlážka|
 kan|kanEC|0|kan|kanEC
 fa|faRA|0|fa|faRA
 čtver|čtverEC|0|štver|čtverEC
+chl|chlÉB|0|chl|chlÉB
+chlap|chlap|0|chlap|chlap
+strýc|strýc|0|stríc|strýc
+mlýn|mlýn|0|mlín|mlýn
+bý|býK|0|bí|býK
+ulič|uličKA|0|hulič?|uličKA
+||0|hofjera?|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+zlatÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|ný?|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|nej|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
-hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
+zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|nej|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|nej|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
+hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|kej|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
+zlaTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|t?|t?|tá?|tých?|tým?|tá?|tá?|tých?|tými?|t?|t?|tá?|té?|té?|tou?|tá?|té?|tou?|t?|t?|té?|tých?|tým?|té?|té?|tých?|tými?|t?|t?|tej|tého?|tému?|tého?|tý?|tém?|tým?|t?|t?|tí?|tých?|tým?|té?|tí?|tých?|tými?|t?|t?|tý?|tého?|tému?|tý?|tý?|tém?|tým?|t?|t?|té?|tých?|tým?|té?|té?|tých?|tými?|t?|t?
 -
 důsledný|akorátní||
 tlustý|bačgatej||
@@ -145,6 +167,8 @@ světlovlasý|bělohřibej||
 lesklý|blysklavej||
 pěkn|pjek|zelenÝ|zeleNÝ
 hez|pjek|hezKÝ|zeleNÝ
+hodn|hod|zelenÝ|zeleNÝ
+tlust|klus|zlatÝ|zlaTÝ
 -
 SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
@@ -170,6 +194,8 @@ házET|15|-1|et|ím|íš|í|íme|íte|í,házejí|ej|ejme|ejte|el|el|ela|elo|eli
 udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
+tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|učme,tlucme|učte,tlucte|oukl|oukl|oukla|ouklo|oukli|oukly|oukly|oukla|učen|učen|učena|učeno|učeni|učeny|učeny|učena
+uDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 -
 musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 držET|15|-1|et|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
@@ -179,6 +205,8 @@ házET|15|-1|et?|ím?|íš?|í?|eme|íte?|í,házejí?|ej?|ejme?|ejte?|el?|el?|e
 udělAT|30|-1|lat?|lám?|láš?|lá?|láme?|láte?|lají?|lej?|lejme?|lejte?|lal?|łáł|lala?|lalo?|lali?|laly?|laly?|lala?|lán?|lán?|lána?|láno?|láni?|lány?|lány?|lána?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 nEBÝT|23|-1|ebýt?|ejsem?|ejsi?|ejňi|ejsme?|ejste?|ejsou?|ebudu?|ebudeš?|ebude?|ebudeme?|ebudete?|ebudou?|ebuď?|ebuďme?|ebuďte?|ebyl?|ebyl?|ebyla?|ebylo?|ebyli?|ebyly?|ebyly?|ebyla?
+tlOUCT|15|-1|ouct?|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,tluc?|učme,tlucme?|učte,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeni?|učeny?|učeny?|učena?
+uDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
 -
 bít|bácat||
 bořit|barúchat||
@@ -221,8 +249,11 @@ d|dÁT|dÁT
 promě|promňe|proměNIT|proměNIT
 ház|házET|házET
 uděl|uďe|udělAT|udělAT
-|BÝT|BÝT
+BÝT|BÝT
 ne|n|neBÝT|nEBÝT
+tlačit|klačit||
+tl|kl|tlOUCT|tlOUCT
+u|hu|uDIT|uDIT
 -
 přesně|akorát
 boso,naboso|bosky

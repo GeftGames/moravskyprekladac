@@ -34,19 +34,39 @@ poštorná||0|poštorňa|
 -
 poštorn|poštoren|čeSKÝ|čeSKÝ
 -
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
+ON|-1|on?|ho,jej?,něj**jeho?,něho**?|mu*?,jemu?,němu**?|ho*?,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
+SE|-1|-|sebe?|si?,sobě?|sa,sebe?|-|sobě?|sebou?
 -
+ON|ON
+SE|SE
 -
 -
 -
 -
 NÉST|31|-1|nést|nesu|neseš|nese|neseme|nesete|nesou|ponesu,budu nést|poneseš,budeš nést|ponese,bude nést|poneseme,budeme nést|ponesete,budete nést|ponesou,budou nést|nes|nesme|neste|nesl|nesl|nesla|neslo|nesli|nesly|nesly|nesla|nesen|nesen|nesena|neseno|neseni|neseny|neseny|nesena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+uvidĚT|28|-1|ět|ím|íš|í|íme|íte|í|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
+zhlédnOUT|30|-1|out|u|eš|e|eme|ete|ou|i|ěme|ěte|ul,zhlédl|ul,zhlédl|ula,zhlédla|ulo,zhlédlo|uli,zhlédli|uly,zhlédly|uly,zhlédly|ula,zhlédla|ut|ut|uta|uto|uti|uty|uty|uta
+schovAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 NÉST|31|-1|nést?|nesu?|neseš?|nese?|neseme?|nesete?|nesou?|ponesu,budu nést?|poneseš,budeš nést?|ponese,bude nést?|poneseme,budeme nést?|ponesete,budete nést?|ponesou,budou nést?|nes?|nesme?|neste?|néséṵ|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseni?|neseny?|neseny?|nesena?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+uvidĚT|28|-1|ět?|ím?|íš?|í?|íme?|íte?|í?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
+zhlédNOUT|30|-1|nout?|nu?|neš?|ne?|neme?|nete?|nou?|ni?|něme?|něte?|nul,nzhlédl?|nul,nzhlédl?|ṵa|nulo,nzhlédlo?|nuli,nzhlédli?|nuly,nzhlédly?|nuly,nzhlédly?|nula,nzhlédla?|nut?|nut?|nuta?|nuto?|nuti?|nuty?|nuty?|nuta?
+schovAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|áṵ|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
 NÉST|NÉST
+|BÝT|BÝT
+uvid|zhléd|uvidĚT|zhlédNOUT
+schov|skov|schovAT|schovAT
 -
+honem,rychle|honem
 -
+vedle|vedlá|
 -
+když|keď
 -
 -

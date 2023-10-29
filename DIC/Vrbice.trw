@@ -2,9 +2,10 @@ TW v1.0
 tVrbice
 aGG
 d27.10.2023 22:28:20
-c#Zdroje dat\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák\n\n#Popis nářečí\n- Výskyt středního a tvrdého Ł, L\n- Příčestí minulé je krátké ďełał
+c#Zdroje dat\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák\n\n#Popis nářečí\n- Výskyt středního a tvrdého Ł, L\n- Příčestí minulé je krátké ďełał\n-Některé slova mají protetické H (hudit, herteple,hulička)
 g48.9155961,16.8970147
 q0
+oSlovácko>Hanácké Slovácko
 -
 -
 -
@@ -24,6 +25,11 @@ obilí|0|||||||m|||m|||ch|mi
 zelí|0|||||||m|||m|||ch|mi
 límEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 klíč|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+dub|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+chlÉB|3|éb|eba|ebu|éb|ebe|ebu,ebě|ebem|eby|ebů|ebům|eby|eby|ebech|eby
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
+uličKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+uzEL|3|el|lu|lu|el|le|lu|lem|ly|lů|lům|ly|ly|lech|ly
 -
 holub|3||a?|ovi,u?|a?|e?|ovi,u?|em?|i,ové?|ů?|ům?|y?|i,ové?|ech?|y?
 klobouK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
@@ -32,6 +38,11 @@ obilí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 zelí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 límEC|3|ec|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 klíč|3||e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
+dub|3||u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+chlÉB|3|eba|eba?|ebu?|éb?|ebe?|ebu,ebě?|ebem?|eby?|ebů?|ebům?|eby?|eby?|ebech?|eby?
+hertepEL|1|?|u?|u?|?|e?|u?|em?|le|ů?|ům?|y?|y?|ech?|y?
+uličKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+uzEL|3|el?|lu?|lu?|el?|le?|lu?|lem?|ly?|lů?|lům?|ly?|ly?|lech?|ly?
 -
 holub|holub|0|hołub|holub
 klobou|klobouK|0|kłobú|klobouK
@@ -42,12 +53,30 @@ slepice||0|slípka|
 lím|límEC|0|lím|límEC
 ||0|talířek|
 klíč|klíč|0|klíč|klíč
+dub|dub|0|dub|dub
+chl|chlÉB|0|chl|chlÉB
+brambor|brambor|0|hertep|hertepEL
+ulič|uličKA|0|hulič?|uličKA
+niť?||0|hňiť?|
+uz|uzEL|0|huz?|uzEL
 -
+silnÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+měkKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+hloupÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+silNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|nej|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
+měkKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|kej|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
+hloupÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ej|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
+siln|sil|silnÝ|silNÝ
+měk|mňe|měkKÝ|měkKÝ
+hloup|hłúp|hloupÝ|hloupÝ
 -
+ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
+ON|-1|on|ho*?,jej?,něj**jeho?,něho**?|mu*?,jemu?,němu**?|ho*?,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
 -
+ON|ON
 -
 -
 -
@@ -56,11 +85,15 @@ lámAT|15|-1|at|u|eš|e|eme|ete|ou|ej,lam|ejme,lamme|ejte,lamte|al|al|ala|alo|al
 loupAT|15|-1|at|ám,loupu|áš,loupeš|á,loupe|áme,loupeme|áte,loupete|ají,loupou|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 dělAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 slOUŽIT|15|-1|oužit|oužím|oužíš|ouží|oužíme|oužíte|ouží|už|užme|užte|oužil|oužil|oužila|oužilo|oužili|oužily|oužily|oužila|oužen|oužen|oužena|ouženo|ouženi|ouženy|ouženy|oužena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+uDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 -
 lámAT|15|-1|at|u?|eš?|e?|eme?|ete?|ou?|ej,lam?|ejme,lamme?|ejte,lamte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 loupAT|15|-1|at|ám,loupu?|áš,loupeš?|á,loupe?|áme,loupeme?|áte,loupete?|ají,loupou?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 dělAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ał|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 slOUŽIT|15|-1|úžit|oužím?|oužíš?|ouží?|oužíme?|oužíte?|ouží?|už?|užme?|užte?|oužil?|oužil?|oužila?|oužilo?|oužili?|oužily?|oužily?|oužila?|oužen?|oužen?|oužena?|ouženo?|ouženi?|ouženy?|ouženy?|oužena?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+uDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
 -
 lám|łám|lámAT|lámAT
 loup|łúp|loupAT|loupAT
@@ -68,6 +101,8 @@ děl|ďeł|dělAT|dělAT
 sl|sł|slOUŽIT|slOUŽIT
 donést|donesł||
 |nalít||
+BÝT|BÝT
+u|hu|uDIT|uDIT
 -
 -
 -
