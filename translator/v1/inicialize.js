@@ -4,7 +4,7 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = window.location.host+"/v1.trw_a";//"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
+const languagesPackage = "v1.trw_a";//"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
 let translations = [
 	"Morava", [
 		"Slovácko", [
