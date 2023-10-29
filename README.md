@@ -1,5 +1,4 @@
-# moravskyprekladac
-## Popis
+# Moravský překladač
 - Webová aplikace k překládání z češtiny do moravštiny
   
 ## Jak se dostat na stránku?
