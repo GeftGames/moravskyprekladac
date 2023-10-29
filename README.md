@@ -2,7 +2,7 @@
 ## Popis
 - Webová aplikace k překládání z češtiny do moravštiny
   
-## Jak přejít na stránku?
+## Jak se dostat na stránku?
 - Adresa webu: https://moravskyprekladac.pages.dev/ 
 - Alternativní adresa: https://geftgames.github.io/moravskyprekladac/
 
