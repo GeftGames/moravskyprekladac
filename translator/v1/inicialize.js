@@ -4,7 +4,7 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = "https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
+const languagesPackage = window.location.host+"/v1.trw_a";//"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
 let translations = [
 	"Morava", [
 		"Slovácko", [
@@ -823,3 +823,84 @@ function Transcription(html) {
 
 
 }
+/*
+function GenerateArcGisFiles() {
+	// pro ArcGis
+	//shx - shape index position
+	//shp - geometry
+	//dbf -  attribute data
+
+function GenerateDBFFile(){
+	let data = [];
+
+	// Body
+	
+
+
+
+	// Header
+	// Version number
+	data.push(3);
+	
+	// Date
+	let date=Date.now();
+	data.push(date.Now.Years-1900);
+	data.push(date.Now.Month);
+	data.push(date.Now.Day);
+
+	// Number of records in the database file
+
+
+}
+
+// https://en.wikipedia.org/wiki/Shapefile
+function createSHPFile(){
+	let data = [];
+
+	let bodyData=[];
+
+
+	
+
+	// --- header --- ///
+	// File code 
+	data.push(ConvertIntToBytes(...parseInt("0x0000270a", 16)));
+
+	// Unused; five uint32
+	for (const i=0; i<5; i++) data.push(0);
+
+	// File length (in 16-bit words, including the header)
+
+	// Version
+
+	// Shape type (see reference below)
+
+	//	Minimum bounding rectangle (MBR) of all shapes contained within the dataset; four doubles in the following order: min X, min Y, max X, max Y
+
+	// Range of Z; two doubles in the following order: min Z, max Z
+
+	//Range of M; two doubles in the following order: min M, max M
+
+
+	function ConvertIntToBytes(x) {
+		bytes=new Array(3);
+		bytes[3]=x & 255;
+		x=x>>8
+		bytes[2]=x & 255;
+		x=x>>8
+		bytes[1]=x & 255;
+		x=x>>8
+		bytes[0]=x & 255;
+		return bytes;
+	}
+
+	function AddPoint() {
+		// Point shape type = 1
+		bodyData.push(ConvertIntToBytes(1));
+
+		//Shape content
+
+
+	}
+}
+}*/
