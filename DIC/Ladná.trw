@@ -1,5 +1,6 @@
 TW v1.0
 tLadná
+aGG
 d03.06.2023 11:42:07
 iNeznámé\nna vangli, šarše
 c#Droje dat\n-https://www.obecladna.cz/obec-1/historie-obce/zajimavosti/\n-https://www.obecladna.cz/modules/file_storage/download.php?file=5d9c1b51%7C436\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František svěrák; str. 177\n\n#Popis nářečí\n-Používání obalovaného U (ṵ)\n-starší generace (<1890?) tich, mladší tích (neověřeno)
@@ -203,6 +204,7 @@ kamarád|2||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
 zelí|0|||||||m|||m|||ch|mi
 polednE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ech|y
 čarodejnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+ještěrKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 břeclav|1|?|i|i?|?|i?|i?|í?|-|-|-|-|-|-|-
 bŮH|2|ůh?|oha?|ohu,ohovi?|oha?|ože|ohu,ohovi?|ohem?|ozi,ohové?|ohů?|ohům?|ohy?|ozi,ohové?|ozích?|ohy?
@@ -290,6 +292,7 @@ kamaráD|2|d?|da?|du,dovi?|da?|de?|du,dovi?|dem?|ďi|dů?|dům?|dy?|di?|dech?|dy
 zelí|0|í?|á|í?|í?|í?|í?|ím?|í?|í?|ím?|í?|í?|ích?|ími?
 polednE|0|e?|e?|i?|e?|e?|i|em?|e?|í?|ím?|e?|e?|ech?|y?
 boboňicA|1|a|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+ještěrKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 ||0|otúk|
 |ČLOVĚK|0||člověk
@@ -422,6 +425,7 @@ zelí|zelí|0|zel|zelí
 poledn|polednE|0|poledň|polednE
 čarodejnic|čarodejnicE|0|boboňic|boboňicA
 potvora||0|potfora|
+ještěr|ještěrKA|0|jaščer|ještěrKA
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 sladKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -728,13 +732,27 @@ nem|mOCT|mOCT
 |poprali||
 uč|učIT|učIT
 -
+domů|dom
+dosud|dosavád
+doteď|dofčílka
 hned
 jen,jenom|enom
 jenom|enom
 ještě|ešče
+jinde
+kam
+kamsi
+kdekoli|gdekolif
 leda
+nikdy|ňigdi
+odněkud|odnekúd
+odtud|otúd
+opravdu,gor,gór,kor|kór
+pokud|pokúd
 pořád
 potom
+potud
+pryč|preč
 přeci,přece|přeca
 spolu|spolem
 tady|tadi,tu,totkaj
@@ -743,28 +761,14 @@ taky,také|také,take
 tam
 teď,nyní|fčil,fčíl,fčiléki
 tenkrát
-už|uš,už
-vždy|dicki
-zvlášť,zvláště|zuášče
-nikdy|ňigdi
-zase|zas
-kdekoli|gdekolif
-jinde
-opravdu,gor,gór,kor|kór
-domů|dom
-zítra|zajtra
-vedle|vedlé
-pryč|preč
-odtud|otúd
-pokud|pokúd
-potud
-kam
-kamsi
-odněkud|odnekúd
-doteď|dofčílka
-dosud|dovadád
 teprve|teprf
+už|uš,už
 včera|fčerá
+vedle|vedlé
+vždy|dicki
+zase|zas
+zítra|zajtra
+zvlášť,zvláště|zuášče
 -
 i|aj|
 do|
