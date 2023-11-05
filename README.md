@@ -21,7 +21,8 @@
 - Možnosti transkripce z fonetické do formy užívané klasickému zápisu spisovné češtiny nebo do moravské transkripce (ch->x, x->ks, ...)
 - Přeložení dokumentů *.docx, ...
 - Export *Generátora map* do gis formátů (ArcGIS?)
-- možná se budou dělat i nářečí v okolí Moravy - při hranicemi se Slovenskem, se Slezskem v Polsku, s Čechy a s Rakousem (budou-li data, Cáhnov?...)
+- Možná se budou dělat i nářečí v okolí Moravy - při hranicemi se Slovenskem, se Slezskem v Polsku, s Čechy a s Rakousem (najdou se-li data, Cáhnov?...)
+- Stáhnutí celého slovníku daného místa (jako karta Slovník)
   
 ### Poznámky
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **dva lidé za den**, děkujeme
