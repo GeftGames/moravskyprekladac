@@ -23,6 +23,8 @@
 - Export *Generátora map* do gis formátů (ArcGIS?)
 - Možná se budou dělat i nářečí v okolí Moravy - při hranicemi se Slovenskem, se Slezskem v Polsku, s Čechy a s Rakousem (najdou se-li data, Cáhnov?...)
 - Stáhnutí celého slovníku daného místa (jako karta Slovník)
+- Detekce odkud nářečí pochází
+- Detekce rozdílnosti nářečí
   
 ### Poznámky
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **dva lidé za den**, děkujeme
