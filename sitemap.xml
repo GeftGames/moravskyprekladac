@@ -5,9 +5,39 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://moravskyprekladac.pages.dev/</loc>
-  <lastmod>2023-04-08T05:35:21+00:00</lastmod>
+  <loc>https://moravskyprekladac.pages.dev/index.html</loc>
+  <lastmod>2023-11-12T10:49:17+00:00</lastmod>
+  <priority>1</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://moravskyprekladac.pages.dev/index.html#mapper</loc>
+  <lastmod>2023-11-12T10:49:17+00:00</lastmod>
   <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://moravskyprekladac.pages.dev/index.html#dic</loc>
+  <lastmod>2023-11-12T10:49:17+00:00</lastmod>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://moravskyprekladac.pages.dev/index.html#files</loc>
+  <lastmod>2023-11-12T10:49:17+00:00</lastmod>
+  <priority>0.5</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://moravskyprekladac.pages.dev/index.html#subs</loc>
+  <lastmod>2023-11-12T10:49:17+00:00</lastmod>
+  <priority>0.5</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://moravskyprekladac.pages.dev/index.html#about</loc>
+  <lastmod>2023-11-12T10:49:17+00:00</lastmod>
+  <priority>0.5</priority>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
