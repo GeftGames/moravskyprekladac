@@ -27,7 +27,7 @@
 - Detekce rozdílnosti nářečí
   
 ### Poznámky
-- Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **dva lidé za den**, děkujeme
+- Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **jeden až dva lidé za den**, děkujeme
 
 # moravskyprekladac
 ## Description
