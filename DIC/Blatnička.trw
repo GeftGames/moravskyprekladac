@@ -17,11 +17,13 @@ milenec s milenkou|galán z galánkú
 z kopce do kopce|š čupka do čupka
 tkalcovský výrobek|kadlecké ďílo
 to byl teda kanec|to býl? ale? kančúr
+na Suchov|na Súchof
 -
 -
 -
 ou|ú
 -
+ami|ama
 -
 stroj|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
@@ -32,6 +34,8 @@ dÍTĚ|0|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ět
 bonbón|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 mravenišTĚ|0|tě|tě|ti|tě|tě|ti|těm|tě|ť|tím|tě|tě|tích|ti
 buvol|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+silnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+louKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k,|kám|ky|ky|kách|kami
 -
 stroj|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e|e?|ích?|i?
 plán|1|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
@@ -42,6 +46,8 @@ pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 bonbóN|3|?|u?|u?|?|e?|u?|em?|y?|sú|ům?|y?|y?|ech?|y?
 bravleňisKO|0|ko|tě?|ti?|tě?|tě?|ti?|těm?|tě?|ť?|tím?|tě?|tě?|tích?|ti?
 bivol|2|ł|ła?|łovi,łu?|ła?|łe?|łovi,łu?|łem?|łi,łové?|łů?|łům?|ły?|łi,łové?|łech?|ły?
+silnicE|1|e?|e?|i?|i?|e?|i?|ú|e?|?|ím?|e?|e?|ích?|emi?
+louKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k,?|kám?|ky?|ky?|kách?|kama
 -
 aeroplán|plán|0|ajroplán|plán
 nápadník||0|galán|
@@ -55,6 +61,9 @@ kaneček||0|kaneček|
 kaňour||0|kančúr|
 mraveniš|mravenišTĚ|0|bravleňis|bravleňisKO
 buvol|buvol|0|bivo|bivol
+suchov||2|súchof|
+silnic|silnicE|0|silňic|silnicE
+lou|louKA|0|łú|louKA
 -
 -
 -
@@ -81,6 +90,7 @@ jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|
 JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojedeme|pojedete|pojedou|jeď|jeďme|jeďte|jel|jel|jela|jelo|jeli|jely|jely|jela|jet|jet|jeta|jeto|jeti|jety|jety|jeta
 otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
+dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 -
 mluvIT|15|-1|id|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
@@ -89,6 +99,7 @@ jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edl?|edl?|ed�
 JET|31|-1|jet?|jedu?|jedeš?|jede|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel?|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
 dožírAT|15|-1|at|uji?|uješ?|uje?|ujeme?|ujete?|ajú|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 kÚPIT|15|-1|úpit|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|úpiła|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
+dostaT|22|-1|t?|nu?|než|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|l?|l?|la?|lo?|li?|ly?|ly?|la?
 -
 mluv|młúv|mluvIT|mluvIT
 BÝT|BÝT
@@ -99,15 +110,20 @@ JET|JET
 škádlí|dožír||dožírAT
 otrav|dožír|otravOVAT|dožírAT
 k|kOUPIT|kÚPIT
+dosta|dostaT|dostaT
 -
 jen,jenom|enom
 pořád|pořáď,furd
+jakkoli,všelijak,ledajak|bárjak
+
 -
 se|ze|
 pod|
+na|
 -
 a
 že
 abych|abyh
+nebo|lebo
 -
 -

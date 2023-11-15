@@ -1,4 +1,4 @@
-TW v0.1
+TW v1.0
 fSpisovná čeština
 tJemnice
 aGG
@@ -8,7 +8,7 @@ c519-520 čja\n\nčja 520*        Mladoňovice, o. Třebíč, Šr\nou->ou,ý->n�
 lHoráčtina
 g49.0183005,15.5701087
 xlokální mluva
-q1
+q0
 oPodhorácko
 -
 -
@@ -345,17 +345,17 @@ strom|4||u|?|?|?|?|?|?|?|?|?|?|?|?
 nos|-1||a|?|?|?|?|?|?|?|?|?|?|?|?
 stŮL|3|ůl|ola|olu|ůl|ole|ole|olem|oly|olů|olům|oly|oly|olech|oly
 -
-jehl|jahl||jahl
-ulic|růžE|hulicA
-mez||
-nos|hrad|nos
-st|stŮL|stŮL
+jehl||0|jahl|jahl
+ulic|růžE|0|ulic|hulicA
+mez||0|mez|
+nos|hrad|0|nos|nos
+st|stŮL|0|st|stŮL
 -
-hluboKÝ|-1|ké|kého|kému|ké|ké|kém|kým|ká|kých|kým|ká|ká|kých|kými|ká|ké|ké|kou|ká|ké|kou|ké|kých|kým|ké|ké|kých|kými|ký|kého|kému|kého|ký|kém|kým|cí|kých|kým|ké|cí|kých|kými|ký|kého|kému|ký|ký|kém|kým|ké|kých|kým|ké|ké|kých|kými
-dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|rá|rých|rým|rá|rá|rých|rými|rá|ré|ré|rou|rá|ré|rou|ré|rých|rým|ré|ré|rých|rými|rý|rého|rému|rého|rý|rém|rým|ří|rých|rým|ré|ří|rých|rými|rý|rého|rému|rý|rý|rém|rým|ré|rých|rým|ré|ré|rých|rými
-rudÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+hluboKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
+rudÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-dobrÝ|-1|é|ého|imu|é|é|im|im|á|ých|ejm|á|á|ích|ejma|á|i|i|ou|á|i|ou|é|ých|ejm|é|é|ích|ejma|í|iho|imu|iho|í|im|im|i|ých|ejm|é|i|ích|ejma|í|iho|imu|í|í|im|im|é|ých|ejm|é|é|ích|ejma
+dobrÝ|-1|é|ého|imu|é|é|im|im|||á|ých|ejm|á|á|ích|ejma|||á|i|i|ou|á|i|ou|||é|ých|ejm|é|é|ích|ejma|||í|iho|imu|iho|í|im|im|||i|ých|ejm|é|i|ích|ejma|||í|iho|imu|í|í|im|im|||é|ých|ejm|é|é|ích|ejma||
 -
 hlubo|hlybok|hluboKÝ|dobrÝ
 dob|dobr|dobRÝ|dobrÝ
