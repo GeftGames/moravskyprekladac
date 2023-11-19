@@ -19,6 +19,8 @@ prosekávali mladý les|foštovali
 na kopci|f čupku
 velké jmění|bankáṵ
 může být|može bid
+z toho|s teho
+tlusté břicho|banďúr
 -
 -
 -
@@ -35,6 +37,7 @@ háj|3||e|i||i|i|em|e|ů|ům|e|e,snicky) hájové|ích|i
 kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 dvojKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+kafé|0||||||||||||||
 -
 pohádKA|1|ka|ky|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 ženA|1|a?|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
@@ -42,6 +45,7 @@ háj|3|?|a|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e,snicky) hájové?|ích?|i?
 kopEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 dvojKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ki|ky?|kách?|kami?
+kafé|0|?|ho|?|?|?|?|?|?|?|?|?|?|?|?
 -
 studán|pohádKA|0|studén|pohádKA
 vod|ženA|0|vod|ženA
@@ -49,6 +53,7 @@ háj|háj|0|háj|háj
 angrešt||0|egrež|
 jetelin|ženA|0|jatelin|ženA
 dvojčata||0|dvoj|dvojKA
+kafé|kafé|0|kafé|kafé
 -
 -
 -
@@ -61,7 +66,7 @@ takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|�
 sÁM|-1|ám|amého|amému|mého,ama|-|amém|amým|ami|amých|amým|amy|-|amých|amými|ám|amého|amému|ám|-|amém|amým|amy|amých|amým|amy|-|amých|amými|ama|amé|amé|amu|-|amé|amou|amy|amých|amým|amy|-|amých|amými|amo|amého|amému|amo|-|amém|amým|ama|amých|amým|ama|-|amých|amými
 nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
 -
-TEN|-1|ten|toho?|tomu?|toho?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tem|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|téj|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tem|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+TEN|-1|ten|toho?|tomu?|toho?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ten?|teho|tomu?|ten?|-|tem|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|téj|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tem|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 MY|-1|my|nás?|nám|nás?|my?|nás?|námi?
 SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 ON|-1|on|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
@@ -87,6 +92,7 @@ pÍT|15|-1|ít|iju,piji|iješ|ije|ijeme|ijete|ijou,pijí|ij|ijme|ijte|il|il|ila|
 MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 záležET|7|-1|et|ím|íš|í|íme|íte|í,záležejí|ej,zálež|ejme,záležme|ejte,záležte|el|el|ela|elo|eli|ely|ely|ela
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 BÝT|247|-1|bid|sem|jsi?|je|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budú|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 dOJÍT|62|-1|jít?|?|?|ójda?|?|?|?|jdi?|jděme?|jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|ójda|?|?
@@ -95,6 +101,7 @@ pÍT|15|-1|ít?|iju,piji?|iješ?|ije?|ijeme?|ijete?|ijou,pijí?|ij?|ijme?|ijte?|
 MÍT|71|-1|mňed|mám?|máš?|má?|máme|máte?|mají?|měj?|mějme?|mějte?|mňéṵ|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 záležET|7|-1|et?|ím?|íš?|í|íme?|íte?|í,záležejí?|ej,zálež?|ejme,záležme?|ejte,záležte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ože|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
 BÝT|BÝT
 do|doJÍT|dOJÍT
@@ -107,6 +114,7 @@ MÍT|MÍT
 zálež|záležET|záležET
 nezálež|záležET|záležET
 m|mOCT|mOCT
+m|mÍT|mÍT
 -
 potom
 pořád|furd

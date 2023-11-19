@@ -18,6 +18,8 @@ od terečka|ot turečka
 se říká|sa říká
 já jsem|já su
 ale jdi|o poť
+ale jsi ji|ales ju
+ale jsi|ales
 -
 -
 málo|máṵo
@@ -43,6 +45,7 @@ ají|ajú
 vejte|vajte
 šel|šeṵ
 val|vaṵ
+hla|hṵa
 -
 KŘTINY|1|-|-|-|-|-|-|-|křtiny|křtin|křtinám|křtiny|křtiny|křtinách|křtinami
 jan|1||a|u,ovi|a|e,e|u,ovi|em|ové|ů|ům|y|ové|ech|y
@@ -58,6 +61,8 @@ kluK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 pár|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 dratEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+vrabEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 -
 KŘTINY|1|-|-|-|-|-|-|-|křsťinki|křtin?|křtinám?|křtiny?|křtiny?|křtinách?|křtinami?
 jan|1|?|a?|u,ovi?|a?|e|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
@@ -73,26 +78,30 @@ kluK|2|k?|ka?|ku,kovi?|ka?|ku|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
 pár|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 dratEV|1|ev?|ve?|vi?|ev?|vi?|vi?|vú|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 dEN|0|en?|ne?|ni,nu?|eň|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
+brablIC|2|ic|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+svadBA|1|ba|by?|bě?|bu?|bo?|bě?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 -
 |KŘTINY|0||KŘTINY
-stróžok?||0|stróžoch|
-jan|jan|2|jan|jan
-bot|botA|0|bot|botA
 ||0|kramflíki|
-chyb|chybA|0|chib|chybA
-hodin|hodinA|0|hoďi|hodinA
-svát|svátEK|0|svát|svátEK
 ||0|krišpína 2p|
-š|šVEC|0|š|šVEC
-kr|krEV|0|kr|krEV
-pondělí|pondělí|0|poňďelí|pondělí
-patron|patron|0|patrón|patron
 ||0|uječku|
-klu|kluK|0|klu|kluK
-pár|pár|0|pár|pár
-drat|dratEV|0|drat|dratEV
-podpatek||0|kramflíka 2p|
+bot|botA|0|bot|botA
 d|dEN|0|d|dEN
+drat|dratEV|0|drat|dratEV
+hodin|hodinA|0|hoďi|hodinA
+chyb|chybA|0|chib|chybA
+jan|jan|2|jan|jan
+klu|kluK|0|klu|kluK
+kr|krEV|0|kr|krEV
+pár|pár|0|pár|pár
+patron|patron|0|patrón|patron
+podpatek||0|kramflíka 2p|
+pondělí|pondělí|0|poňďelí|pondělí
+stróžok?||0|stróžoch|
+svát|svátEK|0|svát|svátEK
+š|šVEC|0|š|šVEC
+vrab|vrabEC|0|brabl|brablIC
+svat|svatBA|0|svad|svadBA
 -
 pěknÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 zrzavÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -225,6 +234,7 @@ do|doJÍT|doJÍT
 uč|učIT|učIT
 š|šÍT|šÍT
 |přišívaṵ||
+|dobjehṵa||
 -
 tak
 všude|fšadi

@@ -1,4 +1,4 @@
-TW v0.1
+TW v1.0
 tZábřeh
 d05.06.2023 12:02:48
 c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch; str. 101
@@ -34,6 +34,7 @@ kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 vlhkO|0|o|a|u|o|o|u|em|a||ům|a|a|ách|y
 listí|0|||||||m|-|-|-|-|-|-|-
+žemlE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 -
 strom|3|?|u?|u?|?|e?|u,ě?|em?|e|ů?|om|y?|y?|ech?|ama
 les|3|?|a?|u?|?|e?|e|em?|y?|ů?|ům?|y?|y?|ích?|y?
@@ -47,31 +48,33 @@ kost|1|?|i?|i?|?|i?|i|ó|i?|í?|em?|i?|i?|ech?|mi?
 městO|0|o?|a?|u?|o?|o?|ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 vlhkO|0|o?|a?|u?|o?|o?|o|em?|a?|?|ům?|a?|a?|ách?|y?
 lestí|0|í?|í?|í?|í?|í?|í?|ím?|-|-|-|-|-|-|-
+bandor|3||e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 -
-strom|strom|strom
-les|les|les
-dub|strom|strom
-l|lÍPA|lÍPA
-borovic|bor|borovicE|borovicE
-jív|jiv|ženA|ženA
-olš|volš|borovicE|borovicE
-osy|vosy|pohádKA|pohádKA
-bříz|břiz|školA|školA
-třešn|střešn|třešnĚ|střešnĚ
-ječmen|ječmeň||
-větev|haluz||
-žito|réž?||
-radost|radosť|kost|kost
-vlhk|vlhkO|vlhkO
-listí|lestí||
-velikost|velekosť|kost|kost
-příčin|ženA|ženA
+strom|strom|0|strom|strom
+les|les|0|les|les
+dub|strom|0|dub|strom
+l|lÍPA|0|l|lÍPA
+borovic|borovicE|0|bor|borovicE
+jív|ženA|0|jiv|ženA
+olš|borovicE|0|volš|borovicE
+osy|pohádKA|0|vosy|pohádKA
+bříz|školA|0|břiz|školA
+třešn|třešnĚ|0|střešn|střešnĚ
+ječmen||0|ječmeň|
+větev||0|haluz|
+žito||0|réž?|
+radost|kost|0|radosť|kost
+vlhk|vlhkO|0|vlhk|vlhkO
+listí||0|lestí|
+velikost|kost|0|velekosť|kost
+příčin|ženA|0|příčin|ženA
+žeml|žemlE|0|bandor|bandor
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
-jarní|-1||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|éma|á?|é?|é?|ou?|á?|é?|ou?|e|ých?|ým?|é?|é?|ých?|éma|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|éma|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|éma
-jarní|-1|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|ho?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|éma|||á?|é?|é?|ou?|á?|é?|ou?|||e|ých?|ým?|é?|é?|ých?|éma|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|éma|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|éma||
+jarní|-1|?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|?|?|?|?|?|?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|ho?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?||
 -
 plan|zelenÝ|zelenÝ
 tlust|tlost|zelenÝ|zelenÝ
@@ -132,7 +135,7 @@ těš|těšIT|těšIT
 děl|dělAT|dělAT
 ř|řÍCT|řÍCT
 ch|chTÍT|chTÍT
-|BÝT|BÝT
+BÝT|BÝT
 na|naJÍT|naJÍT
 m|mOCT|mOCT
 nem|mOCT|mOCT

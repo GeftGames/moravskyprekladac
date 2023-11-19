@@ -2,7 +2,7 @@ TW v1.0
 tVacenovice
 aGG
 d27.10.2023 18:03:18
-c#Zdroje dat\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 186 (nevyčerpáno)\n\n#Popis nářečí\n-tvrdé L: hłava (ne hṵava)\n-slovesa: nésł, védł, spadł\n-výskyt měkkého ľ, Ľ
+c#Zdroje dat\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 186 (nevyčerpáno)\n\n#Popis nářečí\n-tvrdé L: hłava (ne hṵava)\n-slovesa: nésł, védł, spadł\n-výskyt měkkého ľ, Ľ\n-Ščasnúj - přídavná jména
 g48.9451075,17.1739362
 q0
 oSlovácko
@@ -22,14 +22,47 @@ nesl|nésł
 itáliE|1|e|e|i|i|e|i|í|-|-|-|-|-|-|-
 zelí|0|||||||m|||m|||ch|mi
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+listí|0|||||||m|-|-|-|-|-|-|-
+obilí|0|||||||m|||m|||ch|mi
+podmáslí|0|||||||m|||m|||ch|mi
+petržel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+sluncE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+slunKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
+kolO|0|o|a|u|o|o|e|em|a||ům|a|a|ech|y
+slÁMA|1|áma|ámy|ámě|ámu|ámo|ámě|ámou|ámy|am|ámám|ámy|ámy|ámách|ámami
+les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
+led|0||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+lÍPA|1|ípa|ípy|ípě|ípu|ípo|ípě|ípou,ipou|ípy|ip|ípám,ipám|ípy|ípy|ípách,ipách|ípami,ipami
 -
 itálijE|1|e?|e?|i?|u|e?|i?|í?|-|-|-|-|-|-|-
-zelí|0|í|í?|í|í?|í?|í|ím?|í?|í?|ím?|í?|í?|ích?|ími?
+zelí|0|í|í|í|í?|í?|í|ím?|í?|í?|ím?|í?|í?|ích?|ími?
 ČLOVĚK|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
+listí|0|?||?|?|?|?|m?|-|-|-|-|-|-|-
+obilí|0|?||?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+podmáslí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+sluncE|0|e?|e?|i?|e?|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
+slunKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka?|ek?|kům?|ka?|ka?|kách?|ky?
+kolO|0|o|a?|u?|o?|o?|e?|em?|a?|?|ům?|a?|a?|ech?|y?
+slÁMA|1|áma|ámy?|ámě?|ámu?|ámo?|ámě?|ámou?|ámy?|am?|ámám?|ámy?|ámy?|ámách?|ámami?
+les|3||a?|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
+led|0||u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+lÍPA|1|ipa|ípy?|ípě?|ípu?|ípo?|ípě?|ípou,ipou?|ípy?|ip?|ípám,ipám?|ípy?|ípy?|ípách,ipách?|ípami,ipami?
 -
 itáli|itáliE|2|Itálij|itálijE
 zelí|zelí|0|zel|zelí
 |ČLOVĚK|0||ČLOVĚK
+listí|listí|0|lisťí|listí
+proutí||0|bez prúťí|
+obilí|obilí|0|obilí|obilí
+podmáslí|podmáslí|0|podmáslí|podmáslí
+petržel|petržel|0|petrželí|podmáslí
+slunc|sluncE|0|słún|sluncE
+slun|slunKO|0|słún|slunKO
+kol|kolO|0|koł|kolO
+sl|slÁMA|0|sł|slÁMA
+les|les|0|ľes|les
+led|led|0|ľed|led
+l|lÍPA|0|ľ|lÍPA
 -
 -
 -
@@ -52,15 +85,28 @@ dv|dvA|dvA
 NÉST|31|-1|nést|nesu|neseš|nese|neseme|nesete|nesou|ponesu,budu nést|poneseš,budeš nést|ponese,bude nést|poneseme,budeme nést|ponesete,budete nést|ponesou,budou nést|nes|nesme|neste|nesl|nesl|nesla|neslo|nesli|nesly|nesly|nesla|nesen|nesen|nesena|neseno|neseni|neseny|neseny|nesena
 VÉST|31|-1|vést|vedu|vedeš|vede|vedeme|vedete|vedou|povedu,budu vést|povedeš,budeš vést|povede,bude vést|povedeme,budeme vést|povedete,budete vést|povedou,budou vést|veď|veďme|veďte|vedl|vedl|vedla|vedlo|vedli|vedly|vedly|vedla|veden|veden|vedena|vedeno|vedeni|vedeny|vedeny|vedena
 SPADNOUT|30|-1|spadnout|spadnu|spadneš|spadne|spadneme|spadnete|spadnou|spadni|spadněme|spadněte|spadl|spadl|spadla|spadlo|spadli|spadly|spadly|spadla|–|–|–|spadeno|–|–|–|–
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
+mluvIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+válET|15|-1|et|ím|íš|í|íme|íte|í,válejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
 NÉST|31|-1|nést?|nesu?|neseš?|nese?|neseme?|nesete?|nesou?|ponesu,budu nést?|poneseš,budeš nést?|ponese,bude nést?|poneseme,budeme nést?|ponesete,budete nést?|ponesou,budou nést?|nes?|nesme?|neste?|nésł|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseni?|neseny?|neseny?|nesena?
 VÉST|31|-1|vést?|vedu?|vedeš?|vede?|vedeme?|vedete?|vedou?|povedu,budu vést?|povedeš,budeš vést?|povede,bude vést?|povedeme,budeme vést?|povedete,budete vést?|povedou,budou vést?|veď?|veďme?|veďte?|védł|vedl?|vedla?|vedlo?|vedli?|vedly?|vedly?|vedla?|veden?|veden?|vedena?|vedeno?|vedeni?|vedeny?|vedeny?|vedena?
 SPADNOUT|30|-1|spadnout?|spadnu?|spadneš?|spadne?|spadneme?|spadnete?|spadnou?|spadni?|spadněme?|spadněte?|spadł|spadl?|spadla?|spadlo?|spadli?|spadly?|spadly?|spadla?|–?|–?|–?|spadeno?|–?|–?|–?|–?
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
+mluvIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|biła|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+válET|15|-1|at|ím?|íš?|í?|íme?|íte?|í,válejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 -
 NÉST|NÉST
 VÉST|VÉST
 SPADNOUT|SPADNOUT
+ř|řÍCT|řÍCT
+mluv|młuv|mluvIT|mluvIT
+BÝT|BÝT
+vál|váľ|válET|válET
 -
+málo|máło
 -
 -
 -
