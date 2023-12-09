@@ -4,7 +4,8 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = "v1.trw_a";//"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
+const languagesPackage = "v2.trw_a";//"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
+var loadedVersionNumber=-1;
 let translations = [
 	"Morava", [
 		"Slovácko", [
@@ -261,7 +262,8 @@ function GetTranslations() {
 
 		let tr=new LanguageTr();
 		loadedversion=lines[0];
-		if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1"){
+		loadedVersionNumber=parseFloat(loadedversion.substring(4));
+		if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
 			tr.Load(lines);
 			AddLang(tr);
 		} else {

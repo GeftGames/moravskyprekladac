@@ -8,11 +8,19 @@ class ItemSentence {
 	}
 
 	static Load(data) {
-		let item=new ItemSentence();
-        let raw = data.split('|');
-        item.input=raw[0];
-        item.output=raw[1];
-		return item;
+		if (loadedVersionNumber < 2) {
+			let item=new ItemSentence();
+			let raw = data.split('|');
+			item.input=raw[0];
+			item.output=raw[1];
+			return item;
+		} else if (loadedVersionNumber == 2) {
+			if (raw[0]=='') return null;			
+			let item = new ItemSentence();
+			item.input = raw[0];			
+			item.output=FastLoadTranslateTo(raw, 1);
+			return item;						
+		}
     }
 
 	GetDicForm(name) {
@@ -38,28 +46,58 @@ class ItemSentence {
 		});
 		t.class="dicCustom";
 
-	//	p.appedChild(s1);
-		return [this.input, this.output, name, p];
+		return {from: this.input, to: this.output, name: name, element: p};
 	}
 }
 
 class ItemSentencePart {
 	constructor() {
-		this.input = "";
-		this.output = "";
+		this.input = null;
+		this.output = null;
 	}
 
 	static Load(data) {
-		let item=new ItemSentencePart();
-        let raw = data.split('|');
-        item.input=raw[0];
-        item.output=raw[1];
-		return item;
+		if (loadedVersionNumber < 2) {
+			let item=new ItemSentencePart();
+			let raw = data.split('|');
+			item.input=raw[0];
+			item.output={Text: raw[1]};
+			return item;
+		} else if (loadedVersionNumber == 2) {
+			let raw = data.split('|');
+			let item = new ItemSentencePart();
+			
+			if (raw[0]=='') return null;
+			item.input = raw[0];
+			
+			item.show = raw[1]=="1";
+			item.output=FastLoadTranslateTo(raw, 2);
+			return item;						
+		}
     }
-
 	
-	GetDicForm(name) {		
-		return [this.input, this.output, "", name];
+	GetDicForm(name) {
+		if (!this.show) return null;
+
+		let p = document.createElement("p");
+		let f = document.createElement("span");
+		f.innerText=this.input;
+		p.appendChild(f);
+
+		let e = document.createElement("span");
+		e.innerText=" → ";
+		p.appendChild(e);
+
+		let t = document.createElement("span");
+		t.innerText=this.output.Text;
+		p.appendChild(t);
+
+		t.addEventListener("click", () => {
+			ShowPageLangD(t.GetTable());
+		});
+		t.class="dicCustom";
+
+		return {from: this.input, to: this.output, name: "", element: p};
 	}
 }
 
@@ -168,7 +206,7 @@ class ItemPatternNoun {
 
 class ItemNoun {
 	static pattensFrom;
-//	static To;
+	static pattensTo;
 //	static From="";
 
 	constructor() {
@@ -195,8 +233,8 @@ class ItemNoun {
 
 				let paternTo = this.GetPatternByNameTo(raw[3]);
 				if (paternTo == null) return null;
-				else item.PatternTo = paternTo;
-				item.To.push([raw[1], paternTo]);
+				else item.To = {Body: raw[1], Pattern: paternTo};
+				//item.To.push([raw[1], paternTo]);
 
 				return item;
 			} else if (raw.length == 3) {
@@ -210,8 +248,8 @@ class ItemNoun {
 
 				let paternTo = this.GetPatternByNameTo(raw[2]);
 				if (paternTo == null) return null;
-				else item.PatternTo = paternTo;
-				item.To.push([raw[0], paternTo]);
+				else item.To = {Body: raw[0], Pattern: paternTo};
+				//item.To.push([raw[0], paternTo]);
 
 				return item;
 			} else if (raw.length == 2) {
@@ -225,13 +263,13 @@ class ItemNoun {
 
 				let paternTo = this.GetPatternByNameTo(raw[1]);
 				if (paternTo == null) return null;
-				//else item.PatternTo = paternTo;
-				item.To.push(["", paternTo]);
+				else item.To = {Body: "", Pattern: paternTo};
+				//item.To.push(["", paternTo]);
 
 				return item;
 			}
 			return null;
-		} else {
+		} else if (loadedversion=="TW v1.0") {
 			if (data.includes('?')) return null;
 			let raw = data.split('|');
 	
@@ -250,6 +288,28 @@ class ItemNoun {
 			}
 			if (item.To.length>0) return item;
 			return null;
+		} else if (loadedVersionNumber == 2) {
+			let raw = data.split('|');
+
+			let item =new ItemNoun();
+			item.From=raw[0];
+
+			let paternFrom = this.GetPatternByNameFrom(raw[1]);
+			if (paternFrom == null) {
+				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+				return null;
+			}
+			item.PatternFrom=paternFrom;
+			item.UppercaseType=parseInt(raw[2]);
+
+			let to = FastLoadTranslateToWithPattern(raw, 3, this);
+			if (to == null) {
+				if (dev) console.log("Cannot load to '"+data+"'");
+				return null;
+			}
+			item.To=to;
+
+			return item;
 		}
 	}
 
@@ -269,7 +329,8 @@ class ItemNoun {
 
 	GetWordTo(number, fall) {
 		//if (dev) console.log("GetWordTo",this, number, fall);
-		if (this.PatternTo == null) {
+	//	for (let )
+		if (this.To.Pattern == null) {
 			throw Exception(PatternTo+" is null");
 			return this.To;
 		}
@@ -310,7 +371,7 @@ class ItemNoun {
 
 		if (to==undefined) return null;
 
-		let body=to[0], pattern=to[1];
+		let body=to.Body, pattern=to.Pattern;
 		if (typeof(pattern) == "undefined") return null;
 
 		let str_form="", str_to="";
@@ -342,6 +403,19 @@ class ItemNoun {
 		});
 		t.className="dicCustom";
 		p.appendChild(t);
+		
+		let space = document.createTextNode("  ");
+		p.appendChild(space);
+		
+		console.log(this);
+		if (to.Comment!=undefined) {
+			if (to.Comment!=""){
+				let c = document.createElement("span");
+				c.innerText=to.Comment;
+				c.className="dicMeaning";
+				p.appendChild(c);
+			}
+		}
 
 		let r = document.createElement("span");
 		let info=" (podst.";
@@ -353,7 +427,7 @@ class ItemNoun {
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 
-		return [str_form, str_to, "", p];
+		return {from: str_form, to: str_to, name: "", element: p};
 	}
 	
 	/*GetWordTo(number, fall, gender) {
@@ -445,8 +519,8 @@ class ItemNoun {
 				//	console.log(this.From+s);
 					if (this.From+s == str) {
 						for (const to of this.To) {
-							let body=to[0];
-							let pattern=to[1];
+							let body=to.Body;
+							let pattern=to.Pattern;
 							//console.log(this.To);
 							//if (pattern==undefined)continue;
 							if (Array.isArray(pattern.Shapes[i])) {
@@ -462,8 +536,8 @@ class ItemNoun {
 				console.log(this.From+this.PatternFrom.Shapes[i]);
 				if (this.From+this.PatternFrom.Shapes[i] == str) {
 					for (const to of this.To) {
-						let body=to[0];
-						let pattern=to[1];
+						let body=to.Body;
+						let pattern=to.Pattern;
 						if (pattern==undefined)continue;
 						if (Array.isArray(pattern.Shapes[i])) {
 							for (const z of pattern.Shapes[i]){
@@ -484,8 +558,8 @@ class ItemNoun {
 
 					if (shape==str) {
 						for (const to of this.To) {
-							let body=to[0];
-							let pattern=to[1];
+							let body=to.Body;
+							let pattern=to.Pattern;
 							if (pattern==undefined)continue;
 							if (Array.isArray(pattern.Shapes[i])) {
 								for (const z of pattern.Shapes[i]) {
@@ -501,8 +575,8 @@ class ItemNoun {
 
 				if (shape==str) {
 					for (const to of this.To) {
-						let body=to[0];
-						let pattern=to[1];
+						let body=to.Body;
+						let pattern=to.Pattern;
 						if (pattern==undefined)continue;
 						if (Array.isArray(pattern.Shapes[i])) {
 							for (const z of pattern.Shapes[i]) {
@@ -532,37 +606,51 @@ class ItemSimpleWord {
 	
 	static Load(data) {
 		let raw = data.split('|');
-		if (raw[0]=='') return null;
-		if (raw.length==1){
-			if (raw[0].includes('?')) return null;
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw[0]=='') return null;
+			if (raw.length==1) {
+				if (raw[0]=='') return null;
+				if (raw[0].includes('?')) return null;
+				let item = new ItemSimpleWord();
+				item.input = raw[0];
+				item.output = {Text: raw[0]};
+				return item;
+			} 
+			if (raw.length==2){
+				if (raw[0]=='') return null;
+				if (raw[1]=='') return null;
+				if (raw[0].includes('?')) return null;
+				if (raw[1].includes('?')) return null;
+
+				let item = new ItemSimpleWord();
+				
+				if (raw[0].includes(',')) item.input = raw[0].split(',');
+				else item.input = raw[0];
+				
+				if (raw[1].includes(',')) item.output = {Text: raw[1].split(',')};
+				else item.output = {Text: raw[1]};
+				return item;
+			}
+		} else if (loadedVersionNumber == 2) {
+			if (raw[0]=='') return null;			
 			let item = new ItemSimpleWord();
-			item.input = raw[0];
-			item.output = raw[0];
-			return item;
-		} 
-		if (raw.length==2){
-			if (raw[0].includes('?')) return null;
-			if (raw[1].includes('?')) return null;
-			let item = new ItemSimpleWord();
-			let inp=raw[0].split(',');
-			if (inp.length==1) item.input = inp[0];
-			else  item.input = inp;
-			item.output = raw[1].split(',');
-			return item;
+			
+			// z
+			if (raw[0].includes(',')) item.input = raw[0].split(',');
+			else item.input = raw[0];
+
+			item.show=raw[1]=="1";
+			
+			// na
+			item.output=FastLoadTranslateTo(raw, 2);
+			if (item.output==null)return null;
+			return item;						
 		}
 		return null;
     }
 
 	GetDicForm(name) {		
-		let out = "";
-		if (Array.isArray(this.output)) {
-			out=this.output.join(", ");
-		} else {
-			out=this.output;
-		}
-//		console.log(out);
-		if (out=="") return null;
-
+		//	if (Array.isArray(this.output)) {
 		let p = document.createElement("p");
 		let f = document.createElement("span");
 		f.innerText=this.input;
@@ -572,9 +660,42 @@ class ItemSimpleWord {
 		e.innerText=" → ";
 		p.appendChild(e);
 
-		let t = document.createElement("span");
-		t.innerText=out;
-		p.appendChild(t);
+		//console.log(this);
+		let out="";
+		if (Array.isArray(this.output.Text)) {
+			for (let i=0; i<this.output.Text.length; i++) {
+				let o = this.output.Text[i];
+
+				out += o+", ";
+				if (o=="") return null;
+
+				let t = document.createElement("span");
+				t.innerText=o;
+				p.appendChild(t);
+
+				if (i!=this.output.Text.length-1) {
+					let space=document.createTextNode(", ");
+					p.appendChild(space);
+				}
+			}
+		} else {
+			let o=this.output;
+			out = o.Text;
+			if (out=="") return null;
+
+			let t = document.createElement("span");
+			t.innerText=o.Text;
+			p.appendChild(t);		
+		}			
+		
+		if (this.output.Comment!=undefined) {
+			if (this.output.Comment!="") {
+				let c = document.createElement("span");
+				c.innerText=this.To.Comment;
+				r.className="dicMeaning";
+				p.appendChild(c);
+			}
+		}
 		
 		p.appendChild(document.createTextNode(" "));
 
@@ -584,7 +705,7 @@ class ItemSimpleWord {
 			r.className="dicMoreInfo";
 			p.appendChild(r);
 		}
-		return [this.input, out, "", p];
+		return {from: this.input, to: out, name: "", element: p};
 	}
 }
 
@@ -596,23 +717,57 @@ class ItemPhrase{
 	
 	static Load(data) {
 		let raw = data.split('|');
-		if (raw[0]=='') return null;
-		if (raw.length==1) {
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw[0]=='') return null;
+			if (raw.length==1) {
+				let item = new ItemPhrase();
+				item.input  = this.DoubleSplitInp(data);
+				item.output = this.DoubleSplit(data);
+				return item;
+			} 
+			if (raw.length==2){
+				let item = new ItemPhrase();
+				item.input  = this.DoubleSplitInp(raw[0]);
+				item.output = this.DoubleSplit(raw[1]);
+				return item;
+			}
+		} else if (loadedversion=="TW v1.0") {
+			if (raw[0]=='') return null;
+			if (raw.length==2) {
+				let item = new ItemPhrase();
+				item.input  = this.DoubleSplitInp(raw[0]);
+				item.output = this.DoubleSplit(raw[1]);
+				return item;
+			} 
+			if (raw.length==3){
+				let item = new ItemPhrase();
+				item.input  = this.DoubleSplitInp(raw[0]);
+				item.output = this.DoubleSplit(raw[1]);
+				item.Comment=raw[2];
+				return item;
+			}			
+		} else if (loadedVersionNumber == 2) {
+			if (raw[0]=='') return null;			
 			let item = new ItemPhrase();
-			item.output = item.input = this.DoubleSplit(data);
-			return item;
-		} 
-		if (raw.length==2){
-			let item = new ItemPhrase();
-			item.input  = this.DoubleSplit(raw[0]);
-			item.output = /*this.DoubleSplit(*/raw[1].split(',')/*)*/;
-			return item;
+			item.input = this.DoubleSplitInp(raw[0]);
+			item.show=raw[0]=="1";
+			item.output=this.FastLoadTranslateTo(raw, 2);
+			return item;						
 		}
 		
 		return null;
     }
 
 	static DoubleSplit(str) {
+		// "k moři,k mořu" ->> [["k", " ", "moři"], ["k", " ", "mořu"]]
+		let arr=[];
+		for (const w of str.split(",")){
+			arr.push({Text: this.MultipleSplit(w, " -")});
+		}	
+		return arr;
+	}	
+	
+	static DoubleSplitInp(str) {
 		// "k moři,k mořu" ->> [["k", " ", "moři"], ["k", " ", "mořu"]]
 		let arr=[];
 		for (const w of str.split(",")){
@@ -686,18 +841,22 @@ class ItemPhrase{
 		return arr;
 	}
 
-	GetDicForm(name) {
+	GetDicForm() {
 		let inp = "";
 		let out = "";
 				
+		//console.log(this.output);
 		for (let o of this.output) {
-			out+=o.join(" ");
+			//console.log(o.Text);
+			out+=o.Text.join(" ");
 			//for (let o2 of o) o2+" ";
 		}
-		for (let i of this.input) {
-			inp+=i.join(" ");
-			//for (let i2 of i) inp+=i2+" ";
-		}
+		if (Array.isArray(inp)){
+			for (let i of this.input) {
+				inp+=i.join(" ");
+				//for (let i2 of i) inp+=i2+" ";
+			}
+		}else inp=this.input;
 		
 		let p = document.createElement("p");
 		let f = document.createElement("span");
@@ -717,7 +876,26 @@ class ItemPhrase{
 		});
 		t.class="dicCustom";
 		
-		return [inp, out, name, p];
+		return {from: inp, to: out, name: "fráze", element: p};
+	}
+
+	static FastLoadTranslateTo(rawData, indexStart) {
+		let ret=[];
+		for (let i=indexStart; i<rawData.length; i+=2) {
+			let rawText=rawData[i];
+	
+			if (rawText=='') continue;
+			if (rawText.includes('?')) continue;
+			
+			ret.push({Text: this.MultipleSplit(rawText, " -"), Comment: rawData[i+1]});
+		}
+	
+		if (ret.length==0) {
+			if (dev) console.log("Cannot load pattern '"+rawData+"'");
+			return null;
+		}
+	
+		return ret;
 	}
 }
 
@@ -806,33 +984,51 @@ class ItemPreposition {
 	
 	static Load(data) {
 		let raw = data.split('|');
-		if (raw.length==2){
-			if (raw[0].includes('?')) return null;
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw.length==2){
+				if (raw[0].includes('?')) return null;
+				let item = new ItemPreposition();
+				item.input = raw[0];
+				item.output.push(raw[0]);
+				if (raw[1]!="") {
+					for (const f of raw[1].split(',')) {
+						let num=parseInt(f);
+						if (!isNaN(num))item.fall.push(num);
+					}
+				}
+				return item;
+			} 
+			if (raw.length==3){
+				if (raw[0].includes('?')) return null;
+				if (raw[1].includes('?')) return null;
+
+				let item = new ItemPreposition();
+				item.input  = raw[0];
+				item.output = raw[1].split(',');
+				if (raw[2]!="") {
+					for (const f of raw[2].split(',')) {
+						let num=parseInt(f);
+						if (!isNaN(num)) item.fall.push(num);
+					}
+				}
+				item.Comment=raw[3];
+				return item;
+			}
+		} else if (loadedVersionNumber == 2) {
+			let raw = data.split('|');
 			let item = new ItemPreposition();
-			item.input = raw[0];
-			item.output.push(raw[0]);
+			
+			if (raw[0]=='') return null;			
+			item.input = raw[0].split(',');
+			
 			if (raw[1]!="") {
 				for (const f of raw[1].split(',')) {
-					let num=parseInt(f);
-					if (!isNaN(num))item.fall.push(num);
-				}
-			}
-			return item;
-		} 
-		if (raw.length==3){
-			if (raw[0].includes('?')) return null;
-			if (raw[1].includes('?')) return null;
-
-			let item = new ItemPreposition();
-			item.input  = raw[0];
-			item.output = raw[1].split(',');
-			if (raw[2]!="") {
-				for (const f of raw[2].split(',')) {
 					let num=parseInt(f);
 					if (!isNaN(num)) item.fall.push(num);
 				}
 			}
-			return item;
+			item.output=FastLoadTranslateTo(raw, 2);
+			return item;						
 		}
 		return null;
     }
@@ -849,26 +1045,35 @@ class ItemPreposition {
 		let f = document.createElement("span");
 		f.innerText=this.input;
 		p.appendChild(f);
-
+		
 		let e = document.createElement("span");
 		e.innerText=" → ";
 		p.appendChild(e);
-
-		let t = document.createElement("span");
-		t.innerText=this.output.join(", ");
-		p.appendChild(t);
+		
+		for (const tto of this.output) {
+			let t = document.createElement("span");
+			t.innerText=tto.Text;
+			p.appendChild(t);	
+			
+			if (tto.Comment!="") {
+				let t = document.createElement("span");
+				t.innerText=tto.Comment;
+				t.className="dicMeaning";
+				p.appendChild(t);
+			}
+		}
 
 		let r = document.createElement("span");
 		r.innerText=" (předl.";
 		if (this.fall.length>0) {
-			t.innerText+=", pád: "+this.fall.join(", ");
+			r.innerText+=", pád: "+this.fall.join(", ");
 		}
 		r.innerText+=")";
 		r.className="dicMoreInfo";
 		p.appendChild(r);
-
-		if (this.fall.length>0) return [this.input, this.output.join(', '), langFile.Fall+": "+this.fall.join(', '), p];
-		else return [this.input, this.output.join(', '), name, p];
+		
+		if (this.fall.length>0) return {from: this.input, to: this.output.join(', '), name: langFile.Fall+": "+this.fall.join(', '), element: p};
+		else return {from: this.input, to: this.output.join(', '), name: name, element: p};
 	}
 }
 
@@ -1421,59 +1626,108 @@ class ItemSentencePatternPart {
 class ItemPatternPronoun{
 	constructor() {
 		this.Name;
-		this.Gender;
+		//this.Gender;
 		this.Type;
 		this.Shapes;
 	}
 
 	static Load(data) {
 		let raw=data.split('|');
-		if (raw.length==14+2){
-			let item=new ItemPatternPronoun();
-			item.Name=raw[0];
-			item.Type=1;
-			item.Gender=parseInt(raw[1]);
-			item.Shapes=[14];
-			for (let i=0; i<14; i++){
-				if (raw[2+i].includes('?')) item.Shapes[i]='?';
-				else item.Shapes[i]=raw[2+i].split(',');
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw.length==14+2){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=1;
+				item.Gender=parseInt(raw[1]);
+				item.Shapes=[14];
+				for (let i=0; i<14; i++){
+					if (raw[2+i].includes('?')) item.Shapes[i]='?';
+					else item.Shapes[i]=raw[2+i].split(',');
+				}
+				return item; 
 			}
-			return item; 
-		}
-		if (raw.length==7+2){
-			let item=new ItemPatternPronoun();
-			item.Name=raw[0];
-			item.Type=2;
-			item.Gender=parseInt(raw[1]);
-			item.Shapes=[7];
-			for (let i=0; i<7; i++){
-				if (raw[2+i].includes('?')) item.Shapes[i]='?';
-				else item.Shapes[i]=raw[2+i].split(',');
+			if (raw.length==7+2){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=2;
+				item.Gender=parseInt(raw[1]);
+				item.Shapes=[7];
+				for (let i=0; i<7; i++){
+					if (raw[2+i].includes('?')) item.Shapes[i]='?';
+					else item.Shapes[i]=raw[2+i].split(',');
+				}
+				return item; 
 			}
-			return item; 
-		}
-		if (raw.length==1+2){
-			let item=new ItemPatternPronoun();
-			item.Name=raw[0];
-			item.Type=3;
-			item.Gender=parseInt(raw[1]);
-			item.Shapes=raw[2].split(',');
-			if (raw[2].includes('?')) item.Shapes[0]='?';
-			return item; 
-		}
-		if (raw.length==14*4+2){
-			let item=new ItemPatternPronoun();
-			item.Name=raw[0];
-			item.Type=4;
-			item.Gender=parseInt(raw[1]);
-			item.Shapes=[14*4];
-			for (let i=0; i<14*4; i++) {
-				if (raw[2+i].includes('?')) item.Shapes[i]='?';
-				else item.Shapes[i]=raw[2+i].split(',');
+			if (raw.length==1+2){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=3;
+				item.Gender=parseInt(raw[1]);
+				item.Shapes=raw[2].split(',');
+				if (raw[2].includes('?')) item.Shapes[0]='?';
+				return item; 
 			}
-			return item; 
+			if (raw.length==14*4+2){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=4;
+				item.Gender=parseInt(raw[1]);
+				item.Shapes=[14*4];
+				for (let i=0; i<14*4; i++) {
+					if (raw[2+i].includes('?')) item.Shapes[i]='?';
+					else item.Shapes[i]=raw[2+i].split(',');
+				}
+				return item; 
+			}
+			if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
+		} else if (loadedVersionNumber==2) {
+			if (raw.length==14+1){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=1;
+				//item.Gender=parseInt(raw[1]);
+				item.Shapes=[14];
+				for (let i=0; i<14; i++){
+					if (raw[1+i].includes('?')) item.Shapes[i]='?';
+					else item.Shapes[i]=raw[1+i].split(',');
+				}
+				return item; 
+			}
+			if (raw.length==7+1){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=2;
+				//item.Gender=parseInt(raw[1]);
+				item.Shapes=[7];
+				for (let i=0; i<7; i++){
+					if (raw[1+i].includes('?')) item.Shapes[i]='?';
+					else item.Shapes[i]=raw[1+i].split(',');
+				}
+				return item; 
+			}
+			if (raw.length==1+1){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=3;
+				//item.Gender=parseInt(raw[1]);
+				item.Shapes=raw[2].split(',');
+				if (raw[1].includes('?')) item.Shapes[0]='?';
+				return item; 
+			}
+			if (raw.length==14*4+1){
+				let item=new ItemPatternPronoun();
+				item.Name=raw[0];
+				item.Type=4;
+				//item.Gender=parseInt(raw[1]);
+				item.Shapes=[14*4];
+				for (let i=0; i<14*4; i++) {
+					if (raw[1+i].includes('?')) item.Shapes[i]='?';
+					else item.Shapes[i]=raw[1+i].split(',');
+				}
+				return item; 
+			}
+			if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
 		}
-		if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
 		return null;
 	}
 
@@ -1581,59 +1835,80 @@ class ItemPronoun{
 
 	constructor() {
 		this.From;
-		this.To;
-		this.PatternFrom;
-		this.PatternTo;
+	//	this.To;
+		this.To = [];
 	}
 
 	static Load(data) {
 		let raw=data.split('|');
-		if (raw.length==4) {
-			let item = new ItemPronoun();
-			item.From=raw[0];
-			item.To=raw[1];
-			
-			let paternFrom = this.GetPatternByNameFrom(raw[2]);
-			if (paternFrom == null) return null;
-			else item.PatternFrom = paternFrom;
-			
-			let paternTo = this.GetPatternByNameTo(raw[3]);	
-			if (paternTo == null) return null;
-			else item.PatternTo = paternTo;
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw.length==4) {
+				let item = new ItemPronoun();
+				item.From=raw[0];
+				//item.To=raw[1];
+				
+				let paternFrom = this.GetPatternByNameFrom(raw[2]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+				
+				let paternTo = this.GetPatternByNameTo(raw[3]);	
+				if (paternTo == null) return null;
+				//else item.PatternTo = paternTo;
+				item.To=[{Body: raw[1], Pattern:paternTo}];
+				return item;
+			}
+			if (raw.length==3) {
+				let item = new ItemPronoun();
+				item.From=raw[0];
+			//	item.To=raw[0];
+				
+				let paternFrom = this.GetPatternByNameFrom(raw[1]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+				
+				let paternTo = this.GetPatternByNameTo(raw[2]);	
+				if (paternTo == null) return null;
+			//	else item.PatternTo = paternTo;
+				item.To=[{Body: raw[0], Pattern:paternTo}];
 
-			return item;
-		}
-		if (raw.length==3) {
-			let item = new ItemPronoun();
-			item.From=raw[0];
-			item.To=raw[0];
-			
-			let paternFrom = this.GetPatternByNameFrom(raw[1]);
-			if (paternFrom == null) return null;
-			else item.PatternFrom = paternFrom;
-			
-			let paternTo = this.GetPatternByNameTo(raw[2]);	
-			if (paternTo == null) return null;
-			else item.PatternTo = paternTo;
+				return item;
+			}
+			if (raw.length==2) {
+				let item =new ItemPronoun();
+				item.From="";
+				//item.To="";
+				
+				let paternFrom = this.GetPatternByNameFrom(raw[0]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+				
+				let paternTo = this.GetPatternByNameTo(raw[1]);	
+				if (paternTo == null) return null;
+			//	else item.PatternTo = paternTo;
+				item.To=[{Body: "", Pattern:paternTo}];
 
-			return item;
-		}
-		if (raw.length==2) {
+				return item;
+			}
+			return null;
+		} else if (loadedVersionNumber == 2) {
 			let item =new ItemPronoun();
-			item.From="";
-			item.To="";
-			
-			let paternFrom = this.GetPatternByNameFrom(raw[0]);
-			if (paternFrom == null) return null;
-			else item.PatternFrom = paternFrom;
-			
-			let paternTo = this.GetPatternByNameTo(raw[1]);	
-			if (paternTo == null) return null;
-			else item.PatternTo = paternTo;
+			item.From=raw[0];
+
+			let paternFrom = this.GetPatternByNameFrom(raw[1]);
+			if (paternFrom == null) {
+				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+				return null;
+			}
+			item.PatternFrom=paternFrom;
+
+			let to = FastLoadTranslateToWithPattern(raw, 2, this);
+			if (to == null) {
+				return null;
+			}
+			item.To=to;
 
 			return item;
 		}
-		return null;
 	}
 
 	static GetPatternByNameFrom(name) {
@@ -1663,10 +1938,12 @@ class ItemPronoun{
 				for (const s of shapes) {
 					if (this.From+s==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) {
-							if (s!="?") arr.push([this.To+s]);
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (s!="?") arr.push([body+pattern]);
 						}
-						if (arr.length>0)ret.push([arr, 1, i+1,"muz"]);
+						if (arr.length>0) ret.push([arr, 1, i+1,"muz"]);
 						break;
 					}
 				}
@@ -1678,7 +1955,13 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7+1,"muz"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (s!="?") arr.push([body+pattern]);
+						}
+						if (arr.length>0) ret.push([arr, 2, i-7+1,"muz"]);
 						break;
 					}
 				}
@@ -1691,7 +1974,13 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 					//console.log(this.From+shapes[j]);
 					if (shape==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14,"mun"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (pattern!="?") arr.push([body+pattern]);
+						}
+						if (arr.length>0) ret.push([arr, 1, i+1-14,"mun"]);
 						break;
 					}
 				}
@@ -1703,7 +1992,13 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14+1,"mun"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (pattern!="?")  arr.push([body+pattern]);
+						}
+						if (arr.length>0) ret.push([arr, 2, i-7-14+1,"mun"]);
 						break;
 					}
 				}
@@ -1716,7 +2011,13 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 					//console.log(this.From+shapes[j]);
 					if (shape==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14-14,"zen"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (pattern!="?") arr.push([body+pattern]);
+						}
+						if (arr.length>0) ret.push([arr, 1, i+1-14-14,"zen"]);
 						break;
 					}
 				}
@@ -1728,7 +2029,13 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14-14+1,"zen"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (pattern!="?") arr.push([body+pattern]);
+						}
+						if (arr.length>0)  ret.push([arr, 2, i-7-14-14+1,"zen"]);
 						break;
 					}
 				}
@@ -1739,7 +2046,13 @@ class ItemPronoun{
 				
 				for (const s of shape) {
 					if (this.From+s==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 1, i+1-14-14-14, "str"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (pattern!="?")  arr.push([body+pattern]);
+						}
+						if (arr.length>0) ret.push([arr, 1, i+1-14-14-14, "str"]);
 						break;
 					}
 				}
@@ -1751,13 +2064,19 @@ class ItemPronoun{
 					let shape=this.From+shapes[j];
 
 					if (shape==str) {
-						if (this.PatternTo.Shapes[i]!="?") ret.push([this.To+this.PatternTo.Shapes[i], 2, i-7-14+1-14-14, "str"]);
+						let arr=[];
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (pattern!="?") arr.push([body+pattern]);
+						}
+						if (arr.length>0) ret.push([arr, 2, i-7-14+1-14-14, "str"]);
 						break;
 					}
 				}
 			}
 
-			if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
+			if (ret.length==0) return null; else return [ret, this];
 		}else if (this.PatternFrom.Shapes.length==14) {
 			for (let i=0; i<7; i++) {
 				let shapes=this.PatternFrom.Shapes[i];
@@ -1767,10 +2086,20 @@ class ItemPronoun{
 //					console.log(this.From+shapes[j]);
 					if (shape==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) {
-							if (s!="?") arr.push(this.To+s);
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];	
+							if (Array.isArray(pattern)) {
+								let sameShapes=[];
+								for (let patternShape in pattern) {					
+									if (patternShape!="?") sameShapes.push(body+pattern);
+								}
+								arr.push(sameShapes);
+							}else{
+								arr.push([body+pattern]);
+							}
 						}
-						if (arr.length>0)ret.push([arr, 1, i+1]);
+						if (arr.length>0) ret.push([arr, 1, i+1]);
 						break;
 					}
 				}
@@ -1783,62 +2112,72 @@ class ItemPronoun{
 
 					if (shape==str) {
 						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) {
-							if (s!="?") arr.push(this.To+s);
+						for (let t of this.To) {
+							let body=t.Body;
+							let pattern=t.Pattern.Shapes[i];
+							if (Array.isArray(pattern)) {
+								let sameShapes=[];
+								for (let patternShape in pattern) {
+									if (patternShape!="?") sameShapes.push(body+pattern);
+								}
+								arr.push(sameShapes);
+							}else{
+								arr.push([body+pattern]);
+							}	
 						}
-						if (arr.length>0)ret.push([arr, 2, i-7+1]);
+						if (arr.length>0) ret.push([arr, 2, i-7+1]);
 						break;
 					}
 				}
 			}
 
-			if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
+			if (ret.length==0) return null; else return [ret, this];
 		}else
 
 		if (this.PatternFrom.Shapes.length==7) {
 			for (let i=0; i<7; i++) {
 				let shapes=this.PatternFrom.Shapes[i];
 
-				for (let j=0; j<shapes.length; j++) {
-					let shape=this.From+shapes[j];
-					//console.log(this.From+shapes[j]);
+				for (let patternShape of shapes) {
+					let shape=this.From+patternShape;
+					
 					if (shape==str) {
-						let arr=[];
-						for (let s of this.PatternTo.Shapes[i]) {
-							if (s!="?") arr.push(this.To+s);
+						for (let t of this.To) {
+							let arr=[];
+							let body=t.Body;
+							for (let patternShape in t.Pattern.Shapes[i]){
+								if (patternShape!="?") arr.push(body+patternShape);
+							}
+							if (arr.length>0) ret.push([arr, -1, i+1]);
 						}
-						if (arr.length>0)ret.push([arr, -1, i+1]);
 						break;
 					}
 				}
 			}
 
-			if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
-		}else
-		
-		if (this.PatternFrom.Shapes.length==1) {
-			//for (let i=0; i<7; i++) {
-				let shapes=this.PatternFrom.Shapes[0];
+			if (ret.length==0) return null; else return [ret, this];
+		} else if (this.PatternFrom.Shapes.length==1) {
+			let shapes=this.PatternFrom.Shapes[0];
 
-				//for (let j=0; j<shapes.length; j++) {
-					let shape=this.From+shapes[0];
-					if (shape==str) {
-						if (this.PatternTo.Shapes[0]!="?") ret.push([this.To+this.PatternTo.Shapes[0], -1,-1]);
-						//break;
-					}
-				//}
-			//}
+			let shape=this.From+shapes[0];
+			if (shape==str) {
+				let arr=[];
+				let body=t.Body;
+				for (let patternShape in t.Pattern.Shapes[i]) {
+					if (patternShape!="?") arr.push(body+patternShape);
+				}
+			}
 
-			if (ret.length==0) return null; else return [ret, this.PatternTo.Gender, this];
+			if (ret.length==0) return null; else return [ret, this];
 		}
 	
 		return null;
 	}
 
 	GetDicForm(name) {		
-		if (this.PatternTo.Shapes[0]=="-") return null;
+		if (this.To==undefined) return null;
 		if (this.PatternFrom.Shapes[0]=="?") return null;
-		if (this.PatternTo.Shapes[0]=="?") return null;
+		//if (this.PatternTo.Shapes[0]=="?") return null;
 
 		let p = document.createElement("p");
 		let f = document.createElement("span");
@@ -1849,23 +2188,28 @@ class ItemPronoun{
 		e.innerText=" → ";
 		p.appendChild(e);
 
-		let t = document.createElement("span");
-		t.innerText=this.To+this.PatternTo.Shapes[0];
-		p.appendChild(t);
+		for (let to of this.To) {
 		
-		if (this.PatternTo.Shapes.lenght>1){
-			t.addEventListener("click", () => {
-				ShowPageLangD(t.GetTable());
-			});
-			t.class="dicCustom";
-		}		
+//			console.log(to);
+			let t = document.createElement("span");
+			if (to.Pattern.Shapes[0]!="?" && to.Pattern.Shapes[0]!="-") t.innerText+=to.Body+to.Pattern.Shapes[0];
+			else return null;
+			p.appendChild(t);
+			
+			if (to.Pattern.Shapes.lenght>1) {
+				t.addEventListener("click", () => {
+					ShowPageLangD(t.GetTable());
+				});
+				t.class="dicCustom";
+			}		
+		}
 
 		let r = document.createElement("span");
 		r.innerText=" (zájm.)";
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 
-		return [this.From+this.PatternFrom.Shapes[0], this.To+this.PatternTo.Shapes[0], name, p];
+		return {from: this.From+this.PatternFrom.Shapes[0], /*this.To+this.PatternTo.Shapes[0]*/to: "", name: name, element: p};
 	}
 	
 	GetTable() {
@@ -2007,54 +2351,74 @@ class ItemAdjective{
 
 	constructor() {
 		this.From;
-		this.To;
+		//this.To;
 		this.PatternFrom;
-		this.PatternTo;
+	//	this.PatternTo;
+		this.To = [];
 	}
 	
 	static Load(data) {
 		let raw=data.split('|');
-		if (raw.length==4) { 
-			let paternFrom = this.GetPatternByNameFrom(raw[2]);
-			if (paternFrom == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
-				return null;
-			}
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw.length==4) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[2]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+					return null;
+				}
 
-			let paternTo = this.GetPatternByNameTo(raw[3]);
-			if (paternTo == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[3]+"'");
-				return null;
-			}
+				let paternTo = this.GetPatternByNameTo(raw[3]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[3]+"'");
+					return null;
+				}
 
+				let item =new ItemAdjective();
+				item.From=raw[0];
+				item.To=raw[1];
+				item.PatternFrom=paternFrom;
+				item.PatternTo=paternTo;
+				return item;
+			} else if (raw.length==3) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[1]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+					return null;
+				}
+
+				let paternTo = this.GetPatternByNameTo(raw[2]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+					return null;
+				}
+
+				let item =new ItemAdjective();
+				item.From=raw[0];
+				item.To=raw[0];
+				item.PatternFrom=paternFrom;
+				item.PatternTo=paternTo;
+				return item;
+			}
+			if (dev) console.log("Cannot load pattern, wrong len");
+			return null;	
+		} else if (loadedVersionNumber == 2) {
 			let item =new ItemAdjective();
 			item.From=raw[0];
-			item.To=raw[1];
-			item.PatternFrom=paternFrom;
-			item.PatternTo=paternTo;
-			return item;
-		} else if (raw.length==3) { 
+
 			let paternFrom = this.GetPatternByNameFrom(raw[1]);
 			if (paternFrom == null) {
 				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
 				return null;
 			}
+			item.PatternFrom=paternFrom;
 
-			let paternTo = this.GetPatternByNameTo(raw[2]);
-			if (paternTo == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+			let to = FastLoadTranslateToWithPattern(raw, 2, this);
+			if (to == null) {
 				return null;
 			}
 
-			let item =new ItemAdjective();
-			item.From=raw[0];
-			item.To=raw[0];
-			item.PatternFrom=paternFrom;
-			item.PatternTo=paternTo;
 			return item;
 		}
-		if (dev) console.log("Cannot load pattern, wrong len");
-		return null;		
 	}
 
 	IsStringThisWord(str) {
@@ -2310,7 +2674,7 @@ class ItemAdjective{
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 
-		return [from, to, name, p];
+		return {from: from, to: to, name: name, element: p};
 	}
 
 	GetTable() {
@@ -2385,24 +2749,44 @@ class ItemNumber{
 	constructor() {
 		this.From; 
 		this.PatternFrom; 
-		this.To;
-		this.PatternTo;
+		//this.To;
+		//this.PatternTo;
+		this.To = [];
 	}
 	
 	static Load(data) {
 		let raw=data.split('|');
-		if (raw.length==4) { 
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw.length==4) { 
+				let item =new ItemNumber();
+				item.From=raw[0];
+				item.To=raw[1];
+
+				let paternFrom = this.GetPatternByNameFrom(raw[2]);
+				if (paternFrom == null) return null;
+				else item.PatternFrom = paternFrom;
+
+				let paternTo = this.GetPatternByNameTo(raw[3]);	
+				if (paternFrom == null) return null;
+				else item.PatternTo = paternTo;
+
+				return item;
+			}
+		}else if (loadedVersionNumber == 2) {
 			let item =new ItemNumber();
 			item.From=raw[0];
-			item.To=raw[1];
 
-			let paternFrom = this.GetPatternByNameFrom(raw[2]);
-			if (paternFrom == null) return null;
-			else item.PatternFrom = paternFrom;
+			let paternFrom = this.GetPatternByNameFrom(raw[1]);
+			if (paternFrom == null) {
+				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+				return null;
+			}
+			item.PatternFrom=paternFrom;
 
-			let paternTo = this.GetPatternByNameTo(raw[3]);	
-			if (paternFrom == null) return null;
-			else item.PatternTo = paternTo;
+			let to = FastLoadTranslateToWithPattern(raw, 2,this);
+			if (to == null) {
+				return null;
+			}
 
 			return item;
 		}
@@ -2605,7 +2989,7 @@ class ItemNumber{
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 
-		return [this.From+this.PatternFrom[0], this.To+this.PatternTo[0], name, p];
+		return {from: this.From+this.PatternFrom[0], to: this.To+this.PatternTo[0], name: name, element: p};
 	}
 
 	GetTable() {
@@ -2995,79 +3379,165 @@ class ItemVerb{
 
 	constructor() {
 		this.From;
-		this.To;
+		//this.To;
 		this.PatternFrom; 
-		this.PatternTo;
+		//this.PatternTo;
+		this.To = [];
 	}
 	
 	static Load(data) {
 		let raw=data.split('|');
-		if (raw.length==4) { 
-			let paternFrom = this.GetPatternByNameFrom(raw[2]);
-			if (paternFrom == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
-				return null;
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw.length==4) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[2]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+					return null;
+				}
+		
+				let paternTo = this.GetPatternByNameTo(raw[3]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[3]+"'");
+					return null;
+				}
+				let item =new ItemVerb();
+				item.From=raw[0];
+				//item.To=raw[1];
+				item.PatternFrom=paternFrom;
+				//item.PatternTo=paternTo;
+				item.To=[{Body: raw[1], Pattern: paternTo}];
+				return item;
 			}
-	
-			let paternTo = this.GetPatternByNameTo(raw[3]);
-			if (paternTo == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[3]+"'");
-				return null;
+			if (raw.length==3) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[1]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+					return null;
+				}
+		
+				let paternTo = this.GetPatternByNameTo(raw[2]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+					return null;
+				}
+				let item =new ItemVerb();
+				item.From=raw[0];
+				//item.To=raw[0];
+				item.To=[{Body: raw[0], Pattern: paternTo}];
+				item.PatternFrom=paternFrom;
+			//	item.PatternTo=paternTo;
+				return item;
 			}
+			if (raw.length==2) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[0]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[0]+"'");
+					return null;
+				}
+		
+				let paternTo = this.GetPatternByNameTo(raw[1]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+					return null;
+				}
+				let item =new ItemVerb();
+				item.From="";
+				item.To=[{Body: "", Pattern: paternTo}];
+				item.PatternFrom=paternFrom;
+				//item.PatternTo=;
+				return item;
+			}
+			return null;
+		} /*else if (loadedversion=="TW v2") {
+			if (raw.length==5) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[2]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+					return null;
+				}
+		
+				let paternTo = this.GetPatternByNameTo(raw[3]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[3]+"'");
+					return null;
+				}
+				let item =new ItemVerb();
+				item.From=raw[0];
+				item.To=raw[1];
+				item.PatternFrom=paternFrom;
+				item.PatternTo=paternTo;
+				item.Comment=raw[4];
+				return item;
+			}
+			if (raw.length==4) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[1]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+					return null;
+				}
+		
+				let paternTo = this.GetPatternByNameTo(raw[2]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+					return null;
+				}
+				let item =new ItemVerb();
+				item.From=raw[0];
+				item.To=raw[0];
+				item.Comment=raw[3];
+				item.PatternFrom=paternFrom;
+				item.PatternTo=paternTo;
+				return item;
+			}
+			if (raw.length==3) { 
+				let paternFrom = this.GetPatternByNameFrom(raw[0]);
+				if (paternFrom == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[0]+"'");
+					return null;
+				}
+		
+				let paternTo = this.GetPatternByNameTo(raw[1]);
+				if (paternTo == null) {
+					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+					return null;
+				}
+				let item =new ItemVerb();
+				item.From="";
+				item.To="";
+				item.raw[2];
+				item.PatternFrom=paternFrom;
+				item.PatternTo=paternTo;
+				return item;
+			}
+			return null;		
+		}*/	else if (loadedVersionNumber == 2) {
 			let item =new ItemVerb();
 			item.From=raw[0];
-			item.To=raw[1];
-			item.PatternFrom=paternFrom;
-			item.PatternTo=paternTo;
-			return item;
-		}
-		if (raw.length==3) { 
+
 			let paternFrom = this.GetPatternByNameFrom(raw[1]);
 			if (paternFrom == null) {
 				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
 				return null;
 			}
-	
-			let paternTo = this.GetPatternByNameTo(raw[2]);
-			if (paternTo == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
+			item.PatternFrom=paternFrom;
+
+			let to = FastLoadTranslateToWithPattern(raw, 2, this);
+			if (to == null) {
 				return null;
 			}
-			let item =new ItemVerb();
-			item.From=raw[0];
-			item.To=raw[0];
-			item.PatternFrom=paternFrom;
-			item.PatternTo=paternTo;
+			item.To=to;
+
 			return item;
 		}
-		if (raw.length==2) { 
-			let paternFrom = this.GetPatternByNameFrom(raw[0]);
-			if (paternFrom == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[0]+"'");
-				return null;
-			}
-	
-			let paternTo = this.GetPatternByNameTo(raw[1]);
-			if (paternTo == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
-				return null;
-			}
-			let item =new ItemVerb();
-			item.From="";
-			item.To="";
-			item.PatternFrom=paternFrom;
-			item.PatternTo=paternTo;
-			return item;
-		}
-		return null;
 	}
 
-	ForeachArr(fromArr, toArr, fromIndex, toIndex, num, name, match){
-		if (fromArr===undefined) return;
-		if (toArr===undefined) return;
-				
+	ForeachArr(pattenShapesName, fromIndex, toIndex, num, name, match){
+		let pattenShapes = this.PatternFrom[pattenShapesName];
+		if (pattenShapes==undefined) return null;
+
 		for (let i=fromIndex; i<toIndex; i++) {
-			let shapes=fromArr[i];
+
+			let shapes=pattenShapes[i];
 
 			// Multiple choises in source array
 			if (Array.isArray(shapes)) {
@@ -3076,15 +3546,18 @@ class ItemVerb{
 					let shape=this.From+s;
 					
 					if (shape==match) {
-						if (Array.isArray(toArr[i])) {
-							for (const e of toArr[i]) {
-								if (e=='?') continue;
-								this.ret.push([this.To+e, num, 1+i-fromIndex, name]);
+						for (let to of this.To) {
+							let patternShapesTo=to.Pattern[pattenShapesName];
+							if (Array.isArray(patternShapesTo[i])) {
+								for (const e of patternShapesTo[i]) {
+									if (e=='?') continue;
+									this.ret.push([to.Body+e, num, 1+i-fromIndex, name]);
+								}
+							} else {
+								if (patternShapesTo[i]=='?') continue;
+								this.ret.push([to.Body+patternShapesTo[i], num, 1+i-fromIndex, name]);
+								break;
 							}
-						} else {
-							if (toArr[i]=='?') continue;
-							this.ret.push([this.To+toArr[i], num, 1+i-fromIndex, name]);
-							break;
 						}
 					}
 				}
@@ -3095,15 +3568,22 @@ class ItemVerb{
 				let shape=this.From+shapes;
 					
 				if (shape==match) {
-					if (Array.isArray(toArr[i])) {
-						for (const e of toArr[i]) {
-							if (e=='?') continue;
-							this.ret.push([this.To+e, num, 1+i-fromIndex, name]);
+					for (let to of this.To) {
+				//		console.log(to.Pattern);
+					//	console.log(pattenShapesName);
+						let patternShapesTo=to.Pattern[pattenShapesName];
+						if (patternShapesTo==undefined) continue;
+
+						if (Array.isArray(patternShapesTo[i])) {
+							for (const e of patternShapesTo[i]) {
+								if (e=='?') continue;
+								this.ret.push([to.Body+e, num, 1+i-fromIndex, name]);
+							}
+						} else {
+							if (patternShapesTo[i]=='?') continue;
+							this.ret.push([to.Body+patternShapesTo[i], num, 1+i-fromIndex, name]);
+							break;
 						}
-					} else {
-						if (toArr[i]=='?') continue;
-						this.ret.push([this.To+toArr[i], num, 1+i-fromIndex, name]);
-						break;
 					}
 				}
 			}
@@ -3114,31 +3594,45 @@ class ItemVerb{
 		if (!str.startsWith(this.From)) { return null; }
 		this.ret=[];
 
-		this.ForeachArr(this.PatternFrom.Continous, this.PatternTo.Continous, 0, 3, 1, "Continous", str);
-		this.ForeachArr(this.PatternFrom.Continous, this.PatternTo.Continous, 3, 6, 2, "Continous", str);
+	//	for (let to of this.To) {
+		this.ForeachArr("Continous", 0, 3, 1, "Continous", str);
+		this.ForeachArr("Continous", 3, 6, 2, "Continous", str);
 
-		this.ForeachArr(this.PatternFrom.Future,this.PatternTo.Future,  0, 3, 1, "Future", str);
-		this.ForeachArr(this.PatternFrom.Future, this.PatternTo.Future, 3, 6, 2," Future", str);
+		this.ForeachArr("Future",  0, 3, 1, "Future", str);
+		this.ForeachArr("Future", 3, 6, 2," Future", str);
 		
-		this.ForeachArr(this.PatternFrom.PastActive, this.PatternTo.PastActive, 0, 4, 1, "PastActive", str);
-		this.ForeachArr(this.PatternFrom.PastActive, this.PatternTo.PastActive, 4, 8, 2, "PastActive", str);
+		this.ForeachArr("PastActive", 0, 4, 1, "PastActive", str);
+		this.ForeachArr("PastActive", 4, 8, 2, "PastActive", str);
 		
-		this.ForeachArr(this.PatternFrom.PastPassive, this.PatternTo.PastPassive, 0, 4, 1, "PastPassive", str);
-		this.ForeachArr(this.PatternFrom.PastPassive, this.PatternTo.PastPassive, 4, 8, 2, "PastPassive", str);
+		this.ForeachArr("PastPassive", 0, 4, 1, "PastPassive", str);
+		this.ForeachArr("PastPassive", 4, 8, 2, "PastPassive", str);
 
 		
-		this.ForeachArr(this.PatternFrom.Auxiliary, this.PatternTo.Auxiliary, 0, 3, 1, "Auxiliary", str);
-		this.ForeachArr(this.PatternFrom.Auxiliary, this.PatternTo.Auxiliary, 3, 6, 2, "Auxiliary", str);
+		this.ForeachArr("Auxiliary", 0, 3, 1, "Auxiliary", str);
+		this.ForeachArr("Auxiliary", 3, 6, 2, "Auxiliary", str);
+	
 		// Return all possible falls with numbers
 		// [[tvar, číslo, osoba], rod]
 	
 		{	
 			if (this.From+this.PatternFrom.Infinitive==str) {
-				if (this.PatternTo.Infinitive!='?') {
-					this.ret.push([this.To+this.PatternTo.Infinitive, -1, -1, "Infinitive"]);
+				if (Array.isArray(this.To)) {
+					for (let to of this.To){
+						if (to.Pattern.Infinitive!='?') {
+							this.ret.push([to.Body+to.Pattern.Infinitive, -1, -1, "Infinitive"]);
+						}
+					}
+				} else {
+					console.log(this);
+					let to=this.To;
+					if (to.Pattern.Infinitive!='?') {
+						this.ret.push([to.Body+to.Pattern.Infinitive, -1, -1, "Infinitive"]);
+					}
 				}
+				
 			}
 		}
+		//}
 /*
 		if (this.PatternTo.Continous!==undefined && this.PatternFrom.Continous!==undefined) {
 			for (let i=0; i<3; i++) {
@@ -3307,14 +3801,11 @@ class ItemVerb{
 
 	GetDicForm(name) {
 		if (typeof this.PatternFrom==undefined) return null;
-		if (typeof this.PatternTo==undefined) return null;
-		let from, to;
+		if (typeof this.To==undefined) return null;
+		let from;
 
-		if (this.PatternFrom.Infinitive!="?" && this.PatternTo.Infinitive!="?") {
-			from=this.From+this.PatternFrom.Infinitive;
-			to=this.To+this.PatternTo.Infinitive;
-		} else return null;
-
+		if (this.PatternFrom.Infinitive=="?") return null;
+		from=this.From+this.PatternFrom.Infinitive;
 		let p = document.createElement("p");
 		let f = document.createElement("span");
 		f.innerText=from;
@@ -3324,21 +3815,45 @@ class ItemVerb{
 		e.innerText=" → ";
 		p.appendChild(e);
 
-		let t = document.createElement("span");
-		t.innerText=to;
-		p.appendChild(t);
+		let found=false;
+		for (let tto of this.To) {
+			let pattern;
+			if (tto.Pattern.Infinitive!='?') pattern=tto.Pattern.Infinitive;
+			//else if (tto.Pattern.PastActive[0]!='?') pattern=tto.Pattern.PastActive[0];
+			else continue;
+			found=true;
+			let t = document.createElement("span");
+		//	to+=tto.Body+pattern;
+			t.innerText=tto.Body+pattern;
+			p.appendChild(t);
 
-		t.addEventListener("click", () => {
-			ShowPageLangD(t.GetTable());
-		});
-		t.class="dicCustom";
+			t.addEventListener("click", () => {
+				ShowPageLangD(t.GetTable());
+			});
+			t.class="dicCustom";
+
+			if (tto.Comment!=undefined) {
+				if (tto.Comment!="") {
+					let c = document.createElement("span");
+					c.innerText=tto.Comment;
+					c.className="dicMeaning";
+					p.appendChild(c);
+				}
+			}
+		}
+	//	if (to=="") return null;
+		if (!found) return null;
+
 		
+		//to=this.To+this.PatternTo.Infinitive;
+		
+
 		let r = document.createElement("span");
 		r.innerText=" (slov.)";
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 
-		return [from, to, name, p];
+		return {from: from, to: to, name: name, element: p};
 	}
 } 
 
@@ -3961,10 +4476,12 @@ class LanguageTr {
 		
 		function IsWordComIncluded(w) {
 			if (w.PatternFrom == null) return false;
-			let shape=w.PatternFrom.Shapes[0];
-			let ww=w.From+shape;
-			
-			return ww.startsWith(input);
+			let shape=w.PatternFrom.Shapes;
+			if (shape[0]!="?"&& shape[0]!="-") {
+				let ww=w.From+shape[0];
+				return ww.startsWith(input);
+			}
+			return null;
 		}
 
 		function IsWordVerbIncluded(w) {			
@@ -3986,14 +4503,16 @@ class LanguageTr {
 		let out=[];
 		let total=0;
 		for (let w of this.Phrases) {
+//			console.log(w.input);
 			if (IsWordIncluded(w.input)) {
-				let g=w.GetDicForm("fráze");
+				let g=w.GetDicForm();
 				if (g!=null) out.push(g);
 				total++;
 			}
 		}	
 		for (let w of this.Adverbs) {
 			if (IsWordIncluded(w.input)) {
+			//	console.log(w);				
 				let g=w.GetDicForm("přís.");
 				if (g!=null) out.push(g);
 				total++;
@@ -4100,6 +4619,8 @@ class LanguageTr {
 				}
 			}
 		}*/
+
+		// Nenalezeno
 		if (out=="") {		
 			display=document.createElement("p");
 			display.style="font-style: italic";
@@ -4117,21 +4638,26 @@ class LanguageTr {
 			display.style="font-style: italic";
 			display.innerText="Nalezeno celkem "+total+" záznamů.";
 		}
+
+		// Setřídit
 		out=out.sort((a, b) => {
-			if (a[0] instanceof String) return a[0].localeCompare(b[0]);
+			if (a.to instanceof String) return a.to.localeCompare(b.to);
 			return  false;
 		});
 
+		// Zkrátit
 		let zkr=false;
-		if (out.length>50){ out.splice(50,out.length-50); zkr=true; }
+		if (out.length>50){ out.splice(50, out.length-50); zkr=true; }
 		display=document.createElement("div");
 
 		if (out.length!=0) {
 			for (let z of out) {
-				if (typeof z[3] === "string"){
+				//if (typeof z[3] === "string") {
 				//if (z[2]=="") display+="<p>"+z[0]+" → "+z[1]+"  <i>"+z[3]+"</i></p>";
 				//else display+="<p>"+z[0]+" → "+z[1]+"; "+z[2]+"  <i>"+z[3]+"</i></p>";
-				} else display.appendChild(z[3]);
+				//} else 
+			//	console.log(z);
+				display.appendChild(z.element);
 			}
 		}
 		if (zkr) {
@@ -4219,7 +4745,7 @@ class LanguageTr {
 				// separator
 				if (!currentWord[0]) {
 					let repair=this.normalizeSymbols(word);
-					BuildingSentence.push(["Symbol", repair, Zword]);
+					BuildingSentence.push({Type: "Symbol", To: repair, From: Zword});
 					continue;
 				}
 
@@ -4227,7 +4753,7 @@ class LanguageTr {
 				let phr=this.ApplyPhrases(words, w);
 				if (phr!=null){
 					BuildingSentence.push(phr);
-					console.log(phr);
+//					console.log(phr);
 					continue;
 				}
 
@@ -4243,7 +4769,7 @@ class LanguageTr {
 					let n=this.searchWordNoun(word);
 					if (n!=null) {
 						// n=[[tvar, číslo, pád], rod];
-						BuildingSentence.push(["Noun", n, Zword]);
+						BuildingSentence.push({Type: "Noun", To: n, From: Zword});
 						continue;
 					}
 				}
@@ -4251,7 +4777,7 @@ class LanguageTr {
 					let n=this.searchWordAdjective(word);
 					if (n!=null) {
 						// n=[[tvar, číslo, pád], rod];
-						BuildingSentence.push(["Adjective", n, Zword]);
+						BuildingSentence.push({Type: "Adjective", To: n, From: Zword});
 						continue;
 					}
 				}
@@ -4259,7 +4785,7 @@ class LanguageTr {
 					let n=this.searchWordPronoun(word);
 					if (n!=null) {
 						// n=[[tvar, číslo, pád], rod];
-						BuildingSentence.push(["Pronoun", n, Zword]);
+						BuildingSentence.push({Type: "Pronoun", To: n, From: Zword});
 						continue;
 					}
 				}
@@ -4267,7 +4793,7 @@ class LanguageTr {
 					let n=this.searchWordNumber(word);
 					if (n!=null) {
 						// n=[[tvar, číslo, pád], rod];
-						BuildingSentence.push(["Number", n, Zword]);
+						BuildingSentence.push({Type: "Number", To: n, From: Zword});
 						continue;
 					}
 				}
@@ -4275,15 +4801,14 @@ class LanguageTr {
 					let n=this.searchWordVerb(word);
 					if (n!=null) {
 						// n=[[tvar, číslo, pád], rod];
-						BuildingSentence.push(["Verb", n, Zword]);
+						BuildingSentence.push({Type: "Verb", To: n, From: Zword});
 						continue;
 					}
 				}
 				{
 					let n=this.searchWordAdverb(word);
-					if (n!=null) {
-						
-						BuildingSentence.push(["Adverb", n, Zword]);
+					if (n!=null) {						
+						BuildingSentence.push({Type: "Adverb", To: n, From: Zword});
 						continue;
 					}
 				}
@@ -4293,49 +4818,49 @@ class LanguageTr {
 						// n=[out, falls];
 						let out=n[0];
 						let falls=n[1];
-						BuildingSentence.push(["Preposition", n, Zword]);
+						BuildingSentence.push({Type: "Preposition", To: n, From: Zword});
 						continue;
 					}
 				}
 				{
 					let n=this.searchWordParticle(word);
 					if (n!=null) {
-						BuildingSentence.push(["Particle", n, Zword]);
+						BuildingSentence.push({Type: "Particle", To: n, From: Zword});
 						continue;
 					}
 				}
 				{
 					let n=this.searchWordConjunction(word);
 					if (n!=null) {
-						BuildingSentence.push(["Conjunction", n, Zword]);
+						BuildingSentence.push({Type: "Conjunction", To: n, From: Zword});
 						continue;
 					}
 				}
 				{
 					let n=this.searchWordInterjection(word);
 					if (n!=null) {
-						BuildingSentence.push(["Interjection", n, Zword]);
+						BuildingSentence.push({Type: "Interjection", To: n, From: Zword});
 						continue;
 					}
 				}
 				{
 					let n=this.searchSimpleWord(word);
 					if (n!=null) {
-						BuildingSentence.push(["SimpleWord", n, Zword]);
+						BuildingSentence.push({Type: "SimpleWord", To: n, From: Zword});
 						continue;
 					}
 				}
 				{
 					// If is number
 					if (isNumber(word)) {// === +word
-						BuildingSentence.push(["NumberLetters", word, Zword]);
+						BuildingSentence.push({Type: "NumberLetters", To: word, From: Zword});
 						continue;
 					}
 				}
 
 				// Add unknown word
 				let TryReplaces=this.ReplaceWord(word);
-				BuildingSentence.push(["Unknown", TryReplaces, Zword]);
+				BuildingSentence.push({Type: "Unknown", To: TryReplaces, From: Zword});
 				continue;
 			}
 
@@ -4355,7 +4880,7 @@ class LanguageTr {
 						startIndex=-1;
 						endIndex-1;
 					}
-				} else if (word[0]=="Noun" || word[0]=="Adjective" || word[0]=="Number") {
+				} else if (word.Type=="Noun" || word.Type=="Adjective" || word.Type=="Number") {
 				} else {
 					if (startIndex!=-1) {
 						endIndex=w-1;
@@ -4371,40 +4896,48 @@ class LanguageTr {
 			// Print
 			for (let w=0; w<BuildingSentence.length; w++) {
 				let word=BuildingSentence[w];
-				let type=word[0];
-				let string=word[1];
-				let original=word[2];
+				let type=word.Type;
+				let string=word.To;
+				let original=word.From;
 
-				let printableString;
-				if (type=="Noun") {
-					printableString=string[0]
-				}else if (type=="Adjective") printableString=string;
+//				console.log(word);
+
+				let printableString;				
+				if (type=="Noun")  printableString=string[0];
+				else if (type=="Adjective") printableString=string;
 				else if (type=="Pronoun") printableString=string[0];
 				else if (type=="Number") printableString=string[0];
 				else if (type=="Verb") printableString=string;
-				else if (type=="Adverb") printableString=string.output;
-				else if (type=="Preposition") printableString=string[0];
-				else if (type=="Conjunction") printableString=string.output;
-				else if (type=="Phrase") printableString=string/*.output*/;
-				else if (type=="Particle") printableString=string.output;
-				else if (type=="Interjection") printableString=string.output;
-				else if (type=="Symbol") printableString=string;
+				else if (type=="Adverb") {
+					printableString=string.output.Text;
+				}else if (type=="Preposition") printableString=string[0];
+				else if (type=="Conjunction") {
+					printableString=string.output.Text;
+				}else if (type=="Phrase") {
+					if (Array.isArray(string))printableString=string[0].Text[0];
+					else printableString=string.Text/*.output*/;
+				}else if (type=="Particle") {
+					printableString=string.output.Text;
+				} else if (type=="Interjection") {
+					printableString=string.output.Text;
+				} else if (type=="Symbol") printableString=string;
 				else if (type=="Unknown") {
-					if (Array.isArray(string))printableString=string[0];
-					else printableString=string;
-				}
-				else if (type=="SimpleWord") printableString=string.output;
-				else if (type=="NumberLetters") printableString=string;
+					if (Array.isArray(string)) printableString=string[0];
+					else printableString=string;				}
+				else if (type=="SimpleWord") {
+					printableString=string.output.Text;
+				}else if (type=="NumberLetters") printableString=string;
 				else {
 					if (dev) console.log("Unknown", string);
 					printableString=string;
 				}
 
 			//	if (html) {
-					// Write how well translated
-					if (type!=="Unknown" && type!=="Symbol") this.qualityTrTotalTranslatedWell++;
-					if (type!=="Symbol")this.qualityTrTotalTranslated++;
+				// Write how well translated
+				if (type!=="Unknown" && type!=="Symbol") this.qualityTrTotalTranslatedWell++;
+				if (type!=="Symbol")this.qualityTrTotalTranslated++;
 			//	}
+			//console.log("printableString",printableString);
 				let resStr=this.PrepareText(printableString);
 				let retText;
 
@@ -4417,6 +4950,7 @@ class LanguageTr {
 					}else{
 						retText=resStr.toUpperCase();
 					}
+
 				// All uppercase
 				} else if (original[0]==original[0].toUpperCase()) {
 					if (Array.isArray(resStr)){
@@ -4440,9 +4974,8 @@ class LanguageTr {
 				}
 
 				stringOutput+=this.AddText(retText, output, type);
-
 				
-			//	this.AddText(word, output, "numberLetters");
+				//	this.AddText(word, output, "numberLetters");
 			}
 			if (this.html) {
 				let space=document.createTextNode(" ");
@@ -4468,6 +5001,7 @@ class LanguageTr {
 		// Správné uvozovky
 		if (symbol=='"') return '“';
 		if (symbol=="'") return '‘';
+		//if (symbol=="\n") return '<br>';
 
 		// nbsp
 		if (symbol==" ") return ' ';
@@ -5193,54 +5727,37 @@ class LanguageTr {
 	}
 
 	ApplyPhrases(arrOfWords, start) {
-		//console.log("Phrase");
+		for (const phrase of this.Phrases) {
+			for (const variantPhrase of phrase.input) {
 
-		//for (let w=start; w<start+1;/*arrOfWords.length;*/ w++) {
-		//	console.log("Phrase",arrOfWords);
-			for (const phrase of this.Phrases) {
-				for (const variantPhrase of phrase.input) {
-
-					//console.log("Phrase",variantPhrase);
-					if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
-						let ret=ApplyMatch(arrOfWords, start, start+variantPhrase.length, phrase.output);
-						/*if (ret!=null)*/ return ret;
-					}
+				//console.log("Phrase",variantPhrase);
+				if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
+					let ret=ApplyMatch(arrOfWords, start, start+variantPhrase.length, phrase.output);
+					/*if (ret!=null)*/ return ret;
 				}
 			}
-		//}
+		}
 		return null;
 
 		function ApplyMatch(arrSource, startIndex, endIndex, arrToSet) {
-			let len=endIndex-startIndex;
-			console.log("ApplyMatch");
-
 			// Verob puvodni string
 			let str="";
-			for (let w=startIndex; w<endIndex; w++){
+			for (let w=startIndex; w<endIndex; w++) {
 				console.log(arrSource,w);
 				str+=arrSource[w][1];
 			}
 
-			
-			//arrSource = arrSource.filter(function (item, index){
-		//		return index >= startIndex && index <= endIndex;
-	//		});
-
 			// Přidé za staré pola puvodni
-			arrSource.splice(startIndex, endIndex - startIndex-1 /*+ 1*/);
+			arrSource.splice(startIndex, endIndex - startIndex-1);
 
-			//arrSource.splice(startIndex, 0,/**/ arrToSet);
-			//console.log();
-			return ["Phrase", arrToSet, str];
-		//	BuildingSentence.push();
-			//return arrSource.insert(["Phrase", str, arrToSet]);
+			return {Type: "Phrase", To: arrToSet, From: str};
 		}
 
 		function MatchArrayInArray(arrSource, startIndex, arrToMatch) {
 			if (arrToMatch==undefined) return false;
 			//if (startIndex==0)console.log("MatchArrayInArray", arrSource, startIndex,arrToMatch);
 			//if (arrSource[0]==arrToMatch[0])console.log("bene");
-			if (arrSource.length-startIndex<arrToMatch.length)return false;
+			if (arrSource.length-startIndex<arrToMatch.length) return false;
 			for (let i=0; i+startIndex<arrSource.length && i<arrToMatch.length; i++) {
 				if (arrSource[startIndex+i][1]/*.toLowerCase()*/!==arrToMatch[i]) return false;
 			}
@@ -5670,4 +6187,47 @@ function ApplyPostRules(text) {
 		for (let i=0; i<len; i++) p.push(0);
 		return p;
 	}
+}
+
+function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
+	let ret=[];
+	for (let i=indexStart; i<rawData.length; i+=3) {
+		let rawBody=rawData[i], rawPattern=rawData[i+1];
+
+		if (rawBody.includes('?')) continue;
+		if (rawPattern.includes('?')) continue;
+
+		let patern = t.GetPatternByNameTo(rawPattern);
+		if (patern == null) {if (dev) console.log("Couldn't find pattern "+rawPattern);continue;}
+
+		let comment=rawData[i+2];
+		if (comment=="") ret.push({Body: rawData[i], Pattern: patern});
+		else ret.push({Body: rawData[i], Pattern: patern, Comment: comment});
+	}
+
+	if (ret.length==0){
+		if (dev) console.log("Cannot load pattern '"+rawData+"'");
+		return null;
+	}
+
+	return ret;
+}
+
+function FastLoadTranslateTo(rawData, indexStart) {
+	let ret=[];
+	for (let i=indexStart; i<rawData.length; i+=2) {
+		let rawText=rawData[i];
+
+		if (rawText=='') continue;
+		if (rawText.includes('?')) continue;
+		
+		ret.push({Text: rawText, Comment: rawData[i+1]});
+	}
+
+	if (ret.length==0) {
+		if (dev) console.log("Cannot load pattern '"+rawData+"'");
+		return null;
+	}
+
+	return ret;
 }
