@@ -9,30 +9,30 @@
 		<script src="translator/v1/translate.js"></script>
 		<script src="data/scripts/langs.js"></script>
 		<script src="translator/v1/mapper.js"></script>
-	<!--	<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
+		<!--<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
+		
+		<!-- Title -->
+		<title>Moravský překladač - Přeložení do moravského jazyka</title>
+				
+		<!-- Search -->
+		<meta name="description" content="Překlad text na text; slovník; překlad souborů, titulků či generování mapy. Překlad hanácky, slovácky, valašsky, lašsky, ... " id="metaDescription">
+		<meta name="keywords" content="moravština, moravsky, překladač, hanáčtina, valaština, laština, hantec, slovník, dialekt, Haná, Valašsko, Slovácko, titulky, translator, valašsky, slovácky, hanácky, Podluží, goralsko, Brno, po nasymu, po nasimu, silezian, dialekty, interdialekty, čeština, česky, překladač do moravštiny, slovenština, GeftGames">
+		<meta property="og:locale" content="cs_CZ" id="metalocale">
+	
+		<!-- Appereance -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Theme -->
 		<meta name="theme-color" content="#66ccff">
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 
-		<!-- Appereance -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Search -->
-		<meta name="keywords" content="moravština,překladač,hanáčtina,valaština,laština,hantec,dialekt,GeftGames,translator,geft,haná,valašsko,slovácko,slovenština,valachy,poluží,goralsko,brno,po ślůnski,po nasymu,po nasimu,silezian,dialekty,interdialekty,čeština,česky,překladač do moravštiny">
-		<meta id="metalocale" property="og:locale" content="cs_CZ">
-		<meta id="mataDescription" name="description" content="Moravský překladač - Přeložení do různých moravských nářečí, Hanácky, Slovácky, Valašsky, Lašsky, ...">
-
-		<!-- Title -->
-		<title>Moravský překladač</title>
-
 		<!-- Icon-->
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 		<!-- General aplication -->
-		<meta id="mataDescription2" name="application-name" content="Moravský překladač">
+		<meta id="metaDescription2" name="application-name" content="Moravský překladač">
 		<!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.ga"-->
 
 		<!-- Windows modern UI -->
@@ -42,7 +42,7 @@
 		<!-- Apple aplication -->
 		<link rel="apple-touch-icon" href="favicon.ico">
 		<link rel="apple-touch-startup-image" href="favicon.ico">
-		<meta id="mataDescription3" name="apple-mobile-web-app-title" content="Moravský překladač">
+		<meta id="metaDescription3" name="apple-mobile-web-app-title" content="Moravský překladač">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -70,13 +70,13 @@
 		}
 		</script>
 
-		<link rel="preconnect" href="https://api.github.com/" />
+		<!--<link rel="preconnect" href="https://api.github.com/" />-->
 		<link rel="alternate" type="text/html" href="https://moravskyprekladac.pages.dev/">
 		<link rel="alternate" type="text/html" href="https://geftgames.github.io/moravskyprekladac/">
 	</head>
 	<body onload="Load();init();" style="min-height: 100%;">
 		<div id="body" style="min-height: 100vh; /*display: none*/">
-			<div style="padding: 0px; height: -webkit-fill-available;z-index: 10;">
+			<div style="padding: 0px; /*height: -webkit-fill-available;*/z-index: 10;">
 
 				<!-- Header -->
 				<div id="header" style="display: flex;align-items: center;">
@@ -141,7 +141,7 @@
 
 						<!-- Copy current translation -->
 						<div class="btnSideApp" onclick="ShowPageMapper()">
-							<img src="data/images/logo_mapper.svg" style="width: 36px">
+							<img src="data/images/logo_mapper.svg" style="width: 36px" alt="Podklad míst - Mapa Moravy">
 							<span id="textMapper"   style="display:block" data-href="#mapper">Generátor map</span>
 						</div><!--class="settingLink"-->
 						<!--<p><a id="textAbout">Kontakt</a></p>-->
@@ -259,7 +259,7 @@
 					<div class="settingSection">
 						<div class="sisetting">
 							<!-- Automatic translate -->
-							<p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">Nastavení překladu</p>
+							<p style="display:inline-block" id="textSettingsTranslate" class="settingHeader">Nastavení překladu</p>
 							<div class="settingItem">
 								<p id="textAutoTranslate">Automatický překlad</p>
 
@@ -338,7 +338,7 @@
 			</div>
 	
 			<div id="translatingPage" style="display: none">
-				<!--<div onclick="hideNav()" style="flex-grow: 1;">
+				<!--<div onclick="hideNav()" style="flex-grow: 1;">-->
 				<!-- Trash browser, where will content not work -->
 				<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
 				
@@ -429,7 +429,7 @@
 									<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
 										<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
 										<span rel="nofollow" class="butIc" onclick="Copy()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-										<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
+										<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>-->
 										<span rel="nofollow" class="butIc" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
 										<!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
 									</div>
@@ -441,7 +441,7 @@
 						<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
 							<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
 								<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;width: -moz-available; ">
-									<textarea oninput="GetDic()" spellcheck="true" id="dicInput" autofocus placeholder="Zadejte slovo"></textarea>
+									<textarea oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo"></textarea>
 									<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox();">
 										<svg id="butclose" class="ib" viewBox="0 0 24 24">
 											<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
@@ -953,6 +953,63 @@
 					</div>
 					<div><p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm"></span></p></div>
 					<dicv id="pagelangDFill"></div>
+					<br>
+				</div>
+			</div>
+
+			<div id="pageWords" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+				<div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+					<div onclick="ClosePageLangD()" class="pageFromDownClose" id="closeLangD">
+						<div rel="nofollow" onclick="ClosePageLangD()">
+							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+							</svg>
+						</div>
+						<p style="display:inline;" id="closeSelector">Zavřít</p>
+					</div>
+					<div><p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Seznam zajímavých moravských slov</span></p></div>
+					<dicv id="pageWords">
+						<div><p class="wordsItem">Lůžko</p> - <a onclick="mapperSetWord(this)">postel</a></div> 
+						<div><p class="wordsItem">Zhlavec</p> - <a onclick="mapperSetWord(this)">polštář</a></div> 
+						<div><p class="wordsItem">Duchna</p> - <a onclick="mapperSetWord(this)">peřina</a></div> 
+						<div><p class="wordsItem">Dědina</p> - <a onclick="mapperSetWord(this)">vesnice</a></div> 
+						<div><p class="wordsItem">Haluz</p> - <a onclick="mapperSetWord(this)">větev</a></div> 
+						<div><p class="wordsItem">Baňka</p> - <a onclick="mapperSetWord(this)">vánoční koule</a></div> 
+						<div><p class="wordsItem">Zapacknout</p> - <a onclick="mapperSetWord(this)">zakopnout</a></div> 
+						<div><p class="wordsItem">Rožnout</p> - <a onclick="mapperSetWord(this)">rozsvítit</a></div> 
+						<div><p class="wordsItem">Fčil</p> - <a onclick="mapperSetWord(this)">teď</a></div> 
+						<div><p class="wordsItem">Šufan</p> - <a onclick="mapperSetWord(this)">naběračka</a></div> 
+						<div><p class="wordsItem">Pjesnička</p> - <a onclick="mapperSetWord(this)">písnička</a></div> 
+						<div><p class="wordsItem">Kmocháček</p> - <a onclick="mapperSetWord(this)">kmotr</a></div> 
+						<div><p class="wordsItem">Kmotřenka</p> - <a onclick="mapperSetWord(this)">kmotra</a></div> 
+						<div><p class="wordsItem">Stařenka</p> - <a onclick="mapperSetWord(this)">babička</a></div> 
+						<div><p class="wordsItem">Stařeček</p> - <a onclick="mapperSetWord(this)">dědeček</a></div> 
+						<div><p class="wordsItem">Dénko, dynko</p> - <a onclick="mapperSetWord(this)">krájecí podložka</a></div> 
+						<div><p class="wordsItem">Cigánit</p> - <a onclick="mapperSetWord(this)">krást</a>, <a onclick="mapperSetWord(this)">lhát</a></div> 
+						<div><p class="wordsItem">Naňuhňané</p> - <a onclick="mapperSetWord(this)">namačkané</a></div> 
+						<div><p class="wordsItem">Zavazet</p> - <a onclick="mapperSetWord(this)">překážet</a></div> 
+						<div><p class="wordsItem">Turkyň</p> - <a onclick="mapperSetWord(this)">kukuřice</a></div> 
+						<div><p class="wordsItem">Karfiól</p> - <a onclick="mapperSetWord(this)">květák</a></div> 
+						<div><p class="wordsItem">Panáček</p> - <a onclick="mapperSetWord(this)">farář</a></div> 
+						<div><p class="wordsItem">Škraň</p> - <a onclick="mapperSetWord(this)">tvář</a></div> 
+						<div><p class="wordsItem">Žbuliny</p> - <a onclick="mapperSetWord(this)">bubliny</a></div> 
+						<div><p class="wordsItem">Čudit</p> - <a onclick="mapperSetWord(this)">čadit</a></div> 
+						<div><p class="wordsItem">Čupět, čapět</p> - <a onclick="mapperSetWord(this)">dřepět</a></div> 
+						<div><p class="wordsItem">Prča</p> - <a onclick="mapperSetWord(this)">legrace</a></div> 
+						<div><p class="wordsItem">Čapa</p> - <a onclick="mapperSetWord(this)">hnáty</a> (expresivně noha)</div> 
+						<div><p class="wordsItem">Aji</p> - <a onclick="mapperSetWord(this)">i</a></div> 
+						<div><p class="wordsItem">Čuňa</p> - <a onclick="mapperSetWord(this)">huba</a> (expresivně)</div> 
+						<div><p class="wordsItem">Baňa</p> - <a onclick="mapperSetWord(this)">rána</a> (pěstí)</div> 
+						<div><p class="wordsItem">Babóňat, babúňat</p> - <a onclick="mapperSetWord(this)">ponocovat</a></div> 
+						<div><p class="wordsItem">Víno</p> - <a onclick="mapperSetWord(this)">hroznové kuličky</a></div> 
+						<div><p class="wordsItem">Shnilý</p> - <a onclick="mapperSetWord(this)">líný</a></div> 
+						<div><p class="wordsItem">Chrobák</p> - <a onclick="mapperSetWord(this)">brouk</a></div> 
+						<div><p class="wordsItem">Kél</p> - <a onclick="mapperSetWord(this)">kapusta</a></div> 
+						<div><p class="wordsItem">Kamilky</p> - <a onclick="mapperSetWord(this)">heřmánek</a></div> 
+						<div><p class="wordsItem">Tož</p> - <a onclick="mapperSetWord(this)">tak</a> (pouze někde)</div> 
+						<div><p class="wordsItem">Chudý</p> - <a onclick="mapperSetWord(this)">hubený</a></div> 
+						<div><p class="wordsItem">Zerz</p> - <a onclick="mapperSetWord(this)">rez</a></div> 
+					</div>
 					<br>
 				</div>
 			</div>
