@@ -1159,9 +1159,9 @@ function SetLanguage() {
     document.getElementById("textLight").innerText = langFile.Light;
     document.getElementById("textDark").innerText = langFile.Dark;
     document.getElementById("refresh").title = langFile.RefreshTooltip;
-    document.getElementById("mataDescription").title = langFile.RefreshTooltip;
-    document.getElementById("mataDescription2").title = langFile.RefreshTooltip;
-    document.getElementById("mataDescription3").title = langFile.RefreshTooltip;
+    document.getElementById("metaDescription").title = langFile.RefreshTooltip;
+    document.getElementById("metaDescription2").title = langFile.RefreshTooltip;
+    document.getElementById("metaDescription3").title = langFile.RefreshTooltip;
     document.getElementById("textSettings").innerText = langFile.Settings;
     document.getElementById("textWeblanguage").innerText = langFile.WebLanguage;
     document.getElementById("textAutoTranslate").innerText = langFile.AutoTranslate;
@@ -1182,7 +1182,7 @@ function SetLanguage() {
 	document.getElementById("tabText").innerText = langFile.Text;
 	document.getElementById("tabTxtFiles").innerText = langFile.TextFiles;
 	document.getElementById("tabSubs").innerText = langFile.SubtitlesFiles;
-	document.getElementById("textSettingsTranstale").innerText = langFile.TranslateOptions;
+	document.getElementById("textSettingsTranslate").innerText = langFile.TranslateOptions;
 	document.getElementById("textbetaFunctions").innerText = langFile.UnfinishedTranslate;
 	document.getElementById("textSettings").innerText = langFile.Settings;
 	document.getElementById("closeAbout").innerText = langFile.Close;
@@ -5132,6 +5132,7 @@ function navrhClick(text,customStyle) {
 
 let ownLang;
 let loadedOwnLang=false;
+var loadedVersionNumber;
 
 function loadLang() {		
 	if (loadedOwnLang) {
@@ -5154,7 +5155,8 @@ function loadLang() {
 				let lines=ownLangContent.split('\r\n');
 				ownLang=new LanguageTr();
 				loadedversion=lines[0];
-				if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1"){
+				loadedVersionNumber=parseFloat(loadedversion.substr(4));
+				if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
 					ownLang.Load(lines);
 					//AddLang(ownLang);
 				} else {
