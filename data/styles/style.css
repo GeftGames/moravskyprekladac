@@ -1162,3 +1162,7 @@ caption{
 	box-shadow: var(--dsh);
 }
 .btnSideApp span{margin-left: 8px;}
+.dicMeaning {
+    font-style: italic;
+	opacity: .8;
+}
