@@ -221,7 +221,7 @@ function GetTranslations() {
 	// github nemá dnou maximální velkost souborů
 	function ProgressE(e) {
 		if (e.lengthComputable) {  
-			console.log(((e.loaded / e.total)*100)+"%");
+			if (dev) console.log(((e.loaded / e.total)*100)+"%");
 			document.getElementById("progness").style.width=((e.loaded / e.total)*100)+"%";
 		}
 	}
@@ -292,8 +292,13 @@ function GetTranslations() {
 		if (lang.Name!="") {
 			if ((!betaFunctions && lang.Quality>=1) || (betaFunctions && lang.Quality>=0) || dev) {
 				let name=lang.Name;
-				if (lang.Quality<=1) name+=" 👎";
-				else if (lang.quality>=4) name+=" 👍";
+				//if (betaFunctions || dev){
+					if (lang.Quality>2) name+=" ✅";
+				//}
+				//if (lang.Quality==0) name+=" 💩";
+				//else 
+				//if (lang.Quality<=1) name+=" 👎";
+				
 				languagesList.push(lang);	
 				
 				let category;
@@ -316,7 +321,7 @@ function GetTranslations() {
 				nodeLang.value=lang.Name;
 				nodeLang.innerText = name;
 				category.appendChild(nodeLang);
-			}
+			}//else if (lang.quality>2) lang.Name+=" ✅";
 		
 		}else{
 			if (dev)console.log("This lang has problems", lang);
