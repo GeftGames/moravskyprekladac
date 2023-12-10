@@ -40,6 +40,14 @@
 	--filterShadow1: drop-shadow(0px 0px 5px var(--RawColorBack1));
 	--filterShadow2: drop-shadow(0px 0px 5px var(--RawColorBack1));
 }
+@font-face {
+	font-family: NotoSans;
+	src: url(./fonts/NotoSans-Variable.ttf);
+}
+@font-face {
+	font-family: NotoSansItalic;
+	src: url(./fonts/NotoSans-Italic-Variable.ttf);
+}
 .navrhCat{
 	display: flex;
     flex-wrap: wrap;
