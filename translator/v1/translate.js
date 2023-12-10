@@ -15,6 +15,7 @@ class ItemSentence {
 			item.output=raw[1];
 			return item;
 		} else if (loadedVersionNumber == 2) {
+			let raw = data.split('|');
 			if (raw[0]=='') return null;			
 			let item = new ItemSentence();
 			item.input = raw[0];			
@@ -5060,7 +5061,7 @@ class LanguageTr {
 				let string=word.To;
 				let original=word.From;
 
-				console.log(word);
+//				console.log(word);
 
 				let printableString;				
 				if (type=="Noun") {
@@ -5099,7 +5100,7 @@ class LanguageTr {
 				if (type!=="Unknown" && type!=="Symbol") this.qualityTrTotalTranslatedWell++;
 				if (type!=="Symbol")this.qualityTrTotalTranslated++;
 			//	}
-				console.log("printableString", printableString);
+//				console.log("printableString", printableString);
 				let resStr=this.PrepareText(printableString);
 				let retText;
 
