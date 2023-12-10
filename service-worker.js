@@ -1,4 +1,4 @@
-var version="1.0";
+var version="2.0";
 var cacheName = 'moravskyprekladac-ver-'+version;
 var filesToCache = [
     "index.php",
