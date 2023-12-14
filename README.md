@@ -25,6 +25,9 @@
 - Stáhnutí celého slovníku daného místa (jako karta Slovník)
 - Detekce odkud nářečí pochází
 - Detekce rozdílnosti nářečí
+
+# Poslední změny
+- Přidání komentářů k překladům
   
 ### Poznámky
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **jeden až dva lidé za den**, děkujeme
