@@ -2797,14 +2797,16 @@ class ItemAdjective{
 
 	GetDicForm(name) {
 		if (typeof this.PatternTo == undefined) return null;
-		if (this.PatternTo.Shapes==undefined) return null;
-		if (this.PatternTo.Shapes[0]=="-") return null;
+		if (this.To.Shapes==undefined) return null;
+		//if (this.PatternTo.Shapes[0]=="-") return null;
 
 		let from="", to="";
 
-		if (this.PatternTo.Shapes[0]!="?") {
-			to=this.To+this.PatternTo.Shapes[0];
-		} else return null;
+		for (let t of this.To) {
+			if (t.Shapes[0]!="?") {
+				to+=t.Body+t.Pattern.Shapes[0]+", ";
+			} else return null;
+		}
 		
 		if (this.PatternFrom.Shapes[0]!="?") {
 			from=this.From+this.PatternFrom.Shapes[0];
