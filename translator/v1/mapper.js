@@ -540,7 +540,7 @@ function mapper_compute() {
 	//
 	
 	// filter
-	let xx=0,yy=0, radius=6;
+	let xx=0, yy=0, radius=6;
 	ctx.fillStyle = "blue";
 	for (let p of points) {
 		ctx.beginPath();
@@ -548,23 +548,29 @@ function mapper_compute() {
 		ctx.fill();
 	}
 
-	ctx.fillStyle="Black";
 	for (let p of points){
+		ctx.fillStyle="Black";
+		ctx.font = "11px sans-serif";
 	//	if (xx+p[0]-w/2>0 && yy+p[1]-radius-5>0) { //<-optimalizace, mimo plochu
 		let w=ctx.measureText(p.text).width;
 		ctx.fillText(p.text, xx+p.x-w/2, yy+p.y-radius-5);
 			
 		// Název místa
-		if (this.ShowPlacesShorts) {
+		if (true/*this.ShowPlacesShorts*/) {
+			ctx.fillStyle="White";
+			ctx.font = "7.5px sans-serif";
 			let name="";
 			if (p.name.length>=2) {
-				name=p.name.sunstring(0, 2).toUpperCase();
+				name=p.name.substring(0, 2).toUpperCase();
 			} else name=p.name;
-			//let w=ctx.measureText(p.text).width;
-
-			ctx.fillText(name, xx+w/2,+radius/2, yy-radius);		
+			let wn=ctx.measureText(name).width;
+			console.log(name);
+			ctx.fillText(name, xx+p.x-wn/2, yy+p.y+radius/2);		
 		}
-	}
+	}	
+	
+	ctx.fillStyle="Black";
+	ctx.font = "11px sans-serif";
 
 	if (mapperRenderOptions.text!="") {
 		ctx.fillStyle="Black";
