@@ -38,9 +38,11 @@ class ItemSentence {
 		p.appendChild(e);
 
 		// ro
-		let t = document.createElement("span");
-		t.innerText=this.output;
-		p.appendChild(t);
+		for (let to of this.output) {
+			let t = document.createElement("span");
+			t.innerText=to.Text;
+			p.appendChild(t);
+		}
 
 		t.addEventListener("click", () => {
 			ShowPageLangD(t.GetTable());
@@ -89,9 +91,11 @@ class ItemSentencePart {
 		e.innerText=" → ";
 		p.appendChild(e);
 
-		let t = document.createElement("span");
-		t.innerText=this.output.Text;
-		p.appendChild(t);
+		for (let to of this.output) {
+			let t = document.createElement("span");
+			t.innerText=to.Text;
+			p.appendChild(t);
+		}
 
 		t.addEventListener("click", () => {
 			ShowPageLangD(t.GetTable());
