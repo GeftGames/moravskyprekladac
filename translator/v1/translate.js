@@ -41,13 +41,12 @@ class ItemSentence {
 		for (let to of this.output) {
 			let t = document.createElement("span");
 			t.innerText=to.Text;
+			t.addEventListener("click", () => {
+				ShowPageLangD(t.GetTable());
+			});
+			t.class="dicCustom";
 			p.appendChild(t);
 		}
-
-		t.addEventListener("click", () => {
-			ShowPageLangD(t.GetTable());
-		});
-		t.class="dicCustom";
 
 		return {from: this.input, to: this.output, name: name, element: p};
 	}
@@ -94,13 +93,12 @@ class ItemSentencePart {
 		for (let to of this.output) {
 			let t = document.createElement("span");
 			t.innerText=to.Text;
+			t.addEventListener("click", () => {
+				ShowPageLangD(t.GetTable());
+			});
+			t.class="dicCustom";
 			p.appendChild(t);
 		}
-
-		t.addEventListener("click", () => {
-			ShowPageLangD(t.GetTable());
-		});
-		t.class="dicCustom";
 
 		return {from: this.input, to: this.output, name: "", element: p};
 	}
@@ -775,6 +773,7 @@ class ItemPhrase{
 			item.input = this.DoubleSplitInp(raw[0]);
 			item.show=raw[0]=="1";
 			item.output=this.FastLoadTranslateTo(raw, 2);
+			if (item.output==null) return null;
 			return item;						
 		}
 		
