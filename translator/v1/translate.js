@@ -1051,6 +1051,7 @@ class ItemPreposition {
 				}
 			}
 			item.output=FastLoadTranslateTo(raw, 2);
+			if (item.output==null) return null;
 			return item;						
 		}
 		return null;
