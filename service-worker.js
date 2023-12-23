@@ -3,14 +3,20 @@ var cacheName = 'moravskyprekladac-ver-'+version;
 var filesToCache = [
     "index.php",
 
-    "engine.js",
+    "data/scripts/engine.js",
+    "data/scripts/langs.js",
+	
+    "translator/v1/inicialize.js",
+    "translator/v1/mapper.js",
+    "translator/v1/translate.js",
+	
     "data/styles/style.css",
-
     "data/styles/themes/dark.css",
     "data/styles/themes/nightdark.css",
     "data/styles/themes/light.css",
 
     "favicon.ico",
+    "v2.trw_a",
 
     "data/images/icon64.png",
     "data/images/icon96.png",
