@@ -1740,8 +1740,8 @@ class ItemPatternPronoun{
 				let item=new ItemPatternPronoun();
 				item.Name=raw[0];
 				item.Type=3;
-				item.Shapes=raw[2].split(',');
 				if (raw[1].includes('?')) item.Shapes[0]='?';
+				else item.Shapes=raw[1].split(',');
 				return item; 
 			}
 			if (raw.length==14*4+1){
