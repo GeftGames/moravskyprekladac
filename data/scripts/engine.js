@@ -1209,7 +1209,7 @@ function SetLanguage() {
 	document.getElementById("textHowWeTranslate").innerText = langFile.HowWeTranslate;
 	document.getElementById("textWeFree").innerText = langFile.WeFree;
 	document.getElementById("tabDic").innerText = langFile.Dic;
-	document.getElementById("textDownloadingList").innerText = langFile.CookiesMessage;
+	document.getElementById("textDownloadingList").innerText = langFile.DownloadingDic;
 
     if (document.getElementById('specialTextarea').value == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' +  langFile.HereShow + '</span>';
 
