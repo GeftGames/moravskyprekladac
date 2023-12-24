@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tLuběnice
 aGG
 d04.06.2023 17:39:32
@@ -10,18 +10,18 @@ oHaná
 -
 -
 -
-Jdi to zamést!|Poť to pozametat!
+Jdi to zamést!|1|Poť to pozametat!|
 -
 -
-bramborová nať|chabašti
-krájecí prkno|dynko
-s klíčky|s klava
-s bramborovými klíčky|s klava
-nepěkné boty|škarbale
-brambory|japka
-dělat hluk|rablovat
-tam je kdovíco|tam je dovičeho
-uvývat zem|u?mý?vat? zeme
+bramborová nať|1|chabašti|
+krájecí prkno|1|dynko|
+s klíčky|1|s klava|
+s bramborovými klíčky|1|s klava|
+nepěkné boty|1|škarbale|
+brambory|1|japka|
+dělat hluk|1|rablovat|
+tam je kdovíco|1|tam je dovičeho|
+uvývat zem|0|u?mý?vat? zeme|
 -
 -
 -
@@ -31,20 +31,23 @@ les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 lopatA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 hrábĚ|1|-|-|-|-|-|-|-|ě|í|ím|ě|ě|ích|ěmi
+svátEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 -
 les|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
 lopatA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
-hrad|3||u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+hrad|3||u?|u?|?|e?|ě?,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 hrÁBĚ|1|-|-|-|-|-|-|-|ábě?|ábí?|ábím?|ábě?|ábě?|ábích?|abjama
+svátEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|kê|ky?|cích?|ky?
 -
-vesnice||0|dědina|
-prkno||0|deska|
-ústín|les|2|óstin|les
-odpočívadlo||0|odpočinek|
-mezipodesta||0|odpočinek|
-bačkory||0|papuše|
-kapust|lopatA|0|kel|hrad
-hráb|hrábĚ|0|hr|hrÁBĚ
+vesnice||0|dědina||
+prkno||0|deska||
+ústín|les|2|óstin|les|
+odpočívadlo||0|odpočinek||
+mezipodesta||0|odpočinek||
+bačkory||0|papuše||
+kapust|lopatA|0|kel|hrad|
+hráb|hrábĚ|0|hr|hrÁBĚ|
+svát|svátEK|0|svát|svátEK|
 -
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -54,15 +57,18 @@ jarní|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|c
 celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|é|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 zeleNÝ|-1|ny?|ného?|némo?|né?|né?|ném?|nym?|n?|n?|ná?|néch?|ném?|ná?|ná?|néch?|néma?|n?|n?|ná?|né?|né?|nó?|ná?|né?|nó?|n?|n?|né?|néch?|ném?|né?|né?|néch?|néma?|n?|n?|né?|ného?|némo?|ného?|né?|ném?|nym?|n?|n?|ňi?|néch?|ném?|né?|ňi?|néch?|néma?|n?|n?|né?|nyho?|nymo?|ný?|ný?|ném?|nym?|n?|n?|ny?|néch?|ném?|né?|né?|néch?|néma?|n?|n?
 -
-scvrkl|ščvrkl|celÝ|celÝ
-moderní|modérňi|jarní|jarní
-otevřen|rozglábe|zelenÝ|zeleNÝ
+scvrkl|celÝ|ščvrkl|celÝ|
+moderní|jarní|modérňi|jarní|
+otevřen|zelenÝ|rozglábe|zeleNÝ|
 -
-MY|-1|my|nás|nám|nás|my|nás|námi
+MY|my|nás|nám|nás|my|nás|námi
+několik||a|a|||a|a
 -
-MY|-1|me|nás?|nám?|nás?|my?|nás?|námi?
+MY|me|nás?|nám?|nás?|my?|nás?|námi?
+několik|?|a?|a?|?|?|a?|a?
 -
-MY|MY
+|MY||MY|
+několik|několik|nekolêk|několik|
 -
 -
 -
@@ -72,27 +78,37 @@ mySLET|15|-1|slet|slím|slíš|slí|slíme|slíte|slí,myslejí|sli|sleme|slete|
 sklízET|15|-1|et|ím|íš|í|íme|íte|í,sklízejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+zeptAT_SE|22|-1|at_se|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 dívAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 meSLET|15|-1|slet?|slím?|slíš?|slí?|slíme?|slíte?|slí,myslejí?|sli?|sleme?|slete?|slel?|slel?|slela?|slelo?|słéle|slely?|slely?|slela?|šlen?|šlen?|šlena?|šleno?|šleni?|šleny?|šleny?|šlena?
 sklízET|15|-1|et|ím?|íš?|í?|íme?|íte?|í,sklízejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 utěkAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 pomUCT|30|-1|uct|ohu,(hovorově) pomůžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) pomůžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|oženi?|oženy?|oženy?|ožena?
+zeptAT_SE|22|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+uĎELAT|30|-1|ďelat|dělám?|děláš?|dělá?|děláme?|děláte?|dělají?|ďelej?|ďelejme?|ďelejte?|ďelal?|ďelal?|ďelala?|ďelalo?|ďelali?|ďelaly?|ďelaly?|ďelala?|ďelán?|ďelán?|ďelána?|ďeláno?|ďeláňi?|ďelány?|ďelány?|ďelána?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|bêzte|by?
 -
-zamést|pozametat||
-zeptat|zoptat||
-dív|div|dívAT|dívAT
-podív|podiv|dívAT|dívAT
-my|me|mySLET|mySLET
-sklíz|sklóz|sklízET|sklízET
-utík|otěk|utíkAT|utěkAT
-zeptat|zoptat||
-pom|pomOCT|pomUCT
-pokazit|poňôhňat||
+dív|dívAT|div|dívAT|
+my|mySLET|me|meSLET|
+podív|dívAT|podiv|dívAT|
+pokazit||poňôhňat||
+pom|pomOCT|pom|pomUCT|
+sklíz|sklízET|sklóz|sklízET|
+utík|utíkAT|otěk|utěkAT|
+zamést||pozametat||
+zept|zeptAT_SE|zopt|zeptAT_SE|
+uděl|udělAT|po|uĎELAT|
+|BÝT||BÝT|
 -
-spolu|spolem
-jestli|eši
+spolu|spolem|
+jestli|eši|
+dobře|dobrá|
+zatím|zaťim|
 -
 -
 -
+jo|ja|
 -

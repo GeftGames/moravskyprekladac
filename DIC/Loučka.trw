@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tLoučka
 d20.06.2023 13:59:47
 iLoučka OL - sncj.ujc.cas.cz\n\npapučáři, to je nélepši vojsko, keri eksistôje\nnélepši só ajbišovi kořinkê\ndobró chôť přejô\ncôlêbrine côlêbrincovité, dávno zvoňilê do kostela, a on se tahne jak smrat\ntak s teh oči mô cêcórovalo\njá nevim, ot čeho tê bakôlajdê mužó bêt\nKatrina je brčna\nje oznámeňi na četňické staňicê\nrosa dneská nedosichá, to čeká drôhó \nno, dêď mê zme ho ôřezalê až v drviskô\na tož ňi to došévám \nčuňičkê, huši huš! \njôš sem zas cárovala naspátek\nto bêlo toť ke Slavjeťinô, jag je ta bažantňice\npozor, na dvoře je takovi bařêsko\non si mňe to dovoli řict\ntam maji daňkê s tema lopatečkama\na Skulil to otpřêsáhl, že to slêšel, a fčêl broji proťi ňim\nvê bôdete plaťit s teho pořbivaňi ešče véďelečnó daň\nto dêcki veteráňi bóchajó z ďela\nčuňičkê, huši huš!\ntê darebákô, né že bê sez ôčêl ďelat!\nôdeřêl sem se do člaňka\ndávno zvoňilê do kostela, a on se tahne jak smrat\nMařenka je řečná, docela faň\nona jag dôch, jak cára choďi po ďeďiňe \nno, skôs ten burnus, jak ťe padne\npapučáři, to je nélepši vojsko, keri eksistôje\nnélepši só ajbišovi kořinkê\nvêlivané brôtvan glazuró máš?\nčlovjeg je staré, o̬táhané, to je amen\nto dêcki veteráňi bóchajó z ďela\ndêť to je nejaká dilka\nna Boži ťelo do vodê smňelo
@@ -11,12 +11,12 @@ oHaná
 -
 -
 -
-z těch|s teh
-od čeho|ot čeho
-a hned|a fčêl
-chodí po vesnici|choďi po ďeďiňe
-pekáč s glazurou|vêlivané brôtvan glazuró
-dvůr je jak bažina|dvuř je takovi bařêsko
+z těch|1|s teh|
+od čeho|1|ot čeho|
+a hned|1|a fčêl|
+chodí po vesnici|1|choďi po ďeďiňe|
+pekáč s glazurou|1|vêlivané brôtvan glazuró|
+dvůr je jak bažina|1|dvuř je takovi bařêsko|
 -
 -
 nej|né
@@ -45,21 +45,21 @@ hrad|3|?|u?|ô|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 strom|3|?|u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 veterán|2|?|a?|u,ovi?|a?|e?|u,ovi?|em?|i|ů?|ům?|y?|i,ové?|ech?|y?
 -
-vojsk|městO|0|vojsk|městO
-chuť||0|chôť|
-daň||0|daň|
-děl|městO|0|ďel|městO
-fajn||0|faň|
-duch||0|dôch|
-vesni|vesnicE|0|ďeďi|žeNA
-pekáč||0|brôtvan|
-amen||0|amen|
-vod|školA|0|vod|školA
-||0|brčna|
-||0|rosa|
-||0|drvisko|
-slavětín|hrad|2|slavjeťin|hrad
-veteráň|veterán|0|veteráň|veterán
+vojsk|městO|0|vojsk|městO|
+chuť||0|chôť||
+daň||0|daň||
+děl|městO|0|ďel|městO|
+fajn||0|faň||
+duch||0|dôch||
+vesni|vesnicE|0|ďeďi|žeNA|
+pekáč||0|brôtvan||
+amen||0|amen||
+vod|školA|0|vod|školA|
+||0|brčna||
+||0|rosa||
+||0|drvisko||
+slavětín|hrad|2|slavjeťin|hrad|
+veteráň|veterán|0|veteráň|veterán|
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -67,30 +67,30 @@ zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|o
 dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|?|?|?|?|?|?|?|?|?|?|rá?|rá?|ré?|ré?|rou?|rá?|ré?|ró|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?|rý?|rého?|rému?|rého?|rý?|rém?|rým?|?|?|ří?|rých?|rým?|ré?|ří?|rých?|rými?|?|?|rý?|rého?|rému?|rý?|rý?|rém?|rým?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?
 zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|?|?|?|?|?|?|á?|ých?|ým?|á?|é?|é?|ou?|á?|é?|ó|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|é|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-nejlepší|nélepši||
-dob|dobRÝ|dobRÝ
-výdělečn|véďelečn|zelenÝ|zelenÝ
-vylívan|vêlivan|zelenÝ|zelenÝ
-starý|staré||
-utahaný|o̬táhané||
+nejlepší||nélepši||
+dob|dobRÝ|dob|dobRÝ|
+výdělečn|zelenÝ|véďelečn|zelenÝ|
+vylívan|zelenÝ|vêlivan|zelenÝ|
+starý||staré||
+utahaný||o̬táhané||
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-kteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
-vY|-1|y|ás|ám|ás|y|ás|ámi
-tY|-1|y|ě,ebe|i,obě|ě,ebe|y|obě|ebou
-nějaKÝ|-1|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+vY|y|ás|ám|ás|y|ás|ámi
+tY|y|ě,ebe|i,obě|ě,ebe|y|obě|ebou
+nějaKÝ|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
 -
-TEN|-1|ten?|toho?|tomu?|toho?|-|tom?|tím?|ty?|tteh|těm?|ty?|-|těch?|ttema|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|tteh|těm?|ty?|-|těch?|ttema|ta|té?|té?|tu?|-|té?|tou?|ty?|tteh|těm?|ty?|-|těch?|ttema|to|toho?|tomu?|to?|-|tom?|tím?|ty?|tteh|těm?|ty?|-|těch?|ttema
-kteRÝ|-1|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
-vY|-1|ê|ás?|ám?|ás?|y?|ás?|ámi?
-TY|-1|y?|ě?,ebe?|ťê,obě?|ě?,ebe?|y?|obě?|ebou?
-nějaKÝ|-1|ký?|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|tema|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|tema|ta|té?|té?|tu?|-|té?|tou?|ty?|teh|těm?|ty?|-|těch?|tema|to|toho?|tomu?|to?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|tema
+kteRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+vY|ê|ás?|ám?|ás?|y?|ás?|ámi?
+TY|y?|ě?,ebe?|ťê,obě?|ě?,ebe?|y?|obě?|ebou?
+nějaKÝ|ký?|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
 -
-t||tEN|TEN
-kteR|kteRÝ|kteRÝ
-vY|vY|vY
-tY|tY|tY
-něja|neja|nějaKÝ|nějaKÝ
+t|tEN||TEN|
+kteR|kteRÝ|kteR|kteRÝ|
+vY|vY|vY|vY|
+tY|tY|tY|tY|
+něja|nějaKÝ|neja|nějaKÝ|
 -
 -
 -
@@ -115,28 +115,28 @@ zkusIT|22|-1|it?|ím?|íš?|í?|íme?|íte?|í?||me?|te?|il?|il?|ila?|ilo?|ili?|
 padNOUT|22|-1|nout?|nu?|neš?|ne|neme?|nete?|nou?|ni?|něme?|něte?|l?|l?|la?|lo?|li?|ly?|ly?|la?
 slêšET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|,poslyš?|me,poslyšme?|te,poslyšte?|el|el?|ela?|elo?|eli?|ely?|ely?|ela?|en,(archaicky) slyšán?|en,(archaicky) slyšán?|ena?|eno?|eni?|eny?|eny?|ena?
 -
-BÝT|BÝT
-př|přÁT|přÁT
-m|mOCT|mOCT
-ř|řÍCT|řÍCT
-uč|ôč|učIT|učIT
-t|tÁHNOUT|tÁHNOUT
-zkus|skôs|zkusIT|zkusIT
-pad|padNOUT|padNOUT
-slyš|slêš|slyšET|slyšET
+|BÝT||BÝT|
+př|přÁT|př|přÁT|
+m|mOCT|m|mOCT|
+ř|řÍCT|ř|řÍCT|
+uč|učIT|ôč|učIT|
+t|tÁHNOUT|t|tÁHNOUT|
+zkus|zkusIT|skôs|zkusIT|
+pad|padNOUT|pad|padNOUT|
+slyš|slyšET|slêš|slyšET|
 -
-dnes,dneska|dneská
-nazpátek|naspátek
-nyní,teď|fčêl
-ještě|ešče
-vždy|dêcki
-dávno
-zase,zas|zas
+dnes,dneska|dneská|
+nazpátek|naspátek|
+nyní,teď|fčêl|
+ještě|ešče|
+vždy|dêcki|
+dávno|dávno|
+zase,zas|zas|
 -
-proti|proťi|
-po|
+proti||proťi|
+po||po|
 -
-vždyť|dêď
-jak|jak,jag
+vždyť|dêď|
+jak|jak||jag|
 -
 -

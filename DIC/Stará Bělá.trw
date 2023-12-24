@@ -1,8 +1,8 @@
-TW v0.1
+TW v2
 tStará Bělá
 aGG
 d01.05.2023 14:19:53
-c#Zdroje\n-http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf
+c#Zdroje\n-http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf\n-Bartoš Diaktologie Moravská
 g49.7627365,18.2293103
 q0
 -
@@ -15,6 +15,7 @@ q0
 -
 -
 vejte|vajtě
+říkat|řikať
 -
 -
 -
@@ -29,10 +30,17 @@ vejte|vajtě
 -
 -
 dÁT|78|-1|át|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
 -
 dÁT|78|-1|át?|ej?|ejme?|ajtě|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+BÝT|247|-1|byti|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+neBÝT|23|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu?|budeš?|buďe|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?
 -
-dÁ|dÁT|dÁT
+dÁ|dÁT|dÁ|dÁT|
+|BÝT||BÝT|
+ne|neBÝT|ňe|neBÝT|
+naříkat||nařikať||
 -
 -
 -

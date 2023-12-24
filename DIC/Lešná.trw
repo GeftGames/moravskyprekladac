@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tLešná
 aGG
 d06.08.2023 14:03:44
@@ -11,40 +11,66 @@ q0
 -
 -
 -
-se desetkrát|sa desetkráď
+se desetkrát|1|sa desetkráď|
 -
 -
 -
 -
 -
+polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 -
+polE|0|e?|e?|i?|e?|e?|i|em?|e?|í?|ím?|e?|e?|ích?|i?
 -
-pokáňí||0|pokáňí|
+pokáňí||0|pokáňí||
+pol|polE|0|pol|polE|
 -
+unavenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+unaveNÝ|-1|né|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|ný|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 -
+unaven|unavenÝ|ukona|unaveNÝ|
+marn|unavenÝ|már|unaveNÝ|
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-SE|-1|-|sebe?|si?,sobě?|sa|-|sobě?|sebou?
+SE|-|sebe?|si?,sobě?|sa|-|sobě?|sebou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
-SE|SE
+|SE||SE|
+t|tEN||TEN|
 -
 nesklonné|1|
 -
 nesklonné|1|
 -
-desetkrát |desetkráď|nesklonné|nesklonné
+desetkrát |nesklonné|desetkráď|nesklonné|
 -
 JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+povídAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 -
 JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|ďete|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|býl,byl|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+povídAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ál|al?|ala?|alo?|ali?|aly?|aly?|ala?
+musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 -
-JÍT|JÍT
-ožerat|ožerte ||
+|JÍT||JÍT|
+ožerat||ožerte ||
+|BÝT||BÝT|
+povíd|povídAT|povíd|povídAT|
+mus|musET|mus|musET|
+oddechnout||odechnúť||
 -
+až|až|
+doteď|do fčiľšku|
+tak|tak|
 -
-za|
+za||za|
+do||do|
+na||na|
 -
+a|a|
 -
 -

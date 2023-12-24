@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 fSpisovná čeština
 tTřebčín
 aGG
@@ -15,7 +15,7 @@ oHaná
 -
 -
 -
-malý cedník|cezátko řitki
+malý cedník|1|cezátko řitki|
 -
 -
 -
@@ -24,7 +24,7 @@ ou|ó
 -
 stavení|0|||||||m|||m|||ch|mi
 polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
-dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne|nem|ni,ny,nové|ní,nů|nům|ni,ny|ni,ny,nové|nech|ny
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 cukroví|0|||||||m|-|-|-|-|-|-|-
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
@@ -40,11 +40,11 @@ hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 kÁMEN|3|ámen|amene,amenu|ameni,amenu|ámen|ameni|ameni,amenu,ameně|amenem|ameny|amenů|amenům|ameny|ameny|amenech|ameny
 stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
-kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
+kŮŇ|3|ůň|oně|oni,oňovi|oně,ůň|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
 -
 staveňI|0|i|i|í?|i?|i?|i?|im?|i|a|im?|i?|i?|ich?|ama
 polE|0|e|a|o|e?|e?|o|em?|a|í|im|e?|e?|ách|ama
-dEN|0|eň|ňa?|ni,nu?|en?|ne,ni?|ňo,#ne|nem?|ňe|ňi|ňom|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ňama
+dEN|0|eň|ňa?|ni?,nu?|en?|ne?,ni?|ňo,#ne|nem?|ňe|ňi|ňom|ni?,ny?|ni?,ny?|nech?|ňama
 mňestO|0|o|a|u?|o?|o?|ě|em?|a?|?|um|a?|a?|ech|ama
 cukroví|0|?|?|?|?|?|?|m?|-?|-?|-?|-?|-?|-?|-?
 kosť|1|?|e|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|ama
@@ -60,14 +60,12 @@ stroj|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|ama?
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|ama?
 kamEŇ|3|eň?|amene,amenu?|ameni,amenu?|ámen?|ameni?|ňo|amenem?|ňe|amenů?|amenům?|ameny?|ameny?|ich?|ňama
 stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|kama?
-kŮŇ|3|ůň?|oně?|oni,oňovi?|oně,archaicky) kůň[4][5]?|oni?|oni,oňovi?|oněm?|oně?|oní,oňů?|oním,oňům?|oně?|oně?|oních?|oňama?
+kŮŇ|3|ůň?|oně?|oni,oňovi?|oně?,ůň?|oni?|oni?,oňovi?|oněm?|oně?|oní?,oňů?|oním?,oňům?|oně?|oně?|oních?|oňama?
 -
-kosť|kost|0|kost|kosť
-stavení|stavení|0|staveň|staveňI
-pol|polE|0|pol|polE
-|dEN|0||
--
--
+kosť|kost|0|kost|kosť|
+stavení|stavení|0|staveň|staveňI|
+pol|polE|0|pol|polE|
+|dEN|0|||
 -
 -
 -
@@ -79,8 +77,10 @@ pol|polE|0|pol|polE
 -
 -
 -
-teprve|teprov
-tehdá|tehdov
+-
+-
+teprve|teprov|
+tehdá|tehdov|
 -
 -
 -
