@@ -2564,9 +2564,9 @@ class ItemAdjective{
 
 				let item =new ItemAdjective();
 				item.From=raw[0];
-				item.To=raw[1];
+				item.To=[{Body: raw[1], Pattern:paternTo}];
 				item.PatternFrom=paternFrom;
-				item.PatternTo=paternTo;
+				//item.PatternTo=paternTo;
 				return item;
 			} else if (raw.length==3) { 
 				let paternFrom = this.GetPatternByNameFrom(raw[1]);
@@ -2583,9 +2583,9 @@ class ItemAdjective{
 
 				let item =new ItemAdjective();
 				item.From=raw[0];
-				item.To=raw[0];
+				item.To=[{Body: raw[0], Pattern: paternTo}];
 				item.PatternFrom=paternFrom;
-				item.PatternTo=paternTo;
+				//item.PatternTo=paternTo;
 				return item;
 			}
 			if (dev) console.log("Cannot load pattern, wrong len");
@@ -2730,7 +2730,7 @@ class ItemAdjective{
 					
 				//	for (let j=0; j<shapes.length; j++) {
 					//	let shape=this.From+shapes[j];
-						//console.log("MasculineAnimate", shape);
+					//	console.log(this.To);
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
