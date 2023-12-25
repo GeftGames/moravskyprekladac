@@ -3016,7 +3016,7 @@ class ItemNumber{
 		}
 	}
 	
-	static IsStringThisWordG(startIndex, endIndex, number, gender) {		
+	IsStringThisWordG(startIndex, endIndex, number, gender) {		
 		let arr=[];
 		for (let i=startIndex; i<endIndex; i++) {
 			let shape=this.PatternFrom.Shapes[i];
@@ -3061,34 +3061,34 @@ class ItemNumber{
 
 		if (this.PatternFrom.Shapes.length==14*4){
 			{
-				let s1=ItemNumber.IsStringThisWordG(0,  7, 1, "muz");
+				let s1=this.IsStringThisWordG(0,  7, 1, "muz");
 				if (s1.length>0) ret.push(...s1);
-				let s2=ItemNumber.IsStringThisWordG(7, 14, 2, "muz");
+				let s2=this.IsStringThisWordG(7, 14, 2, "muz");
 				if (s2.length>0) ret.push(...s2);
 			}
 			{
-				let s1=ItemNumber.IsStringThisWordG(0+14,  7+14, 1, "mun");
+				let s1=this.IsStringThisWordG(0+14,  7+14, 1, "mun");
 				if (s1.length>0) ret.push(...s1);
-				let s2=ItemNumber.IsStringThisWordG(7+14, 14+14, 2, "mun");
+				let s2=this.IsStringThisWordG(7+14, 14+14, 2, "mun");
 				if (s2.length>0) ret.push(...s2);
 			}
 			{
-				let s1=ItemNumber.IsStringThisWordG(0+28,  7+28, 1, "zen");
+				let s1=this.IsStringThisWordG(0+28,  7+28, 1, "zen");
 				if (s1.length>0) ret.push(...s1);
-				let s2=ItemNumber.IsStringThisWordG(7+28, 14+28, 2, "zen");
+				let s2=this.IsStringThisWordG(7+28, 14+28, 2, "zen");
 				if (s2.length>0) ret.push(...s2);
 			}
 			{
-				let s1=ItemNumber.IsStringThisWordG(0+42,  7+42, 1, "str");
+				let s1=this.IsStringThisWordG(0+42,  7+42, 1, "str");
 				if (s1.length>0) ret.push(...s1);
-				let s2=ItemNumber.IsStringThisWordG(7+42, 14+42, 2, "str");
+				let s2=this.IsStringThisWordG(7+42, 14+42, 2, "str");
 				if (s2.length>0) ret.push(...s2);
 			}
 		} else if (this.PatternFrom.Shapes.length==14) {
 			{
-				let s1=ItemNumber.IsStringThisWordG(0,  7, 1, undefined);
+				let s1=this.IsStringThisWordG(0,  7, 1, undefined);
 				if (s1.length>0) ret.push(...s1);
-				let s2=ItemNumber.IsStringThisWordG(7, 14, 2, undefined);
+				let s2=this.IsStringThisWordG(7, 14, 2, undefined);
 				if (s2.length>0) ret.push(...s2);
 			}			
 		} else if (this.PatternFrom.Shapes.length==7) {
