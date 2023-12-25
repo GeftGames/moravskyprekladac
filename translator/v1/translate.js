@@ -2624,7 +2624,9 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
-						if (this.PatternTo.Feminine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
+						for (let to of this.To) {
+							if (to.Pattern.Feminine[i]!="?") ret.push([to.Body+to.Pattern.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
+						}
 						break;	
 					}
 			//	}
@@ -2639,8 +2641,9 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
-						
-						if (this.PatternTo.Feminine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
+						for (let to of this.To) {
+							if (to.Feminine[i]!="?") ret.push([to.Body+to.Pattern.Feminine[i], 2, i-7+1, "Feminine"]);
+						}
 						break;
 					}
 				//}
@@ -2655,7 +2658,9 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
-						if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]); // [tvar, rod, číslo, pád]	
+						for (let to of this.To) {
+							if (to.MasculineAnimate[i]!="?") ret.push([to.Body+to.Pattern.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]); // [tvar, rod, číslo, pád]	
+						}
 						break;	
 					}
 				//}
@@ -2670,7 +2675,9 @@ class ItemAdjective{
 
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
-						if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
+						for (let to of this.To) {
+							if (to.MasculineAnimate[i]!="?") ret.push([to+to.Pattern.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
+						}
 						break;
 					}
 			//	}
@@ -2691,9 +2698,11 @@ class ItemAdjective{
 						if (shape==str) {
 						//	console.log(this.PatternTo);
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.Feminine[i]!="?") {
-								 ret.push([this.To+this.PatternTo.Feminine[i], 1, i+1, "Feminine"]);
-								 break;
+							for (let to of this.To) {
+								if (this.PatternTo.Feminine[i]!="?") {
+								 	ret.push([to.Body+to.Pattern.Feminine[i], 1, i+1, "Feminine"]);
+								}
+								break;
 							}
 						}
 				//	}
@@ -2708,7 +2717,9 @@ class ItemAdjective{
 					//	console.log(this.PatternTo.Feminine);
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.Feminine[i]!="?") ret.push([this.To+this.PatternTo.Feminine[i], 2, i-7+1, "Feminine"]);
+							for (let to of this.To) {
+								if (to.Pattern.Feminine[i]!="?") ret.push([to.Body+to.Pattern.Feminine[i], 2, i-7+1, "Feminine"]);
+							}
 							break;
 						}
 					//}
@@ -2723,7 +2734,9 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]);
+							for (let to of this.To) {
+								if (to.Pattern.MasculineAnimate[i]!="?") ret.push([to.Body+to.Pattern.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]);
+							}
 							break;
 						}
 					//}
@@ -2738,7 +2751,9 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.MasculineAnimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
+							for (let to of this.To) {
+								if (to.Pattern.MasculineAnimate[i]!="?") ret.push([to.Body+to.Pattern.MasculineAnimate[i], 2, i-7+1, "MasculineAnimate"]);
+							}
 							break;
 						}
 				//	}
@@ -2753,7 +2768,9 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.MasculineInanimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineInanimate[i], 1, i+1, "MasculineInanimate"]);
+							for (let to of this.To) {
+								if (to.Pattern.MasculineInanimate[i]!="?") ret.push([to+to.Pattern.MasculineInanimate[i], 1, i+1, "MasculineInanimate"]);
+							}
 							break;
 						}
 				//}
@@ -2768,7 +2785,9 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.MasculineInanimate[i]!="?") ret.push([this.To+this.PatternTo.MasculineInanimate[i], 2, i-7+1, "MasculineInanimate"]);
+							for (let to of this.To) {
+								if (to.Pattern.MasculineInanimate[i]!="?") ret.push([to.Body+to.Pattern.MasculineInanimate[i], 2, i-7+1, "MasculineInanimate"]);
+							}
 							break;
 						}
 					//}
@@ -2783,7 +2802,9 @@ class ItemAdjective{
 						
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.Middle[i]!="?") ret.push([this.To+this.PatternTo.Middle[i], 1, i+1, "Middle"]);
+							for (let to of this.To) {
+								if (to.Pattern.Middle[i]!="?") ret.push([to.Body+to.Pattern.Middle[i], 1, i+1, "Middle"]);
+							}
 							break;
 						}
 				//}
@@ -2798,7 +2819,9 @@ class ItemAdjective{
 
 						if (shape==str) {
 							//ret.push(this.To+this.PatternTo.Shapes[i]);
-							if (this.PatternTo.Middle[i]!="?") ret.push([this.To+this.PatternTo.Middle[i], 2, i-7+1, "Middle"]);
+							for (let to of this.To) {
+								if (to.Pattern.Middle[i]!="?") ret.push([to.Body+to.Pattern.Middle[i], 2, i-7+1, "Middle"]);
+							}
 							break;
 						}
 					//}
