@@ -32,7 +32,7 @@ langs["cs"] = {
 
 	UnfinishedTranslate : "Všechny překlady",
 	MoreInfoBetaTranslate : "Tj. mají málo dat",
-	DownloadingDic: "Stahování slovníku všech slov...",
+	DownloadingDic: "Stahování všech slov ve slovníku ...",
 
 	TranslateOptions : "Nastavení překladu",
 	AutoTranslate : "Automatický překlad",
@@ -1707,7 +1707,7 @@ langs["hanak"] = {
 
 	UnfinishedTranslate : "Fšeckê překladê",
 	MoreInfoBetaTranslate : "Nehotovy překladê, ...",
-	DownloadingDic: "Stahováni slovniku fšechéch slov...",
+	DownloadingDic: "Stahováni fšechéch slov co só ve slovniku...",
 
 	TranslateOptions : "Nastaveňi překladô",
 	AutoTranslate : "Automatêcké překlad",
