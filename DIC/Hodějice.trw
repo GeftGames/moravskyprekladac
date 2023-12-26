@@ -1,7 +1,8 @@
-TW v1.0
+TW v2
 tHodějice
+aGG
 d20.06.2023 12:18:19
-c#Zdroje dat\n-Stavba věty v mluvených projevech (Syntax hanáckých nářečí) - Šipková, Milena, str. 
+c#Zdroje dat\n-Stavba věty v mluvených projevech (Syntax hanáckých nářečí) - Šipková, Milena, str. \n-https://sncj.ujc.cas.cz/
 g49.1414975,16.913568
 q0
 -
@@ -14,6 +15,14 @@ q0
 -
 -
 -
+trápení|0|||||||m|||m|||ch|mi
+bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
+-
+trápeňí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+bÚH|2|úh?|oha|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem?|ozi?,ohové?|ohú?|ohúm?|ohy?|ozi?,ohové?|ozích?|ohy?
+-
+trápení|trápení|0|trápeňí|trápeňí|
+b|bŮH|0|b|bÚH|
 -
 -
 -
@@ -24,12 +33,15 @@ q0
 -
 -
 -
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+-
+mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+-
+m|mÍT|m|mÍT|
 -
 -
--
--
--
--
+i||aji|
+od||od|
 -
 -
 -

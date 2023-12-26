@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tRadějov
 aGG
 d31.03.2023 11:33:45
@@ -13,10 +13,11 @@ q0
 -
 -
 -
-jedl jsi|jedus
-no ale|nale
-i kdyby|bar by aj
-i když|bar
+jedl jsi|1|jedus|
+no ale|1|nale|
+i kdyby|1|bar by aj|
+i když|1|bar|
+tak mi puč|1|toš ňe poščaj|
 -
 -
 někd|negd
@@ -32,30 +33,36 @@ kla|kła
 -
 krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
+kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
 -
 krÉF|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 syn|2||a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
+kožiCH|3|ch?|cha|chu?|ch?|chu?|chu?|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
 -
-sluníčko||0|sunéčko|
-doktor|syn|0|doktor|syn
+sluníčko||0|sunéčko||
+doktor|syn|0|doktor|syn|
+koži|kožiCH|0|kožu|kožiCH|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-mŮJ|-1|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|je,é|ých|ým|je,é|je,é|ých|ými|je,á|jí,é|jí,é|ji,ou|je,á|jí,é|jí,ou|je,é|ých|ým|je,é|je,é|ých|ými|je,é|ého|ému|je,é|je,é|ém|ým|je,á|ých|ým|je,á|je,á|ých|ými
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-JÁ|-1|já|mě|mně,mi|mě|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+mŮJ|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|je,é|ých|ým|je,é|je,é|ých|ými|je,á|jí,é|jí,é|ji,ou|je,á|jí,é|jí,ou|je,é|ých|ým|je,é|je,é|ých|ými|je,é|ého|ému|je,é|je,é|ém|ým|je,á|ých|ým|je,á|je,á|ých|ými
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+JÁ|já|mě|mně,mi|mě|já|mně|mnou
+tvŮJ|ůj|ého|ému|ého|ůj|ém|ým|i,í|ých|ým|e,é|i,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|e,é|ých|ým|e,é|e,é|ých|ými|e,á|í,é|í,é|i,ou|e,á|í,é|í,ou|e,é|ých|ým|e,é|e,é|ých|ými|e,é|ého|ému|e,é|e,é|ém|ým|e,á|ých|ým|e,á|e,á|ých|ými
 -
-tEN|-1|en|eho|omu?|oho?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|ú|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o|eho|omu?|o?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?
-mŮJ|-1|uj|ého?|ému?|ého?|ůj?|ém?|ým?|ji,í?|ých?|ým?|je,é?|ji,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,á?|jí,é?|jí,é?|ji,ou?|je,á?|jí,é?|jí,ou?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,é?|ého?|ému?|je,é?|je,é?|ém?|ým?|je,á?|ých?|ým?|je,á?|je,á?|ých?|ými?
-SE|-1|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
-JÁ|-1|já?|mě?|mně,mi?|mňa|já?|mně?|mnou?
+TEN|ten|teho|tomu?|toho?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|těmi?|ten?|teho|tomu?|ten?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tú|-|té?|tou?|ty?|teh|těm?|ty?|-|těch?|těmi?|to|teho|tomu?|to?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|těmi?
+mŮJ|uj|ého?|ému?|ého?|ůj?|ém?|ým?|ji,í?|ých?|ým?|je,é?|ji,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,á?|jí,é?|jí,é?|ji,ou?|je,á?|jí,é?|jí,ou?|je,é?|ých?|ým?|je,é?|je,é?|ých?|ými?|je,é?|ého?|ému?|je,é?|je,é?|ém?|ým?|je,á?|ých?|ým?|je,á?|je,á?|ých?|ými?
+SE|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
+JÁ|já?|ňa|ňe|mňa|já?|mně?|mnou?
+tvŮJ|ůj?|ého?|ému?|ého?|ůj?|ém?|ým?|i?,í?|ých?|ým?|e?,é?|i?,í?|ých?|ými?|ůj?|ojého|ému?|ůj?|ůj?|ém?|ým?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,á?|í?,é?|í?,é?|i?,ou?|e?,á?|í?,é?|í?,ou?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,é?|ého?|ému?|e?,é?|e?,é?|ém?|ým?|e?,á?|ých?|ým?|e?,á?|e?,á?|ých?|ými?
 -
-t|tEN|tEN
-mŮ|mŮJ|mŮJ
-SE|SE
-JÁ|JÁ
+t|tEN||TEN|
+mŮ|mŮJ|mŮ|mŮJ|
+|SE||SE|
+|JÁ||JÁ|
+tv|tvŮJ|tv|tvŮJ|
 -
 -
 -
@@ -65,31 +72,38 @@ neBÝT|119|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|bu
 jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 dojeT|30|-1|t|du|deš|de|deme|dete|dou|ď|ďme|ďte|l|l|la|lo|li|ly|ly|la|t|t|ta|to|ti|ty|ty|ta
 pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+poznAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+půjčIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
 BÝT|247|-1|být?|su,sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 nEBÝT|119|-1|ebyt?|ésu|ési?|éní?|ézme?|ézte?|ésú?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|ebył?|ebył?|ebyła?|ebyło|ebyli?|ebyły?|ebyły?|ebyła?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edl?|jedus?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 dojeT|30|-1|t?|du?|deš?|de?|deme?|dete?|dou?|ď?|ďme?|ďte?|ṵ|l?|la?|lo?|li?|ly?|ly?|la?|t?|t?|ta?|to?|ti?|ty?|ty?|ta?
 pomOCT|30|-1|oct?|ohu,(hovorově) pomůžu?|ůžeš?|ože|ůžeme?|ůžete?|ohou,(hovorově) pomůžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|oženi?|oženy?|oženy?|ožena?
+poznAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+pOŠČAT|30|-1|oščit?|oščím?|oščíš?|oščí?|oščíme?|oščíte?|oščí?|oščaj|oščme?|oščte?|oščil?|oščil?|oščila?|oščilo?|oščili?|oščily?|oščily?|oščila?|oščen?|oščen?|oščena?|oščeno?|oščeňi?|oščeny?|oščeny?|oščena?
 -
-BÝT|BÝT
-síct|séct||
-ne|n|neBÝT|nEBÝT
-doje|dojeT|dojeT
-pom|pomOCT|pomOCT
-nepom|pomOCT|pomOCT
+|BÝT||BÝT|
+síct||séct||
+ne|neBÝT|n|nEBÝT|
+doje|dojeT|doje|dojeT|
+pom|pomOCT|pom|pomOCT|
+nepom|pomOCT|nepom|pomOCT|
+pozn|poznAT|pozn|poznAT|
+půjč|půjčIT|p|pOŠČAT|
 -
-pořád|furd
-hned|hnet,hned
-potom|potem
-ještě|ešce
-zase|zas
-jenom|enom
-tak|tag
-už|uš
+pořád|furd|
+hned|hnet||hned|
+potom|potem|
+ještě|ešce|
+zase|zas|
+jenom|enom|
+tak|tag|
+už|uš|
 -
-přes||
-s|
+přes|||
+s||s|
 -
+aby|abi|
 -
 -

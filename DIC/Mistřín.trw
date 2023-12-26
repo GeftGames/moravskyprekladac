@@ -1,5 +1,6 @@
-TW v1.0
+TW v2
 tMistřín
+aGG
 d02.07.2023 9:29:18
 iVy miločtí páni- Mistřín41\n(moravskoslovenské)\nVy miločtí páni,\nvy ste grobiáni42\n,\npúščáte z roboty večér po klekání.\nGdyž klekání zvóní,\ndevět hodin bije,\nteprú dráb s čaganem43\nzapisovat ide.
 c#Zdroje dat\n-Nářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n-ŠEVELA, Martin. U žúdra. 3.vyd. Brumovice: Carpe diem, 2003, s. 107(https://is.muni.cz/th/eht4r/Bakalarkska_prace.pdf)\n\n#Popis nářečí\n-výskyt měkkého L (ľ, Ľ)
@@ -11,6 +12,7 @@ oSlovácko
 -
 -
 -
+máme ještě mlátit v seníku|1|máme ešče mṵáťiť kožuchi|
 -
 -
 -
@@ -22,33 +24,39 @@ listí|0|||||||m|-|-|-|-|-|-|-
 zelí|0|||||||m|||m|||ch|mi
 obilí|0|||||||m|||m|||ch|mi
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
+mašinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+stroj|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 listí|0|?||?|?|?|?|m?|-|-|-|-|-|-|-
 zelí|0|?||?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 obilí|0|?||?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 svatBA|1|ba|by?|bě?|bu?|bo?|bě?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
+mašiNA|1|na?|ny?|ně?|nu?|no?|ňe|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 -
-||0|grubián|
-práce||0|robota|
-hůl||0|čagan|
-||0|klekání|
-hodin|ženA|0|hodin|ženA
-listí|listí|0|listí|listí
-zelí|zelí|0|zelí|zelí
-obilí|obilí|0|obilí|obilí
-proutí||0|bez prúťí|
-svat|svatBA|0|svaj|svatBA
-eskadrona?||0|škadróna|
+||0|grubián||
+práce||0|robota||
+hůl||0|čagan||
+||0|klekání||
+hodin|ženA|0|hodin|ženA|
+listí|listí|0|listí|listí|
+zelí|zelí|0|zelí|zelí|
+obilí|obilí|0|obilí|obilí|
+proutí||0|bez prúťí||
+svat|svatBA|0|svaj|svatBA|
+eskadrona?||0|škadróna||
+jetelina||0|jatelinu 4p||
+mašin|mašinA|0|mašin|mašiNA|
+stroj|stroj|0|maši|mašiNA|
 -
 -
 -
 -
-vY|-1|y|ás|ám|ás|y|ás|ámi
+vY|y|ás|ám|ás|y|ás|ámi
 -
-vY|-1|y|ás?|ám?|ás?|y?|ás?|ámi?
+vY|y|ás?|ám?|ás?|y?|ás?|ámi?
 -
-v|vY|vY
+v|vY|v|vY|
 -
 -
 -
@@ -58,23 +66,35 @@ zvoNIT|15|-1|nit|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|nil|nil|nila|nilo|n
 JÍT|95|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|šed|šedši|šedše
 pouštĚT|15|-1|ět|ím|íš|í|íme|íte|í,pouštějí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 bÍT|15|-1|ít|iji,biju|iješ|ije|ijeme|ijete|ijí,bijou|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+přeHNAT|15|-1|hnat|ženu|ženeš|žene|ženeme|ženete|ženou|žeň|žeňme|žeňte|hnal|hnal|hnala|hnalo|hnali|hnaly|hnaly|hnala|hnán|hnán|hnána|hnáno|hnáni|hnány|hnány|hnána
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+mlÁTIT|15|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|átil|átil|átila|átilo|átili|átily|átily|átila|ácen|ácen|ácena|áceno|áceni|áceny|áceny|ácena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|zme|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 zvONIT|15|-1|nit?|ním?|níš?|óní|níme?|níte?|ní?|ň?|ňme?|ňte?|nil?|nil?|nila?|nilo?|nili?|nily?|nily?|nila?|něn?|něn?|něna?|něno?|něni?|něny?|něny?|něna?
 JÍT|95|-1|jít?|jdu?|jdeš?|ide|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|šed?|šedši?|šedše?
 púščÁT|15|-1|ět?|ím?|íš?|í?|íme?|áte|í,pouštějí?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 bÍT|15|-1|ít?|iji,biju?|iješ?|ije|ijeme?|ijete?|ijí,bijou?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+přeHNAT|15|-1|hnat?|ženu?|ženeš?|žene?|ženeme?|ženete?|ženou?|žeň?|žeňme?|žeňte?|hnal?|hnal?|hnala?|hnalo?|hnali|hnaly?|hnaly?|hnala?|hnán?|hnán?|hnána?|hnáno?|hnáňi?|hnány?|hnány?|hnána?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+mlÁŤIT|15|-1|áťiť|áťím?|áťíš?|áťí?|áťíme?|áťíte?|áťí?|ať?|aťme?|aťte?|áťil?|áťil?|áťila?|áťilo?|áťili?|áťily?|áťily?|áťila?|ácen?|ácen?|ácena?|áceno?|áceňi?|áceny?|áceny?|ácena?
 -
-BÝT|BÝT
-zvo|zvoNIT|zvONIT
-JÍT|JÍT
-pou|pouštĚT|púščÁT
-b|bÍT|bÍT
+|BÝT||BÝT|
+zvo|zvoNIT|zvo|zvONIT|
+|JÍT||JÍT|
+pou|pouštĚT|pou|púščÁT|
+b|bÍT|b|bÍT|
+pře|přeHNAT|pře|přeHNAT|
+m|mÍT|m|mÍT|
+ml|mlÁTIT|mṵ|mlÁŤIT|
 -
-večer|večér
-teprve|teprvú
+večer|večér|
+teprve|teprvú|
+už|už|
+ještě|ešče|
 -
+na||na|
 -
-když|gdyž
+když|gdyž|
 -
 -

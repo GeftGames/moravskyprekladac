@@ -1,8 +1,9 @@
-TW v1.0
+TW v2
 tVanovice
 aGG
 d27.06.2023 14:58:30
-ikrmné dobitek Vanovice BK\nexpr. hlučně hrát na hudební nástroj: břnkál na kitar Vanovice BK
+ikrmné dobitek Vanovice BK\nexpr. hlučně hrát na hudební nástroj: břnkál na kitar Vanovice BK\n\nmá kužo̬ jako holinke̬ a ňejaké kožo̬ch si vopatří Vanovice BK
+c#Zdroje dat\n-snčj
 g49.5674687,16.665330
 q0
 -
@@ -12,42 +13,68 @@ q0
 -
 -
 -
+op|vop
 -
 -
+žu|žô
+ký|ké
 -
 dobytEK|2|ek|ka|ku|ek|ku|ku|kem|-|-|-|-|-|-|-
 kytaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 řetěz|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+kůžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+holínKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
 -
 dobytEK|2|ek|ka?|ku?|ek?|ku?|ku?|kem?|-|-|-|-|-|-|-
 kytaRA|1|ra?|ry?|ře?|rô|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 řetaS|3|s?|su?|su?|s|se?|su,se?|sem?|sy?|sů?|sům?|sy?|sy?|sech?|sy?
+kúžE|1|e?|e?|i?|ô|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+holínKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|kê|ky?|kách?|kami?
+kožôCH|3|ch|chu?,cha?|chu?|ch?|chu?|chu?,še?|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
 -
-dobyt|dobytEK|0|dobyt|dobytEK
-kita|kytaRA|0|kita|kytaRA
-řetěz|řetěz|0|řeta|řetaS
+dobyt|dobytEK|0|dobyt|dobytEK|
+kita|kytaRA|0|kita|kytaRA|
+řetěz|řetěz|0|řeta|řetaS|
+kůž|kůžE|0|kuž|kúžE|
+holín|holínKA|0|holin|holínKA|
+koži|kožiCH|0|kožô|kožôCH|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-krmn|zelenÝ|zelenÝ
+krmn|zelenÝ|krmn|zelenÝ|
 -
+nějaKÝ|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
+nějaKÝ|ký?|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ké|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
+SE|-|sebe?|si,sobě?|se?,sebe?|-|sobě?|sebou?
 -
+něja|nějaKÝ|něja|nějaKÝ|
+|SE||SE|
 -
 -
 -
 -
 cinkNOUT|30|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,cinknul|l,cinknul|la,cinknula|lo,cinknulo|li,cinknuli|ly,cinknuly|ly,cinknuly|la,cinknula|nut|nut|nuta|nuto|nuti|nuty|nuty|nuta
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+opatřIT|30|-1|it|ím|íš|í|íme|íte|í|i,opatř|eme,opatřme|ete,opatřte|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
 cinkNOUT|30|-1|nót|nu?|neš?|ne?|neme?|nete?|nou?|ni?|něme?|něte?|l,cinknul?|l,cinknul?|la,cinknula?|lo,cinknulo?|li,cinknuli?|ly,cinknuly?|ly,cinknuly?|la,cinknula?|nut?|nut?|nuta?|nuto?|nuti?|nuty?|nuty?|nuta?
+mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+vopatřIT|30|-1|it?|ím?|íš?|í|íme?|íte?|í?|i?,opatř?|eme?,opatřme?|ete?,opatřte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
-břinkat|břnkál ||
-cink|cinkNOUT|cinkNOUT
+břinkat||břônkál ||
+cink|cinkNOUT|cink|cinkNOUT|
+m|mÍT|m|mÍT|
+opatř|opatřIT|vopatř|opatřIT|
 -
 -
-na|
+na||na|
 -
+jako|jako|
+a|a|
 -
 -

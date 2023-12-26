@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 fSpisovná čeština
 tPěnčín
 aGG
@@ -24,17 +24,16 @@ oHaná
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 stavení|0|||||||m|||m|||ch|mi
 cop|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 -
 kosť|1||ě|i?|?|i?|i?|í|i|í?|im|i?|i?|ách|ama
 staveňI|0|í?|á|í?|í?|í?|í?|ím?|i|i|ím?|í?|í?|ích?|ima
 cop|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+čloňEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 -
-kost|kost|0|kosť|kosť
-cop|cop|0|cuplék|cop
--
--
--
--
+kost|kost|0|kosť|kosť|
+cop|cop|0|cuplék|cop|
+člun|člunEK|0|čloň|čloňEK|
 -
 -
 -
@@ -44,7 +43,11 @@ cop|cop|0|cuplék|cop
 -
 -
 -
-teprove,teprve|teprvé
+-
+-
+-
+-
+teprove,teprve|teprvé|
 -
 -
 -

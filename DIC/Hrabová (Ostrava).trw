@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tHrabová (Ostrava)
 aGG
 d27.06.2023 14:55:24
@@ -12,6 +12,7 @@ oLašsko
 -
 -
 -
+v kožichu|1|f kožuchu|
 -
 -
 -
@@ -19,21 +20,34 @@ oLašsko
 -
 dobytEK|2|ek|ka|ku|ek|ku|ku|kem|-|-|-|-|-|-|-
 advent|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+duCH|3|ch|cha|chu,chovi|cha|chu|chu,chovi|chem|chové|chů|chům|chy|chové|ších,chách|chy
+vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
 -
 dobytEK|2|ek?|ka?|ku|ek?|ku?|ku?|kem?|-|-|-|-|-|-|-
 advenT|3|t?|u?|u?|?|e?|će|em?|y?|ů?|ům?|y?|y?|ech?|y?
+duCH|3|ch?|cha?|chu?,chovi?|cha?|chu?|chu|chem?|chové?|chú?|chúm?|chy?|chové?|ších?,chách?|chy?
+vodA|1|a?|y|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+kožiCH|3|ch?|chu?|chu?|ch?|chu?|chu|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
 -
-dobyt|dobytEK|0|dobyt|dobytEK
-advent|advent|0|adven|advenT
+dobyt|dobytEK|0|dobyt|dobytEK|
+advent|advent|0|adven|advenT|
+du|duCH|2|du|duCH|
+vod|vodA|0|vod|vodA|
+koži|kožiCH|0|kožu|kožiCH|
+||0|C'ele||
 -
+žlutÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
+žluTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|t|t|tá?|tých?|tým?|tá?|tá?|tých?|tými?|t|t|tá?|té?|té?|tou?|tá?|té?|tou?|t|t|té?|tých?|tým?|té?|té?|tých?|tými?|t|t|tý?|tého?|tému?|tého?|tý?|tym|tým?|t|t|tí?|tých?|tým?|té?|tí?|tých?|tými?|t|t|tý?|tého?|tému?|tý?|tý?|tém?|tým?|t|t|té?|tých?|tým?|té?|té?|tých?|tými?|t|t
 -
+svat|žlutÝ|sva|žluTÝ|
 -
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+CO|co|čeho|čemu|co,-č|-|čem|čím
 -
-CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
 -
-CO|CO
+|CO||CO|
 -
 -
 -
@@ -50,13 +64,17 @@ dÁT|94|-1|adź|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|al
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|budźe|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 žeNIT|15|-1|nić|ním?|níš?|ní?|níme?|níte?|ní?|ň?|ňme?|ňte?|nil?|nil?|nila?|nilo?|nili?|nily?|nily?|nila?|něn?|něn?|něna?|něno?|něni?|něny?|něny?|něna?
 -
-ne|neBÝT|neBÝT
-ž|žRÁT|žRÁT
-d|dÁT|dÁT
-|BÝT|BÝT
-že|žeNIT|žeNIT
+ne|neBÝT|ne|neBÝT|
+ž|žRÁT|ž|žRÁT|
+d|dÁT|d|dÁT|
+|BÝT||BÝT|
+že|žeNIT|že|žeNIT|
 -
+směle|smjełe|
 -
+o||o|
+do||do|
+v||f|
 -
 -
 -

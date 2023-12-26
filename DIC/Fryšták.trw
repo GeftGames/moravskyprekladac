@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tFryšták
 aGG
 d27.06.2023 14:42:55
@@ -6,30 +6,31 @@ idovézł dobytky žyvé řezňíkom na zab’iťí Fryšták ZL
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Fry%C5%A1t%C3%A1k+ZL">sncj.ujc.cas.cz</a>
 g49.2850098,17.6838207
 q0
+oValašsko
 -
 -
 -
 -
 -
-opakovaně peklo|pékávało
-štípací kleště|cvikacý kléšče
-bezrohá koza|šułá koza
-housenkový traktor|déťík
-pásový traktor|déťík
-cik cak steh|cykcakový stech
-nástroj k rýhování rovných linií do kůže|čárkovač
-železná tyč na stažení zdí|ankr
-železná tyč na zpevnění zdí|ankr
-podkladová dýha|blintfonýr
-přes nařezané laťky|přez nařezané łaťky
-postranice postele|betsajtna
-dříve se|dřýf se
-stahovala stavba pomocí železných tyčí|ankrovało
-podšívka pod zadní díl svršku boty|bordura
-štípací kleště|cvikačky
-zhotovený ze spojených zářezů|cynkovaný
-koryto hoblovací stolice|bajlót
-čtvrtá postní neděle|družebná neďela
+opakovaně peklo|1|pékávało|
+štípací kleště|1|cvikacý kléšče|
+bezrohá koza|1|šułá koza|
+housenkový traktor|1|déťík|
+pásový traktor|1|déťík|
+cik cak steh|1|cykcakový stech|
+nástroj k rýhování rovných linií do kůže|1|čárkovač|
+železná tyč na stažení zdí|1|ankr|
+železná tyč na zpevnění zdí|1|ankr|
+podkladová dýha|1|blintfonýr|
+přes nařezané laťky|1|přez nařezané łaťky|
+postranice postele|1|betsajtna|
+dříve se|1|dřýf se|
+stahovala stavba pomocí železných tyčí|1|ankrovało|
+podšívka pod zadní díl svršku boty|1|bordura|
+štípací kleště|1|cvikačky|
+zhotovený ze spojených zářezů|1|cynkovaný|
+koryto hoblovací stolice|1|bajlót|
+čtvrtá postní neděle|1|družebná neďela|
 -
 -
 -
@@ -63,6 +64,7 @@ stavBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 nábytEK|3|ek|ku|ku|ek|ku|ku|kem|-|-|-|-|-|-|-
 nedělE|1|e|e|i|i|e|i|í|e|,í|ím|e|e|ích|emi
 borovicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 -
 řezníK|2|k?|ka?|kovi,ku?|ka?|ku?|kovi,ku?|kem?|ci?|ků?|kom|ky?|ci?|cích?|ky?
 stavení|0|?|?|?||?|?|m?|?|?|m?|?|?|ch?|mi?
@@ -82,28 +84,30 @@ stavBA|1|ba|by?|bě?|bu?|bo?|bě?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 nábytEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|-|-|-|-|-|-|-
 nedělE|1|a|e?|i?|i?|e?|i?|í?|e?|,í?|ím?|e?|e?|ích?|emi?
 bor|1||e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+čłúnEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 -
-řezní|řezníK|0|řezňí|řezníK
-zabití|stavení|0|zab’iťí|stavení
-díl|dílEK|0|ďíł|dílEK
-|kleště|0||kleště
-tr|trÁVA|0|tr|trÁVA
-koz|kozA|0|koz|kozA
-ste|steH|0|ste|steH
-dý|dýHA|0|dý|dýHA
-||0|fonýr|
-la|laŤKA|0|ła|laŤKA
-bazén|dílEK|0|bazén|dílEK
-malt|maltA|0|cemento|cementoFKA
-pohád|pohádKA|0|pohád|pohádKA
-věn|věnEC|0|vjen|věnEC
-želez|železO|0|želez|železO
-stav|stavBA|0|stav|stavBA
-nábyt|nábytEK|0|nábyt|nábytEK
-neděl|nedělE|0|neďel|nedělE
-borovic|borovicE|0|bor|bor
-dírkovač ||0|ďírkovač|
-děrovadlo||0|ďerovadło|
+řezní|řezníK|0|řezňí|řezníK|
+zabití|stavení|0|zab’iťí|stavení|
+díl|dílEK|0|ďíł|dílEK|
+|kleště|0||kleště|
+tr|trÁVA|0|tr|trÁVA|
+koz|kozA|0|koz|kozA|
+ste|steH|0|ste|steH|
+dý|dýHA|0|dý|dýHA|
+||0|fonýr||
+la|laŤKA|0|ła|laŤKA|
+bazén|dílEK|0|bazén|dílEK|
+malt|maltA|0|cemento|cementoFKA|
+pohád|pohádKA|0|pohád|pohádKA|
+věn|věnEC|0|vjen|věnEC|
+želez|železO|0|želez|železO|
+stav|stavBA|0|stav|stavBA|
+nábyt|nábytEK|0|nábyt|nábytEK|
+neděl|nedělE|0|neďel|nedělE|
+borovic|borovicE|0|bor|bor|
+dírkovač ||0|ďírkovač||
+děrovadlo||0|ďerovadło||
+člun|člunEK|0|čłún|čłúnEK|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 afriCKÝ|-1|cké|ckého|ckému|cké|cké|ckém|ckým|||cká|ckých|ckým|cká|cká|ckých|ckými|||cká|cké|cké|ckou|cká|cké|ckou|||cké|ckých|ckým|cké|cké|ckých|ckými|||cký|ckého|ckému|ckého|cký|ckém|ckým|||čtí|ckých|ckým|cké|čtí|ckých|ckými|||cký|ckého|ckému|cký|cký|ckém|ckým|||cké|ckých|ckým|cké|cké|ckých|ckými||
@@ -117,28 +121,28 @@ bezroHÝ|-1|hé?|hého?|hému?|hé?|hé?|hém?|hým?|h?|h?|há?|hých?|hým?|há
 ceŁÝ|-1|łé?|łého?|łému?|łé?|łé?|łém?|łým?|ł?|ł?|łá?|łých?|łým?|łá?|łá?|łých?|łými?|ł?|ł?|łá|łé?|łé?|łou?|łá?|łé?|łou?|ł?|ł?|łé?|łých?|łým?|łé?|łé?|łých?|łými?|ł?|ł?|łý?|łého?|łému?|łého?|łý?|łém?|łým?|ł?|ł?|łí?|łých?|łým?|łé?|łí?|łých?|łými?|ł?|ł?|łý?|łého?|łému?|łý?|łý?|łém?|łým?|ł?|ł?|łé?|łých?|łým?|łé?|łé?|łých?|łými?|ł?|ł?
 hrubÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-živ|žyv|zelenÝ|zeleNÝ
-afri|afry|afriCKÝ|afriCKÝ
-bezroh|šu|bezrohÝ|ceŁÝ
-cel|ce?|celÝ|ceŁÝ
-nařezan|nařeza|zelenÝ|zeleNÝ
-položen|połože|zelenÝ|zeleNÝ
-hrub|hrubÝ|hrubÝ
+živ|zelenÝ|žyv|zeleNÝ|
+afri|afriCKÝ|afry|afriCKÝ|
+bezroh|bezrohÝ|šu|ceŁÝ|
+cel|celÝ|ce?|ceŁÝ|
+nařezan|zelenÝ|nařeza|zeleNÝ|
+položen|zelenÝ|połože|zeleNÝ|
+hrub|hrubÝ|hrub|hrubÝ|
 -
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+CO|co|čeho|čemu|co,-č|-|čem|čím
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 -
-CO|-1|co?|čeho?|čemu?|co?,-č?|-|čem?|čím?
-SE|-1|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
-TEN|-1|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|tá|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
-takovÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+CO|co?|čeho?|čemu?|co?,-č?|-|čem?|čím?
+SE|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|tá|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+takovÝ|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
 -
-CO|CO
-SE|SE
-t||tEN|TEN
-takov|takovÝ|takovÝ
+|CO||CO|
+|SE||SE|
+t|tEN||TEN|
+takov|takovÝ|takov|takovÝ|
 -
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
@@ -146,8 +150,8 @@ druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|
 jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ním?|ni?|něch?|něm?|ny?|ni?|něch?|němi?|en?|noho?|nomu?|en?|en?|nom?|ním?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|na|né?|né?|nu?|na?|né?|nou?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|no?|noho?|nomu?|no?|no?|nom?|ním?|na?|něch?|něm?|na?|na?|něch?|němi?
 druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|héj|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
-jed|jedEN|jedEN
-dru|druHÝ|druHÝ
+jed|jedEN|jed|jedEN|
+dru|druHÝ|dru|druHÝ|
 -
 dovÉZT|30|-1|ést|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
@@ -161,23 +165,23 @@ dávAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ał|al?|ala?|a
 dělAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|ały|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 rozjET|22|-1|et?|u?|eš?|e?|edeme?|edete?|edou?|eď?|eďme?|eďte?|el?|el?|eła|elo?|eli?|ely?|ely?|ela?
 -
-dov|dovÉZT|dovÉZT
-BÝT|BÝT
-dáv|dávAT|dávAT
-děl|ďeł|dělAT|dělAT
-rozj|rozjET|rozjET
-nerozj|rozjET|rozjET
+dov|dovÉZT|dov|dovÉZT|
+|BÝT||BÝT|
+dáv|dávAT|dáv|dávAT|
+děl|dělAT|ďeł|dělAT|
+rozj|rozjET|rozj|rozjET|
+nerozj|rozjET|nerozj|rozjET|
 -
-moc
-potom
-dříve,dřív|dřýf
-skrz|skrs
+moc|moc|
+potom|potom|
+dříve,dřív|dřýf|
+skrz|skrs|
 -
-na|
-vedle|
-přes|přez|
+na||na|
+vedle||vedle|
+přes||přez|
 -
-a
-aby
+a|a|
+aby|aby|
 -
 -

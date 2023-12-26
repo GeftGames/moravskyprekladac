@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tLoukov
 aGG
 d25.10.2023 20:17:02
@@ -15,20 +15,23 @@ q0
 -
 -
 -
+člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+-
+čłuňEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+-
+člun|člunEK|0|čłuň|čłuňEK|
 -
 -
 -
 -
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+JÁ|já?|mě?,(knižně) mne[2]?|mi|mě?,(knižně) mne[2]?|já?|mně?|mnou?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
--
-JÁ|-1|já?|mě?,(knižně) mne[2]?|mi|mě?,(knižně) mne[2]?|já?|mně?|mnou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
--
-JÁ|JÁ
-t|tEN|tEN
+|JÁ||JÁ|
+t|tEN|t|tEN|
 -
 -
 -
@@ -37,10 +40,10 @@ vaDIT|7|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dil
 -
 vaDIT|7|-1|dit?|dím?|díš?|ďí|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?
 -
-va|vaDIT|vaDIT
-neva|vaDIT|vaDIT
+va|vaDIT|va|vaDIT|
+neva|vaDIT|neva|vaDIT|
 -
-doposud|dofčiłku
+doposud|dofčiłku|
 -
 -
 -

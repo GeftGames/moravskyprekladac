@@ -1,5 +1,6 @@
-TW v1.0
+TW v2
 tBlatnička
+aGG
 d25.06.2023 16:58:49
 is tebú młúvid a ze starú bránkú vŕzaď je jedno Blatnička HO – je to zbytečná řeč\ngalán z galánkú seďí pod bránkú a galánka płáče, že bi jedła kołáče Blatnička\n do Słafkova sa jede š čupka do čupka Blatnička HO\ndvúkolajka Blatnička HO\nďecka sa enom pořáď dožírajú Blatnička HO\nžadonit: ďecka furd dožírajú, abih ím kúpiła bombósú Blatnička HO
 c#Zdroje dat\n-sncj.ujc.cas.cz
@@ -11,17 +12,19 @@ q0
 -
 -
 -
-a se starou|a ze starú
-je to zbytečná řeč s tebou mluvit|s tebú młúvid a ze starú bránkú vŕzaď je jedno
-milenec s milenkou|galán z galánkú
-z kopce do kopce|š čupka do čupka
-tkalcovský výrobek|kadlecké ďílo
-to byl teda kanec|to býl? ale? kančúr
-na Suchov|na Súchof
+a se starou|1|a ze starú|
+je to zbytečná řeč s tebou mluvit|1|s tebú młúvid a ze starú bránkú vŕzaď je jedno|
+milenec s milenkou|1|galán z galánkú|
+z kopce do kopce|1|š čupka do čupka|
+tkalcovský výrobek|1|kadlecké ďílo|
+to byl teda kanec|1|to býl? ale? kančúr|
+na Suchov|1|na Súchof|
+jak u|1|jag u|
 -
 -
 -
 ou|ú
+ů|ú
 -
 ami|ama
 -
@@ -36,6 +39,10 @@ mravenišTĚ|0|tě|tě|ti|tě|tě|ti|těm|tě|ť|tím|tě|tě|tích|ti
 buvol|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
 silnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 louKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k,|kám|ky|ky|kách|kami
+pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
+bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
+pec|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+farář|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
 -
 stroj|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e|e?|ích?|i?
 plán|1|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
@@ -48,37 +55,45 @@ bravleňisKO|0|ko|tě?|ti?|tě?|tě?|ti?|těm?|tě?|ť?|tím?|tě?|tě?|tích?|t
 bivol|2|ł|ła?|łovi,łu?|ła?|łe?|łovi,łu?|łem?|łi,łové?|łů?|łům?|ły?|łi,łové?|łech?|ły?
 silnicE|1|e?|e?|i?|i?|e?|i?|ú|e?|?|ím?|e?|e?|ích?|emi?
 louKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k,?|kám?|ky?|ky?|kách?|kama
+pÁN|2|án?|ána|ánu?,ánovi?|ána?|ane?|ánu?,ánovi?|ánem|áňi?,ánové?|ánú?|ánúm?|ány?|áňi?,ánové?|ánech?|ány?
+bÚH|2|úh?|oha|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem|ozi?,ohové?|ohú?|ohúm?|ohy?|ozi?,ohové?|ozích?|ohy?
+pec|1|?|e?|i?|?|i?|i?|ú|e?|í?|ím?|e?|e?|ích?|emi?
+panáčEG|2|eg|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
 -
-aeroplán|plán|0|ajroplán|plán
-nápadník||0|galán|
-koláč|stroj|0|kołáč|stroj
-slavkov||2|słafkov|
-kop|kopEC|0|čup|stromEK
-dvoukolej|pohádKA|0|dvúkolaj|pohádKA
-d|dÍTĚ|0|ď|ďÍTĚ
-bonbón|bonbón|0|bonbó|bonbóN
-kaneček||0|kaneček|
-kaňour||0|kančúr|
-mraveniš|mravenišTĚ|0|bravleňis|bravleňisKO
-buvol|buvol|0|bivo|bivol
-suchov||2|súchof|
-silnic|silnicE|0|silňic|silnicE
-lou|louKA|0|łú|louKA
+aeroplán|plán|0|ajroplán|plán|
+nápadník||0|galán||
+koláč|stroj|0|kołáč|stroj|
+slavkov||2|słafkov||
+kop|kopEC|0|čup|stromEK|
+dvoukolej|pohádKA|0|dvúkolaj|pohádKA|
+d|dÍTĚ|0|ď|ďÍTĚ|
+bonbón|bonbón|0|bonbó|bonbóN|
+kaneček||0|kaneček||
+kaňour||0|kančúr||
+mraveniš|mravenišTĚ|0|bravleňis|bravleňisKO|
+buvol|buvol|0|bivo|bivol|
+suchov||2|súchof||
+silnic|silnicE|0|silňic|silnicE|
+lou|louKA|0|łú|louKA|
+p|pÁN|0|p|pÁN|
+b|bŮH|0|b|bÚH|
+pec|pec|0|pec|pec|
+farář|farář|0|panáč|panáčEG|
 -
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
-ONI|-1|oni|jich,#nich|jim,#nim|je,#ně|-|#nich|jimi,#nimi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+ONI|oni|jich,#nich|jim,#nim|je,#ně|-|#nich|jimi,#nimi
 -
-SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
-tY|-1|y?|[1],ebe?|[1],obě?|[1],ebe?|y?|obě?|ebú
-ONI|-1|oni?|jich,nich*?|ím|je,ně*?|-|nich*?|jimi,nimi*?
+SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+tY|y?|[1],ebe?|[1],obě?|[1],ebe?|y?|obě?|ebú
+ONI|oni?|jich,nich*?|ím|je,ně*?|-|nich*?|jimi,nimi*?
 -
-SE|SE
-tY|tY|tY
-ONI|ONI
+|SE||SE|
+tY|tY|tY|tY|
+|ONI||ONI|
 -
 -
 -
@@ -91,39 +106,45 @@ JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojede
 otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
 dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 mluvIT|15|-1|id|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
 płAKAT|7|-1|akat?|áču?|áčeš?|áče|áčeme?|áčete?|áčou?|ač,plakej?|ačme,plakejme?|ačte,plakejte?|akal?|akal?|akala?|akalo?|akali?|akaly?|akaly?|akala?
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edl?|edl?|edła|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
-JET|31|-1|jet?|jedu?|jedeš?|jede|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel?|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
+JET|31|-1|jet?|jedu?|jedeš?|jede|jedeme?|jedete?|jedú|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel?|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
 dožírAT|15|-1|at|uji?|uješ?|uje?|ujeme?|ujete?|ajú|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 kÚPIT|15|-1|úpit|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|úpiła|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
 dostaT|22|-1|t?|nu?|než|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|l?|l?|la?|lo?|li?|ly?|ly?|la?
+mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
-mluv|młúv|mluvIT|mluvIT
-BÝT|BÝT
-vrzat|vŕzaď||
-pl|pł|plAKAT|plAKAT
-jÍ|jÍST|jÍST
-JET|JET
-škádlí|dožír||dožírAT
-otrav|dožír|otravOVAT|dožírAT
-k|kOUPIT|kÚPIT
-dosta|dostaT|dostaT
+mluv|mluvIT|młúv|mluvIT|
+|BÝT||BÝT|
+vrzat||vŕzaď||
+pl|plAKAT|pł|plAKAT|
+jÍ|jÍST|jÍ|jÍST|
+|JET||JET|
+škádlí||dožír|dožírAT|
+otrav|otravOVAT|dožír|dožírAT|
+k|kOUPIT|k|kÚPIT|
+dosta|dostaT|dosta|dostaT|
+m|mÍT|m|mÍT|
 -
-jen,jenom|enom
-pořád|pořáď,furd
-jakkoli,všelijak,ledajak|bárjak
-
+jen,jenom|enom|
+pořád|pořáď||furd|
+jakkoli,všelijak,ledajak|bárjak|
 -
-se|ze|
-pod|
-na|
+se||ze|
+pod||pod|
+na||na|
+u||u|
+za||za|
+s||s|
 -
-a
-že
-abych|abyh
-nebo|lebo
+a|a|
+že|že|
+abych|abyh|
+nebo|lebo|
+||
 -
 -

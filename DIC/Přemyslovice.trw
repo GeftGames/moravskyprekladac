@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tPřemyslovice
 d27.06.2023 12:27:29
 idávé pozor, aď nezakopneš, je tad vsoké člpek! Přemyslovice PV\nale necgaň, ať ťi hba nehpadne! Přemyslovice PV\nšaks to vjeďel ž dávno, ale dofčlk ťe to nevaďilo Přemyslovice PV\n\n\nhttps://theses.cz/id/1tmdiz/15008735\nvokno\nne a, ě kaše\nnaše, vaše\nk frantô, vidím frantô\nfrantův kabát->frantu kabát\nne ť
@@ -9,12 +9,12 @@ q0
 -
 -
 -
-Mám tě udeřit?|Mám ťe cêngnót?
+Mám tě udeřit?|1|Mám ťe cêngnót?|
 -
 -
-mám tě|mám ťe
-však jsi|šaks
-vědel jsi to už dlouho|šaks to vjeďel ôž dávno
+mám tě|1|mám ťe|
+však jsi|1|šaks|
+vědel jsi to už dlouho|1|šaks to vjeďel ôž dávno|
 -
 -
 neup|nehôp
@@ -26,28 +26,31 @@ vej|vé
 -
 stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 pusA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 -
 stromEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 pusA|1|a|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+člôňEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 -
-pozor||0|pozor|
-schůd|stromEK|0|člôp|stromEK
-pus|pusA|0|hôb|pusA
+pozor||0|pozor||
+schůd|stromEK|0|člôp|stromEK|
+pus|pusA|0|hôb|pusA|
+člun|člunEK|0|člôň|člôňEK|
 -
 vysoKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
 vysoKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|ké|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
 -
-vyso|vêso|vysoKÝ|vysoKÝ
+vyso|vysoKÝ|vêso|vysoKÝ|
 -
-tY|-1|y|[1],ebe|i,obě|[1],ebe|y|obě|ebou
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tY|y|[1],ebe|i,obě|[1],ebe|y|obě|ebou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-tY|-1|ty?|ťe,tebe?|ťi|t[1],tebe?|ty?|tobě?|tebou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+tY|ty?|ťe,tebe?|ťi|t[1],tebe?|ty?|tobě?|tebou?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-t|tY|tY
-t|tEN|tEN
+t|tY|t|tY|
+t|tEN|t|tEN|
 -
 -
 -
@@ -69,30 +72,30 @@ mÍT|7|-1|ít?|ám|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla
 vĚDĚT|7|-1|ědět?|ím?|íš?|í?|íme?|íte?|ědí?|ěz?|ězme?|ězte?|jeďel|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
 vaDIT|7|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?
 -
-dávA|dávAT|dávAT
-zakopnout|zakopnót ty-neš||
-BÝT|BÝT
-l|cêg|lHÁT|cêgAŇIT
-podvád|cêg|podvádĚT|cêgAŇIT
-nel|necêg|lHÁT|cêgAŇIT
-upad|upadNOUT|upadNOUT
-neupad|nehôpad|upadNOUT|cêgAŇIT
-m|mÍT|mÍT
-v|vĚDĚT|vĚDĚT
-va|vaDIT|vaDIT
-neva|vaDIT|vaDIT
+dávA|dávAT|dávA|dávAT|
+zakopnout||zakopnót ty-neš||
+|BÝT||BÝT|
+l|lHÁT|cêg|cêgAŇIT|
+podvád|podvádĚT|cêg|cêgAŇIT|
+nel|lHÁT|necêg|cêgAŇIT|
+upad|upadNOUT|upad|upadNOUT|
+neupad|upadNOUT|nehôpad|cêgAŇIT|
+m|mÍT|m|mÍT|
+v|vĚDĚT|v|vĚDĚT|
+va|vaDIT|va|vaDIT|
+neva|vaDIT|neva|vaDIT|
 -
-tady|tadê
-už|ôš
-potichu|poťichô
-už|ôž
-dávno
-doposud|dofčêlkô
+tady|tadê|
+už|ôš|
+potichu|poťichô|
+už|ôž|
+dávno|dávno|
+doposud|dofčêlkô|
 -
-ale|
+ale||ale|
 -
-ať|aď
-ale
+ať|aď|
+ale|ale|
 -
-ať
+ať|ať|
 -

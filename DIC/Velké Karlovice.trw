@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tVelké Karlovice
 aGG
 d31.05.2023 8:56:46
-c#Zdroje dat\n-<a href="http://eyetracking.upol.cz/naki_vystava_nareci/">eyetracking.upol.cz/naki_vystava_nareci</a>\n-Karlovické nářečí-Svěrák, František
+c#Zdroje dat\n-<a href="http://eyetracking.upol.cz/naki_vystava_nareci/">eyetracking.upol.cz/naki_vystava_nareci</a>\n-Karlovické nářečí-Svěrák, František\n-https://sncj.ujc.cas.cz/
 g49.3641389,18.3054295
 q0
 oValašsko
@@ -11,8 +11,8 @@ oValašsko
 -
 -
 -
-do čtvrnácti let|do štrnásti rokú
-tam na kopce|hen na čupcy
+do čtvrnácti let|1|do štrnásti rokú|
+tam na kopce|1|hen na čupcy|
 -
 -
 ně|ne
@@ -21,28 +21,35 @@ ně|ne
 pít|piť
 pil|pił
 lat|lať
+sila|syła
 -
 kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
+pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
+bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
 -
 čupEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|cy?|ců?|cům?|cy|ce?|cích?|ci?
+pÁN|2|án?|ána|ánu?,ánovi?|ána?|ane?|ánu?,ánovi?|ánem?|áňi?,ánové?|ánú?|ánúm?|ány?|áňi?,ánové?|ánech?|ány?
+bÚH|2|úh?|oha|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem?|ozi?,ohové?|ohú?|ohúm?|ohy?|ozi?,ohové?|ozích?|ohy?
 -
-obilí||0|zbožú|
-žně||0|žňa|
-doktor||0|dochtor|
-sklo||0|skło|
-kop|kopEC|0|čup|čupEC
+obilí||0|zbožú||
+žně||0|žňa||
+doktor||0|dochtor||
+sklo||0|skło||
+kop|kopEC|0|čup|čupEC|
+p|pÁN|0|p|pÁN|
+b|bŮH|0|b|bÚH|
 -
 -
 -
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-JÁ|-1|já?|mě,(knižně) mne[2]?|mně,mi?|mňa|já?|mně?|mnou?
-tEN|-1|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JÁ|já?|mě,(knižně) mne[2]?|mně,mi?|mňa|já?|mně?|mnou?
+tEN|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-JÁ|JÁ
-t|tEN|tEN
+|JÁ||JÁ|
+t|tEN|t|tEN|
 -
 -
 -
@@ -56,6 +63,7 @@ JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|
 musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+proSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
 -
 BÝT|247|-1|byť|sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|były|byly?|była|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 přiJÍT|6|-1|jít?|jď?|jďme?|jďte?|šéł|šéł|šla?|šlo?|šli?|šly?|šly?|šla?
@@ -66,26 +74,29 @@ JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?
 musET|5|-1|et?|ím?|íš?|í?|íme?|ite|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 dÁT|94|-1|át?|ám?|áš?|á?|áme|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|oh|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+proSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sí?|s?|sme?|ste?|sil?|sil?|syła|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeňi?|šeny?|šeny?|šena?
 -
-BÝT|BÝT
-přiJ|přiJÍT|přiJÍT
-chyT|chyTNOUT|chyTNOUT
-pÁ|pÁST|pÁST
-dělA|dělAT|dělAT
-JÍT|JÍT
-musE|musET|musET
-dÁ|dÁT|dÁT
-mO|mOCT|mOCT
+|BÝT||BÝT|
+přiJ|přiJÍT|přiJ|přiJÍT|
+chyT|chyTNOUT|chyT|chyTNOUT|
+pÁ|pÁST|pÁ|pÁST|
+dělA|dělAT|dělA|dělAT|
+|JÍT||JÍT|
+musE|musET|musE|musET|
+dÁ|dÁT|dÁ|dÁT|
+mO|mOCT|mO|mOCT|
+pro|proSIT|pro|proSIT|
 -
-potom
-zítra|zajtra
-tady
-ještě|ješče
-tam|hen
+potom|potom|
+zítra|zajtra|
+tady|tady|
+ještě|ješče|
+tam|hen|
+vždy|dycky|
 -
-do|
+do||do|
 -
-ale|aĺe
-když|dyž,dyš
+ale|aĺe|
+když|dyž||dyš|
 -
 -

@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tNedašov
 aGG
 d17.07.2023 10:30:21
@@ -11,7 +11,7 @@ q0
 -
 -
 -
-v kleci|f kleci
+v kleci|1|f kleci|
 -
 -
 -
@@ -37,34 +37,34 @@ klec|1|?|e?|i?|?|i?|i|í?|e?|í?|ím?|e?|e?|ích?|emi?
 sviňE|1|e|ě?|i?|i?|ě?|i?|í?|ě?|í,čeji) sviň?|ím?|ě?|ě?|ích?|ěmi?
 kanEC|2|ec?|ce?|covi|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 -
-bochní|bochníK|0|pecna|pečEŇ
-litr|litr|0|litr|litr
-mlé|mléKO|0|mlé|mléKO
-klec|klec|0|klec|klec
-svin|svinĚ|0|sv'iň|sviňE
-kan|kanEC|0|kan|kanEC
+bochní|bochníK|0|pecna|pečEŇ|
+litr|litr|0|litr|litr|
+mlé|mléKO|0|mlé|mléKO|
+klec|klec|0|klec|klec|
+svin|svinĚ|0|sv'iň|sviňE|
+kan|kanEC|0|kan|kanEC|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|ný|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 -
-vyděšen|dostraše|zelenÝ|zeleNÝ
+vyděšen|zelenÝ|dostraše|zeleNÝ|
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+CO|co|čeho|čemu|co,-č|-|čem|čím
 -
-JÁ|-1|já|mňa|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
-SE|-1|-|sebe?|si|sa|-|sobě?|sebou?
-CO|-1|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
+JÁ|já|mňa|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+SE|-|sebe?|si|sa|-|sobě?|sebou?
+CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-JÁ|JÁ
-SE|SE
-CO|CO
+|JÁ||JÁ|
+|SE||SE|
+|CO||CO|
 -
 -
 -
-třetina|třeťinu||
+třetina||třeťinu||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 ukrojIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
@@ -74,19 +74,19 @@ BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|bud
 ukrojIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|ił|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 voZIT|15|-1|zit?|zím?|zíš?|zí?|zíme?|zíte?|zí?|z?|zme?|zte?|zil?|zil?|zila?|zilo?|zili|zily?|zily?|zila?|žen?|žen?|žena?|ženo?|ženi?|ženy?|ženy?|žena?
 -
-BÝT|BÝT
-ukroj|ukrój|ukrojIT|ukrojIT
-nalít|nalíł||
-najíst|najedł||
-|
-vo|voZIT|voZIT
+|BÝT||BÝT|
+ukroj|ukrojIT|ukrój|ukrojIT|
+nalít||nalíł||
+najíst||najedł||
+||||
+vo|voZIT|vo|voZIT|
 -
-ještě|ešče
-více,víc|v'íc
-tak
+ještě|ešče|
+více,víc|v'íc|
+tak|tak|
 -
-ke|
+ke||ke|
 -
-a
+a|a|
 -
 -

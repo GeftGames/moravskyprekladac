@@ -1,17 +1,18 @@
-TW v0.1
+TW v2
 tKlečůvka
 d06.05.2023 19:16:05
 c#Zdroje dat\n-ČJA, Dodatky, str.384
 g49.2282578,17.7721566
 q0
+oValašsko
 -
 -
 -
 -
-vždyť se mi to kouří|dyď mi to kúří
-A zase jednou nějakým|A jedným zas
+vždyť se mi to kouří|1|dyď mi to kúří|
+A zase jednou nějakým|1|A jedným zas|
 -
-otevřené ohniště|kútky
+otevřené ohniště|1|kútky|
 -
 -
 ně|ne
@@ -34,37 +35,40 @@ les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 -
 večER|3|ér|a?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|eroch|y?
 les|3|?|a?|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|och|y?
 syn|2|?|a?|ovi|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a|?|ům?|a?|a?|ech?|y?
+člunEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 -
-večer|večer|večer
-vúz||
-pravda||
-soused|súsed|syn|syn
-okýnko|okénko||
-dědeček|staříček||
-okn|městO|městO
-kout|kúteg||
--
--
--
--
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
--
-tEN|-1|en|oho|omu?|oho?|-|om|ím?|y?|ěch?|ěm?|y?|-|ýh|ěmi?|en?|oho|omu?|en?|-|om|ím?|y?|ěch?|ěm?|y?|-|ýh|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ýh|ěmi?|o?|oho|omu?|o?|-|om|ím?|y?|ěch?|ěm?|y?|-|ýh|ěmi?
-SE|-1|-|sebe?|sy,sobě?|se?,sebe?|-|sobě?|sebou?
--
-t|tEN|tEN
-SE|SE
+večer|večer|0|večer|večer|
+vúz||0|vúz||
+pravda||0|pravda||
+soused|syn|0|súsed|syn|
+okýnko||0|okénko||
+dědeček||0|staříček||
+okn|městO|0|okn|městO|
+kout||0|kúteg||
+člun|člunEK|0|čłun|člunEK|
 -
 -
 -
-deset|desed||
+-
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+-
+tEN|en|oho|omu?|oho?|-|om|ím?|y?|ěch?|ěm?|y?|-|ýh|ěmi?|en?|oho|omu?|en?|-|om|ím?|y?|ěch?|ěm?|y?|-|ýh|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ýh|ěmi?|o?|oho|omu?|o?|-|om|ím?|y?|ěch?|ěm?|y?|-|ýh|ěmi?
+SE|-|sebe?|sy,sobě?|se?,sebe?|-|sobě?|sebou?
+-
+t|tEN|t|tEN|
+|SE||SE|
+-
+-
+-
+deset||desed||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
@@ -76,33 +80,33 @@ MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|m
 povÍDAT|7|-1|at?|ám?|áš?|ídá|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šła|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 -
-BÝT|BÝT
-MÍT|MÍT
-povíd|pov|povídAT|povÍDAT
-JÍT|JÍT
+|BÝT||BÝT|
+|MÍT||MÍT|
+povíd|povídAT|pov|povÍDAT|
+|JÍT||JÍT|
 -
-ještě|ešče
-spíše,spíš|spíš
-tam
-třeba
-brzy|skoro
-nyní,teď|fčil
-zpět,zpátky|spátky
-ještě|ešče
-však|šak
-potom
-pořád|pořáď
-také,taky|také
-tak|tag
+ještě|ešče|
+spíše,spíš|spíš|
+tam|tam|
+třeba|třeba|
+brzy|skoro|
+nyní,teď|fčil|
+zpět,zpátky|spátky|
+ještě|ešče|
+však|šak|
+potom|potom|
+pořád|pořáď|
+také,taky|také|
+tak|tag|
 -
-pod|pot|
-i|aj|
-po|
+pod||pot|
+i||aj|
+po||po|
 -
-když|dyš
-vždyť|dyď
-než|neš
-nebo
+když|dyš|
+vždyť|dyď|
+než|neš|
+nebo|nebo|
 -
 -
-sakra|safra
+sakra|safra|

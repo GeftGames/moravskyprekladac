@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tHlavnice
 aGG
 d01.05.2023 14:17:01
@@ -6,6 +6,7 @@ i„Kelko si fčera střelil srncuf?“… „Tobě pry se može zajic do buta l
 chttp://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf
 g49.9245195,17.7284024
 q0
+oSlezsko>Opavsko
 -
 -
 -
@@ -21,19 +22,19 @@ zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 zimA|1|a?|y?|ě?|u?|o?|je|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-z|zimA|zimA
+z|zimA|0|z|zimA|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
-tEN|-1|en?|oho?|emu|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|emu|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|emu|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-JÁ|-1|ja|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+tEN|en?|oho?|emu|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|emu|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|emu|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JÁ|ja|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
 -
-t|tEN|tEN
-JÁ|JÁ
+t|tEN|t|tEN|
+|JÁ||JÁ|
 -
 -
 -
@@ -53,20 +54,20 @@ skončIT|14|-1|it?|i?|ymy|ete?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena
 musET|5|-1|et?|ym|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 JÍT|127|-1|iść|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 -
-MÍT|MÍT
-|BÝT|BÝT
-vZ|vZÍT|vZÍT
-skončI|skončIT|skončIT
-musE|musET|musET
-JÍT|JÍT
-jÍ|jÍST|jÍST
+|MÍT||MÍT|
+|BÝT||BÝT|
+vZ|vZÍT|vZ|vZÍT|
+skončI|skončIT|skončI|skončIT|
+musE|musET|musE|musET|
+|JÍT||JÍT|
+jÍ|jÍST|jÍ|jÍST|
 -
-včera|fčera
-ještě|ešče
-vždy|dycky
-potom|potem
+včera|fčera|
+ještě|ešče|
+vždy|dycky|
+potom|potem|
 -
 -
 -
-prý|pry
+prý|pry|
 -
