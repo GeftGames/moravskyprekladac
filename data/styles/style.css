@@ -802,6 +802,16 @@ option,optgroup{
 	clip-path: inset(-5px -5px 1px -5px);
 	background: linear-gradient(180deg, var(--ColorTheme) 0%, var(--ColorTheme) 10%, var(--ColorBack) 100%);
 }
+#mapperButtons{
+	background-color: var(--ColorTheme);
+	border-radius: 28px;
+	box-shadow: var(--ksh);
+	margin-bottom: 4px;
+	padding-bottom: 2px;
+	padding-left: 3px;
+	align-self: center;
+	width: fit-content;
+}
 .filesBox{
 	display: flex;
     justify-content: center;
@@ -907,6 +917,10 @@ option,optgroup{
 	#dicLte{
 		margin-left: 0px;
 		margin-right: 0px;
+	}
+	#mapperButtons{
+		width: 100%;
+		justify-content: center;
 	}
 }
 @media only screen and (max-width:600px) {
@@ -1201,7 +1215,10 @@ caption{
 		top: 74px;
 	}
 }
-.tooltip:after {
+.tooltipR, .tooltipL, .tooltipC{
+	position: relative;
+}
+.tooltipR:after {
 	content: attr(data-tooltip);
 	top: 64px;
 	left: 10px;
@@ -1210,18 +1227,62 @@ caption{
 	padding: 5px 7px 5px 7px;
 	pointer-events: none;
     font-size: 5mm;
+	display: inline;
 	border-radius: 5px;
+	width: max-content;
 	height: fit-content;
 	background-color: var(--ColorTheme);
 	color: var(--ColorThemeForward);
 	box-shadow: var(--bsh), var(--dsh);	
+	z-index: 100;
+	text-align: center;
 }
-.tooltip:before {
+.tooltipL:after {
+	content: attr(data-tooltip);
+	top: 64px;
+	left: 40px;
+    transform: translate(-100%, 0);
+	min-width: 100px;
+	max-width: 300px;
+	padding: 5px 7px 5px 7px;
+	pointer-events: none;
+    font-size: 5mm;
+	display: inline;
+	border-radius: 5px;
+	width: max-content;
+	height: fit-content;
+	background-color: var(--ColorTheme);
+	color: var(--ColorThemeForward);
+	box-shadow: var(--bsh), var(--dsh);	
+	z-index: 100;
+	text-align: center;
+}
+.tooltipC:after {
+	content: attr(data-tooltip);
+	top: 64px;
+	left: 15px;
+    transform: translate(-50%, 0);
+	min-width: 100px;
+	max-width: 300px;
+	padding: 5px 7px 5px 7px;
+	pointer-events: none;
+    font-size: 5mm;
+	display: inline;
+	border-radius: 5px;
+	width: max-content;
+	height: fit-content;
+	background-color: var(--ColorTheme);
+	color: var(--ColorThemeForward);
+	box-shadow: var(--bsh), var(--dsh);	
+	z-index: 100;
+	text-align: center;
+}
+.tooltipR:before {
 	content: "▲";
 	overflow: hidden;
 	width: 16px;
 	height: 16px;
-	z-index: 1;
+	z-index: 101;
 	top: 48px;
 	left: 18px;
 	bottom: 5px;
@@ -1229,21 +1290,51 @@ caption{
 	text-shadow: var(--bsh), var(--dsh);
 	color: var(--ColorTheme);
 }
-.tooltip:before, .tooltip:after {
+.tooltipL:before {
+	content: "▲";
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	z-index: 101;
+	top: 48px;
+	left: 27px;
+    transform: translate(-100%, 0);
+	bottom: 5px;
+	font-size: 18px;
+	text-shadow: var(--bsh), var(--dsh);
+	color: var(--ColorTheme);
+}
+.tooltipC:before {
+	content: "▲";
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	z-index: 101;
+	top: 48px;
+	left: 27px;
+    transform: translate(-50%, 0);
+	bottom: 5px;
+	font-size: 18px;
+	text-shadow: var(--bsh), var(--dsh);
+	color: var(--ColorTheme);
+}
+.tooltipR:before, .tooltipR:after, .tooltipL:before, .tooltipL:after, .tooltipC:before, .tooltipC:after {
 	opacity: 0;
-	transition: top .2s, opacity .2s;
+	transition: top .2s, opacity .2s ease-out;
 	position: absolute;
 }
-
-.tooltip:hover:after{
+.tooltipR:hover:after, .tooltipL:hover:after, .tooltipC:hover:after{
 	visibility: visible;
 	animation-name : hover-delayA;
 	animation-delay: 1s;
 	animation-duration: 10s;	
 } 
-.tooltip:hover:before{
+.tooltipR:hover:before, .tooltipL:hover:before, .tooltipC:hover:before{
 	visibility: visible;
 	animation-name : hover-delayB;
 	animation-delay: 1s;
 	animation-duration: 10s;
+}
+.mapperSavedRemoveBtn{
+	cursor: pointer;
 }
