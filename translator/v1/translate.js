@@ -2971,19 +2971,20 @@ class ItemNumber{
 			if (raw.length==4) { 
 				let item =new ItemNumber();
 				item.From=raw[0];
-				item.To=raw[1];
+				//item.To=raw[1];
 
 				let paternFrom = this.GetPatternByNameFrom(raw[2]);
 				if (paternFrom == null) return null;
 				else item.PatternFrom = paternFrom;
 
 				let paternTo = this.GetPatternByNameTo(raw[3]);	
-				if (paternFrom == null) return null;
-				else item.PatternTo = paternTo;
+				if (paternTo == null) return null;
+
+				item.To = [{Body: raw[1], Pattern: paternTo}];
 
 				return item;
 			}
-		}else if (loadedVersionNumber == 2) {
+		} else if (loadedVersionNumber == 2) {
 			let item =new ItemNumber();
 			item.From=raw[0];
 
@@ -3016,7 +3017,7 @@ class ItemNumber{
 		}
 	}
 	
-	IsStringThisWordG(startIndex, endIndex, number, gender) {		
+	IsStringThisWordG(str, startIndex, endIndex, number, gender) {		
 		let arr=[];
 		for (let i=startIndex; i<endIndex; i++) {
 			let shape=this.PatternFrom.Shapes[i];
@@ -3024,9 +3025,9 @@ class ItemNumber{
 			if (Array.isArray(shape)) {
 				for (const s of shape) {
 					if (this.From+s==str) {
-						for (let to in this.To) {
-							if (to.body!="?") {
-								for (let shapeTo in to.Pattern.Shapes[i]) {
+						for (let to of this.To) {
+							if (to.Body!="?") {
+								for (let shapeTo of to.Pattern.Shapes[i]) {
 									if (shapeTo!="?") arr.push({Text: to.Body+shapeTo, Number: number, Fall: i+1-startIndex, Gender: gender});
 								}
 							}
@@ -3036,9 +3037,9 @@ class ItemNumber{
 				}
 			} else {
 				if (this.From+shape==str) {
-					for (let to in this.To) {
-						if (to.body!="?") {
-							for (let shapeTo in to.Pattern.Shapes[i]) {
+					for (let to of this.To) {
+						if (to.Body!="?") {
+							for (let shapeTo of to.Pattern.Shapes[i]) {
 								if (shapeTo!="?") arr.push({Text: to+shapeTo, Number: number, Fall: i+1-startIndex, Gender: gender});
 							}
 						}									
@@ -3061,34 +3062,34 @@ class ItemNumber{
 
 		if (this.PatternFrom.Shapes.length==14*4){
 			{
-				let s1=this.IsStringThisWordG(0,  7, 1, "muz");
+				let s1=this.IsStringThisWordG(str, 0,  7, 1, "muz");
 				if (s1.length>0) ret.push(...s1);
-				let s2=this.IsStringThisWordG(7, 14, 2, "muz");
+				let s2=this.IsStringThisWordG(str, 7, 14, 2, "muz");
 				if (s2.length>0) ret.push(...s2);
 			}
 			{
-				let s1=this.IsStringThisWordG(0+14,  7+14, 1, "mun");
+				let s1=this.IsStringThisWordG(str, 0+14,  7+14, 1, "mun");
 				if (s1.length>0) ret.push(...s1);
-				let s2=this.IsStringThisWordG(7+14, 14+14, 2, "mun");
+				let s2=this.IsStringThisWordG(str, 7+14, 14+14, 2, "mun");
 				if (s2.length>0) ret.push(...s2);
 			}
 			{
-				let s1=this.IsStringThisWordG(0+28,  7+28, 1, "zen");
+				let s1=this.IsStringThisWordG(str, 0+28,  7+28, 1, "zen");
 				if (s1.length>0) ret.push(...s1);
-				let s2=this.IsStringThisWordG(7+28, 14+28, 2, "zen");
+				let s2=this.IsStringThisWordG(str, 7+28, 14+28, 2, "zen");
 				if (s2.length>0) ret.push(...s2);
 			}
 			{
-				let s1=this.IsStringThisWordG(0+42,  7+42, 1, "str");
+				let s1=this.IsStringThisWordG(str, 0+42,  7+42, 1, "str");
 				if (s1.length>0) ret.push(...s1);
-				let s2=this.IsStringThisWordG(7+42, 14+42, 2, "str");
+				let s2=this.IsStringThisWordG(str, 7+42, 14+42, 2, "str");
 				if (s2.length>0) ret.push(...s2);
 			}
 		} else if (this.PatternFrom.Shapes.length==14) {
 			{
-				let s1=this.IsStringThisWordG(0,  7, 1, undefined);
+				let s1=this.IsStringThisWordG(str, 0,  7, 1, undefined);
 				if (s1.length>0) ret.push(...s1);
-				let s2=this.IsStringThisWordG(7, 14, 2, undefined);
+				let s2=this.IsStringThisWordG(str, 7, 14, 2, undefined);
 				if (s2.length>0) ret.push(...s2);
 			}			
 		} else if (this.PatternFrom.Shapes.length==7) {
@@ -3098,10 +3099,16 @@ class ItemNumber{
 				if (Array.isArray(shape)) {
 					for (const s of shape) {
 						if (this.From+s==str) {
-							for (let to in this.To) {
-								if (to.body!="?") {
-									for (let shapeTo in to.Pattern.Shapes[i]){
-										if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Fall: i+1});
+							for (let to of this.To) {
+								console.log(to);
+								if (to.Body!="?") {
+									if (Array.isArray(to.Pattern.Shapes[i])){
+										for (let shapeTo of to.Pattern.Shapes[i]){
+											if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Fall: i+1});
+										}
+									} else {
+										let shapeTo = to.Pattern.Shapes[i];
+										if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Fall: i+1});		
 									}
 								}
 							}
@@ -3110,10 +3117,15 @@ class ItemNumber{
 					}
 				} else {
 					if (this.From+shape==str) {
-						for (let to in this.To) {
-							if (to.body!="?") {
-								for (let shapeTo in to.Pattern.Shapes[i]) {
-									if (shapeTo!="?") ret.push({Text: to+shapeTo, Fall: i+1});
+						for (let to of this.To) {
+							if (to.Body!="?") {
+								if (Array.isArray(to.Pattern.Shapes[i])){
+									for (let shapeTo of to.Pattern.Shapes[i]) {
+										if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Fall: i+1});
+									}
+								} else {
+									let shapeTo = to.Pattern.Shapes[i];
+									if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Fall: i+1});		
 								}
 							}									
 						}
@@ -3127,9 +3139,9 @@ class ItemNumber{
 			if (Array.isArray(shape)) {
 				for (const s of shape) {
 					if (this.From+s==str) {
-						for (let to in this.To) {
-							if (to.body!="?") {
-								for (let shapeTo in to.Pattern.Shapes[0]){
+						for (let to of this.To) {
+							if (to.Body!="?") {
+								for (let shapeTo of to.Pattern.Shapes[0]){
 									if (shapeTo!="?") arr.push({Text: to.Body+shapeTo});
 								}
 							}
@@ -3139,9 +3151,9 @@ class ItemNumber{
 				}
 			} else {
 				if (this.From+shape==str) {
-					for (let to in this.To) {
-						if (to.body!="?") {
-							for (let shapeTo in to.Pattern.Shapes[0]) {
+					for (let to of this.To) {
+						if (to.Body!="?") {
+							for (let shapeTo of to.Pattern.Shapes[0]) {
 								if (shapeTo!="?") arr.push({Text: to+shapeTo});
 							}
 						}									
