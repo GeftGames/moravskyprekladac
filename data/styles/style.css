@@ -1174,3 +1174,76 @@ caption{
     font-style: italic;
 	opacity: .8;
 }
+
+@keyframes hover-delayB {
+	0% {
+		opacity: 0;		
+	}
+	2% {
+		opacity: 1;		
+		top: 58px;
+	}
+	100% {
+		opacity: 1;
+		top: 58px;
+	}
+}
+@keyframes hover-delayA {
+	0% {
+		opacity: 0;		
+	}
+	2% {
+		opacity: 1;		
+		top: 74px;		
+	}
+	100% {
+		opacity: 1;	
+		top: 74px;
+	}
+}
+.tooltip:after {
+	content: attr(data-tooltip);
+	top: 64px;
+	left: 10px;
+	min-width: 100px;
+	max-width: 300px;
+	padding: 5px 7px 5px 7px;
+	pointer-events: none;
+    font-size: 5mm;
+	border-radius: 5px;
+	height: fit-content;
+	background-color: var(--ColorTheme);
+	color: var(--ColorThemeForward);
+	box-shadow: var(--bsh), var(--dsh);	
+}
+.tooltip:before {
+	content: "▲";
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	z-index: 1;
+	top: 48px;
+	left: 18px;
+	bottom: 5px;
+	font-size: 18px;
+	text-shadow: var(--bsh), var(--dsh);
+	color: var(--ColorTheme);
+}
+.tooltip:before, .tooltip:after {
+	opacity: 0;
+	transition: top .2s, opacity .2s;
+	position: absolute;
+}
+
+.tooltip:hover:after{
+	visibility: visible;
+	animation-name : hover-delayA;
+	animation-delay: 1s;
+	animation-duration: 10s;	
+} 
+.tooltip:hover:before{
+	visibility: visible;
+	animation-name : hover-delayB;
+	animation-delay: 1s;
+	animation-duration: 10s;
+}
