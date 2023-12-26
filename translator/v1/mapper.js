@@ -564,7 +564,7 @@ function mapper_compute() {
 				name=p.name.substring(0, 2).toUpperCase();
 			} else name=p.name;
 			let wn=ctx.measureText(name).width;
-			console.log(name);
+		//	console.log(name);
 			ctx.fillText(name, xx+p.x-wn/2, yy+p.y+radius/2);		
 		}
 	}	
@@ -877,7 +877,7 @@ function CreateSavedList() {
 		for (const rawOptions of allItems) {
 			let options=new RenderMapperOptions();
 			options.Load(rawOptions);
-			ret+="<div style='display: flex;align-items: center;'><div class='mapperNavrh' onclick='OpenAndSetAdvancedMapper("+id+");'>"+options.inputText+"</div> <div onclick='mapper_removeSaved("+id+",this)'>X</div></div>";
+			ret+="<div style='display: flex;align-items: center;'><div class='mapperNavrh' onclick='OpenAndSetAdvancedMapper("+id+");'>"+options.inputText+"</div> <div class='mapperSavedRemoveBtn' onclick='mapper_removeSaved("+id+",this)'>X</div></div>";
 		}
 	}
 	if (ret=="") ret="<span style='margin: 0px 0px 20px 10px;'>Nebyly nalezené žádné uložené mapy</span>";
