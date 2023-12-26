@@ -80,19 +80,22 @@
 
 				<!-- Header -->
 				<div id="header" style="display: flex;align-items: center;">
-					<button class="butIc"
-						aria-label="Toggle settings"
+					<button class="butIc tooltip"
+						data-tooltip="Zobrazit nastavení"
+						aria-label="Toggle settings"						
 						onclick="
 							if (document.getElementById('nav').style.opacity=='1') {
 								document.getElementById('butShow').style.opacity='1';
 								document.getElementById('butclose').style.opacity='0'; 
 								document.getElementById('nav').classList.add('navTrans');
 								document.getElementById('nav').style.opacity='0.1';
+								this.classList.add('tooltip');
 							} else {
 								document.getElementById('butShow').style.opacity='0';
 								document.getElementById('butclose').style.opacity='1';
 								document.getElementById('nav').style.opacity='1';
 								document.getElementById('nav').classList.remove('navTrans');
+								this.classList.remove('tooltip');
 							}
 						">
 						<svg id="butShow" class="ib" viewBox="0 0 24 24" style="position: absolute;">
@@ -547,11 +550,10 @@
 										<div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
 										<div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
 										<div class="mapperNavrh" onclick="navrhClick('míč')">MÍČ</div>
-										<div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
 										
 										<!-- změna části slova-->
-										<div class="mapperNavrh" onclick="navrhClick('{word=mraveniště|typ=pods|cislo=j|pad=1}')">MRAVENIŠTĚ</div>
 										<div class="mapperNavrh" onclick="navrhClick('slunce')">SLUNCE</div>
+										<div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
 										<div class="mapperNavrh" onclick="navrhClick('kachna')">KACHNA</div>
 																				
 										<!-- Atipické skloňování-->
