@@ -4,7 +4,7 @@ let SimplyfiedReplacedRules=[];
 class ItemSentence {
 	constructor() {
 		this.input = "";
-		this.output = "";
+		this.output = [];
 	}
 
 	static Load(data) {
@@ -12,7 +12,7 @@ class ItemSentence {
 			let item=new ItemSentence();
 			let raw = data.split('|');
 			item.input=raw[0];
-			item.output=raw[1];
+			item.output=[{Text: raw[1]}];
 			return item;
 		} else if (loadedVersionNumber == 2) {
 			let raw = data.split('|');
@@ -619,7 +619,7 @@ class ItemNoun {
 
 class ItemSimpleWord {
 	constructor() {
-		this.input = "";
+		this.input = null;
 		//this.output;
 	}
 	
@@ -631,8 +631,10 @@ class ItemSimpleWord {
 				if (raw[0]=='') return null;
 				if (raw[0].includes('?')) return null;
 				let item = new ItemSimpleWord();
-				item.input = raw[0];
-				item.output = {Text: raw[0]};
+				if (raw[0].includes(',')) item.input = raw[0].split(',');
+				else item.input = raw[0];
+
+				item.output = [{Text: raw[0]}];
 				return item;
 			} 
 			if (raw.length==2){
@@ -646,8 +648,8 @@ class ItemSimpleWord {
 				if (raw[0].includes(',')) item.input = raw[0].split(',');
 				else item.input = raw[0];
 				
-				if (raw[1].includes(',')) item.output = {Text: raw[1].split(',')};
-				else item.output = {Text: raw[1]};
+				if (raw[1].includes(',')) item.output = [{Text: raw[1].split(',')}];
+				else item.output = [{Text: raw[1]}];
 				return item;
 			}
 		} else if (loadedVersionNumber == 2) {
@@ -674,7 +676,7 @@ class ItemSimpleWord {
 		let f = document.createElement("span");
 		if (Array.isArray(this.input)){
 			f.innerText=this.input.join(", ");
-		}else f.innerText=this.input;
+		} else f.innerText=this.input;
 		p.appendChild(f);
 
 		let e = document.createElement("span");
@@ -683,9 +685,10 @@ class ItemSimpleWord {
 
 		//console.log(this);
 		let out="";
-		if (Array.isArray(this.output.Text)) {
-			for (let i=0; i<this.output.Text.length; i++) {
-				let o = this.output.Text[i];
+		//if (Array.isArray(this.output)) {
+			for (let i=0; i<this.output.length; i++) {
+				let to = this.output[i];
+				let o = to.Text;
 
 				out += o+", ";
 				if (o=="") return null;
@@ -694,12 +697,21 @@ class ItemSimpleWord {
 				t.innerText=o;
 				p.appendChild(t);
 
-				if (i!=this.output.Text.length-1) {
+				if (to.Comment!=undefined) {
+					if (to.Comment!="") {
+						let c = document.createElement("span");
+						c.innerText=to.Comment;
+						r.className="dicMeaning";
+						p.appendChild(c);
+					}
+				}
+
+				if (i!=this.output.length-1) {
 					let space=document.createTextNode(", ");
 					p.appendChild(space);
 				}
 			}
-		} else {
+	/*	} else {
 			let o=this.output;
 			out = o.Text;
 			if (out=="") return null;
@@ -709,20 +721,13 @@ class ItemSimpleWord {
 			p.appendChild(t);		
 		}			
 		
-		if (this.output.Comment!=undefined) {
-			if (this.output.Comment!="") {
-				let c = document.createElement("span");
-				c.innerText=this.To.Comment;
-				r.className="dicMeaning";
-				p.appendChild(c);
-			}
-		}
+		
 		
 		p.appendChild(document.createTextNode(" "));
-
+*/
 		if (name!=""){
 			let r = document.createElement("span");
-			r.innerText="("+name+")";
+			r.innerText=" ("+name+")";
 			r.className="dicMoreInfo";
 			p.appendChild(r);
 		}
@@ -5302,17 +5307,18 @@ class LanguageTr {
 				else if (type=="Number") printableString=string.Shapes;
 				else if (type=="Verb") printableString=string.Shapes;
 				else if (type=="Adverb") {
-					printableString=string.output.Text;
+					console.log(string);
+					printableString=string.output[0].Text;
 				}else if (type=="Preposition") printableString=string[0];
 				else if (type=="Conjunction") {
-					printableString=string.output.Text;
+					printableString=string.output[0].Text;
 				}else if (type=="Phrase") {
 					if (Array.isArray(string))printableString=string[0].Text[0];
 					else printableString=string.Text/*.output*/;
 				}else if (type=="Particle") {
-					printableString=string.output.Text;
+					printableString=string.output[0].Text;
 				} else if (type=="Interjection") {
-					printableString=string.output.Text;
+					printableString=string.output[0].Text;
 				} else if (type=="Symbol") printableString=string;
 				else if (type=="Unknown") {
 					if (Array.isArray(string)) printableString=string[0];
@@ -5480,37 +5486,52 @@ class LanguageTr {
 	
 	searchSimpleWord(input) {
 		for (const n of this.SimpleWords) {
-			if (n.input==input) return n;
+			if (Array.isArray(n.input)){
+				for (const w of n.input) {
+					if (w==input) return n;
+				}
+			} else if (n.input==input) return n;
 		}
 		return null;
 	}
 
 	searchWordInterjection(input) {
 		for (const n of this.Interjections) {
-			if (n.input==input) return n;
+			if (Array.isArray(n.input)){
+				for (const m of n.input) {
+					if (m==input) return n;
+				}
+			} else if (n.input==input) return n;
 		}
 		return null;
 	}
 
 	searchWordConjunction(input) {
 		for (const n of this.Conjunctions) {
-			if (n.input==input) return n;
+			if (Array.isArray(n.input)){
+				for (const m of n.input) {
+					if (m==input) return n;
+				}
+			} else if (n.input==input) return n;
 		}
 		return null;
 	}
 
 	searchWordParticle(input) {
 		for (const n of this.Particles) {
-			if (n.input==input) return n;
+			if (Array.isArray(n.input)){
+				for (const m of n.input) {
+					if (m==input) return n;
+				}
+			} else {
+				if (n.input==input) return n;	
+			}
 		}
 		return null;
 	}
 
 	searchWordAdverb(input) {
 		for (const n of this.Adverbs) {
-
-			//console.log("Try", n.input,input);
-			//if (n.input==input) return n;
 			if (Array.isArray(n.input)){
 				for (const m of n.input) {
 					if (m==input) return n;
