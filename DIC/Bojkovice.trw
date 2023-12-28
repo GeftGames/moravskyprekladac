@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tBojkovice
 aGG
 d28.07.2023 20:16:55
@@ -16,17 +16,23 @@ oSlovácko
 -
 -
 -
+klarinet|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+primicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+-
+kralinet|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+premicijE|1|e|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+-
+klarinet|klarinet|0|kralinet|kralinet|
+primic|primicE|0|premicij|premicijE|
 -
 -
 -
 -
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch|ěm|i?|-|ěch|ěma|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch|ěma|a?|é?|é?|u?|-|é?|ou?|y?|ěch|ěm|y?|-|ěch|ěma|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch|ěma
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
--
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch|ěm|i?|-|ěch|ěma|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch|ěma|a?|é?|é?|u?|-|é?|ou?|y?|ěch|ěm|y?|-|ěch|ěma|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch|ěma
--
-t|tEN|tEN
+t|tEN|t|tEN|
 -
 -
 -

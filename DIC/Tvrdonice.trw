@@ -105,6 +105,7 @@ svát|svátEK|0|svát|svátEK|
 vrab|vrabEC|0|brabl|brablIC|
 svat|svatBA|0|svad|svadBA|
 knedlí|knedlíK|0|knofl|knoflA|
+smíšek||0|smíchota||
 -
 pěknÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 zrzavÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -121,6 +122,8 @@ pořádn|pěknÝ|pořád|pěkNÝ|
 zrzav|zrzavÝ|zerzav|zrzavÝ|
 šit|pěknÝ|šité||
 všední|pěknÝ|fšeď|pěkNÝ|
+závistiv|zrzavÝ|závisliv|zrzavÝ|
+ožral|zrzavÝ|ožhraṵ|zrzavÝ|
 -
 CO|co|čeho|čemu|co,-č|-|čem|čím
 vY|y|ás|ám|ás|y|ás|ámi
@@ -180,6 +183,7 @@ poznAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|al
 doJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 učIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 šÍT|15|-1|ít|iji,šiju|iješ|ije|ijeme|ijete|ijí,šijou|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+žRÁT|15|-1|rát|eru|ereš|ere|ereme|erete|erou|er|erme|erte|ral|ral|rala|ralo|rali|raly|raly|rala|rán|rán|rána|ráno|ráni|rány|rány|rána
 -
 BÝT|247|-1|být?|sem,su|jsi?|je|jsme?|jste?|sú|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|bili|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bich|bys?|by?|bychom?|byste?|by?
 čUT|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|uj|me,poslyšme?|te,poslyšte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en,(archaicky) slyšán?|en,(archaicky) slyšán?|ena?|eno?|eni?|eny?|eny?|ena?
@@ -206,6 +210,7 @@ poznAT|30|-1|at?|ám?|áš?|á?|áme?|áte|ají?|ej?|ejme?|ejte?|al?|al?|ala?|al
 doJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jdi?|jděme?|jděte?|šeṵ|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
 učIT|15|-1|it|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 šÍT|15|-1|ít?|iji,šiju?|iješ?|ije?|ijeme?|ijete?|ijí,šijou?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iti?|ity?|ity?|ita?
+žhRAT|15|-1|rat|eru?|ereš?|ere?|ereme?|erete?|erou?|er?|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráňi?|rány?|rány?|rána?
 -
 |BÝT||BÝT|
 |JÍT||JÍT|
@@ -238,6 +243,7 @@ uč|učIT|uč|učIT|
 š|šÍT|š|šÍT|
 ||přišívaṵ||
 ||dobjehṵa||
+ž|žRÁT|žh|žhRAT|
 -
 tak|tak|
 všude|fšadi|

@@ -29,6 +29,7 @@ když se|0|diš sa|
 přerostlé uhlí|1|žiďi|zmotaný dřevěný uhel
 více šachet|0|víc šachtí|
 v kleci|0|f kleci|
+čistit obilí na sítě|1|fugarovat|
 -
 -
 -
@@ -81,6 +82,7 @@ organizacE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 žebRO|0|ro|ra|ru|ro|ro|ru|rem|ra|er|rům|ra|ra|rech|ry
 ameriKA|0|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 patRO|0|ro|ra|ru|ro|ro|ře,ru|rem|ra|er|rům|ra|ra|rech|ry
+cukrovar|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
 -
 HRÁBĚ|1|-|-|-|-|-|-|-|hrabje|hrábí?|hrábím?|hrábje?|hrábje?|hrábích?|hrábjemi?
 kolejňicE|1|e?|e?|i?|i?|e?|i?|í?|e|?|ím?|e?|e?|ích?|emi?
@@ -110,6 +112,7 @@ orgaňizacE|1|e?|e?|i?|i|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 žebRO|0|ro?|ra?|ru?|ro?|ro?|ru?|rem?|ra?|řú|rúm?|ra?|ra?|rách|ry?
 ameriKA|0|ka?|ky?|ce?|ku?|ko?|ce|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 patRO|0|ro?|ra?|ru?|ro?|ro?|ře,ru?|rem?|ra|er?|rúm?|ra?|ra?|rech?|ry?
+cukrovŇA|3|ňa|u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
 krumpáč|krumpáč|0|krumpáč|krumpáč|
 prach|prach|0|prach|prach|
@@ -142,6 +145,11 @@ organizac|organizacE|0|organizac|orgaňizacE|
 mezipodesta||0|otpočinek||
 ameri|ameriKA|0|ameri|ameriKA|
 pat|patRO|0|pat|patRO|
+cvrček||0|čvrček||
+křídlovka||0|flíghorna||trublka
+vrstevník||0|rovesňík||
+vrstevnice||0|rovesňica||
+cukrovar|cukrovar|0|cukrov|cukrovŇA|
 -
 černÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hluboKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||

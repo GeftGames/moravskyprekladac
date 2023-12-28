@@ -57,6 +57,7 @@ hájovNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
 občan|2||a|u,ovi|a|e|u,ovi|em|é|ů|ům|y|é|ech|y
 hodonín|3||a|u||e|ě|em|-|-|-|-|-|-|-
 dŮM|3|ům|omu|omu|ům|ome|omu,omě|omem|omy|omů|omům|omy|omy|omech|omy
+numerO|0|o|a|u|o|o|u|em|a||ům|a|a|ech|y
 -
 dÍTĚ|0|íťe?|íťete?|íťeťi?|íťe?|íťe?|íťeťi?|íťetem?|ěťi?|eťí|ětem?|ěťi?|ěťi?|ětech?|ětmi?
 muž|2||e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?,ové?|ú?|úm?|e?|i?,ové?|ích?|i?
@@ -74,6 +75,7 @@ mislivNA|1|ňa|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 občan|2|?|a?|u?,ovi?|a?|e?|u?,ovi?|em?|é?|ú|úm?|y?|é?|ech?|y?
 hodoňíN|3|n?|na?|nu?|n?|ne?|ňe|nem?|-|-|-|-|-|-|-
 dŮM|3|úm?|omu?|omu?|úm?|ome?|omu?,omě?|omem?|omy?|omú?|omúm?|omy?|omy?|omech?|omy?
+lumerO|0|o|a?|u?|o?|o?|u?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
 ||0|dolama||
 ||2|dubňani||
@@ -94,6 +96,8 @@ sklárny||0|sklářňe||
 šach|šachTA|0|šach|šachTA|
 vál|válKA|0|voj|vojNA|
 voj|vojNA|0|voj|vojNA|
+korouhvič|muziKA|0|korovič|muziKA|
+numer|numerO|0|lumer|lumerO|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 malÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||

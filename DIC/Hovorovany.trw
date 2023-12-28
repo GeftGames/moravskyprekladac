@@ -52,6 +52,7 @@ brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 ječmen|3||a,e|i,u||e|ě,i,u|em|y|ů|ům|y|y|ech|y
 moždíř|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 krOUPA|1|oupa|oupy|oupě|oupu|oupo|oupě|oupou|oupy|up|oupám|oupy|oupy|oupách|oupami
+rouRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 -
 stařečEK|2|ek|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci,kové?|kú?|kúm?|ky?|ci,kové?|cích?|ky?
 šVEC|2|vec?|evce?|evci,evcovi?|evce?|evče?|evci,evcovi?|efcem|evci?|evcú?|evcúm?|evce?|evci?|evcích?|evci?
@@ -67,6 +68,7 @@ ertepl|1|?|u?|u?|?|e?|u?|em?|y?|ú?|úm?|e|y?|ech?|y?
 ječmen|3|ň|ňa?,ňe?|ňi?,ňu?|ň?|ňe?|ňě?,ňi?,ňu?|ňem?|ňy?|ňú?|ňúm?|ňy?|ňy?|ňech?|ňy?
 mažárEK|3|ek|e?|i?|?|i?|i?|kem|e?|ú?|úm?|e?|e?|ích?|i?
 krÚPA|1|oupa?|oupy?|oupje?|oupu?|oupo?|oupje?|oupou?|úpi|up?|oupám?|oupy?|oupy?|oupách?|oupami?
+rúLA|1|la|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 -
 dědeč|dědečEK|0|stařeč|stařečEK|
 š|šVEC|0|š|šVEC|
@@ -83,6 +85,9 @@ brambor|brambor|0|ertepl|ertepl|
 ječmen|ječmen|0|jačme|ječmen|
 moždíř|moždíř|0|mažár|mažárEK|
 kr|krOUPA|0|kr|krÚPA|rozbitá obilovina k jídlu
+zídeč|babičKA|0|zíteč|stařenKA|
+rou|rouRA|0|rú|rúLA|
+vězení/kramlík?||0|kamlík||
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 větší|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||

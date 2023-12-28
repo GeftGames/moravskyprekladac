@@ -46,6 +46,8 @@ jak koho|1|jak keho|
 asi dva nebo tři|1|za dva ze tři|
 biṵa hudba|0|biṵa muzika|
 až od šesti|0|aš ot šesti|
+kde jsi|1|dez|
+kde jsi byl|1|dez bíṵ|
 -
 bouchl|1|křápu|bubeník bouchl na buben
 -
@@ -137,6 +139,9 @@ PENÍZE|3|-|-|-|-|-|-|-|peníze|peněz|penězům|peníze|peníze|penězích|pen�
 kousEK|3|ek|ku,ka|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
 ránO|0|o|a|u|o|o|u|em|a||ům|a|a|ech|y
 úterý|0|||||||m|||m|||ch|mi
+chvÍLE|1|íle|íle|íli|íli|íle|íli|ílí|íle|il|ílím|íle|íle|ílích|ílemi
+oj|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+dovolenÁ|1|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými
 -
 babičKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ki|ky?|kách?|kami?
 bubEN|3|en?|nu?|nu?|en|ne?|nu?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
@@ -191,6 +196,9 @@ PENÍZE|3|-|-|-|-|-|-|-|peníze?|peňez?|peňezúm?|peňíze|peníze?|peňezích
 kúsEK|3|ek?|ku,ka?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ki|ky?|cích,kách?|ky?
 ránO|0|o?|a|u?|o?|o?|u?|em?|a?|?|úm?|a?|a?|ech?|y?
 úterý|0|?|?|?|?|?||m?|?|?|m?|?|?|ch?|mi?
+kfÍLA|1|íla|íle?|íli?|íli?|íle?|íli?|ílí?|íle?|il?|ílím?|íle?|íle?|ílích?|ílemi?
+ṵoj|1|?|e?|i?|?|i?|i?|í?|e|í?|ím?|e?|e?|ích?|emi?
+olráb|1||é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?
 -
 ||0|pjeťinku||
 ||0|súpky||
@@ -247,6 +255,12 @@ revírní|lesníK|0|levírňí|lesníK|
 kous|kousEK|0|kús|kúsEK|
 rán|ránO|0|rán|ránO|
 úterý|úterý|0|úterí|úterý|
+chv|chvÍLE|0|kf|kfÍLA|
+oj|oj|0|ṵoj|ṵoj|
+dovolen|dovolenÁ|0|olráb|olráb|
+fanda||2|faniš||
+františka||2|fraňťina||domácké
+?||0|trloň||
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 makovÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -361,8 +375,9 @@ hodOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|o
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 zahrÁT|15|-1|át|aji,(hovorově) zahraju|aješ|aje|ajeme|ajete|ají,(hovorově) zahrajou|aj,zahrej|ajme,zahrejme|ajte,zahrejte|ál|ál|ála|álo|áli|ály|ály|ála|án|án|ána|áno|áni|ány|ány|ána
 vrÁTIT|30|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|átil|átil|átila|átilo|átili|átily|átily|átila|ácen|ácen|ácena|áceno|áceni|áceny|áceny|ácena
+dosÁHNOUT|30|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl|áhl|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|biṵ|byl?|biṵa|biṵo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|biṵ,bíṵ|byl?|biṵa|biṵo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 bývAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|aṵa|alo?|ali|aly?|aly?|ala?
 čekAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|aṵo|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|aṵa|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
@@ -392,6 +407,7 @@ zaplaŤIT|30|-1|ťit|tím?|tíš?|tí?|tíme?|títe?|tí?|ť?|ťme?|ťte?|ťil?|
 mOCT|5|-1|oct?|ohu,(hovorově) múžu?|úžeš?|úže?|úžeme?|úžete?|ohou,(hovorově) múžou?|ohu|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 zahrÁT|15|-1|át|aji,(hovorově) zahraju?|aješ?|aje?|ajeme?|ajete?|ají,(hovorově) zahrajou?|aj,zahrej?|ajme,zahrejme?|ajte,zahrejte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 vrÁŤIT|30|-1|áťit?|átím?|átíš?|átí?|átíme?|átíte?|átí?|ať?|aťme?|aťte?|áťil?|áťil?|áťila?|áťilo?|áťili|áťily?|áťily?|áťila?|ácen?|ácen?|ácena?|áceno?|áceňi?|áceny?|áceny?|ácena?
+dočAHNÚT|30|-1|ahnút|áhnu?|áhneš?|áhne?|áhneme?|áhnete?|áhnou?|áhňi?|áhňeme?|áhňete?|áhl?|áhl?|áhla?|áhlo?|áhli?|áhly?|áhly?|áhla?|ažen?|ažen?|ažena?|aženo?|ažeňi?|aženy?|aženy?|ažena?
 -
 |JÍT||JÍT|
 ||hrávali||
@@ -427,6 +443,8 @@ zapla|zaplaTIT|zapṵa|zaplaŤIT|
 m|mOCT|m|mOCT|
 zahr|zahrÁT|zahr|zahrÁT|
 vr|vrÁTIT|vr|vrÁŤIT|
+dos|dosÁHNOUT|doč|dočAHNÚT|
+sahat||čahat||
 -
 dříve,dřív|dříf|
 tedy|teda|
@@ -445,6 +463,7 @@ domů|dom|
 zase|zas|
 pak|pak|
 až|až,aš|
+kdysi|disi|
 -
 na||na|
 před||přet|

@@ -3,7 +3,7 @@ tHluk
 aGG
 d05.07.2023 10:26:06
 idnez řekli, jedem? — Jedem!  Hluk\nbívajú f Klebetovje u cehúzu Hluk UH\nhrudka v těstě: to už ďeao takové blbonki Hluk UH\nnaša babjénka Hájčena nám dicki neco dali Hluk UH\nje to ďefčica jag bliskva Hluk UH – čiperná\n expr. žena: bliskva Hluk UH\nco bláňáš? Hluk UH\nv zímňe sa tetki babúlali do vlňákú Hluk UH
-c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf; str. 89\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Hluk UH">sncj.ujc.cas.cz</a>
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf; str. 89\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Hluk UH">sncj.ujc.cas.cz</a>\n-https://www.kronikahluk.cz/index.php?id=naei
 g48.9881526,17.52714
 q0
 oSlovácko
@@ -236,6 +236,7 @@ obcházET|7|-1|et|ím|íš|í|íme|íte|í|ej|ejme|ejte|el|el|ela|elo|eli|ely|el
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 jezdIT|15|-1|it|ím|íš|í|íme|íte|í|i|ěme|ěte|il|il|ila|ilo|ili|ily|ily|ila|ěn,ježděn|ěn,ježděn|ěna,ježděna|ěno,ježděno|ěni,ježděni|ěny,ježděny|ěny,ježděny|ěna,ježděna
+ztraTIT|30|-1|tit|tím|tíš|tí|tíme|títe|tí|ť|ťme|ťte|til|til|tila|tilo|tili|tily|tily|tila|cen|cen|cena|ceno|ceni|ceny|ceny|cena
 -
 řÍCT|30|-1|íct?|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla?|eklo?|ekli|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
 JET|31|-1|jet?|jedu?|jedeš?|jede?|jedem|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel?|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
@@ -261,6 +262,7 @@ opcházAT|7|-1|at?|ím?|íš?|í?|íme?|áte|í?|ej?|ejme?|ejte?|el?|el?|ela?|el
 mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli|ely,musily?|ely,musily?|ela,musila?
 jezďIT|15|-1|iď|ím?|íš?|í?|íme?|íte?|í?|i?|ěme?|ěte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|ěn,ježděn?|ěn,ježděn?|ěna,ježděna?|ěno,ježděno?|ěni,ježděni?|ěny,ježděny?|ěny,ježděny?|ěna,ježděna?
+ztraŤIT|30|-1|ťit?|ťím?|ťíš?|ťí?|ťíme?|ťíte?|ťí?|ť?|ťme?|ťte?|ťil?|ťil?|ťila?|ťilo?|ťili?|ťily?|ťily?|ťila?|cen?|cen?|cena?|ceno?|ceňi?|ceny?|ceny?|cena?
 -
 ř|řÍCT|ř|řÍCT|
 |JET||JET|
@@ -296,6 +298,8 @@ býv|bývAT|bív|bívAT|
 mus|musET|mos|musET|
 jezd|jezdIT|jezď|jezďIT|
 zamotávat||cuckovat ||
+založit||zafrajmačit||
+zašantročit||zafrajmačit||
 -
 dnes|dnez|
 nestřídmě|bezomaťe|

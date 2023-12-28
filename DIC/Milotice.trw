@@ -19,6 +19,8 @@ do někdy|1|do nekáť|
 no a|1|ná|
 po ním|0|po ňem|
 za ní|0|za ňú|
+kolečko salámu|1|skiba|
+je bledý|1|nemá aňi barvútki|
 -
 -
 ně|ňe
@@ -61,9 +63,18 @@ humNO|0|no|na|nu|no|no|ně|nem|na|en|nům|na|na|nech|ny
 hrušKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 panenKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+říjEN|3|en|na|nu|en|ne|nu|nem|ny|nů|nům|ny|ny|nech|ny
+hadr|3||u|u||e,e|u|em|y|ů|ům|y|y|ech|y
+pivovar|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+pavouK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+pavučinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+rouRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
+kolečKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
+hrníčEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+hubA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 zelÍ|0|í?|í|í|í?|í?|í|ím?|í?|í?|ím?|í?|í?|ích?|ími?
-ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé?,lidi?|lidech?|lidmi?
+ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|liďi|lidí?|lidem?|lidi?|lidé?,lidi?|lidech?|liďma
 obilí|0|?||?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 listí|0|?||?|?|?|?|m?|-|-|-|-|-|-|-
 podmáslí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
@@ -79,26 +90,46 @@ humNO|0|no?|na?|nu?|no|no?|ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
 hrušKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 stromEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 panenKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+říJEN|3|jen?|na|jnu?|jen?|jne?|jnu?|jnem?|jny?|jnú?|jnúm?|jny?|jny?|jnech?|jny?
+handrA|3|a|u?|u?|?|e?,e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+pijovar|3||u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+paṵK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+paṵčiNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+rúLA|1|la|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
+kołCO|0|co|ka?|ku?|ko?|ko?|ku?|kem?|ka?|ek?|kúm?|ka?|ka?|kách?|ky?
+hrnúšEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+gemboš|3||y?|je?|u?|o?|je?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-zelí|zelí|0|zelí|zelÍ|
 |ČLOVĚK|0||ČLOVĚK|
-obilí|obilí|0|obilí|obilí|
-proutí||0|bez prúťí||
-listí|listí|0|lisťí|listí|
-podmáslí|podmáslí|0|podmáslí|podmáslí|
-petržel|petržel|0|petrželí|podmáslí|
-slunc|sluncE|0|słún|slunKO|
-slun|slunKO|0|słún|slunKO|
-kol|kolO|0|koł|kolO|
-sl|slÁMA|0|sł|slÁMA|
-les|les|0|ľes|les|
-led|led|0|ľed|led|
-l|lÍPA|0|ľ|lÍPA|
-mou|mouKA|0|mú|mouKA|
-hum|humNO|0|hum|humNO|
+hadr|hadr|0|handr|handrA|
 hruš|hrušKA|0|hruš|hrušKA|
+hum|humNO|0|hum|humNO|
 chodníč|stromEK|0|choďňíč|stromEK|
+kol|kolO|0|koł|kolO|
+l|lÍPA|0|ľ|lÍPA|
+led|led|0|ľed|led|
+les|les|0|ľes|les|
+listí|listí|0|lisťí|listí|
+mou|mouKA|0|mú|mouKA|
+obilí|obilí|0|obilí|obilí|
 panen|panenKA|0|panen|panenKA|
+petržel|petržel|0|petrželí|podmáslí|
+pivovar|pivovar|0|pijovar|pijovar|
+podmáslí|podmáslí|0|podmáslí|podmáslí|
+proutí||0|bez prúťí||
+říj|říjEN|0|ří|říJEN|
+sl|slÁMA|0|sł|slÁMA|
+slun|slunKO|0|słún|slunKO|
+slunc|sluncE|0|słún|slunKO|
+zelí|zelí|0|zelí|zelÍ|
+pavou|pavouK|0|paṵ|paṵK|
+pavučin|pavučinA|0|paṵči|paṵčiNA|
+rou|rouRA|0|rú|rúLA|
+koleč|kolečKO|0|koł|kołCO|zdrobnělina?
+hrníč|hrníčEK|0|hrnúš|hrnúšEK|
+hub|hubA|0|gemboš|gemboš|
+||0|poňura||
+||0|gambula||
 -
 černÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 novÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -225,6 +256,7 @@ kde|gde|
 kdy|gdi|
 však|šak|
 dohromady|dohromadi|
+nahlas|nazhłas|
 -
 s||s|
 do||do|
