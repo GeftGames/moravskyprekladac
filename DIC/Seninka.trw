@@ -1,10 +1,12 @@
-TW v1.0
+TW v2
 tSeninka
+aGG
 d05.07.2023 11:01:21
 ikopnúł ho do zadňice a víckráď ňe sem nechoť! Seninka
 c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
 g49.2731382,17.9647399
 q0
+oValašsko
 -
 -
 -
@@ -24,25 +26,25 @@ palicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 palicE|1|e?|e|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 -
-zad|stromEK|0|zadňic|palicE
+zad|stromEK|0|zadňic|palicE|
 -
 -
 -
 -
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
-ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|něm**?|jím,ním*?
-JÁ|-1|já?|mě,(knižně) mne[2]?|ňe|mě,(knižně) mne[2]?|já?|mně?|mnou?
+ON|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|něm**?|jím,ním*?
+JÁ|já?|mě,(knižně) mne[2]?|ňe|mě,(knižně) mne[2]?|já?|mně?|mnou?
 -
-ON|ON
-JÁ|JÁ
--
-nesklonné|1|
+|ON||ON|
+|JÁ||JÁ|
 -
 nesklonné|1|
 -
-víckrát|víckráď|nesklonné|nesklonné
+nesklonné|1|
+-
+víckrát|nesklonné|víckráď|nesklonné|
 -
 kopNOUT|15|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la|nut|nut|nuta|nuto|nuti|nuty|nuty|nuta
 choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
@@ -50,13 +52,13 @@ choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|d
 kopNÚT|15|-1|nout?|nu?|neš?|ne?|neme?|nete?|nou?|ni?|něme?|něte?|núł|l?|la?|lo?|li?|ly?|ly?|la?|nut?|nut?|nuta?|nuto?|nuti?|nuty?|nuty?|nuta?
 choDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ť|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
 -
-kop|kopNOUT|kopNÚT
-cho|choDIT|choDIT
-necho|choDIT|choDIT
+kop|kopNOUT|kop|kopNÚT|
+cho|choDIT|cho|choDIT|
+necho|choDIT|necho|choDIT|
 -
-sem
+sem|sem|
 -
 -
-a
+a|a|
 -
 -

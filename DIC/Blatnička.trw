@@ -43,6 +43,7 @@ pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|
 bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
 pec|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 farář|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 stroj|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e|e?|ích?|i?
 plán|1|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
@@ -59,6 +60,7 @@ pÁN|2|án?|ána|ánu?,ánovi?|ána?|ane?|ánu?,ánovi?|ánem|áňi?,ánové?|á
 bÚH|2|úh?|oha|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem|ozi?,ohové?|ohú?|ohúm?|ohy?|ozi?,ohové?|ozích?|ohy?
 pec|1|?|e?|i?|?|i?|i?|ú|e?|í?|ím?|e?|e?|ích?|emi?
 panáčEG|2|eg|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
+dochtoR|2|r|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
 -
 aeroplán|plán|0|ajroplán|plán|
 nápadník||0|galán||
@@ -79,9 +81,13 @@ p|pÁN|0|p|pÁN|
 b|bŮH|0|b|bÚH|
 pec|pec|0|pec|pec|
 farář|farář|0|panáč|panáčEG|
+dokto|doktoR|0|dochto|dochtoR|
 -
+doktorSKÝ|-1|ské|ského|skému|ské|ské|ském|ským|-|-|ská|ských|ským|ská|ská|ských|skými|-|-|ská|ské|ské|skou|ská|ské|skou|-|-|ské|ských|ským|ské|ské|ských|skými|-|-|ský|ského|skému|ského|ský|ském|ským|-|-|ští|ských|ským|ské|ští|ských|skými|-|-|ský|ského|skému|ský|ský|ském|ským|-|-|ské|ských|ským|ské|ské|ských|skými|-|-
 -
+doktorSKÝ|-1|ské?|ského?|skému?|ské?|ské?|ském?|ským?|-|-|ská?|ských?|ským?|ská?|ská?|ských?|skými?|-|-|ská?|ské?|ské?|skou?|ská?|ské?|skou?|-|-|ské?|ských?|ským?|ské?|ské?|ských?|skými?|-|-|skí|ského?|skému?|ského?|ský?|ském?|ským?|-|-|šťí?|ských?|ským?|ské?|šťí?|ských?|skými?|-|-|ský?|ského?|skému?|ský?|ský?|ském?|ským?|-|-|ské?|ských?|ským?|ské?|ské?|ských?|skými?|-|-
 -
+doktor|doktorSKÝ|dochtor|doktorSKÝ|
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou

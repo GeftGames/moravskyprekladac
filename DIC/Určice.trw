@@ -1,10 +1,11 @@
-TW v1.0
+TW v2
 tUrčice
 aGG
 d01.05.2023 19:47:39
 c#Zdroje dat\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str. 37
 g49.4305315,17.075338
 q0
+oHaná
 -
 -
 -
@@ -32,16 +33,16 @@ městO|0|o|a?|u?|o|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 cop|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 hřebíK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 -
-brambor|hrad|0|hertepl|školA
-mlék|městO|0|mlik|městO
-hrnec||0|hrne℥|
-cop|cop|0|cuplê|hřebíK
+brambor|hrad|0|hertepl|školA|
+mlék|městO|0|mlik|městO|
+hrnec||0|hrne℥||
+cop|cop|0|cuplê|hřebíK|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 zelenÝ|-1|é?|ého?|ému?|y|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
-syrov|sêrov|zelenÝ|zelenÝ
+syrov|zelenÝ|sêrov|zelenÝ|
 -
 -
 -
@@ -53,12 +54,12 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 -
 BÝT|247|-1|být?|sem|jsi?|je?|zmê|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-BÝT|BÝT
+|BÝT||BÝT|
 -
 -
-s|z|
+s||z|
 -
-když|dêš
-a
+když|dêš|
+a|a|
 -
 -

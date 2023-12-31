@@ -18,6 +18,7 @@ oLašsko
 kyselé mléko|1|kyška|
 udělané ze slámy|1|ze słamy džełane|
 ve chlévě|1|ve chlivje|
+pojedu k očnímu lékaři|1|pojedžem do očňiho doktora|
 -
 -
 při|přy
@@ -61,6 +62,7 @@ koš|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 čtverEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 noHA|1|ha|hy|ze|hu|ho|ze|hou|hy|-|-|hy|-|-|-
 kožiCH|3|ch|chu,čeji) kožicha|chu|ch|chu|chu,čeji) kožiše|chem|chy|chů|chům|chy|chy|ších|chy
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 hrad|3|?|a?|u?|?|e?|ě,u?|em?|y?|uf|ům?|y?|y?|ach|y?
 mlýn|3|?|a|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
@@ -80,6 +82,7 @@ koš|3|?|e?|i?|?|i?|i?|em?|e|ů?|ům?|e?|e?|ích?|i?
 čtverEC|3|ec|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 noHA|1|ha?|hy?|ze?|hu?|ho?|ze?|hou?|hy|-|-|-|-|-|-
 kožuCH|3|ch?|chu?|chu?|ch?|chu?|chu?|chem|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
+doktoR|2|r?|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
 -
 ||0|||
 ||0|na dodafku ||
@@ -106,6 +109,7 @@ no|noHA|0|no|noHA|
 kafé||0|kafe||
 ||0|||
 škraloup||0|kožu|kožuCH|
+dokto|doktoR|0|dokto|doktoR|
 -
 dřevěnÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 kulatÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -172,6 +176,7 @@ drž|držET|derž|deržEDŽ|
 prav|pravIT|prav|pravIT|
 ||přydžełali ||
 jezd|jezdIT|ježd|jezdIT|
+||pojedžem ||
 -
 tak|tag|
 ještě|ešče|

@@ -1,14 +1,17 @@
 TW v2
 tBlatnice pod Svatým Antonínkem
+aGG
 d25.06.2023 17:02:32
 c#Zdroje dat\n-sncj.ujc.cas.cz
 g48.9461598,17.4619869
 q0
+oSlovácko
 -
 -
 -
 -
 -
+?|1|dochtor luckí|
 -
 -
 -
@@ -16,12 +19,16 @@ q0
 -
 plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 plán|1|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 kožuCH|3|ch|chu?|chu?|ch?|chu?|chu?|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
+doktoR|2|r|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|roch|ry?
 -
 aeroplán|plán|0|auroplán|plán|
 koži|kožiCH|0|kožu|kožuCH|
+dokto|doktoR|0|dochto|doktoR|
+||2|Anéša ||
 -
 -
 -
@@ -32,10 +39,14 @@ koži|kožiCH|0|kožu|kožuCH|
 -
 -
 -
+choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+-
+choĎIT|15|-1|ďit?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďili?|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
+-
+cho|choDIT|cho|choĎIT|
 -
 -
--
--
+po||po|
 -
 -
 -

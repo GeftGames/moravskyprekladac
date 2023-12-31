@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tJablunkov
 aGG
 d02.04.2023 15:38:56
@@ -11,22 +11,42 @@ oSlezsko>Goralsko
 -
 -
 -
-bramborové placky|stryki
+bramborové placky|1|stryki|
 -
 -
 -
 á|a
 í|i
 -
+ovi|ov́i
 -
 almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+hromadA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+smrt|1||i|i||i|i|í|i|í|ím|i|i|ích|mi
+řezníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 -
 odmaRA|1|ryja|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 kanEC|2|ec?|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+hromaDA|1|da|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
+doktoR|2|r?|ra?|ov́i|ra?|re?|ru?,rovi?|rem?|ři?|ruf|rúm?|ry?|ři?|rech?|ry?
+smrT|1|t?|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|ťím?|ťi?|ťi?|ťích?|tmi?
+mosoř|2|k?|ka?|ov́i|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 -
-alma|almaRA|0|odma|odmaRA
-kan|kanEC|0|gaň|kanEC
+alma|almaRA|0|odma|odmaRA|
+kan|kanEC|0|gaň|kanEC|
+hromad|hromadA|0|gruma|hromaDA|
+dokto|doktoR|0|dokto|doktoR|
+smrt?||0|šm’erdž||
+řezní|řezníK|0|masoř|mosoř|
+-
+rezavÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+-
+rezavÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
+-
+hotov|rezavÝ|hotov|rezavÝ|
+||lep’i||
 -
 -
 -
@@ -37,11 +57,9 @@ kan|kanEC|0|gaň|kanEC
 -
 -
 -
+jestli|jeśli|
 -
 -
--
-jestli|jeśli
--
--
+než|ňiž|
 -
 -

@@ -30,6 +30,7 @@ jak mu|1|jag mo|
 jak už|1|jag jôž|
 i ženy říkat co se má dělat|1|ê robê poróčet|
 v kožichu,v kožiše|1|f kožôchô|
+píše učeně|1|pše jag dochtor|
 -
 flámovat|1|bôžirovat|
 -
@@ -59,6 +60,7 @@ antikrist|2||a|ovi,u|a|e|ovi,u|em|-|-|-|-|-|-|-
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne|nem|ni,ny,nové|ní,nů|nům|ni,ny|ni,ny,nové|nech|ny
 kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
 zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 telE|0|e?|ete?|eti?|e?|e?|eťi|etem?|ata?|at?|atům?|ata?|ata?|atech?|aty?
 duCH|3|ch|cha?|chu,chovi?|cha?|chu?|chu,chovi?|chem?|chové?|chů?|chům?|chy?|chové?|ších,chách?|chy?
@@ -76,6 +78,7 @@ ancêkrêzD|2|d|da?|dovi,du?|da?|de?|dovi,du?|dem?|-|-|-|-|-|-|-
 dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne?|nem?|ňi?,ny?,ové?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,ové?|nech?|ny?
 kožiCH|3|ch?|chu?|chu?|ch?|chu?|chô|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
 zÊMA|1|êma|imy?|imě?|imu?|imo?|imě?|imou?|imy?|im?|imám?|imy?|imy?|imách?|imami?
+dochtoR|2|r|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
 -
 tel|telE|0|tel|telE|
 du|duCH|0|dô|duCH|
@@ -94,6 +97,7 @@ antikrist|antikrist|0|ancêkrêz|ancêkrêzD|
 d|dEN|0|d|dEN|
 koži|kožiCH|0|kožô|kožiCH|
 zim|zimA|0|z|zÊMA|
+dokto|doktoR|0|dochto|dochtoR|
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 otevřenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -166,6 +170,7 @@ křivdIT|7|-1|it|ím|íš|í|íme|íte|í|i|ěme|ěte|il|il|ila|ilo|ili|ily|ily|
 pomýšlET|7|-1|et|lí|líš|lí|líme|líte|lí|ej|ejme|ejte|el|el|el|elo|eli|ely|ely|ela
 poručIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen, seděn|zen, seděn|zena, seděna|zeno, seděno|zeni, seděni|zeny, seděny|zeny, seděny|zena, seděna
+pSÁT|15|-1|sát|íši,píšu|íšeš|íše|íšeme|íšete|íší,píšou|iš|išme|ište|sal|sal|sala|salo|sali|saly|saly|sala|sán|sán|sána|sáno|sáni|sány|sány|sána
 -
 čôšňIT|15|-1|it?|ím?|íš?|í?|íme?|íte|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|bêd|jsem?|jsi?|je|sme|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|bôdó|buď?|buďme?|buďte?|bêl|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
@@ -183,6 +188,7 @@ blÉŽET|7|-1|éžet?|ížím?|ížíš?|íží?|ížíme?|ížíte?|íží?|iž
 sméšlET|7|-1|et?|i?|iš?|i|ime?|ite?|i?|é?|éme?|éte?|el?|el?|ela?|elo?|elê?|elê?|elê?|ela?
 poróčET|30|-1|et|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 seĎET|15|-1|ďet?|ďím?|ďíš?|ďí?|ďime|ďíte?|ďí?|ď?|ďme?|ďte?|ďel?|ďel?|ďela?|ďelo?|ďeli?|ďely?|ďely?|ďela?|zen?, seďen?|zen?, seďen?|zena?, seďena?|zeno?, seďeno?|zeňi?, seďeňi?|zeny?, seďeny?|zeny?, seďeny?|zena?, seďena?
+pSÁT|15|-1|sát?|íši?,píšu?|íšeš?|še|íšeme?|íšete?|íší?,píšou?|iš?|išme?|ište?|sal?|sal?|sala?|salo?|sali?|saly?|saly?|sala?|sán?|sán?|sána?|sáno?|sáňi?|sány?|sány?|sána?
 -
 |BÝT||BÝT|
 d|dÁT|d|dÁT|
@@ -202,6 +208,7 @@ poruč|poručIT|poróč|poručIT|
 trop|tropIT|čôšň|tropIT|
 vystraš|vystrašIT|dolek|dolekAT|
 se|seDĚT|se|seĎET|
+p|pSÁT|p|pSÁT|
 -
 zas,zase|zas|
 tam|tam|
@@ -218,5 +225,6 @@ se||se|
 přede||přede|
 -
 a|a|
+jako|jag|
 -
 -

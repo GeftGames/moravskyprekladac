@@ -18,6 +18,7 @@ malý habr|1|hrabec|
 malý kopec|1|hrp|
 jako kanci|1|jak kancovi|
 pánský kožich|1|dubjení kožuch|
+k doktorovi|1|g dochtorovi|
 -
 -
 -
@@ -43,10 +44,11 @@ kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 kostel|3||a|u||e|e|em|y|ů|ům|y|y|ech,ích|y
 kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 strom|3||u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 cibulA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
-pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kú|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 žeNA|1|na|y?|ě?|u?|o?|ňe|ou?|y?|?|ám?|y?|y?|ách?|ami?
 městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 syn|2|?|a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
@@ -62,46 +64,49 @@ kopEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 kanEC|2|ec?|ce?|covi|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 kosteL|3|l?|ṵa|lu?|l?|le?|le?|lem?|ly?|lů?|lům?|ly?|ly?|lech,lích?|ly?
 kožuCH|3|ch|chu?|chu?|ch?|chu?|chu?|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
+dochtoR|2|r?|ra?|rovi|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
 -
+abatyš|cibulE|0|abatiš|cibulA|
 akát||0|agát||
-ofin|ženA|0|afi|žeNA|
-poplach||0|alarm||
-chladn|městO|0|chṵadn|městO|
-zmetek||0|aušus||
-beran||0|baran||
 baron||0|barón||
 bebíč|bříšKO|0|bebé||
-sud||0|bečka||
-pláč||0|bek||
-hlupá|hlupáK|0|blvoň||
+beran||0|baran||
 borovic|borovicE|0|bor|les|
-pekáč|stroj|0|brutvan||
+boule||0|hrča||
+bran|pohádKA|0|brán|pohádKA|
 břeclav|kost|2|břecṵav|školA|
-bříz|školA|0|břez|školA|
 břich|městO|0|břuch||
 bříš|bříšKO|0|břúš|stromEK|
-hlupá|hlupáK|0|búbela||
-hromada||0|bulija||
+bříz|školA|0|břez|školA|
 cár||0|cancor||
-kozel||0|cap||
-udidlo||0|cajk||
-prs|les|0|cecík||
-prsatic|cibulE|0|ceckul|školA|
 cibul|cibulE|0|cibul|cibulA|
 cikán|cikán|0|cigán|cigán|
-ovád||0|hovado||
-hrábě||0|hrábje||
 habr||0|hrap||
-boule||0|hrča||
-nápadník||0|frajír||
-bran|pohádKA|0|brán|pohádKA|
-vál|pohádKA|0|voj|žeNA|
-kop|kopEC|0|čup|stromEK|
-abatyš|cibulE|0|abatiš|cibulA|
-sliny||0|grindi||
+hlupá|hlupáK|0|blvoň||
+hlupá|hlupáK|0|búbela||
+hrábě||0|hrábje||
+hromada||0|bulija||
+chladn|městO|0|chṵadn|městO|
 kan|kanEC|0|kan|kanEC|
+kop|kopEC|0|čup|stromEK|
 kostel|kostel|0|koste|kosteL|
+kozel||0|cap||
 koži|kožiCH|0|kožu|kožuCH|
+nápadník||0|frajír||
+ofin|ženA|0|afi|žeNA|
+ovád||0|hovado||
+pekáč|stroj|0|brutvan||
+pláč||0|bek||
+poplach||0|alarm||
+prs|les|0|cecík||
+prsatic|cibulE|0|ceckul|školA|
+sliny||0|grindi||
+sud||0|bečka||
+udidlo||0|cajk||
+vál|pohádKA|0|voj|žeNA|
+zmetek||0|aušus||
+bolíst|pohádKA|0|bolač|pohádKA|
+dokto|doktoR|0|dochto|dochtoR|
 -
 milÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
@@ -116,14 +121,14 @@ SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
 ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
-tEN|en?|oho?|omu?|oho?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|eh|ěm?|y?|-|ěch?|ěmi?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tú|ty?|teh|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|teh|těm?|ty?|-|těch?|těmi?
 SE|-|sebe?|sobje|se,sebe?|-|sobě?|sebou?
 kteRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rú|-|ré?|rú?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
 ON|on?|ho*?,jej?,něj**jeho?,něho**?|mu,jemu?,němu**?|ho*?,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
 -
 cokoli||bárco||
 beztoho||beztak||
-t|tEN|t|tEN|
+t|tEN||TEN|
 |SE||SE|
 kte|kteRÝ|ke|kteRÝ|
 |ON||ON|
@@ -137,6 +142,7 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 létAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 cinkNOUT|30|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,cinknul|l,cinknul|la,cinknula|lo,cinknulo|li,cinknuli|ly,cinknuly|ly,cinknuly|la,cinknula|nut|nut|nuta|nuto|nuti|nuty|nuty|nuta
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 -
 JÍT|127|-1|íd|jdu?|jdeš?|ide|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 hledAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
@@ -144,6 +150,7 @@ BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|bu
 létAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 cinkNOUT|30|-1|nút|nu?|neš?|ne?|neme?|nete?|nou?|ni?|něme?|něte?|l,cinknul?|l,cinknul?|la,cinknula?|lo,cinknulo?|li,cinknuli?|ly,cinknuly?|ly,cinknuly?|la,cinknula?|nut?|nut?|nuta?|nuto?|nuti?|nuty?|nuty?|nuta?
 mOCT|5|-1|oct?|ožu|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+musET|5|-1|et?|ím?|íž|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
 -
 bydlet||bývat||
 bručet||brčat||
@@ -162,6 +169,7 @@ lét|létAT|lét|létAT|
 cink|cinkNOUT|cing|cinkNOUT|
 m|mOCT|m|mOCT|
 nem|mOCT|nem|mOCT|
+mus|musET|mos|musET|
 -
 hned|hneť|
 ještě|ešče|
@@ -172,6 +180,8 @@ i||aj|
 z||z|
 od||od|
 do||do|
+s||s|
+k||g|
 -
 anebo|alebo|
 jak|jag|

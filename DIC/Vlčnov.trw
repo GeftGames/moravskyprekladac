@@ -1,24 +1,18 @@
-TW v1.0
+TW v2
 tVlčnov
+aGG
 d20.06.2023 16:32:14
 c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/
 g49.0100368,17.5816004
 q0
+oSlovácko
 -
 -
 -
 -
 -
-po vesnici|po ďediňe
-na zádech|na zádú
--
--
--
--
--
--
--
-poledn||0|poledn|
+po vesnici|1|po ďediňe|
+na zádech|1|na zádú|
 -
 -
 -
@@ -26,13 +20,21 @@ poledn||0|poledn|
 -
 -
 -
+poledn||0|poledn||
 -
 -
 -
 -
 -
 -
-vpoledne|vpolednu
+-
+-
+-
+-
+-
+-
+-
+vpoledne|vpolednu|
 -
 -
 -

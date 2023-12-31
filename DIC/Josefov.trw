@@ -6,6 +6,7 @@ c#Zdroje dat\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěr
 sPrušánky
 g48.8393332,17.0095795
 q0
+oSlovácko>Podluží
 -
 -
 Ale strýc <id=0,pods,pad=1,č=j> říká|Ale stríc <id=0,pods,pad=1,č=j> říkajú
@@ -81,6 +82,7 @@ hubA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 oKO|0|ko|ka|ku|ko|ko|ku|kem|či|čí|čím|či|či|čích|čima
 metr|3||u|u||e,e|u|em|y|ů|ům|y|y|ech|y
 kurVA|1|va|vy|vě|vu|vo|vě|vou|vy|ev|vám|vy|vy|vách|vami
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 -
 prodavač|2||e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
 koš|3||e?|i?|?|i?|i?|em?|e?|ú|úm?|e?|e?|ích?|i?
@@ -97,6 +99,7 @@ hubA|1|a?|i|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 oKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|či|čí?|čím?|či?|či?|čích?|čima*?
 metr|3|?|u?|u?|?|e,e?|u?|em?|y?|ú|úm?|y?|y?|ech?|y?
 kurVA|1|va?|vy?|vě?|vu?|vo?|vě?|vou?|vy?|ev?|vám?|vy?|vy?|vách?|vami?
+svaDBA|1|dba|dby?|dbje?|dbu?|dbo?|dbje?|dbou?|dby?|deb?|dbám?|dby?|dby?|dbách?|dbami?
 -
 b|bOUDA|0|b|bOUDA|
 jan|jan|2|jan|jan|
@@ -117,6 +120,7 @@ důlek||0|z dúlkú||
 tváře||0|škraňe||
 metr|metr|0|metr|metr|
 kur|kurVA|0|kur|kurVA|
+svat|svatBA|0|sva|svaDBA|
 -
 milÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||

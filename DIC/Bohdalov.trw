@@ -1,5 +1,6 @@
-TW v1.0
+TW v2
 tBohdalov
+aGG
 d06.04.2023 9:37:47
 ikniha České nářeční texty - Lamprecht, Arnošt str 139\n\nhrómski ďilo, to sem to zas jednou vivet! Bohdalov ZR
 c#Zdroje\n-kniha České nářeční texty - Lamprecht, Arnošt; str 139\n-Základové dialektologie československé;Šembera, Alois Vojtěch\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Bohdalov">sncj.ujc.cas.cz</a>
@@ -10,7 +11,7 @@ oHorácko
 -
 -
 -
-zase jsem to jednou udělal|to sem to zas jednou vivet
+zase jsem to jednou udělal|1|to sem to zas jednou vivet|
 -
 -
 -
@@ -18,16 +19,22 @@ zase jsem to jednou udělal|to sem to zas jednou vivet
 -
 -
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 -
 městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+doktoR|2|r|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
 -
-díl|městO|0|ďil|městO
--
--
--
--
+díl|městO|0|ďil|městO|
+dokto|doktoR|0|dokto|doktoR|
 -
 -
+-
+-
+JÁ|já|mě,mne|mně,mi|mě,mne|já|mně|mnou
+-
+JÁ|já?|mňe|mňe?,mi?|mě?,mne?|já?|mňe?|mnou?
+-
+|JÁ||JÁ|
 -
 -
 -
@@ -38,18 +45,20 @@ vyvÉST|30|-1|ést|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|e
 BÝT|247|-1|být?|sem|jsi?|je?|sme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 vivÉST|30|-1|ést?|edu?|edeš?|ede?|edeme?|edete?|edou?|eď?|eďme?|eďte?|et|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 -
-BÝT|BÝT
-vyv|viv|vyvÉST|vivÉST
+|BÝT||BÝT|
+vyv|vyvÉST|viv|vivÉST|
+ovazovat||vovazoval ||
 -
-najednou
-večer|večir
-zase,zas|zas
-jednou
+najednou|najednou|
+večer|večir|
+zase,zas|zas|
+jednou|jednou|
+tam|tam|
 -
-na|
-pro|
+na||na|
+pro||pro|
 -
-a
+a|a|
 -
-prý|prej
+prý|prej|
 -

@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tTištín
 aGG
 d30.04.2023 17:51:44
@@ -12,7 +12,7 @@ oHaná
 -
 -
 -
-Tak ten|Toš ten
+Tak ten|1|Toš ten|
 -
 -
 -
@@ -40,77 +40,77 @@ hrad|3||u|u||e|ě,u|em|y|ů|ům|e|y|ech|y
 konEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 -
 městO|0|o|a|u?|o?|o?|u,ě?|em?|a|?|ům?|a|a?|ech?|y?
-dEN|0|eň|ne?|ni,nu?|eň|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
+dEN|0|eň|ne?|ni?,nu?|eň|ne?,ni?|ni?,nu?,ne?|nem?|ni?,ny?,nové?|ní?,nů?|nům?|ni?,ny?|ni?,ny,nové?|nech?|ny?
 hrad|3|?|a|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 konEV|1|ev?|ví|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 -
-d|ďeck|dÍTĚ|městO
-kráva||
-medved|medveť||
-mlék|mlik|městO|městO
-d|dEN|dEN
-litr|hrad|hrad
-míst|mist|městO|městO
-kon|kom|konEV|konEV
-syrovátka|serovátka||
-ráno||
+d|dÍTĚ|0|ďeck|městO|
+kráva||0|kráva||
+medved||0|medveť||
+mlék|městO|0|mlik|městO|
+d|dEN|0|d|dEN|
+litr|hrad|0|litr|hrad|
+míst|městO|0|mist|městO|
+kon|konEV|0|kom|konEV|
+syrovátka||0|serovátka||
+ráno||0|ráno||
 -
 -
 -
 -
-kDO|-1|do|oho|omu|oho|do|om|ým
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-kteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
-ONO|-1|ono|ho*jej,něj**jeho,něho**|mu*,jemu,němu**|ho*je,ně**jej,něj**|-|něm**|jím,ním*
+kDO|do|oho|omu|oho|do|om|ým
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+ONO|ono|ho*jej,něj**jeho,něho**|mu*,jemu,němu**|ho*je,ně**jej,něj**|-|něm**|jím,ním*
 -
-kDO|-1|do|oho?|omu?|oho?|do?|om?|ým?
-tEN|-1|en|oho?|emo|oho?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|en?|oho?|emo|en?|-|om?|ím?|e|ech|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ech|ěm?|y?|-|ěch?|ěmi?|o|oho?|emo|o?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?
-keRÝ|-1|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|rý|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
-ONO|-1|ono|ho*jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*je,ně**jej,něj**?|-|něm**?|jím,ním*?
+kDO|do|oho?|omu?|oho?|do?|om?|ým?
+tEN|en|oho?|emo|oho?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|en?|oho?|emo|en?|-|om?|ím?|e|ech|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ech|ěm?|y?|-|ěch?|ěmi?|o|oho?|emo|o?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?
+keRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|rý|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+ONO|ono|ho*jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*je,ně**jej,něj**?|-|něm**?|jím,ním*?
 -
-něk|neg|kDO|kDO
-k|kDO|kDO
-t|tEN|tEN
-kte|ke|kteRÝ|keRÝ
-ONO|ONO
-dva|dva,dvje||
+něk|kDO|neg|kDO|
+k|kDO|k|kDO|
+t|tEN|t|tEN|
+kte|kteRÝ|ke|keRÝ|
+|ONO||ONO|
+dva||dva,dvje||
 -
 čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
 -
 šterE|2|e|vorově) čtyřech[1]?,?,(hovorově) čtyřech[1]?|em?|i?|i?|ech?|tyřma[2]?,mi?,čtyřma[2]?
 -
-pjet||
-čtyř|šter|čtyřI|šterE
+pjet||pjet||
+čtyř|čtyřI|šter|šterE|
 -
-BÝT|119|-1|být|jsem,(nářečně) su[p 1]|jsi,(nářečně) seš[p 1]|je[p 2],jest[p 2][p 3]|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž[p 3]|buďme,buďmež[p 3]|buďte,buďtež[p 3]|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
-MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+BÝT|119|-1|být|jsem|jsi,seš|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|měv|měvši|měvše
 dÁT|78|-1|át|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 počkAT|6|-1|at|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 -
-BÝT|119|-1|být?|sem|jsi,(nářečně) seš[p 1]?|je|zme|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď,budiž[p 3]?|buďme,buďmež[p 3]?|buďte,buďtež[p 3]?|byl?|byl?|bela|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
-MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|mňel|mňel|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+BÝT|119|-1|být?|sem|jsi?,seš?|je|zme|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|bela|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
+MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|mňel|mňel|měla?|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|měv?|měvši?|měvše?
 dÁT|78|-1|át?|ej?|ejme?|ejte?|al|al|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 počkAT|6|-1|at?|ej?|ejme?|yte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 -
-BÝT|BÝT
-MÍT|MÍT
-sehřát|zehřid||
-dÁ|dÁT|dÁT
-počk|počkAT|počkAT
+|BÝT||BÝT|
+|MÍT||MÍT|
+sehřát||zehřid||
+dÁ|dÁT|dÁ|dÁT|
+počk|počkAT|počk|počkAT|
 -
-jinak|jináč
-vždy|decky
-teď|fčel
-potom
-domů|dom
-tade
-tak|tag
-sotva|sotvá
-hned|hneť
+jinak|jináč|
+vždy|decky|
+teď|fčel|
+potom|potom|
+domů|dom|
+tade|tade|
+tak|tag|
+sotva|sotvá|
+hned|hneť|
 -
-i|aji|
-v|f|
+i||aji|
+v||f|
 -
-a
+a|a|
 -
 -

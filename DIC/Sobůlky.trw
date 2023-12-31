@@ -1,15 +1,17 @@
-TW v1.0
+TW v2
 tSobůlky
 aGG
 d27.10.2023 23:03:41
 c#Zdroje dat\n-Nářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n\n#Popis nářečí\n-na začátku slov tl za kl (klúct)\n-Některé slova mají protetické H (hulička)
 g49.0201376,17.0785382
 q0
+oSlovácko
 -
 -
 -
 -
 -
+zlatohlávek|1|chrúsťí dochtor|
 -
 -
 tl|kl
@@ -30,13 +32,13 @@ mlýn|3|?|a?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 uličKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 almaRA|1|ra?|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 -
-|ČLOVĚK|0||ČLOVĚK
-klička||0|klučka|
-koži|kožiCH|0|kožu|kožiCH
-bý|býK|0|bí|býK
-mlýn|mlýn|0|mlín|mlýn
-ulič|uličKA|0|ulič|uličKA
-alma|almaRA|0|hal?ma|almaRA
+|ČLOVĚK|0||ČLOVĚK|
+klička||0|klučka||
+koži|kožiCH|0|kožu|kožiCH|
+bý|býK|0|bí|býK|
+mlýn|mlýn|0|mlín|mlýn|
+ulič|uličKA|0|ulič|uličKA|
+alma|almaRA|0|hal?ma|almaRA|
 -
 cizí|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
@@ -48,11 +50,11 @@ dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|?|?|rá?|rých?|rým?|rá?|r�
 silNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|nej|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 tlustÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-cizí|cizí|cizí
-dob|dobRÝ|dobRÝ
-siln|sil|silnÝ|silNÝ
-sta|dobRÝ|dobRÝ
-tlust|klust|tlustÝ|tlustÝ
+cizí|cizí|cizí|cizí|
+dob|dobRÝ|dob|dobRÝ|
+siln|silnÝ|sil|silNÝ|
+sta|dobRÝ|sta|dobRÝ|
+tlust|tlustÝ|klust|tlustÝ|
 -
 -
 -
@@ -70,13 +72,13 @@ bývAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ajú|ej?|ejme?|ejte?|al?|al?|ala?|alo?
 stÁT|7|-1|át?|ojím?|ojíš?|ojí?|ojíme?|ojíte?|ójijú|ůj?|ůjme?|ůjte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
 tlOUCT|15|-1|ouct?|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,tluc?|učme,tlucme?|učte,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeni?|učeny?|učeny?|učena?
 -
-|plut||
-poklidit|pokluďit||
-líb|lúb|líbAT|líbAT
-býv|bív|bývAT|bývAT
-st|stÁT|stÁT
-tlačit|klačit||
-tl|kl|tlOUCT|tlOUCT
+||plut||
+poklidit||pokluďit||
+líb|líbAT|lúb|líbAT|
+býv|bývAT|bív|bývAT|
+st|stÁT|st|stÁT|
+tlačit||klačit||
+tl|tlOUCT|kl|tlOUCT|
 -
 -
 -

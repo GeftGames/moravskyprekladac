@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tSuchov
 aGG
 d17.07.2023 15:34:00
@@ -12,37 +12,58 @@ oSlovácko
 -
 -
 -
-kdyby jsi|kebiz
+kdyby jsi|1|kebiz|
 -
 -
 -
 -
 ala|aṵa
 -
+hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+-
+hlavA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+dochtoR|2|r?|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ri|ři?|rech?|ry?
+-
+hlav|hlavA|0|hṵav|hlavA|
+dokto|doktoR|0|dochto|dochtoR|
 -
 -
 -
 -
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
+JÁ|já|ňa,mňa|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+|JÁ||JÁ|
 -
-JÁ|-1|já?|ňa|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-
 -
-JÁ|JÁ
+dvA|4|a|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-
 -
--
--
+dv|dvA|dv|dvA|
 -
 otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+vstÁT|22|-1|át|anu|aneš|ane|aneme|anete|anou|aň|aňme|aňte|al|al|ala|alo|ali|aly|aly|ala
+bolET|7|-1|et|ím|íš|í|íme|íte|í,bolejí||me|te|el|el|ela|elo|eli|ely|ely|ela
+poSLAT|30|-1|slat|šlu|šleš|šle|šleme|šlete|šlou|šli|šleme|šlete|slal|slal|slala|slalo|slali|slaly|slaly|slala|slán|slán|slána|sláno|sláni|slány|slány|slána
 -
 dožírAT|15|-1|ovat?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|aṵa|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+stÁT|22|-1|át?|anem|aneš?|ane?|aneme?|anete?|anou?|aň?|aňme?|aňte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+bolET|7|-1|et?|ím?|íš?|í|íme?|íte?|í?,bolejí?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+poSLAT|30|-1|slat?|šlu?|šleš?|šle?|šleme?|šlete|šlou?|šli?|šleme?|šlete?|slal?|slal?|slala?|slalo?|slali?|slaly?|slaly?|slala?|slán?|slán?|slána?|sláno?|sláňi?|slány?|slány?|slána?
 -
-otrav|dožír|otravOVAT|dožírAT
-neotrav|nedožír|otravOVAT|dožírAT
+otrav|otravOVAT|dožír|dožírAT|
+neotrav|otravOVAT|nedožír|dožírAT|
+vst|vstÁT|st|stÁT|
+nevst|vstÁT|nest|stÁT|
+bol|bolET|bol|bolET|
+po|poSLAT|po|poSLAT|
 -
-pořád|furd
+pořád|furd|
 -
+pro||pro|
 -
+a|a|
 -
 -

@@ -1,15 +1,17 @@
-TW v0.1
+TW v2
 tValašská Senice
+aGG
 d08.06.2023 20:52:08
 c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str. 275
 g49.2253835,18.1163565
 q0
+oValašsko
 -
 -
 -
 -
 -
-na jaře|z vesna
+na jaře|1|z vesna|
 -
 -
 -
@@ -19,17 +21,17 @@ autobus|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
 -
 autobus|3|?|u?|u?|?|e?|u,e?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 -
-bratislava|prešpurk||
-kus|kuz||
+bratislava||0|prešpurk||
+kus||0|kuz||
 -
 -
 -
 -
-MY|-1|my|nás|nám|nás|my|nás|námi
+MY|my|nás|nám|nás|my|nás|námi
 -
-MY|-1|my?|nás|nám?|nás?|my?|nás?|námi?
+MY|my?|nás|nám?|nás?|my?|nás?|námi?
 -
-MY|MY
+|MY||MY|
 -
 -
 -
@@ -42,14 +44,14 @@ choDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?
 BÝT|247|-1|být?|sem|jsi?|je?|smy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|były|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šel?|šel?|šła|šlo?|šli?|šly?|šly?|šla?
 -
-choD|choDIT|choDIT
-|BÝT|BÝT
-při|přiJÍT|přiJÍT
+choD|choDIT|choD|choDIT|
+|BÝT||BÝT|
+při|přiJÍT|při|přiJÍT|
 -
-dolů|dołú
-vždy|dycky
+dolů|dołú|
+vždy|dycky|
 -
-do|
+do||do|
 -
 -
 -

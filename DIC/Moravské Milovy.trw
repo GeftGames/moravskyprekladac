@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tMoravské Milovy
 aGG
 d14.04.2023 7:30:26
@@ -7,15 +7,16 @@ cZdroje:\nČeské nářeční texty - Lamprecht, Arnošt; str 146
 g49.6666557,16.0939936
 xlokální mluva
 q0
+oHorácko
 -
 -
 -
-Pěstovali jsme jej hodně.|My sme ho pjestovali moc.
-Vezmeme to od zasetí.|Vememe to vod zasetí.
+Pěstovali jsme jej hodně.|1|My sme ho pjestovali moc.|
+Vezmeme to od zasetí.|1|Vememe to vod zasetí.|
 -
 -
-pole lnu|lnisko
-z okolí|vokolečňe
+pole lnu|1|lnisko|
+z okolí|1|vokolečňe|
 -
 -
 ob|vob
@@ -30,24 +31,24 @@ polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 -
 polE|0|e?|a|i?|e?|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
 -
-syn||
-pol|polE|polE
+syn||0|syn||
+pol|polE|0|pol|polE|
 -
 -
 -
 -
-kDO|-1|do|oho|omu|oho|do|om|ým
+kDO|do|oho|omu|oho|do|om|ým
 -
-gDO|-1|do|oho?|omu?|oho?|do?|om?|ým?
+gDO|do|oho?|omu?|oho?|do?|om?|ým?
 -
-kD|kDO|gDO
-něk|ňeg|kDO|gDO
+kD|kDO|kD|gDO|
+něk|kDO|ňeg|gDO|
 -
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 -
 druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hou?|há?|hej|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
-dru|druHÝ|druHÝ
+dru|druHÝ|dru|druHÝ|
 -
 přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
@@ -63,26 +64,26 @@ sbírAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|
 dělAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|aj|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 řikAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-při|př|přiJÍT|přIJÍT
-|BÝT|BÝT
-vZ|vZÍT|vZÍT
-sbír|zbír|sbírAT|sbírAT
-dělA|dělAT|dělAT
-říkA|řikA|říkAT|řikAT
+při|přiJÍT|př|přIJÍT|
+|BÝT||BÝT|
+vZ|vZÍT|vZ|vZÍT|
+sbír|sbírAT|zbír|sbírAT|
+dělA|dělAT|dělA|dělAT|
+říkA|říkAT|řikA|řikAT|
 -
-než|neš
-ještě|ešťe
-moc
-tak
-potom
-zase|zasej
-pak|pag
-tady
+než|neš|
+ještě|ešťe|
+moc|moc|
+tak|tak|
+potom|potom|
+zase|zasej|
+pak|pag|
+tady|tady|
 -
-z|s|
-od|vod|
+z||s|
+od||vod|
 -
-když|gdyž,dyž
-nebo
+když|gdyž||dyž|
+nebo|nebo|
 -
 -

@@ -1,16 +1,18 @@
-TW v0.1
+TW v2
 tCetechovice
+aGG
 d11.06.2023 20:28:22
 c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 264
 g49.1730432,17.259389
 q0
+oHaná
 -
 -
 -
 -
 -
-z těch|s tech
-v té|f téj
+z těch|1|s tech|
+v té|1|f téj|
 -
 -
 -
@@ -22,27 +24,30 @@ til|ťíł
 nami|nama
 nesl|nésł
 -
+mravenišTĚ|0|tě|tě|ti|tě|tě|ti|těm|tě|ť|tím|tě|tě|tích|ti
 -
+brableňisKO|0|ko|tě?|ti?|tě?|tě?|ti?|těm?|tě?|ť?|tím?|tě?|tě?|tích?|ti?
 -
+mraveniš|mravenišTĚ|0|mraveniš|brableňisKO|
 -
-žlutÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+žlutÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-žlutÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+žlutÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
-žlut|žłut|žlutÝ|žlutÝ
-star|žlutÝ|žlutÝ
+žlut|žlutÝ|žłut|žlutÝ|
+star|žlutÝ|star|žlutÝ|
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
-SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
-tEN|-1|en?|eho|omu?|oho?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|éj|ou?|y?|ech|ěm?|y?|-|ěch?|ěmi?|o?|eho|omu?|o?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?
-ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ňéj|-|něm**?|jím,ním*?
+SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+tEN|en?|eho|omu?|oho?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|éj|ou?|y?|ech|ěm?|y?|-|ěch?|ěmi?|o?|eho|omu?|o?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?
+ON|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ňéj|-|něm**?|jím,ním*?
 -
-SE|SE
-t|tEN|tEN
-ON|ON
+|SE||SE|
+t|tEN|t|tEN|
+|ON||ON|
 -
 -
 -
@@ -67,31 +72,31 @@ utíkAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ała|a
 vZÍT|94|-1|zit,zít|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|ezmi?|ezměme?|ezměte?|zal?|zal?|zała|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zati?|zaty?|zaty?|zata?|zav?|zavši?|zavše?
 doJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jdi?|jděme?|jděte?|šéł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
 -
-BÝT|BÝT
-musE|musET|musET
-řv|řvÁT|řvÁT
-JET|JET
-JÍT|JÍT
-slyš|słyš|slyšET|slyšET
-utík|uťek|utíkAT|utíkAT
-v|vZÍT|vZÍT
-do|doJÍT|doJÍT
+|BÝT||BÝT|
+musE|musET|musE|musET|
+řv|řvÁT|řv|řvÁT|
+|JET||JET|
+|JÍT||JÍT|
+slyš|slyšET|słyš|slyšET|
+utík|utíkAT|uťek|utíkAT|
+v|vZÍT|v|vZÍT|
+do|doJÍT|do|doJÍT|
 -
-také|taky
-vždy|dycky
-však|šag
-zas
-tedy|teda
-nyní|fčíl
-jinak|inádž
-pěšky|pješky
-ještě|ečše
+také|taky|
+vždy|dycky|
+však|šag|
+zas|zas|
+tedy|teda|
+nyní|fčíl|
+jinak|inádž|
+pěšky|pješky|
+ještě|ečše|
 -
-i|aji|
-pod|pot|
-do|
+i||aji|
+pod||pot|
+do||do|
 -
-nebo
-když|dyž
+nebo|nebo|
+když|dyž|
 -
 -

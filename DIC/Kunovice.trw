@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 fSpisovná čeština
 tKunovice
 aGG
@@ -8,6 +8,7 @@ lSlováčtina
 g49.0421428,17.4657411
 xmístní mluva
 q0
+oSlovácko
 -
 -
 -
@@ -25,14 +26,14 @@ ami|ama
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-SE|-1|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|yma|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|yma|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|yma|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|yma
+SE|-|sebe?|si,sobě?|sa,sebe?|-|sobě?|sebou?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|yma|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|yma|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|yma|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|yma
 -
-SE|SE
-t|tEN|tEN
+|SE||SE|
+t|tEN|t|tEN|
 -
 -
 -
@@ -47,18 +48,18 @@ BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|bud
 SPADNOUT|30|-1|spadnout?|spadnu?|spadneš?|spadne?|spadneme?|spadnete?|spadnou?|spadni?|spadněme?|spadněte?|spadłu|spadl?|spadla?|spadlo?|spadli?|spadly?|spadly?|spadla?|–?|–?|–?|spadeno?|–?|–?|–?|–?
 zavÉST|30|-1|ést?|edu?|edeš?|ede?|edeme?|edete?|edou?|eď?|eďme?|eďte?|édłu|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 -
-ch|chTÍT|chTÍT
-BÝT|BÝT
-SPADNOUT|SPADNOUT
-zav|zavÉST|zavÉST
+ch|chTÍT|ch|chTÍT|
+|BÝT||BÝT|
+|SPADNOUT||SPADNOUT|
+zav|zavÉST|zav|zavÉST|
 -
-zas
-potom
+zas|zas|
+potom|potom|
 -
-nad|nat|
-za|
+nad||nat|
+za||za|
 -
-když|dyž
+když|dyž|
 -
 -
-aha
+aha|aha|
