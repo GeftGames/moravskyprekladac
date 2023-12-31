@@ -198,19 +198,19 @@ function GetTranslations() {
 
 		// Po souborech
 		for (let i = 0; i < fileContents.length; i += 2) {
-			let //fileName = fileContents[i], 
+			let fileName = fileContents[i], 
 			fileText = fileContents[i + 1];
-			//console.log(fileText);
-			if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText);
+		//	console.log(fileName,fileText);
+			if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, fileName);
 			// Zápis souboru
 			//using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
 		}
 
 		//console.log("Finished!");
-		document.getElementById("translatingPage").style.display="block";
-		document.getElementById("translatingPage").style.opacity="0%";
+		document.getElementById("appPage_"+appSelected).style.display="block";
+		document.getElementById("appPage_"+appSelected).style.opacity="0%";
 		setTimeout(function () {
-			document.getElementById("translatingPage").style.opacity="100%";
+			document.getElementById("appPage_"+appSelected).style.opacity="100%";
 			document.getElementById("loadingPage").style.display="none";
 		}, 100)
 	}
@@ -252,7 +252,7 @@ function GetTranslations() {
 		xhttp2.send();
 	}*/
 
-	function RegisterLang(content){
+	function RegisterLang(content, fileName){
 		let lines=content.split('\r\n');
 
 		if (lines.length<5) {
@@ -261,6 +261,7 @@ function GetTranslations() {
 		}
 
 		let tr=new LanguageTr();
+		tr.fileName=fileName;
 		loadedversion=lines[0];
 		loadedVersionNumber=parseFloat(loadedversion.substring(4));
 		if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
@@ -293,7 +294,7 @@ function GetTranslations() {
 			if ((!betaFunctions && lang.Quality>=1) || (betaFunctions && lang.Quality>=0) || dev) {
 				let name=lang.Name;
 				//if (betaFunctions || dev){
-					if (lang.Quality>2) name+=" ✅";
+				if (lang.Quality>2) name+=" ✅";
 				//}
 				//if (lang.Quality==0) name+=" 💩";
 				//else 
@@ -324,8 +325,7 @@ function GetTranslations() {
 			}//else if (lang.quality>2) lang.Name+=" ✅";
 		
 		}else{
-			if (dev)console.log("This lang has problems", lang);
-
+			if (dev)console.log("This lang has problems: ", lang.fileName);
 		}
 	}
 }
@@ -498,8 +498,8 @@ function DisableLangTranslate(search) {
 		//}
 	}
 }
-function ClearTextbox() {
-	document.getElementById("specialTextarea").value="";
+function ClearTextbox(textbox) {
+	document.getElementById(textbox).value="";
 	Translate();
 }
 
@@ -569,10 +569,10 @@ function ReportDownloadedLanguage() {
 	document.getElementById("progness").style.width=(progness*100)+"%";
 
 	if (progness==1) {
-		document.getElementById("translatingPage").style.display="block";
-		document.getElementById("translatingPage").style.opacity="0%";
+		document.getElementById("appPage_"+appSelected).style.display="block";
+		document.getElementById("appPage_"+appSelected).style.opacity="0%";
 		setTimeout(function () {
-			document.getElementById("translatingPage").style.opacity="100%";
+			document.getElementById("appPage_"+appSelected).style.opacity="100%";
 			document.getElementById("loadingPage").style.display="none";
 		//	document.getElementById("aboutPage").style.display="block";
 		}, 100)
@@ -911,3 +911,459 @@ function createSHPFile(){
 	}
 }
 }*/
+
+function SearchInMoravian() {
+	let inputText=document.getElementById('searchInputText').value;
+	if (inputText == "") return;
+
+	// V jiném vlákně
+/*	if (window.Worker) {
+		var worker = new Worker('translator/v1/workerSearch.js');
+
+		list = JSON.parse(JSON.stringify(languagesList));
+		worker.postMessage([inputText, list]);
+		console.log('Message posted to worker');
+
+		worker.onmessage = function(e) {
+			let result = e.data;
+			
+ 			document.getElementById('searchOutText').value=result;
+			console.log('Message received from worker');
+		}
+
+	//	worker.postMessage({inputText, languagesList});
+	} else {
+		console.log('Your browser doesn\'t support web workers.');
+  	}*/
+
+	// add as sorted data
+	function AddTo(arr, data) {
+		for (let a of arr) {
+			if (a.Meaning==data.Meaning
+			&&	(a.Comment==data.Comment || (a.Comment==undefined && data.Comment=="") || (a.Comment=="" && data.Comment==undefined)  )) {
+				// Add
+				a.Location.push(data.Location[0]);
+				return arr;
+			}
+		}
+
+		// create new, not find
+		arr.push(data)
+		return arr;
+	}
+
+	let arrData=[];
+
+	{
+		// Adverb
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let adverbs of lang.Adverbs) {
+				for (let to of adverbs.output) {
+					if (to.Text==inputText) {
+						let Meaning=Array.isArray(adverbs.input) ? adverbs.input.join(" ") : adverbs.input;
+						arrDataT=AddTo(arrDataT, {Type: "Přís", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// conjuction
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let conjuction of lang.Conjunctions) {
+				for (let to of conjuction.output) {
+					if (to.Text==inputText) {
+						let Meaning=Array.isArray(conjuction.input) ? conjuction.input.join(" ") : conjuction.input;
+						arrDataT=AddTo(arrDataT, {Type: "Spoj", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// preposition
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let preposition of lang.Prepositions) {
+				for (let to of preposition.output) {
+					if (to.Text==inputText) {
+						let Meaning=Array.isArray(preposition.input) ? preposition.input.join(" ") : preposition.input;
+						arrDataT=AddTo(arrDataT, {Type: "Před", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// interjection
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let interjection of lang.Interjections) {
+				for (let to of interjection.output) {
+					if (to.Text==inputText) {
+						let Meaning=Array.isArray(interjection.input) ? interjection.input.join(" ") : interjection.input;
+						arrDataT=AddTo(arrDataT, {Type: "Před", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// Particle
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let particle of lang.Particles) {
+				for (let to of particle.output) {
+					if (to.Text==inputText) {
+						let Meaning=Array.isArray(particle.input) ? particle.input.join(" ") : particle.input;
+						arrDataT=AddTo(arrDataT, {Type: "Před", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// Noun
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let noun of lang.Nouns) {
+				for (let to of noun.To) {
+					if (inputText.startsWith(to.Body)) {
+						for (let i=0; i<to.Pattern.Shapes.length; i++) {
+							let shapeto = to.Pattern.Shapes[i];							
+							if (to.Body+shapeto == inputText) {
+								let Meaning;
+								if (noun.PatternFrom.Shapes[i]!="?" && noun.PatternFrom.Shapes[i]!="-") Meaning=(Array.isArray(noun.From) ? noun.From[0] : noun.From)+noun.PatternFrom.Shapes[0];
+								else if (noun.PatternFrom.Shapes[0]!="?" && noun.PatternFrom.Shapes[0]!="-") Meaning=(Array.isArray(noun.From) ? noun.From[0] : noun.From)+noun.PatternFrom.Shapes[0];
+								else if (noun.PatternFrom.Shapes[7]!="?" && noun.PatternFrom.Shapes[7]!="-") Meaning=(Array.isArray(noun.From) ? noun.From[0] : noun.From)+noun.PatternFrom.Shapes[0];
+								else break;
+
+								arrDataT=AddTo(arrDataT, {Type: "Pods", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+					}
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// Adjective
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let adjective of lang.Adjectives) {
+				for (let to of adjective.To) {
+					if (inputText.startsWith(to.Body)) {						
+						for (let i=0; i<to.Pattern.Middle.length; i++) {
+							let shapeto = to.Pattern.Middle[i];	
+							if (to.Body+shapeto == inputText) {
+								let Meaning;
+								let patternFrom=adjective.PatternFrom;
+								if      (patternFrom.Middle[i]!="?" && patternFrom.Middle[i]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.Middle[i];
+								else if (patternFrom.Middle[0]!="?" && patternFrom.Middle[0]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.Middle[0];
+								else if (patternFrom.Middle[7]!="?" && patternFrom.Middle[7]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.Middle[7];
+								else break;																
+								arrDataT=AddTo(arrDataT, {Type: "Příd", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+						for (let i=0; i<to.Pattern.Feminine.length; i++) {
+							let shapeto = to.Pattern.Feminine[i];	
+							if (to.Body+shapeto == inputText) {
+								let Meaning;
+								let patternFrom=adjective.PatternFrom;
+								if      (patternFrom.Feminine[i]!="?" && patternFrom.Feminine[i]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.Feminine[i];
+								else if (patternFrom.Feminine[0]!="?" && patternFrom.Feminine[0]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.Feminine[0];
+								else if (patternFrom.Feminine[7]!="?" && patternFrom.Feminine[7]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.Feminine[7];
+								else break;
+								arrDataT=AddTo(arrDataT, {Type: "Příd", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+						for (let i=0; i<to.Pattern.MasculineAnimate.length; i++) {
+							let shapeto = to.Pattern.MasculineAnimate[i];	
+							if (to.Body+shapeto == inputText) {
+								let Meaning;
+								let patternFrom=adjective.PatternFrom;
+								if      (patternFrom.MasculineAnimate[i]!="?" && patternFrom.MasculineAnimate[i]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.MasculineAnimate[i];
+								else if (patternFrom.MasculineAnimate[0]!="?" && patternFrom.MasculineAnimate[0]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.MasculineAnimate[0];
+								else if (patternFrom.MasculineAnimate[7]!="?" && patternFrom.MasculineAnimate[7]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.MasculineAnimate[7];
+								else break;
+								arrDataT=AddTo(arrDataT, {Type: "Příd", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+						for (let i=0; i<to.Pattern.MasculineInanimate.length; i++) {
+							let shapeto = to.Pattern.MasculineInanimate[i];	
+							if (to.Body+shapeto == inputText) {
+								let Meaning;
+								let patternFrom=adjective.PatternFrom;
+								if      (patternFrom.MasculineInanimate[i]!="?" && patternFrom.MasculineInanimate[i]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.MasculineInanimate[i];
+								else if (patternFrom.MasculineInanimate[0]!="?" && patternFrom.MasculineInanimate[0]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.MasculineInanimate[0];
+								else if (patternFrom.MasculineInanimate[7]!="?" && patternFrom.MasculineInanimate[7]!="-") Meaning=(Array.isArray(adjective.From) ? adjective.From[0] : adjective.From)+patternFrom.MasculineInanimate[7];
+								else break;
+								arrDataT=AddTo(arrDataT, {Type: "Příd", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+					}
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// Pronoun
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let pronoun of lang.Pronouns) {
+				for (let to of pronoun.To) {
+					if (inputText.startsWith(to.Body)) {
+						for (let i=0; i<to.Pattern.Shapes.length; i++) {
+							let shapeto = to.Pattern.Shapes[i];
+							if (to.Body+shapeto == inputText) {
+								let patternFrom=pronoun.PatternFrom;
+								let Meaning;
+								if (	 patternFrom.Shapes[i]!="?" && patternFrom.Shapes[i]!="-") Meaning=(Array.isArray(pronoun.From) ? pronoun.From[0] : pronoun.From)+patternFrom.Shapes[i];
+								else if (patternFrom.Shapes[0]!="?" && patternFrom.Shapes[0]!="-") Meaning=(Array.isArray(pronoun.From) ? pronoun.From[0] : pronoun.From)+patternFrom.Shapes[0];
+								else if (patternFrom.Shapes[7]!="?" && patternFrom.Shapes[7]!="-") Meaning=(Array.isArray(pronoun.From) ? pronoun.From[0] : pronoun.From)+patternFrom.Shapes[7];
+								else break;	
+								arrDataT=AddTo(arrDataT, {Type: "Zájm", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+					}
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// Number
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let number of lang.Numbers) {
+				for (let to of number.To) {
+					if (inputText.startsWith(to.Body)) {
+						for (let i=0; i<to.Pattern.Shapes.length; i++) {
+							let shapeto = to.Pattern.Shapes[i];	
+							if (to.Body+shapeto == inputText) {
+								let Meaning;
+								let patternFrom=number.PatternFrom;
+								if      (patternFrom.Shapes[i]!="?" && patternFrom.Shapes[i]!="-") Meaning=(Array.isArray(number.From) ? number.From[0] : number.From)+patternFrom.Shapes[i];
+								else if (patternFrom.Shapes[0]!="?" && patternFrom.Shapes[0]!="-") Meaning=(Array.isArray(number.From) ? number.From[0] : number.From)+patternFrom.Shapes[0];
+								else if (patternFrom.Shapes[7]!="?" && patternFrom.Shapes[7]!="-") Meaning=(Array.isArray(number.From) ? number.From[0] : number.From)+patternFrom.Shapes[7];
+								else break;	
+								arrDataT=AddTo(arrDataT, {Type: "Čísl", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+								break;
+							}					
+						}
+					}
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// Verb
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let verb of lang.Verbs) {
+				for (let to of verb.To) {
+					if (inputText.startsWith(to.Body)) {
+						let patternTo=to.Pattern;
+						if (patternTo.SInfinitive) {
+							let shapeto = patternTo.Infinitive;
+							if (to.Body+shapeto == inputText) {
+								let Meaning=Array.isArray(verb.From) ? verb.From.join(" ") : verb.From;
+								arrDataT=AddTo(arrDataT, {Type: "Slov", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+							}
+						}
+						if (patternTo.SPastActive) {
+							for (let i=0; i<to.Pattern.PastActive.length; i++) {
+								let shapeto = to.Pattern.PastActive[i];
+								if (to.Body+shapeto == inputText) {
+									let Meaning, patternFrom=verb.PatternFrom;
+									if (patternFrom.PastActive[i]!="?" && patternFrom.PastActive[i]!="-") Meaning=(Array.isArray(verb.From) ? verb.From[0] : verb.From)+patternFrom.PastActive[i];
+									else break;	
+									arrDataT=AddTo(arrDataT, {Type: "Slov", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+									break;
+								}		
+							}
+						}
+						if (patternTo.SPastPassive) {
+							for (let i=0; i<to.Pattern.PastPassive.length; i++) {
+								let shapeto = to.Pattern.PastPassive[i];	
+								if (to.Body+shapeto == inputText) {
+									let Meaning, patternFrom=verb.PatternFrom;
+									if (patternFrom.PastPassive[i]!="?" && patternFrom.PastPassive[i]!="-") Meaning=(Array.isArray(verb.From) ? verb.From[0] : verb.From)+patternFrom.PastPassive[i];
+									else break;	
+									arrDataT=AddTo(arrDataT, {Type: "Slov", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+									break;
+								}
+							}
+						}
+						if (patternTo.SContinous) {
+							for (let i=0; i<to.Pattern.Continous.length; i++) {
+								let shapeto = to.Pattern.Continous[i];	
+								if (to.Body+shapeto == inputText) {
+									let Meaning, patternFrom=verb.PatternFrom;
+									if (patternFrom.Continous[i]!="?" && patternFrom.Continous[i]!="-") Meaning=(Array.isArray(verb.From) ? verb.From[0] : verb.From)+patternFrom.Continous[i];
+									else break;	
+									arrDataT=AddTo(arrDataT, {Type: "Slov", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+									break;
+								}					
+							}
+						}
+						if (patternTo.SFuture) {
+							for (let i=0; i<to.Pattern.Future.length; i++) {
+								let shapeto = to.Pattern.Future[i];	
+								if (to.Body+shapeto == inputText) {
+									let Meaning, patternFrom=verb.PatternFrom;
+									if (patternFrom.Future[i]!="?" && patternFrom.Future[i]!="-") Meaning=(Array.isArray(verb.From) ? verb.From[0] : verb.From)+patternFrom.Future[i];
+									else break;	
+									arrDataT=AddTo(arrDataT, {Type: "Slov", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+									break;
+								}					
+							}
+						}
+						if (patternTo.SImperative) {
+							for (let i=0; i<to.Pattern.Imperative.length; i++) {
+								let shapeto = to.Pattern.Imperative[i];	
+								if (to.Body+shapeto == inputText) {
+									let Meaning, patternFrom=verb.PatternFrom;
+									if (patternFrom.Imperative[i]!="?" && patternFrom.Imperative[i]!="-") Meaning=(Array.isArray(verb.From) ? verb.From[0] : verb.From)+patternFrom.Imperative[i];
+									else break;	
+									arrDataT=AddTo(arrDataT, {Type: "Slov", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+									break;
+								}					
+							}
+						}
+					}
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}	
+	{
+		// Phrase
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let phrase of lang.Phrases) {
+				for (let to of phrase.output) {
+					if (to.Text==inputText) {
+						arrDataT=AddTo(arrDataT, {Type: "Fráze", Meaning: phrase.input.join(" "), Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}
+		}
+		arrData.push(arrDataT);
+	}
+	{
+		// SimpleWords
+		let arrDataT=[];
+		for (let lang of languagesListAll) {
+			for (let simpleWord of lang.SimpleWords) {
+				for (let to of simpleWord.output) {
+					if (to.Text==inputText) {
+						let Meaning=Array.isArray(simpleWord.input) ? simpleWord.input.join(" ") : simpleWord.input;
+						arrDataT=AddTo(arrDataT, {Type: "", Meaning: Meaning, Comment: to.Comment, Location: [lang.Name]});
+						break;
+					}					
+				}
+			}	
+		}	
+		arrData.push(arrDataT);
+	}	
+
+	function GetLocString(arrLoc) {
+		const maxLocations=6;
+		let len=arrLoc.length;
+		let elements = document.createElement("span");
+		elements.appendChild(document.createTextNode("("));
+
+		for (let i=0; i<len && i<maxLocations; i++) {
+			let loc=arrLoc[i];
+		//	let locData=GetLocString(sw.Location);
+
+			let place = document.createElement("span");
+			place.innerText=loc.substring(0, 2);
+			//place.classList.add('tooltipC');
+			place.classList.add('locShortcut');
+			place.setAttribute("title", loc); 
+			elements.appendChild(place);
+	
+			
+		//	outText+=(loc.substring(0, 2));
+
+			if (i<len-1) elements.appendChild(document.createTextNode(", "));
+			// outText+=", ";
+		}
+		
+		if (len>6) {
+			let removed=len-6;
+
+			if (removed>0) {
+				elements.appendChild(document.createTextNode("... +"+removed));
+			//	outText+="... +"+removed;
+			}
+		}
+		elements.appendChild(document.createTextNode(")"));
+		//outText+=")";
+
+		return elements;//[outText, len>maxLocations];
+	}
+
+	let outElement=document.getElementById('searchOutText');
+	outElement.innerHTML="";
+	
+	for (let arrDataT of arrData){
+		for (let sw of arrDataT) {
+			let record = document.createElement("p");
+
+			let type = document.createElement("span");
+			type.innerText=sw.Type;
+			type.className="dicMoreInfo";
+			record.appendChild(type);
+
+			record.appendChild(document.createTextNode(" "));
+
+			if (sw.Comment!="" && sw.Comment!=undefined) {
+				let com = document.createElement("span");
+				com.innerText=sw.Comment;
+				record.appendChild(com);
+			}
+			
+			let mea = document.createElement("span");
+			mea.innerText=sw.Meaning;
+			record.appendChild(mea);
+
+			record.appendChild(document.createTextNode(" "));
+			
+			let locData=GetLocString(sw.Location);
+		/*	let loc;
+			if (locData) loc = document.createElement("span");
+			else loc = document.createElement("a");	
+			loc.innerText=locData[0];*/
+			record.appendChild(locData);
+
+			outElement.appendChild(record);
+		}
+	}
+
+	if (outElement.innerHTML=="") outElement.innerHTML="Nebyl nalezen žadný záznam";
+}
