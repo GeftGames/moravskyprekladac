@@ -1975,7 +1975,7 @@ class ItemPronoun{
 				if (this.From+s == str) {
 					for (let t of this.To) {
 						let body=t.Body;
-						let patternShapesTo=t.Pattern.Shapes[i+fallOffset];
+						let patternShapesTo=t.Pattern.Shapes[i];
 						if (!Array.isArray(patternShapesTo)) patternShapesTo=[patternShapesTo];
 
 						for (let shapePatternTo of patternShapesTo) {
@@ -2059,7 +2059,7 @@ class ItemPronoun{
 			{
 				let forms1=this.IsStringThisWordGetTo(42, 49, str, 1, -42, "str");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(49, 58, str, 2, -49, "str");
+				let forms2=this.IsStringThisWordGetTo(49, 56, str, 2, -49, "str");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 
