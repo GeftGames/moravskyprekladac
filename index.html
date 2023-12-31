@@ -76,59 +76,71 @@
 	</head>
 	<body onload="Load();init();" style="min-height: 100%;">
 		<div id="body" style="min-height: 100vh; /*display: none*/">
-			<div style="padding: 0px; /*height: -webkit-fill-available;*/z-index: 10;">
+			<div style="padding: 0px; /*height: -webkit-fill-available;*/z-index: 10; ">
 
 				<!-- Header -->
-				<div id="header" style="display: flex;align-items: center;">
-					<button class="butIc tooltipR"
-						data-tooltip="Zobrazit nastavení"
-						aria-label="Toggle settings"						
-						onclick="
-							if (document.getElementById('nav').style.opacity=='1') {
-								document.getElementById('butShow').style.opacity='1';
-								document.getElementById('butclose').style.opacity='0'; 
-								document.getElementById('nav').classList.add('navTrans');
-								document.getElementById('nav').style.opacity='0.1';
-								this.classList.add('tooltipR');
-							} else {
-								document.getElementById('butShow').style.opacity='0';
-								document.getElementById('butclose').style.opacity='1';
-								document.getElementById('nav').style.opacity='1';
-								document.getElementById('nav').classList.remove('navTrans');
-								this.classList.remove('tooltipR');
-							}
-						">
-						<svg id="butShow" class="ib" viewBox="0 0 24 24" style="position: absolute;">
-							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-						</svg>
-						<svg id="butclose" class="ib" viewBox="0 0 24 24" style="position: absolute;opacity:0">
-							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-						</svg>
-					</button>
+				<div id="header" style="display: flex;align-items: center;flex-direction: column;   align-items: flex-start;">
+					<div style="display: flex; align-items: center;">
+						<button class="butIc tooltipR"
+							data-tooltip="Zobrazit nastavení"
+							aria-label="Toggle settings"						
+							onclick="
+								if (document.getElementById('nav').style.opacity=='1') {
+									document.getElementById('butShow').style.opacity='1';
+									document.getElementById('butclose').style.opacity='0'; 
+									document.getElementById('nav').classList.add('navTrans');
+									document.getElementById('nav').style.opacity='0.1';
+									this.classList.add('tooltipR');
+								} else {
+									document.getElementById('butShow').style.opacity='0';
+									document.getElementById('butclose').style.opacity='1';
+									document.getElementById('nav').style.opacity='1';
+									document.getElementById('nav').classList.remove('navTrans');
+									this.classList.remove('tooltipR');
+								}
+							">
+							<svg id="butShow" class="ib" viewBox="0 0 24 24" style="position: absolute;">
+								<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+							</svg>
+							<svg id="butclose" class="ib" viewBox="0 0 24 24" style="position: absolute;opacity:0">
+								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+							</svg>
+						</button>
 
-					<h1  rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">Moravský překladač</h1>
-					<div style="display: flex;">
-					
-					<!--my dev-->	
-					<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="ShowPageOwnLang()">
-						<svg class="ib" viewBox="0 0 24 24" >
-							<path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
-						</svg>
-					</button>
+						<h1 rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">Moravský překladač</h1>
+					</div>	
 
-					<!--write about-->	
-					<button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(GetCurrentLanguage());">
-						<svg class="ib" viewBox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
-					</button>
+					<div style="display: flex; align-items: center;margin-left: 8px;">
+						<div id="appsTab">
+							<a class="btnApp" id="tabApp_translate" onclick="TabSwitch('translate');">Překlad do jazyka moravského</a>	
+							<a class="btnApp" id="tabApp_search" onclick="TabSwitch('search');">Hledání v jazyce moravském</a>	
+							<a class="btnApp" id="tabApp_mapper" onclick="TabSwitch('mapper');">Jazyk moravský v mapě</a>
+						</div>
+						<div id="appsTab2">
+							<a class="btnApp" id="tabApp2_translate" onclick="TabSwitch('translate');">Překlad</a>	
+							<a class="btnApp" id="tabApp2_search" onclick="TabSwitch('search');">Hledání</a>	
+							<a class="btnApp" id="tabApp2_mapper" onclick="TabSwitch('mapper');">V mapě</a>
+						</div>
+						<!--my dev-->	
+						<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="ShowPageOwnLang()">
+							<svg class="ib" viewBox="0 0 24 24" >
+								<path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
+							</svg>
+						</button>
 
-					<!--reload-->					
-					<button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
-						caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
-						HidePopUps();
-						window.location.reload();
-						window.location='https://moravskyprekladac.ga/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
-						<svg class="ib" viewBox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
-					</button>
+						<!--write about-->	
+						<button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(GetCurrentLanguage());">
+							<svg class="ib" viewBox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
+						</button>
+
+						<!--reload-->					
+						<button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
+							caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
+							HidePopUps();
+							window.location.reload();
+							window.location='https://moravskyprekladac.ga/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
+							<svg class="ib" viewBox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
+						</button>
 					</div>
 				</div>
 
@@ -138,15 +150,15 @@
 
 					<!-- Current translation, only transtation page -->
 					<div class="settingSection">
-						<p style="display:inline-block;" id="textTranslator" class="settingHeader">Funkce</p>
+					<!--	<p style="display:inline-block;" id="textTranslator" class="settingHeader">Funkce</p>-->
 						<div class="sisetting">
 						
 
 						<!-- Copy current translation -->
-						<div class="btnSideApp" onclick="ShowPageMapper()">
+						<!--<div class="btnSideApp" onclick="ShowPageMapper()">
 							<img src="data/images/logo_mapper.svg" style="width: 36px" alt="Podklad míst - Mapa Moravy">
 							<span id="textMapper"   style="display:block" data-href="#mapper">Generátor map</span>
-						</div><!--class="settingLink"-->
+						</div>-->
 						<!--<p><a id="textAbout">Kontakt</a></p>-->
 						
 						<!-- Save current translation
@@ -223,7 +235,7 @@
 							<!-- Colorize -->
 							<div style="display: flex; justify-content: space-between; align-items: center">
 								<p style="flex-direction: column">
-									<span id="textThemeh">Barva</span>
+									<span id="textThemeColor">Barva</span>
 								</p>
 								<div class="slidecontainer">
 								<input onchange="customTheme();" type="range" min="0" max="360" value="50" class="slider" id="myRange">
@@ -330,7 +342,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="loadingPage" style="flex-direction: column; display:flex; align-items: center;">
 				<div id="loadingBar">
 					<div id="progness"></div>
@@ -339,172 +351,204 @@
 				<span id="textDownloadingDic" style="display:none">Downloading dictionaries...</span>
 				<span style="display:none" onclick="">Zastavit</span>
 			</div>
-	
-			<div id="translatingPage" style="display: none">
-				<!--<div onclick="hideNav()" style="flex-grow: 1;">-->
-				<!-- Trash browser, where will content not work -->
-				<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
+			<div id="pageErrors"></div>
+
+			<div id="apps">		
+				<div class="appPage" id="appPage_translate" style="display: none">
+					<!--<div onclick="hideNav()" style="flex-grow: 1;">-->
+					<!-- Trash browser, where will content not work -->
+					<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
+					
+					<!-- No JavaScript -->
+					<noscript>
+						<p class="error">Tato stránka nefunguje bez javaskriptu<br>This site not work without java script</p>
+					</noscript>
+					
+					<center style="display: none"><p id="note">Překladač je stále ve vývoji</p></center>
 				
-				<!-- No JavaScript -->
-				<noscript>
-					<p class="error">Tato stránka nefunguje bez javaskriptu<br>This site not work without java script</p>
-				</noscript>
-				
-				<center><p id="note">Překladač je stále ve vývoji</p></center>
-			
-				<div id="translator">
-				
-					<!-- Combobox From-To -->
-					<div style="margin-top: 15px; width:100%; display: flex; justify-content: center; flex-direction: column;align-items: center;">
-						<div id="changeLangSection">
-							<div style="display: flex;">
-								<p id="from" style="display: inline">Z</p>
-							<!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->				
-								<p id="czech" style="display: flex">Češtiny</p>
-							</div>
-							<div style="display: flex" id="rowSelectTo">
-								<p id="to" style="display: inline;display: flex;align-items: center;">do</p>
-								<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
-							</div>
-							<div>
-								<button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
-								
-								<!--<div style="display: none" id="noteMOGEN">
-									<br><p>Ucelená moravština <i>neexistuje</i>, zde "moravština" zahrnuje stejné rysy moravských nářečí nebo blízké, popř. doplňuje o známé výrazy</p>
-								</div>-->
-							</div>
-							<div style="display: flex;">
-								<span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="ShowMapPage();">
-									<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
-								</span>
-								<span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="ShowPageInfoLang();">
-									<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
-								</span> 
-							</div>
-						</div>
-						<div style="display:none" id="optionsSelect"></div>
-
-					</div>
-
-					<div style="display: flex; justify-content: center;margin-top: 20px">
-						<span rel="nofollow" id="tabText" 	class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));">Text</span>
-						<span rel="nofollow" id="tabDic" 	class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));">Slovník</span><!---->
-						<span rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));">Textové soubory</span>
-						<span rel="nofollow" id="tabSubs" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Titulky k filmu</span>
-						<!--<span rel="nofollow" id="tabWeb" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Doplněk prohlížeče - překlad youtube titulků, webu</span>-->
-					</div>
-
-					<div id="tabBackGround"></div>
-
-					<div id="transarea" style="justify-content: center;display: flex">
-						<div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">							
-							<span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu tohoto překladu nebude nejlepší, z důvodu nedostatku dat.</span>
-							<div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
-								<!-- Source translated text -->
-								<div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
-									<textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
-									<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox();">
-										<svg id="butclose" class="ib" viewBox="0 0 24 24">
-											<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-										</svg>
-									</span>
-								<!--	<div id="charsHa" style="user-select:none; cursor:normal; display: none; ">Dej mouku ze mlýna na vozík.
-										<span id="addchar">Vložit znak</span>
-										<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
-										<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
-										<a class="charIns" onclick="insert2('ô');"><div class="btnsm">ô</div></a>
-										<a class="charIns" onclick="insert2('Ô');"><div class="btnsm">Ô</div></a>
-									</div>
-									<div id="charsVa" style="user-select:none; cursor:normal; display: none;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
-										<span id="addchar2">Vložit znak</span>
-										<a class="charIns" onclick="insert2('ł');"><div class="btnsm">ł</div></a>
-										<a class="charIns" onclick="insert2('Ł');"><div class="btnsm">Ł</div></a>
-										<a class="charIns" onclick="insert2('ŕ');"><div class="btnsm">ŕ</div></a>
-										<a class="charIns" onclick="insert2('Ŕ');"><div class="btnsm">Ŕ</div></a>
+					<div id="translator">
+					
+						<!-- Combobox From-To -->
+						<div id="translatorSelLang"><!---->
+							<div id="changeLangSection">
+								<div id="translateFromToSelect" style="display: flex;flex-wrap: wrap;justify-content: center;">
+									<p id="from" style="display: inline">Z</p>
+								<!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->				
+									<p id="czech" style="display: flex">Češtiny</p>
+								<!--</div>
+								<div style="display: flex" id="rowSelectTo">-->
+									<p id="to" style="display: inline;display: flex;align-items: center;">do</p>
+									<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
+								</div>
+								<div>
+									<button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
+									
+									<!--<div style="display: none" id="noteMOGEN">
+										<br><p>Ucelená moravština <i>neexistuje</i>, zde "moravština" zahrnuje stejné rysy moravských nářečí nebo blízké, popř. doplňuje o známé výrazy</p>
 									</div>-->
 								</div>
-
-								<!-- Translated text out -->
-								<div id="rte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;">
-									<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
-										<p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
-									</div>
-									<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
-										<span rel="nofollow" class="butIc tooltipL" data-tooltip="Ukazuje v % jak je kvalitní překlad" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
-										<span rel="nofollow" class="butIc tooltipL" data-tooltip="Kopírovat překlad" onclick="Copy()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-										<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>-->
-										<span rel="nofollow" class="butIc tooltipL" data-tooltip="Uložit překlad" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
-										<!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slovník-->
-						<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
-							<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
-								<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;width: -moz-available; ">
-									<textarea oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo"></textarea>
-									<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox();">
-										<svg id="butclose" class="ib" viewBox="0 0 24 24">
-											<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-										</svg>
+								<div style="display: flex;">
+									<span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="ShowMapPage();">
+										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
 									</span>
+									<span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="ShowPageInfoLang();">
+										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
+									</span> 
 								</div>
-
-								<!-- Translated text out -->
-								<div id="dicRte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;margin-top: 0px">
-									<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
-										<p id="dicOut" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
-									</div>
-									<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
-									<!--	<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>-->
-										<span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-										<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
-										<span rel="nofollow" class="butIc" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>-->
-									</div>
-								</div>
+								<div style="display:none" id="optionsSelect"></div>
 							</div>
+
+						</div><!---->
+
+						<div style="display: flex; justify-content: center;margin-top: 20px;height: 38px;">
+							<span rel="nofollow" id="tabText" 	class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));" shorttext="Text">Text</span>
+							<span rel="nofollow" id="tabDic" 	class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));" shorttext="Slovník">Slovník</span><!---->
+							<span rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));" shorttext="Soubory">Textové soubory</span>
+							<span rel="nofollow" id="tabSubs" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));" shorttext="Titulky">Titulky k filmu</span>
+							<!--<span rel="nofollow" id="tabWeb" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Doplněk prohlížeče - překlad youtube titulků, webu</span>-->
 						</div>
 
-						<div id="translateFiles" style="display: none">
-							<div class="filesBox">
-								<p id="supportFiles">Podporujeme soubory .TXT</p>
-								<input type="file" id="file-input">
-								<button class="button" id="btnTranslateTxt" onclick="TranslateFile()">Translate</button>
-								<!--<h3>Contents of the file:</h3>
-								<pre id="file-content"></pre>-->
-								<!--<div id="downloadFile"></div>-->
-								<a rel="nofollow" id="downloadFile" class="button" style="display:none">Download</a>
+						<div id="tabBackGround"></div>
+
+						<div id="transarea" style="justify-content: center; display: flex">
+							<div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">							
+								<span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu tohoto překladu nebude nejlepší, z důvodu nedostatku dat. Zkuste slovník</span>
+								<div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
+									<!-- Source translated text -->
+									<div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
+										<textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
+										<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('specialTextarea');">
+											<svg id="butclose" class="ib" viewBox="0 0 24 24">
+												<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+											</svg>
+										</span>
+									<!--	<div id="charsHa" style="user-select:none; cursor:normal; display: none; ">Dej mouku ze mlýna na vozík.
+											<span id="addchar">Vložit znak</span>
+											<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
+											<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
+											<a class="charIns" onclick="insert2('ô');"><div class="btnsm">ô</div></a>
+											<a class="charIns" onclick="insert2('Ô');"><div class="btnsm">Ô</div></a>
+										</div>
+										<div id="charsVa" style="user-select:none; cursor:normal; display: none;font-size: 5mm; align-items: center; flex-direction: row; display: inline; cursor:normal; display: inline-table; text-align: center; margin: 15px; margin-bottom: 5px;">
+											<span id="addchar2">Vložit znak</span>
+											<a class="charIns" onclick="insert2('ł');"><div class="btnsm">ł</div></a>
+											<a class="charIns" onclick="insert2('Ł');"><div class="btnsm">Ł</div></a>
+											<a class="charIns" onclick="insert2('ŕ');"><div class="btnsm">ŕ</div></a>
+											<a class="charIns" onclick="insert2('Ŕ');"><div class="btnsm">Ŕ</div></a>
+										</div>-->
+									</div>
+
+									<!-- Translated text out -->
+									<div id="rte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;">
+										<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
+											<p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+										</div>
+										<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
+											<span rel="nofollow" class="butIc tooltipL" data-tooltip="Ukazuje v % jak je kvalitní překlad" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
+											<span rel="nofollow" class="butIc tooltipL" data-tooltip="Kopírovat překlad" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
+											<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>-->
+											<span rel="nofollow" class="butIc tooltipL" data-tooltip="Uložit překlad" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
+											<!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
+										</div>
+									</div>
+								</div>
 							</div>
+
+							<!-- Slovník-->
+							<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
+								<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
+									<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;width: -moz-available; ">
+										<textarea oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo"></textarea>
+										<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
+											<svg id="butclose" class="ib" viewBox="0 0 24 24">
+												<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+											</svg>
+										</span>
+									</div>
+
+									<!-- Translated text out -->
+									<div id="dicRte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;margin-top: 0px">
+										<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
+											<p id="dicOut" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+										</div>
+										<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
+										<!--	<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>-->
+											<span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
+											<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
+											<span rel="nofollow" class="butIc" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>-->
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="translateFiles" style="display: none">
+								<div class="filesBox">
+									<p id="supportFiles">Podporujeme soubory .TXT</p>
+									<input type="file" id="file-input">
+									<button class="button" id="btnTranslateTxt" onclick="TranslateFile()">Translate</button>
+									<!--<h3>Contents of the file:</h3>
+									<pre id="file-content"></pre>-->
+									<!--<div id="downloadFile"></div>-->
+									<a rel="nofollow" id="downloadFile" class="button" style="display:none">Download</a>
+								</div>
+							</div>
+							<div id="translateSubs" style="display: none">
+								<div class="filesBox">
+									<p id="VideoNote">Podporujeme soubory .ASS a .SRT. Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte.</p>
+									<!-- 
+										Vyhledávání titulků: https://www.opensubtitles.org/ 
+										Překlad do češtiny: https://www.nikse.dk/subtitleedit/online
+										Překlad do češtiny: https://www.syedgakbar.com/projects/dst
+									-->
+									<input type="file" id="subs-input">
+									<button class="button" id="btnTranslateSubs" onclick="TranslateSubs()">Translate</button>
+									<!--<h3>Contents of the file:</h3>
+									<pre id="file-content"></pre>-->
+									<!--<div id="downloadFile"></div>-->
+									<a rel="nofollow" id="downloadSubs" class="button" style="display:none">Download</a>
+								</div>
+							</div>						
 						</div>
-						<div id="translateSubs" style="display: none">
-							<div class="filesBox">
-								<p id="VideoNote">Podporujeme soubory .ASS a .SRT. Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte.</p>
-								<!-- 
-									Vyhledávání titulků: https://www.opensubtitles.org/ 
-									Překlad do češtiny: https://www.nikse.dk/subtitleedit/online
-									Překlad do češtiny: https://www.syedgakbar.com/projects/dst
-								-->
-								<input type="file" id="subs-input">
-								<button class="button" id="btnTranslateSubs" onclick="TranslateSubs()">Translate</button>
-								<!--<h3>Contents of the file:</h3>
-								<pre id="file-content"></pre>-->
-								<!--<div id="downloadFile"></div>-->
-								<a rel="nofollow" id="downloadSubs" class="button" style="display:none">Download</a>
-							</div>
-						</div>						
+
+						<!-- Saved text -->
+						<div id="savedDiv" style=" display: none">
+							<p style="text-decoration-line: underline;" id="txtSavedTrans">Uložené překlady</p>
+							<div id="transl" style="max-height: 100vh; overflow: auto; scroll-behavior: smooth;"></div>
+						</div>
 					</div>
+				</div>	
 
-					<!-- Saved text -->
-					<div id="savedDiv" style=" display: none">
-						<p style="text-decoration-line: underline;" id="txtSavedTrans">Uložené překlady</p>
-						<div id="transl" style="max-height: 100vh; overflow: auto; scroll-behavior: smooth;"></div>
+				<div class="appPage" id="appPage_search" style="display: none;">
+					<div style="display: flex; justify-content: center;">
+						<div id="formSearch" style="display: flex; justify-content: center; flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;margin-top: 1cm;">
+							<span style="align-self: start;margin: 0mm 3mm 3mm 0mm;" id="searchInputCaption">Hledám co znamená...</span>
+							<div id="searchIn" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;width: -moz-available; ">
+								<textarea oninput="" spellcheck="true" id="searchInputText" style="font-size: 5mm;height:auto; font-size: inherit; padding: 10px;" autofocus placeholder="např. šufan, křidla, šnitlich, ..."></textarea>
+								<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
+									<svg id="butclose" class="ib" viewBox="0 0 24 24">
+										<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+									</svg>
+								</span>
+							</div>
+							<p id="notePhonetics">Použijte <a class="link" onclick="PopPageShow('phonetics')">fonetický zápis</a>.</p>
+
+							<button class="button" style="width: fit-content;margin-top: 5mm;align-self: end;" id="searchButton" onclick="SearchInMoravian()">Vyhledat</button>
+
+							<!-- Translated text out -->
+							<div id="searchOut" class="fakeTextbox" style="margin-top: 1cm">
+								<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
+									<p id="searchOutText" style="line-height: 32px;"><span class="placeholder" id="searchOutPlaceholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+								</div>
+								<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">						
+									<span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('searchOutText')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			
-				<div id="mapperPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
-					<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
+
+				<div class="appPage" id="appPage_mapper" style="display: none;">
+					<!--<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
 						<div onclick="ClosePageMapper()" class="pageFromDownClose" id="closeMapperPage">
 							<div rel="nofollow" onclick="ClosePageMapper()">
 								<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
@@ -517,22 +561,24 @@
 							<p class="mapperPageHeader" id="mapperGanerateMap">Generátor map</p>
 							
 						</div>
-					</div>
+					</div>-->
 
 					<div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;height: -webkit-fill-available;*/display: flex; justify-content: center;">
-						<div id="areaStartGenerate" class="listButtons" style="width: -webkit-fill-available;display: flex; justify-content: center;flex-direction: column; align-items: center;">
+						<div id="areaStartGenerate" class="listButtons" style="width: -webkit-fill-available;">
 							<div id="basicModeMapper">
-								<p id="mapperSearchWord">Hledaná fráze</p>
-								<input type="text" id="mapperInput" value="" style="font-size: 5mm;">
-								<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(false)" style="margin-top: 5mm;" >Vytvořit mapu</a>
-								<br>
-								<span class="settingLink" id="mapperSearchWord" onclick="MapperMode('expert')">Rozšířená tvorba map</span>
-								<br>
-								<br>	
-								<p id="">Uložené</p>	
-								<div id="mapperSaved" style="display: inline-block;">
+								<div id="mapperBasicInput">
+									<p id="mapperSearchWord">Hledané slovo nebo fráze</p>
+									<input type="text" id="mapperInput" value="" style="font-size: 5mm;">
+									<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(false)" style="width: fit-content;margin-top: 5mm;align-self: end;" >Vytvořit mapu</a>
+									<br>
+									<span class="settingLink" id="mapperSearchWord" onclick="MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
 								</div>
-
+											
+								<p id="">Uložené</p>	
+								<div id="mapperSaved" style="display: inline-block;"></div>
+								
+								<br>	
+								
 								<p id="">Návrhy</p>	
 								<div id="mapperNavrh" style="display: flex;flex-wrap: wrap;justify-content: flex-start;width: -webkit-fill-available;flex-direction: column;" >
 									<p>Podstatná jména</p>
@@ -546,6 +592,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('postel')">POSTEL</div>
 										<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>
 										<div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>
+										<div class="mapperNavrh" onclick="navrhClick('dědeček')">BABIČKA</div>
 										<div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
 										<div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
 										<div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
@@ -610,6 +657,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('jsou')">oni JSOU</div>
 										<div class="mapperNavrh" onclick="navrhClick('byl')">on BYL</div>
 										<div class="mapperNavrh" onclick="navrhClick('bylo')">BYLO</div>
+										<div class="mapperNavrh" onclick="navrhClick('není')">NENÍ</div>
 										<div class="mapperNavrh" onclick="navrhClick('by')">já BY</div>
 
 										<div class="mapperNavrh" onclick="navrhClick('mít')">MÍT</div>
@@ -748,8 +796,8 @@
 						
 						
 						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
-							<div style="margin-bottom: 4mm;display: flex;justify-content: center;">
-								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()" style="margin-top: 5px;">Generovat další mapu</a>
+							<div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;">
+								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Vytvořit další mapu</a>
 							</div>
 							<div style="display:flex;flex-wrap: wrap;flex-direction: column;">
 								<div class="listButtons" id="mapperButtons" style="flex-direction: row;">
@@ -773,11 +821,9 @@
 							</div>
 						</div>
 					</div>
-				</div>	
-				
-				
+				</div>
 			</div>
-			
+
 			<div id="phoneticsPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
 				<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
 					<div onclick="ClosePageMapper()" class="pageFromDownClose" id="closeMapperPage">
@@ -856,7 +902,7 @@
 						<p style="display:inline;" id="closeAbout">Zavřít</p>
 					</div>
 					<div><p class="aboutPageHeader" id="aboutTranslator">O Překladači</p></div>
-					<p id="aboutTranslatorText">Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.</p>
+					<p id="aboutTranslatorText">Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část a slezský jazyk není řešený primárně (překladač je funguje přesněji pro jazyk moravský). Plánuje s i další okolí (Čech, Slovenska, Polska, Rakouska?). K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.</p>
 					<p id="textItsNotBest">Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.</p>
 					<p id="textNoMoney">Projekt není finacován. Reklamy zde umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněn od 2023, doufáme, že jeho vývoj bude pokračovat.</p>
 
@@ -892,6 +938,68 @@
 				</div>
 			</div>
 
+			<div id="pagePop_phonetics" class="pageFromDown" style="display: none; top:500px; z-index: 9;">
+				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+					<div onclick="PopPageClose('phonetics')" class="pageFromDownClose" id="closeAboutPage">
+						<div rel="nofollow" onclick="PopPageClose('phonetics')"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+						</svg></div>
+						<p style="display:inline;" id="closeAbout">Zavřít</p>
+					</div>
+					<div><p class="aboutPageHeader" id="aboutTranslator">Fonetický zápis</p></div>
+					<p>Používá se aktuálně tento zápis: </p>
+					<ul>
+						<li><b>ňi</b> - vyslovuje se jako v češtině ni</li>
+						<li><b>ďi</b>, <b>ťi</b> nápodobně</li>
+						<li><b>ňí</b> - vyslovuje se jako v češtině ní</li>
+						<li><b>ďí</b>, <b>ťí</b> nápodobně</li>
+
+						<li><b>ni</b> - vyslovuje se jako [ny] v češtině</li>
+						<li><b>di</b>, <b>ti</b> nápodobně</li>
+						<li><b>ní</b> - vyslovuje se jako [ný] v češtině</li>
+						<li><b>dí</b>, <b>tí</b> nápodobně</li>
+
+						<li><b>ny</b> - vyslovuje se trošku tvrději jak [ny] v češtině (Valašsko, Lašsko)</li>
+						<li><b>dy</b>, <b>ty</b> nápodobně</li>
+						<li><b>ný</b> - vyslovuje se trošku tvrději jak [ný] v češtině (Valašsko, Lašsko)</li>
+						<li><b>dý</b>, <b>tý</b> nápodobně</li>
+
+						<li><b>bje</b> - vyslovuje se jako v češtině bě</li>
+						<li><b>vje</b> - vyslovuje se jako v češtině vě</li>
+						<li><b>ďe</b> - vyslovuje se jako v češtině dě</li>
+						<li><b>ťe</b> - vyslovuje se jako v češtině tě</li>
+						<li><b>ňe</b> - vyslovuje se jako v češtině ně</li>
+						<li><b>ḿe</b> - nevyvinuté mě (něco mezi [mje] a [me])</li>
+						<li><b>ṕe</b> - nevyvinuté pě (něco mezi [pje] a [pe])</li>
+						<li><b>v́e</b> - nevyvinuté vě (něco mezi [vje] a [ve])</li>
+						<li><b>b́</b>, <b>ḱ</b>, <b>ǵ</b>, .. nápodobně</li>
+						
+						<li><b>ŕ</b> - dlouhé r, IPA [r̩ː]</li>
+						<li><b>ĺ</b> - dlouhé l, IPA [l̩ː]</li>
+						<li><b>ł</b> - tvrdé l, IPA [ɫ]?</li>
+						<li><b>l</b> - střední l, IPA [l]</li>
+						<li><b>ľ</b> - měkké l, IPA [l̩]</li>
+						
+						<li><b>ạ́</b> - židlochovické á (něco mezi ó a á)</li>
+						<li><b>ê</b> - hanácké hubaté e</li>
+						<li><b>ǝ</b> - znojemské nebo kravařské e (polovokál)</li>
+						<li><b>ô</b> - hanácké hubaté o</li>
+						<li><b>ů</b> - slezské o</li>
+						<li><b>ṵ</b> - lašské nebo slovácké obalované u (vzniklo z ł)</li>
+					</ul>
+					<p>Pozn. Výslovnost může kolísat např. hanáckého ê</p>
+					<p>Pozn. Můžete odkud kopírovat znaky.</p>
+					
+					<p>Tyto znaky se nepoužívají pro zápis: </p>
+					<ul>
+						<li><b>x</b> [ks] nebo [ch] se nepoužívá! Rozepsává sa jako ks</li>
+						<li><b>mě</b> se snažíme v databázi nepoužívat, ale všechna zdrojová data to nerozlišují. Rozepsává sa jako mje nebo jako mňe</li>
+						<li><b>ʒ</b> [dz] se nepoužívá! Rozepsává sa jako dz</li>
+						<li><b>ǯ</b> [dž] se nepoužívá! Rozepsává sa jako dž</li>
+					</ul>
+				</div>
+			</div>
+
 			<div id="mapPage" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;height: -webkit-fill-available;">
 				<div class="pageInside" id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
 					<div onclick="CloseMapPage()" class="pageFromDownClose" id="closeSelectorPage">
@@ -902,7 +1010,7 @@
 						</div>
 						<p style="display:inline;" id="closeSelector">Zavřít</p>
 					</div>
-					<div><p class="mapPageHeader" id="mapPlace">Výběr místa</p></div>
+					<div><p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě)</p></div>
 					<div>
 						<div id="mapSelector" style="position: fixed; width: 100%; overflow: hidden;height: 100%;">
 							<div id="map" style="display: flex;transform-origin: left 0px; height: 100%;">
