@@ -6,6 +6,23 @@ langs["cs"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je pořád ve vývoji, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
 
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hledání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Použijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizace",
+	Color: "Barva",
+
+
 	// Překládání
 	From : "Z",
 	To : "do",
@@ -25,7 +42,7 @@ langs["cs"] = {
 	Light : "Světlý",
 	Dark : "Tmavý",
 	NightDark : "Tmavý noční",
-	Blue:"Modrý",
+	Blue: "Modrý",
 
 	MoreInfo : "Rozšířené informace",
 	MoreInfoDev : "Pro vývojáře",
@@ -207,7 +224,9 @@ langs["cs"] = {
 	Translate	: "Přeložit",
 	Text		: "Text",
 	TextFiles	: "Textové soubory",
+	TextFilesShort	: "Soubory",
 	SubtitlesFiles: "Titulky k filmu",
+	SubtitlesFilesShort: "Titulky",
 
 	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtěte.",
 
@@ -232,6 +251,22 @@ langs["slz"] = {
 
 	// Zpráva
 	noteStillInDev : "Překladač je furt ve vývoju, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
+
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Použijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizace",
+	Color: "Barva",
 
 	// Překládání
 	From : "Z",
@@ -414,7 +449,9 @@ langs["slz"] = {
 	Translate	: "Přeložit",
 	Text		: "Text",
 	TextFiles	: "Textové soubory",
+	TextFilesShort	: "Soubory",
 	SubtitlesFiles: "Titulky k filmu",
+	SubtitlesFilesShort: "Titulky",
 
 	VideoNote	: "Pokavaď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtite.",
 
@@ -440,6 +477,22 @@ langs["en"] = {
 	// Zpráva
 	noteStillInDev : "Translator is still in developing process, unfinished languages you can switch on in settings located via top left button",
 
+	AppTabTranslate: "Translation into the Moravian",
+	AppTabSearch: "Search in the Moravian",
+	AppTabMapper: "Moravian in the maps",
+	AppTabTranslateShort: "Translate",
+	AppTabSearchShort: "Search",
+	AppTabMapperShort: "In the maps",
+
+	SearchInputCaption: "I'm looking for what it means...",
+	SearchButton: "Search",
+	MapperInputLabel: "Search word or phrase",
+	MapperMakeMap: "Create map",
+	UsePhonetics: "Use %phonetic writing%.",
+	Mode: "Mode",
+	Power: "Power",
+	Color: "Colour",
+	
 	// Překládání
 	From 	 : "From",
 	To 		 : "to",
@@ -605,7 +658,7 @@ langs["en"] = {
 	// Header
 	TranslatorCM : "Moravian Translator",
 	TranslatorMC : "Translator Moravian-Czech",
-	Dic: "Slovník",
+	Dic: "Dictionary",
 
 	// About
 	Close	: "Close",
@@ -618,7 +671,9 @@ langs["en"] = {
 	textRefreshTooltip : "Clear the cache and refresh the page",
 	Text: "Text",
 	TextFiles: "Text files",
+	TextFilesShort: "Files",
 	SubtitlesFiles: "Subtitles for the movie",
+	SubtitlesFilesShort: "Subtitles",
 
 	// Files
 	FileSupport : "Supporting files with the ending .txt",
@@ -647,6 +702,22 @@ langs["jp"] = {
 	// Zpráva
 	noteStillInDev : "トランスレータはまだ開発中です",
 
+	AppTabTranslate: "モラヴィア語への翻訳",
+	AppTabSearch: "モラヴィア語で検索する",
+	AppTabMapper: "地図上のモラヴィア語",
+	AppTabTranslateShort: "翻訳",
+	AppTabSearchShort: "検索",
+	AppTabMapperShort: "地図の中で",
+
+	SearchInputCaption: "それが何を意味するのか探しています...",
+	SearchButton: "検索",
+	MapperInputLabel: "単語または語句を検索する",
+	MapperMakeMap: "地図を作成する",
+	UsePhonetics: "%発音表記%を使用します。",	
+	Mode: "モード",
+	Power: "パフォーマンス",
+	Color: "色",
+	
 	// Překládání
 	TranslateFormat: "{0}から{1}へ",
 	From 	: "から",
@@ -826,7 +897,9 @@ langs["jp"] = {
 	textRefreshTooltip : "キャッシュをクリアしてページを更新する",
 	Text			: "文章",
 	TextFiles		: "テキストファイル",
+	TextFilesShort		: "ファイル",
 	SubtitlesFiles	: "映画の字幕",
+	SubtitlesFilesShort	: "字幕",
 
 	// Files
 	FileSupport	: "ファイル .txt をサポートしています",
@@ -855,6 +928,22 @@ langs["mor"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je furt ve vývoju, nedodělané jazyky zapnete v nastavení v horním levém rohu",
 
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Použijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizace",
+	Color: "Barva",
+	
 	// Překládání
 	From 	: "Z",
 	To 		: "do",
@@ -1031,7 +1120,9 @@ langs["mor"] = {
 	textRefreshTooltip : "Vymazat vyrovnávací paměť a obnovit stránku",
 	Text: "Text",
 	TextFiles: "Textové soubory",
+	TextFilesShort: "Soubory",
 	SubtitlesFiles: "Titulky k filmám",
+	SubtitlesFilesShort: "Titulky",
 
 	// Files
 	FileSupport: "Podporujem soubory .txt",
@@ -1060,6 +1151,22 @@ langs["pl"] = {
 	// Zpráva
 	noteStillInDev : "Tłumacz jest wciąż w fazie rozwoju",
 
+	AppTabTranslate: "Tłumaczenie na język morawski",
+	AppTabSearch: "Szukaj w języku morawskim",
+	AppTabMapper: "Język morawski na mapie",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Szukam co to znaczy...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Wyszukaj słowo lub frazę",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Stosuj %zapis fonetyczny%.",
+	Mode: "Tryb",
+	Power: "Wydajność",
+	Color: "Kolor",
+	
 	// Překládání
 	From : "Z",
 	To : "do",
@@ -1238,7 +1345,9 @@ langs["pl"] = {
 	textRefreshTooltip : "Wyczyść pamięć podręczną i odśwież stronę",
 	Text: "Tekst",
 	TextFiles: "Pliki tekstowe",
+	TextFilesShort: "Pliki",
 	SubtitlesFiles: "Napisy do filmu",
+	SubtitlesFilesShort: "Napisy",
 
 	// Files
 	FileSupport: "Obsługujemy pliki .txt",
@@ -1267,6 +1376,22 @@ langs["sk"] = {
 	// Zpráva
 	noteStillInDev : "Prekladač je stále vo vývoji",
 
+	AppTabTranslate: "Preklad do jazyka moravského",
+	AppTabSearch: "Hľadanie v jazyku moravskom",
+	AppTabMapper: "Jazyk moravský v mape",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hľadanie",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hľadám čo znamená...",
+	SearchButton: "Vyhľadať",
+	MapperInputLabel: "Hľadané slovo alebo fráza",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Použijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizace",
+	Color: "Farba",
+	
 	// Překládání
 	From : "Z",
 	To : "do",
@@ -1445,7 +1570,9 @@ langs["sk"] = {
 	textRefreshTooltip : "Vymazať vyrovnávaciu pamäť a obnoviť stránku",
 	Text: "Text",
 	TextFiles: "Textové soubory",
+	TextFilesShort: "Soubory",
 	SubtitlesFiles: "Titulky k filmu",
+	SubtitlesFilesShort: "Titulky",
 
 	// Files
 	FileSupport: "Podporujeme súbory .txt",
@@ -1474,6 +1601,22 @@ langs["de"] = {
 	// Zpráva
 	noteStillInDev : "Der Übersetzer befindet sich noch in der Entwicklung",
 
+	AppTabTranslate: "Übersetzung in die mährische Sprache",
+	AppTabSearch: "Suche in der mährischen Sprache",
+	AppTabMapper: "Mährische Sprache auf der Karte",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Ich suche nach dem, was es bedeutet...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Verwenden Sie die %phonetische Notation%.",
+	Mode: "Modus",
+	Power: "Performance",
+	Color: "Farbe",
+	
 	// Překládání
 	From : "Von",
 	To 	: "nach",
@@ -1652,7 +1795,9 @@ langs["de"] = {
 	textRefreshTooltip : "Leeren Sie den Cache und aktualisieren Sie die Seite",
 	Text: "Text",
 	TextFiles: "Textdateien",
+	TextFilesShort: "Dateien",
 	SubtitlesFiles: "Untertitel für den Film",
+	SubtitlesFilesShort: "Untertitel",
 
 	// Files
 	FileSupport: "Wir unterstützen Dateien .txt",
@@ -1681,6 +1826,22 @@ langs["hanak"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je furt rozfifňané",
 
+	AppTabTranslate: "Překlad do jazêka moravskyho",
+	AppTabSearch: "Hledáni v jazêce moravskym",
+	AppTabMapper: "Jazêk moravské v mapách",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vêhledat",
+	MapperInputLabel: "Hledany slovo nebo fráze",
+	MapperMakeMap: "Vêtvořêt mapô",
+	UsePhonetics: "Póžéte %foneticky pismo%.",
+	Mode: "Režim",
+	Power: "Optimalizaca",
+	Color: "Barva",
+	
 	// Překládání
 	From 	: "Z",
 	To 		: "do",
@@ -1858,8 +2019,10 @@ langs["hanak"] = {
 	// Dev
 	textRefreshTooltip : "Vêmazat mezêpaměť a obnovit stránkô",
 	Text: "Text",
-	TextFiles: "Textové sóborê",
+	TextFiles: "Textovy sóborê",
+	TextFilesShort: "Sóborê",
 	SubtitlesFiles: "Titulkê k filmám",
+	SubtitlesFilesShort: "Titulkê",
 
 	// Files
 	FileSupport: "Podporôjem sóborê .txt",
@@ -1888,6 +2051,22 @@ langs["valach"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je v jedném kusi nedoďełaný. Esli chcete zapnúť velmi rané překlady, tak kliknite v levým, vŕchným rohu na tři čáry.",
 
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapách",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Púžijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizaca",
+	Color: "Barva",
+	
 	// Překládání
 	From : "Z",
 	To : "do",
@@ -2066,7 +2245,9 @@ langs["valach"] = {
 	textRefreshTooltip : "Vymazať mezipaměť a obnoviť stránku",
 	Text			: "Text",
 	TextFiles		: "Textové súbory",
+	TextFilesShort		: "Súbory",
 	SubtitlesFiles	: "Titulky k filmám",
+	SubtitlesFilesShort	: "Titulky",
 
 	// Files
 	FileSupport	: "Podporujem súbory .txt",
@@ -2095,6 +2276,22 @@ langs["slova"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je v jedném kusi nedoďelaný. Esi scete zapnút velmi rané překlady, tož kliknite v levým, vrchním rohu na tři čáry.",
 
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazice moravském",
+	AppTabMapper: "Jazik moravskí v mapách",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Púžijte %fonetickí zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizaca",
+	Color: "Barva",
+	
 	// Překládání
 	From : "Z",
 	To : "do",
@@ -2271,7 +2468,9 @@ langs["slova"] = {
 	textRefreshTooltip : "Vymazať mezipaměť a obnovit stránku",
 	Text			: "Text",
 	TextFiles		: "Textové súbory",
+	TextFilesShort		: "Súbory",
 	SubtitlesFiles	: "Titulky k filmám",
+	SubtitlesFilesShort	: "Titulky",
 
 	// Files
 	FileSupport	: "Podporujeme súbory .txt",
@@ -2300,6 +2499,22 @@ langs["mor_radikalni"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je furt ve vývoju, ešli cete rozfifňané jazyky zapnite v nastavení ve vrchním levém rožku",
 
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Použijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizaca",
+	Color: "Barva",
+	
 	// Překládání
 	From 	: "Z",
 	To 		: "do",
@@ -2475,7 +2690,9 @@ langs["mor_radikalni"] = {
 	textRefreshTooltip : "Vymazať vyrovnávací paměť a obnovit stránku",
 	Text: "Tekst",
 	TextFiles: "Textové súbory",
+	TextFilesShort: "Súbory",
 	SubtitlesFiles: "Titulky k filmám",
+	SubtitlesFilesShort: "Titulky",
 
 	// Files
 	FileSupport: "Podporujem súbory .txt",
@@ -2504,6 +2721,22 @@ langs["ces"] = {
 	// Zpráva
 	noteStillInDev : "Překladač je pořád ve vývoji, velmi rané překlady je možné zapnout v nastavení, levém horním menu.",
 
+	AppTabTranslate: "Překlad do jazyka moravského",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabTranslateShort: "Překlad",
+	AppTabSearchShort: "Hlenání",
+	AppTabMapperShort: "V mapách",
+
+	SearchInputCaption: "Hledám co znamená...",
+	SearchButton: "Vyhledat",
+	MapperInputLabel: "Hledané slovo nebo fráze",
+	MapperMakeMap: "Vytvořit mapu",
+	UsePhonetics: "Použijte %fonetický zápis%.",
+	Mode: "Režim",
+	Power: "Optimalizace",
+	Color: "Barva",
+	
 	// Překládání
 	From : "Z",
 	To : "do",
@@ -2685,7 +2918,9 @@ langs["ces"] = {
 	Translate	: "Přeložit",
 	Text		: "Text",
 	TextFiles	: "Textové soubory",
+	TextFilesShort	: "Soubory",
 	SubtitlesFiles: "Titulky k filmu",
+	SubtitlesFilesShort: "Titulky",
 
 	VideoNote	: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtěte.",
 

@@ -1,6 +1,7 @@
 ﻿const serverName="https://moravskyprekladac.pages.dev/";
 var imgMap;
 var imgMap_bounds;
+var appSelected="translate";
 /*class Word {
 	constructor() {
 	    this.selectedIndex = 0;
@@ -448,14 +449,14 @@ var lastInputText = [];
 var textNote;
 
 function PushError(str) {
-	let parrentElement=document.getElementById("translatingPage");
+	let parrentElement=document.getElementById("pageErrors");
 	let element=document.createElement("p");
 	element.classList.push("error");
 	parrentElement.childNodes.push(element);
 }
 
 function PushNote(str) {
-	let parrentElement=document.getElementById("translatingPage");
+	let parrentElement=document.getElementById("pageErrors");
 	let element=document.createElement("p");
 	element.classList.push("note");
 	parrentElement.childNodes.push(element);
@@ -903,7 +904,7 @@ function ShowAboutPage(){
 	document.getElementById("aboutPage").style.opacity="1";
 	document.getElementById("aboutPage").style.position="absolute";
 //	document.getElementById("translatingPage").style.display="none";
-	document.getElementById("aboutPage").style.top="52px";
+	document.getElementById("aboutPage").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
@@ -931,6 +932,43 @@ function CloseAboutPage(){
 		document.getElementById("aboutPage").style.display="none";
 	}, 300);
 }
+function PopPageShow(name) {
+	//location.hash=name;
+	let element=document.getElementById("pagePop_"+name);
+
+	element.style.display="block";
+	element.style.opacity="1";
+	element.style.position="absolute";
+	element.style.top="99px";
+
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+}
+
+function PopPageClose(name) {
+//	location.hash="";
+	
+	let element=document.getElementById("pagePop_"+name);
+
+	element.style.opacity="0";
+	element.style.top="500px";
+	element.style.position="fixed";
+	
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+	setTimeout(()=>{ 
+		element.style.display="none";
+	}, 300);
+}
+/*
 
 function ShowPageMapper(){
 	location.hash="mapper";
@@ -969,13 +1007,13 @@ function ClosePageMapper(){
 	setTimeout(()=>{ 
 		document.getElementById("mapperPage").style.display="none";
 	}, 300);
-}
+}*/
 
 function ShowPageOwnLang(){
 	document.getElementById("pageOwnLang").style.display="block";
 	document.getElementById("pageOwnLang").style.opacity="1";
 	document.getElementById("pageOwnLang").style.position="absolute";
-	document.getElementById("pageOwnLang").style.top="52px";
+	document.getElementById("pageOwnLang").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
@@ -1013,7 +1051,7 @@ function ShowPageLangD(element){
 	document.getElementById("pageLangD").style.display="block";
 	document.getElementById("pageLangD").style.opacity="1";
 	document.getElementById("pageLangD").style.position="absolute";
-	document.getElementById("pageLangD").style.top="52px";
+	document.getElementById("pageLangD").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
@@ -1056,7 +1094,7 @@ function ShowPageInfoLang(){
 	document.getElementById("pageInfoLang").style.opacity="1";
 	document.getElementById("pageInfoLang").style.position="absolute";
 //	document.getElementById("translatingPage").style.display="none";
-	document.getElementById("pageInfoLang").style.top="52px";
+	document.getElementById("pageInfoLang").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
@@ -1088,7 +1126,7 @@ function ShowMapPage(){
 	document.getElementById("mapPage").style.opacity="1";
 	document.getElementById("mapPage").style.position="absolute";
 //	document.getElementById("translatingPage").style.display="none";
-	document.getElementById("mapPage").style.top="52px";
+	document.getElementById("mapPage").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
@@ -1172,22 +1210,20 @@ function SetLanguage() {
     document.getElementById("textPCSaving").innerText = langFile.SavingToPC;
     document.getElementById("textCookies").innerText = langFile.CookiesMessage;
     document.getElementById("textRemove").innerText = langFile.Remove;
-   // document.getElementById("addchar").innerText = langFile.AddChar;
     document.getElementById("textSettings").innerText = langFile.Settings;
 	document.getElementById("textAbout").innerText = langFile.About;
     document.getElementById("txtSavedTrans").innerText = langFile.SavedTrans;
     document.getElementById("specialTextarea").placeholder = langFile.WriteSomething;
 	document.getElementById("note").innerText = langFile.noteStillInDev;
-	document.getElementById("textTranslator").innerText = langFile.Translator;
+	//document.getElementById("textTranslator").innerText = langFile.Translator;
 	document.getElementById("tabText").innerText = langFile.Text;
-	document.getElementById("tabTxtFiles").innerText = langFile.TextFiles;
-	document.getElementById("tabSubs").innerText = langFile.SubtitlesFiles;
+	document.getElementById("tabTxtFiles").innerText = simpleTabContent ? langFile.TextFilesShort : langFile.TextFiles;
+	document.getElementById("tabSubs").innerText = simpleTabContent ? langFile.SubtitlesFilesShort : langFile.SubtitlesFiles;
 	document.getElementById("textSettingsTranslate").innerText = langFile.TranslateOptions;
 	document.getElementById("textbetaFunctions").innerText = langFile.UnfinishedTranslate;
 	document.getElementById("textSettings").innerText = langFile.Settings;
 	document.getElementById("closeAbout").innerText = langFile.Close;
 	document.getElementById("aboutTranslator").innerText = langFile.About;
-	//document.getElementById("privacy").innerText = langFile.Privacy;
 	document.getElementById("comment").innerText = langFile.Comment;
 	document.getElementById("contact").innerText = langFile.Contact;
 	document.getElementById("forGoodComputerUsers").innerText = langFile.CommentForDev;
@@ -1202,7 +1238,6 @@ function SetLanguage() {
 	document.getElementById("aboutTranslatorText").innerText = langFile.AboutTranslator;
 	document.getElementById("textItsNotBest").innerText = langFile.ItsNotBest;
 	document.getElementById("textNoMoney").innerText = langFile.NoMoney;
-	//document.getElementById("textItsPrivate").innerText = langFile.ItsPrivate;
 	document.getElementById("textWhatIsQ").innerText = langFile.WhatIsQ;
 	document.getElementById("textStillWorking").innerText = langFile.StillWorking;
 	document.getElementById("textWhatWeUse").innerText = langFile.WhatWeUse;
@@ -1210,6 +1245,22 @@ function SetLanguage() {
 	document.getElementById("textWeFree").innerText = langFile.WeFree;
 	document.getElementById("tabDic").innerText = langFile.Dic;
 	document.getElementById("textDownloadingList").innerText = langFile.DownloadingDic;
+	document.getElementById("tabApp_translate").innerText = langFile.AppTabTranslate;
+	document.getElementById("tabApp_search").innerText = langFile.AppTabSearch;
+	document.getElementById("tabApp_mapper").innerText = langFile.AppTabMapper;
+	document.getElementById("tabApp2_translate").innerText = langFile.AppTabTranslateShort;
+	document.getElementById("tabApp2_search").innerText = langFile.AppTabSearchShort;
+	document.getElementById("tabApp2_mapper").innerText = langFile.AppTabMapperShort;
+	document.getElementById("searchInputCaption").innerText = langFile.SearchInputCaption;
+	document.getElementById("searchButton").innerText = langFile.SearchButton;
+	document.getElementById("mapperSearchWord").innerText = langFile.MapperInputLabel;
+	document.getElementById("btnMakeMap").innerText = langFile.MapperMakeMap;
+	if (document.getElementById("searchOutPlaceholder")!=undefined) document.getElementById("searchOutPlaceholder").innerText = langFile.HereShow;
+	document.getElementById("textMode").innerText = langFile.Mode;
+	document.getElementById("textPower").innerText = langFile.Power;
+	document.getElementById("textThemeColor").innerText = langFile.Color;
+	
+	document.getElementById("notePhonetics").innerHTML = langFile.UsePhonetics.substring(0,langFile.UsePhonetics.indexOf("%"))+`<a class="link" onclick="PopPageShow('phonetics')">`+langFile.UsePhonetics.substring(langFile.UsePhonetics.indexOf("%")+1, langFile.UsePhonetics.lastIndexOf("%"))+"</a>"+langFile.UsePhonetics.substring(langFile.UsePhonetics.lastIndexOf("%")+1);
 
     if (document.getElementById('specialTextarea').value == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' +  langFile.HereShow + '</span>';
 
@@ -1438,8 +1489,12 @@ function Load() {
 	//console.log(location.hash);
 	if (location.hash=="#about") {
 		ShowAboutPage()
-	} else if (location.hash=="#mapper") {
-		ShowPageMapper()
+	} else if (location.hash=="#mapper") { 
+		appSelected="mapper";
+	} else if (location.hash=="#search") { 
+		appSelected="search";
+	} else if (location.hash=="#translate") { 
+		appSelected="translate";
 	} else if (location.hash=="#dic") {
 		TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
 	} else if (location.hash=="#files") {
@@ -1449,6 +1504,9 @@ function Load() {
 	} else if (location.hash=="#text") {
 		TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
 	}
+	
+	SetSwitchForced();
+
     /*
     	if ('serviceWorker' in navigator) {
     		window.addEventListener('load', function () {
@@ -3597,15 +3655,15 @@ function insertAtCursor(myField, myValue) {
 function MapperMode(mode) {
 	if (mode=="basic") {
 		expertModeMapper.style.display="none";
-		basicModeMapper.style.display="block";
+		basicModeMapper.style.display="flex";
 	} else if (mode=="expert") {
 		expertModeMapper.style.display="block";
 		basicModeMapper.style.display="none";		
 	}
 }
 
-function Copy() {
-    let copyText = document.getElementById("outputtext").innerText;
+function Copy(elementId) {
+    let copyText = document.getElementById(elementId).innerText;
     navigator.clipboard.writeText(copyText).then(function() {
         if (dev) console.log('Copying to clipboard was successful!');
     }, function(err) {
@@ -5269,3 +5327,122 @@ function HashGet(varibleName) {
 	return;
 }
 
+function TabSwitch(newAppName) {
+	let selectedClassName = "selectedApp";
+	let tabs=document.getElementsByClassName("btnApp");
+
+	document.getElementById("tabApp_"+appSelected).classList.remove(selectedClassName);
+	document.getElementById("tabApp2_"+appSelected).classList.remove(selectedClassName);
+	document.getElementById("tabApp_"+newAppName).classList.add(selectedClassName);
+	document.getElementById("tabApp2_"+newAppName).classList.add(selectedClassName);
+
+	ShowAppPage(newAppName);
+}
+function SetSwitchForced() {
+	let selectedClassName = "selectedApp";
+	for (let tab of document.getElementById("appsTab").childNodes) {
+		if (tab.nodeName !== '#text') {
+			if (tab.classList.length>0) tab.classList.remove(selectedClassName);
+		}
+	}
+	for (let tab of document.getElementById("appsTab2").childNodes) {
+		if (tab.nodeName !== '#text') {
+			if (tab.classList.length>0) tab.classList.remove(selectedClassName);
+		}
+	}
+	document.getElementById("tabApp_"+appSelected).classList.add(selectedClassName);
+	document.getElementById("tabApp2_"+appSelected).classList.add(selectedClassName);
+}
+//let timerTab=false;
+function ShowAppPage(name) {
+	if (name==appSelected) return;
+
+	// To left or right?
+	let apps=["translator", "search","mapper"];
+	let left=apps.indexOf(name) > apps.indexOf(appSelected);
+	
+	// id of pages
+	let pageId="appPage_"+name;
+	let pageC=document.getElementById(pageId);
+	
+	let pageIdB="appPage_"+appSelected;
+	let pageB=document.getElementById(pageIdB);
+
+	// absolute specified position
+	let topPx=(document.getElementById("header").clientHeight+1)+"px";
+	
+	// Set both as absolute
+	pageB.style.position="absolute";
+	pageB.style.top=topPx;
+	pageB.style.width="100%";	
+	pageB.style.zIndex=0;
+	
+	pageC.style.position="absolute";
+	pageC.style.top=topPx;
+	pageC.style.width="100%";
+	pageC.style.display="block";
+	pageC.style.zIndex=10;
+
+	//Init values
+	pageB.style.opacity=1;
+	pageB.style.left="0%";
+
+	pageC.style.opacity=0.5;
+	pageC.style.left=left ? "100%" : "-100%";	
+
+	console.log(pageC);
+
+	// Start animation
+	pageC.classList.add("appani");	
+	pageB.classList.add("appani");	
+
+	// Proč to chce timeout????
+	setTimeout(()=>{
+		pageC.style.opacity=1;
+		pageC.style.left="0%";	
+		
+		pageB.style.opacity=0.5;
+		pageB.style.left=left ? "-100%" : "100%";
+	}, 10);
+
+	appSelected=name;
+	location.hash=name;
+
+	// Remove animation
+	setTimeout(()=>{
+		pageB.classList.remove("appani");		
+		pageC.classList.remove("appani");
+		if (name!=appSelected) return;
+
+		pageC.style.top="unset";
+		pageC.style.position="unset";
+		pageC.style.zIndex=0;
+		pageC.style.width="unset";
+		
+		pageB.style.width="unset";
+		pageB.style.left="unset";			
+		pageB.style.top="unset";
+		pageB.style.position="unset";
+		pageB.style.zIndex=0;
+		pageB.style.left="unset";
+
+		// Hide
+		pageB.style.display="none";
+
+	}, 310);
+}
+
+let simpleTabContent=false;
+window.addEventListener('resize', function(){
+	if (window.innerWidth<550) {
+		if (!simpleTabContent){
+			simpleTabContent=true;
+			SetLanguage();
+		}
+	}else{
+		if (simpleTabContent) {
+			simpleTabContent=false;		
+			SetLanguage();	
+		}
+	}
+});
