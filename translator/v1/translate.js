@@ -613,7 +613,7 @@ class ItemNoun {
 			}
 		}
 
-		if (ret.length!=0) console.log(ret);
+//		if (ret.length!=0) console.log(ret);
 		if (ret.length==0) return null; else return {Shapes: ret, Gender: this.To.Gender, Object: this};
 	}
 }
@@ -621,7 +621,6 @@ class ItemNoun {
 class ItemSimpleWord {
 	constructor() {
 		this.input = null;
-		//this.output;
 	}
 	
 	static Load(data) {
@@ -1981,7 +1980,7 @@ class ItemPronoun{
 
 						for (let shapePatternTo of patternShapesTo) {
 							if (shapePatternTo!="?") {
-							//	console.log(shapePatternTo, t, i, t.Pattern.Shapes[i+fallOffset], gender, number);
+							//	console.log(shapePatternTo, t, i, t.Pattern.Shapes[i+fallOffset], gender, number, i+fallOffset);
 								if (shapePatternTo.startsWith("#")) {
 									arr.push({Text: body+shapePatternTo.substring(1), Number: number, Fall: i+1+fallOffset, Gender: gender, Preposition: true});
 								} else {
@@ -2048,19 +2047,19 @@ class ItemPronoun{
 			{
 				let forms1=this.IsStringThisWordGetTo(14, 21, str, 1, -14, "mun");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(21, 28, str, 2, -28, "mun");
+				let forms2=this.IsStringThisWordGetTo(21, 28, str, 2, -21, "mun");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 			{
-				let forms1=this.IsStringThisWordGetTo(28, 35, str, 1, -35, "zen");
+				let forms1=this.IsStringThisWordGetTo(28, 35, str, 1, -28, "zen");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(42, 49, str, 2, -49, "zen");
+				let forms2=this.IsStringThisWordGetTo(35, 42, str, 2, -35, "zen");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 			{
-				let forms1=this.IsStringThisWordGetTo(49, 58, str, 1, -58, "str");
+				let forms1=this.IsStringThisWordGetTo(42, 49, str, 1, -42, "str");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(63, 70, str, 2, -63, "str");
+				let forms2=this.IsStringThisWordGetTo(49, 58, str, 2, -49, "str");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 
@@ -5339,7 +5338,8 @@ class LanguageTr {
 					else 
 					printableString=string;
 				} else if (type=="SimpleWord") {
-					printableString=string.output.Text;
+					printableString=string.output;
+					console.log(printableString, string);
 				}else if (type=="NumberLetters") printableString=string;
 				else {
 					if (dev) console.log("Unknown type", string);
@@ -6269,7 +6269,7 @@ class LanguageTr {
 						//	console.log("!!!!!!", words);
 							if (words!=null){
 								for (let w of words.Shapes) {
-									console.log("vars", w,cislo,pad);
+								//	console.log("vars", w,cislo,pad);
 									//if (w[1]==cislo && w[2]==pad) {
 									if (w.Number==cislo && w.Fall==pad) {
 									//	console.log("OK");
