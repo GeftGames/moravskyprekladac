@@ -155,6 +155,7 @@ html{
 	overflow: hidden;
 	transition: opacity 0.15s, filter 0.15s;
 	filter: var(--filterShadow1);
+	
 }
 .butIc{
 	cursor: pointer;
@@ -180,6 +181,29 @@ html{
 }
 .butIc:hover .ib{	
 	filter: var(--filterShadow2);
+}
+.fakeTextbox{
+	max-height: 70vh;
+	text-shadow: 0.5px 0.5px 2px #00000030;
+	transition: background-color var(--transitionSlow), box-shadow var(--transitionSlow), outline var(--transitionRFast), outline-offset var(--transitionRFast);
+	border-radius: 3px;
+	border: none;
+	border-color: transparent;
+	font-family: var(--f);
+	text-shadow: var(--tsh);
+	box-shadow: var(--ksh);
+	outline: 2px transparent dashed;
+	outline-offset: 3px;
+	transition:  outline var(--transitionRFast), outline-offset var(--transitionRFast), box-shadow var(--transitionSlow);
+	font-size: 5mm;
+	max-height: 75vh;
+	/*max-width: 50vw;	*/
+	display: flex;
+	flex-direction: column;  
+	min-height:50px;
+	width: -webkit-fill-available;
+	width: -moz-available;
+	background-color: var(--ConBack);
 }
 #transarea{
 	display: grid;
@@ -241,7 +265,8 @@ html{
 	z-index: 1;
 }
 li {
-	list-style-type: none;
+	/*list-style-type: none;*/
+	margin-left: 23px;
 }
 .traMOp {
 	text-decoration: underline dotted;
@@ -396,6 +421,13 @@ p{
 	color: var(--ColorText);
 }
 span{
+	text-shadow: var(--tsh);
+	font-size: 5mm;
+	font-family: var(--f);
+	transition: color var(--transitionSlow);
+	color: var(--ColorText);
+}
+li{
 	text-shadow: var(--tsh);
 	font-size: 5mm;
 	font-family: var(--f);
@@ -725,7 +757,7 @@ option,optgroup{
 .pageFromDownHeader{
 	font-weight: 350;
 	font-size: 8mm;
-	margin-top: 1cm;
+	margin-top: 100px;
 }
 #rowSelectTo{
 	overflow: hidden;
@@ -783,7 +815,7 @@ option,optgroup{
 	clip-path: inset(-5px -5px 0px -5px);
 	transition: background-color var(--transitionSlow);
 	z-Index: 0;
-	cursor: pointer;
+	cursor: pointer;	
 }
 .tab:hover{
 	background-color: var(--ColorTheme);
@@ -792,10 +824,12 @@ option,optgroup{
 .tabSelected{
 	background-color: var(--ColorTheme);
 	z-index: 3;
+	height: 30px;
+	clip-path: inset(-3px -3px 2px -3px);
 }
 #tabBackGround{
 	width: 100%;
-    height: 60px;
+    height: 200px;
     z-index: 1;
     position: absolute;
     box-shadow: 0px 0px 3px #00000050;
@@ -860,6 +894,17 @@ option,optgroup{
 	display: flex; 
 	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#translatorSelLang{
+	display: flex; 
+	width:100%; 
+	justify-content: center; 
+	flex-direction: column;
+	align-items: center; 
+	margin-top: 1.5cm; 
+	margin-bottom: 1cm;
 }
 .pageInside{
 	margin-left: 10%; 
@@ -867,6 +912,33 @@ option,optgroup{
 }
 #dicLte{
 	margin-bottom: 1cm;
+}
+#formSearch{
+	width: 50%;
+}
+#appsTab{
+	display:flex;
+}
+#appsTab2{
+	display:none;
+}
+#mapperBasicInput{
+	margin-top: 1.5cm;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+	width: fit-content;
+	margin-bottom: 1cm;
+	width: 50%;
+	max-width: 500px;
+}
+#mapperInner{
+	margin-left: 1cm;
+	margin-right: 1cm;
+}
+#translateFromToSelect{
+	margin-left: 1cm;
+	margin-right: 1cm;
 }
 @media only screen and (min-width: 2000px) {
 	#transarea{
@@ -919,8 +991,20 @@ option,optgroup{
 		margin-right: 0px;
 	}
 	#mapperButtons{
-		width: 100%;
+	/*	width: 100%;*/
 		justify-content: center;
+	}
+	#appsTab{
+		display:none;
+	}
+	#appsTab2{
+		display:flex;
+	}
+	#formSearch{
+		width: 80%;
+	}
+	#mapperBasicInput{
+		width: 80%;
 	}
 }
 @media only screen and (max-width:600px) {
@@ -976,8 +1060,11 @@ option,optgroup{
 		max-height: 40vh;
 		margin-top: 10px;
 	}
-	#changeLangSection{
-		flex-direction: column; 
+	/*#changeLangSection{
+		flex-direction: column;
+	}*/
+	#translatorSelLang{
+		margin-top: 1cm;
 	}
 	.pageInside{
 		margin-left: 0%; 
@@ -992,6 +1079,26 @@ option,optgroup{
 	}
 	#dicLte{
 		margin-bottom: 5mm;
+	}
+	.butIc{
+		padding: 10px;
+	}	
+	#mapperInner{
+		margin-left: 0cm;
+		margin-right: 0cm;
+	}
+	#mapperButtons{
+		margin-left: .5cm;
+		margin-right: .5cm;	
+		width: unset;
+	}
+	#translateFromToSelect{
+		margin-left: 1cm;
+		margin-right: 1cm;
+	}	
+	#expertModeMapper{
+		margin-left:2mm;
+		margin-right:2mm;
 	}
 }
 @media only screen and (max-width:390px) {
@@ -1016,6 +1123,27 @@ option,optgroup{
 	}
 	#transarea{
 		padding:3px;
+	}
+	#formSearch{
+		width: 100%;
+		margin-left: 2mm;
+		margin-right: 2mm;
+	}
+	#mapperBasicInput{
+		width: 100%;
+		margin-left: 2mm;
+		margin-right: 2mm;
+	}
+	#translatorSelLang{
+		margin-top: 0.5cm;
+		margin-bottom: 0.5cm;
+	}
+	#translateFromToSelect{
+		margin-left: 1mm;
+		margin-right: 1mm;
+	}
+	select{
+		max-width: calc(100vw - 4px);
 	}
 }
 /*
@@ -1083,6 +1211,16 @@ circle{
 .settingLink:hover{
 	color: var(--ColorThemeForward);
 }
+.link{
+	cursor: pointer;
+	text-decoration: underline; 
+	color: var(--ColorOrig);
+	user-select: none;
+	transition: color .3s;
+}
+.link:hover{
+	color: var(--ColorThemeForward);
+}
 #mapperCanvas {
 	width: 100%;
 	filter: drop-shadow(2px 2px 2px #00000015);
@@ -1104,10 +1242,7 @@ input[type="text"], textarea{
 	border: 1px solid #88888863;
 	background-color: var(--ColorBack);
 }
-#mapperInner{
-	margin-left: 1cm;
-	margin-right: 1cm;
-}
+
 .listButtons{
 	display: flex;
     flex-direction: column;
@@ -1121,7 +1256,7 @@ input[type="text"], textarea{
 	font-size: 5mm;
 }
 .mapperNavrh{
-	background-color: var(--ConBack);
+/*	background-color: var(--ConBack);*/
 	color: var(--ColorText);
 	font-size: 6mm;
 	padding: 4mm;
@@ -1218,66 +1353,38 @@ caption{
 .tooltipR, .tooltipL, .tooltipC{
 	position: relative;
 }
+.tooltipR:after, .tooltipL:after, .tooltipC:after{
+	content: attr(data-tooltip);
+	top: 64px;
+	min-width: 100px;
+	max-width: 300px;
+	padding: 5px 7px 5px 7px;
+	pointer-events: none;
+    font-size: 5mm;
+	display: inline;
+	border-radius: 5px;
+	width: max-content;
+	height: fit-content;
+	background-color: var(--ColorTheme);
+	color: var(--ColorThemeForward);
+	box-shadow: var(--bsh), var(--dsh);	
+	z-index: 100;
+	text-align: center;
+}
+
 .tooltipR:after {
 	content: attr(data-tooltip);
-	top: 64px;
 	left: 10px;
-	min-width: 100px;
-	max-width: 300px;
-	padding: 5px 7px 5px 7px;
-	pointer-events: none;
-    font-size: 5mm;
-	display: inline;
-	border-radius: 5px;
-	width: max-content;
-	height: fit-content;
-	background-color: var(--ColorTheme);
-	color: var(--ColorThemeForward);
-	box-shadow: var(--bsh), var(--dsh);	
-	z-index: 100;
-	text-align: center;
 }
 .tooltipL:after {
-	content: attr(data-tooltip);
-	top: 64px;
-	left: 40px;
     transform: translate(-100%, 0);
-	min-width: 100px;
-	max-width: 300px;
-	padding: 5px 7px 5px 7px;
-	pointer-events: none;
-    font-size: 5mm;
-	display: inline;
-	border-radius: 5px;
-	width: max-content;
-	height: fit-content;
-	background-color: var(--ColorTheme);
-	color: var(--ColorThemeForward);
-	box-shadow: var(--bsh), var(--dsh);	
-	z-index: 100;
-	text-align: center;
+	left: 40px;
 }
 .tooltipC:after {
-	content: attr(data-tooltip);
-	top: 64px;
-	left: 15px;
     transform: translate(-50%, 0);
-	min-width: 100px;
-	max-width: 300px;
-	padding: 5px 7px 5px 7px;
-	pointer-events: none;
-    font-size: 5mm;
-	display: inline;
-	border-radius: 5px;
-	width: max-content;
-	height: fit-content;
-	background-color: var(--ColorTheme);
-	color: var(--ColorThemeForward);
-	box-shadow: var(--bsh), var(--dsh);	
-	z-index: 100;
-	text-align: center;
+	left: 15px;
 }
-.tooltipR:before {
+.tooltipR:before, .tooltipL:before, .tooltipC:before{
 	content: "▲";
 	overflow: hidden;
 	width: 16px;
@@ -1290,33 +1397,16 @@ caption{
 	text-shadow: var(--bsh), var(--dsh);
 	color: var(--ColorTheme);
 }
+.tooltipR:before {
+	left: 18px;
+}
 .tooltipL:before {
-	content: "▲";
-	overflow: hidden;
-	width: 16px;
-	height: 16px;
-	z-index: 101;
-	top: 48px;
-	left: 27px;
     transform: translate(-100%, 0);
-	bottom: 5px;
-	font-size: 18px;
-	text-shadow: var(--bsh), var(--dsh);
-	color: var(--ColorTheme);
+	left: 27px;
 }
 .tooltipC:before {
-	content: "▲";
-	overflow: hidden;
-	width: 16px;
-	height: 16px;
-	z-index: 101;
-	top: 48px;
-	left: 27px;
     transform: translate(-50%, 0);
-	bottom: 5px;
-	font-size: 18px;
-	text-shadow: var(--bsh), var(--dsh);
-	color: var(--ColorTheme);
+	left: 27px;
 }
 .tooltipR:before, .tooltipR:after, .tooltipL:before, .tooltipL:after, .tooltipC:before, .tooltipC:after {
 	opacity: 0;
@@ -1336,5 +1426,47 @@ caption{
 	animation-duration: 10s;
 }
 .mapperSavedRemoveBtn{
+	cursor: pointer;
+}
+.btnApp{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: border-color, color;
+	transition-duration: var(--transitionSlow);
+	padding: 6px;
+	border-bottom: 3px solid var(--ColorTheme);
+	color: var(--ColorText);
+	text-shadow: .5px .5px 1.5px rgba(var(--RawColorBack), .15);
+	font-size: 4.5mm;
+	margin: 6px 6px 3px 6px;
+}
+.btnApp:not(.selectedApp):hover{
+	background-color: var(--ColorTheme);
+	color: var(--ColorOrig);
+}
+.selectedApp{
+	border-bottom: 3px solid var(--ColorText);
+	margin: 6px 6px 3px 6px;
+	color: var(--ColorText) !important;
+}
+.appPage{
+	height: -webkit-fill-available;
+}
+.appani{
+	transition: opacity 300ms ease-out, left 300ms ease-out;
+}
+
+#basicModeMapper{
+	width: -webkit-fill-available;
+	width: -moz-available;
+	display: flex; 
+	justify-content: center;
+	flex-direction: column; 
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.locShortcut{
 	cursor: pointer;
 }
