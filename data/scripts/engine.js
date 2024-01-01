@@ -2,384 +2,7 @@
 var imgMap;
 var imgMap_bounds;
 var appSelected="translate";
-/*class Word {
-	constructor() {
-	    this.selectedIndex = 0;
-		this.input = [];
-		this.output = [];
-		this.def=[];
-	}
-}
-class SameWord {
-	constructor() {
-		this.input = "";
-	}
-}
-class Sentence {
-	constructor() {
-		this.input = "";
-		this.output = "";
-	}
-}
-class GeneralReplace {
-	constructor() {
-		this.input = "";
-		this.output = "";
-	}
-}
-class Phrase {
-	constructor() {
-	    this.selectedIndex = 0;
-		this.input = [];
-		this.output = [];
-	}
-}
 
-class chigau {
-	constructor() {
-	    this.selectedIndex = 0;
-		this.input ="";
-		this.output = [];
-	}
-}
-class LanguageTr {
-	constructor(name) {
-		this.name = name;
-		this.myVocab = [];
-		this.Words = [];
-		this.SameWords = [];
-		this.Sentences = [];
-		this.Phrases = [];
-		this.ReplacesEnding = [];
-		this.ReplacesEndingT = [];
-		this.ReplacesEndingF = [];
-
-		this.ReplacesStarting = [];
-		this.ReplacesStartingF = [];
-		this.ReplacesStartingT = [];
-		this.Replaces = [];
-		this.ReplacesT = [];
-		this.ReplacesC = [];
-		this.RepairsT = [];
-		this.RepairsF = [];
-
-		this.prepositions = [];
-	}
-
-	GetVocabulary(dev) {
-	//	console.log(this.name);
-	//	this.Words = new Array();
-		if (dev) console.log("INFO| Starting Downloading List" + this.name + ".trw");
-		var request = new XMLHttpRequest();
-		request.open('GET', '/DIC/' + this.name + '.trw', true);
-		request.send();
-		var self = this;
-		request.onerror = function () {
-			if (dev) console.log("ERROR| Cannot downloaded List" + self.name + ".trw");
-		};
-		request.onreadystatechange = function () {
-			if (request.readyState === 4) {
-				if (request.status === 200) {
-					if (dev) console.log("INFO| Downloaded List" + self.name + ".trw");
-
-					let text = request.responseText;
-					//	console.log("INFO| Downloaded ListHa.txt"+text);
-					let lines = text.split('\r\n');
-					if (lines.length < 5 && dev) {
-						if (dev) console.log("ERROR| Downloaded List" + self.name + ".txt seems too small");
-						enabletranslate = false;
-						return;
-					}
-					document.getElementById('slovnik').innerText = lines.length;
-					for (var line = 0; line < lines.length; line++) {
-						let lineText = lines[line];
-
-						let elements = lineText.split("|");
-
-						if (elements.length > 0) {
-
-							switch (elements[0]) {
-								// Word
-								case "W": {
-									if (dev) {
-										if (lineText.includes(' ')) console.log("ERROR| "+self.name+" Word on line " + (line + 1) + " has space");
-									}
-									if (elements.length == 3) {
-										let z = new Word();
-										z.input = elements[1].split("#");
-										z.output = elements[2].split("#");
-										self.Words.push(z);
-										break;
-									} else if (dev) console.log("ERROR| "+self.name+" Word on line " + (line + 1));
-									break;
-								}
-
-								// same word
-								case "O": {
-									if (elements.length == 2) {
-										let z = new SameWord();
-										z.input = elements[1];
-										self.SameWords.push(z);
-									} else if (dev) console.log("ERROR| "+self.name+" Word on line " + (line + 1));
-									break;
-								}
-
-								// Phrase
-								case "P": {
-									if (elements.length == 3) {
-										let z = new Phrase();
-										z.input = elements[1].split('#');
-										z.output = elements[2].split('#');
-										self.Phrases.push(z);
-									} else if (dev) console.log("ERROR| "+self.name+" Phrase on line " + (line + 1));
-									break;
-								}
-
-								// sentence
-								case "S": {
-									let z = new Sentence();
-									z.input = elements[1];
-									z.output = elements[2];
-									self.Sentences.push(z);
-									break;
-								}
-
-								// general replace
-								case "G": {
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.Replaces.push(z);
-									break;
-								}
-
-								// General replace x -> y
-								case "GF": {//only from
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.ReplacesC.push(z);
-									break;
-								}
-
-								// General repair x -> y
-								//case "RF": {
-								//	let z = new chigau();
-								//	z.input = elements[1];
-								//	z.output = elements[2].split('#');
-								//	//z.output.unshift(z.input);
-								//	self.RepairsC.push(z);
-								//	break;
-								//}
-								//case "RT": {//only to
-								//	let z = new chigau();
-								//	z.input = elements[1];
-								//	z.output = elements[2].split('#');
-								//	//z.output.unshift(z.input);
-								//	self.RepairsT.push(z);
-								//	break;
-								//}
-
-								// General replace x <- y
-								case "GT": {
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.ReplacesT.push(z);
-									break;
-								}
-								// General replace ending
-								case "GE": {
-									try {
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.ReplacesEnding.push(z);
-									}catch(error){if (dev) console.log("ERROR| "+self.name+" Phrase on line " + (line + 1));}
-									break;
-								}
-								// General replace ending x <- y
-								case "GET": {
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.ReplacesEndingT.push(z);
-									break;
-								}
-								// General replace ending x -> y
-								case "GEF": {
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.ReplacesEndingF.push(z);
-									break;
-								}
-								// General replace staring
-								case "GS": {
-									let z = new GeneralReplace();
-									z.input = elements[1].split('#')[0];
-									z.output = elements[2].split('#')[0];
-									self.ReplacesStarting.push(z);
-									break;
-								}
-
-								default: {
-									if (dev) console.log("ERROR| "+self.name+" Unknown on line " + (line + 1));
-									break;
-								}
-							}
-						}
-					}
-					// sort
-					self.Replaces.sort(comparelr);
-
-					self.ReplacesEnding.sort(comparelr);
-					self.ReplacesEndingT.sort(comparelr);
-					self.ReplacesEndingF.sort(comparelr);
-
-					self.ReplacesStarting.sort(comparelr);
-					self.ReplacesStartingF.sort(comparelr);
-					self.ReplacesStartingF.sort(comparelr);
-
-					// translate
-					//SpellingJob();
-					//prepareToTranslate(true);
-				} else {
-					if (request.status == 0) ShowError("<b>Jejda, něco se pokazilo.</b><br>Nelze stáhnout seznam slovíček překladu...List" + self.name + ".txt<br>");
-					else ShowError("<b>Jejda, něco se pokazilo.</b><br>Nelze stáhnout seznam slovíček překladu<br>Chyba " + request.status + "...List" + self.name + ".txt <br>");
-					return;
-				}
-			}
-		};
-	}
-
-	comparelr(a, b) {
-		if (a.input.length > b.input.length) {
-			return -1;
-		}
-		if (a.input.length < b.input.length) {
-			return 1;
-		}
-		return 0;
-	}
-
-	GetVocabulary2(dev) {
-		let vzory=[];
-
-		if (dev) console.log("INFO| Starting Downloading DECRIPT List" + this.name + ".txt");
-		var request = new XMLHttpRequest();
-		request.open('GET', 'https://moravskyprekladac.ga/DICDECRIPT/' + this.name + '.txt', true);
-		request.send();
-		var self = this;
-		request.onerror = function () {
-			if (dev) console.log("ERROR| Cannot downloaded DECRIPT List" + self.name + ".txt");
-		};
-		request.onreadystatechange = function () {
-			if (request.readyState === 4) {
-				if (request.status === 200) {
-					if (dev) console.log("INFO| Downloaded DECRIPT List" + self.name + ".txt");
-
-					let text = request.responseText;
-					//	console.log("INFO| Downloaded ListHa.txt"+text);
-					let lines = text.split('\r\n');
-					if (lines.length < 5 && dev) {
-						if (dev) console.log("ERROR| Downloaded DECRIPT List" + self.name + ".txt seems too small");
-						enabletranslate = false;
-						return;
-					}
-				//	document.getElementById('slovnik').innerText = lines.length;
-					for (var line = 0; line < lines.length; line++) {
-						let lineText = lines[line];
-
-						let elements = lineText.split("|");
-
-						if (elements.length > 0) {
-
-							switch (elements[0]) {
-								// Word
-								case "VZOR": {
-									let nv=new vzor();
-									nv.name=elements[2];
-									nv.type=elements[1];
-									for (let i=0; i<7; i++) nv.jed.push(elements[3+i]);
-									for (let i=0; i<7; i++) nv.mn.push(elements[3+7+i]);
-									inflections.push(nv);
-									break;
-								}
-
-								// same word
-								case "S": {
-									let nv=new sword();
-									nv.name=elements[1];
-									for (let i=0; i<vzory.leght; i++){
-										if (vzory[i].name==elements[2]) {
-											nv.vzor=vzory[i];
-											break;
-										}
-									}
-									swords.push(nv);
-									break;
-								}
-							}
-						}
-					}
-				}
-			}
-		};
-	}
-
-	/*Prepositions() {
-		
-
-		// B
-		prepositions.push(new prepositionFall("během", {2}));
-		prepositions.push(new prepositionFall("bez", {2}));
-		prepositions.push(new prepositionFall("beze", {2}));
-		prepositions.push(new prepositionFall("blízko", {2}));
-
-		// C
-		prepositions.push(new prepositionFall("cestou", {}));
-
-		// D
-		prepositions.push(new prepositionFall("dík", {}));
-		prepositions.push(new prepositionFall("díky", {}));
-		prepositions.push(new prepositionFall("dle", {}));
-		prepositions.push(new prepositionFall("do", {2}));
-
-
-		prepositions.push(new prepositionFall("na", {6,4}));
-		prepositions.push(new prepositionFall("od", {2}));
-		prepositions.push(new prepositionFall("z", {2}));
-		prepositions.push(new prepositionFall("po", {4,6}));
-		prepositions.push(new prepositionFall("v", {4,6}));
-		prepositions.push(new prepositionFall("s", {7,2,4}));
-		prepositions.push(new prepositionFall("před", {4,7}));
-	}
-}
-
-class prepositionFall {
-	constructor() {
-	    this.name ="";
-		this.Prepositions = [];
-	}
-	/*constructor(n, prep) {
-	    this.name = n;
-		this.Prepositions = prep;
-	}
-}
-class PodstatneJmeno {
-	constructor() {
-	    this.koren = "";
-		this.predpona = "";
-		this.koncovka = "";
-		this.pripona = "";
-
-		this.vzor = "";
-		this.rod = "";
-	}
-}*/
-
-//var langHA, langVA, langMO, langSL, langSK, langSLEZ, langLA, langBR, langCT, langCS_je, langHA_zabr;
 class savedTraslation {
 	constructor() {
 	    this.language = -1;
@@ -874,6 +497,8 @@ function ChangeBetaFunctions() {
     if (!loaded) return;
     betaFunctions = document.getElementById('betaFunctions').checked;
     localStorage.setItem('setting-betaFunctions', betaFunctions);
+
+	if (confirm("Aby se změna aplikovala, tak je nutné stránku znovu načíst. Chcete teď stránku znovu načíst? V případě, že kliknete na ZRUŠIT, tak prosím auktualizujte stránku sami až se Vám to bude hodit.")) location.reload();
 }
 
 function ChangeStylizate() {
@@ -898,12 +523,11 @@ function SwitchHide(e) {
 
 function ShowAboutPage(){
 	location.hash="about";
-//	e.preventDefault();
-
+	
 	document.getElementById("aboutPage").style.display="block";
 	document.getElementById("aboutPage").style.opacity="1";
 	document.getElementById("aboutPage").style.position="absolute";
-//	document.getElementById("translatingPage").style.display="none";
+	
 	document.getElementById("aboutPage").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
@@ -915,13 +539,11 @@ function ShowAboutPage(){
 
 function CloseAboutPage(){
 	location.hash="";
-//	e.preventDefault();
 
 	document.getElementById("aboutPage").style.opacity="0";
 	document.getElementById("aboutPage").style.top="500px";
 	document.getElementById("aboutPage").style.position="fixed";
-	//document.getElementById("aboutPage").style.display="none";
-	//document.getElementById("translatingPage").style.display="block";
+	
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
@@ -968,47 +590,6 @@ function PopPageClose(name) {
 		element.style.display="none";
 	}, 300);
 }
-/*
-
-function ShowPageMapper(){
-	location.hash="mapper";
-	//location.hash = "mapper";
-	//e.preventDefault();
-
-	document.getElementById("mapperPage").style.display="block";
-	document.getElementById("mapperPage").style.opacity="1";
-	document.getElementById("mapperPage").style.position="absolute";
-//	document.getElementById("translatingPage").style.display="none";
-	document.getElementById("mapperPage").style.top="52px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	CreateSavedList();
-}
-
-function ClosePageMapper(){
-	location.hash="";
-//	e.preventDefault();
-
-	document.getElementById("mapperPage").style.opacity="0";
-	document.getElementById("mapperPage").style.top="500px";
-	document.getElementById("mapperPage").style.position="fixed";
-	//document.getElementById("aboutPage").style.display="none";
-	//document.getElementById("translatingPage").style.display="block";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		document.getElementById("mapperPage").style.display="none";
-	}, 300);
-}*/
-
 function ShowPageOwnLang(){
 	document.getElementById("pageOwnLang").style.display="block";
 	document.getElementById("pageOwnLang").style.opacity="1";
@@ -5191,7 +4772,7 @@ function navrhClick(text,customStyle) {
 
 let ownLang;
 let loadedOwnLang=false;
-var loadedVersionNumber;
+//var loadedVersionNumber;
 
 function loadLang() {		
 	if (loadedOwnLang) {
@@ -5213,14 +4794,14 @@ function loadLang() {
 
 				let lines=ownLangContent.split('\r\n');
 				ownLang=new LanguageTr();
-				loadedversion=lines[0];
-				loadedVersionNumber=parseFloat(loadedversion.substr(4));
-				if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
+				//loadedversion=lines[0];
+			//	loadedVersionNumber=parseFloat(loadedversion.substr(4));
+			//	if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
 					ownLang.Load(lines);
 					//AddLang(ownLang);
-				} else {
-					console.log("Incorrect file version", lines);
-				}
+			//	} else {
+				//	console.log("Incorrect file version", lines);
+			//	}
 				let ele=document.createElement("option");
 				ele.innerText="*own*";
 
