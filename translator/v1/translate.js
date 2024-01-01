@@ -735,6 +735,123 @@ class ItemSimpleWord {
 	}
 }
 
+class ItemAdverb {
+	constructor() {
+		this.input = null;
+	}
+	
+	static Load(data) {
+		let raw = data.split('|');
+		if (loadedversion=="TW v0.1" || loadedversion=="TW v1.0") {
+			if (raw[0]=='') return null;
+			if (raw.length==1) {
+				if (raw[0]=='') return null;
+				if (raw[0].includes('?')) return null;
+				let item = new ItemAdverb();
+				if (raw[0].includes(',')) item.input = raw[0].split(',');
+				else item.input = raw[0];
+
+				item.output = [{Text: raw[0]}];
+				return item;
+			} 
+			if (raw.length==2){
+				if (raw[0]=='') return null;
+				if (raw[1]=='') return null;
+				if (raw[0].includes('?')) return null;
+				if (raw[1].includes('?')) return null;
+
+				let item = new ItemAdverb();
+				
+				if (raw[0].includes(',')) item.input = raw[0].split(',');
+				else item.input = raw[0];
+				
+				if (raw[1].includes(',')) item.output = [{Text: raw[1].split(',')}];
+				else item.output = [{Text: raw[1]}];
+				return item;
+			}
+		} else if (loadedVersionNumber == 2) {
+			if (raw[0]=='') return null;			
+			let item = new ItemAdverb();
+			
+			// z
+			if (raw[0].includes(',')) item.input = raw[0].split(',');
+			else item.input = raw[0];
+
+			//item.show=raw[1]=="1";
+			
+			// na
+			item.output=FastLoadTranslateTo(raw, 1);
+			if (item.output==null)return null;
+			return item;						
+		}
+		return null;
+    }
+
+	GetDicForm(name) {		
+		//	if (Array.isArray(this.output)) {
+		let p = document.createElement("p");
+		let f = document.createElement("span");
+		if (Array.isArray(this.input)){
+			f.innerText=this.input.join(", ");
+		} else f.innerText=this.input;
+		p.appendChild(f);
+
+		let e = document.createElement("span");
+		e.innerText=" → ";
+		p.appendChild(e);
+
+		//console.log(this);
+		let out="";
+		//if (Array.isArray(this.output)) {
+			for (let i=0; i<this.output.length; i++) {
+				let to = this.output[i];
+				let o = to.Text;
+
+				out += o+", ";
+				if (o=="") return null;
+
+				let t = document.createElement("span");
+				t.innerText=o;
+				p.appendChild(t);
+
+				if (to.Comment!=undefined) {
+					if (to.Comment!="") {
+						let c = document.createElement("span");
+						c.innerText=to.Comment;
+						r.className="dicMeaning";
+						p.appendChild(c);
+					}
+				}
+
+				if (i!=this.output.length-1) {
+					let space=document.createTextNode(", ");
+					p.appendChild(space);
+				}
+			}
+	/*	} else {
+			let o=this.output;
+			out = o.Text;
+			if (out=="") return null;
+
+			let t = document.createElement("span");
+			t.innerText=o.Text;
+			p.appendChild(t);		
+		}			
+		
+		
+		
+		p.appendChild(document.createTextNode(" "));
+*/
+		if (name!=""){
+			let r = document.createElement("span");
+			r.innerText=" ("+name+")";
+			r.className="dicMoreInfo";
+			p.appendChild(r);
+		}
+		return {from: this.input, to: out, name: "", element: p};
+	}
+}
+
 class ItemPhrase{
 	constructor() {
 		this.input =[]; //[["k", "moři"], ["k", "mořu"]]
@@ -4812,7 +4929,7 @@ class LanguageTr {
 			let line=lines[i];
 			if (line=="-") break;
 
-			let item=ItemSimpleWord.Load(line);
+			let item=ItemAdverb.Load(line);
 			if (item !== null && item !== undefined) this.Adverbs.push(item);
 			else if (dev) console.log("⚠️ Cannot load 'Adverb' item at line "+i, line);
 		}
@@ -4834,7 +4951,7 @@ class LanguageTr {
             let line=lines[i];
             if (line=="-") break;
 
-			let item=ItemSimpleWord.Load(line);
+			let item=ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Conjunctions.push(item);
 			else if (dev) console.log("⚠️ annot load 'Conjunction' item at line "+i, line);
         }
@@ -4845,7 +4962,7 @@ class LanguageTr {
             let line=lines[i];
             if (line=="-") break;
 
-			let item=ItemSimpleWord.Load(line);
+			let item=ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Particles.push(item);
 			else if (dev) console.log("⚠️ Cannot load 'Particle' item at line "+i, line);
         }
@@ -4856,7 +4973,7 @@ class LanguageTr {
             let line=lines[i];
             if (line=="-") break;
 
-			let item=ItemSimpleWord.Load(line);
+			let item=ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Interjections.push(item);
 			else if (dev) console.log("⚠️ Cannot load 'Interjection' item at line "+i, line);
         }
