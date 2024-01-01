@@ -5,7 +5,8 @@
 // 4 - advanced
 // 5 - really good
 const languagesPackage = "v2.trw_a";//"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
-var loadedVersionNumber=-1;
+let loadedversion ="TW 2";//-1;
+var loadedVersionNumber=2;
 let translations = [
 	"Morava", [
 		"Slovácko", [
@@ -252,7 +253,7 @@ function GetTranslations() {
 		xhttp2.send();
 	}*/
 
-	function RegisterLang(content, fileName){
+	function RegisterLang(content, fileName) {
 		let lines=content.split('\r\n');
 
 		if (lines.length<5) {
@@ -262,14 +263,14 @@ function GetTranslations() {
 
 		let tr=new LanguageTr();
 		tr.fileName=fileName;
-		loadedversion=lines[0];
-		loadedVersionNumber=parseFloat(loadedversion.substring(4));
-		if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
-			tr.Load(lines);
-			AddLang(tr);
-		} else {
-			console.log("Incorrect file version",lines);
-		}
+	//	loadedversion=lines[0];
+	//	loadedVersionNumber=parseFloat(loadedversion.substring(4));
+	//	if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
+		tr.Load(lines);
+		AddLang(tr);
+	//	} else {
+		//	console.log("Incorrect file version",lines);
+		//}
 	}
 
 	function AddLang(lang) {
