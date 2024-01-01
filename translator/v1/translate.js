@@ -1884,7 +1884,7 @@ class ItemPatternPronoun{
 				}
 				return item; 
 			}
-			if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
+			if (dev) console.log("⚠️ PatternPronoun - Chybná délka ("+raw.length+")");
 		}
 		return null;
 	}
