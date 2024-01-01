@@ -2448,6 +2448,7 @@ dlouho|dúho|
 dokola|dokoṵa|
 doma|doma|
 domů|dom|
+dovnitř|do ňútra|
 dozadu|záďej|
 hned|hnet|
 hodně|hodňe|
@@ -4729,6 +4730,7 @@ mus|musET|mus|musET|
 m|mOCT|m|mOCT|
 -
 moc|moc|
+tak|?||toš|
 už|uš|
 tam|tam|
 pozdě|pozďe|
@@ -5216,6 +5218,7 @@ d|dÁT|d|dÁT|
 ček|čekAT|ček|čekAT|
 -
 až|až|
+silněji|sêlňéž |
 již|jo̬š|
 dlouho|dlóho|
 -
@@ -5564,6 +5567,7 @@ hodin|hodinA|0|hodźi|hodźiNA|
 -
 -
 -
+déle?|deli|
 -
 -
 -
@@ -6858,6 +6862,7 @@ dlouho|dúho|
 -
 -
 jéžiš,ježiš|ježiš|
+ježišmarja|ježiš marja|
 -§Cholina.trw§TW v2
 tCholina
 aGG
@@ -7363,6 +7368,7 @@ k|kOUPIT|k|kOUPIT|
 -
 teď|fčyl|
 jednou|raz|
+nahoře|ve vrchu|
 radši|radšy|
 dolů|naduł|
 tam|tam|
@@ -7564,7 +7570,9 @@ vZ|vZÍT|vZ|vZÍT|
 dělA|dělAT|džełA|dělAT|
 pl|plAKAT|pł|plAKAT|
 -
+černě|po černo|
 jen,jenom|ene|
+jednou|jedneho razu|
 tam|tam|
 -
 kvůli||dla|
@@ -8194,6 +8202,7 @@ no|nu|
 ne|ne|
 ano|ja|
 -
+kač|dli dli|
 -§Radějov.trw§TW v2
 tRadějov
 aGG
@@ -9160,6 +9169,7 @@ loni|luňi|
 málo|máło|
 moc|moc|
 napoprvé|ponêprv|
+napříč|na přičkê|
 nyní|fčelke|
 odtamtud|odtamtáď|
 pamětlivě|pamatlêvje|
@@ -11645,6 +11655,7 @@ i||he|
 ve||ve|
 do||do|
 -
+protože|prutu že|
 a|a|
 proto|prutu|
 ale|hale|
@@ -13657,6 +13668,7 @@ ještě|ešče||ešťe|
 jinak|ináč||inak|
 kam|de|
 klidně|klidňe|
+křížem,příčně|na štorc|
 najednou|naráz|
 nedávno|totkaj|
 někde|bársgde||negde|
@@ -24620,6 +24632,7 @@ vpodvečer|podvičerô|
 špatně|zle||těžko||špatně|
 doposud|doposavaď|
 dokud|dokáď|
+tehdy|?|
 -
 k|3|k||g|
 o|6,4|o|
@@ -26639,6 +26652,7 @@ z||s|
 -
 a|a|
 jako|jako|
+totiž?|toliž|
 ale|ale|
 -
 -
@@ -27522,6 +27536,7 @@ ustavičně,neustále|ustavičňe|
 jednou|ros|
 tož|tuž|
 spolu|społym|
+domů|do domu|
 nejdříve|ňejṕirve|
 potom|potym|
 zas|zaś|
@@ -28333,15 +28348,18 @@ dál|dálej|
 dodnes|dodneskaj|
 dosud|dosaváď|
 doteď|dofčílšku|
+dusno|dušno |
 jen,jenom|enom||enem|
 jindy|indová|
 kam|gde|
 kamsi|gdesi|
+letos|letosť |
 málo|máṷo|
 napříč|napříč|
 odkudsi|otkácik|
 odmalička|odmali|
 odněkud|odnekáď|
+parno|sparno |
 pokud|pokáď|
 pořád|furt|
 potom|potem|
@@ -28349,6 +28367,7 @@ potud|potáď|
 sem|senkaj|
 sotva|jedvá|
 tady|tadik||toťkaj|
+tak|?||toš|
 takřka,takříkajíc,skoro,téměř|jakořka|
 teď,nyní|fčilkaj|
 tedy|teda|
@@ -28361,6 +28380,7 @@ zešikma|spošika|
 zítra|zitra|
 tam|tam|
 nahoře,navrchu|navrchu|
+zvrchu|od vrchu|
 zase|zaséj|
 dole|dúle|
 však|šak|
@@ -38682,6 +38702,7 @@ a|a|
 jako|jako|
 -
 -
+panebože|jéjžiš-marijá|
 jéžiš|jéjžiš|
 maria|marijá|
 -§Násedlovice.trw§TW v2
@@ -40210,6 +40231,7 @@ tak|tag||tak|
 vždy|dycky|
 potom|potym|
 zase,zas|zaž|
+nejvíce|ňejv'ince |
 teď,nyní|teras|
 hodně|godňe|
 doma|duma|
@@ -43494,6 +43516,7 @@ povíd|povídAT|povíd|povídAT|
 mus|musET|mus|musET|
 -
 až|až|
+doteď|do fčiľšku|
 tak|tak|
 -
 za||za|
@@ -46711,6 +46734,7 @@ skonč|skončIT|skonč|skončIT|
 ře|řeDIT|břeď|řeďIT|
 udrž|udržET|udrž|udržET|
 -
+ihned|hneď||hneďkaj||bez meškání|
 se|sa|
 teď|včil|
 teďka|včiléj|
@@ -46721,6 +46745,7 @@ nikdy|nidy|
 nějak|nejak|
 spíš|prvéj||spješ||spješéj|
 uprostřed|prostřeď|
+nejenom|ni edem||néenem||néén|
 dříve|prvéj|
 brzo|brze|
 velmi|moc|
@@ -46730,6 +46755,7 @@ kam|gde|
 kolem|kole||kolevá|
 tiše|ticho|
 draho|draho|
+poté|po tem|
 slabě|słabo|
 tence|tenko|
 tenoučko|teňučko|
@@ -46771,6 +46797,8 @@ spolu|społem|
 spokojeně|spokojno||pokojno|
 však|šak|
 zvlášť|gór||kór|
+zvláště|gór||už gór|
+málo|málo||na mále||posłabu|
 stejně|stejnako|
 krátce|nedłúho|
 skoro|zmáła||ale||z||ze||razu|
@@ -46806,6 +46834,7 @@ takže|takže|
 a|a|
 u|u|
 nebo|alebo||lebo|
+zda|či||lesti||-i|
 jak|jag|
 -
 inu|janu||ťanu|
@@ -49302,6 +49331,7 @@ u|uDIT|hu|uDIT|
 -
 až|aš|
 tam|tam|
+snad|sňáď?|
 tedy|teda|
 teď|teď|
 ještě|ešče|
@@ -49879,6 +49909,7 @@ kam|kam|
 teda|teda|
 tedy|teda|
 jen,jenom|jenom|
+moc,mnoho|mocka?||mucka?|
 -
 v||f|
 do||do|
@@ -50500,6 +50531,7 @@ nejvíce,nejvíc|névic|
 dávno|dávno|
 spolu|spolo|
 pořádně|pořádňe|
+automaticky|automaťi?cke|
 až|až|
 tedy,teda|teda|
 možná|možná|
@@ -52955,6 +52987,7 @@ anebo|anebo|
 jak|jak|
 protože|protože|
 ani|aňi|
+kdybych|dêbêh |
 -
 prý|pré|
 -
@@ -57081,6 +57114,7 @@ BÝT|247|-1|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|były|?|?|?|?|?|?|?|?|?|?|
 |BÝT||BÝT|
 -
 tam|tam|
+uprostřed?|naprostřet|
 -
 -
 -
@@ -57571,6 +57605,7 @@ daleko|daľeko|
 vždy|dycky|
 dále,dál|dáľe|
 velice|velice|
+tehdy?teda?|tedy|
 -
 na|6,4|na|
 pod||pod|
@@ -57823,6 +57858,7 @@ do||do|
 a|a|
 že|že|
 ale|ale|
+jak-li|nežli|
 když|dŷž|
 proto|proto|
 -
@@ -72753,6 +72789,7 @@ BÝT|247|-1|?|?|?|je|sum|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?
 vst|vstÁT|vs|stÁT|
 |BÝT||BÝT|
 -
+kam |kaj|
 potom|potym|
 -
 na||na|
@@ -73451,6 +73488,7 @@ když|dyž|
 a|a|
 jako|jako|
 kdyby|dyby|
+anebo|?|
 nebo|nebo|
 -
 ne|ne|
@@ -74622,12 +74660,16 @@ všude|všade|
 nahoře|navrchu|
 nahorů|navrch|
 domů|dom|
+stranou|na bok|
 domů|dom|
 vzadu|vzadku||nazadku|
 potom|potem|
 nyní|včíl|
 teprve|deprvová|
 vloni|loni|
+předevčírem|před včerejšky|
+pozítří|po zytřku|
+navečer|k večeru|
 nějak|jaksy|
 velmi|moc|
 raději|rači|
@@ -76473,6 +76515,7 @@ JÍT|127|-1|?|?|?|?|?|?|?|pujdym|?|?|?|?|?|pojď|pojďme|pojďte|?|?|?|?|?|?|?|?
 jistě|isto|
 tak|tag|
 potom|potym|
+domů|do domu|
 již|juž|
 ještě|ješče|
 velmi|bardzo|
@@ -78381,6 +78424,7 @@ hned|hneď|
 ještě|ešče|
 už|ož|
 přeci|přece|
+schválně|na potvoro|
 přísně|přisně|
 vedle|vedle|
 dost|dosť|
