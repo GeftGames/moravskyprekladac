@@ -13,6 +13,8 @@ oLašsko
 -
 -
 v kožichu|1|f kožuchu|
+pro případ|1|kvůli|
+kdyby nastala bída|1|dla bidy|
 -
 -
 -
@@ -23,12 +25,14 @@ advent|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 duCH|3|ch|cha|chu,chovi|cha|chu|chu,chovi|chem|chové|chů|chům|chy|chové|ších,chách|chy
 vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
+bÍDA|1|ída|ídy|ídě|ídu|ído|ídě|ídou|ídy|ěd|ídám|ídy|ídy|ídách|ídami
 -
 dobytEK|2|ek?|ka?|ku|ek?|ku?|ku?|kem?|-|-|-|-|-|-|-
 advenT|3|t?|u?|u?|?|e?|će|em?|y?|ů?|ům?|y?|y?|ech?|y?
 duCH|3|ch?|cha?|chu?,chovi?|cha?|chu?|chu|chem?|chové?|chú?|chúm?|chy?|chové?|ších?,chách?|chy?
 vodA|1|a?|y|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 kožiCH|3|ch?|chu?|chu?|ch?|chu?|chu|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
+bÍDA|1|ída?|idy|íďe?|ídu?|ído?|íďe?|ídou?|ídy?|jed?|ídám?|ídy?|ídy?|ídách?|ídami?
 -
 dobyt|dobytEK|0|dobyt|dobytEK|
 advent|advent|0|adven|advenT|
@@ -36,18 +40,25 @@ du|duCH|2|du|duCH|
 vod|vodA|0|vod|vodA|
 koži|kožiCH|0|kožu|kožiCH|
 ||0|C'ele||
+b|bÍDA|0|b|bÍDA|
 -
 žlutÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
 žluTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|t|t|tá?|tých?|tým?|tá?|tá?|tých?|tými?|t|t|tá?|té?|té?|tou?|tá?|té?|tou?|t|t|té?|tých?|tým?|té?|té?|tých?|tými?|t|t|tý?|tého?|tému?|tého?|tý?|tym|tým?|t|t|tí?|tých?|tým?|té?|tí?|tých?|tými?|t|t|tý?|tého?|tému?|tý?|tý?|tém?|tým?|t|t|té?|tých?|tým?|té?|té?|tých?|tými?|t|t
+dobRÝ|-1|ré|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|rý?|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 -
 svat|žlutÝ|sva|žluTÝ|
+dob|dobRÝ|dob|dobRÝ|
 -
 CO|co|čeho|čemu|co,-č|-|čem|čím
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
 CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
 |CO||CO|
+t|tEN||TEN|
 -
 -
 -

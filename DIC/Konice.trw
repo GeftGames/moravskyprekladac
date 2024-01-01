@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tKonice
 aGG
 d19.07.2023 12:54:43
@@ -9,30 +9,52 @@ q0
 -
 -
 -
+hlavní sekeru|0|hrôbó sekero|
 -
 -
+|
 -
+ou|ó
 -
 -
 blatníK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+sekeRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
+vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 blatníK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+voDA|1|da?|dy?|ďe?|du?|do?|ďe?|dó|dy?|d?|dám?|dy?|dy?|dách?|dami?
 -
-blatní|blatníK|0|blatňi|blatníK
--
--
--
--
+blatní|blatníK|0|blatňi|blatníK|
+vod|vodA|0|vo|voDA|
 -
 -
 -
 -
--
--
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 -
 -
 -
 -
 -
+-
+vZÍT|30|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|učme,tlucme|učte,tlucte|oukl|oukl|oukla|ouklo|oukli|oukly|oukly|oukla|učen|učen|učena|učeno|učeni|učeny|učeny|učena
+vydržET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+-
+vZÍT|30|-1|zít?|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|ezmi?|ezměme?|ezměte?|zal|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zaťi?|zaty?|zaty?|zata?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+tlOUCT|15|-1|ouct?|uku?,tluču?|učeš?|uče?|učeme?|učete?|ukou?,tlučou?|uč?,tluc?|učme?,tlucme?|učte?,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeňi?|učeny?|učeny?|učena?
+vydržET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+-
+vydrž|vydržET|vêdrž|vydržET|
+-
+tak|tag|
+nejdéle|nédil|
+-
+pod||pod|
+-
+a|a|
 -
 -

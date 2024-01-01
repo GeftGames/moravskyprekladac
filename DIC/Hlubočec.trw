@@ -1,7 +1,7 @@
-TW v0.1
+TW v2
 tHlubočec
 d12.06.2023 11:03:05
-c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 295
+c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 295\n-SNČJ
 g49.8399918,17.9702326
 q0
 -
@@ -9,6 +9,7 @@ q0
 -
 -
 -
+kvůli tomu|1|dla teho|
 -
 -
 -
@@ -18,6 +19,7 @@ ové|ove
 tal|tał
 lat|łač
 lej|łaj
+kala|kała
 -
 pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
 roK|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
@@ -25,35 +27,38 @@ roK|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
 pÁN|2|án?|ána,áně?|ánu,ánovi?|ána?|ane?|ánu,ánovi?|ánem?|anove|ánů?|ánům?|ány?|áni,ánové?|ánech?|ány?
 roK|3|k?|ku,ka?|ku?|k?|ku?|ku,ce?|kem?|ky?|ku|kům?|ky?|ky?|cích?|ky?
 -
-p|pÁN|pÁN
-pytel|mjech||
+p|pÁN|0|p|pÁN|
+pytel||0|mjech||
 -
-jarní|-1||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
+jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 -
-jarnÍ|-1|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|ho?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?
+jarnÍ|-1|?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|?|?|?|?|?|?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|ho?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?|||?|ho?|mu?|?|?|m?|m?|||?|ch?|m?|?|?|ch?|mi?||
 -
-jarní|jarní|jarní
+jarní|jarní|jarní|jarní|
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-ONI|-1|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-ON|-1|un|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
-SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
-ONI|-1|oni?|jich,nich*?|jim,nim*?|je,ně*?|-|nich*?|jimi?,nama
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|teho|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+ON|un|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+ONI|oni?|jich,nich*?|jim,nim*?|je,ně*?|-|nich*?|jimi?,nama
+ONA|ona|jí?,ňí*?|jí?,ňí*?|ji?,ňi*?|-|ňí*?|jí?,ňí*?
 -
-t|tEN|tEN
-ON|ON
-SE|SE
-ONI|ONI
+t|tEN||TEN|
+|ON||ON|
+|SE||SE|
+|ONI||ONI|
+|ONA||ONA|
 -
 třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
 -
 třI|2|e|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
 -
-tř|třI|třI
+tř|třI|tř|třI|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 proSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
@@ -61,6 +66,7 @@ MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|m
 vZÍT|94|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata|zav|zavši|zavše
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 dělAT|111|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|aje|ajíc|ajíce|av|avši|avše
+plAKAT|7|-1|akat|áču|áčeš|áče|áčeme|áčete|áčou|ač,plakej|ačme,plakejme|ačte,plakejte|akal|akal|akala|akalo|akali|akaly|akaly|akala
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|su|budu?|budeš?|bude?|budžem|budete?|budou?|buď?|buďme?|buďte?|był|byl?|byla?|było|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 proSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sí?|s?|sme?|ste?|sil?|sil?|sila?|silo?|šyli|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeni?|šeny?|šeny?|šena?
@@ -68,21 +74,24 @@ MÍT|103|-1|mječ|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|m
 vZÍT|94|-1|zít?|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|em|ezměme?|ezměte?|zal?|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zati?|zaty?|zaty?|zata?|zav?|zavši?|zavše?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|poč|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 dělAT|111|-1|ač|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ajče|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|aje?|ajíc?|ajíce?|av?|avši?|avše?
+plAKAT|7|-1|akat?|áču?|áčeš?|áče?|áčeme?|áčete?|áčou?|ač?,plakej?|ačme?,plakejme?|ačte?,plakejte?|akal?|akal?|akała|akalo?|akali?|akaly?|akaly?|akala?
 -
-BÝT|BÝT
-proS|proSIT|proSIT
-MÍT|MÍT
-vZ|vZÍT|vZÍT
-JÍT|JÍT
-dělA|džełA|dělAT|dělAT
+|BÝT||BÝT|
+proS|proSIT|proS|proSIT|
+|MÍT||MÍT|
+vZ|vZÍT|vZ|vZÍT|
+|JÍT||JÍT|
+dělA|dělAT|džełA|dělAT|
+pl|plAKAT|pł|plAKAT|
 -
-černě|po černo
-jen,jenom|ene
-jednou|jedneho razu
-tam
+černě|po černo|
+jen,jenom|ene|
+jednou|jedneho razu|
+tam|tam|
 -
+kvůli||dla|
 -
-ale
-jak|jag
+ale|ale|
+jak|jag|
 -
 -

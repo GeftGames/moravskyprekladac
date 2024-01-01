@@ -47,6 +47,7 @@ je to nesnášenlivý člověk|1|je jak břed|
 jít spinkat|1|búcnút|
 v kance|1|f kanca|
 ženský lékař|1|ženskí doktor|
+kač kač|1|na dli dli|
 -
 -
 ně|ne
@@ -75,6 +76,7 @@ ozim|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 prdel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 léK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+slepicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 -
 kanEC|2|ec?|ce?|ci,covi?|ca|če?|ci,covi?|cem?|ci?|cú|cům?|ce?|ci?|cích?|ci?
 pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kú|ky?|ek?|kám?|ky?|ky?|kách?|kami?
@@ -171,16 +173,20 @@ ozim|ozim|0|ozimi|ozimiNA|
 prdel|prdel|0|řit|pohádKA|
 lé|léK|0|lí|léK|
 dokto|doktoR|0|dokto|doktoR|
+slepic|slepicE|0|slíp|pohádKA|
+||0|prokopňički||
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 zlatÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 lepší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
+rÁD|-1|-|-|-|-|-|-|-|ádo|-|-|-|-|-|-|-|-|áda|-|-|-|-|-|-|-|-|áda|-|-|-|-|-|-|-|-|ády|-|-|-|-|-|-|-|-|ád|-|-|-|-|-|-|-|-|ádi|-|-|-|-|-|-|-|-|ád|-|-|-|-|-|-|-|-|ády|-
 -
 zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|nej|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|nej|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|kej|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|kí|kých?|kým?|ké?|ké?|kých?|kými?|?|?
 zlaTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|t?|t?|tá?|tých?|tým?|tá?|tá?|tých?|tými?|t?|t?|tá?|té?|té?|tou?|tá?|té?|tou?|t?|t?|té?|tých?|tým?|té?|té?|tých?|tými?|t?|t?|tej|tého?|tému?|tého?|tý?|tém?|tým?|t?|t?|tí?|tých?|tým?|té?|tí?|tých?|tými?|t?|t?|tý?|tého?|tému?|tý?|tý?|tém?|tým?|t?|t?|té?|tých?|tým?|té?|té?|tých?|tými?|t?|t?
 lepší|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-||ch?|m?|?|?|ch?|mi?|-|-
+rÁD|-1|-|-|-|-|-|-|-|ádo?|-|-|-|-|-|-|-|-|áda?|-|-|-|-|-|-|-|-|áda?|-|-|-|-|-|-|-|-|ády?|-|-|-|-|-|-|-|-|ád?|-|-|-|-|-|-|-|-|áďi|-|-|-|-|-|-|-|-|ád?|-|-|-|-|-|-|-|-|ády?|-
 -
 důsledn|zelenÝ|akorát|zeleNÝ|
 tlust|zlatÝ|bačga|zlaTÝ|
@@ -193,6 +199,7 @@ tlust|zlatÝ|klus|zlaTÝ|
 baps|hezKÝ|baps|hezKÝ|
 lepší|lepší|lepší|lepší|
 doktors|hezKÝ|doktors|hezKÝ|
+r|rÁD|r|rÁD|
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
@@ -233,6 +240,8 @@ tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|uč
 uDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 sÍT|15|-1|ít|eji|eješ|eje|ejeme|ejete|ejí|ej|ejme|ejte|el,sil|el,sil|ela,sila|elo,silo|eli,sili|ely,sily|ely,sily|ela,sila|et|et|eta|eto|eti|ety|ety|eta
 ztraTIT|30|-1|tit|tím|tíš|tí|tíme|títe|tí|ť|ťme|ťte|til|til|tila|tilo|tili|tily|tily|tila|cen|cen|cena|ceno|ceni|ceny|ceny|cena
+NÉST|31|-1|nést|nesu|neseš|nese|neseme|nesete|nesou|ponesu|poneseš|ponese|poneseme|ponesete|ponesou|nes|nesme|neste|nesl|nesl|nesla|neslo|nesli|nesly|nesly|nesla|nesen|nesen|nesena|neseno|neseni|neseny|neseny|nesena
+seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen,děn|zen,děn|zena,děna|zeno,děno|zeni,děni|zeny,děny|zeny,děny|zena,děna
 -
 musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 držET|15|-1|et|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
@@ -246,6 +255,8 @@ tlOUCT|15|-1|ouct?|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,t
 uDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
 sÍT|15|-1|ít?|eji?|eješ?|eje|ejeme?|ejete?|ejí?|ej?|ejme?|ejte?|el?,sil?|el?,sil?|ela?,sila?|elo?,silo?|eli?,sili?|ely?,sily?|ely?,sily?|ela?,sila?|et?|et?|eta?|eto?|eťi?|ety?|ety?|eta?
 ztraŤIT|30|-1|ťit?|ťím?|ťíš?|ťí|ťíme?|ťíte?|ťí?|ť?|ťme?|ťte?|ťil?|ťil?|ťila?|ťilo?|ťili?|ťily?|ťily?|ťila?|cen?|cen?|cena?|ceno?|ceňi?|ceny?|ceny?|cena?
+NÉST|31|-1|nést?|nesu?|neseš?|nese?|neseme?|nesete?|nesú|ponesu?|poneseš?|ponese?|poneseme?|ponesete?|ponesou?|nes?|nesme?|neste?|nesl?|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseňi?|neseny?|neseny?|nesena?
+seĎET|15|-1|ďet?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďijú|ď?|ďme?|ďte?|ďel?|ďel?|ďela?|ďelo?|ďeli?|ďely?|ďely?|ďela?|zen?,ďen?|zen?,ďen?|zena?,ďena?|zeno?,ďeno?|zeňi?,ďeňi?|zeny?,ďeny?|zeny?,ďeny?|zena?,ďena?
 -
 bít||bácat||
 bořit||barúchat||
@@ -295,10 +306,13 @@ tl|tlOUCT|kl|tlOUCT|
 u|uDIT|hu|uDIT|
 s|sÍT|s|sÍT|
 ztra|ztraTIT|stra|ztraŤIT|
+|NÉST||NÉST|
+se|seDĚT|se|seĎET|
 -
 přesně|akorát|
 boso,naboso|bosky|
 tak|tak|
+nejdéle|nejdíl|
 -
 i||aj||aji|
 na||na|
@@ -312,3 +326,4 @@ než|než|
 -
 -
 alou|alo|
+kač|dli|

@@ -13,6 +13,7 @@ oValašsko
 -
 do čtvrnácti let|1|do štrnásti rokú|
 tam na kopce|1|hen na čupcy|
+ovci na maso|1|ofcu dla masa|
 -
 -
 ně|ne
@@ -26,10 +27,14 @@ sila|syła
 kopEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
 bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
+ovcE|1|e|e|i|i|e|i|í|e|í,|ím|e|e|ích|emi
+masO|0|o|a|u|o|o|e,u|em|a||ům|a|a|ech|y
 -
 čupEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|cy?|ců?|cům?|cy|ce?|cích?|ci?
 pÁN|2|án?|ána|ánu?,ánovi?|ána?|ane?|ánu?,ánovi?|ánem?|áňi?,ánové?|ánú?|ánúm?|ány?|áňi?,ánové?|ánech?|ány?
 bÚH|2|úh?|oha|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem?|ozi?,ohové?|ohú?|ohúm?|ohy?|ozi?,ohové?|ozích?|ohy?
+ovcE|1|e?|e?|i?|u|e?|i?|í?|e?|í?,?|ím?|e?|e?|ích?|emi?
+masO|0|o?|a|u?|o?|o?|e?,u?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
 obilí||0|zbožú||
 žně||0|žňa||
@@ -38,6 +43,8 @@ sklo||0|skło||
 kop|kopEC|0|čup|čupEC|
 p|pÁN|0|p|pÁN|
 b|bŮH|0|b|bÚH|
+ovc|ovcE|0|ofc|ovcE|
+mas|masO|0|mas|masO|
 -
 -
 -
@@ -46,10 +53,10 @@ JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
 JÁ|já?|mě,(knižně) mne[2]?|mně,mi?|mňa|já?|mně?|mnou?
-tEN|en|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+TEN|ten|toho?|tomu?|toho?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tú|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
 |JÁ||JÁ|
-t|tEN|t|tEN|
+t|tEN||TEN|
 -
 -
 -
@@ -64,6 +71,7 @@ musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,
 dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 proSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
+chovAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 BÝT|247|-1|byť|sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|były|byly?|była|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 přiJÍT|6|-1|jít?|jď?|jďme?|jďte?|šéł|šéł|šla?|šlo?|šli?|šly?|šly?|šla?
@@ -75,6 +83,7 @@ musET|5|-1|et?|ím?|íš?|í?|íme?|ite|ejí,musí?|el,musil?|el,musil?|ela,musi
 dÁT|94|-1|át?|ám?|áš?|á?|áme|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|oh|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 proSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sí?|s?|sme?|ste?|sil?|sil?|syła|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeňi?|šeny?|šeny?|šena?
+chovAT|15|-1|at?|ám|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |BÝT||BÝT|
 přiJ|přiJÍT|přiJ|přiJÍT|
@@ -86,6 +95,7 @@ musE|musET|musE|musET|
 dÁ|dÁT|dÁ|dÁT|
 mO|mOCT|mO|mOCT|
 pro|proSIT|pro|proSIT|
+chov|chovAT|chov|chovAT|
 -
 potom|potom|
 zítra|zajtra|
@@ -95,6 +105,7 @@ tam|hen|
 vždy|dycky|
 -
 do||do|
+kvůli||dla|
 -
 ale|aĺe|
 když|dyž||dyš|

@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tPaskov
 aGG
 d03.05.2023 19:37:11
@@ -28,30 +28,36 @@ cují|cuju
 ul|uł
 -
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+minutA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 školA|1|a?|e|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+minuTA|1|ta?|ty?|ťe?|tu?|to?|ťe?|tou?|ty?|t|tám?|ty?|ty?|tách?|tami?
 -
-mládenec|mładeněc||
-půda|hura?||
-konírn|maštal|školA|školA
+mládenec||0|mładeněc||
+půda||0|hura?||
+konírn|školA|0|maštal|školA|
+minut|minutA|0|minu|minuTA|
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|y|ého?|ému?|ého?|ý?|ém?|ým?|í?|ých?|ým?|é?|í?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||y|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
-oblečen|zelenÝ|zelenÝ
+oblečen|zelenÝ|oblečen|zelenÝ|
 -
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-ON|-1|un|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+ON|un|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|tych|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
-ON|ON
-t|tEN|tEN
+|ON||ON|
+t|tEN||TEN|
 -
+pět|2||i|i|||i|i
 -
+pjeT|2|d|ťi?|ťi?|t?|t?|ťi?|ťi?
 -
+pět|pět|pje|pjeT|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 spÁT|7|-1|át|ím|íš|í|íme|íte|í|i|ěme|ěte|al|al|ala|alo|ali|aly|aly|ala
@@ -59,6 +65,7 @@ poznAT|14|-1|at|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|án
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 přiJÍT|6|-1|jít|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
 VÉST|31|-1|vést|vedu|vedeš|vede|vedeme|vedete|vedou|povedu,budu vést|povedeš,budeš vést|povede,bude vést|povedeme,budeme vést|povedete,budete vést|povedou,budou vést|veď|veďme|veďte|vedl|vedl|vedla|vedlo|vedli|vedly|vedly|vedla|veden|veden|vedena|vedeno|vedeni|vedeny|vedeny|vedena
+trvAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 -
 BÝT|247|-1|být?|sem|jsi?|je?|zmy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|buł|buł|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 spÁT|7|-1|ac|ím?|íš?|í?|íme?|íte?|í?|i?|ěme?|ěte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
@@ -66,17 +73,20 @@ poznAT|14|-1|at?|ej?|ejme?|ejte?|oł|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 přyJÍT|6|-1|jít?|jď?|jďme?|jďte?|šoł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
 VÉST|31|-1|vést?|vedu?|vedeš?|vede?|vedeme?|vedete?|vedou?|povedu,budu vést?|povedeš,budeš vést?|povede,bude vést?|povedeme,budeme vést?|povedete,budete vést?|povedou,budou vést?|veď?|veďme?|veďte?|vet|vedl?|vedla?|vedlo?|vedli?|vedly?|vedly?|vedla?|veden?|veden?|vedena?|vedeno?|vedeni?|vedeny?|vedeny?|vedena?
+trvAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|ało|ali?|aly?|aly?|ala?
 -
-BÝT|BÝT
-sp|spÁT|spÁT
-pozn|poznAT|poznAT
-JÍT|JÍT
-při|přy|přiJÍT|přyJÍT
-VÉST|VÉST
+|BÝT||BÝT|
+sp|spÁT|sp|spÁT|
+pozn|poznAT|pozn|poznAT|
+|JÍT||JÍT|
+při|přiJÍT|přy|přyJÍT|
+|VÉST||VÉST|
+trv|trvAT|tyrv|trvAT|
 -
-večer|večir
-hezky,pěkně|pjekně
-potom|potem
+večer|večir|
+hezky,pěkně|pjekně|
+potom|potem|
+dlouho|dłuho|
 -
 -
 -

@@ -2,6 +2,7 @@ TW v2
 tJablunkov
 aGG
 d02.04.2023 15:38:56
+igdo dṵugo ṵygo, tego chlyb odbygo Jablunkov FM;\n\nṵygo ????\nodbygo ???\n
 c#Zdroje dat\n-Kellner, Adolf - Východolašská nářečí; str.119
 g49.5767657,18.7634146
 q0
@@ -26,6 +27,8 @@ hromadA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 smrt|1||i|i||i|i|í|i|í|ím|i|i|ích|mi
 řezníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+tatínEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
+chlÉB|3|éb|eba|ebu|éb|ebe|ebu,ebě|ebem|eby|ebů|ebům|eby|eby|ebech|eby
 -
 odmaRA|1|ryja|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 kanEC|2|ec?|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
@@ -33,6 +36,8 @@ hromaDA|1|da|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 doktoR|2|r?|ra?|ov́i|ra?|re?|ru?,rovi?|rem?|ři?|ruf|rúm?|ry?|ři?|rech?|ry?
 smrT|1|t?|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|ťím?|ťi?|ťi?|ťích?|tmi?
 mosoř|2|k?|ka?|ov́i|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+taťínEK|2|ek?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
+chlÉB|3|éb?|eba?|ebu?|éb?|ebe?|ebu?,ebje?|ebem?|eby?|ebú?|ebúm?|eby?|eby?|ebech?|eby?
 -
 alma|almaRA|0|odma|odmaRA|
 kan|kanEC|0|gaň|kanEC|
@@ -40,6 +45,8 @@ hromad|hromadA|0|gruma|hromaDA|
 dokto|doktoR|0|dokto|doktoR|
 smrt?||0|šm’erdž||
 řezní|řezníK|0|masoř|mosoř|
+tatín|tatínEK|0|tatul|taťínEK|
+chl|chlÉB|0|chl|chlÉB|
 -
 rezavÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
@@ -48,16 +55,33 @@ rezavÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ý
 hotov|rezavÝ|hotov|rezavÝ|
 ||lep’i||
 -
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+kDO|do|oho|omu|oho|do|om|ým
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+-
+TY|ty|ťe[1]?,tebe?|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
+KDO|gdo|koho?|komu?|koho?|kdo?|kom?|kým?
+TEN|ten?|tego|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+-
+t|tY||TY|
+k|kDO||KDO|
+t|tEN||tEN|
 -
 -
 -
 -
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+žÍT|15|-1|ít|iji|iješ|ije|ijeme|ijete|ijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
 -
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|bydžež|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+žÍT|15|-1|ič|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
 -
--
--
+|BÝT||BÝT|
+ž|žÍT|ž|žÍT|
 -
 jestli|jeśli|
+ještě|ješče|
+dlouho|długo||dṵugo|
 -
 -
 než|ňiž|

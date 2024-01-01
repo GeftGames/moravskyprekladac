@@ -1,10 +1,11 @@
-TW v1.0
+TW v2
 tNové Město na Moravě
 aGG
 d18.11.2023 10:52:30
 c#zdroje dat\n-https://sncj.ujc.cas.cz/
 g49.5614538,16.0731172
 q0
+oHorácko
 -
 -
 -
@@ -16,33 +17,41 @@ q0
 -
 -
 brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
+němčinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 brambor|1|?|u?|u?|?|e?|u?|em?|i|ů?|ům?|y?|y?|ech?|y?
+ňemčiNA|1|na?|ni|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 -
-brambor|brambor|0|brambor|brambor
+brambor|brambor|0|brambor|brambor|
+němčin|němčinA|0|ňemči|ňemčiNA|
 -
 -
 -
-|kutaní||
+||kutaní||
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-SE|-1|-|sebe?|si?,sobě?|se,sebe?|-|sobě?|sebou?
+SE|-|sebe?|si?,sobě?|se,sebe?|-|sobě?|sebou?
 -
-SE|SE
+|SE||SE|
 -
 -
 -
 -
 jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|eďí|ez?|ezme?|ezte?|edl?|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
-j|jÍST|jÍST
+j|jÍST|j|jÍST|
+|JÍT||JÍT|
 -
-|našupavo
+|našupavo|
+tam|tam|
 -
+kvůli||dle|
 -
-nebo
+nebo|nebo|
 -
 -

@@ -51,6 +51,7 @@ s hejnem hus|1|ze stádem hosí|
 se stádem hus|1|ze stádem hosí|
 přichystat koně|1|nastrojił koňa|
 v kožichu|0|f kožôchô|
+dlouho jsi|1|dlúhoz|
 -
 chceš-li|1|chceš-ľe|
 čerstvou|1|čerstfo|
@@ -164,6 +165,8 @@ loužE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 duCH|3|ch|cha|chu,chovi|cha|chu|chu,chovi|chem|chové|chů|chům|chy|chové|ších,chách|chy
 kožiCH|3|ch|chu,cha|chu|ch|chu|chu,še|chem|chy|chů|chům|chy|chy|ších|chy
 doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+HOUSLE|1|-|-|-|-|-|-|-|housle|houslí|houslím|housle|housle|houslích|houslemi
+ministrant|2||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
 -
 arcibiskup|2|?|a?|u,ovi?|a|e?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 buchTA|1|ta|te|tě?|to|to?|tě?|tu?|ty?|et?|tám?|te|ty?|tách?|tami?
@@ -233,6 +236,8 @@ loužE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 duCH|3|ch?|cha|chu?,chovi?|cha?|chu?|chô|chem?|chové?|chú?|chúm?|chy?|chové?|ších?,chách?|chy?
 kožuCH|3|ch?|cha|chu?|ch?|chu?|chô|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
 dochtoR|2|r?|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|ru|rúm?|ry?|ři?|rech?|ry?
+HOUSLE|1|-|-|-|-|-|-|-|housle?|houslí?|houslím?|husle|housle?|houslích?|houslemi?
+ministranT|2|t?|ta?|tu?,tovi?|ta?|te?|tu?,tovi?|tem|ťi?|tú?|túm?|ty?|ťi?|tech?|ty?
 -
 |člověk|0||člověk|
 ||0|vidí húsera||
@@ -326,6 +331,8 @@ louž|loužE|0|lož|loužE|
 du|duCH|2|dô|duCH|dvatý Duch
 koži|kožiCH|0|kožu|kožuCH|
 dokto|doktoR|0|dochto|dochtoR|
+|HOUSLE|0||HOUSLE|
+ministrant|ministrant|0|ministran|ministranT|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -510,8 +517,10 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 čvachtAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 zůstaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+učIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+hrÁT|15|-1|át|aji,hraju|aješ|aje|ajeme|ajete|ají,hrajou|aj,hrej|ajme,hrejme|ajte,hrejte|ál|ál|ála|álo|áli|ály|ály|ála|án|án|ána|áno|áni|ány|ány|ána
 -
-BÝT|247|-1|být?|sem|jsi?|je|jsme?|jste?|jsou?|bodu?|bodeš?|bode|bodeme?|bodete?|bodou?|buď?|buďme?|buďte?|beł|beł|byla?|beło|bele|bele|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|be|bychom?|byste?|by?
+BÝT|247|-1|být?|sem|jsi?|je|jsme?|jste?|jsou?|bodu?|bodež|bode|bodeme?|bodete?|bodou?|buď?|buďme?|buďte?|beł|beł|byla?|beło|bele|bele|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|be|bychom?|byste?|by?
 bzučET|15|-1|eť|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 čvachtAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|í|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 dÁT|30|-1|át?|ám?|áš|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ał|al?|ala?|alo?|ale|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
@@ -558,6 +567,8 @@ doprovázET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í,doprovázejí?|ej?|ejme?|ejt
 čvachtAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|í|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 zostaT|22|-1|t?|nu?|neš?|ne?|neme?|nete?|nou?|ň|ňme?|ňte?|l?|l?|la?|lo?|li?|ly?|ly?|la?
 pomOCT|30|-1|oct?|ohu?,(hovorově) pomúžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) pomúžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|uhlo|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|ožeňi?|oženy?|oženy?|ožena?
+učIT|15|-1|eď|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+hrÁT|15|-1|áď|aji?,hraju?|aješ?|aje?|ajeme?|ajete?|ají?,hrajou?|aj?,hrej?|ajme?,hrejme?|ajte?,hrejte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |BÝT||BÝT|
 |JET||JET|
@@ -627,37 +638,39 @@ zhazovale ||zhazovale ||
 žmoul|žmoulAT|žmúl|žmoulAT|
 zůsta|zůstaT|zosta|zostaT|
 pom|pomOCT|pom|pomOCT|
+uč|učIT|oč|učIT|
+hr|hrÁT|hr|hrÁT|
 -
-večer|večir|
-opravdu|opravdo|
-tehdy|tehdá|
-ještě|ešče|
 až|až|
-však|šag|
-jednou|jednú|
-obzvlášť|zvlášč|
-zvlášť|zvlášč|
-už|ož|
-jen,jenom|jenom|
-sotva|sotfá|
-tady|tade|
-tak|tak|
 dobře|dobře|
 hned|hneď|
-proč|proč|
-velice|toze|
 jakživ|jagžev|
-zrovna|zrovna|
-také,taky|taky|
-leda|ľeda|
-šeplavě|šepľavje|
-kde|gde|
-pak|pag|
-již|jož|
+jednou|jednú|
+jen,jenom|jenom|
 ještě|ešče|
-potom|potom|
-napřed|napřeď|
+ještě|ešče|
+již|jož|
+kde|gde|
+leda|ľeda|
 lehce|ľefko|
+napřed|napřeď|
+obzvlášť|zvlášč|
+opravdu|opravdo|
+pak|pag|
+potom|potom|
+proč|proč|
+sotva|sotfá|
+šeplavě|šepľavje|
+tady|tade|
+tak|tak||tag|
+také,taky|taky|
+tehdy|tehdá|
+už|ož|
+večer|večir|
+velice|toze|
+však|šag|
+zrovna|zrovna|
+zvlášť|zvlášč|
 -
 kolem||kołem|
 s||s|

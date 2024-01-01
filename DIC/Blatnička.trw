@@ -22,6 +22,7 @@ na Suchov|1|na Súchof|
 jak u|1|jag u|
 -
 -
+nej|nej
 -
 ou|ú
 ů|ú
@@ -92,14 +93,17 @@ doktor|doktorSKÝ|dochtor|doktorSKÝ|
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 ONI|oni|jich,#nich|jim,#nim|je,#ně|-|#nich|jimi,#nimi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
 SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 tY|y?|[1],ebe?|[1],obě?|[1],ebe?|y?|obě?|ebú
 ONI|oni?|jich,nich*?|ím|je,ně*?|-|nich*?|jimi,nimi*?
+JÁ|já|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 -
 |SE||SE|
 tY|tY|tY|tY|
 |ONI||ONI|
+|JÁ||JÁ|
 -
 -
 -
@@ -113,6 +117,7 @@ otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala
 kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
 dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+čekAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 mluvIT|15|-1|id|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
@@ -123,6 +128,7 @@ dožírAT|15|-1|at|uji?|uješ?|uje?|ujeme?|ujete?|ajú|uj?|ujme?|ujte?|oval?|ova
 kÚPIT|15|-1|úpit|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|úpiła|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
 dostaT|22|-1|t?|nu?|než|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|l?|l?|la?|lo?|li?|ly?|ly?|la?
 mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+čekAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 mluv|mluvIT|młúv|mluvIT|
 |BÝT||BÝT|
@@ -135,10 +141,15 @@ otrav|otravOVAT|dožír|dožírAT|
 k|kOUPIT|k|kÚPIT|
 dosta|dostaT|dosta|dostaT|
 m|mÍT|m|mÍT|
+ček|čekAT|ček|čekAT|
+neček|čekAT|neček|čekAT|
 -
 jen,jenom|enom|
 pořád|pořáď||furd|
 jakkoli,všelijak,ledajak|bárjak|
+už|už|
+déle|deléj|
+nejdéle|najdél|
 -
 se||ze|
 pod||pod|
