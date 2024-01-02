@@ -2093,11 +2093,12 @@ class ItemPronoun{
 					for (let t of this.To) {
 						let body=t.Body;
 						let patternShapesTo=t.Pattern.Shapes[i];
+						if (patternShapesTo==undefined) continue;
 						if (!Array.isArray(patternShapesTo)) patternShapesTo=[patternShapesTo];
 
 						for (let shapePatternTo of patternShapesTo) {
 							if (shapePatternTo!="?") {
-							//	console.log(shapePatternTo, t, i, t.Pattern.Shapes[i+fallOffset], gender, number, i+fallOffset);
+							//if (shapePatternTo==undefined)	console.log(shapePatternTo, t, i, t.Pattern.Shapes[i+fallOffset], gender, number, i+fallOffset);
 								if (shapePatternTo.startsWith("#")) {
 									arr.push({Text: body+shapePatternTo.substring(1), Number: number, Fall: i+1+fallOffset, Gender: gender, Preposition: true});
 								} else {
@@ -2126,6 +2127,7 @@ class ItemPronoun{
 					for (let t of this.To) {
 						let body=t.Body;
 						let patternShapesTo=t.Pattern.Shapes[i];
+						if (patternShapesTo==undefined) continue;
 						if (!Array.isArray(patternShapesTo)) patternShapesTo=[patternShapesTo];
 
 						for (let shapePatternTo of patternShapesTo) {
