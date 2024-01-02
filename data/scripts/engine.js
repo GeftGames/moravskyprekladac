@@ -2,6 +2,7 @@
 var imgMap;
 var imgMap_bounds;
 var appSelected="translate";
+var transcription=null;
 
 class savedTraslation {
 	constructor() {
@@ -18,7 +19,7 @@ var forceTranslate = false;
 var language, autoTranslate, styleOutput, dev;
 var saved = [];
 var loaded = false;
-
+var TranscriptionText;
 var chngtxt;
 
 var textRefreshTooltip;
@@ -118,8 +119,10 @@ const HSLToRGB = (h, s, l) => {
   };
 
 function customText(){
-	TextStyle = document.getElementById("textStyle").value;
-	localStorage.setItem('TextStyle', TextStyle);
+	TranscriptionText = document.getElementById("textTranscription").value;
+	localStorage.setItem('Transcription', TranscriptionText);
+
+	transcription=SetCurrentTranscription(TranscriptionText);
 }
 
 function customTheme() {
@@ -1209,6 +1212,7 @@ function Load() {
     let trTo = "mo";
     let trFrom = "cs";
     let zTestingFunc;
+	let zTranscription;
     try {
         zlanguage = localStorage.getItem('setting-language');
         zautoTranslate = localStorage.getItem('setting-autoTranslate');
@@ -1216,6 +1220,7 @@ function Load() {
         zTestingFunc = localStorage.getItem('setting-testingFunc');
         zdev = localStorage.getItem('setting-dev'); 
 		zbetaFunctions = localStorage.getItem('setting-betaFunctions');
+		zTranscription = localStorage.getItem('Transcription');
 		
         savedget = localStorage.getItem('saved');
         zmyvocabHA = localStorage.getItem('vocab-ha');
@@ -1268,7 +1273,13 @@ function Load() {
     if (zmyvocabHA === null) {
         myVocabHA = new Array();
         myVocabHA.push('');
-    } else myVocabHA = zmyvocabHA;
+    } else myVocabHA = zmyvocabHA; 
+	
+	if (zTranscription === null) {
+        TranscriptionText = null;
+    } else TranscriptionText = zTranscription;
+	if (document.getElementById("textTranscription")!==null) document.getElementById("textTranscription").value = TranscriptionText;
+	transcription=SetCurrentTranscription(TranscriptionText);
 
     if (savedget === null) saved = new Array();
     else saved = JSON.parse(savedget);
@@ -5027,3 +5038,140 @@ window.addEventListener('resize', function(){
 		}
 	}
 });
+
+function SetCurrentTranscription(transCode) {
+
+	if (transCode=="czechsimple") return [
+		{ from: "mňe", to: "mě"},		
+		{ from: "fje", to: "fě"},
+		{ from: "pje", to: "pě"},
+
+		{ from: "ďe", to: "dě"},	
+		{ from: "ťe", to: "tě"},	
+		{ from: "ňe", to: "ně"},
+
+		{ from: "ijo", to: "io"},
+		{ from: "iju", to: "iu"},
+		{ from: "ije", to: "ie"},
+		{ from: "ija", to: "ia"},
+
+		{ from: "ijó", to: "ió"},
+		{ from: "ijú", to: "iú"},
+		{ from: "ijé", to: "ié"},
+		{ from: "ijá", to: "iá"},
+
+		{ from: "ô", to: "o"},
+		{ from: "ê", to: "e"},
+		{ from: "ạ́", to: "ó"},
+		{ from: "ạ́", to: "ó"},
+		{ from: "ə", to: "e"},
+		{ from: "ṵ", to: "u"},
+		{ from: "ł", to: "l"},
+		{ from: "ŕ", to: "r"},
+		{ from: "ĺ", to: "l"},
+	];	
+	
+	if (transCode=="czech") return[
+		{ from: "dz", to: "ʒ"},		
+		{ from: "dž", to: "ʒ̆"},
+		
+		{ from: "au", to: "au̯"},
+		{ from: "eu", to: "eu̯"},
+		{ from: "ou", to: "ou̯"},
+	];
+
+	if (transCode=="moravian") return[
+		{ from: "ch", to: "x" },
+		{ from: "x", to: "ks" },
+		{ from: "ď", to: "dj" },
+		{ from: "ť", to: "tj" },
+		{ from: "ň", to: "nj" },
+	];	
+
+	if (transCode=="silezian") return[
+		{from: "bje", to: "bie"},
+		{from: "mje", to: "mie"},
+		{from: "mě", to: "mie"},
+		{from: "dźe", to: "dzie"},
+		{from: "ňa", to: "nia"},
+		{from: "ňe", to: "nie"},
+		{from: "ně", to: "nie"},
+
+		{from: "ća", to: "cia"},
+		{from: "će", to: "cie"},
+		{from: "ći", to: "ci"},
+		{from: "ćo", to: "cio"},
+		{from: "ću", to: "ciu"},
+		{from: "ćy", to: "ciy"},
+		
+		{from: "śa", to: "sia"},
+		{from: "śe", to: "sie"},
+		{from: "śi", to: "si"},
+		{from: "śo", to: "sio"},
+		{from: "śu", to: "siu"},
+		{from: "śy", to: "siy"},
+
+		{from: "źa", to: "zia"},
+		{from: "źe", to: "zie"},
+		{from: "źi", to: "zi"},
+		{from: "źo", to: "zio"},
+		{from: "źu", to: "ziu"},
+		{from: "źy", to: "ziy"},
+
+		{from: "č", to: "cz"},
+		{from: "š", to: "sz"},
+		{from: "ř", to: "rz"},
+		{from: "ž", to: "ż"},
+		{from: "v", to: "w"},
+		
+		{from: "Č", to: "Cz"},
+		{from: "Š", to: "Sz"},
+		{from: "Ř", to: "Rz"},
+		{from: "Ž", to: "Ż"},
+		{from: "V", to: "W"},
+	];
+	
+	if (transCode=="ipa") return [
+		{ from: "ř", 	to: "r̝̊" },//̝̊
+		{ from: "vě", 	to: "vjɛ" },
+		{ from: "mě", 	to: "mɲɛ" },
+		{ from: "mňe", 	to: "mɲɛ" },
+		{ from: "u", 	to: "ʊ" },
+
+		{ from: "á", 	to: "aː" },
+		{ from: "é", 	to: "eː" },
+		{ from: "í", 	to: "iː" },
+		{ from: "ó", 	to: "ɔː" },
+		{ from: "ú", 	to: "uː" },
+		{ from: "ů", 	to: "uː" },
+
+		{ from: "au", 	to: "aʊ" },
+		{ from: "eu", 	to: "eʊ" },
+		{ from: "ou", 	to: "oʊ̯" },
+
+		{ from: "ť", 	to: "c" },
+		{ from: "ď", 	to: "ɟ" },
+		{ from: "c", 	to: "t͡s" },
+		{ from: "dz", 	to: "d͡z" },
+		{ from: "č", 	to: "t͡ʃ" },
+		{ from: "dž", 	to: "d͡ʒ" },
+		{ from: "ch", 	to: "x" },
+		{ from: "h", 	to: "ɦ" },
+
+		{ from: "ai", 	to: "aɪ̯" },
+		{ from: "ei", 	to: "eɪ̯" },
+		{ from: "oi", 	to: "ɔɪ̯" },
+
+		{ from: "š", 	to: "ʃ" },
+		{ from: "ž", 	to: "ʒ" },
+
+		{ from: "ň", 	to: "ɲ" },
+		{ from: "ně", 	to: "ɲe" },
+
+	];	
+	
+	if (transCode=="default") return null;
+
+	console.log("Unknown code transcription: ", transCode)
+	return null;
+}
