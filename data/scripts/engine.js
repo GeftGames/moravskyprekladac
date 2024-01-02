@@ -5070,6 +5070,15 @@ function SetCurrentTranscription(transCode) {
 		{ from: "ł", to: "l"},
 		{ from: "ŕ", to: "r"},
 		{ from: "ĺ", to: "l"},
+
+		{ from: "ni", to: "ny"},
+		{ from: "ní", to: "ný"},
+
+		{ from: "ti", to: "ty"},
+		{ from: "tí", to: "tý"},
+
+		{ from: "di", to: "dy"},
+		{ from: "dí", to: "dý"},
 	];	
 	
 	if (transCode=="czech") return[
@@ -5130,6 +5139,8 @@ function SetCurrentTranscription(transCode) {
 		{from: "Ř", to: "Rz"},
 		{from: "Ž", to: "Ż"},
 		{from: "V", to: "W"},
+		
+		{from: "ṵ", to: "ł"},
 	];
 	
 	if (transCode=="ipa") return [
