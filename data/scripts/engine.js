@@ -1276,9 +1276,10 @@ function Load() {
     } else myVocabHA = zmyvocabHA; 
 	
 	if (zTranscription === null) {
-        TranscriptionText = null;
+        TranscriptionText = "default";
     } else TranscriptionText = zTranscription;
 	if (document.getElementById("textTranscription")!==null) document.getElementById("textTranscription").value = TranscriptionText;
+
 	transcription=SetCurrentTranscription(TranscriptionText);
 
     if (savedget === null) saved = new Array();
