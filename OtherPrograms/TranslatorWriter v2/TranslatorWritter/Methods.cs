@@ -36,7 +36,7 @@ namespace TranslatorWritter {
 
         public static List<TranslatingToData> LoadListTranslatingToData(int start, string[] rawData) {
             List<TranslatingToData> list=new List<TranslatingToData>();
-            for (int i=start; i<rawData.Length; i+=2) {
+            for (int i=start; i<rawData.Length-1; i+=2) {
                 list.Add(new TranslatingToData{ Text=rawData[i], Comment=rawData[i+1]});
             }
             return list;
@@ -44,7 +44,7 @@ namespace TranslatorWritter {
 
         public static List<TranslatingToDataWithPattern> LoadListTranslatingToDataWithPattern(int start, string[] rawData) {
             List<TranslatingToDataWithPattern> list=new List<TranslatingToDataWithPattern>();
-            for (int i=start; i<rawData.Length; i+=3) {
+            for (int i=start; i<rawData.Length-2; i+=3) {
                 list.Add(new TranslatingToDataWithPattern{ Body=rawData[i], Pattern=rawData[i+1], Comment=rawData[i+2]});
             }
             return list;
@@ -133,6 +133,114 @@ namespace TranslatorWritter {
                 case 'Ž': return true;
             }
             return false;
+        }
+
+        public static string AddQuestionMark(string str) {
+            if (str==null) return"";
+            if (str=="-") return str;
+
+            if (str.Contains(',')) { 
+                string ret="";
+                foreach (string s in str.Split(',')) { 
+                    ret += s+"?,";
+                }
+                return ret.Substring(0, ret.Length-1);
+            }
+            return str+"?";
+        }
+
+        public static string ConvertStringToPhonetics(string src) { 
+            if (src==null) return "";
+            return src
+                .Replace("di","ďi")
+                .Replace("ni","ňi")
+                .Replace("ti","ťi")
+                .Replace("dí","ďí")
+                .Replace("ní","ňí")
+                .Replace("tí","ťí")
+                .Replace("ně","ňe")
+                .Replace("tě","ťe")
+                .Replace("dě","ďe")
+                .Replace("bě","bje")
+                .Replace("pě","pje")
+                .Replace("ů","ú")
+                .Replace("x","ks")
+
+                .Replace("DI","ĎI")
+                .Replace("NI","ŇI")
+                .Replace("TI","ŤI")
+                .Replace("DÍ","ĎÍ")
+                .Replace("NÍ","ŇÍ")
+                .Replace("TÍ","ŤÍ")
+                .Replace("NĚ","ŇE")
+                .Replace("TĚ","ŤE")
+                .Replace("DĚ","ĎE")
+                .Replace("BĚ","BJE")
+                .Replace("PĚ","PJE")
+                .Replace("Ů","Ú")
+                .Replace("x","ks")
+            ;
+        }
+
+        public static bool Contains(List<TranslatingToData> list, char[] chars) { 
+            foreach (TranslatingToData data in list){ 
+                foreach (char ch in chars) {
+                    if (data.Text.Contains(ch)) return true;
+                }
+            }
+            return false;
+        }
+        public static bool ContainsBody(List<TranslatingToDataWithPattern> list, char[] chars) { 
+            foreach (TranslatingToDataWithPattern data in list) { 
+                foreach (char ch in chars) {
+                    if (data.Body.Contains(ch)) return true;
+                }
+            }
+            return false;
+        }
+
+        public static string SavePackerStringMultiple(string src){ 
+            if (src.Contains(',')) { 
+               // string ret="";
+                string[] strings=src.Split(',');
+               // bool add=false;
+                List<string> add=new List<string>();
+                foreach (string str in strings) { 
+                    if (!str.Contains('?') && !str.Contains(')') && !str.Contains('(') && !str.Contains(' ') && !str.Contains('*')){// ret+="?,";
+                    // else 
+                       // ret+=str+","; 
+                        add.Add(str);
+
+                     //   add=true;
+                    }
+                }
+                if (add.Count==0) return "?";
+
+                return System.String.Join(",", add);// ret.Substring(0, ret.Length-1);
+            } else { 
+                if (src.Contains('?')) return "?";
+                else return src;                 
+            }
+        }
+        public static string SavePackerStringMultipleSA(string src){ 
+            if (src.Contains(',')) { 
+                string ret="";
+                string[] strings=src.Split(',');
+                bool add=false;
+                foreach (string str in strings) { 
+                    if (!str.Contains('?') && !str.Contains(')') && !str.Contains('(') && !str.Contains(' ')){// ret+="?,";
+                    // else 
+                        ret+=str+",";    
+                        add=true;
+                    }
+                }
+                if (!add) return "?";
+
+                return ret.Substring(0, ret.Length-1);
+            } else { 
+                if (src.Contains('?')) return "?";
+                else return src;                 
+            }
         }
     }
 }

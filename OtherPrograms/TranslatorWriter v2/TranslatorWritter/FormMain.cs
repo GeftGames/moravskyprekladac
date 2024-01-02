@@ -6112,7 +6112,8 @@ namespace TranslatorWritter {
 
         void TextBoxNounFilter_TextChanged(object sender, EventArgs e) {
             SaveCurrentNoun();
-
+            
+            DrawingControl.SuspendDrawing(listBoxNoun);
             // Získej aktuální prvek
             ItemNoun selectedId=null;
             if (listBoxNoun.SelectedIndex!=-1) {
@@ -6157,6 +6158,8 @@ namespace TranslatorWritter {
                 CurrentNoun=null;
             }
             SetCurrentNoun();
+            
+            DrawingControl.ResumeDrawing(listBoxNoun);
         }
 
         void RemoveCurrentNoun(object sender, EventArgs e) {
@@ -10212,7 +10215,7 @@ namespace TranslatorWritter {
             for (int i=0; i<itemsNumbersFiltered.Count; i++) {
                 ItemNumber item = itemsNumbersFiltered[i];
 
-                string textToAdd=item.GetText(itemsPatternAdjectiveFrom.Cast<ItemTranslatingPattern>().ToList(), itemsPatternAdjectiveTo.Cast<ItemTranslatingPattern>().ToList());
+                string textToAdd=item.GetText(itemsPatternNumberFrom.Cast<ItemTranslatingPattern>().ToList(), itemsPatternNumberTo.Cast<ItemTranslatingPattern>().ToList());
                // if (string.IsNullOrEmpty(textToAdd)) textToAdd="<Neznámé>";
 
                 listBoxNumbers.Items.Add(textToAdd);
@@ -10419,7 +10422,7 @@ namespace TranslatorWritter {
 
         void TextBoxVerbFilter_TextChanged(object sender, EventArgs e) {
             SaveCurrentVerb();
-
+            DrawingControl.SuspendDrawing(listBoxVerbs);
             // Získej aktuální prvek
             ItemVerb selectedId=null;
             if (listBoxVerbs.SelectedIndex!=-1) {
@@ -10463,6 +10466,7 @@ namespace TranslatorWritter {
                 CurrentVerb=null;
             }
             SetCurrentVerb();
+            DrawingControl.ResumeDrawing(listBoxVerbs);
         }
 
         void RemoveCurrentVerb(object sender, EventArgs e) {
@@ -13129,7 +13133,7 @@ namespace TranslatorWritter {
         void ListBoxReplaceGs_SelectedIndexChanged(object sender, EventArgs e) {
             if (doingJob) return;
             doingJob=true;
-            SaveCurrentReplaceG();
+            ReplaceGSaveCurrent();
 
             int index=listBoxReplaceG.SelectedIndex;
             if (itemsReplaceG.Count==0) {
@@ -13143,7 +13147,7 @@ namespace TranslatorWritter {
 
             CurrentReplaceG=itemsReplaceG[index];
             SetCurrentReplaceG();
-            SetListBoxReplaceG();
+            ReplaceGSetListBox();
           //  SetCurrent();
             doingJob=false;
         }
@@ -13158,7 +13162,7 @@ namespace TranslatorWritter {
         }
 
         void TextBoxReplaceGFilter_TextChanged(object sender, EventArgs e) {
-            SaveCurrentReplaceG();
+            ReplaceGSaveCurrent();
 
             // Získej aktuální prvek
             ItemReplaceG selectedId=null;
@@ -13205,7 +13209,7 @@ namespace TranslatorWritter {
             itemsReplaceG.Remove(CurrentReplaceG);
         }
 
-        void SetListBoxReplaceG() {
+        void ReplaceGSetListBox() {
             //string filter=textBoxReplaceGFilter.Text;
             //bool useFilter = filter!="" && filter!="*";
 
@@ -13251,14 +13255,14 @@ namespace TranslatorWritter {
             doingJob=true;
             Edited=true;
             ChangeCaptionText();
-            SaveCurrentReplaceG();
+            ReplaceGSaveCurrent();
 
             var newItem=new ItemReplaceG();
            // newItem.ID=itemsPronouns.Count;
             itemsReplaceG.Add(newItem);
             CurrentReplaceG=newItem;
             ReplaceGRefreshFilteredList();
-            SetListBoxReplaceG();
+            ReplaceGSetListBox();
             ListBoxSetCurrentReplaceG();
             SetCurrentReplaceG();
 
@@ -13270,7 +13274,7 @@ namespace TranslatorWritter {
             ChangeCaptionText();
             itemsReplaceG.Remove(item);
             ReplaceGRefreshFilteredList();
-            SetListBoxReplaceG();
+            ReplaceGSetListBox();
             SetCurrentReplaceG();
         }
 
@@ -13311,7 +13315,7 @@ namespace TranslatorWritter {
             }
         }
 
-        void SaveCurrentReplaceG() {
+        void ReplaceGSaveCurrent() {
             if (CurrentReplaceG==null) return;
 
             CurrentReplaceG.From =textBoxReplaceGFrom.Text;
@@ -13632,7 +13636,7 @@ namespace TranslatorWritter {
                                     TranslatingToDataWithPattern d = Pronoun.To[i];
                                     if (d.Pattern == CurrentPatternPronounTo.Name) {
                                         //if (d.Item1.Contains(d.Item2)) return true;
-                                        Pronoun.To[i] = new TranslatingToDataWithPattern{Body=d.Body, Pattern=edit.ReturnString };
+                                        Pronoun.To[i].Pattern = edit.ReturnString;
                                     }
                                 }
                             }
@@ -14024,7 +14028,7 @@ namespace TranslatorWritter {
                                 //}
                                 for (int i=0; i<verb.To.Count; i++){
                                     TranslatingToDataWithPattern d = verb.To[i];
-                                    if (d.Pattern == CurrentPatternNounTo.Name) {
+                                    if (d.Pattern == CurrentPatternVerbTo.Name) {
                                         //if (d.Item1.Contains(d.Item2)) return true;
                                         verb.To[i] = new TranslatingToDataWithPattern{Body=d.Body, Pattern=edit.ReturnString };
                                     }
@@ -14396,7 +14400,7 @@ namespace TranslatorWritter {
                     doingJob = true;
                     Edited = true;
                     ChangeCaptionText();
-                    SaveCurrentReplaceG();
+                    ReplaceGSaveCurrent();
                     string[] lines = File.ReadAllLines(ofd.FileName);
                     foreach (string line in lines) {
                         string[] parts = line.Split('|');
@@ -14412,7 +14416,7 @@ namespace TranslatorWritter {
                     }
 
                     ReplaceGRefreshFilteredList();
-                    SetListBoxReplaceG();
+                    ReplaceGSetListBox();
                     ListBoxSetCurrentReplaceG();
                     SetCurrentReplaceG();
 
@@ -15415,6 +15419,24 @@ namespace TranslatorWritter {
             }
         }
 
+        private void aBCToolStripMenuItem1_Click(object sender, EventArgs e) {
+            doingJob = true;
+            SaveCurrentAdjective();
+            itemsAdjectives = itemsAdjectives.OrderBy(a => a.From).ToList();
+            AdjectiveRefreshFilteredList();
+            AdjectiveSetListBox();
+            doingJob = false;
+        }
+
+        private void toolStripMenuItem144_Click(object sender, EventArgs e) {
+            doingJob = true;
+            ReplaceGSaveCurrent();
+            itemsReplaceG = itemsReplaceG.OrderBy(a => a.From).ToList();
+            ReplaceGRefreshFilteredList();
+            ReplaceGSetListBox();
+            doingJob = false;
+        }
+
         void addFromToToolStripMenuItem1_Click(object sender, EventArgs e) {
             string name = GetString("", "Název pronomenu");
             if (name == null) return;
@@ -15550,11 +15572,14 @@ namespace TranslatorWritter {
                     ItemPatternNoun pattern = ParseItemWikidirectonary.ItemPatternNoun(html, out string error, name);
                     if (!string.IsNullOrEmpty(error)) MessageBox.Show(error);
                     if (pattern!=null) {
+                        ItemPatternNoun patternTo=pattern.Clone();
+
+                        pattern.Optimize();
                         itemsPatternNounFrom.Add(pattern);
                         PatternNounFromRefresh();
 
-                        ItemPatternNoun patternTo=pattern.Clone();
                         patternTo.ConvertToPhonetics();
+                        patternTo.Optimize();
                         patternTo.AddQuestionMark();
 
                         itemsPatternNounTo.Add(patternTo);
@@ -15565,7 +15590,7 @@ namespace TranslatorWritter {
                             PatternFrom = pattern.Name,
                             From = pattern.GetPrefix(),
 
-                            To = new List<TranslatingToDataWithPattern>{new TranslatingToDataWithPattern{Body=pattern.GetPrefix(), Pattern=patternTo.Name } },
+                            To = new List<TranslatingToDataWithPattern>{new TranslatingToDataWithPattern{Body=patternTo.GetPrefix(), Pattern=patternTo.Name } },
                         };
                         itemsNouns.Add(num);
 
@@ -15951,16 +15976,19 @@ namespace TranslatorWritter {
                         AddNumber(pattern);
                     }
                 };
-            }catch{ MessageBox.Show("Error");}
+            } catch { MessageBox.Show("Error");}
             Computation.DownloadString(ref handler, name);
 
 
             void AddNumber(ItemPatternNumber pattern) {
+                ItemPatternNumber pattern2=pattern.Clone();
+
+                pattern.Optimize();
                 itemsPatternNumberFrom.Add(pattern);
                 PatternNumberFromRefresh();
 
-                ItemPatternNumber pattern2=pattern.Clone();
                 pattern2.ConvertToPhonetics();
+                pattern2.Optimize();
                 pattern2.AddQuestionMark();
                 itemsPatternNumberTo.Add(pattern2);
 
@@ -16006,7 +16034,7 @@ namespace TranslatorWritter {
         }
 
         void addLinkedFromtoToolStripMenuItem1_Click(object sender, EventArgs e) {
-             string name = GetString("", "Název pronomenu");
+            string name = GetString("", "Název pronomenu");
             if (name == null) return;
 
             DownloadDataCompletedEventHandler handler=null;
@@ -16021,61 +16049,66 @@ namespace TranslatorWritter {
                     string html = Encoding.UTF8.GetString(data);
 
                     List<Table> tables=new List<Table>();
-                    Computation.FindTableInHTML(html, "deklinace pronomen", ref tables);
+                    ItemPatternPronoun pattern = ParseItemWikidirectonary.ItemPatternPronoun(html, out string error, name);
+                    if (pattern!=null){
+                    //Computation.FindTableInHTML(html, "deklinace pronomen", ref tables);
 
-                    if (tables.Count>=1) {
-                        Table table=tables[0];
-                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
-                            ItemPatternPronoun pattern = new ItemPatternPronoun {
-                                Name = name,
-                                Type = PronounType.DeklinationWithGender,
-                                Shapes = new string[8*7]
-                            };
+                    //if (tables.Count>=1) {
+                    //    Table table=tables[0];
+                    //    if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+                    //        ItemPatternPronoun pattern = new ItemPatternPronoun {
+                    //            Name = name,
+                    //            Type = PronounType.DeklinationWithGender,
+                    //            Shapes = new string[8*7]
+                    //        };
 
-                            for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r]=table.Rows[2+r].Cells[1+0].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*2]=table.Rows[2+r].Cells[1+1].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*4]=table.Rows[2+r].Cells[1+2].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*6]=table.Rows[2+r].Cells[1+3].Text;
 
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
-                            for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*1]=table.Rows[2+r].Cells[1+4].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*3]=table.Rows[2+r].Cells[1+5].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*5]=table.Rows[2+r].Cells[1+6].Text;
+                    //        for (int r=0; r<7; r++) pattern.Shapes[r+7*7]=table.Rows[2+r].Cells[1+7].Text;
+
+                    //        pattern.Optimize();
+                    //        itemsPatternPronounFrom.Add(pattern);
+                    //        PatternPronounFromRefresh();
+
+                    //        ItemPatternPronoun pattern2=pattern.Clone();
+                    //        pattern2.AddQuestionMark();
+                    //        itemsPatternPronounTo.Add(pattern2);
+                    //        PatternPronounToRefresh();
+
+                    //        ItemPronoun pronoun = new ItemPronoun {
+                    //            From=pattern.GetPrefix(),
+                    //            PatternFrom = pattern.Name,
+                    //            To=new List<TranslatingToDataWithPattern>{ new TranslatingToDataWithPattern{ Body=pattern2.GetPrefix(),  Pattern = pattern2.Name} }
+                    //        };
+
+                    //        Edited=true;
+                    //        itemsPronouns.Add(pronoun);
+                    //        PronounRefresh();
+                    //    } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
+                    //        ItemPatternPronoun pattern = new ItemPatternPronoun {
+                    //            Name = name,
+                    //            Type = PronounType.DeklinationOnlySingle,
+                    //            Shapes = new string[7]
+                    //        };
+                    //        for (int c=0; c<7; c++) {
+                    //            pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
+                    //        }
+                            ItemPatternPronoun pattern2=pattern.Clone();
 
                             pattern.Optimize();
                             itemsPatternPronounFrom.Add(pattern);
                             PatternPronounFromRefresh();
 
-                            ItemPatternPronoun pattern2=pattern.Clone();
+                            pattern2.ConvertToPhonetics();
+                            pattern2.Optimize();
                             pattern2.AddQuestionMark();
-                            itemsPatternPronounTo.Add(pattern2);
-                            PatternPronounToRefresh();
 
-                            ItemPronoun pronoun = new ItemPronoun {
-                                From=pattern.GetPrefix(),
-                                PatternFrom = pattern.Name,
-                                To=new List<TranslatingToDataWithPattern>{ new TranslatingToDataWithPattern{ Body=pattern2.GetPrefix(),  Pattern = pattern2.Name} }
-                            };
-
-                            Edited=true;
-                            itemsPronouns.Add(pronoun);
-                            PronounRefresh();
-                        } else if (table.Rows.Count==8 && table.Rows[3].Cells.Count==2) {
-                            ItemPatternPronoun pattern = new ItemPatternPronoun {
-                                Name = name,
-                                Type = PronounType.DeklinationOnlySingle,
-                                Shapes = new string[7]
-                            };
-                            for (int c=0; c<7; c++) {
-                                pattern.Shapes[c]=table.Rows[1+c].Cells[1].Text;
-                            }
-
-                            pattern.Optimize();
-                            itemsPatternPronounFrom.Add(pattern);
-                            PatternPronounFromRefresh();
-
-                            ItemPatternPronoun pattern2=pattern.Clone();
-                            pattern2.AddQuestionMark();
                             itemsPatternPronounTo.Add(pattern2);
                             PatternPronounToRefresh();
 
@@ -16089,14 +16122,14 @@ namespace TranslatorWritter {
                             PronounRefresh();
 
                         }
-                    }
+                    //}
                 };
             }catch{ MessageBox.Show("Error");}
             Computation.DownloadString(ref handler, name);
         }
 
         void addFromtoToolStripMenuItem4_Click(object sender, EventArgs e) {
-             string name = GetString("", "Název verb");
+            string name = GetString("", "Název verb");
             if (name == null) return;
 
             DownloadDataCompletedEventHandler handler=null;
@@ -16110,147 +16143,149 @@ namespace TranslatorWritter {
                     var data = e2.Result;
                     string html = Encoding.UTF8.GetString(data);
 
-                    List<Table> tables=new List<Table>();
-                    Computation.FindTableInHTML(html, "konjugace verbum", ref tables);
+                    ItemPatternVerb pattern=ParseItemWikidirectonary.ItemPatternVerb(html, out string error, name);
 
-                    ItemPatternVerb pattern = new ItemPatternVerb {
-                        Name = name,
-                        Infinitive = name
-                    };
-                    if (Computation.FindTableInListByName(tables, "Oznamovací způsob", out Table ozn)) {
-                        Row rowPrit=Computation.GetRowByFirstCellText(ozn, "přítomný čas");
-                        if (rowPrit!=null/*ozn.Rows[2].Cells[0].Text=="Přítomný čas"*/) {
-                            pattern.SContinous=true;
-                            pattern.Continous=new string[6];
-                            for (int i=0; i<6; i++) {
-                                pattern.Continous[i]=rowPrit/*ozn.Rows[2]*/.Cells[1+i].Text;
-                            }
-                        }
-                        Row rowBud=Computation.GetRowByFirstCellText(ozn, "budoucí čas");
-                        if (rowBud!=null/*ozn.Rows.Count==4*/){
-                          //  if (ozn.Rows[3].Cells[0].Text=="Budoucí čas") {
-                                pattern.SFuture=true;
-                                pattern.Future=new string[6];
-                                for (int i=0; i<6; i++) {
-                                    pattern.Future[i]=/*ozn.Rows[3]*/rowBud.Cells[1+i].Text;
-                                }
-                           // }
-                        }
-                    }else{
-                        MessageBox.Show("Špatné jméno");
-                        return;
-                    }
+                //    List<Table> tables=new List<Table>();
+                //    Computation.FindTableInHTML(html, "konjugace verbum", ref tables);
 
-                    if (Computation.FindTableInListByName(tables, "Rozkazovací způsob", out Table roz)) {
-                        pattern.Imperative=new string[3];
-                        pattern.SImperative=true;
-                        for (int i=0; i<3; i++) {
-                            pattern.Imperative[i]=roz.Rows[2].Cells[1+i].Text;
-                        }
-                    }
+                //    ItemPatternVerb pattern = new ItemPatternVerb {
+                //        Name = name,
+                //        Infinitive = name
+                //    };
+                //    if (Computation.FindTableInListByName(tables, "Oznamovací způsob", out Table ozn)) {
+                //        Row rowPrit=Computation.GetRowByFirstCellText(ozn, "přítomný čas");
+                //        if (rowPrit!=null/*ozn.Rows[2].Cells[0].Text=="Přítomný čas"*/) {
+                //            pattern.SContinous=true;
+                //            pattern.Continous=new string[6];
+                //            for (int i=0; i<6; i++) {
+                //                pattern.Continous[i]=rowPrit/*ozn.Rows[2]*/.Cells[1+i].Text;
+                //            }
+                //        }
+                //        Row rowBud=Computation.GetRowByFirstCellText(ozn, "budoucí čas");
+                //        if (rowBud!=null/*ozn.Rows.Count==4*/){
+                //          //  if (ozn.Rows[3].Cells[0].Text=="Budoucí čas") {
+                //                pattern.SFuture=true;
+                //                pattern.Future=new string[6];
+                //                for (int i=0; i<6; i++) {
+                //                    pattern.Future[i]=/*ozn.Rows[3]*/rowBud.Cells[1+i].Text;
+                //                }
+                //           // }
+                //        }
+                //    }else{
+                //        MessageBox.Show("Špatné jméno");
+                //        return;
+                //    }
 
-                if (Computation.FindTableInListByName(tables, "Příčestí", out Table tr)) {
-                    Row rowCin=Computation.GetRowByFirstCellText(tr, "činné");
-                    Row rowTrp=Computation.GetRowByFirstCellText(tr, "trpné");
-                    if (/*tr.Rows[2].Cells[0].Text=="Činné"*/rowCin!=null) {
-                        pattern.SPastActive=true;
-                        pattern.PastActive=new string[8];
-                        if (/*tr.Rows[2]*/rowCin.Cells.Count==7){
-                            pattern.PastActive[0]=/*tr.Rows[2]*/rowCin.Cells[1].Text;
-                            pattern.PastActive[1]=/*tr.Rows[2]*/rowCin.Cells[1].Text;
-                            pattern.PastActive[2]=/*tr.Rows[2]*/rowCin.Cells[2].Text;
-                            pattern.PastActive[3]=/*tr.Rows[2]*/rowCin.Cells[3].Text;
-                            pattern.PastActive[4]=/*tr.Rows[2]*/rowCin.Cells[4].Text;
-                            pattern.PastActive[5]=/*tr.Rows[2]*/rowCin.Cells[5].Text;
-                            pattern.PastActive[6]=/*tr.Rows[2]*/rowCin.Cells[5].Text;
-                            pattern.PastActive[7]=/*tr.Rows[2]*/rowCin.Cells[6].Text;
-                        }else{
-                            for (int i=0; i<8; i++) {
-                                pattern.PastActive[i]=/*tr.Rows[2]*/rowCin.Cells[1+i].Text;
-                            }
-                        }
-                    }
-                    if (/*tr.Rows[2].Cells[0].Text=="Trpné"*/rowTrp!=null) {
-                        pattern.SPastPassive=true;
-                        pattern.PastPassive=new string[8];
-                        if (/*tr.Rows[2]*/rowTrp.Cells.Count==7) {
-                            pattern.PastPassive[0]=/*tr.Rows[2]*/rowTrp.Cells[1].Text;
-                            pattern.PastPassive[1]=/*tr.Rows[2]*/rowTrp.Cells[1].Text;
-                            pattern.PastPassive[2]=/*tr.Rows[2]*/rowTrp.Cells[2].Text;
-                            pattern.PastPassive[3]=/*tr.Rows[2]*/rowTrp.Cells[3].Text;
-                            pattern.PastPassive[4]=/*tr.Rows[2]*/rowTrp.Cells[4].Text;
-                            pattern.PastPassive[5]=/*tr.Rows[2]*/rowTrp.Cells[5].Text;
-                            pattern.PastPassive[6]=/*tr.Rows[2]*/rowTrp.Cells[5].Text;
-                            pattern.PastPassive[7]=/*tr.Rows[2]*/rowTrp.Cells[6].Text;
-                        }else{
-                            for (int i=0; i<8; i++) {
-                                pattern.PastPassive[i]=/*tr.Rows[2]*/rowTrp.Cells[1+i].Text;
-                            }
-                        }
-                    }
-                    //if (tr.Rows.Count>=4) {
-                    //    if (tr.Rows[3].Cells[0].Text=="Činné") {
-                    //        pattern.SPastActive=true;
-                    //        pattern.PastActive=new string[8];
-                    //        if (tr.Rows[2].Cells.Count==7) {
-                    //            pattern.PastActive[0]=tr.Rows[3].Cells[1].Text;
-                    //            pattern.PastActive[1]=tr.Rows[3].Cells[1].Text;
-                    //            pattern.PastActive[2]=tr.Rows[3].Cells[2].Text;
-                    //            pattern.PastActive[3]=tr.Rows[3].Cells[3].Text;
-                    //            pattern.PastActive[4]=tr.Rows[3].Cells[4].Text;
-                    //            pattern.PastActive[5]=tr.Rows[3].Cells[5].Text;
-                    //            pattern.PastActive[6]=tr.Rows[3].Cells[5].Text;
-                    //            pattern.PastActive[7]=tr.Rows[3].Cells[6].Text;
-                    //        } else {
-                    //            for (int i=0; i<8; i++) {
-                    //                pattern.PastActive[i]=tr.Rows[3].Cells[1+i].Text;
-                    //            }
-                    //        }
-                    //    }
-                    //    if (tr.Rows[3].Cells[0].Text=="Trpné") {
-                    //        pattern.SPastPassive=true;
-                    //        pattern.PastPassive=new string[8];
-                    //        if (tr.Rows[2].Cells.Count==7) {
-                    //            pattern.PastPassive[0]=tr.Rows[3].Cells[1].Text;
-                    //            pattern.PastPassive[1]=tr.Rows[3].Cells[1].Text;
-                    //            pattern.PastPassive[2]=tr.Rows[3].Cells[2].Text;
-                    //            pattern.PastPassive[3]=tr.Rows[3].Cells[3].Text;
-                    //            pattern.PastPassive[4]=tr.Rows[3].Cells[4].Text;
-                    //            pattern.PastPassive[5]=tr.Rows[3].Cells[5].Text;
-                    //            pattern.PastPassive[6]=tr.Rows[3].Cells[5].Text;
-                    //            pattern.PastPassive[7]=tr.Rows[3].Cells[6].Text;
-                    //        } else {
-                    //            for (int i=0; i<8; i++) {
-                    //                pattern.PastPassive[i]=tr.Rows[3].Cells[1+i].Text;
-                    //            }
-                    //        }
-                    //    }
-                    //}
-                }
+                //    if (Computation.FindTableInListByName(tables, "Rozkazovací způsob", out Table roz)) {
+                //        pattern.Imperative=new string[3];
+                //        pattern.SImperative=true;
+                //        for (int i=0; i<3; i++) {
+                //            pattern.Imperative[i]=roz.Rows[2].Cells[1+i].Text;
+                //        }
+                //    }
 
-                if (Computation.FindTableInListByName(tables, "Přechodníky", out Table pre)) {
-                    if (pre.Rows.Count>=4) {
-                        if (pre.Rows[2].Cells[0].Text=="Přítomný") {
-                            pattern.TransgressiveCont=new string[3];
-                            pattern.STransgressiveCont=true;
-                            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[2].Cells[1+i].Text;
-                        } else if (pre.Rows[2].Cells[0].Text=="Minulý") {
-                            pattern.TransgressivePast=new string[3];
-                            pattern.STransgressivePast=true;
-                            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[2].Cells[1+i].Text;
-                        }
+                //if (Computation.FindTableInListByName(tables, "Příčestí", out Table tr)) {
+                //    Row rowCin=Computation.GetRowByFirstCellText(tr, "činné");
+                //    Row rowTrp=Computation.GetRowByFirstCellText(tr, "trpné");
+                //    if (/*tr.Rows[2].Cells[0].Text=="Činné"*/rowCin!=null) {
+                //        pattern.SPastActive=true;
+                //        pattern.PastActive=new string[8];
+                //        if (/*tr.Rows[2]*/rowCin.Cells.Count==7){
+                //            pattern.PastActive[0]=/*tr.Rows[2]*/rowCin.Cells[1].Text;
+                //            pattern.PastActive[1]=/*tr.Rows[2]*/rowCin.Cells[1].Text;
+                //            pattern.PastActive[2]=/*tr.Rows[2]*/rowCin.Cells[2].Text;
+                //            pattern.PastActive[3]=/*tr.Rows[2]*/rowCin.Cells[3].Text;
+                //            pattern.PastActive[4]=/*tr.Rows[2]*/rowCin.Cells[4].Text;
+                //            pattern.PastActive[5]=/*tr.Rows[2]*/rowCin.Cells[5].Text;
+                //            pattern.PastActive[6]=/*tr.Rows[2]*/rowCin.Cells[5].Text;
+                //            pattern.PastActive[7]=/*tr.Rows[2]*/rowCin.Cells[6].Text;
+                //        }else{
+                //            for (int i=0; i<8; i++) {
+                //                pattern.PastActive[i]=/*tr.Rows[2]*/rowCin.Cells[1+i].Text;
+                //            }
+                //        }
+                //    }
+                //    if (/*tr.Rows[2].Cells[0].Text=="Trpné"*/rowTrp!=null) {
+                //        pattern.SPastPassive=true;
+                //        pattern.PastPassive=new string[8];
+                //        if (/*tr.Rows[2]*/rowTrp.Cells.Count==7) {
+                //            pattern.PastPassive[0]=/*tr.Rows[2]*/rowTrp.Cells[1].Text;
+                //            pattern.PastPassive[1]=/*tr.Rows[2]*/rowTrp.Cells[1].Text;
+                //            pattern.PastPassive[2]=/*tr.Rows[2]*/rowTrp.Cells[2].Text;
+                //            pattern.PastPassive[3]=/*tr.Rows[2]*/rowTrp.Cells[3].Text;
+                //            pattern.PastPassive[4]=/*tr.Rows[2]*/rowTrp.Cells[4].Text;
+                //            pattern.PastPassive[5]=/*tr.Rows[2]*/rowTrp.Cells[5].Text;
+                //            pattern.PastPassive[6]=/*tr.Rows[2]*/rowTrp.Cells[5].Text;
+                //            pattern.PastPassive[7]=/*tr.Rows[2]*/rowTrp.Cells[6].Text;
+                //        }else{
+                //            for (int i=0; i<8; i++) {
+                //                pattern.PastPassive[i]=/*tr.Rows[2]*/rowTrp.Cells[1+i].Text;
+                //            }
+                //        }
+                //    }
+                //    //if (tr.Rows.Count>=4) {
+                //    //    if (tr.Rows[3].Cells[0].Text=="Činné") {
+                //    //        pattern.SPastActive=true;
+                //    //        pattern.PastActive=new string[8];
+                //    //        if (tr.Rows[2].Cells.Count==7) {
+                //    //            pattern.PastActive[0]=tr.Rows[3].Cells[1].Text;
+                //    //            pattern.PastActive[1]=tr.Rows[3].Cells[1].Text;
+                //    //            pattern.PastActive[2]=tr.Rows[3].Cells[2].Text;
+                //    //            pattern.PastActive[3]=tr.Rows[3].Cells[3].Text;
+                //    //            pattern.PastActive[4]=tr.Rows[3].Cells[4].Text;
+                //    //            pattern.PastActive[5]=tr.Rows[3].Cells[5].Text;
+                //    //            pattern.PastActive[6]=tr.Rows[3].Cells[5].Text;
+                //    //            pattern.PastActive[7]=tr.Rows[3].Cells[6].Text;
+                //    //        } else {
+                //    //            for (int i=0; i<8; i++) {
+                //    //                pattern.PastActive[i]=tr.Rows[3].Cells[1+i].Text;
+                //    //            }
+                //    //        }
+                //    //    }
+                //    //    if (tr.Rows[3].Cells[0].Text=="Trpné") {
+                //    //        pattern.SPastPassive=true;
+                //    //        pattern.PastPassive=new string[8];
+                //    //        if (tr.Rows[2].Cells.Count==7) {
+                //    //            pattern.PastPassive[0]=tr.Rows[3].Cells[1].Text;
+                //    //            pattern.PastPassive[1]=tr.Rows[3].Cells[1].Text;
+                //    //            pattern.PastPassive[2]=tr.Rows[3].Cells[2].Text;
+                //    //            pattern.PastPassive[3]=tr.Rows[3].Cells[3].Text;
+                //    //            pattern.PastPassive[4]=tr.Rows[3].Cells[4].Text;
+                //    //            pattern.PastPassive[5]=tr.Rows[3].Cells[5].Text;
+                //    //            pattern.PastPassive[6]=tr.Rows[3].Cells[5].Text;
+                //    //            pattern.PastPassive[7]=tr.Rows[3].Cells[6].Text;
+                //    //        } else {
+                //    //            for (int i=0; i<8; i++) {
+                //    //                pattern.PastPassive[i]=tr.Rows[3].Cells[1+i].Text;
+                //    //            }
+                //    //        }
+                //    //    }
+                //    //}
+                //}
 
-                        if (pre.Rows[3].Cells[0].Text=="Přítomný") {
-                            pattern.TransgressiveCont=new string[3];
-                            pattern.STransgressiveCont=true;
-                            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[3].Cells[1+i].Text;
-                         } else if (pre.Rows[3].Cells[0].Text=="Minulý") {
-                            pattern.TransgressivePast=new string[3];
-                            pattern.STransgressivePast=true;
-                            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[3].Cells[1+i].Text;
-                        }
-                    }
-                }
+                //if (Computation.FindTableInListByName(tables, "Přechodníky", out Table pre)) {
+                //    if (pre.Rows.Count>=4) {
+                //        if (pre.Rows[2].Cells[0].Text=="Přítomný") {
+                //            pattern.TransgressiveCont=new string[3];
+                //            pattern.STransgressiveCont=true;
+                //            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[2].Cells[1+i].Text;
+                //        } else if (pre.Rows[2].Cells[0].Text=="Minulý") {
+                //            pattern.TransgressivePast=new string[3];
+                //            pattern.STransgressivePast=true;
+                //            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[2].Cells[1+i].Text;
+                //        }
+
+                //        if (pre.Rows[3].Cells[0].Text=="Přítomný") {
+                //            pattern.TransgressiveCont=new string[3];
+                //            pattern.STransgressiveCont=true;
+                //            for (int i=0; i<3; i++) pattern.TransgressiveCont[i]=pre.Rows[3].Cells[1+i].Text;
+                //         } else if (pre.Rows[3].Cells[0].Text=="Minulý") {
+                //            pattern.TransgressivePast=new string[3];
+                //            pattern.STransgressivePast=true;
+                //            for (int i=0; i<3; i++) pattern.TransgressivePast[i]=pre.Rows[3].Cells[1+i].Text;
+                //        }
+                //    }
+                //}
 
                 ItemPatternVerb pattern2 =pattern.Clone();
 
@@ -16365,38 +16400,43 @@ namespace TranslatorWritter {
                     var data = e2.Result;
                     string html = Encoding.UTF8.GetString(data);
 
-                    List<Table> tables=new List<Table>();
-                    Computation.FindTableInHTML(html, "deklinace adjektivum", ref tables);
+                    ItemPatternAdjective pattern=ParseItemWikidirectonary.ItemPatternAdjective(html, out string error, name);
+                    if (pattern!=null){
+                   // List<Table> tables=new List<Table>();
+                   // Computation.FindTableInHTML(html, "deklinace adjektivum", ref tables);
 
 
-                   // bool future=false;
-                    if (tables.Count>=1) {
-                        Table table=tables[0];
-                        if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
-                            ItemPatternAdjective pattern = new ItemPatternAdjective {
-                                Name = name,
-                               // TypeShow = VerbTypeShow.Unknown,
-                                Feminine=new string[18],
-                                Middle=new string[18],
-                                MasculineAnimate=new string[18],
-                                MasculineInanimate=new string[18],
-                            };
+                   //// bool future=false;
+                   // if (tables.Count>=1) {
+                   //     Table table=tables[0];
+                   //     if (table.Rows.Count==9 && table.Rows[3].Cells.Count==9) {
+                   //         ItemPatternAdjective pattern = new ItemPatternAdjective {
+                   //             Name = name,
+                   //            // TypeShow = VerbTypeShow.Unknown,
+                   //             Feminine=new string[18],
+                   //             Middle=new string[18],
+                   //             MasculineAnimate=new string[18],
+                   //             MasculineInanimate=new string[18],
+                   //         };
 
-                            for (int r=0; r<7; r++) pattern.MasculineAnimate[r]=table.Rows[2+r].Cells[1+0].Text;
-                            for (int r=0; r<7; r++) pattern.MasculineInanimate[r/*+7*2*/]=table.Rows[2+r].Cells[1+1].Text;
-                            for (int r=0; r<7; r++) pattern.Feminine[r/*+7*4*/]=table.Rows[2+r].Cells[1+2].Text;
-                            for (int r=0; r<7; r++) pattern.Middle[r/*+7*6*/]=table.Rows[2+r].Cells[1+3].Text;
+                   //         for (int r=0; r<7; r++) pattern.MasculineAnimate[r]=table.Rows[2+r].Cells[1+0].Text;
+                   //         for (int r=0; r<7; r++) pattern.MasculineInanimate[r/*+7*2*/]=table.Rows[2+r].Cells[1+1].Text;
+                   //         for (int r=0; r<7; r++) pattern.Feminine[r/*+7*4*/]=table.Rows[2+r].Cells[1+2].Text;
+                   //         for (int r=0; r<7; r++) pattern.Middle[r/*+7*6*/]=table.Rows[2+r].Cells[1+3].Text;
 
-                            for (int r=0; r<7; r++) pattern.MasculineAnimate[r+7/**1*/+2]=table.Rows[2+r].Cells[1+4].Text;
-                            for (int r=0; r<7; r++) pattern.MasculineInanimate[r+7/**3*/+2]=table.Rows[2+r].Cells[1+5].Text;
-                            for (int r=0; r<7; r++) pattern.Feminine[r+7/*+7*5*/+2]=table.Rows[2+r].Cells[1+6].Text;
-                            for (int r=0; r<7; r++) pattern.Middle[r+7/*+7*7*/+2]=table.Rows[2+r].Cells[1+7].Text;
+                   //         for (int r=0; r<7; r++) pattern.MasculineAnimate[r+7/**1*/+2]=table.Rows[2+r].Cells[1+4].Text;
+                   //         for (int r=0; r<7; r++) pattern.MasculineInanimate[r+7/**3*/+2]=table.Rows[2+r].Cells[1+5].Text;
+                   //         for (int r=0; r<7; r++) pattern.Feminine[r+7/*+7*5*/+2]=table.Rows[2+r].Cells[1+6].Text;
+                   //         for (int r=0; r<7; r++) pattern.Middle[r+7/*+7*7*/+2]=table.Rows[2+r].Cells[1+7].Text;
+
+                            ItemPatternAdjective patternTo=pattern.Clone();
 
                             pattern.Optimize();
                             itemsPatternAdjectiveFrom.Add(pattern);
                             PatternAdjectiveFromRefresh();
 
-                            ItemPatternAdjective patternTo=pattern.Clone();
+                            patternTo.ConvertToPhonetics();
+                            patternTo.Optimize();
                             patternTo.AddQuestionMark();
 
                             itemsPatternAdjectiveTo.Add(patternTo);
@@ -16407,19 +16447,18 @@ namespace TranslatorWritter {
                                 PatternFrom = pattern.Name,
                                 From = pattern.GetPrefix(),
 
-                                To = new List<TranslatingToDataWithPattern>{ new TranslatingToDataWithPattern{Body=pattern.GetPrefix(), Pattern = patternTo.Name}},
+                                To = new List<TranslatingToDataWithPattern>{ new TranslatingToDataWithPattern{Body=patternTo.GetPrefix(), Pattern = patternTo.Name}},
                             };
                             itemsAdjectives.Add(num);
 
                             AdjectiveRefresh();
-                        }
+                     //   }
                     }
                 };
             #if !DEBUG
             } catch { MessageBox.Show("Error");}
             #endif
             Computation.DownloadString(ref handler, name);
-
         }
 
         void PatternAdjectiveFromRefresh() {
