@@ -6067,7 +6067,7 @@ class LanguageTr {
 				}
 			});
 
-			span.innerText = variants[selectedIndex];
+			span.innerText = ApplyPostRules(variants[selectedIndex]);
 
 			pack.appendChild(span);
 			pack.appendChild(box);
@@ -6600,6 +6600,7 @@ function CustomChoosenReplacesCreate(){
 }
 
 preparedLocalRules=[];
+/*
 function PrepareRulesLocal(){
 	if (TextStyle=="textObv") {
 		if (lang.Name=="Slezština") {
@@ -6707,13 +6708,16 @@ function PrepareRulesLocal(){
 				];
 		}
 	}
-}
+}*/
 
 function ApplyPostRules(text) {
-	let ret=text;
-	// 1=nahrazeno, 0=nenahrazeno
-	let pattern = CreatePattern(text.length);
+//	let ret=text;
 
+	return ApplyTranscription(text);
+	// 1=nahrazeno, 0=nenahrazeno
+	/*let pattern = CreatePattern(text.length);
+
+	
 	for (let rule of preparedLocalRules) {
 		let from=rule[0];
 		
@@ -6756,7 +6760,7 @@ function ApplyPostRules(text) {
 		let p=[];
 		for (let i=0; i<len; i++) p.push(0);
 		return p;
-	}
+	}*/
 }
 
 function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
@@ -6799,5 +6803,43 @@ function FastLoadTranslateTo(rawData, indexStart) {
 		return null;
 	}
 
+	return ret;
+}
+
+function ApplyTranscription(str){
+	console.log("transcription: ", transcription);
+	if (transcription==null) return str;
+	console.log("before: ", str);
+
+	let PatternAlrearyReplaced=[];
+	for (let i=0; i<=str.length; i++) {
+		PatternAlrearyReplaced.push("o");
+	}
+
+	let ret=str;
+	for (let g of transcription) {
+		if (ret.includes(g.from)) {
+			let startOfReplace=str.indexOf(g.from);
+
+			// Pokuď néni obsazene
+			let doReplace=true;
+			for (let i=startOfReplace; i<g.from.length; i++) {
+				if (PatternAlrearyReplaced[i]!="o") {
+					doReplace=false;
+					break;
+				}
+			}
+
+			if (doReplace) {
+				ret=ret.replace(g.from, g.to);
+
+				for (let i=startOfReplace; i<g.from.length; i++) {
+					PatternAlrearyReplaced[i]="x";
+				}
+			}
+		}			
+	}
+
+	console.log("Replaced: ", ret);
 	return ret;
 }
