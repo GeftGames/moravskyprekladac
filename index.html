@@ -6,34 +6,42 @@
 		<script type="application/ld+json"> {
 			"@context":"http://schema.org",
 			"@type":"ItemList",
+			"itemListOrder": "Ascending",
 			"itemListElement":[
 				{
-					"@type": "Přeložit text", 
+					"@type": "ItemList", 
+					"name": "Přeložit text",
 					"position": 1, 
 					"url": "https://moravskyprekladac.pages.dev/#text"
 				},
 				{
-					"@type": "Slovník", 
+					"@type": "ItemList", 
+					"name": "Slovník",
 					"position": 2, 
 					"url": "https://moravskyprekladac.pages.dev/dic.html"
 				},
 				{
-					"@type": "Přeložit titulky", 
+					"@type": "ItemList", 
+					"name": "Přeložit titulky",
 					"position": 3, 
 					"url": "https://moravskyprekladac.pages.dev/subs.html"
 				},
 				{
-					"@type": "Generátor map", 
+					"@type": "ItemList", 
+					"name": "Generátor map",
 					"position": 4, 
 					"url": "https://moravskyprekladac.pages.dev/mapper.html"
 				},
 				{
-					"@type": "Přeložení souborů", 
+					"@type": "ItemList", 
+					"name": "Přeložení souborů",
 					"position": 5, 
 					"url": "https://moravskyprekladac.pages.dev/files.html"
 				},
 				{
-					"@type": "Vyhledávání slov", 
+					"@type": "ItemList
+					", 
+					"name": "Vyhledávání slov",
 					"position": 6, 
 					"url": "https://moravskyprekladac.pages.dev/search.html"
 				}
@@ -47,6 +55,17 @@
 			  "name": "Moravský překladač",
 			  "operatingSystem": "ALL",
 			  "applicationCategory": "Translator",
+
+			  "potentialAction": {
+				"@type": "ViewAction",
+				"target": [
+				  "https://moravskyprekladac.pages.dev",
+				  {
+					"@type": "EntryPoint",
+					"contentType": "application/json+ld"
+				  }
+				]
+			  }
 			}
 		</script>
 
