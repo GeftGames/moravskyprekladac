@@ -206,6 +206,8 @@ function GetTranslations() {
 			// Zápis souboru
 			//using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
 		}
+		
+		document.getElementById("totalstats").innerText = CalculateTotalStats();
 
 		//console.log("Finished!");
 		document.getElementById("appPage_"+appSelected).style.display="block";
@@ -297,7 +299,7 @@ function GetTranslations() {
 				//if (betaFunctions || dev){
 				if (lang.Quality>2) name+=" ✅";
 				//}
-				//if (lang.Quality==0) name+=" 💩";
+				if (lang.Stats()==0) name+=" 💩";
 				//else 
 				//if (lang.Quality<=1) name+=" 👎";
 				
@@ -1336,4 +1338,12 @@ function SearchInMoravian() {
 	}
 
 	if (outElement.innerHTML=="") outElement.innerHTML="Nebyl nalezen žadný záznam";
+}
+
+function CalculateTotalStats() {
+	let stats=0;
+	for (let l of languagesListAll){
+		stats+=l.Stats();
+	}
+	return stats;
 }
