@@ -17,7 +17,7 @@
  -  Překlad je psán foneticky př. Obalované U ... ṵ (Slovácko, Goralsko); dlouhé R ... ŕ (Valašsko, ...); široké E, nerozlišují se jeho podtypy ... ê (Haná, ...); ...
 
 ## Co se plánuje
-- Zlepšení překladů a jejich doplňování
+- Zlepšení překladů a jejich doplňování (na úroveň každá dědina)
 - Možnosti transkripce z fonetické do formy užívané klasickému zápisu spisovné češtiny nebo do moravské transkripce (ch->x, x->ks, ...)
 - Přeložení dokumentů *.docx, ...
 - Export *Generátora map* do gis formátů (ArcGIS?)
@@ -28,6 +28,8 @@
 
 # Poslední změny
 - Přidání komentářů k překladům
+- Změna designu
+- Přidán slovníček
   
 ### Poznámky
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **jeden až dva lidé za den**, děkujeme
