@@ -14,7 +14,7 @@
 - Všechny hesla byly sypané do systému ručně
 - Více zde: [O překladači](https://moravskyprekladac.pages.dev/#about)
 - Máme zajímavý modul [**Generátor map**](https://moravskyprekladac.pages.dev/#mapper) (pracovně nazvaný *Mapper*) , umí vygenerovat mapu hesla podle toho jak se kde mluví, inspirací byl [ČJA](https://cja.ujc.cas.cz/e-cja/), ten nám připadal nepřesný v tom, že nerefrektuje moc místní odchylky obecných hesel a uvádí je zjednodušeně počeštěně
- -  Překlad je psán foneticky př. Obalované U ... ṵ (Slovácko, Goralsko); dlouhé R ... ŕ (Valašsko, ...); široké E, nerozlišují se jeho podtypy ... ê (Haná, ...); ...
+ -  Překlad je psán foneticky př. Obalované U ... ṵ (Slovácko, Goralsko); dlouhé R ... ŕ (Valašsko, ...); široké E, nerozlišují se jeho podtypy ... ê (Haná, ...); ... v nastavení je dodatečná změna
 
 ## Co se plánuje
 - Zlepšení překladů a jejich doplňování (na úroveň každá dědina)
@@ -25,6 +25,7 @@
 - Stáhnutí celého slovníku daného místa (jako karta Slovník)
 - Detekce odkud nářečí pochází
 - Detekce rozdílnosti nářečí
+- Přidat text "ento slovníček je prázdný", nebude-li slovník nic obsahovat
 
 # Poslední změny
 - Přidání komentářů k překladům
