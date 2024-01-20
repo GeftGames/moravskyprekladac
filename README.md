@@ -12,7 +12,7 @@
 - Kvalita je v součastné době docela mizerná, nejlépe je na tom překlad *Náměště na Hané*
 - Překlad probíhá mechanicky, nikoliv na principu umělé inteligence
 - Všechny hesla byly sypané do systému ručně
-- Inspirací byla stránka (https://narecie.sk/)
+- Inspirací byla stránka [narecie.sk](https://narecie.sk/)
 - Více zde: [O překladači](https://moravskyprekladac.pages.dev/#about)
 - Máme zajímavý modul [**Generátor map**](https://moravskyprekladac.pages.dev/#mapper) (pracovně nazvaný *Mapper*) , umí vygenerovat mapu hesla podle toho jak se kde mluví, inspirací byl [ČJA](https://cja.ujc.cas.cz/e-cja/), ten nám připadal zavádějící (nepřesný v tom, že nerefrektuje moc místní odchylky obecných hesel a uvádí je zjednodušeně, počeštěně)
 -  Překlad je psán foneticky př. Obalované U ... ṵ (Slovácko, Goralsko); dlouhé R ... ŕ (Valašsko, ...); široké E, nerozlišují se jeho podtypy ... ê (Haná, ...); ... v nastavení je dodatečná změna
