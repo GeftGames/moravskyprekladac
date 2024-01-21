@@ -7,11 +7,11 @@ langs["cs"] = {
 	noteStillInDev : "Překladač je pořád ve vývoji, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
 
 	AppTabTranslate: "Překlad do jazyka moravského",
-	AppTabSearch: "Hledání v jazyce moravském",
-	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
 	AppTabTranslateShort: "Překlad",
 	AppTabSearchShort: "Hledání",
-	AppTabMapperShort: "V mapách",
+	AppTabMapperShort: "V mapách",
 
 	SearchInputCaption: "Hledám co znamená...",
 	SearchButton: "Vyhledat",
@@ -929,11 +929,11 @@ langs["mor"] = {
 	noteStillInDev : "Překladač je furt ve vývoju, nedodělané jazyky zapnete v nastavení v horním levém rohu",
 
 	AppTabTranslate: "Překlad do jazyka moravského",
-	AppTabSearch: "Hledání v jazyce moravském",
-	AppTabMapper: "Jazyk moravský v mapě",
+	AppTabSearch: "Hledání v jazyce moravském",
+	AppTabMapper: "Jazyk moravský v mapě",
 	AppTabTranslateShort: "Překlad",
 	AppTabSearchShort: "Hlenání",
-	AppTabMapperShort: "V mapách",
+	AppTabMapperShort: "V mapách",
 
 	SearchInputCaption: "Hledám co znamená...",
 	SearchButton: "Vyhledat",

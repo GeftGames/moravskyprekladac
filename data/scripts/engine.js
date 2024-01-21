@@ -557,6 +557,40 @@ function CloseAboutPage(){
 		document.getElementById("aboutPage").style.display="none";
 	}, 300);
 }
+
+function ShowAboutPage(){
+	location.hash="about";
+	
+	document.getElementById("aboutPage").style.display="block";
+	document.getElementById("aboutPage").style.opacity="1";
+	document.getElementById("aboutPage").style.position="absolute";
+	
+	document.getElementById("aboutPage").style.top="99px";
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+}
+
+function CloseAboutPage(){
+	location.hash="";
+
+	document.getElementById("aboutPage").style.opacity="0";
+	document.getElementById("aboutPage").style.top="500px";
+	document.getElementById("aboutPage").style.position="fixed";
+	
+	if (document.getElementById('nav').style.opacity=='1') {
+		document.getElementById('butShow').style.opacity='1';
+		document.getElementById('butclose').style.opacity='0'; 
+		document.getElementById('nav').classList.add('navTrans');
+		document.getElementById('nav').style.opacity='0.1';
+	}
+	setTimeout(()=>{ 
+		document.getElementById("aboutPage").style.display="none";
+	}, 300);
+}
 function PopPageShow(name) {
 	//location.hash=name;
 	let element=document.getElementById("pagePop_"+name);
@@ -721,6 +755,7 @@ function ShowMapPage(){
 }
 
 function CloseMapPage(){
+	console.log("closing map page");//throw new Error({'hehe':'haha'});
 	document.getElementById("mapPage").style.opacity="0";
 	document.getElementById("mapPage").style.top="500px";
 	document.getElementById("mapPage").style.position="fixed";
@@ -851,7 +886,16 @@ function SetLanguage() {
 
     let headername = document.getElementById('headername');
     headername.innerText = langFile.TranslatorCM;
-    document.title = langFile.TranslatorCM;
+   
+
+	var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis)";
+	var re = new RegExp(botPattern, 'i');
+	var userAgent = navigator.userAgent; 
+	
+	// if not crawler
+	if (!re.test(userAgent)) {
+		document.title = langFile.TranslatorCM;
+	}
 
 	let manifest=document.getElementById("manifest");
 	if (manifest==null) {
@@ -1481,8 +1525,9 @@ function Load() {
 	mapSelectLang.addEventListener('touchstart', (e) => {
 		e.preventDefault();
 		moved = true;
-		map_LocTmpX=e.clientX-map_LocX;
-		map_LocTmpY=e.clientY-map_LocY;	
+		var touch = e.touches[0] || e.changedTouches[0];
+		map_LocTmpX=touch.pageX-map_LocX;
+		map_LocTmpY=touch.pageY-map_LocY;	
 		
 		mapRedraw();
 	});
@@ -1499,7 +1544,11 @@ function Load() {
 		mapRedraw();
 	});
 	mapSelectLang.addEventListener('touchend', (e) => {
-		mapClick(e.clientX,e.clientY);
+		//console.log(e.clientX,e.clientY);
+		var touch = e.touches[0] || e.changedTouches[0];
+		//console.log(touch.pageX,touch.pageY);
+		mapClick(touch.pageX,touch.pageY);
+
 		mapRedraw();
 	});
 
@@ -1510,6 +1559,16 @@ function Load() {
 		//	console.log('moved');
 			map_LocX=e.clientX-map_LocTmpX;
 			map_LocY=e.clientY-map_LocTmpY;
+
+	//		const rect = document.getElementById("mapSelectLang"); // Get canvas position relative to viewport
+
+	//		if (map_LocX>rect.clientWidth)map_LocX=rect.clientWidth;
+	//		else if (map_LocX<-rect.clientWidth)map_LocX=-rect.clientWidth;
+
+	//		if (map_LocY>rect.clientHeight)map_LocY=rect.clientHeight;
+		//	else if (map_LocY<-rect.clientHeight)map_LocY=-rect.clientHeight;
+
+		//	console.log(map_LocX,rect.clientWidth);
 			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
 			//setTransform();	
 			mapRedraw();
@@ -1525,19 +1584,24 @@ function Load() {
 	});
 	mapSelectLang.addEventListener('touchmove', (e) => {
 		e.preventDefault();
+		var touch = e.touches[0] || e.changedTouches[0];
+		console.log(touch.pageX,touch.pageY);
+
 		if (moved) {
 			
 		//	console.log('moved');
-			map_LocX=e.clientX-map_LocTmpX;
-			map_LocY=e.clientY-map_LocTmpY;
+			map_LocX=touch.pageX-map_LocTmpX;
+			map_LocY=touch.pageY-map_LocTmpY;
+
 			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
 			//setTransform();	
 			mapRedraw();
 			//mapZoom.style.top=positionY+"px";
 			//mapZoom.style.left=positionX+"px";
 		} else {
+			
 			//console.log('not moved')
-			mapMove(e.clientX,e.clientY);
+			mapMove(touch.pageX,touch.pageY);
 		}
 	});
 	
@@ -4984,7 +5048,7 @@ function ShowAppPage(name) {
 	pageC.style.opacity=0.5;
 	pageC.style.left=left ? "100%" : "-100%";	
 
-	console.log(pageC);
+	//console.log(pageC);
 
 	// Start animation
 	pageC.classList.add("appani");	
