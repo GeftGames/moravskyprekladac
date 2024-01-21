@@ -254,19 +254,15 @@ html{
 	outline: var(--tDash);
 	outline-offset: 5px;
 }
-.pop{
-	background-color: var(--ConBack);/*aliceblue*/
-	position: absolute;
-	border-radius: 5px;
-	box-shadow: .5px .5px 2.5px #000000ff, 1px 1px 6px #00000030;
-	cursor: context-menu;
-	transition: opacity 0.1s;
-	transform: translateX(-15px);
-	z-index: 1;
-}
+
 li {
 	/*list-style-type: none;*/
 	margin-left: 23px;
+}
+#appstabContainer{
+	display: flex; 
+	align-items: center;
+	margin-left: 8px;
 }
 .traMOp {
 	text-decoration: underline dotted;
@@ -433,6 +429,20 @@ li{
 	font-family: var(--f);
 	transition: color var(--transitionSlow);
 	color: var(--ColorText);
+}
+.pop{
+	background-color: var(--ConBack);/*aliceblue*/
+	position: absolute;
+	border-radius: 5px;
+	box-shadow: .5px .5px 2.5px #000000ff, 1px 1px 6px #00000030;
+	cursor: context-menu;
+	transition: opacity 0.1s;
+	transform: translateX(-15px);
+	z-index: 1;
+}
+.pop li{
+	list-style-type: none;
+	margin-left: 0px;
 }
 .error{
 	margin: 0px auto;
@@ -1145,6 +1155,9 @@ option,optgroup{
 	select{
 		max-width: calc(100vw - 4px);
 	}
+	#appstabContainer{
+		margin-left: 0px;
+	}
 }
 /*
 @-moz-document url-prefix() {
@@ -1350,80 +1363,82 @@ caption{
 		top: 74px;
 	}
 }
-.tooltipR, .tooltipL, .tooltipC{
-	position: relative;
-}
-.tooltipR:after, .tooltipL:after, .tooltipC:after{
-	content: attr(data-tooltip);
-	top: 64px;
-	min-width: 100px;
-	max-width: 300px;
-	padding: 5px 7px 5px 7px;
-	pointer-events: none;
-    font-size: 5mm;
-	display: inline;
-	border-radius: 5px;
-	width: max-content;
-	height: fit-content;
-	background-color: var(--ColorTheme);
-	color: var(--ColorThemeForward);
-	box-shadow: var(--bsh), var(--dsh);	
-	z-index: 100;
-	text-align: center;
-}
+@media (hover: hover) {
+	.tooltipR, .tooltipL, .tooltipC{
+		position: relative;
+	}
+	.tooltipR:after, .tooltipL:after, .tooltipC:after{
+		content: attr(data-tooltip);
+		top: 64px;
+		min-width: 100px;
+		max-width: 300px;
+		padding: 5px 7px 5px 7px;
+		pointer-events: none;
+		font-size: 5mm;
+		display: inline;
+		border-radius: 5px;
+		width: max-content;
+		height: fit-content;
+		background-color: var(--ColorTheme);
+		color: var(--ColorThemeForward);
+		box-shadow: var(--bsh), var(--dsh);	
+		z-index: 100;
+		text-align: center;
+	}
 
-.tooltipR:after {
-	content: attr(data-tooltip);
-	left: 10px;
-}
-.tooltipL:after {
-    transform: translate(-100%, 0);
-	left: 40px;
-}
-.tooltipC:after {
-    transform: translate(-50%, 0);
-	left: 15px;
-}
-.tooltipR:before, .tooltipL:before, .tooltipC:before{
-	content: "▲";
-	overflow: hidden;
-	width: 16px;
-	height: 16px;
-	z-index: 101;
-	top: 48px;
-	left: 18px;
-	bottom: 5px;
-	font-size: 18px;
-	text-shadow: var(--bsh), var(--dsh);
-	color: var(--ColorTheme);
-}
-.tooltipR:before {
-	left: 18px;
-}
-.tooltipL:before {
-    transform: translate(-100%, 0);
-	left: 27px;
-}
-.tooltipC:before {
-    transform: translate(-50%, 0);
-	left: 27px;
-}
-.tooltipR:before, .tooltipR:after, .tooltipL:before, .tooltipL:after, .tooltipC:before, .tooltipC:after {
-	opacity: 0;
-	transition: top .2s, opacity .2s ease-out;
-	position: absolute;
-}
-.tooltipR:hover:after, .tooltipL:hover:after, .tooltipC:hover:after{
-	visibility: visible;
-	animation-name : hover-delayA;
-	animation-delay: 1s;
-	animation-duration: 10s;	
-} 
-.tooltipR:hover:before, .tooltipL:hover:before, .tooltipC:hover:before{
-	visibility: visible;
-	animation-name : hover-delayB;
-	animation-delay: 1s;
-	animation-duration: 10s;
+	.tooltipR:after {
+		content: attr(data-tooltip);
+		left: 10px;
+	}
+	.tooltipL:after {
+		transform: translate(-100%, 0);
+		left: 40px;
+	}
+	.tooltipC:after {
+		transform: translate(-50%, 0);
+		left: 15px;
+	}
+	.tooltipR:before, .tooltipL:before, .tooltipC:before{
+		content: "▲";
+		overflow: hidden;
+		width: 16px;
+		height: 16px;
+		z-index: 101;
+		top: 48px;
+		left: 18px;
+		bottom: 5px;
+		font-size: 18px;
+		text-shadow: var(--bsh), var(--dsh);
+		color: var(--ColorTheme);
+	}
+	.tooltipR:before {
+		left: 18px;
+	}
+	.tooltipL:before {
+		transform: translate(-100%, 0);
+		left: 27px;
+	}
+	.tooltipC:before {
+		transform: translate(-50%, 0);
+		left: 27px;
+	}
+	.tooltipR:before, .tooltipR:after, .tooltipL:before, .tooltipL:after, .tooltipC:before, .tooltipC:after {
+		opacity: 0;
+		transition: top .2s, opacity .2s ease-out;
+		position: absolute;
+	}
+	.tooltipR:hover:after, .tooltipL:hover:after, .tooltipC:hover:after{
+		visibility: visible;
+		animation-name : hover-delayA;
+		animation-delay: 1s;
+		animation-duration: 10s;	
+	} 
+	.tooltipR:hover:before, .tooltipL:hover:before, .tooltipC:hover:before{
+		visibility: visible;
+		animation-name : hover-delayB;
+		animation-delay: 1s;
+		animation-duration: 10s;
+	}
 }
 .mapperSavedRemoveBtn{
 	cursor: pointer;
