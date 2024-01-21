@@ -425,6 +425,7 @@ function mapClick(mX,mY) {
 	// generate dots
 	for (let p of languagesList){
 		if (isNaN(p.locationX)) continue;
+		console.log(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2);
 		if (入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2)) {
 			p.option.selected=true;
 			CloseMapPage();
@@ -462,10 +463,15 @@ function mapMove(mX,mY) {
 
 function 入っちゃった(mx, my, x, y, w, h) {
 	//console.log(mx,my, x, y, w, h);
+	if (x==undefined) return false;
+	if (x==NaN) return false;
+
 	if (mx<x) return false;
 	if (my<y) return false;
 	if (mx>x+w) return false;
 	if (my>y+h) return false;
+
+	console.log(mx, my, x, y, w, h);
 	return true;
 }
 

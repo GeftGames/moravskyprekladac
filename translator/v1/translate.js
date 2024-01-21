@@ -4535,17 +4535,17 @@ class LanguageTr {
 					this.Info = line.substring(1).replaceAll('\\n', "<br>");
 					break;
 
-				case "a":
-					this.Author = line.substring(1);
-					break;
+				//case "a":
+				//	this.Author = line.substring(1);
+				//	break;
 
-				case "d":
-					this.LastDateEdit = line.substring(1);
-					break;
+			//	case "d":
+				//	this.LastDateEdit = line.substring(1);
+				//	break;
 
-				case "f":
-					this.From= line.substring(1);
-					break;
+				//case "f":
+				//	this.From= line.substring(1);
+				//	break;
 
 				case "t":
 					this.Name = line.substring(1);
