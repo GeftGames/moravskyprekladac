@@ -591,10 +591,17 @@ function CloseAboutPage(){
 		document.getElementById("aboutPage").style.display="none";
 	}, 300);
 }
+let PopPage_lastOpen="";
+
 function PopPageShow(name) {
-	//location.hash=name;
+	//close old
+	let old=document.getElementById(PopPage_lastOpen);
+	if (old!=undefined){
+		if (element.style.opacity=="1") PopPageClose(PopPage_lastOpen);
+	}
 	let element=document.getElementById("pagePop_"+name);
 
+	//open
 	element.style.display="block";
 	element.style.opacity="1";
 	element.style.position="absolute";
@@ -606,6 +613,7 @@ function PopPageShow(name) {
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
+	PopPage_lastOpen=name;
 }
 
 function PopPageClose(name) {
@@ -1496,7 +1504,7 @@ function Load() {
 
 		if (delta > 0) map_Zoom *= 1.2; else  map_Zoom /= 1.2;
 		if (map_Zoom<=0.2)map_Zoom=0.2;
-		if (map_Zoom>10)map_Zoom=10;
+		if (map_Zoom>12)map_Zoom=12;
 
 		const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
 		const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
@@ -1523,13 +1531,16 @@ function Load() {
 		mapRedraw();
 	});
 	mapSelectLang.addEventListener('touchstart', (e) => {
-		e.preventDefault();
-		moved = true;
-		var touch = e.touches[0] || e.changedTouches[0];
-		map_LocTmpX=touch.pageX-map_LocX;
-		map_LocTmpY=touch.pageY-map_LocY;	
-		
-		mapRedraw();
+		//start move
+		if (e.touches.length == 1) {
+			e.preventDefault();
+			moved = true;
+			var touch = e.touches[0] || e.changedTouches[0];
+			map_LocTmpX=touch.pageX-map_LocX;
+			map_LocTmpY=touch.pageY-map_LocY;	
+			
+			mapRedraw();
+		}
 	});
 	mapSelectLang.addEventListener('mouseup', (e) => {
 		moved = false;	
@@ -1604,6 +1615,24 @@ function Load() {
 			mapMove(touch.pageX,touch.pageY);
 		}
 	});
+
+/*	mapSelectLang.addEventListener('gesturechange', (e) => {
+		var touch = e.touches[0] || e.changedTouches[0];
+		//e.scale
+		//mapRedraw();
+	});
+	
+	mapSelectLang.addEventListener('gestureend', (e) => {
+		var touch = e.touches[0] || e.changedTouches[0];
+		
+		//mapRedraw();
+	});
+	
+	mapSelectLang.addEventListener('gesturestart', (e) => {
+		var touch = e.touches[0] || e.changedTouches[0];
+	//	e.scale
+		//mapRedraw();
+	});*/
 	
 
 //	let el=document.getElementById("mapSelector");
