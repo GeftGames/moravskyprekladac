@@ -32,7 +32,7 @@
 - Přidání komentářů k překladům
 - Změna designu
 - Přidán slovníček
-- Uživatelé se mohou podělit o své výrazy prostřednictvím [Forms](https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url)
+- Uživatelé se mohou přidat nářečná výrazy prostřednictvím [Forms](https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url)
   
 ### Poznámky
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **jeden až dva lidé za den**, děkujeme
