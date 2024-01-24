@@ -26,7 +26,7 @@
 - Stáhnutí celého slovníku daného místa (jako karta Slovník)
 - Detekce odkud nářečí pochází
 - Detekce rozdílnosti nářečí
-- Přidat text "ento slovníček je prázdný", nebude-li slovník nic obsahovat
+- Přidat text "tento slovníček je prázdný", nebude-li slovník nic obsahovat
 
 # Poslední změny
 - Přidání komentářů k překladům
