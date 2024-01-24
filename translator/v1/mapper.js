@@ -87,6 +87,7 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 								y: lang.locationY*mapperRenderOptions.scale, 
 								text: word,
 								name: lang.Name,
+								lang: lang,
 								id: -1
 							});
 							continue;
@@ -98,6 +99,7 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 							y: lang.locationY*mapperRenderOptions.scale, 
 							text: word,
 							name: lang.Name,
+							lang: lang,
 							id: -1
 						});
 						continue;
@@ -492,19 +494,19 @@ function Voronoi_backgrounds(points,imageDataBounds) {
 let status_mapper;
 var canvasMap;
 var ctx;
-
+let inputTextmapper;
 function mapper_compute() {
 	ctx.font = "11px sans-serif";
 	status_mapper="";
 
 	// Get points
-	let inputText;
-	if (mapperAdvanced) inputText=document.getElementById("mapperSearchPattern").value;
-	else inputText=document.getElementById("mapperInput").value;
+	
+	if (mapperAdvanced) inputTextmapper=document.getElementById("mapperSearchPattern").value;
+	else inputTextmapper=document.getElementById("mapperInput").value;
 
 	// Translate points
-	mapperRenderOptions.inputText=inputText;
-	let points=mapper_GetPointsTranslated(languagesListAll, inputText);
+	mapperRenderOptions.inputText=inputTextmapper;
+	/*let*/ points=mapper_GetPointsTranslated(languagesListAll, inputTextmapper);
 
 	if (points.length==0) {
 		status_mapper="Not enough data to create map";
@@ -582,7 +584,7 @@ function mapper_compute() {
 	if (mapper_ShowNote) {
 		ctx.fillStyle="Black";
 		let date=new Date();
-		let text="Vygenerováné '"+inputText+"', "+(date.toLocaleString('cs-CZ'))+", "+serverName;
+		let text="Vygenerováné '"+inputTextmapper+"', "+(date.toLocaleString('cs-CZ'))+", "+serverName;
 		let w=ctx.measureText(text);
 		ctx.fillText(text,canvasMap.width-w.width-4, canvasMap.height-1-10);
 	}
@@ -829,6 +831,66 @@ function mapper_save() {
 
 	let savingAllItems=JSON.stringify(allItems);
 	localStorage.setItem('MapperSaved', savingAllItems);
+}
+
+function mapper_save_cvs(){
+	if (points.length>0) {
+		let data= "Místo,Přeložení,N,E"+"\n";
+
+		for (let pt of points) {
+			data+=pt.name+","+pt.text+","+pt.lang.gpsX+","+pt.lang.gpsY+"\n";
+		}
+
+		download_file("mp_mapper_"+inputTextmapper+".csv", data, "text/csv");
+	}	
+}
+
+// https://en.wikipedia.org/wiki/GeoJSON
+function mapper_save_geojson(){
+	if (points.length>0) {
+		let data='{\n'+
+			'"type": "FeatureCollection",\n'+
+			'"features": [";\n';
+
+		for (let pt of points) {
+			data+='{\n'+
+			'"type": "Feature",\n'+
+			'"geometry": {\n'+
+			'  "type": "Point",\n'+
+			'  "coordinates": ['+pt.lang.gpsX+', '+pt.lang.gpsY+']\n'+
+			'},\n'+
+			'"properties": {\n'+
+			'  "location": "'+pt.name+'"\n'+
+			'  "text": "'+pt.text+'"\n'+
+			'}\n'+
+		  '},\n';
+		}
+
+		 data+=']\n'+
+			'}\n';
+
+		download_file("mp_mapper "+inputTextmapper+"_GeoJSON.json", data, "text/json");
+	}	
+}
+
+function download_file(name, contents, mime_type) {
+	mime_type = mime_type || "text/plain";
+
+	var blob = new Blob([contents], {type: mime_type});
+
+	var dlink = document.createElement('a');
+	dlink.download = name;
+	dlink.href = window.URL.createObjectURL(blob);
+	dlink.onclick = function(e) {
+		// revokeObjectURL needs a delay to work properly
+		var that = this;
+		setTimeout(function() {
+			window.URL.revokeObjectURL(that.href);
+		}, 1500);
+	};
+
+	dlink.click();
+	dlink.remove();
 }
 
 function OpenAndSetAdvancedMapper(id) {
