@@ -597,11 +597,12 @@ function PopPageShow(name) {
 	//close old
 	let old=document.getElementById(PopPage_lastOpen);
 	if (old!=undefined){
-		if (element.style.opacity=="1") PopPageClose(PopPage_lastOpen);
+		if (old.style.opacity=="1") PopPageClose(PopPage_lastOpen);
 	}
-	let element=document.getElementById("pagePop_"+name);
-
+	
 	//open
+	let element=document.getElementById("pagePop_"+name);
+	
 	element.style.display="block";
 	element.style.opacity="1";
 	element.style.position="absolute";
