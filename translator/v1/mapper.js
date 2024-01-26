@@ -894,6 +894,7 @@ function mapper_save_klm() {
 		let id=1;
 		for (let pt of points) {//<SimpleData name="kategorie">`+pt.lang.Category.join(',')+`</SimpleData>
 		 	data+=`<Placemark>
+<name>`+pt.text+`</name>
 <ExtendedData><SchemaData schemaUrl="#mp_preklady">
 	<SimpleData name="OBJECTID">`+id+`</SimpleData>
 	<SimpleData name="nazev">`+pt.name+`</SimpleData>
