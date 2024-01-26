@@ -507,6 +507,7 @@ function DisableLangTranslate(search) {
 		//}
 	}
 }
+
 function ClearTextbox(textbox) {
 	document.getElementById(textbox).value="";
 	Translate();

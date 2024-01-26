@@ -850,26 +850,67 @@ function mapper_save_geojson(){
 	if (points.length>0) {
 		let data='{\n'+
 			'"type": "FeatureCollection",\n'+
-			'"features": [";\n';
+			'"features": [\n';
 
 		for (let pt of points) {
-			data+='{\n'+
-			'"type": "Feature",\n'+
-			'"geometry": {\n'+
-			'  "type": "Point",\n'+
-			'  "coordinates": ['+pt.lang.gpsX+', '+pt.lang.gpsY+']\n'+
-			'},\n'+
-			'"properties": {\n'+
-			'  "location": "'+pt.name+'"\n'+
-			'  "text": "'+pt.text+'"\n'+
-			'}\n'+
-		  '},\n';
+			data+='  {\n'+
+			'    "type": "Feature",\n'+
+			'    "geometry": {\n'+
+			'      "type": "Point",\n'+
+			'      "coordinates": ['+pt.lang.gpsY+', '+pt.lang.gpsX+']\n'+
+			'    },\n'+
+			'    "properties": {\n'+
+			'      "location": "'+pt.name+'",\n'+
+			'      "text": "'+pt.text+'"\n'+
+			'    }\n'+
+		  '  },\n';
 		}
+
+		data=data.substring(0,data.length-2);
 
 		 data+=']\n'+
 			'}\n';
 
 		download_file("mp_mapper "+inputTextmapper+"_GeoJSON.json", data, "text/json");
+	}	
+}
+
+//klm+xml
+function mapper_save_klm() {
+	if (points.length>0) {
+		let data=//	<SimpleField name="kategorie" type="string"></SimpleField>
+`<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="mp_preklady" id="mp_preklady">
+	<SimpleField name="ObjectId" type="int"></SimpleField>
+	<SimpleField name="nazev" type="string"></SimpleField>
+	<SimpleField name="preklad" type="string"></SimpleField>
+	<SimpleField name="wkt" type="string"></SimpleField>
+	<SimpleField name="x" type="float"></SimpleField>
+	<SimpleField name="y" type="float"></SimpleField>
+</Schema>
+<Folder><name>mp_preklady</name>`;
+		let id=1;
+		for (let pt of points) {//<SimpleData name="kategorie">`+pt.lang.Category.join(',')+`</SimpleData>
+		 	data+=`<Placemark>
+<ExtendedData><SchemaData schemaUrl="#mp_preklady">
+	<SimpleData name="OBJECTID">`+id+`</SimpleData>
+	<SimpleData name="nazev">`+pt.name+`</SimpleData>
+	<SimpleData name="preklad">`+pt.text+`</SimpleData>	
+	<SimpleData name="wkt">POINT(`+pt.lang.gpsX+` `+pt.lang.gpsY+`)</SimpleData>
+	<SimpleData name="x">`+pt.lang.gpsY+`</SimpleData>
+	<SimpleData name="y">`+pt.lang.gpsX+`</SimpleData>
+</SchemaData></ExtendedData>
+	<Point><coordinates>`+pt.lang.gpsY+`,`+pt.lang.gpsX+`</coordinates></Point>
+</Placemark>`;  
+			id++;
+		}
+
+		data+='</Folder>\r\n'+
+		 '</Document></kml>';
+
+		download_file("mp_mapper "+inputTextmapper+"_KML.kml", data, "text/kml");
 	}	
 }
 
