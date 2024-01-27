@@ -27,7 +27,7 @@
 - Detekce rozdílnosti nářečí
 - Přidat text "tento slovníček je prázdný", nebude-li slovník nic obsahovat
 
-# Poslední změny
+## Poslední změny
 - Přidání komentářů k překladům
 - Změna designu
 - Přidán slovníček
