@@ -19,9 +19,8 @@
 
 ## Co se plánuje
 - Zlepšení překladů a jejich doplňování (na úroveň každá dědina)
-- Možnosti transkripce z fonetické do formy užívané klasickému zápisu spisovné češtiny nebo do moravské transkripce (ch->x, x->ks, ...)
 - Přeložení dokumentů *.docx, ...
-- Export *Generátora map* do gis formátů (ArcGIS?)
+- Export *Generátora map* do shapefile formátu
 - Možná se budou dělat i nářečí v okolí Moravy - při hranicemi se Slovenskem, se Slezskem v Polsku, s Čechy a s Rakousem (najdou se-li data, Cáhnov?...)
 - Stáhnutí celého slovníku daného místa (jako karta Slovník)
 - Detekce odkud nářečí pochází
