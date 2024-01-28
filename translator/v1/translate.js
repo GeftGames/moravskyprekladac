@@ -2726,20 +2726,64 @@ class ItemAdjective{
 			}
 			item.PatternFrom=paternFrom;
 
-			let to = FastLoadTranslateToWithPattern(raw, 2, this);
-			if (to == null) {
-				return null;
-			}
-
+			item.To = FastLoadTranslateToWithPattern(raw, 2, this);
+			if (item.To == null) return null;
+			
 			return item;
 		}
 	}
 
 	IsStringThisWord(str) {
+		let ret=[];
+
+		if (str.startsWith(this.From)) {
+
+			function IsStringThisWordG(obj, start, end, gender) {
+
+				for (let i=start; i<end; i++) {
+				//	console.log(obj.PatternFrom);
+					let shapes=obj.PatternFrom[gender][i];
+
+					if (!Array.isArray(shapes)) shapes=[shapes];
+				
+					for (let j=0; j<shapes.length; j++) {
+						let shape=shapes[j];
+						
+						if (obj.From+shape==str) {
+							console.log(obj.From+shape);
+
+							console.log(obj.To);
+							for (let to of obj.To) {
+								let shapesTo=to.Pattern[gender][i];
+								if (!Array.isArray(shapesTo)) shapesTo=[shapesTo];
+								
+								for (let shapeTo of shapesTo) {
+									if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Number: start==0?1:2, Fall: i+1, Gender: gender});
+								}								
+							}
+							break;	
+						}
+					}
+				}
+			}
+
+			IsStringThisWordG(this,0,7,"Feminine");
+			IsStringThisWordG(this,7,14,"Feminine");
+
+			IsStringThisWordG(this,0,7,"MasculineAnimate");
+			IsStringThisWordG(this,7,14,"MasculineAnimate");
+
+			IsStringThisWordG(this,0,7,"MasculineInanimate");
+			IsStringThisWordG(this,7,14,"MasculineInanimate");
+
+			IsStringThisWordG(this,0,7,"Middle");
+			IsStringThisWordG(this,7,14,"Middle");
+
+
 		// Return all possible falls with numbers
 		// [[tvar, číslo, pád], rod]
-		if (this.From=="") {
-			let ret=[];
+		/*if (this.From=="") {
+			
 			for (let i=0; i<7; i++) {
 				let shape=this.PatternFrom.Feminine[i];
 
@@ -2750,7 +2794,7 @@ class ItemAdjective{
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
 						for (let to of this.To) {
-							if (to.Pattern.Feminine[i]!="?") ret.push([to.Body+to.Pattern.Feminine[i], 1, i+1, "Feminine"]); // [tvar, rod, číslo, pád]	
+							if (to.Pattern.Feminine[i]!="?") ret.push({Text: to.Body+to.Pattern.Feminine[i], Number: 1, Fall: i+1, Gender: "Feminine"}); // [tvar, rod, číslo, pád]	
 						}
 						break;	
 					}
@@ -2767,7 +2811,7 @@ class ItemAdjective{
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);
 						for (let to of this.To) {
-							if (to.Feminine[i]!="?") ret.push([to.Body+to.Pattern.Feminine[i], 2, i-7+1, "Feminine"]);
+							if (to.Feminine[i]!="?") ret.push({Text: to.Body+to.Pattern.Feminine[i], Number: 2, Fall: i-7+1, Gender: "Feminine"});
 						}
 						break;
 					}
@@ -2784,7 +2828,7 @@ class ItemAdjective{
 					if (shape==str) {
 						//ret.push(this.To+this.PatternTo.Shapes[i]);	
 						for (let to of this.To) {
-							if (to.MasculineAnimate[i]!="?") ret.push([to.Body+to.Pattern.MasculineAnimate[i], 1, i+1, "MasculineAnimate"]); // [tvar, rod, číslo, pád]	
+							if (to.MasculineAnimate[i]!="?") ret.push({Text: to.Body+to.Pattern.MasculineAnimate[i], Number: 1, Fall: i+1, "MasculineAnimate"}); // [tvar, rod, číslo, pád]	
 						}
 						break;	
 					}
@@ -2950,11 +2994,11 @@ class ItemAdjective{
 							break;
 						}
 					//}
-				}
+				}*/
 				if (ret.length==0) return null; else return ret;
-			} else {
-				return null;
-			}
+		//	} else {
+		//		return null;
+		//	}
 		}
 		return null;
 	}
@@ -3120,11 +3164,9 @@ class ItemNumber{
 			}
 			item.PatternFrom=paternFrom;
 
-			let to = FastLoadTranslateToWithPattern(raw, 2, this);
-			if (to == null) {
-				return null;
-			}
-
+			item.To = FastLoadTranslateToWithPattern(raw, 2, this);
+			if (item.To == null) return null;
+			
 			return item;
 		}
 		return null;
