@@ -4639,17 +4639,26 @@ class LanguageTr {
 						//console.log(GPS);
 						if (GPS.includes(',')) {
 							let rawPos=GPS.split(',');
-							this.gpsX=parseFloat(rawPos[0]);
-							this.gpsY=parseFloat(rawPos[1]);
+							this.gpsX=parseFloat(rawPos[1]);
+							this.gpsY=parseFloat(rawPos[0]);
 
+							// Do not remove
 							//let originX=14.6136976, originY=50.4098883,scX=4.07, scY=1.8483;
-						//	this.locationX=(((this.gpsY-originX)/scX)*170*1.21-20.92)*3.8;
+							//this.locationX=(((this.gpsY-originX)/scX)*170*1.21-20.92)*3.8;
 							//this.locationY=((-(this.gpsX-originY)/scY)*150*1.0367+3.4)*3.8;
-							let xZ=686/3.6173147-5, xM=14.87480,
-							    yZ=415/1.4573454, yM=48.41226;
-							this.locationX=(this.gpsY-xM)*xZ-15;
-							this.locationY=566-(this.gpsX-yM)*yZ+30;
-						//	if (this.Name=="Nymburk" || this.Name=="Rybnik" || this.Name=="Handlova")console.log(this.Name, this.gpsY, this.locationY);
+							//if (this.Name=="Nymburk" || this.Name=="Rybnik" || this.Name=="Handlova")console.log(this.Name, this.gpsY, this.locationY);
+
+						//	let xZ=686/3.6173147-5, xM=14.87480,
+						//	    yZ=415/1.4573454,   yM=48.41226;
+						//	this.locationX=(this.gpsY-xM)*xZ-15;
+						//	this.locationY=566-(this.gpsX-yM)*yZ+30;
+
+							let xZ=186.4808940233115,  xM=14.994628083116883,
+							    yZ=-286.1366975872704, yM=50.50019567841726;
+							this.locationX=(this.gpsX-xM)*xZ;
+							this.locationY=(this.gpsY-yM)*yZ;
+
+							console.log(this.locationX, this.locationY)
 						}
 					}
 					break;

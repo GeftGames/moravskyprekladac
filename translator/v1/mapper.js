@@ -185,9 +185,9 @@ function Voronoi_borders(points, imageDataBounds) {
 						}
 						//if (limit) if (dm>w/mapperRenderOptions.limit) { col=defColOutside; }
 						data[i] = data_r[i];			
-						data[i+1] = 255; 			
-						data[i+2] = 0; 			
-						data[i+3] = col; 			
+						data[i-1] = 255; 			
+						//data[i+2] = 0; 			
+						data[i-3] = col; 			
 					} 
 					i+=4;
 				}
@@ -212,9 +212,9 @@ function Voronoi_borders(points, imageDataBounds) {
 						}
 						//if (limit) if (dm/Math.sqrt(2)>w/mapperRenderOptions.limit){j=lenCol;}
 						data[i] = data_r[i];			
-						data[i+1] = 255;  			
-						data[i+2] = 0; 			
-						data[i+3] = col; 			
+						data[i-1] = 255;  			
+						//data[i+2] = 0; 			
+						data[i-3] = col; 			
 					} 
 					i+=4;
 				}
@@ -240,9 +240,9 @@ function Voronoi_borders(points, imageDataBounds) {
 						}
 						//if (limit) if (dm>w/mapperRenderOptions.limit){j=lenCol;}
 						data[i] = data_r[i];			
-						data[i+1] = 255;  			
-						data[i+2] = 0; 			
-						data[i+3] = col; 			
+						data[i-1] = 255;  			
+					//	data[i+2] = 0; 			
+						data[i-3] = col; 			
 					} 
 					i+=4;
 				}
@@ -254,7 +254,7 @@ function Voronoi_borders(points, imageDataBounds) {
 		
 			for (y = 0; y < h; y++) {
 				for (x = 0; x < w; x++) {
-				//	if (data_r[i]>0) {			
+					if (data_r[i]>0) {			
 						dm=Number.MAX_VALUE;
 						let col=0;
 
@@ -271,7 +271,7 @@ function Voronoi_borders(points, imageDataBounds) {
 						data[i-1] = 255; 			
 						//data[i-2] = 0; //0;			
 						data[i-3] = col; 			
-					//} 
+					} 
 					i+=4;
 				}
 			}
@@ -314,8 +314,7 @@ function Voronoi_borders(points, imageDataBounds) {
 				i+=4;
 			}
 		}
-		ctx.putImageData(imageDataBorders, 0, 0);
-		ctx.drawImage(imgMap, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+		ctx.putImageData(imageDataBorders, 0, 0);	
 	}
 }
 
@@ -358,7 +357,7 @@ function Voronoi_backgrounds(points,imageDataBounds) {
 		var img_read  = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
 
 		let data   = imageData.data, 
-			data_r = /*imageDataBounds*/img_read.data;
+			data_r = /*imageDataBounds*/ img_read.data;
 			//data_b = /*imageDataBounds*/imageDataBounds.data;
 
 		var i=3;
@@ -383,13 +382,24 @@ function Voronoi_backgrounds(points,imageDataBounds) {
 							if (mapper_xx>mapper_yy) d=mapper_xx;
 							else d=mapper_yy;
 
-							if(d<dm) {dm=d; col=p.col; }
+							if (d<dm) { dm=d; col=p.col; }
 						}
 						if (limit) if (dm>w/mapperRenderOptions.limit) { col=colOutside; }
-						data[i] = data_r[i];			
-						data[i+1] = col[0]; 			
-						data[i+2] = col[1]; 			
-						data[i+3] = col[2]; 			
+					//	data[i] = data_r[i];			
+					//	data[i-1] = col[0]; 			
+					//	data[i-2] = col[1]; 			
+					//	data[i-3] = col[2]; 	
+						// if not transparent color fill it
+						let aplhaNew=col[0];
+						if (aplhaNew>1)aplhaNew/=255;				
+						let aplhaPrev=data_r[i]/255;
+						let aplhaPrevM1 = 1 - aplhaPrev;
+						let alNP=aplhaNew * aplhaPrevM1;
+				
+						data[i] =    (             aplhaPrev  + (        alNP))*255;
+						data[i-1] =	(data_r[i-1] * aplhaPrev) + (col[3] * alNP);
+						data[i-2] =	(data_r[i-2] * aplhaPrev) + (col[2] * alNP);
+						data[i-3] =	(data_r[i-3] * aplhaPrev) + (col[1] * alNP);			
 					} 
 					i+=4;
 				}
@@ -413,10 +423,22 @@ function Voronoi_backgrounds(points,imageDataBounds) {
 							if(d<dm) {dm=d; col=p.col;}
 						}
 						if (limit) if (dm/Math.sqrt(2)>w/mapperRenderOptions.limit) { col=colOutside; }
-						data[i] = col[0];			
-						data[i+1] = col[1];  			
-						data[i+2] = col[2]; 			
-						data[i+3] = data_r[i+3] * col[3]; 			
+					//	data[i] = col[0];			
+						//data[i-1] = col[1];  			
+						//data[i-2] = col[2]; 			
+						//data[i-3] = data_r[i+3] * col[3]; 	
+
+						// if not transparent color fill it
+						let aplhaNew=col[0];
+						if (aplhaNew>1)aplhaNew/=255;				
+						let aplhaPrev=data_r[i]/255;
+						let aplhaPrevM1 = 1 - aplhaPrev;
+						let alNP=aplhaNew * aplhaPrevM1;
+				
+						data[i] =    (             aplhaPrev  + (        alNP))*255;
+						data[i-1] =	(data_r[i-1] * aplhaPrev) + (col[3] * alNP);
+						data[i-2] =	(data_r[i-2] * aplhaPrev) + (col[2] * alNP);
+						data[i-3] =	(data_r[i-3] * aplhaPrev) + (col[1] * alNP);			
 					} 
 					i+=4;
 				}
@@ -440,10 +462,23 @@ function Voronoi_backgrounds(points,imageDataBounds) {
 							if (d<dm) {dm=d; /*j=k;*/ col=p.col; }
 						}
 						if (limit) if (dm>w/mapperRenderOptions.limit) { col=colOutside; }
-						data[i] = data_r[i];			
-						data[i+1] = col[0];  			
-						data[i+2] = col[1]; 			
-						data[i+3] = col[2]; 			
+					//	data[i] = data_r[i];			
+						//data[i-1] = col[0];  			
+						//data[i-2] = col[1]; 			
+					//	data[i-3] = col[2]; 	
+						
+						
+						// if not transparent color fill it
+						let aplhaNew=col[0];
+						if (aplhaNew>1)aplhaNew/=255;				
+						let aplhaPrev=data_r[i]/255;
+						let aplhaPrevM1 = 1 - aplhaPrev;
+						let alNP=aplhaNew * aplhaPrevM1;
+				
+						data[i] =    (             aplhaPrev  + (        alNP))*255;
+						data[i-1] =	(data_r[i-1] * aplhaPrev) + (col[3] * alNP);
+						data[i-2] =	(data_r[i-2] * aplhaPrev) + (col[2] * alNP);
+						data[i-3] =	(data_r[i-3] * aplhaPrev) + (col[1] * alNP);	
 					} 
 					i+=4;
 				}
@@ -474,11 +509,12 @@ function Voronoi_backgrounds(points,imageDataBounds) {
 						if (aplhaNew>1)aplhaNew/=255;				
 						let aplhaPrev=data_r[i]/255;
 						let aplhaPrevM1 = 1 - aplhaPrev;
+						let alNP=aplhaNew * aplhaPrevM1;
 				
-						data[i] = (              aplhaPrev  + (          aplhaNew * aplhaPrevM1))*255;
-						data[i-1] =	(data_r[i-1] * aplhaPrev) + (col[3] * aplhaNew * aplhaPrevM1);
-						data[i-2] =	(data_r[i-2] * aplhaPrev) + (col[2] * aplhaNew * aplhaPrevM1);
-						data[i-3] =	(data_r[i-3] * aplhaPrev) + (col[1] * aplhaNew * aplhaPrevM1);							
+						data[i] =    (             aplhaPrev  + (        alNP))*255;
+						data[i-1] =	(data_r[i-1] * aplhaPrev) + (col[3] * alNP);
+						data[i-2] =	(data_r[i-2] * aplhaPrev) + (col[2] * alNP);
+						data[i-3] =	(data_r[i-3] * aplhaPrev) + (col[1] * alNP);							
 					}
 						
 					i+=4;
@@ -519,28 +555,37 @@ function mapper_compute() {
 
 	// < Draw  stuff >
 	//ctx.globalCompositeOperation="destination-in";
-
+	//context.globalCompositeOperation = "source-over";
 	// Draw regions map
 	ctx.drawImage(imgMap_bounds, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
 	//let imageDataBounds = ctx.createImageData(canvasMap.width, canvasMap.height);
 	let imageDataBounds = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
 	//console.log(imageDataBounds);
 	//ctx.save();
-	/*let imgDataBorders=*/Voronoi_borders(points,imageDataBounds);
-	ctx.save();
+	/*let imgDataBorders=*/Voronoi_borders(points,imageDataBounds);	
+	
+	if (!mapperRenderOptions.wireframe) {
+		ctx.globalCompositeOperation = "destination-over";
+		ctx.globalAlpha=.5;
+		ctx.drawImage(imgMap, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+		ctx.globalCompositeOperation = "source-over";
+	}
+	ctx.save();	
+	
 	ctx.globalAlpha = mapperRenderOptions.backgroundRegionMapOpacity;
 	/*let imgDataBackground=*/Voronoi_backgrounds(points,imageDataBounds);
 	
-	ctx.drawImage(imgMap_hory, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+	//ctx.drawImage(imgMap_hory, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
 	ctx.globalAlpha = 1;
-	
+
 	// Draw backdround fill colors
 	//ctx.drawImage(imgDataBackground, 0, 0);
 	
 	// Draw borders
 	//ctx.drawImage(imgDataBorders, 0, 0);
 	//
-	
+	ctx.save();
+
 	// filter
 	let xx=0, yy=0, radius=6;
 	ctx.fillStyle = "blue";
@@ -588,6 +633,7 @@ function mapper_compute() {
 		let w=ctx.measureText(text);
 		ctx.fillText(text,canvasMap.width-w.width-4, canvasMap.height-1-10);
 	}
+
 	ctx.restore();
 	return false;
 }
@@ -693,6 +739,7 @@ class RenderMapperOptions{
 
 		// Saved string
 		this.rawBackColors="";
+		this.wireframe=false;// style transparent
 	}
 	
 	LoadCurrentSettins() {

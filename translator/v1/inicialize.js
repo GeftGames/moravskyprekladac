@@ -182,14 +182,14 @@ function GetTranslations() {
 	let select2= document.getElementById("selectorTo");
 
 	xhttp.onload = function() {		
-		// kalibrace mapy
+		// ovření kalibrace mapy
 		if (false) {
 			let handlova=new LanguageTr();
-			handlova.Load("TW v0.1\ntHandlova\ncTesting point\ng48.7283153,18.7590888".split('\n'));
+			handlova.Load("TW v0.1\ntHandlova\ncTesting point\ng48.7283153,18.7590888\nq=5".split('\n'));
 			AddLang(handlova);
 
 			let nymburk=new LanguageTr();
-			nymburk.Load("TW v0.1\ntNymburk\ncTesting point\ng50.1856607,15.0428904".split('\n'));
+			nymburk.Load("TW v0.1\ntNymburk\ncTesting point\ng50.1856607,15.0428904\nq=5".split('\n'));
 			AddLang(nymburk);
 		}
 	//	console.log("Finished 1!");
@@ -1353,4 +1353,68 @@ function CalculateTotalStats() {
 		stats+=l.Stats();
 	}
 	return stats;
+}
+
+function _CalculateGeoreferenceOfNewMap(handlovaPxX, handlovaPxY, nymburkPxX, nymburkPxY) {
+	// Transformace gps na obrazové body
+
+	// langPointX=(gpsX-xM)*xZ;
+	// langPointY=(gpsY-yM)*yZ;	
+	// výpočet xM, yM, xZ a yZ
+	let mX, mY, zX, zY;
+
+	// Georeferenční místa: handlova + nymburk	
+	// handlovaPtX, handlovaPtY, nymburkPtX, nymburkPtY = pozice v px od horního levého okraje 
+	let handlovaGpsX=18.7590888,
+		handlovaGpsY=48.7283153,
+		nymburkGpsX =15.0428904,
+		nymburkGpsY =50.1856607;	
+
+	// --- Měřítko --- //
+	// vzdálenost gps 
+/*	let lGpsX=handlovaGpsX-nymburkGpsX,
+	    lGpsY=handlovaGpsY-nymburkGpsY;
+	
+	// vzdálenost px
+	let lPxX=handlovaPxX-nymburkPxX,
+	    lPxY=handlovaPxY-nymburkPxY;
+
+	// měřítko
+	zX=lGpsX*lPxX;
+	zY=lGpsY*lPxY;
+*/
+
+	// --- Posun --- //
+	//gps px[0,0]
+	//0=(handlovaGpsX-?)*xZ;
+	/*mhX=handlovaGpsX-handlovaPxX/zX;//-handlovaPxX*xZ
+	mhY=handlovaGpsY-handlovaPxY/zY;//-handlovaPxY*yZ
+
+	mnX=nymburkGpsX-nymburkPxX/zX;
+	mnY=nymburkGpsY-nymburkPxY/zY;
+
+	mX=(mhX+mnX)/2;
+	mY=(mhY+mnY)/2;
+	*/
+	/*
+	// Střed pt
+	//let centerPtX=(handlovaPxX+nymburkPxX)/2;
+	//let centerPtY=(handlovaPxY+nymburkPxY)/2;
+	
+	// Střed gps
+	let centerGpsX=(handlovaGpsX+nymburkGpsX)/2;
+	let centerGpsY=(handlovaGpsY+nymburkGpsY)/2;
+
+	// absolutní posun
+	xM=(centerGpsX-centerPtX)/xZ;
+	yM=(centerGpsY-centerPtY)/yZ;
+	*/
+	
+	zX=(nymburkPxX-handlovaPxX)/(nymburkGpsX-handlovaGpsX);
+	zY=(nymburkPxY-handlovaPxY)/(nymburkGpsY-handlovaGpsY);
+
+	mX=(nymburkGpsX*handlovaPxX-nymburkPxX*handlovaGpsX)/(nymburkPxX-handlovaPxX);
+	mY=(nymburkGpsY*handlovaPxY-nymburkPxY*handlovaGpsY)/(nymburkPxY-handlovaPxY);
+
+	return {xM: mX, yM: mY, xZ: zX, yZ: zY}
 }
