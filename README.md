@@ -16,7 +16,8 @@
 - Více zde: [O překladači](https://moravskyprekladac.pages.dev/#about)
 - Máme zajímavý modul [**Generátor map**](https://moravskyprekladac.pages.dev/#mapper) (pracovně nazvaný *Mapper*) , umí vygenerovat mapu hesla podle toho jak se kde mluví, inspirací byl [ČJA](https://cja.ujc.cas.cz/e-cja/), ten nám připadal zavádějící (nepřesný v tom, že nerefrektuje moc místní odchylky obecných hesel a uvádí je zjednodušeně, počeštěně)
 -  Překlad je psán foneticky př. Obalované U ... ṵ (Slovácko, Goralsko); dlouhé R ... ŕ (Valašsko, ...); široké E, nerozlišují se jeho podtypy ... ê (Haná, ...); ... v nastavení je dodatečná změna
-
+- Uživatelé se mohou přidat nářeční výrazy prostřednictvím [Forms](https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url)
+- 
 ## Co se plánuje
 - Zlepšení překladů a jejich doplňování (na úroveň každá dědina)
 - Přeložení dokumentů *.docx, ...
@@ -26,15 +27,9 @@
 - Detekce odkud nářečí pochází
 - Detekce rozdílnosti nářečí
 - Přidat text "tento slovníček je prázdný", nebude-li slovník nic obsahovat
-
-## Poslední změny
-- Přidání komentářů k překladům
-- Změna designu
-- Přidán slovníček
-- Uživatelé se mohou přidat nářeční výrazy prostřednictvím [Forms](https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url)
-- Možnost uložit vygenerovanou mapu kromě stávajícího PNG i ve formátě GeoJSON, KML nebo CSV.
   
 ### Poznámky
+- [Poslední změny](NEWS.md)
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **jeden až dva lidé za den**, děkujeme
 
 # moravskyprekladac
