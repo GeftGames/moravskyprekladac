@@ -11,5 +11,5 @@
 - Možnost uložit vygenerovanou mapu kromě stávajícího PNG i ve formátě GeoJSON, KML nebo CSV.
 
 ### Rychlé odkazy
-- [Návrat na hlavní stránku github](https://github.com/GeftGames/moravskyprekladac/tree/main?tab=readme-ov-file)
+- [Hlavní stránka github](https://github.com/GeftGames/moravskyprekladac/tree/main?tab=readme-ov-file)
 - [Web Moravský Překladač](https://moravskyprekladac.pages.dev/)
