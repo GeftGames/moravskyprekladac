@@ -12,4 +12,4 @@
 
 ### Rychlé odkazy
 - [Návrat na hlavní stránku github](https://github.com/GeftGames/moravskyprekladac/tree/main?tab=readme-ov-file)
-- [Přejít na stránku]([https://github.com/GeftGames/moravskyprekladac/tree/main?tab=readme-ov-file](https://moravskyprekladac.pages.dev/))
+- [Přejít na stránku](https://moravskyprekladac.pages.dev/)
