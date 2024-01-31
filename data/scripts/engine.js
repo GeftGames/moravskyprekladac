@@ -596,7 +596,7 @@ let PopPage_lastOpen="";
 function PopPageShow(name) {
 	//close old
 	let old=document.getElementById(PopPage_lastOpen);
-	if (old!=undefined){
+	if (old!=undefined) {
 		if (old.style.opacity=="1") PopPageClose(PopPage_lastOpen);
 	}
 	
@@ -618,8 +618,6 @@ function PopPageShow(name) {
 }
 
 function PopPageClose(name) {
-//	location.hash="";
-	
 	let element=document.getElementById("pagePop_"+name);
 
 	element.style.opacity="0";
@@ -636,6 +634,7 @@ function PopPageClose(name) {
 		element.style.display="none";
 	}, 300);
 }
+
 function ShowPageOwnLang(){
 	document.getElementById("pageOwnLang").style.display="block";
 	document.getElementById("pageOwnLang").style.opacity="1";
@@ -1523,6 +1522,8 @@ function Load() {
 		mapRedraw();
 	});
 
+	// Počet prstů na obrazovce
+	let numOfTouch=-1;
 	mapSelectLang.addEventListener('mousedown', (e) => {
 		e.preventDefault();
 		moved = true;
@@ -1541,6 +1542,12 @@ function Load() {
 			map_LocTmpY=touch.pageY-map_LocY;	
 			
 			mapRedraw();
+		}else{
+			// nastav hodnoty začáteční pozice
+			map_LocTmpX=touch1.pageX;
+			map_LocTmpY=touch1.pageY;
+			map_LocTmp2X=touch2.pageX;
+			map_LocTmp2Y=touch2.pageY;
 		}
 	});
 	mapSelectLang.addEventListener('mouseup', (e) => {
@@ -1591,29 +1598,53 @@ function Load() {
 			const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
 			const mouseY = e.clientY  -rect.top/*-*/;
 			//console.log('not moved')
-			mapMove(mouseX,mouseY);
+			mapMove(mouseX, mouseY);
 		}
 	});
 	mapSelectLang.addEventListener('touchmove', (e) => {
 		e.preventDefault();
-		var touch = e.touches[0] || e.changedTouches[0];
-		console.log(touch.pageX,touch.pageY);
+		if (e.touches.length==1) {
+			var touch = e.touches[0] || e.changedTouches[0];
+			console.log(touch.pageX,touch.pageY);
 
-		if (moved) {
-			
-		//	console.log('moved');
-			map_LocX=touch.pageX-map_LocTmpX;
-			map_LocY=touch.pageY-map_LocTmpY;
+			if (moved) {
+				
+			//	console.log('moved');
+				map_LocX=touch.pageX-map_LocTmpX;
+				map_LocY=touch.pageY-map_LocTmpY;
 
-			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
-			//setTransform();	
-			mapRedraw();
-			//mapZoom.style.top=positionY+"px";
-			//mapZoom.style.left=positionX+"px";
-		} else {
+				//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
+				//setTransform();	
+				mapRedraw();
+				//mapZoom.style.top=positionY+"px";
+				//mapZoom.style.left=positionX+"px";
+			} else {
+				
+				//console.log('not moved')
+				mapMove(touch.pageX,touch.pageY);
+			}
+		}else{
+			var touch1 = e.touches[0] || e.changedTouches[0];
+			var touch2 = e.touches[1] || e.changedTouches[1];
+			console.log(touch1.pageX, touch1.pageY);
+			console.log(touch2.pageX, touch2.pageY);
 			
-			//console.log('not moved')
-			mapMove(touch.pageX,touch.pageY);
+			let dx=map_LocTmpX-map_LocTmp2X, dy=map_LocTmpY-map_LocTmp2Y;
+			let start=Math.sqrt(dx*dx+dy*dy);
+
+			dx=touch1.pageX-touch2.pageX, dy=touch1.pageY-touch2.pageY;
+			let now=Math.sqrt(dx*dx+dy*dy);
+			map_Zoom=start/now;
+
+			if (moved) {
+				
+
+				mapRedraw();
+			} else {				
+
+			//	map_Zoom=map_LocTmpZoom;
+				map_LocTmpZoom=-1;
+			}
 		}
 	});
 
@@ -4568,7 +4599,7 @@ function DetectLoacation() {
 			case "Olomoucky kraj":
 				switch (data.city) {
 					case "Uničov":
-						country="Morava";
+						country="Morava";f
 						break;
 
 					case "Olomouc":
