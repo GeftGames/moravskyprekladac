@@ -363,8 +363,9 @@ function mapRedraw(){
 
 	ctx.imageSmoothingEnabled= true;
 
-	// point of location
+	// point of location	
 	let circleRadius=3*map_Zoom;
+	if (isTouchDevice()) circleRadius*=3;
 	if (circleRadius<2)circleRadius=2;
 	if (circleRadius>8)circleRadius=8;
 	ctx.lineCap = 'round';
@@ -422,14 +423,16 @@ function mapClick(mX,mY) {
 
 	// point of location
 	let circleRadius=3*map_Zoom;
+	if (isTouchDevice()) circleRadius*=3;
 	if (circleRadius<2)circleRadius=2;
 	if (circleRadius>12)circleRadius=12;
 
 	// generate dots
 	for (let p of languagesList){
 		if (isNaN(p.locationX)) continue;
-		console.log(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2);
-		if (入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2)) {
+		if (入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2) ||
+		(isTouchDevice() && 入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2))) {
+			console.log("click",{ mX: mX, my: mY, x: map_LocX+p.locationX*map_Zoom-circleRadius, y: map_LocY+p.locationY*map_Zoom-circleRadius, w: circleRadius*2, h:circleRadius*2});
 			p.option.selected=true;
 			CloseMapPage();
 			Translate();
@@ -437,6 +440,10 @@ function mapClick(mX,mY) {
 			return;
 		}	
 	}
+}
+
+function isTouchDevice() {
+	return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
 }
 
 function mapMove(mX,mY) {
