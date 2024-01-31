@@ -1523,7 +1523,6 @@ function Load() {
 	});
 
 	// Počet prstů na obrazovce
-	let numOfTouch=-1;
 	mapSelectLang.addEventListener('mousedown', (e) => {
 		e.preventDefault();
 		moved = true;
@@ -1532,24 +1531,7 @@ function Load() {
 		
 		mapRedraw();
 	});
-	mapSelectLang.addEventListener('touchstart', (e) => {
-		//start move
-		if (e.touches.length == 1) {
-			e.preventDefault();
-			moved = true;
-			var touch = e.touches[0] || e.changedTouches[0];
-			map_LocTmpX=touch.pageX-map_LocX;
-			map_LocTmpY=touch.pageY-map_LocY;	
-			
-			mapRedraw();
-		}else{
-			// nastav hodnoty začáteční pozice
-			map_LocTmpX=touch1.pageX;
-			map_LocTmpY=touch1.pageY;
-			map_LocTmp2X=touch2.pageX;
-			map_LocTmp2Y=touch2.pageY;
-		}
-	});
+	
 	mapSelectLang.addEventListener('mouseup', (e) => {
 		moved = false;	
 		mapRedraw();
@@ -1562,19 +1544,10 @@ function Load() {
 		mapClick(mouseX,mouseY);
 		mapRedraw();
 	});
-	mapSelectLang.addEventListener('touchend', (e) => {
-		//console.log(e.clientX,e.clientY);
-		var touch = e.touches[0] || e.changedTouches[0];
-		//console.log(touch.pageX,touch.pageY);
-		mapClick(touch.pageX,touch.pageY);
-
-		mapRedraw();
-	});
 
 	mapSelectLang.addEventListener('mousemove', (e) => {
 		e.preventDefault();
 		if (moved) {
-			
 		//	console.log('moved');
 			map_LocX=e.clientX-map_LocTmpX;
 			map_LocY=e.clientY-map_LocTmpY;
@@ -1601,49 +1574,135 @@ function Load() {
 			mapMove(mouseX, mouseY);
 		}
 	});
+
+	var map_Touches=-1;
+	var map_TouchStartX, map_TouchStartY;
+	var map_MoveTime;
+	mapSelectLang.addEventListener('touchstart', (e) => {
+		//start move
+		const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
+		var touch1 = e.touches[0] || e.changedTouches[0];
+		let mx=touch1.pageX, my=touch1.pageY-rect.top;
+
+		if (e.touches.length == 1) {
+			console.log("touchstart move");
+			e.preventDefault();
+			moved = true;
+			
+			map_LocTmpX=mx-map_LocX;
+			map_LocTmpY=my-map_LocY;	
+			
+			map_TouchStartX=mx;
+			map_TouchStartY=my;
+			map_MoveTime=Date.now();
+			map_Touches=1;
+			mapRedraw();
+		}else{
+			console.log("touchstart zoom");
+			var touch2 = e.touches[1] || e.changedTouches[1];
+			let m2x=touch2.pageX, m2y=touch2.pageY-rect.top;
+			map_Touches=2;
+			e.preventDefault();
+
+			// nastav hodnoty začáteční pozice
+			map_LocTmpX=mx-map_LocX;
+			map_LocTmpY=my-map_LocY;
+			map_LocTmp2X=m2x-map_LocX;
+			map_LocTmp2Y=m2y-map_LocY;
+			map_ZoomInit=map_Zoom;
+		}
+	});
+
+	mapSelectLang.addEventListener('touchend', (e) => {
+		console.log("touchend");
+		var touch = e.touches[0] || e.changedTouches[0];
+		const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
+
+		// Jeden prst
+		if (map_Touches==1) {
+			let mx=touch.pageX;
+			let my=touch.pageY-rect.top;
+
+			// <300ms kliknutí
+			if ((Date.now()-map_MoveTime)<300) {
+				// <10px vzdálenost od začátku 
+				let dX=mx-map_TouchStartX, dY=my-map_TouchStartY;
+				let d=Math.sqrt(dX*dX+dY*dY);
+				if (d<10) {
+					console.log("click!");
+					mapClick(mx,my);
+					return;
+				}
+			}
+			map_Touches=1;
+		}
+		
+		mapRedraw();
+	});
+	let map_ZoomInit;
 	mapSelectLang.addEventListener('touchmove', (e) => {
 		e.preventDefault();
+		const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
+		
+
 		if (e.touches.length==1) {
+			console.log("mousemove move");
 			var touch = e.touches[0] || e.changedTouches[0];
-			console.log(touch.pageX,touch.pageY);
+			let mx=touch.pageX, my=touch.pageY-rect.top;
+			//console.log(touch.pageX,touch.pageY);
 
 			if (moved) {
-				
-			//	console.log('moved');
-				map_LocX=touch.pageX-map_LocTmpX;
-				map_LocY=touch.pageY-map_LocTmpY;
-
-				//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
-				//setTransform();	
+				map_LocX=mx-map_LocTmpX;
+				map_LocY=my-map_LocTmpY;
+	
 				mapRedraw();
-				//mapZoom.style.top=positionY+"px";
-				//mapZoom.style.left=positionX+"px";
 			} else {
-				
-				//console.log('not moved')
 				mapMove(touch.pageX,touch.pageY);
 			}
-		}else{
+			map_Touches=1;
+		}else if (e.touches.length==2) {
+			console.log("mousemove zoom");
 			var touch1 = e.touches[0] || e.changedTouches[0];
-			var touch2 = e.touches[1] || e.changedTouches[1];
-			console.log(touch1.pageX, touch1.pageY);
-			console.log(touch2.pageX, touch2.pageY);
+			let m1x=touch1.pageX, m1y=touch1.pageY-rect.top;
 			
-			let dx=map_LocTmpX-map_LocTmp2X, dy=map_LocTmpY-map_LocTmp2Y;
-			let start=Math.sqrt(dx*dx+dy*dy);
+			var touch2 = e.touches[1] || e.changedTouches[1];
+			let m2x=touch2.pageX, m2y=touch2.pageY-rect.top;
 
-			dx=touch1.pageX-touch2.pageX, dy=touch1.pageY-touch2.pageY;
-			let now=Math.sqrt(dx*dx+dy*dy);
-			map_Zoom=start/now;
-
-			if (moved) {
+			// start
+			if (map_Touches!=2) {
+				map_LocTmpX=m1x-map_LocX;
+				map_LocTmpY=m1y-map_LocY;
+				map_LocTmp2X=m2x-map_LocX;
+				map_LocTmp2Y=m2y-map_LocY;
+				map_ZoomInit=map_Zoom;
+				map_Touches=2;
+			}else{
+				// start distance
+				let dx=map_LocTmpX-map_LocTmp2X, dy=map_LocTmpY-map_LocTmp2Y;
 				
+				let start=Math.sqrt(dx*dx+dy*dy);
+
+				// now distance
+				dx=(m1x-map_LocX)-(m2x-map_LocX), dy=(m1y-map_LocY)-(m2y-map_LocY);
+				console.log(map_LocTmpX,m1x-map_LocX);
+				console.log(map_LocTmpY,m1y-map_LocY);
+				console.log(map_LocTmp2Y,m2y-map_LocY);
+				console.log(map_LocTmp2Y,m2y-map_LocY);
+				let now=Math.sqrt(dx*dx+dy*dy);
+				let prevZoom=map_Zoom;
+				map_Zoom=map_ZoomInit/(start/now);
+				
+				// corect center of zoom
+				const imgMX = (m1x+m2x)/2-map_LocX,
+					  imgMY = (m1y+m2y)/2-map_LocY;	
+
+				const imgPMX = imgMX/(imgMap.width*prevZoom),
+					  imgPMY = imgMY/(imgMap.height*prevZoom);
+
+				map_LocX-=(map_Zoom-prevZoom)*imgMap.width*imgPMX;
+				map_LocY-=(map_Zoom-prevZoom)*imgMap.height*imgPMY;
 
 				mapRedraw();
-			} else {				
-
-			//	map_Zoom=map_LocTmpZoom;
-				map_LocTmpZoom=-1;
 			}
 		}
 	});
@@ -5222,6 +5281,12 @@ function SetCurrentTranscription(transCode) {
 		{ from: "ď", to: "dj" },
 		{ from: "ť", to: "tj" },
 		{ from: "ň", to: "nj" },
+
+		{ from: "Ch", to: "X" },
+		{ from: "X", to: "Ks" },
+		{ from: "Ď", to: "Dj" },
+		{ from: "Ť", to: "Tj" },
+		{ from: "Ň", to: "Nj" },
 	];	
 
 	if (transCode=="silezian") return[
