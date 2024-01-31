@@ -4658,7 +4658,7 @@ class LanguageTr {
 							this.locationX=(this.gpsX-xM)*xZ;
 							this.locationY=(this.gpsY-yM)*yZ;
 
-							console.log(this.locationX, this.locationY)
+							//console.log(this.locationX, this.locationY)
 						}
 					}
 					break;

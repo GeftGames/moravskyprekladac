@@ -885,7 +885,7 @@ function mapper_save_cvs(){
 		let data= "Místo,Přeložení,N,E"+"\n";
 
 		for (let pt of points) {
-			data+=pt.name+","+pt.text+","+pt.lang.gpsX+","+pt.lang.gpsY+"\n";
+			data+=pt.name+","+pt.text+","+pt.lang.gpsY+","+pt.lang.gpsX+"\n";
 		}
 
 		download_file("mp_mapper_"+inputTextmapper+".csv", data, "text/csv");
@@ -904,7 +904,7 @@ function mapper_save_geojson(){
 			'    "type": "Feature",\n'+
 			'    "geometry": {\n'+
 			'      "type": "Point",\n'+
-			'      "coordinates": ['+pt.lang.gpsY+', '+pt.lang.gpsX+']\n'+
+			'      "coordinates": ['+pt.lang.gpsX+', '+pt.lang.gpsY+']\n'+
 			'    },\n'+
 			'    "properties": {\n'+
 			'      "location": "'+pt.name+'",\n'+
@@ -946,11 +946,11 @@ function mapper_save_klm() {
 	<SimpleData name="OBJECTID">`+id+`</SimpleData>
 	<SimpleData name="nazev">`+pt.name+`</SimpleData>
 	<SimpleData name="preklad">`+pt.text+`</SimpleData>	
-	<SimpleData name="wkt">POINT(`+pt.lang.gpsX+` `+pt.lang.gpsY+`)</SimpleData>
-	<SimpleData name="x">`+pt.lang.gpsY+`</SimpleData>
-	<SimpleData name="y">`+pt.lang.gpsX+`</SimpleData>
+	<SimpleData name="wkt">POINT(`+pt.lang.gpsY+` `+pt.lang.gpsX+`)</SimpleData>
+	<SimpleData name="x">`+pt.lang.gpsX+`</SimpleData>
+	<SimpleData name="y">`+pt.lang.gpsY+`</SimpleData>
 </SchemaData></ExtendedData>
-	<Point><coordinates>`+pt.lang.gpsY+`,`+pt.lang.gpsX+`</coordinates></Point>
+	<Point><coordinates>`+pt.lang.gpsX+`,`+pt.lang.gpsY+`</coordinates></Point>
 </Placemark>`;  
 			id++;
 		}

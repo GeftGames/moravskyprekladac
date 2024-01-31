@@ -334,8 +334,11 @@ function GetTranslations() {
 }
 var map_Zoom=1;
 var map_LocX=0, map_LocY=0;
+var map_LocX2=0, map_LocY2=0;
 var map_LocTmpX=0, map_LocTmpY=0;
+var map_LocTmp2X=0, map_LocTmp2Y=0;
 var map_DisplayWidth, map_DisplayHeight;
+var map_Touches=-1;
 
 function mapRedraw(){
 	let canvasMap=document.getElementById("mapSelectLang");
