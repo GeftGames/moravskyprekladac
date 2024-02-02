@@ -1,6 +1,6 @@
 # Poslední změny
 ### 2024 2.2. 
-- Dotazování existence (v mapě návrhy znaků.. <{exists=ł}>)
+- Dotazování existence (v mapě návrhy znaků.. <{exists=ł}>) A=ano vyskytuje se, N=nevyskytuje se
 - Rychlejší vykreslování výběru z mapky
   
 ### 2024 30.01. 
