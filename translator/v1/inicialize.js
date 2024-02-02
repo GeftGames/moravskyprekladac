@@ -319,7 +319,16 @@ function GetTranslations() {
 					category=insideSearch(select2,lang.Category);			
 				}
 //				console.log(category);
-				
+
+				// Add color
+				if (lang.Quality==5) 	  { lang.ColorFillStyle="Gold";		lang.ColorStrokeStyle="Black";}
+				else if (lang.Quality==4) { lang.ColorFillStyle="Yellow";	lang.ColorStrokeStyle="Black";}	
+				else if (lang.Quality==3) { lang.ColorFillStyle="Orange";	lang.ColorStrokeStyle="Black";}
+				else if (lang.Quality==2) { lang.ColorFillStyle="#cd7f32";	lang.ColorStrokeStyle = 'rgb(0,0,0,.9)';}	
+				else if (lang.Quality==1) { lang.ColorFillStyle="Red";		lang.ColorStrokeStyle = 'rgb(0,0,0,.8)';}	
+				else if (lang.Quality==0) { lang.ColorFillStyle="rgb(128,128,128,.1)"; lang.ColorStrokeStyle = 'rgb(0,0,0,.5)';}
+				else {lang.ColorFillStyle="Black";}
+
 				let nodeLang = document.createElement('option');
 				lang.option=nodeLang;
 				nodeLang.value=lang.Name;
@@ -343,8 +352,9 @@ var map_Touches=-1;
 function mapRedraw(){
 	let canvasMap=document.getElementById("mapSelectLang");
 
-	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
-	map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
+	let ele=document.getElementById("mapZoom");
+	map_DisplayWidth = ele.clientWidth;
+	map_DisplayHeight = ele.clientHeight;
 
 	mapSelectLang.width = map_DisplayWidth;
 	mapSelectLang.height = map_DisplayHeight;
@@ -353,15 +363,15 @@ function mapRedraw(){
 
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);	
 	
-	ctx.save();
+	//ctx.save();
 	ctx.globalAlpha = 0.5;
+	//ctx.imageSmoothingEnabled= true;
 	ctx.drawImage(imgMap, map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
-	ctx.fillStyle="rgba(255,255,255,.5)";
+	//ctx.fillStyle="rgba(255,255,255,.5)";
 	ctx.globalAlpha = 1;
 	//ctx.fillRect(map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
-	ctx.font = "16px sans-serif";
 
-	ctx.imageSmoothingEnabled= true;
+	
 
 	// point of location	
 	let circleRadius=3*map_Zoom;
@@ -371,45 +381,60 @@ function mapRedraw(){
 	ctx.lineCap = 'round';
 	// generate dots
 	for (let p of languagesList){
-		ctx.strokeStyle = 'Black';
-//ctx.fillStyle="Black";	
-		if (p.Quality==5) ctx.fillStyle="Gold";		
-		else if (p.Quality==4) ctx.fillStyle="Yellow";		
-		else if (p.Quality==3) ctx.fillStyle="Orange";		
-		else if (p.Quality==2){ ctx.fillStyle="#cd7f32";		ctx.strokeStyle = 'rgb(0,0,0,.9)';}	
-		else if (p.Quality==1) {ctx.fillStyle="Red";	ctx.strokeStyle = 'rgb(0,0,0,.8)';}	
-		else if (p.Quality==0) {ctx.fillStyle="rgb(128,128,128,.1)";ctx.strokeStyle = 'rgb(0,0,0,.5)';}
-		else ctx.fillStyle="Black";
+		if (p.Quality==0 && map_Zoom<1.5) continue;
 
-		ctx.beginPath();
-		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
-		ctx.fill();		
-		
-		
-		ctx.beginPath();		
-		ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
-		ctx.stroke();
+		//out of map
+		if (入っちゃった(map_LocX+p.locationX*map_Zoom+circleRadius*2,map_LocY+p.locationY*map_Zoom+circleRadius*2, 0, 0, map_DisplayWidth+circleRadius*4,map_DisplayHeight+circleRadius*4)){
+
+			//ctx.strokeStyle = 'Black';
+			ctx.fillStyle=p.ColorFillStyle;
+			/*if (p.Quality==5) ctx.fillStyle="Gold";		
+			else if (p.Quality==4) ctx.fillStyle="Yellow";		
+			else if (p.Quality==3) ctx.fillStyle="Orange";		
+			else if (p.Quality==2){ ctx.fillStyle="#cd7f32";		ctx.strokeStyle = 'rgb(0,0,0,.9)';}	
+			else if (p.Quality==1) {ctx.fillStyle="Red";	ctx.strokeStyle = 'rgb(0,0,0,.8)';}	
+			else if (p.Quality==0) {ctx.fillStyle="rgb(128,128,128,.1)";ctx.strokeStyle = 'rgb(0,0,0,.5)';}
+			else ctx.fillStyle="Black";*/
+			
+			ctx.beginPath();
+			ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
+			ctx.fill();		
+			
+			
+			ctx.strokeStyle=p.ColorStrokeStyle;
+			//ctx.beginPath();		
+			//ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
+			ctx.stroke();
+		}
 	}
 	
 	if (ThemeLight=="dark") ctx.strokeStyle = 'White'; else ctx.strokeStyle = 'Black';
+	ctx.font = "16px sans-serif";
 
 	// generate texts
-	let z= dev? 2:1;
+	let z= dev? 3.5:2.5;
 	for (let p of languagesList){
 		if ((map_Zoom>z && p.Quality<2) || p.Quality>=2) {
-			// Text color
-			if (p.Quality==0) {
-				if (p.Category===undefined)ctx.fillStyle="#996666";
-				else ctx.fillStyle="Gray";
-			} else {
-				if (ThemeLight=="dark") ctx.fillStyle="White"; else ctx.fillStyle="Black";
+			
+			//out of map
+			if (入っちゃった(map_LocX+p.locationX*map_Zoom+circleRadius*2, map_LocY+p.locationY*map_Zoom+circleRadius*2,0,0,map_DisplayWidth+circleRadius*4,map_DisplayHeight+circleRadius*4)){
+				//if (map_LocX+p.locationX*map_Zoom<0) continue;
+				//if (map_LocY+p.locationY*map_Zoom<0) continue;
+
+				// Text color
+				if (p.Quality==0) {
+					if (p.Category===undefined)ctx.fillStyle="#996666";
+					else ctx.fillStyle="Gray";
+				} else {
+					if (ThemeLight=="dark") ctx.fillStyle="White"; else ctx.fillStyle="Black";
+				}
+				let w=ctx.measureText(p.Name).width;
+				ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
 			}
-			let w=ctx.measureText(p.Name).width;
-			ctx.fillText(p.Name, map_LocX+p.locationX*map_Zoom-w/2, map_LocY+p.locationY*map_Zoom-circleRadius-5);
 		}
 	}
 
-	ctx.restore();
+	//ctx.restore();
 }
 
 function mapClick(mX,mY) {
@@ -449,8 +474,9 @@ function isTouchDevice() {
 function mapMove(mX,mY) {
 	let canvasMap=document.getElementById("mapSelectLang");
 
-	map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
-	map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
+	let ele=document.getElementById("mapZoom");
+	map_DisplayWidth = ele.clientWidth;
+	map_DisplayHeight = ele.clientHeight;
 
 	//mapSelectLang.width = map_DisplayWidth;
 	//mapSelectLang.height = map_DisplayHeight;
@@ -481,7 +507,7 @@ function 入っちゃった(mx, my, x, y, w, h) {
 	if (mx>x+w) return false;
 	if (my>y+h) return false;
 
-	console.log(mx, my, x, y, w, h);
+	//console.log(mx, my, x, y, w, h);
 	return true;
 }
 

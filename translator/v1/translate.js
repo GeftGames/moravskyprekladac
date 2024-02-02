@@ -5475,7 +5475,7 @@ class LanguageTr {
 				else if (type=="Number") printableString=string.Shapes;
 				else if (type=="Verb") printableString=string.Shapes;
 				else if (type=="Adverb") {
-					console.log(string);
+					//console.log(string);
 					printableString=string.output[0].Text;
 				}else if (type=="Preposition") printableString=string[0];
 				else if (type=="Conjunction") {
@@ -5494,8 +5494,9 @@ class LanguageTr {
 					printableString=string;
 				} else if (type=="SimpleWord") {
 					printableString=string.output;
-					console.log(printableString, string);
+					//console.log(printableString, string);
 				}else if (type=="NumberLetters") printableString=string;
+				else if (type=="Check") printableString=string;
 				else {
 					if (dev) console.log("Unknown type", string);
 					printableString=string.To;
@@ -5505,13 +5506,11 @@ class LanguageTr {
 				// Write how well translated
 				if (type!=="Unknown" && type!=="Symbol") this.qualityTrTotalTranslatedWell++;
 				if (type!=="Symbol")this.qualityTrTotalTranslated++;
-			//	}
-//				console.log("printableString", printableString);
+				
 				let resStr=this.PrepareText(printableString);
 				let retText;
 
-				// All uppercase
-				
+				// All uppercase				
 				if (original==original.toUpperCase()) {
 					if (Array.isArray(resStr)){
 						let arr=[];
@@ -5539,7 +5538,7 @@ class LanguageTr {
 							retText=resStr[0].toUpperCase() + resStr.substring(1);
 						} else retText=resStr;
 					}
-				}else{
+				} else {
 					retText=resStr;
 				}
 
@@ -5602,6 +5601,130 @@ class LanguageTr {
 		for (const n of this.Nouns) {
 			let z=n.IsStringThisWord(input);
 			if (z!==null) return z;
+		}
+		return null;
+	}
+	
+	searchExists(input) {
+		//<{exists=ł}>
+		for (const n of this.SimpleWords) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Sentences) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.SentenceParts) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Phrases) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Adverbs) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Prepositions) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Particles) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Conjunctions) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Interjections) {
+			for (let to of n.output){
+				if (to.Text.includes(input)) return n;
+			}
+		}
+		for (const n of this.Nouns) {
+			for (let to of n.To){
+				if (to.Body.includes(input)) return n;
+				for (let shape of to.Pattern.Shapes){
+					if (shape.includes(input)) return n;
+				}
+			}
+		}
+		for (const n of this.Adjectives) {
+			for (let to of n.To){
+				if (to.Body.includes(input)) return n;
+				for (let shape of to.Pattern.Middle){
+					if (shape.includes(input)) return n;
+				}
+				for (let shape of to.Pattern.Feminine){
+					if (shape.includes(input)) return n;
+				}
+				for (let shape of to.Pattern.MasculineAnimate){
+					if (shape.includes(input)) return n;
+				}
+				for (let shape of to.Pattern.MasculineInanimate){
+					if (shape.includes(input)) return n;
+				}
+			}
+		}
+		for (const n of this.Pronouns) {
+			for (let to of n.To){
+				if (to.Body.includes(input)) return n;
+				for (let shape of to.Pattern.Shapes){
+					if (shape.includes(input)) return n;
+				}
+			}
+		}
+		for (const n of this.Numbers) {
+			for (let to of n.To){
+				if (to.Body.includes(input)) return n;
+				for (let shape of to.Pattern.Shapes){
+					if (shape.includes(input)) return n;
+				}
+			}
+		}
+		for (const n of this.Verbs) {
+			for (let to of n.To){
+				if (to.Body.includes(input)) return n;
+				if (to.Pattern.SContinous){
+					for (let shape of to.Pattern.Continous) {
+						if (shape.includes(input)) return n;
+					}
+				}
+				if (to.Pattern.SFuture) {
+					for (let shape of to.Pattern.Future) {
+						if (shape.includes(input)) return n;
+					}
+				}
+				if (to.Pattern.SPastActive) {
+					for (let shape of to.Pattern.PastActive) {
+						if (shape.includes(input)) return n;
+					}
+				}
+				if (to.Pattern.SPastPasive) {
+					for (let shape of to.Pattern.PastPasive) {
+						if (shape.includes(input)) return n;
+					}
+				}
+				if (to.Pattern.SImperative) {
+					for (let shape of to.Pattern.Imperative) {
+						if (shape.includes(input)) return n;
+					}
+				}				
+				for (let shape of to.Pattern.Infinitive) {
+					if (shape.includes(input)) return n;
+				}				
+			}
 		}
 		return null;
 	}
@@ -6389,204 +6512,191 @@ class LanguageTr {
 				} else return {Type: "Unknown", To: word, From: str};
 			}
 
-		//	console.log(rules);
+			if (rules["word"]!=undefined){
+				let word=rules["word"];
+				switch (rules["typ"]) {
+					case "pods":// <{word=den|typ=pods|cislo=j|pad=1}>  							
+						{
+							if (rules["cislo"]!=undefined && rules["pad"]!=undefined) {
+								let cislo=-1, pad=-1;
+								if (rules["cislo"]=="j") cislo=1;
+								else if (rules["cislo"]=="m") cislo=2;
+								else cislo=parseInt(rules["cislo"]);
+								
+								pad=parseInt(rules["pad"]);
 
-			let word=rules["word"];
-			/*let word;
-			for (const p of vars) {
-				let rule=p.split("=");
-				if (rule.length == 2) {
-					if (rule[0]=="word"){
-						word=rule[1];
-						break;
-					}
-				} else return {Type: "Unknown", To: word, From: str};
-			}*/
-			//console.log("Custom word "+word);
-
-			/*for (const p of vars) {
-				let rule=p.split("=");
-				console.log(rule);
-				if (rule.length == 2) {
-					if (rule[0]=="typ") {*/
-			switch (rules["typ"]/*rule[1]*/) {
-				case "pods":// <{word=den|typ=pods|cislo=j|pad=1}>  							
-					{
-						if (rules["cislo"]!=undefined && rules["pad"]!=undefined) {
-							let cislo=-1, pad=-1;
-							if (rules["cislo"]=="j") cislo=1;
-							else if (rules["cislo"]=="m") cislo=2;
-							else cislo=parseInt(rules["cislo"]);
-							
-							pad=parseInt(rules["pad"]);
-
-							let words=this.searchWordNoun(word);
-						//	console.log("!!!!!!", words);
-							if (words!=null){
-								for (let w of words.Shapes) {
-								//	console.log("vars", w,cislo,pad);
-									//if (w[1]==cislo && w[2]==pad) {
-									if (w.Number==cislo && w.Fall==pad) {
-									//	console.log("OK");
-										return {Type: "Noun", To: {Shapes: [w], Gender: words.Gender, Object: words.Object}, From: word};
-										//["Noun", n, původní]
+								let words=this.searchWordNoun(word);
+							//	console.log("!!!!!!", words);
+								if (words!=null){
+									for (let w of words.Shapes) {
+									//	console.log("vars", w,cislo,pad);
+										//if (w[1]==cislo && w[2]==pad) {
+										if (w.Number==cislo && w.Fall==pad) {
+										//	console.log("OK");
+											return {Type: "Noun", To: {Shapes: [w], Gender: words.Gender, Object: words.Object}, From: word};
+											//["Noun", n, původní]
+										}
 									}
 								}
 							}
-						}
-					/*	for (const v of vars) {
-							let nrule=v.split("=");
-							console.log(nrule[0]);
-							if (nrule[0]=="cislo") {
-								if (nrule[1]=="j") cislo=1;
-								else if (nrule[1]=="m") cislo=2;
-								else cislo=nrule[1];
-								break;
+						/*	for (const v of vars) {
+								let nrule=v.split("=");
+								console.log(nrule[0]);
+								if (nrule[0]=="cislo") {
+									if (nrule[1]=="j") cislo=1;
+									else if (nrule[1]=="m") cislo=2;
+									else cislo=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const v of vars) {
-							let nrule=v.split("=");
-						//	console.log(nrule);
-							if (nrule[0]=="pad") {
-								pad=parseInt(nrule[1]);
-								break;
-							}
-						}*/
+							for (const v of vars) {
+								let nrule=v.split("=");
+							//	console.log(nrule);
+								if (nrule[0]=="pad") {
+									pad=parseInt(nrule[1]);
+									break;
+								}
+							}*/
 
-						
-					}
-					break;
+							
+						}
+						break;
 
-				case "prid":
-					{
-						let cislo=-1, pad=-1, rod=-1;
-						for (const nrule of vars) {
-							if (nrule[0]=="cislo") {
-								cislo=nrule[1];
-								break;
+					case "prid":
+						{
+							let cislo=-1, pad=-1, rod=-1;
+							for (const nrule of vars) {
+								if (nrule[0]=="cislo") {
+									cislo=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="pad") {
-								pad=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="pad") {
+									pad=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="rod") {
-								rod=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="rod") {
+									rod=nrule[1];
+									break;
+								}
 							}
-						}
 
-						let words=this.searchWordAdjective(word);
-						for (let word of words[0]){
-							if (w[1]==cislo && w[2]==pad && w[3]==rod) {
-								return {Type: "Advective", To: w, From: word};
+							let words=this.searchWordAdjective(word);
+							for (let word of words[0]){
+								if (w[1]==cislo && w[2]==pad && w[3]==rod) {
+									return {Type: "Advective", To: w, From: word};
+								}
 							}
 						}
-					}
-					break;
+						break;
 
-				case "zajm":
-					{
-						let cislo=-1, pad=-1, rod="";
-						for (const nrule of vars) {
-							if (nrule[0]=="cislo") {
-								cislo=nrule[1];
-								break;
+					case "zajm":
+						{
+							let cislo=-1, pad=-1, rod="";
+							for (const nrule of vars) {
+								if (nrule[0]=="cislo") {
+									cislo=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="pad") {
-								pad=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="pad") {
+									pad=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="rod") {
-								rod=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="rod") {
+									rod=nrule[1];
+									break;
+								}
 							}
-						}
 
-						let words=this.searchWordPronoun(word);
-						for (let w of words[0]){
-							if ((w[1]==cislo || cislo==-1) && (w[2]==pad || pad==-1) && (w[3]==rod || rod=="")) {
-								return {Type: "Adjective", To: w, From: word};
+							let words=this.searchWordPronoun(word);
+							for (let w of words[0]){
+								if ((w[1]==cislo || cislo==-1) && (w[2]==pad || pad==-1) && (w[3]==rod || rod=="")) {
+									return {Type: "Adjective", To: w, From: word};
+								}
 							}
 						}
-					}
-					break;
+						break;
 
-				case "cisl":
-					{
-						let cislo=-1, pad=-1, rod="";
-						for (const nrule of vars) {
-							if (nrule[0]=="cislo") {
-								cislo=nrule[1];
-								break;
+					case "cisl":
+						{
+							let cislo=-1, pad=-1, rod="";
+							for (const nrule of vars) {
+								if (nrule[0]=="cislo") {
+									cislo=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="pad") {
-								pad=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="pad") {
+									pad=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="rod") {
-								rod=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="rod") {
+									rod=nrule[1];
+									break;
+								}
 							}
-						}
 
-						let words=this.searchWordNumber(word);
-						for (let w of words[0]) {
-							if ((cislo==-1 || w[1]==cislo) && (pad==-1 || w[1]==pad)  && (rod=="" || w[1]==rod)) {
-								return {Type: "Number", To: w, From: word};
+							let words=this.searchWordNumber(word);
+							for (let w of words[0]) {
+								if ((cislo==-1 || w[1]==cislo) && (pad==-1 || w[1]==pad)  && (rod=="" || w[1]==rod)) {
+									return {Type: "Number", To: w, From: word};
+								}
 							}
 						}
-					}
-					break;
+						break;
 
-				case "verb":
-					{
-						let cislo=-1, osoba=-1, cas="";
-						for (const nrule of vars) {
-							if (nrule[0]=="cislo") {
-								cislo=nrule[1];
-								break;
+					case "verb":
+						{
+							let cislo=-1, osoba=-1, cas="";
+							for (const nrule of vars) {
+								if (nrule[0]=="cislo") {
+									cislo=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="o") {
-								osoba=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="o") {
+									osoba=nrule[1];
+									break;
+								}
 							}
-						}
-						for (const nrule of vars) {
-							if (nrule[0]=="cas") {
-								cas=nrule[1];
-								break;
+							for (const nrule of vars) {
+								if (nrule[0]=="cas") {
+									cas=nrule[1];
+									break;
+								}
 							}
-						}
 
-						let words=this.searchWordVerb(word);
-						for (let w of words[0]){
-							if (w[1]==osoba && w[2]==pad && w[3]==cas) {
-								return {Type: "Verb", To: w, From: word};
+							let words=this.searchWordVerb(word);
+							for (let w of words[0]){
+								if (w[1]==osoba && w[2]==pad && w[3]==cas) {
+									return {Type: "Verb", To: w, From: word};
+								}
 							}
 						}
-					}
-					break;
+						break;
+				}
+			}else if (rules["exists"]!=undefined) {
+				//<{exists=ł}>
+				let ch=rules["exists"];
+				if (this.Stats()>0){
+					let words=this.searchExists(ch);
+							
+					if (words!=null) return {Type: "Check", To: "A", From: ch};
+					else return {Type: "Check", To: "N", From: ch};
+				} else return {Type: "Unknown", To: "?", From: ch};
 			}
-						//break;
-				//	}
-			//	}// else return {"Unknown", word, str};
-		//	}
-			// type=podst,prid,zajm,cisl
-			// 
+
 			return {Type: "Unknown", To: word, From: str};
 		}
 	}
