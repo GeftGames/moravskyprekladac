@@ -5656,7 +5656,10 @@ class LanguageTr {
 			for (let to of n.To){
 				if (to.Body.includes(input)) return n;
 				for (let shape of to.Pattern.Shapes){
-					if (shape.includes(input)) return n;
+					if (!Array.isArray(shape))shape=[shape];
+					for (let s of shape){
+						if (s.includes(input)) return n;
+					}
 				}
 			}
 		}
