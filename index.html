@@ -692,7 +692,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('vítr')">VÍTR</div>
 
 										<!-- Měkčení na konci slov-->
-										<div class="mapperNavrh" onclick="navrhClick('<{word=den|typ=pods|cislo=j|pad=1}>')">DEN</div>
+										<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
 									<!--	<div class="mapperNavrh" onclick="navrhClick('kost')">KOST</div>-->
 									</div>
 									<p>Přídavná jména</p>
@@ -782,6 +782,22 @@
 									</div>
 									<p>Citoslovce</p>
 									<div class="navrhCat">
+										<div class="mapperNavrh" onclick="navrhClick('ach')">ach</div>
+									</div>
+									<p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
+									<div class="navrhCat">
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=í}>')">í</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=á}>')">á</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=é}>')">é</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ľ}>')">ľ</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ṵ}>')">ṵ</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ạ́}>')">ạ́</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ə}>')">ə</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ŕ}>')">ŕ</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=́b}>')">́b</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ê}>')">ê</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ô}>')">ô</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dź</div>
 									</div>
 								</div>								
 							</div>
@@ -982,7 +998,7 @@
 						<li>Hranice mezi nářečními tvary jsou tak přesné, jak je mapa hustá z hlediska množství nalezených bodů.</li>
 						<li>Mapa je mapa regionů tzn. kulturní, ne nářečních oblastí! Vlastně nářeční oblasti se v historii měnily, třeba moravskoslovenská oblast se rozdělila na východomoravskou a ... a to je zajímavé třeba na článek do nějakého blogu. </li>
 						<li>Málo zabrazených bodů? Zkuste jiný tvar (pád, osobu, nebo ...)</li>
-						<li>Pozor! Hledáte li slova, která mají ve spisovné češtině v skloňování/časování více stejných travů, překlad může mít rozličné. Např. vesnice, bez vesnice bude v mapě vyhledáno pro 1. i 2. pád, v mapě se objeví ďeďina i ďeďiny, lze to omezit zadáním specifikace &gt;{word=vesnice|typ=pods|cislo=j|pad=1}&lt;, v některých slovách to asi tolik vadit nebude např. pro den (1. a 4.) a může se tak zvýšit množství výsledků.</li>
+						<li>Pozor! Hledáte li slova, která mají ve spisovné češtině v skloňování/časování více stejných travů, překlad může mít rozličné. Např. vesnice, bez vesnice bude v mapě vyhledáno pro 1. i 2. pád, v mapě se objeví ďeďina i ďeďiny, lze to omezit zadáním specifikace &lt;{word=vesnice|typ=pods|cislo=j|pad=1}&gt;, v některých slovách to asi tolik vadit nebude např. pro den (1. a 4.) a může se tak zvýšit množství výsledků.</li>
 					</div>
 				</div>
 			</div>
