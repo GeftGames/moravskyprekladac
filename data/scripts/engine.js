@@ -354,7 +354,7 @@ function customTheme() {
 			break;
 		}
 	}
-	mapRedraw();
+	window.requestAnimationFrame(mapRedraw);
 }
 
 function toggleTransitionOn() {
@@ -759,7 +759,7 @@ function ShowMapPage(){
 		document.getElementById('nav').classList.add('navTrans');
 		document.getElementById('nav').style.opacity='0.1';
 	}
-	mapRedraw();
+	window.requestAnimationFrame(mapRedraw);
 }
 
 function CloseMapPage(){
@@ -1493,10 +1493,10 @@ function Load() {
     document.getElementById("lte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("rte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("header").style.transition="background-color .3s, color .3s;";*/
-	document.getElementById('mapperCanvas').addEventListener("resize", (event) => {
-
-
+	window.addEventListener("resize", (event) => {
+		window.requestAnimationFrame(mapRedraw);
 	});
+	
 	mapSelectLang.addEventListener("wheel", function(e) {
 		e.preventDefault();
 		let prevZoom=map_Zoom;
@@ -1519,7 +1519,7 @@ function Load() {
 		map_LocX-=(map_Zoom-prevZoom)*imgMap.width*imgPMX;
 		map_LocY-=(map_Zoom-prevZoom)*imgMap.height*imgPMY;
 
-		mapRedraw();
+		window.requestAnimationFrame(mapRedraw);
 	});
 
 	// Počet prstů na obrazovce
@@ -1529,12 +1529,12 @@ function Load() {
 		map_LocTmpX=e.clientX-map_LocX;
 		map_LocTmpY=e.clientY-map_LocY;	
 		
-		mapRedraw();
+		window.requestAnimationFrame(mapRedraw);
 	});
 	
 	mapSelectLang.addEventListener('mouseup', (e) => {
 		moved = false;	
-		mapRedraw();
+		window.requestAnimationFrame(mapRedraw);
 	});
 
 	mapSelectLang.addEventListener('click', (e) => {
@@ -1542,7 +1542,7 @@ function Load() {
 			const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
 			const mouseY = e.clientY  -rect.top/*-*/;
 		mapClick(mouseX,mouseY);
-		mapRedraw();
+		window.requestAnimationFrame(mapRedraw);
 	});
 
 	mapSelectLang.addEventListener('mousemove', (e) => {
@@ -1563,13 +1563,14 @@ function Load() {
 		//	console.log(map_LocX,rect.clientWidth);
 			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
 			//setTransform();	
-			mapRedraw();
+			//mapRedraw();
+			window.requestAnimationFrame(mapRedraw);
 			//mapZoom.style.top=positionY+"px";
 			//mapZoom.style.left=positionX+"px";
 		} else {
 			const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
 			const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-			const mouseY = e.clientY  -rect.top/*-*/;
+			const mouseY = e.clientY - rect.top;
 			//console.log('not moved')
 			mapMove(mouseX, mouseY);
 		}
@@ -1596,7 +1597,7 @@ function Load() {
 			map_TouchStartY=my;
 			map_MoveTime=Date.now();
 			map_Touches=1;
-			mapRedraw();
+			window.requestAnimationFrame(mapRedraw);
 		}else{
 			console.log("touchstart zoom");
 			var touch2 = e.touches[1] || e.changedTouches[1];
@@ -1623,6 +1624,15 @@ function Load() {
 			let mx=touch.pageX;
 			let my=touch.pageY-rect.top;
 
+			if (map_Touches==2){
+				map_LocX-=map_LocTmpX;
+				map_LocY-=map_LocTmpY;
+
+				map_LocTmpX=0;
+				map_LocTmpY=0;
+				map_Touches=1;
+			}
+
 			// <300ms kliknutí
 			if ((Date.now()-map_MoveTime)<300) {
 				// <10px vzdálenost od začátku 
@@ -1637,7 +1647,7 @@ function Load() {
 			map_Touches=1;
 		}
 		
-		mapRedraw();
+		window.requestAnimationFrame(mapRedraw);
 	});
 	let map_ZoomInit;
 	mapSelectLang.addEventListener('touchmove', (e) => {
@@ -1649,13 +1659,21 @@ function Load() {
 			console.log("mousemove move");
 			var touch = e.touches[0] || e.changedTouches[0];
 			let mx=touch.pageX, my=touch.pageY-rect.top;
+		/*	if (map_Touches==2){
+				map_LocX-=map_LocTmpX;
+				map_LocY-=map_LocTmpY;
+
+				map_LocTmpX=0;
+				map_LocTmpY=0;
+				map_Touches=1;
+			}*/
 			//console.log(touch.pageX,touch.pageY);
 
 			if (moved) {
 				map_LocX=mx-map_LocTmpX;
 				map_LocY=my-map_LocTmpY;
 	
-				mapRedraw();
+				window.requestAnimationFrame(mapRedraw);
 			} else {
 				mapMove(touch.pageX,touch.pageY);
 			}
@@ -1702,7 +1720,7 @@ function Load() {
 				map_LocX-=(map_Zoom-prevZoom)*imgMap.width*imgPMX;
 				map_LocY-=(map_Zoom-prevZoom)*imgMap.height*imgPMY;
 
-				mapRedraw();
+				window.requestAnimationFrame(mapRedraw);
 			}
 		}
 	});
