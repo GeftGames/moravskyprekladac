@@ -1,6 +1,9 @@
 # Poslední změny
-
-### 30.01. 
+### 2024 2.2. 
+- Dotazování existence (v mapě návrhy znaků.. <{exists=ł}>)
+- Rychlejší vykreslování výběru z mapky
+  
+### 2024 30.01. 
 - Změna mapky regionů
 
 ### Dřívější
