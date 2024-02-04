@@ -5648,12 +5648,12 @@ class LanguageTr {
 			}
 		}
 		for (const n of this.Interjections) {
-			for (let to of n.output){
+			for (let to of n.output) {
 				if (to.Text.includes(input)) return n;
 			}
 		}
 		for (const n of this.Nouns) {
-			for (let to of n.To){
+			for (let to of n.To) {
 				if (to.Body.includes(input)) return n;
 				for (let shape of to.Pattern.Shapes){
 					if (!Array.isArray(shape))shape=[shape];
@@ -5684,15 +5684,21 @@ class LanguageTr {
 			for (let to of n.To){
 				if (to.Body.includes(input)) return n;
 				for (let shape of to.Pattern.Shapes){
-					if (shape.includes(input)) return n;
+					if (!Array.isArray(shape)) shape=[shape];
+					for (let s of shape) {
+						if (s.includes(input)) return n;
+					}
 				}
 			}
 		}
 		for (const n of this.Numbers) {
 			for (let to of n.To){
 				if (to.Body.includes(input)) return n;
-				for (let shape of to.Pattern.Shapes){
-					if (shape.includes(input)) return n;
+				for (let shape of to.Pattern.Shapes) {
+					if (!Array.isArray(shape)) shape=[shape];
+					for (let s of shape) {
+						if (s.includes(input)) return n;
+					}
 				}
 			}
 		}
@@ -5701,27 +5707,42 @@ class LanguageTr {
 				if (to.Body.includes(input)) return n;
 				if (to.Pattern.SContinous){
 					for (let shape of to.Pattern.Continous) {
-						if (shape.includes(input)) return n;
+						if (!Array.isArray(shape)) shape=[shape];
+						for (let s of shape) {
+							if (s.includes(input)) return n;
+						}
 					}
 				}
 				if (to.Pattern.SFuture) {
 					for (let shape of to.Pattern.Future) {
-						if (shape.includes(input)) return n;
+						if (!Array.isArray(shape)) shape=[shape];
+						for (let s of shape) {
+							if (s.includes(input)) return n;
+						}
 					}
 				}
 				if (to.Pattern.SPastActive) {
 					for (let shape of to.Pattern.PastActive) {
-						if (shape.includes(input)) return n;
+						if (!Array.isArray(shape)) shape=[shape];
+						for (let s of shape) {
+							if (s.includes(input)) return n;
+						}
 					}
 				}
 				if (to.Pattern.SPastPasive) {
 					for (let shape of to.Pattern.PastPasive) {
-						if (shape.includes(input)) return n;
+						if (!Array.isArray(shape)) shape=[shape];
+						for (let s of shape) {
+							if (s.includes(input)) return n;
+						}
 					}
 				}
 				if (to.Pattern.SImperative) {
 					for (let shape of to.Pattern.Imperative) {
-						if (shape.includes(input)) return n;
+						if (!Array.isArray(shape)) shape=[shape];
+						for (let s of shape) {
+							if (s.includes(input)) return n;
+						}
 					}
 				}				
 				for (let shape of to.Pattern.Infinitive) {
@@ -6700,7 +6721,7 @@ class LanguageTr {
 				} else return {Type: "Unknown", To: "?", From: ch};
 			}
 
-			return {Type: "Unknown", To: word, From: str};
+			return {Type: "Unknown", To: "?", From: str};
 		}
 	}
 	
