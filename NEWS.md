@@ -1,4 +1,7 @@
 # Poslední změny
+### 20245.2. 
++ 40 000 záznamů
+
 ### 2024 2.2. 
 - Dotazování existence (v mapě návrhy znaků.. <{exists=ł}>) A=ano vyskytuje se, N=nevyskytuje se
 - Rychlejší vykreslování výběru z mapky
