@@ -3,6 +3,7 @@ fSpisovná čeština
 tDolany
 aGG
 d17.03.2023 8:34:43
+izemski japka se tenkráď nevêorávalê, ale kopalê motêkó Dolany OL
 c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/101367.pdf
 zCS_HA-Náměšť
 lHanáčtina
@@ -17,9 +18,11 @@ oHaná
 -
 z toho|1|s teho|
 na zadek|1|na prcino|
+brambory|1|zemski japka|
 -
 -
 haj|kré
+nevy|nevê
 -
 ou|ó
 ej|é
@@ -28,6 +31,8 @@ ej|é
 -
 ost|osť
 hat|hať
+vali|valê
+paly|palê
 -
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 hranicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
@@ -35,6 +40,7 @@ pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+motyKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 -
 kost|1|?|i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 hranicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e|e?|ích?|emi?
@@ -42,12 +48,14 @@ pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 mléKO|0|ko?|ka?|ku?|ko?|ko?|ku,ce?|kem?|ka?|k?|kům?|ka?|ka?|cích,kách?|ky?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 člônEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+motêKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kó|ky?|k?|kám?|ky?|ky?|kách?|kami?
 -
 radost|kost|0|radosť|kost|
 hranic|hranicE|0|hraňic|hranicE|
 zadek||0|prcina||
 květin|ženA|0|kvit|mléKO|
 člun|člunEK|0|člôn|člônEK|
+moty|motyKA|0|motê|motêKA|
 -
 -
 -
@@ -55,14 +63,17 @@ květin|ženA|0|kvit|mléKO|
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 MY|my|nás|nám|nás|my|nás|námi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ťi|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|te|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 ON|on|ho*?,jej?,něj**jeho?,něho**?|mu*?,jemu?,němu**?|ho*?,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
 MY|my?|náz|nám?|nás?|my?|nás?|námi?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 -
 t|tEN||TEN|
 |ON||ON|
 |MY||MY|
+|SE||SE|
 -
 -
 -
@@ -75,6 +86,7 @@ musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,
 puSTIT|30|-1|stit|stím|stíš|stí|stíme|stíte|stí|sť|sťme|sťte|stil|stil|stila|stilo|stili|stily|stily|stila|štěn|štěn|štěna|štěno|štěni|štěny|štěny|štěna
 dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 trhAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+kopAT|15|-1|at|u,kopám|eš,kopáš|e,kopá|eme,kopáme|ete,kopáte|ou,kopají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|mňelê|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 stavĚT|15|-1|ět?|ím?|íš?|í?|íme?|íte?|í,stavějí?|,stavěj?|me,stavějme?|te,stavějte?|ěl?|ěl?|ěla?|ělo?|jele|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
@@ -84,6 +96,7 @@ musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el|el,musil?|ela,musila?|e
 puSTIT|30|-1|sťit|stím?|stíš?|stí?|stíme?|stíte?|stí?|sť?|sťme?|sťte?|stil?|stil?|stila?|stilo?|stili?|stily?|stily?|stila?|štěn?|štěn?|štěna?|štěno?|štěni?|štěny?|štěny?|štěna?
 dostaT|22|-1|t?|nu?|neš?|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|l?|l?|la|lo?|li?|ly?|ly?|la?
 trhAT|15|-1|ať|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+kopAT|15|-1|at?|u?,kopám?|eš?,kopáš?|e?,kopá?|eme?,kopáme?|ete?,kopáte?|ou?,kopají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|alê|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |MÍT||MÍT|
 stav|stavĚT|stav|stavĚT|
@@ -93,15 +106,19 @@ mus|musET|mos|musET|
 pu|puSTIT|po|puSTIT|
 dosta|dostaT|dosta|dostaT|
 trh|trhAT|trh|trhAT|
+||nevêorávalê||
+kop|kopAT|kop|kopAT|
 -
 tam|tam|
 tak|tag|
 až|až|
+tenkrát|tenkráď|
 -
 na||na|
 bez||bez|
 -
 kdybychom|debehme|
+ale|ale|
 -
 -
 ach|ach|

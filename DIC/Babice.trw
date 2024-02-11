@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tBabice
 aGG
 d31.05.2023 9:21:37
@@ -10,6 +10,7 @@ q0
 -
 -
 -
+s tím|1|s tym|
 -
 -
 ně|ne
@@ -23,17 +24,24 @@ pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 ženA|1|a?|y?|ě?|u?|o?|ě?|ú|y?|?|ám?|y?|y?|ách?|ami?
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kú|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-vesnice|dědina||
-harmoni|pohádKA|pohádKA
+vesnice||0|dědina||
+harmoni|pohádKA|0|harmoni|pohádKA|
+||0|pančochy||
 -
 -
 -
 -
-všECHEN|-1|echen|eho|emu|eho|echen|em|ím|ichni|ech|em|echny|ichni|ech|emi|echen|eho|emu|echen|echen|em|ím|echny|ech|em|echny|echny|ech|emi|echna|í|í|echnu|echna|í|í|echny|ech|em|echny|echny|ech|emi|echno|eho|emu|echno|echno|em|ím|echna|ech|em|echna|echna|ech|emi
+všECHEN|echen|eho|emu|eho|echen|em|ím|ichni|ech|em|echny|ichni|ech|emi|echen|eho|emu|echen|echen|em|ím|echny|ech|em|echny|echny|ech|emi|echna|í|í|echnu|echna|í|í|echny|ech|em|echny|echny|ech|emi|echno|eho|emu|echno|echno|em|ím|echna|ech|em|echna|echna|ech|emi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-fšECHEN|-1|echen?|eho?|emu?|eho?|echen?|em?|ím?|ici|ech?|em?|echny?|ichni?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echno?|eho?|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
+fšECHEN|echen?|eho?|emu?|eho?|echen?|em?|ím?|ici|ech?|em?|echny?|ichni?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echno?|eho?|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tym|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
-vš|všECHEN|fšECHEN
+vš|všECHEN|vš|fšECHEN|
+|SE||SE|
+t|tEN|t|tEN|
 -
 -
 -
@@ -42,11 +50,18 @@ naVÉST|31|-1|vést|vedu|vedeš|vede|vedeme|vedete|vedou|povedu,budu vést|poved
 -
 naVÉST|31|-1|vést?|vedu?|vedeš?|vede?|vedeme?|vedete?|vedou?|povedu,budu vést?|povedeš,budeš vést?|povede,bude vést?|povedeme,budeme vést?|povedete,budete vést?|povedou,budou vést?|veď?|veďme?|veďte?|vedl?|vedl?|vedla?|vedlo?|vedli?|vedly?|vedly?|vedla?|veden?|veden?|vedena?|vedeno?|vedeni?|vedeny?|vedeny?|vedena?
 -
-na|naVÉST|naVÉST
+na|naVÉST|na|naVÉST|
+||doštrykuješ||
+prčit||šušňíš||
 -
-dokud|dokáď
+dokud|dokáď|
+kdy|hdy|
+už|už|
+bůhvíjak|buhvijag|
+dlouho|dłouho|
 -
+s||s|
 -
-protože|protožé
+protože|protožé|
 -
 -

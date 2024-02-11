@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tObyčtov
 aGG
 d06.04.2023 9:39:14
@@ -21,16 +21,30 @@ q0
 -
 -
 -
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
+-
+ON|von|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+-
+|ON||ON|
 -
 -
 -
 -
+umĚT|7|-1|ět|ím|íš|í|íme|íte|ějí,umí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+čÍST|15|-1|íst|tu|teš|te|teme|tete|tou|ti|těme|těte|etl|etl|etla|etlo|etli|etly|etly|etla|ten|ten|tena|teno|teni|teny|teny|tena
+pSÁT|15|-1|sát|íši,píšu|íšeš|íše|íšeme|íšete|íší,píšou|iš|išme|ište|sal|sal|sala|salo|sali|saly|saly|sala|sán|sán|sána|sáno|sáni|sány|sány|sána
+-
+umĚT|7|-1|ět?|ím?|íš?|í|íme?|íte?|ějí?,umí?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+čÍST|15|-1|íst|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
+pSÁT|15|-1|sat|íši?,píšu?|íšeš?|íše?|íšeme?|íšete?|íší?,píšou?|iš?|išme?|ište?|sal?|sal?|sala?|salo?|sali?|saly?|saly?|sala?|sán?|sán?|sána?|sáno?|sáňi?|sány?|sány?|sána?
+-
+um|umĚT|um|umĚT|
+neum|umĚT|neum|umĚT|
+č|čÍST|č|čÍST|
+p|pSÁT|p|pSÁT|
 -
 -
 -
--
--
--
--
+ani|aňi|
 -
 -

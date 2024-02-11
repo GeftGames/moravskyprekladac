@@ -1,8 +1,9 @@
-TW v1.0
+TW v2
 tBudeč
 aGG
 d18.11.2023 10:47:57
-c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+iřezn. vepřový bok: maso podbřišňí je pamflek nebo taki pauchflek Budeč JH
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Bude%C4%8D+JH%22">SNČJ</a>
 g49.0869576,15.5892077
 q0
 -
@@ -10,7 +11,9 @@ q0
 -
 -
 -
-to je směs|je to smňes
+to je směs|1|je to smňes|
+malý tlusťoch|1|bacek|
+vepřový bok|1|pamflek||pauchflek|
 -
 -
 -
@@ -20,38 +23,58 @@ mě|mňe
 drůbež|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 směs|1||i|i||i|i|í|i|í|ím|i|i|ích|mi
 brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
+klestí|0|||||||m|-|-|-|-|-|-|-
+tlusťoCH|2|ch|cha|chu,chovi,ši|cha|chu|chu,chovi,ši|chem|chové,ši|chů|chům|chy|chové|ších|chy
+masO|0|o|a|u|o|o|e,u|em|a||ům|a|a|ech|y
 -
 drůbež|1|š|že?|ži?|ž?|ži?|ži?|ží?|že?|ží?|žím?|že?|že?|žích?|žemi?
 směs|1||i?|i?|?|i?|i?|í?|i?|í?|ím?|i?|i?|ích?|mi?
 brambor|-1|?|u?|u?|?|e?|u?|em?|y?||ům?|y?|y?|ech?|y?
+činči|0||?|?|?|?|?|m?|-|-|-|-|-|-|-
+beraňik|2||cha?|chu?,chovi?,ši?|cha?|chu?|chu?,chovi?,ši?|chem?|chové?,ši?|chú?|chúm?|chy?|chové?|ších?|chy?
+masO|0|o|a?|u?|o?|o?|e?,u?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
-drůbež|drůbež|0|drube|drůbež
-||0|kaleňinou|
-směs|směs|0|smňes|směs
-brambor|brambor|0|brambor|brambor
-||0|votrubi|
+drůbež|drůbež|0|drube|drůbež|
+||0|kaleňinou||
+směs|směs|0|smňes|směs|
+brambor|brambor|0|brambor|brambor|
+||0|votrubi||
+klestí|klestí|0|činči|činči|
+||0|||
+tlusťo|tlusťoCH|0|beraňik|beraňik|
+mas|masO|0|mas|masO|
 -
+tlustÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
+tlusTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|-|-|tá?|tých?|tým?|tá?|tá?|tých?|tými?|-|-|tá?|té?|té?|tou?|tá?|té?|tou?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-|tej|tého?|tému?|tého?|tý?|tém?|tým?|-|-|ťí?|tých?|tým?|té?|ťí?|tých?|tými?|-|-|tý?|tého?|tému?|tý?|tý?|tém?|tým?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-
 -
-rozdačkaníh ||
+rozdačkaníh ||rozdačkaníh ||
+tlust|tlustÝ|tlus|tlusTÝ|
+||podbřišňí ||
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-SE|-1|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
+SE|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
 -
-SE|SE
+|SE||SE|
 -
 -
 -
 -
 krmIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 krmIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-krm|krmIT|krmIT
+krm|krmIT|krm|krmIT|
+|BÝT||BÝT|
+-
+také,taky|taki|
 -
 -
--
-a
+a|a|
+jako|jako|
+nebo|nebo|
 -
 -

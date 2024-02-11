@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tRájec
 aGG
 d23.10.2023 20:05:25
-c#Zdroje dat\n-sncj.ujc.cas.cz
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/dialektologiemor02bartuoft/page/140/mode/1up (nevyčerpáno)
 g49.8565676,16.902328
 q0
 -
@@ -10,15 +10,15 @@ q0
 -
 -
 -
-mluvit hanáckým nářečím|bócat
-ušpiněnec|čuňák
-hubená žena|dlaška
-velký kus|bácan
-jeden bouchanec|jeden bácan
-něco drobného|cvergle
-velké jmění|baňkál
-skoro s námi|pomalu s námi
-je velmi zmrzlá|jak cén umrzlá
+mluvit hanáckým nářečím|1|bócat|
+ušpiněnec|1|čuňák|
+hubená žena|1|dlaška|
+velký kus|1|bácan|
+jeden bouchanec|1|jeden bácan|
+něco drobného|1|cvergle|
+velké jmění|1|baňkál|
+skoro s námi|1|pomalu s námi|
+je velmi zmrzlá|1|jak cén umrzlá|
 -
 -
 -
@@ -50,20 +50,20 @@ hrnEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce|ce?|cích?|ci?
 koš|3|?|e?|i?|?|i?|i|em?|e?|ů?|ům?|e?|e?|ích?|i?
 zemĚ|1||ě?|i?|i?|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
 -
-ran|ranEC|0|bêmbel|bêmbel
-ušpiněnec||0|čuňák|
-pokoj|pokoj|0|pokoj|pokoj
-fazol|fazolE|0|cvergl|cverglE
-buvol|buvol|0|bivol|buvol
-hlupá|hlupáK|0|bivol|buvol
-klouzač|klouzačKA|0|čôndruf|čôndrufKA
-||0|duranec |
-v|vEŠ|0|bák|bákA
-bartoš|bartoš|2|bartoš|bartoš
-olomouc|olomouc|2|volomóc|olomouc
-hrn|hrnEC|0|hrn|hrnEC
-koš|koš|0|koš|koš
-zem|zemĚ|0|zem|zemĚ
+ran|ranEC|0|bêmbel|bêmbel|
+ušpiněnec||0|čuňák||
+pokoj|pokoj|0|pokoj|pokoj|
+fazol|fazolE|0|cvergl|cverglE|
+buvol|buvol|0|bivol|buvol|
+hlupá|hlupáK|0|bivol|buvol|
+klouzač|klouzačKA|0|čôndruf|čôndrufKA|
+||0|duranec ||
+v|vEŠ|0|bák|bákA|
+bartoš|bartoš|2|bartoš|bartoš|
+olomouc|olomouc|2|volomóc|olomouc|
+hrn|hrnEC|0|hrn|hrnEC|
+koš|koš|0|koš|koš|
+zem|zemĚ|0|zem|zemĚ|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 novÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -71,23 +71,23 @@ novÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|
 zeleNÉ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|né|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 novÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|i?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|i|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-čistotn|cód|zelenÝ|zeleNÉ
-nov|novÝ|novÝ
+čistotn|zelenÝ|cód|zeleNÉ|
+nov|novÝ|nov|novÝ|
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-JÁ|-1|já|mě?,(knižně) mne[2]?|mně?,mi?|mě?,(knižně) mne[2]?|já?|mně?|mnou?
-SE|-1|-|sebe?|si?,sobě?|se?,sebe?|-|sobě?|sebou?
+JÁ|já|mě?,(knižně) mne[2]?|mně?,mi?|mě?,(knižně) mne[2]?|já?|mně?|mnou?
+SE|-|sebe?|si?,sobě?|se?,sebe?|-|sobě?|sebou?
 -
-JÁ|JÁ
-SE|SE
+|JÁ||JÁ|
+|SE||SE|
 -
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 -
 jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ním?|ni?|něch?|něm?|ny?|ni?|něch?|němi?|en?|noho?|nomu?|en?|en?|nom?|ním?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|no?|noho?|nomu?|no?|no?|nom?|ním?|na?|něch?|něm?|na?|na?|něch?|němi?
 -
-jed|jedEN|jedEN
+jed|jedEN|jed|jedEN|
 -
 žvaNIT|15|-1|nit|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|nil|nil|nila|nilo|nili|nily|nily|nila|něn|něn|něna|něno|něni|něny|něny|něna
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
@@ -105,25 +105,25 @@ mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla
 mluvIT|15|-1|it?|ím?|íš?|i|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-žva|čamč|žvaNIT|čamčET
-houpat|bómkat||
-bouchat|bunkat||
-m|mÍT|mÍT
-cink|cing|cinkNOUT|cinkNOUT
-klouzat|čondrovat ||
-mačk|cochm|mačkAT|cochmAT
-mluv|mluvIT|mluvIT
-JET|JET
-BÝT|BÝT
+žva|žvaNIT|čamč|čamčET|
+houpat||bómkat||
+bouchat||bunkat||
+m|mÍT|m|mÍT|
+cink|cinkNOUT|cing|cinkNOUT|
+klouzat||čondrovat ||
+mačk|mačkAT|cochm|cochmAT|
+mluv|mluvIT|mluv|mluvIT|
+|JET||JET|
+|BÝT||BÝT|
 -
-téměř|pomalu
-skoro|pomalu
+téměř|pomalu|
+skoro|pomalu|
 -
-na|
-do|
-pro|
+na||na|
+do||do|
+pro||pro|
 -
-a
-jak
+a|a|
+jak|jak|
 -
 -

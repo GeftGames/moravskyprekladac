@@ -13,6 +13,7 @@ oHorácko
 -
 zase jsem to jednou udělal|1|to sem to zas jednou vivet|
 -
+|1|vot ubigaci k ubigaci|
 -
 -
 -
@@ -20,43 +21,67 @@ zase jsem to jednou udělal|1|to sem to zas jednou vivet|
 -
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+borůvčí|0|||||||m|||m|||ch|mi
+čtvrt|1||ě|i||i|i|í|ě|í|ím|ě|ě|ích|ěmi
+hodinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 městO|0|o|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 doktoR|2|r|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
+borôfči|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+štvrT|1|t?|ťe?|ťi?|d|ťi?|ťi?|ťí?|ťe?|ťí?|ťím?|ťe?|ťe?|ťích?|ťemi?
+hoďiNA|1|na?|ni|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 -
 díl|městO|0|ďil|městO|
 dokto|doktoR|0|dokto|doktoR|
+borůvčí|borůvčí|0|borôfči|borôfči|
+čtvrt|čtvrt|0|štvr|štvrT|
+hodin|hodinA|0|hoďi|hoďiNA|
+||0|patrola ||
+||0|od ubigaci  k ubigaci ||
 -
 -
 -
 -
 JÁ|já|mě,mne|mně,mi|mě,mne|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
 JÁ|já?|mňe|mňe?,mi?|mě?,mne?|já?|mňe?|mnou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
 |JÁ||JÁ|
+t|tEN||TEN|
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 vyvÉST|30|-1|ést|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
+trvAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 -
 BÝT|247|-1|být?|sem|jsi?|je?|sme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 vivÉST|30|-1|ést?|edu?|edeš?|ede?|edeme?|edete?|edou?|eď?|eďme?|eďte?|et|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
+trvAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo|ali?|aly?|aly?|ala?
+choĎIT|15|-1|ďit?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila|ďilo?|ďili?|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
 -
 |BÝT||BÝT|
 vyv|vyvÉST|viv|vivÉST|
 ovazovat||vovazoval ||
+trv|trvAT|trv|trvAT|
+netrv|trvAT|netrv|trvAT|
+cho|choDIT|cho|choĎIT|
 -
 najednou|najednou|
 večer|večir|
 zase,zas|zas|
 jednou|jednou|
 tam|tam|
+už|uš|
 -
 na||na|
 pro||pro|
+ani||aňi|
+od||vot|
 -
 a|a|
 -

@@ -1,0 +1,80 @@
+TW v2
+tJestřabice
+aGG
+d23.01.2024 20:37:58
+c#Zddroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Kory%C4%8Dany+KM+%28Jest%C5%99abice%29%22">SNČJ</a>
+sKoryčany
+g49.0925484,17.1305628
+q0
+-
+-
+-
+-
+-
+ze tří|1|ze třeh|
+ze čtyř|1|ze čtiřeh|
+pociťovat bolení|1|cíťid bolesť|
+-
+-
+-
+-
+-
+cukrovKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+čísLO|0|lo|la|lu|lo|lo|le|lem|la|el|lům|la|la|lech|ly
+dvojKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+bolest|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+-
+cukroFKA|1|fka|fky?|fce?|fku?|fko?|fce?|fkou?|fky?|fek?|fkám?|fky?|fky?|fkách?|fkami?
+čísLO|0|lo?|la?|lu?|lo|lo?|le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
+dvójKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+bolesT|1|t?|ťi?|ťi?|ť|ťi?|ťi?|ťí?|ťi?|ťí?|tem?|ťi?|ťi?|tech?|tmi?
+-
+cukrov|cukrovKA|0|cukrú|cukroFKA|odrúda jablek
+čís|čísLO|0|čís|čísLO|
+dvoj|dvojKA|0|dvój|dvójKA|
+bolest|bolest|0|boles|bolesT|
+-
+-
+-
+-
+kDO|do|oho|omu|oho|do|om|ým
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+-
+KDO|gdo|koho?|komu?|koho?|kdo?|kom?|kým?
+SE|-|sebe?|si,sobje?|se?,sebe?|-|sobje?|sebou?
+-
+k|kDO||KDO|
+|SE||SE|
+-
+jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
+třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
+čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
+-
+jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
+třI|2|i?|třeh|em?|i?|i?|ech?|emi?
+čtiřI|2|i?|ech|em?|i?|i?|ech?|tyřma[2]?,mi?,čtyřma[2]?
+-
+jed|jedEN|jed|jedEN|
+tř|třI|tř|třI|
+čtyř|čtyřI|čtiř|čtiřI|
+-
+vytÁHNOUT|30|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl|áhl|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+cÍTIT|15|-1|ítit|ítím|ítíš|ítí|ítíme|ítíte|ítí|iť|iťme|iťte|ítil|ítil|ítila|ítilo|ítili|ítily|ítily|ítila|ítěn|ítěn|ítěna|ítěno|ítěni|ítěny|ítěny|ítěna
+-
+vytÁHNOUT|30|-1|áhnút|áhnu?|áhneš?|ahne|áhneme?|áhnete?|áhnou?|áhňi?|áhňeme?|áhňete?|áhl?|áhl?|áhla?|áhlo?|áhli?|áhly?|áhly?|áhla?|ažen?|ažen?|ažena?|aženo?|ažeňi?|aženy?|aženy?|ažena?
+mOCT|5|-1|oct?|ohu?|úžeš?|úže|úžeme?|úžete?|ohou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+cÍŤIT|15|-1|íťid|íťím?|íťíš?|íťí?|íťíme?|íťíte?|íťí?|iť?|iťme?|iťte?|íťil?|íťil?|íťila?|íťilo?|íťili?|íťily?|íťily?|íťila?|íťen?|íťen?|íťena?|íťeno?|íťeňi?|íťeny?|íťeny?|íťena?
+-
+vyt|vytÁHNOUT|vit|vytÁHNOUT|
+m|mOCT|m|mOCT|
+c|cÍTIT|c|cÍŤIT|
+-
+dál|dál|
+tak|tag|
+-
+ze||ze|
+-
+a|a|
+-
+-

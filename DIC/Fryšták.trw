@@ -158,12 +158,14 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 dávAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 dělAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 rozjET|22|-1|et|u|eš|e|edeme|edete|edou|eď|eďme|eďte|el|el|ela|elo|eli|ely|ely|ela
+čÍST|15|-1|íst|tu|teš|te|teme|tete|tou|ti|těme|těte|etl|etl|etla|etlo|etli|etly|etly|etla|ten|ten|tena|teno|teni|teny|teny|tena
 -
 dovÉZT|30|-1|ést?|ezu?|ezeš?|eze?|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ézł|ézł|edla?|edlo?|ezli?|ezly?|ezly?|ezla?|ezen?|ezen?|ezena?|ezeno?|ezeni?|ezeny?|ezeny?|ezena?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|były|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 dávAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ał|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 dělAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|ały|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 rozjET|22|-1|et?|u?|eš?|e?|edeme?|edete?|edou?|eď?|eďme?|eďte?|el?|el?|eła|elo?|eli?|ely?|ely?|ela?
+čÍST|15|-1|ýst|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
 -
 dov|dovÉZT|dov|dovÉZT|
 |BÝT||BÝT|
@@ -171,6 +173,7 @@ dáv|dávAT|dáv|dávAT|
 děl|dělAT|ďeł|dělAT|
 rozj|rozjET|rozj|rozjET|
 nerozj|rozjET|nerozj|rozjET|
+č|čÍST|č|čÍST|
 -
 moc|moc|
 potom|potom|

@@ -1,7 +1,9 @@
-TW v0.1
+TW v2
 tLupěné
 aGG
 d14.04.2023 15:26:10
+c#Zdroj dat\n-snčj
+sNemile
 g49.8654763,16.8407219
 q0
 -
@@ -13,22 +15,46 @@ q0
 -
 -
 -
+ali|ale
+-
+vagón|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+prkNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
+desKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek,k|kám|ky|ky|kách|kami
+-
+vagón|3|?|u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|e|y?|ech?|y?
+prkNO|0|no?|na?|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
+desKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|eg|kám?|ky?|ky?|kách?|kami?
+-
+vagón|vagón|0|vagón|vagón|
+prk|prkNO|0|des|desKA|?asi
+des|desKA|0|des|desKA|
 -
 -
 -
 -
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
+t|tEN||tEN|
 -
+třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
 -
+třI|2|e|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
 -
+tř|třI|tř|třI|
 -
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+nakládAT|30|-1|at|ám|áš|á|áme|áte|á|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
+BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+nakládAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|á?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ale|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
+|BÝT||BÝT|
+naklád|nakládAT|naklád|nakládAT|
 -
--
--
--
+třeba|třeba|
+deně|deňe|
 -
 -
 -

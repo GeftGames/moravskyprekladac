@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tČehovice
 aGG
 d29.05.2023 21:15:49
@@ -6,14 +6,15 @@ i z mêšleňim vidz na sestrô než na domáceg ôsinalê Čehovice PV
 c#Zdroje dat\n- Nástin české dialektologie-Bělič Jaromír; str.260
 g49.4326342,17.1742282
 q0
+oHaná
 -
 -
 -
 -
-počkejte chvíli|počkyte chvilu
+počkejte chvíli|1|počkyte chvilu|
 -
-na sestru|na sestrô
-s myšlením|z mêšleňim
+na sestru|1|na sestrô|
+s myšlením|1|z mêšleňim|
 -
 -
 -
@@ -29,20 +30,20 @@ myšlení|0|||||||m|||m|||ch|mi
 domácEK|1|eg|i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 myšlení|0|í?|í?|í?|í?|í?|í?|im|í?|í?|ím?|í?|í?|ích?|ími?
 -
-domácnost|domácnost|0|domác|domácEK
-myšlení|myšlení|0|mêšleň|myšlení
+domácnost|domácnost|0|domác|domácEK|
+myšlení|myšlení|0|mêšleň|myšlení|
 -
 -
 -
 -
-nÁŠ|-1|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-nÁŠ|-1|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|ašém|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|ašém|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|ašém|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
-tEN|-1|en?|eho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|e|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|eho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|ašém|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|ašém|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|ašém|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
+tEN|en?|eho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|e|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|eho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-nÁ|nÁŠ|nÁŠ
-t|tEN|tEN
+nÁ|nÁŠ|nÁ|nÁŠ|
+t|tEN|t|tEN|
 -
 -
 -
@@ -53,18 +54,18 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 počkAT|6|-1|at?|ej?|ejme?|yte|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 BÝT|247|-1|být?|sem,su|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-počk|počkAT|počkAT
-BÝT|BÝT
-usínat|ôsinalê||
+počk|počkAT|počk|počkAT|
+|BÝT||BÝT|
+usínat||ôsinalê||
 -
-však|šak
+však|šak|
 -
-před|
-i|aji|
-z|
-na|
+před||před|
+i||aji|
+z||z|
+na||na|
 -
-než
+než|než|
 -
-aby|abe
+aby|abe|
 -
