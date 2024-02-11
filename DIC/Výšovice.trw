@@ -2,14 +2,15 @@ TW v2
 tVýšovice
 aGG
 d19.08.2023 19:48:36
-išate̬ kladle̬ na luško, keri be̬lo bilónkéma zhlafcama jag naďiti (Výšovice PV)
-c#Zdrojke dat\n-https://www.avcr.cz/export/sites/avcr.cz/.content/galerie-souboru/pro-verejnost/Cechy-versus-Morava-tentokrat-v-jazyce.pdf\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+V%C3%BD%C5%A1ovice+PV">sncj.ujc.cas.cz</a>
+išate̬ kladle̬ na luško, keri be̬lo bilónkéma zhlafcama jag naďiti (Výšovice PV)\n Léseg vi, že bê pro sêlňicô muhl došêkovad dovos kameňa Výšovice PV\na mňelê s teho kolêkeré ôžêtek. Trávê, sena a otavê, že ňema muhlê podestilad dobêtek Výšovice PV\noňi si to muhlê dovolêt Výšovice PV
+c#Zdrojke dat\n-https://www.avcr.cz/export/sites/avcr.cz/.content/galerie-souboru/pro-verejnost/Cechy-versus-Morava-tentokrat-v-jazyce.pdf\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+V%C3%BD%C5%A1ovice+PV">sncj.ujc.cas.cz</a>\n\n#Popis nářečí\n-Ve Výšovicích, Vřesovicích, Stítovicích, v Dubě a Nenakovicích je ó (= ú) hodně vysoké = 6 : za našó zahradó.
 g49.4162919,17.1392058
 q0
 oHaná
 -
 -
 -
+Je cítit.|1|Tvaružeg ňó polechtá v nosô.|
 -
 -
 jako nadité|1|jag naďiti|
@@ -19,8 +20,16 @@ z jejich|1|z jejih|
 dutou kouli z bláta|1|bóchafkô|
 pomýšlí na docenta práv|1|sméšlijó na dochtora práf|
 na sebe|1|na sebe|
+velice daleko|1|dalečánsko|
+bolení břicha se zvuky|1|bóřce|
+na něj|1|na ňeho|
+v nose|1|v nosô|
+dovoz kamení|1|dovos kameňa|
+z teho|1|s teho|
+druhá tráva posečení|1|otavê|
 -
 -
+nej|né
 -
 ou|ó
 -
@@ -29,6 +38,13 @@ cemi|cama
 ku|kô
 seli|selê
 ali|alê
+mu|mô
+dní|dňi
+těji|ťéš
+chej|ché
+zila|zêla
+rý|ré
+hli|hlê
 -
 polštář|-1||e|i||i|i|em|e|ů|ům|e|e|ích|i
 lůžKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
@@ -37,46 +53,104 @@ písničKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 domácnost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 mučírNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
 rÁNA|1|ána|ány|áně|ánu|áno|áně|anou,ánou|ány|an|anám,ánám|ány|ány|anách,ánách|anami,ánami
-oKO|0|ko|ka|ku|ko|ko|ku|kem|či[1]|čí|čím|či|či|čích|čima*
+oKO|0|ko|ka|ku|ko|ko|ku|kem|či|čí|čím|či|či|čích|čima
 doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 zajíc|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+postel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+ančA|1|a|i|e|u|o|e|ou|i||ám|i|i|ách|ami
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+švestKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
+jazyK|3|k|ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
+nos|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+ruKA|1|ka|ky|ce|ku|ko|ce|kou|ce|kou|kám|ce|ce|kou,kách|kama
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+silnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+dovoz|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+kamení|0|||||||m|-|-|-|-|-|-|-
+užitEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+trÁVA|1|áva|ávy|ávě|ávu|ávo|ávě|ávou,astarale) travou|ávy|av|ávám,avám|ávy|ávy|ávách,avách|ávami,avami
+senO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+dobytEK|3|ek|ka|ku|ek|ku|ku|kem|-|-|-|-|-|-|-
 -
 zhlaVEC|3|vec?|fca?|fcô?|fca?|fcô?|fca?|fcem?|fce?|fcách?|fcám?|fce?|fce?|fcách?|fcama
 lůŠKO|0|ško?|ška?|šku?|ško|ško?|šku?|škem?|ška?|šek?|škům?|ška?|ška?|škách?|šky?
 kanEC|2|ec?|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
-pjesňičKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+pjesňičKA|1|ka|kê|ce?|ku?|ko?|ce?|kou?|kê|ek?|kám?|ky?|ky?|kách?|kami?
 domácEK|1|ek?|kô|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 mučírNA|1|na?|ny?|ně?|nô|no?|ně?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 rÁNA|1|ana|ány?|áňe?|ánu?|áno?|áňe?|anou?,ánou?|ány?|an?|anám?,ánám?|ány?|ány?|anách?,ánách?|anami?,ánami?
-oKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|či[1]?|čí?|čím?|či?|či?|čích?|čima
+oKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|či?|čí?|čím?|či?|či?|čích?|čima
 doktoR|2|r?|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
 zajíc|2|?|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i|ú?|úm?|e?|i?,ové?|ích?|i?
+strom|3|?|ô|u?|?|e?|u?,ě?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+ančA|1|a|i?|e?|u?|o?|e?|ou?|i?|?|ám?|i?|i?|ách?|ami?
+dEN|0|en?|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňe|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
+kadlátKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek|kám?|ky?|ky?|kách?|kami?
+mléKO|0|ko?|ka?|kô|ko?|ko?|ku?,ce?|kem?|ka?|k?|kúm?|ka?|ka?|cích?,kách?|ky?
+jazêK|3|k|ka?|ku?|k?|ku?|ku?,ce?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+nos|3|?|u?|u?||e?|ô|em?|y?|ú?|úm?|y?|y?|ech?|y?
+ruKA|1|ka?|kê|ce?|ku?|ko?|ce?|kou?|ce?|kou?|kám?|ce?|ce?|kou?,kách?|kama?
+stromEK|3|ek?|ku?|ku?|eg|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+sêlňicE|1|e?|e?|i?|ô|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+dovoZ|3|z?|zu?|zu?|s|ze?|zu?|zem?|zy?|zú?|zúm?|zy?|zy?|zech?|zy?
+kameňÍ|0|í?|í?|í?|a|í?|í?|ím?|-|-|-|-|-|-|-
+užitEK|3|ek?|ku?|ku?|ek|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+trÁVA|1|áva?|ávy?|ávě?|ávu?|ávo?|ávě?|ávou?,astarale) travou?|ávy?|av?|ávám?,avám?|ávê|ávy?|ávách?,avách?|ávami?,avami?
+senO|0|o?|a|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
+dobêtEK|3|ek?|ka?|ku?|ek|ku?|ku?|kem?|-|-|-|-|-|-|-
 -
 ||0|Dostálovi||
 ||0|s Ferdinem ||
 ||0|práf ||
+anč|ančA|2|anč|ančA|
+d|dEN|0|d|dEN|
 dokto|doktoR|0|dochto|doktoR|
-domácnost|domácnost|0|domác|domácnost|
+domácnost|domácnost|0|domác|domácEK|
+jazy|jazyK|0|jazê|jazêK|
 kan|kanEC|0|kan|kanEC|
 kanón||0|s kanóna||
+mlé|mléKO|0|mli|mléKO|
 mučír|mučírNA|0|môčir|mučírNA|
+nos|nos|0|nos|nos|
 o|oKO|0|o|oKO|
 oblečení||0|šate||
 písnič|písničKA|0|pjesňič|pjesňičKA|
 polštář|polštář|0|zhla|zhlaVEC|
-postel||0|lu|lůŠKO|
+postel|postel|0|lu|lůŠKO|
 r|rÁNA|0|r|rÁNA|jako z kanóna
+ru|ruKA|0|rô|ruKA|
+strom|strom|0|strom|strom|
+švest|švestKA|0|kadlát|kadlátKA|
+větvič|písničKA|0|halós|pjesňičKA|
 zajíc|zajíc|0|zajic|zajíc|
+tvarůž|stromEK|0|tvaruž|stromEK|
+syreč|stromEK|0|tvaruž|stromEK|
+silnic|silnicE|0|sêlňic|sêlňicE|
+dovoz|dovoz|0|dovo|dovoZ|
+kamení|kamení|0|kameň|kameňÍ|
+užit|užitEK|0|ôžêt|užitEK|
+tr|trÁVA|0|tr|trÁVA|
+sen|senO|0|sen|senO|
+dobyt|dobytEK|0|dobêt|dobêtEK|
 -
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 divoKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
+jarní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kéma|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kéma|?|?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kéma|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kéma|?|?
 divoKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|ké|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|ký?|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
+jarňí|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-||ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
+zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|ni|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 -
 bělouč|hezKÝ|bilón|hezKÝ|
 nadité||naďiti||
 divo|divoKÝ|ďivo|divoKÝ|
+spodní|jarní|spodňi|jarňí|
+obran|zelenÝ|obra|zeleNÝ|
+||kolêkeré||
 -
 kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
@@ -85,14 +159,18 @@ nesklonné|rý
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 svŮJ|ůj|ého|ému|ého|ůj|ém|ým|i,í|ých|ým|e,é|i,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|e,é|ých|ým|e,é|e,é|ých|ými|e,á|í,é|í,é|i,ou|e,á|í,é|í,ou|e,é|ých|ým|e,é|e,é|ých|ými|e,é|ého|ému|e,é|e,é|ém|ým|e,á|ých|ým|e,á|e,á|ých|ými
+něCO|co|čeho|čemu|co|co|čem|čím
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
 -
 kteRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
-TEN|ten?|teho|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|teho|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|tá|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|teho|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
-ONI|oni?|jich?,nich*?|jim?,nim*?|je?,ně*?|-|nich*?|jimi?,nimi*?
+TEN|ten?|teho|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|teho|tomu?|ten?|-|tom?|tím?|tê|těch?|těm?|ty?|-|těch?|těmi?|tá|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|teho|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+ONI|oňi|jich?,nich*?|jim?,nim*?|je?,ně*?|-|nich*?|jimi?,ňema
 nesklonné|oni?
-SE|-|sebe?|si,sobje?|se?,sebe|-|sobje?|sebou?
+SE|-|sebe?|si,sobje?|se,sebe|-|sobje?|sebou?
 ONA|ona?|jí?,ňí*?|jí?,ňí*?|ji?,ňi*?|-|ňí*?|jí?,#ňó
 svÚJ|új?|ého?|ému?|ého?|új?|ém?|ém|i?,í?|ých?|ým?|e?,é?|i?,í?|ých?|ými?|új?|ého?|ému?|új?|új?|ém?|ým?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,á?|í?,é?|í?,é?|i?,ou?|e?,á?|í?,é?|í?,ou?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,é?|ého?|ému?|e?,é?|e?,é?|ém?|ým?|e?,á?|ých?|ým?|e?,á?|e?,á?|ých?|ými?
+neCO|co?|čeho?|čemu?|co|co?|čem?|čím?
+ON|on?|ho*?,jej?,ňej**jeho?,ňeho|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
 -
 kte|kteRÝ|ke|kteRÝ|
 t|tEN||TEN|
@@ -101,6 +179,8 @@ jejich|nesklonné|jejih|nesklonné|
 |SE||SE|
 |ONA||ONA|
 sv|svŮJ|sv|svÚJ|
+ně|něCO|ne|neCO|
+|ON||ON|
 -
 -
 -
@@ -114,44 +194,82 @@ musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,
 choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 čekAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+vZÍT|30|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata
+chyTNOUT|30|-1|tnout|tnu|tneš|tne|tneme|tnete|tnou|ť|ťme|tněte|tnul,chytil|tnul,chytil|tla,chytnula,chytila|tnulo,chytilo,chytlo|tli,chytnuli,chytili|tly,chytnuly,chytily|tly,chytnuly,chytily|tla,chytnula,chytila|cen,chytnut|cen,chytnut|cena,chytnuta|ceno,chytnuto|ceni,chytnuti|ceny,chytnuty|ceny,chytnuty|cena,chytnuta
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+opatřIT|30|-1|it|ím|íš|í|íme|íte|í|i,opatř|eme,opatřme|ete,opatřte|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+dovolIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
 klÁST|15|-1|ást?|adu?|adeš?|ade?|ademe?|adete?|adou?|aď?|aďme?|aďte?|adl?|adl?|adla?|adlo?|adlê|adly?|adly?|adla?|aden?|aden?|adena?|adeno?|adeni?|adeny?|adeny?|adena?
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|bêla|bylo?|byli?|bêlê|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bê|bychom?|byste?|by?
 dělAT|15|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 uďelAT|30|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
-musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|elê|ely?,musily?|ely?,musily?|ela?,musila?
+musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo|elê|ely?,musily?|ely?,musily?|ela?,musila?
 choĎIT|15|-1|ďit|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďili?|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
 dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|alê|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 čekAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+vZÍT|30|-1|zit|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|ezmi?|ezměme?|ezměte?|zal?|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zaťi?|zaty?|zaty?|zata?
+chêTNOUT|30|-1|tnout?|tnu?|tneš?|tne?|tneme?|tnete?|tnou?|ť?|ťme?|tňete?|tnul?,chyťil?|tnul?,chyťil?|tla|tnulo?,chyťilo?,chytlo?|tli?,chytnuli?,chyťili?|tly?,chytnuly?,chyťily?|tly?,chytnuly?,chyťily?|tla?,chytnula?,chyťila?|cen?,chytnut?|cen?,chytnut?|cena?,chytnuta?|ceno?,chytnuto?|ceňi?,chytnuťi?|ceny?,chytnuty?|ceny?,chytnuty?|cena?,chytnuta?
+mOCT|5|-1|oct?|ohu?,(hovorově) múžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) múžou?|uhl|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+vĚĎET|7|-1|ěďet?|ím?|íš?|i|íme?|íte?|ěďí?|ěz?|ězme?|ězte?|ěďel?|ěďel?|ěďela?|ěďelo?|ěďeli?|ěďely?|ěďely?|ěďela?
+došêkovAD|30|-1|ad|ím?|íš?|í?|íme?|íte?|í?|i?,opatř?|eme?,opatřme?|ete?,opatřte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ňelê|ěly?|ěly?|ěla?
+mOCT|5|-1|oct?|ohu?,(hovorově) múžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) múžou?|ohl?|ohl?|ohla?|ohlo?|ohlê|ohly?|ohly?|ohla?
+dovolIT|30|-1|êt|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
-kl|klÁST|kl|klÁST|
-polož|položIT|kl|klÁST|
 |BÝT||BÝT|
-poranit||poraňil||
-děl|dělAT|ďel|dělAT|
-uděl|udělAT|ôďel|uďelAT|
-prásknout||pláskne||
-bouchnout ||bóchne||
-mus|musET|môs|musET|
-cho|choDIT|cho|choĎIT|
 ||sméšlijó ||
-ned|dÁT|ned|dÁT|
-d|dÁT|d|dÁT|
+||frkla||
+||polechtá ||
+bouchnout ||bóchne||
 ček|čekAT|ček|čekAT|
+d|dÁT|d|dÁT|
+děl|dělAT|ďel|dělAT|
+cho|choDIT|cho|choĎIT|
+chy|chyTNOUT|chê|chêTNOUT|
+kl|klÁST|kl|klÁST|
+m|mOCT|m|mOCT|
+m|mÍT|m|mÍT|
+m|mOCT|m|mOCT|
+mus|musET|môs|musET|
+ned|dÁT|ned|dÁT|
+opatři|opatřIT|došêkov|došêkovAD|
+podestýlat||podestilad||
+polož|položIT|kl|klÁST|
+poranit||poraňil||
+prásknout||pláskne||
+uděl|udělAT|ôďel|uďelAT|
+v|vZÍT|v|vZÍT|
+v|vĚDĚT|v|vĚĎET|
+vyplazit||ve̬plaze̬la||
+dovol|dovolIT|dovol|dovolIT|
 -
 až|až|
 silněji|sêlňéž |
-||
+již|jo̬š|
 dlouho|dlóho|
+nejčastěji|néčasťéš|
+daleko|daleko|
+napřed|napřeď|
 -
 z||s|
 s||z|
 po||po|
 se||ze|
 na||na|
+proti|4|proťi|
+za||za|
+do||do|
+v||v|
+pro||pro|
 -
 jak|jag|
 a|a|
 než|než|
+když|hdeš|
+že|že|
 -
 -

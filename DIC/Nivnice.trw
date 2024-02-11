@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tNivnice
 aGG
 d28.07.2023 20:12:10
-c#Zdroje dat\n-https://archive.org/details/dialektologiemor00bart/page/28/mode/2up
+c#Zdroje dat\n-https://archive.org/details/dialektologiemor00bart/page/28/mode/2up\n-https://archive.org/details/diaktologiemorav00bartuoft/page/27/mode/1up\n\n#Popis nářečí\n-Za akk. mn. životných v Bánovně a v Nivnici užívá se genitivu: má dvúch bratrů, třech synů, mám tam známých.
 g48.976493,17.6447704
 q0
 oSlovácko
@@ -11,29 +11,55 @@ oSlovácko
 -
 -
 -
+má dva bratry|1|má dvúch bratrů|
+tři syny|1|třech synů|
+mám tam známé|1|mám tam známých|
 -
 -
 -
 -
 -
+povřísLO|0|lo|la|lu|lo|lo|le|lem|la|el|lům|la|la|lech|ly
+nit|1||i,ě|i||i|i|í|i,ě|í|ím|i,ě|i,ě|ích|ěmi
+bratR|2|r|ra|ru,rovi|ra|ře|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
+-
+obřísLO|0|ło|la?|lu?|lo?|lo?|le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
+miT|1|ť|ťi?,ťe?|ťi?|t?|ťi?|ťi?|ťí?|ťi?,ťe?|ťí?|ťím?|ťi?,ťe?|ťi?,ťe?|ťích?|ťemi?
+bratR|2|r?|ra?|ru?,rovi?|ra?|ře?|ru?,rovi?|rem?|ři?|rú|rúm?|ry?|ři?|rech?|ry?
+syn|2|?|a?|u?,ovi?|a?|u?|u?,ovi?|em?|ové?|ú|úm?|y?|ové?|ech?|y?
+-
+povřís|povřísLO|0|obřís|obřísLO|
+nit|nit|0|mi|miT|
+brat|bratR|0|brat|bratR|
+syn|syn|0|syn|syn|
+||0|známých||
 -
 -
 -
 -
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch|ěm|i?|-|ěch|ěma|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch?|ěma|a?|é?|é?|u?|-|é?|ou?|y?|ěch|ěm|y?|-|ěch|ěma|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch|ěma
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+t|tEN|t|tEN|
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch|ěm|i?|-|ěch|ěma|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch?|ěma|a?|é?|é?|u?|-|é?|ou?|y?|ěch|ěm|y?|-|ěch|ěma|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch|ěm|y?|-|ěch|ěma
+dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-
+třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
 -
-t|tEN|tEN
+dvA|4|a?|úch|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-
+třI|2|i?|třech|em?|i?|i?|ech?|emi?
 -
+dv|dvA|dv|dvA|
+tř|třI|tř|třI|
 -
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
+mÍT|7|-1|ít?|ám|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
+m|mÍT|m|mÍT|
 -
--
--
+tam|tam|
 -
 -
 -

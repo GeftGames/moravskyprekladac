@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tKozmice
 aGG
 d28.06.2023 7:57:55
@@ -11,6 +11,7 @@ oSlezsko
 -
 -
 -
+za tebou|1|za tebum|
 -
 -
 -
@@ -20,35 +21,45 @@ almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 -
 almaRA|1|ra?|ry?|ře?|ru?|ro?|ryji|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 -
-alma|almaRA|0|alma|almaRA
-||0|od sluba|
+alma|almaRA|0|alma|almaRA|
+||0|od sluba||
 -
 -
 -
 -
-takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+CO|co|čeho|čemu|co,-č|-|čem|čím
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 -
-takovÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|e|ých?|ým?|e|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
-CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+takovÝ|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|e|ých?|ým?|e|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+TY|ty?|ťe[1]?,tebe?|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebum
 -
-takov|takovÝ|takovÝ
-CO|CO
+takov|takovÝ|takov|takovÝ|
+|CO||CO|
+t|tY||TY|
 -
 -
 -
 -
 MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 -
-MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|mjeł|mjeł|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+MÍT|7|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|mjeł|mjeł|měla?|mělo?|měli?|měly?|měly?|měla?
+mOCT|5|-1|oct?|ohu?,úžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,úžou?|uh|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 -
-MÍT|MÍT
+|MÍT||MÍT|
+vylézt||vylez!||
+m|mOCT|m|mOCT|
 -
-tam
-ještě|ešče
+tam|tam|
+ještě|ešče|
+nahorů|navrch|
 -
-v|
-od|
+v||v|
+od||od|
+za||za|
 -
+abych|coby|
 -
 -

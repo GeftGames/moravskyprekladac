@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tChromeč
 d25.06.2023 18:20:20
-i je zamňestnané na dráze, ač je viučené zedňik a vopkladač Chromeč SU
-c#Zdroje dat\n-sncj.ujc.cas.cz
+i je zamňestnané na dráze, ač je viučené zedňik a vopkladač Chromeč SU\n\nIV. z Chromče: Bŷlŷ dvá bratři, jeden tuze bohatè, druhè tuze chudè. Jedno hlidał chudè svymu bohatymu bratru snopŷ na polu a dŷž tak seděł pod mandelem, uhlidał biłõ ženu, jak zbirała kláskŷ, co vostałŷ na záhonech a zastrkávała do mandelů. Dŷž pak až k němu přŷšła, chŷtŷł ju za ruku a ptał se ji, co je zač a co tu děłá? »Su tvyho bratra ščesti a zbirám ztraceny kláskŷ abŷ mněłŷ vic pšenice.« — »A prosím tě, hde pak je my ščesti?« ptał se chudè. — »Na vèchodě,« řekła žena a ztratiła se. (Bartoš Dial. II., 143.)
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://www.nulk.cz/ek-obsah/narvystava/html/kniha/texty/nv-0090.htm (Bartoš Dial. II., 143.) (nevyčerpáno)\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/143/mode/1up">Dialektologie moravská</a>
 g49.9332991,16.8929778
 q0
 -
@@ -10,7 +10,6 @@ q0
 -
 -
 -
-
 -
 -
 obk|vopk
@@ -23,16 +22,16 @@ drÁHA|1|áha|áhy|áze|áhu|áho|áze|áhou,ahou|áhy|ah|áhám,ahám|áhy|áhy
 zedníK|2|k|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
 drÁHA|1|áha?|áhy?|áze?|áhu?|áho?|áze|áhou,ahou?|áhy?|ah?|áhám,ahám?|áhy?|áhy?|áhách,ahách?|áhami,ahami?
 -
-zedník|zedníK|0|zedňik |zedníK
-obkladač||0|vopkladač|
-d|drÁHA|0|d|drÁHA
+zedník|zedníK|0|zedňik |zedníK|
+obkladač||0|vopkladač||
+d|drÁHA|0|d|drÁHA|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|é|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-vyučen|zelenÝ|zelenÝ
-zaměstnan|zamňestnan|zelenÝ|zelenÝ
+vyučen|zelenÝ|vyučen|zelenÝ|
+zaměstnan|zelenÝ|zamňestnan|zelenÝ|
 -
 -
 -
@@ -44,12 +43,12 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 -
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-|BÝT|BÝT
+|BÝT||BÝT|
 -
 -
-na|
+na||na|
 -
-ač
-a
+ač|ač|
+a|a|
 -
 -

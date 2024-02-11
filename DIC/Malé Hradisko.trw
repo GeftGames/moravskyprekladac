@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tMalé Hradisko
 aGG
 d11.07.2023 15:37:15
-iexpr. ozývat se: tuť seť a haňi nebřnké Malé Hradisko PV\njš necgaň a z barvó ven! Malé Hradisko PV
+iexpr. ozývat se: tuť seť a haňi nebřnké Malé Hradisko PV\njš necgaň a z barvó ven! Malé Hradisko PV\nstařeček čápajó, jag dêbê jim patřêl svjet Malé Hradisko OL – pyšně\ngdo to muhl čôchat? Malé Hradisko PV
 c#Zdroje dat\n-https://sncj.ujc.cas.cz
 g49.4932293,16.8760021
 q0
@@ -11,49 +11,89 @@ q0
 -
 -
 -
-ukaž pravdu|z barvó ven
+ukaž pravdu|1|z barvó ven|
+dědeček si vyšlapuje|1|stařeček čápajó|
+jako kdyby|1|jag dêbê|
 -
 -
 -
 ou|ó
 -
+třil|třêl
 -
 barVA|1|va|vy|vě|vu|vo|vě|vou|vy|ev|vám|vy|vy|vách|vami
+dědečEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
+svět|3||a|u||e|ě|em|y|ů|ům|y|y|ech|y
+svetr|3||u|u||e,e|u|em|y|ů|ům|y|y|ech|y
 -
 barVA|1|va?|vy?|vě?|vu?|vo?|vě?|vó|vy?|ev?|vám?|vy?|vy?|vách?|vami?
+stařečEK|2|ek|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
+svěT|3|t?|ta?|tu?|t|te?|ťe?|tem?|ty?|tú?|túm?|ty?|ty?|tech?|ty?
+svetr|3|?|u?|u?||e?,e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-bar|barVA|0|bar|barVA
--
--
--
--
--
--
--
--
+bar|barVA|0|bar|barVA|
+dědeč|dědečEK|0|stařeč|stařečEK|
+svět|svět|0|svje|svěT|
+svetr|svetr|0|svetr|svetr|
 -
 -
-seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen, seděn|zen, seděn|zena, seděna|zeno, seděno|zeni, seděni|zeny, seděny|zeny, seděny|zena, seděna
+-
+-
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+kDO|do|oho|omu|oho|do|om|ým
+-
+OŇI|oňi?|jich?,ňich*?|jim,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+KDO|gdo|koho?|komu?|koho?|kdo?|kom?|kým?
+-
+|ONI||OŇI|
+t|tEN||TEN|
+k|kDO||kDO|
+-
+-
+-
+-
+seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen,děn|zen,děn|zena,děna|zeno,děno|zeni,děni|zeny,děny|zeny,děny|zena,děna
 lHÁT|7|-1|hát|žu|žeš|že|žeme|žete|žou|ži|žeme|žete|hal|hal|hala|halo|hali|haly|haly|hala
 podváděT|2|-1|t|j|jme|jte
+vnímAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+patřIT|7|-1|it|ím|íš|í|íme|íte|í|i,patř|eme,patřme|ete,patřte|il|il|ila|ilo|ili|ily|ily|ila
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mOCT|5|-1|oct|ohu,ůžu|ůžeš|ůže|ůžeme|ůžete|ohou,ůžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+tušIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
-seDĚT|15|-1|dět?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|děl?|děl?|děla?|dělo?|děli?|děly?|děly?|děla?|zen, seděn?|zen, seděn?|zena, seděna?|zeno, seděno?|zeni, seděni?|zeny, seděny?|zeny, seděny?|zena, seděna?
+seDĚT|15|-1|dět?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|děl?|děl?|děla?|dělo?|děli?|děly?|děly?|děla?|zen?,děn?|zen?,děn?|zena?,děna?|zeno?,děno?|zeni?,děni?|zeny?,děny?|zeny?,děny?|zena?,děna?
 cêgANIT|7|-1|hát?|žu?|aň|že?|žeme?|žete?|žou?|ži?|žeme?|žete?|hal?|hal?|hala?|halo?|hali?|haly?|haly?|hala?
+čUT|15|-1|ut?|ám?|ôješ|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+patřIT|7|-1|it?|ím?|íš?|í?|íme?|íte?|í?|i?,patř?|eme?,patřme?|ete?,patřte?|êl|il?|ila?|ilo?|ili?|ily?|ily?|ila?
+BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mOCT|5|-1|oct?|ohu?,úžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,úžou?|uhl|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
+čôchAT|15|-1|at|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
-se|seDĚT|seDĚT
-nebřinkat| nebřônké ||
-l|lHÁT|lHÁT
-nel|necêg|lHÁT|cêgANIT
-podvádě|cêg|podváděT|cêgANIT
-nepodvádě|necêg|podváděT|cêgANIT
+se|seDĚT|se|seDĚT|
+nebřinkat|| nebřônké ||
+l|lHÁT|cêg|cêgANIT|
+nel|lHÁT|necêg|cêgANIT|
+podvádě|podváděT|cêg|cêgANIT|
+nepodvádě|podváděT|necêg|cêgANIT|
+vním|vnímAT|č|čUT|
+patř|patřIT|patř|patřIT|
+|BÝT||BÝT|
+||doštrikovala||
+m|mOCT|m|mOCT|
+tuš|tušIT|čôch|čôchAT|
 -
-tady|tuť
-již|jôš
-ven
+tady|tuť||tuď|
+již|jôš|
+ven|ven|
+konečně|konečňe|
 -
-s|z|
+s||z|
 -
-ani|haňi
-a
+ani|haňi|
+a|a|
+jak|jag|
+kdyby|dêbê|
 -
 -

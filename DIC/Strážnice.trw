@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tStrážnice
 aGG
 d20.06.2023 17:13:21
-c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Str%C3%A1%C5%BEnice">sncj.ujc.cas.cz</a>\n\n#Popis nářečí\n-není se obalované U
+c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Str%C3%A1%C5%BEnice">sncj.ujc.cas.cz</a>\n\n#Popis nářečí\n-není se obalované U\n-jenom ve Strážnici a Mistříně dlouhého r neznají, vyslovujíce: vrba, hrbek, poprchá.\n-Ve Strážnici, v Rohatci a na Cejči mají jenom jedno l a to měkké (nikoliv střední české) \n-úv-ova-ové : súsedúv, Malúšúv, Valkové pole, (Ostrožská Lhota, Hroznová Lhota, Strážnice, Blatnice, Hovorany, Mutěnice, Podluží.)\n-teho, temu — tech, tem (Znorovy, Strážnice, Milotice, Hovorany)\n-koho, komu (Blatnice, Znorovy, Strážnice)\n-jedneho, jednemu (Strážnice, Milotice)
 g48.8996642,17.3144728
 q0
 -
@@ -10,8 +10,8 @@ q0
 -
 -
 -
-jsem se|sen sa
-bodl koně|bodel koňe
+jsem se|1|sen sa|
+bodl koně|1|bodel koňe|
 -
 -
 -
@@ -20,44 +20,54 @@ bodl koně|bodel koňe
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 mýdLO|0|lo|la|lu|lo|lo|lu,le|lem|la|el|lům|la|la|lech|ly
 hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+vrbA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 pohádKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 mýdLO|0|lo|la?|lu?|lo?|lo?|lu,le?|lem?|la?|el?|lům?|la?|la?|lech?|ly?
 hlavA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+vrbA|1|a|y?|je?|u?|o?|je?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-sud||0|bečka|
-||0|humna|
-dědeček||0|stařeček|
-||0|dřevo|
-||0|pilamidi|
-||0|guličky|
-||0|hřišťjé|
-skřip|pohádKA|0|skřip|pohádKA
-mýd|mýdLO|0|mid|mýdLO
-hlav|hlavA|0|hlav|hlavA
+sud||0|bečka||
+||0|humna||
+dědeček||0|stařeček||
+||0|dřevo||
+||0|pilamidi||
+||0|guličky||
+||0|hřišťjé||
+skřip|pohádKA|0|skřip|pohádKA|
+mýd|mýdLO|0|mid|mýdLO|
+hlav|hlavA|0|hlav|hlavA|
+vrb|vrbA|0|vrb|vrbA|
+||0|hrbek||
 -
 -
 -
-|vydlážďané||
-zastavení|zastavjaňi||
+||vydlážďané||
+zastavení||zastavjaňi||
 -
-MY|-1|my|nás|nám|nás|my|nás|námi
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+MY|my|nás|nám|nás|my|nás|námi
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+kDO|do|oho|omu|oho|do|om|ým
 -
-MY|-1|my|nás?|nám?|nás?|my?|nás?|námi?
-TEN|-1|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tú|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
-SE|-1|-|sebe?|si?,sobě?|sa|-|sobě?|sebou?
+MY|my|nás?|nám?|nás?|my?|nás?|námi?
+TEN|ten?|teho|temu|toho?|-|tom?|tím?|ti?|tech|tem|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tú|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+SE|-|sebe?|si?,sobě?|sa|-|sobě?|sebou?
+KDO|kdo?|koho|komu|koho?|kdo?|kom?|kým?
 -
-MY|MY
-t||tEN|TEN
-SE|SE
+|MY||MY|
+t|tEN||TEN|
+|SE||SE|
+k|kDO||KDO|
 -
 Nesklonné|1|
+jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 -
 Nesklonné|1|
+jedEN|4|en?|neho|nemu|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 -
-desetkrát|Nesklonné|Nesklonné
+desetkrát|Nesklonné|desetkrát|Nesklonné|
+jed|jedEN|jed|jedEN|
 -
 dovÉST|30|-1|ést|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
@@ -69,17 +79,18 @@ mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ňéł|ěl?|�
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 bodAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|el|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-udělat|nadělat||
-schout|schnút||
-cvrnkat|štrnkat||
-dovÉ|dovÉST|dovÉST
-m|mÍT|mÍT
-BÝT|BÝT
-bod|bodAT|bodAT
+udělat||nadělat||
+schout||schnút||
+cvrnkat||štrnkat||
+dovÉ|dovÉST|dovÉ|dovÉST|
+m|mÍT|m|mÍT|
+|BÝT||BÝT|
+bod|bodAT|bod|bodAT|
+||poprchá||
 -
-dneska
-všude|fšady
-aspoň
+dneska|dneska|
+všude|fšady|
+aspoň|aspoň|
 -
 -
 -

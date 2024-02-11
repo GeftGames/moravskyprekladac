@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tBořitov
 d28.06.2023 8:23:34
 imajó se dubře, kópili si nuví ótu Bořitov BK\n deš sem jel na vujno, bel sem jag břenek Bořitov BK – čilý, zdravý
@@ -10,30 +10,41 @@ q0
 -
 -
 -
-do války|na vujno
-zdravý|jag břenek
+do války|1|na vujno|
+zdravý|1|jag břenek|
 -
 -
 -
 -
 -
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+třešnĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
+cukroví|0|||||||m|-|-|-|-|-|-|-
 -
 městO|0|o?|a?|u?|u|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
+střešňE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e|e?|ích?|emi?
+cogruví|0|?|?|?||?|?|m?|-|-|-|-|-|-|-
 -
-aut|městO|0|ót|městO
+aut|městO|0|ót|městO|
+třešn|třešnĚ|0|střešň|střešňE|
+||0|čerňice ||odrůda třešní
+||0|bjelice||odrůda třešní
+cukroví|cukroví|0|cogruví|cogruví|
 -
 novÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
+špatnÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 novÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|ý|ých?|ým?|é?|é?|ých?|ými?|?|?
+špatNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|ní|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 -
-nov|nuv|novÝ|novÝ
+nov|novÝ|nuv|novÝ|
+špatn|špatnÝ|špat|špatNÝ|
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-SE|-1|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
 -
-SE|SE
+|SE||SE|
 -
 -
 -
@@ -43,20 +54,25 @@ kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojedeme|pojedete|pojedou|jeď|jeďme|jeďte|jel|jel|jela|jelo|jeli|jely|jely|jela|jet|jet|jeta|jeto|jeti|jety|jety|jeta
 -
-MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte?|majó|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
+MÍT|71|-1|mít?|mám?|máš?|má?|máme|máte?|majó|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 kOUPIT|15|-1|oupit?|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|oupila?|oupilo?|ópili|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bel|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 JET|31|-1|jet?|jedu?|jedeš?|jede?|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
 -
-MÍT|MÍT
-k|kOUPIT|kOUPIT
-|BÝT|BÝT
-JET|JET
+|MÍT||MÍT|
+k|kOUPIT|k|kOUPIT|
+|BÝT||BÝT|
+|JET||JET|
+||napekli||
 -
-dobře|dubře
+dobře|dubře|
+letos|letos|
+hodně|plno|
 -
-na|
+na||na|
+i||aji|
 -
-když|deš
+když|deš|
+ale|ale|
 -
 -

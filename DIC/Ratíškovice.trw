@@ -492,6 +492,7 @@ trÁPIT|15|-1|ápit|ápím|ápíš|ápí|ápíme|ápíte|ápí|ap|apme|apte|ápi
 házET|15|-1|et|ím|íš|í|íme|íte|í,házejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 ukÁZAT|30|-1|ázat|ážu|ážeš|áže|ážeme|ážete|ážou|až|ažme|ažte|ázal|ázal|ázala|ázalo|ázali|ázaly|ázaly|ázala|ázán|ázán|ázána|ázáno|ázáni|ázány|ázány|ázána
 napSAT|30|-1|sat|íši,napíšu|íšeš|íše|íšeme|íšete|íší,napíšou|iš|išme|ište|sal|sal|sala|salo|sali|saly|saly|sala|sán|sán|sána|sáno|sáni|sány|sány|sána
+courAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áňi|ány|ány|ána
 -
 brečAT|15|-1|at|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 BÝT|247|-1|být?|sem|jsi?|je?|sme?|ste?|sú?|budu?|budeš?|bude|budeme?|budete?|budou?|buď?|buďme?|buďte?|bíṵ,ríṵ|bíṵ|biṵa|biṵo|byli?|byṵy?|byṵy?|byṵa?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bysme?|byste?|by?
@@ -542,6 +543,7 @@ trÁPIT|15|-1|ápit?|ápím?|ápíš?|ápí?|ápíme?|ápíte?|ápí?|áp|apme?|
 hÁZET|15|-1|ázet?|ázím?|ázíš?|ází?|ázíme?|ázíte?|ází?,ázházejí?|áž|ázejme?|ázejte?|ázel?|ázel?|ázela?|ázelo?|ázeli?|ázely?|ázely?|ázela?|ázen?|ázen?|ázena?|ázeno?|ázeňi?|ázeny?|ázeny?|ázena?
 ukÁZAT|30|-1|ázat?|ážu?|ážeš?|áže?|ážeme?|ážete?|ážou?|áž|ažme?|ažte?|ázal?|ázal?|ázala?|ázalo?|ázali?|ázaly?|ázaly?|ázala?|ázán?|ázán?|ázána?|ázáno?|ázáňi?|ázány?|ázány?|ázána?
 napSAT|30|-1|sat?|íši?,napíšu?|íšeš?|íše?|íšeme?|íšete?|íší?,íšou?|íš|išme?|ište?|sal?|sal?|sala?|salo?|sali?|saly?|saly?|sala?|sán?|sán?|sána?|sáno?|sáňi?|sány?|sány?|sána?
+cúrAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |BÝT||BÝT|
 |MÍT||MÍT|
@@ -552,19 +554,16 @@ breč|brečET|breč|brečAT|
 brouzdat||cabrat||
 buzerovat||gajdovat||
 bzuč|bzučET|bzuč|bzučET|
-courat||cúrat||
+cour|courAT|cúr|cúrAT|
 dáv|dávAT|dáv|dávAT|
 děl|dělAT|děl|dělAT|
 doj|dojIT|doj|dojIT|
 flákat||žvondat já žvondám||
 ház|házET|h|hÁZET|
 házet||fŕkat||
-hledat||ňúrat||
-hledat||babúzňat||
+hledat||ňúrat|||babúzňat||
 hn|hnÍST|hňé|hňÉCT|
-cho|choDIT|cho|choDIT|
-chodit||šajdat||
-chv|chvÁLIT|chv|chvÁLIT|
+cho|choDIT|cho|choDIT||šajdat||
 chv|chvÁLIT|chv|chvÁLIT|
 j|jÍST|j|jÍST|
 k|kOUPIT|k|kÚPIT|
@@ -655,7 +654,6 @@ zab|zabÍT|zab|zabÍT|
 zaklovnout||zaglovnút||
 zazpívejme si||zabékajme si||
 zbořit||zkotit||
-ztratit||zafrajmačit||
 ztratit||zaratit||
 ztratit||zafrajmačit||
 ž|žRÁT|ž|žRÁT|

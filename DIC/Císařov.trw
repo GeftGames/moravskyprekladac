@@ -8,7 +8,7 @@ c#Zdroje dat\n-https://www.nulk.cz/ek-obsah/ceskylid/html/knihy/ceskylid06/texty
 lHanáčtina
 g49.4659335,17.3522613
 xlokální mluva
-q0
+q1
 oHaná
 -
 -
@@ -234,6 +234,9 @@ zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 zlatKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 znamení|0|||||||m|||m|||ch|mi
 žid|2||a|u,ovi|a|e|u,ovi|em|i,é|ů|ům|y|i,é|ech|y
+dobA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+večer|3||a|u||e|u|em|y|ů|ům|y|y|ech|y
+hodinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 beran|3||a?|u,ovi?|a?|e?|u,ovi?|em?|i?|ů?|ům?|y?|i?|ech?|y?
 biblE|1|ija|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
@@ -340,6 +343,9 @@ zimA|1|a?|y?|ě?|u?|o?|ě|ou?|y?|?|ám?|y?|y?|ách?|ami?
 zlatKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 znamení|0|í?|a,í|í?|í?|í?|í?|ím?|a|í?|ím?|í?|í?|ích?|ími?
 žid|2||a?|u,ovi?|a?|e?|u,ovi?|em?|i,é?|ú?|úm?|y?|i,é?|ech?|y?
+dobA|1|a|y?|je?|u?|o?|je?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+večer|3|?|a|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+hoďiNA|1|na?|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n|nám?|ny?|ny?|nách?|nami?
 -
 ||0|komendant||
 ||2|Lêpianê||
@@ -429,7 +435,7 @@ oráč|oráč|0|oráč|oráč|
 pamětník||0|pamaťňik||
 pár|pár|0|pár|pár|
 pěnkava||0|pinkava||
-písnič|písničKA|0|pjesnič|písničKA|
+písnič|písničKA|0|pjesňič|písničKA|
 píšťal|pohádKA|0|piščel|pohádKA|
 pobožňůstkář|pohádKA|0|svaťic|trojicA|
 pol|polE|0|pol|polE|
@@ -480,6 +486,9 @@ půl||0|puł||
 diecéz|diecézE|0|diecéz|diecézE|
 výbor|výbor|0|vébor|výbor|
 hod|hod|0|hod|hod|
+dob|dobA|0|dob|dobA|
+večer|večer|0|večer|večer|
+hodin|hodinA|0|hoďi|hoďiNA|
 -
 cizí|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -576,6 +585,7 @@ třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
 nesklonné|1|
 sedmnáct|2||i|i|||i|i
 osmdesát|2||i|i|||i|i
+sedm|2||i|i|||i|i
 -
 druHÝ|4|hý?|hyho|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hyho|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 jedEN|4|en?|neho|nomu?|noho?|en?|nom?|ním?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ním?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nó|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ním?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
@@ -586,6 +596,7 @@ třI|2|ê|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
 nesklonné|1|
 sedmnáct|2|?|i?|i?|?|?|i?|i?
 osmdesát|2|?|i?|i?|?|?|i?|i?
+sedM|2|n|mi?|mi?|m?|m?|mi?|mi?
 -
 dru|druHÝ|dru|druHÝ|
 jed|jedEN|jed|jedEN|
@@ -597,6 +608,7 @@ dvakrát|nesklonné|dvakráť|nesklonné|
 sedmnáct|sedmnáct|sednást|sedmnáct|
 osmdesát|osmdesát|osndesát|osmdesát|
 třikrát|nesklonné|třêkráť|nesklonné|
+sedm|sedm|sed|sedM|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 červenAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
@@ -718,7 +730,6 @@ bolET|7|-1|et?|ím?|íš?|i|íme?|íte?|í,bolejí?|?|me?|te?|el?|el?|ela?|elo?|
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edł|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeňi?|edeny?|edeny?|edena?
 -
 |BÝT||BÝT|
-||||
 ||ňižďeť||
 ||milať||
 ||ustylať||
@@ -740,9 +751,11 @@ jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edł|edl?|edl
 ||šeďivjeť||
 ||plesňivjeť||
 ||pokazi||
+||||
 bělat||bêlať||
 bělat||bjel|bjelAŤ|
 beranit||baraňiť||
+bol|bolET|bol|bolET|
 černat||čerňať||
 červen|červenAT|červe|červeNAT|
 d|dÁT|d|dÁT|
@@ -751,6 +764,8 @@ dív|dívAT_SE|dív|dívAT_SE|
 dos|dosÁHNOUT|dos|dosÁHNOUT|
 dostávat strach||napěká mu||
 hř|hřÁT|hř|hřÁT|
+ch|chTÍT|ch|chTÍT|
+j|jÍST|j|jÍST|
 kl|klÁST|kł|klÁST|
 klamat||kłomočeť||
 kr|krÝT|kr|krÝT|
@@ -787,7 +802,7 @@ při|přiJÍT|přê|přiJÍT|
 přidáv|přidávAT|přidáv|přidávAT|
 přizn|přiznAT|přizn|přiznAT|
 rozsv|rozsvÍTIT|rožn|rožAŤ|
-rozsvícet||rožihať||
+rozsvícet,rozsvěcet||rožihať||
 ř|řÍCT|ř|řÍCT|
 řík|říkAT|řik|říkAT|
 s|sÍT|s|sÍT|
@@ -826,10 +841,6 @@ zapřáh|zapřáhNOUT|zapřih|zapřáhNOUT|
 zbělat||||
 zd|zdÁT_SE|zd|zdÁT_SE|
 žlout|žloutNOUT|žłu|žluŤAŤ|
-ch|chTÍT|ch|chTÍT|
-bol|bolET|bol|bolET|
-j|jÍST|j|jÍST|
-||||
 -
 |skrz|
 |ledvê|
@@ -886,6 +897,7 @@ zdáli|pozdaleku|
 zvlášť|zvlášč|
 domů|dom|
 předevčírem|předfčeréškê|
+teprve|teprov|
 -
 z||z|
 na||na|4.pád směr
@@ -916,6 +928,7 @@ aby|abe|
 nebo|lebo|
 jako|jak|||
 kdybychom|dêbêzme|
+a|a|
 -
 ne|né|
 -

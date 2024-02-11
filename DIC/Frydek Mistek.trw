@@ -8,7 +8,7 @@ cZdroje dat\n-čja 824\n-Základové dialektologie československé - Šembera, 
 lLaština
 g49.6754778,18.3416843
 xdialekt
-q1
+q0
 oLašsko
 -
 -
@@ -18,6 +18,8 @@ oLašsko
 v poli|1|f polu|
 šel jsem|1|jách šel|
 k doktoru|1|do dochtura|
+voda tenkým proudem|0|čurčkym voda|
+tenkým proudem|1|čurčkym|
 -
 -
 ne|ně
@@ -51,6 +53,7 @@ cích|cah
 t|ť
 valy|vały
 lo|ło
+pala|pała
 -
 městO|1|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 mořE|1|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
@@ -258,6 +261,7 @@ ležET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
 voZIT|15|-1|zit|zím|zíš|zí|zíme|zíte|zí|z|zme|zte|zil|zil|zila|zilo|zili|zily|zily|zila|žen|žen|žena|ženo|ženi|ženy|ženy|žena
 noSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
 zaJÍT|7|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla
+kapAT|15|-1|at|ám,kapu|áš,kapeš|á,kape|áme,kapeme|áte,kapete|ají,kapou|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 byť|159|-1|byť?|?|?|?|zme|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?
 sOT|7|-1|ot?|eji?|eješ?|eje?|ejeme?|ejete?|ejí?|?|?|?|?|?|?|?|?|?|?|?
@@ -285,6 +289,7 @@ leŽET|7|-1|et?|žím?|íš?|í?|íme?|íte?|í?|ź?|me?|te?|el?|el?|ela?|elo?|e
 voZIT|15|-1|zit?|zím?|zíš?|zí?|zíme?|zíte?|zí?|ź?|zme?|zte?|zil?|zil?|zila?|zilo?|zili?|zily?|zily?|zila?|žen?|žen?|žena?|ženo?|ženi?|ženy?|ženy?|žena?
 noSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sí?|ś?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeni?|šeny?|šeny?|šena?
 zaJÍT|7|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jďźi|jďeme?|jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
+kapAT|15|-1|at?|ám?,kapu?|áš?,kapeš?|á?,kape?|áme?,kapeme?|áte?,kapete?|ají?,kapou?|ej?|ejme?|ejte?|al?|al?|ała|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |být||byť|
 s|sÍT|s|sOT|
@@ -310,6 +315,7 @@ lež|ležET|le|leŽET|
 vo|voZIT|vo|voZIT|
 no|noSIT|no|noSIT|
 za|zaJÍT|za|zaJÍT|
+kap|kapAT|kap|kapAT|
 -
 vždyť|dyc’|
 tak|tak||tag|

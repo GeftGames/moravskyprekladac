@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tStarý Lískovec
 aGG
 d29.07.2023 13:57:21
@@ -12,7 +12,7 @@ oBrněnsko
 -
 -
 -
-prodavaček cukroví|cukrbabé
+prodavaček cukroví|1|cukrbabé|
 -
 -
 -
@@ -22,19 +22,19 @@ kolotoč|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
 kolotoč|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
 -
-kolotoč|kolotoč|0|kolotoč|kolotoč
+kolotoč|kolotoč|0|kolotoč|kolotoč|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+CO|co|čeho|čemu|co,-č|-|čem|čím
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|éch|ěm?|i?|-|éch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|e|éch|ěm?|y?|-|éch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|éch?|ěm?|y?|-|éch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|éch|ěm?|y?|-|éch?|ěmi?
-CO|-1|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|éch|ěm?|i?|-|éch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|e|éch|ěm?|y?|-|éch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|éch?|ěm?|y?|-|éch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|éch|ěm?|y?|-|éch?|ěmi?
+CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-t|tEN|tEN
-CO|CO
+t|tEN|t|tEN|
+|CO||CO|
 -
 -
 -
@@ -47,15 +47,14 @@ BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|bud
 říkAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 bývAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|ale|aly?|ala?
 -
-BÝT|BÝT
-řík|řik|říkAT|říkAT
-býv|bév|bývAT|bývAT
+|BÝT||BÝT|
+řík|říkAT|řik|říkAT|
+býv|bývAT|bév|bývAT|
 -
-tady|tade
-
+tady|tade|
 -
 -
-a|a,ha
-jak
+a|ha||a|
+jak|jak|
 -
 -

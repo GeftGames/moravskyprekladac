@@ -3,7 +3,7 @@ tČejč
 aGG
 d09.06.2023 13:02:20
 iŠél sem na vojnu ve štrnástém a bil sem tam štiri roki. Já sem toho pochodil.\nRok a půl sem bil na fronte a dva a půl v ruském zajeťí, patnást verst od Kaspického\njezera. Pracoval sem tam u chazaja, to je hospodář po česki, u Tatara. Tatar to bil,\nbili to hodní liďi. Tam vůbec nesaďili, enom opsívali pšeňicu, jačmeň a oves a to\nseli každí rok, řepu a erteple nesadili. Orali volama, mňeli tři pári volů. Obila mňeli\npjekné. Víno vozili s Kafkazu na velbúdách v ofčích kožách a lacino, za pjet kopejek\nbutilku, to bilo tak slabého půl litra. Bilo tam moc teplo. Zima bila strnást dní; to sa\nzamračilo, fúkal vjetr, napadlo sňehu. Bívali v hliňeních chalupách, říkali jim\nzemlanki. Fčíl to majů jisté lepší, ale tenkrát za cár a...\nDo Kaspického jezera teče Volha třema prúdama. Tam je ribl Tam chitajú\nribi do sítě, tam ribi střílajů a zajíců chitajú na koňech; na koňovi teho zajíca žene\na takú knutú ho zabije. Tam sú ohromné rovini a zem jílovitá. Tam aš po Kaspické\njezero néňi kopeček ani stromi, tam je enom tráva. Tam sa pásli stáda ofcí, kraf a\nkoňe; ti koňe bili celí deň venku. Diž napadlo sňehu, dali je do ohradí. Po Volze\nsme jeli skoro tídeň od Gorkij až do Kazaňe. 
-c#Zdroje dat\n-https://dspace.cuni.cz/bitstream/handle/20.500.11956/22359/DPTX_2008_2_11410_OSZD001_76504_0_71830.pdf?sequence=1&isAllowed=y \n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 185 (nevyčerpáno)
+c#Zdroje dat\n-https://dspace.cuni.cz/bitstream/handle/20.500.11956/22359/DPTX_2008_2_11410_OSZD001_76504_0_71830.pdf?sequence=1&isAllowed=y \n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 185 (nevyčerpáno)\n-<a href="https://archive.org/details/diaktologiemorav00bartuoft/page/30/mode/1up">Diaktologie moravská</a>\n\n#Popis nářečí\n-Ve Strážnici, v Rohatci a na Cejči mají jenom jedno l a to měkké (nikoliv střední české) 
 g48.9457684,16.9629891
 q0
 oSlovácko
@@ -92,6 +92,7 @@ ovcE|1|e|e|i|i|e|i|í|e|í,|ím|e|e|ích|emi
 krÁVA|1|áva|ávy|ávě|ávu|ávo|ávě|ávou|ávy|av|avám,ávám|ávy|ávy|avách,ávách|avami,ávami
 ohradA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 týdEN|3|en|ne|nu,ni|en|ne,ni|nu,ni|nem|ny|nů|nům|ny|ny|nech|ny
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 -
 cAR|2|ar?|ára|aru,arovi?|ara?|are?|aru,arovi?|arem?|aři,arové?|arú?|arúm?|ary?|aři,arové?|arech?|ary?
 ČLOVĚK|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|liďi|lidí?|lidem?|liďi?|lidé,liďi?|lidech?|lidmi?
@@ -134,6 +135,7 @@ zajíc|2|?|a|i,ovi?|e?|i?|i,ovi?|em?|i,ové?|ú|úm?|e?|i,ové?|ích?|i?
 zemĚ|1||ě?|i?|i?|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
 zimA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 žeNA|1|na|ny?|ně?|nu|no?|ně?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+svaDBA|1|dba|dby?|dbje?|dbu?|dbo?|dbje?|dbou?|dby?|deb?|dbám?|dby?|dby?|dbách?|dbami?
 -
 ||0|verst||
 |ČLOVĚK|0||ČLOVĚK|
@@ -151,9 +153,12 @@ jezer|jezerO|0|jezer|jezerO|
 k|kŮŇ|0|k|kŮŇ|
 kavkaz||0|kafkaz||
 kopeč|kopečEK|0|kopeč|kopečEK|
+kr|krÁVA|0|kr|krÁVA|
 kůž|kůžE|0|kož|kúžE|
 obilí|obilí|0|obil|obilÍ|
+ohrad|ohradA|0|ohrad|ohradA|
 ov|ovES|0|ov|ovES|
+ovc|ovcE|0|ovc|ovcE|
 oves||0|oves||
 pár|pár|0|pár|pár|
 proud|hrad|0|prúd|hrad|
@@ -166,9 +171,11 @@ ryb|rybA|0|rib|rybA|
 řep|řepA|0|řep|řepA|
 sí|síŤ|0|sí|síŤ|
 sn|snÍH|0|sň|sňÍH|
+stád|stádO|0|stád|stádO|
 strom|strom|0|strom|strom|
 tata|tataR|2|tata|tataR|
 tr|trÁVA|0|tr|trÁVA|
+týd|týdEN|0|tíd|týdEN|
 v|vŮL|0|v|vŮL|
 v|vÍTR|0|v|vÍTR|
 v|vŮL|0|v|vŮL|
@@ -180,11 +187,7 @@ zajíc|zajíc|0|zajíc|zajíc|
 zem|zemĚ|0|zem|zemĚ|
 země||0|zem||
 zim|zimA|0|zim|zimA|
-stád|stádO|0|stád|stádO|
-ovc|ovcE|0|ovc|ovcE|
-kr|krÁVA|0|kr|krÁVA|
-ohrad|ohradA|0|ohrad|ohradA|
-týd|týdEN|0|tíd|týdEN|
+svat|svatBA|0|sva|svaDBA|
 -
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -288,29 +291,30 @@ JET|31|-1|jet?|jedu?|jedeš?|jede?|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|poje
 |JÍT||JÍT|
 |BÝT||BÝT|
 |MÍT||MÍT|
+||opsívat||
+||zamračilo||
+|HNÁT||HNÁT|
+|JET||JET|
+býv|bývAT|bív|bývAT|
+d|dÁT|d|dÁT|
+fouk|foukAT|fúk|foukAT|
+chyt|chytAT|chit|chytAT|
+napad|napadNOUT|napad|napadNOUT|
 ne|neBÝT|n|nEBÝT|
-s|sÍT|s|sÍT|
-sáz|sázET|s|sÁZET|
 nesáz|sázET|nes|sÁZET|
-zab|zabÍT|zab|zabÍT|
+o|oRAT|o|oRAT|
+p|pÁST|p|pÁST|
 plápolat||płápołá||
 prac|pracOVAT|prac|pracOVAT|
-sáz|sázET|s|sázET|
-||opsívat||
-o|oRAT|o|oRAT|
-vo|voZIT|vo|voZIT|
-||zamračilo||
-fouk|foukAT|fúk|foukAT|
-napad|napadNOUT|napad|napadNOUT|
-býv|bývAT|bív|bývAT|
 řík|říkAT|řík|říkAT|
-t|tÉCT|t|tÉCT|
-chyt|chytAT|chit|chytAT|
+s|sÍT|s|sÍT|
+sáz|sázET|s|sÁZET|
+sáz|sázET|s|sázET|
 stříl|střílET|stříl|střílET|
-|HNÁT||HNÁT|
-p|pÁST|p|pÁST|
-d|dÁT|d|dÁT|
-|JET||JET|
+t|tÉCT|t|tÉCT|
+vo|voZIT|vo|voZIT|
+zab|zabÍT|zab|zabÍT|
+plápolat||płápołá?/prápová?||
 -
 vůbec|vúbec|
 jen,jenom|enom|
