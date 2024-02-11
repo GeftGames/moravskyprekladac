@@ -1,10 +1,12 @@
-TW v1.0
+TW v2
 fSpisovná čeština
 tStudenec
 aGG
 d10.03.2023 21:01:17
-iVono je to neska zli, voni ti lidi só nahočeni žit jen tak polechko, jak to bévalo spiš, co\nveďelál, to prožrál a potom nemá furt nic. Neska to holt tak néde, človjek se musi po každim grécaro vohlidať,\nabe neco mňel. Tém, co si našpořili, je e neska dobře, ale gdo nešpóroval, ten nemá nic. Je to fšecko zli, aďdáte kloka na řemeslo, vehoči se á zustane duma, dáte ho študovat do školé, veštuduje a potom nedostane misto,\nabe ho rodiče živili \n- ze Studence, západně od Náměště. \nhttp://www.banda.cz/webs/k/kom/usr_files/file/hanackyslovnik.pdf\nta ukázky nad možná jiný studenec\n\n\nhttps://theses.cz/id/1tmdiz/15008735\nne vokno\nne a, ě kaše\nnaše, vaše\nk frantô, vidím frantô\nfrantův kabát->frantu kabát\nne ť
+iVono je to neska zli, voni ti lidi só nahočeni žit jen tak polechko, jak to bévalo spiš, co\nveďelál, to prožrál a potom nemá furt nic. Neska to holt tak néde, človjek se musi po každim grécaro vohlidať,\nabe neco mňel. Tém, co si našpořili, je e neska dobře, ale gdo nešpóroval, ten nemá nic. Je to fšecko zli, aďdáte kloka na řemeslo, vehoči se á zustane duma, dáte ho študovat do školé, veštuduje a potom nedostane misto,\nabe ho rodiče živili \n- ze Studence, západně od Náměště. \nhttp://www.banda.cz/webs/k/kom/usr_files/file/hanackyslovnik.pdf\nta ukázky nad možná jiný studenec\n\n malý vřed: hôďelal se mô na nosi cveček Čelechovice na Hané PV (Studenec)\n\n\nhttps://theses.cz/id/1tmdiz/15008735\nne vokno\nne a, ě kaše\nnaše, vaše\nk frantô, vidím frantô\nfrantův kabát->frantu kabát\nne ť
+c#Zdroje dat\n-http://www.banda.cz/webs/k/kom/usr_files/file/hanackyslovnik.pdf (nevyčerpáno)\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22%C4%8Celechovice+na+Han%C3%A9+PV+%28Studenec%29%22">SNČJ</a>\n\n#Popis nářečí\n-Místy (na př. ve Studenci) h na konci slov zní jen slabým přídechem a takměř mizí: sni, pra, tr.
 zCS_HA-Náměšť
+sČelechovice na Hané
 lHanáčtina
 g49.5171256,17.1073063
 xmístní mluva
@@ -15,6 +17,7 @@ oHaná
 -
 -
 -
+na nose|1|na nosi|
 -
 -
 on|von
@@ -36,42 +39,67 @@ dém|dym
 -
 kluK|2|k|ka|ku,klukovi|ka|ku|ku,klukovi|kem|ci|ků|kům|ky|ci|cích|ky
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+nos|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+snÍH|3|íh|ěhu|ěhu|íh|ěhu|ěhu|ěhem|ěhy|ěhů|ěhům|ěhy|ěhy|ězích|ěhy
+trH|3|h|hu|hu|h|hu|hu|hem|hy|hů|hům|hy|hy|zích|hy
+prÁH|3|áh|ahu|ahu|áh|ahu|ahu|ahem|ahy|ahů|ahům|ahy|ahy|azích|ahy
 -
 kluK|2|k|ka?|ku,klukovi?|ka|ku?|ku,klukovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
 školA|1|a|é|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+nos|3|?|u?|u?|?|e?|i|em?|y?|ů?|ům?|y?|y?|ech?|y?
+stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
+sňÍH|3|i|ehu?|ehu?|íh?|ehu?|ehu?|ehem?|ehy?|ehú?|ehúm?|ehy?|ehy?|ezích?|ehy?
+trH|3||hu?|hu?|h?|hu?|hu?|hem?|hy?|hú?|húm?|hy?|hy?|zích?|hy?
+PRÁH|3|pra|prahu?|prahu?|prah?|prahu?|prahu?|prahem?|prahy?|prahú?|prahúm?|prahy?|prahy?|prazích?|prahy?
 -
-kluk||0|klok|
-škol|školA|0|škol|školA
+kluk||0|klok||
+škol|školA|0|škol|školA|
+nos|nos|0|nos|nos|
+uhřík||0|cveč|stromEK|
+sn|snÍH|0|sň|sňÍH|
+tr|trH|0|tr|trH|
+pr|prÁH|0|pra|PRÁH|
 -
 -
 -
 -
-něCO|-1|co|čeho|čemu|co|co|čem|čím
+něCO|co|čeho|čemu|co|co|čem|čím
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
-neCO|-1|co|čeho?|čemu?|co?|co?|čem?|čím?
+neCO|co|čeho?|čemu?|co?|co?|čem?|čím?
+SE|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
+ON|on?|ho*?,jej?,něj**jeho?,něho**?|mô,jemu?,němu**?|ho*?,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
 -
-ně|ne|něCO|neCO
+ně|něCO|ne|neCO|
+|SE||SE|
+|ON||ON|
 -
 -
 -
 -
 být|119|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž[p 3]|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 být|119|-1|být|jsem|jsi|je|jsme|jste|só|budu|budeš|bude|budeme|budete|budou|buď,budiž[p 3]|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
+hôďelAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-uhlídat|vohlidať||
+uhlídat||vohlidať||
+uděl|udělAT|hôďel|hôďelAT|
 -
-dnes|neska
-doma|duma
-dobře
-kdo|gdo
-pořád|furt
+dnes|neska|
+doma|duma|
+dobře|dobře|
+kdo|gdo|
+pořád|furt|
 -
-do|
+do||do|
+na||na|
 -
-jestli|aď
-potom
-aby|abe
-i|e
+jestli|aď|
+potom|potom|
+aby|abe|
+i|e|
 -
 -

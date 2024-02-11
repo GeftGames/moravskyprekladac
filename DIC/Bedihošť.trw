@@ -1,9 +1,9 @@
-TW v1.0
+TW v2
 tBedihošť
 aGG
 d21.09.2023 14:59:31
 iNeznámé: kót, vidz \n\ndeštivý: pršlavé, ba ceďavé kót Bedihošť PV\ndôšnota Bedihošť PV\nexpr. oděv, zprav. roztrhaný, obnošený: tê vêpadáš! Neber si takovi cabachê Bedihošť PV\n tož žôchlalê vidz o domáckô Bedihošť PV
-c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Bediho%C5%A1%C5%A5+PV">sncj.ujc.cas.cz </a>
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Bediho%C5%A1%C5%A5+PV">sncj.ujc.cas.cz </a>\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/38/mode/1up">Dialektologie moravská; František Bartoš</a>\n\n#Popis nářečí\n-V Pivíně, Štítovicích, Bedihošti, Dubě, Nenakonicích a v Senici je zástupné e (= ý, í) vyšší, skoro kojetské: léčet, čéhat, křéž, zavołé, stréc, bék, z té biłé hôse.
 g49.4480635,17.1660433
 q0
 -
@@ -11,14 +11,14 @@ q0
 -
 -
 -
-roztrhané oblečení|cabachê
-obnošené oblečení|cabachê
-nepodařených pečiv|cabachu
-nepodařené pečivo|cabach
-jednoduché pečivo|cabach
-jednoduchých pečiv|cabachu
+roztrhané oblečení|1|cabachê|
+obnošené oblečení|1|cabachê|
+nepodařených pečiv|1|cabachu|
+nepodařené pečivo|1|cabach|
+jednoduché pečivo|1|cabach|
+jednoduchých pečiv|1|cabachu|
 -
-|kót
+|1|kót|
 -
 vyp|vêp
 vy|vê
@@ -36,26 +36,26 @@ pár|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 domácEK|1|ek?|i?|i?|?|i?|ko|í?|i?|í?|em?|i?|i?|ech?|mi?
 hodnotA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-pár|pár|0|pár|pár
-dušnot|hodnotA|0|dôšnot|hodnotA
-domácnost|domácnost|0|domác|domácEK
+pár|pár|0|pár|pár|
+dušnot|hodnotA|0|dôšnot|hodnotA|
+domácnost|domácnost|0|domác|domácEK|
 -
 -
 -
-deštivý|pršlavé||
-ceďavý|ceďavé||
+deštivý||pršlavé||
+ceďavý||ceďavé||
 -
-tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-takovÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 -
-TY|-1|tê|t[1]?,tebe?|t[1]?,tobě?|t[1]?,tebe?|ty?|tobě?|tebou?
-SE|-1|-|sebe?|si|se?,sebe?|-|sobě?|sebou?
-takovÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|i|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+TY|tê|t[1]?,tebe?|t[1]?,tobě?|t[1]?,tebe?|ty?|tobě?|tebou?
+SE|-|sebe?|si|se?,sebe?|-|sobě?|sebou?
+takovÝ|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|i|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
 -
-t||tY|TY
-SE|SE
-takov|takovÝ|takovÝ
+t|tY||TY|
+|SE||SE|
+takov|takovÝ|takov|takovÝ|
 -
 -
 -
@@ -68,17 +68,17 @@ vypadAT|7|-1|at?|ám?|áš|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|al
 bRÁT|15|-1|rát?|eru?|ereš?|ere?|ereme?|erete?|erou?|er|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráni?|rány?|rány?|rána?
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-vypad|vêpad|vypadAT|vypadAT
-b|bRÁT|bRÁT
-neb|bRÁT|bRÁT
-upéct|ôpekla||
-upíct|ôpekla||
-BÝT|BÝT
-|žôchlalê||
+vypad|vypadAT|vêpad|vypadAT|
+b|bRÁT|b|bRÁT|
+neb|bRÁT|neb|bRÁT|
+upéct||ôpekla||
+upíct||ôpekla||
+|BÝT||BÝT|
+||žôchlalê||
 -
 -
-o|
+o||o|
 -
-ba
+ba|ba|
 -
 -

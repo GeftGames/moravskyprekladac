@@ -1,9 +1,9 @@
-TW v1.0
+TW v2
 tŠtěpánov
 aGG
 d25.06.2023 9:49:21
 i#Znaky\n-ê a ô mohou být vynechány ve zdrojích, upravit\n\n\na ten kuň hoďil čapó dozad a on se svall a t pantofle m přeleťel přez hlav Štěpánov OL
-c#Zdroje dat\n-Stavba věty v mluvených projevech-syntax hanáckých nářečí -Šipková, Milena; str. 166\n-https://sncj.ujc.cas.cz
+c#Zdroje dat\n-Stavba věty v mluvených projevech-syntax hanáckých nářečí -Šipková, Milena; str. 166\n-https://sncj.ujc.cas.cz\n-V Hnojících, Houzové a Žerotíně je dativ zájmen já mi, ve Štěpánově a dále na jih mně. Odtud si sousedé tito navzájem přezdívají: „Miťaci" a „Mněši."
 lHanáčtina
 g49.6842321,17.2197452
 q0
@@ -11,15 +11,15 @@ oHaná
 -
 -
 -
-Tak co?|Toš co?
+Tak co?|1|Toš co?|
 -
-tak ne|tag ne
-ne
-no jo|no ja
-no ano|no ja
+tak ne|1|tag ne|
+ne|1|ne|
+no jo|1|no ja|
+no ano|1|no ja|
 -
-kdyby jste|debeste
-asi deset|z deset
+kdyby jste|1|debeste|
+asi deset|1|z deset|
 -
 -
 -
@@ -48,61 +48,61 @@ zemA|1|a|y?|ě?|u?|o?|ě?|ó|y?|?|ám?|y?|y?|ách?|ami?
 kŮŇ|3|uň|oně?|oni,oňovi?|oně,archaicky) kůň[4][5]?|oni?|oni,oňovi?|oněm?|oně?|oní,oňů?|oním,oňům?|oně?|oně?|oních?|oni,oňmi?
 hlavA|1|a?|y?|ě?|ô|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-počasí|stavení|0|počasi|stavení
-|člověk|0||člověk
-noc|noc|0|noc|noc
-hotel||0|hotel|
-uhlí|stavení|0|hohli|stavení
-hromad|hromadA|0|hromad|hromadA
-zim|zimA|0|zem|zemA
-k|kŮŇ|0|k|kŮŇ
-noh|zimA|0|čap|zemA
-hlav|hlavA|0|hlav|hlavA
+počasí|stavení|0|počasi|stavení|
+|člověk|0||člověk|
+noc|noc|0|noc|noc|
+hotel||0|hotel||
+uhlí|stavení|0|hohli|stavení|
+hromad|hromadA|0|hromad|hromadA|
+zim|zimA|0|zem|zemA|
+k|kŮŇ|0|k|kŮŇ|
+noh|zimA|0|čap|zemA|
+hlav|hlavA|0|hlav|hlavA|
 -
 -
 -
-|
+||||
 -
-MY|-1|my|nás|nám|nás|my|nás|námi
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-vY|-1|y|ás|ám|ás|y|ás|ámi
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
-něCO|-1|co|čeho|čemu|co|co|čem|čím
-tolik|-1||a|a|||a|a
-ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
-sÁM|-1|ám|amého|amému|mého,ama|-|amém|amým|ami|amých|amým|amy|-|amých|amými|ám|amého|amému|ám|-|amém|amým|amy|amých|amým|amy|-|amých|amými|ama|amé|amé|amu|-|amé|amou|amy|amých|amým|amy|-|amých|amými|amo|amého|amému|amo|-|amém|amým|ama|amých|amým|ama|-|amých|amými
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+MY|my|nás|nám|nás|my|nás|námi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+vY|y|ás|ám|ás|y|ás|ámi
+CO|co|čeho|čemu|co,-č|-|čem|čím
+něCO|co|čeho|čemu|co|co|čem|čím
+tolik||a|a|||a|a
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+sÁM|ám|amého|amému|mého,ama|-|amém|amým|ami|amých|amým|amy|-|amých|amými|ám|amého|amému|ám|-|amém|amým|amy|amých|amým|amy|-|amých|amými|ama|amé|amé|amu|-|amé|amou|amy|amých|amým|amy|-|amých|amými|amo|amého|amému|amo|-|amém|amým|ama|amých|amým|ama|-|amých|amými
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 -
-MY|-1|me|nás?|nám?|nás?|my?|nás?|námi?
-SE|-1|-|sebe?|si|se|-|sobě?|sebou?
-tEN|-1|en|oho?|omu?|oho?|-|om?|ém|i|eh|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|ê|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|eh|ěm?|y?|-|ěch?|ěmi?
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mňe|já?|mně?|mnou?
-vY|-1|e|ás?|ám?|ás?|y?|ás?|ámi?
-CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
-něCO|-1|co|čeho?|čemu?|co?|co?|čem?|čím?
-tol|-1|i?|ika?|ika?|i|ik?|ika?|ika?
-ONA|-1|ona|jí?,#ní*?|ji,#ní*?|ji?,#ni?|-|ní*?|jí?,ní*?
-sÁM|-1|ám?|amého?|amému?|mého,ama?|-|amém?|amým?|ami?|amých?|amým?|amy?|-|amých?|amými?|ám?|amého?|amému?|ám?|-|amém?|amým?|amy?|amých?|amým?|amy?|-|amých?|amými?|ama|amé?|amé?|amu?|-|amé?|amou?|amy?|amých?|amým?|amy?|-|amých?|amými?|amo?|amého?|amému?|amo?|-|amém?|amým?|ama?|amých?|amým?|ama?|-|amých?|amými?
-ON|-1|on|ho*,jej,něj**jeho,něho**?|mô|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+MY|me|nás?|nám?|nás?|my?|nás?|námi?
+SE|-|sebe?|si|se|-|sobě?|sebou?
+tEN|en|oho?|omu?|oho?|-|om?|ém|i|eh|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|ê|eh|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|eh|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|eh|ěm?|y?|-|ěch?|ěmi?
+JÁ|já|mě?,(knižně) mne[2]?|mňe|mňe|já?|mně?|mnou?
+vY|e|ás?|ám?|ás?|y?|ás?|ámi?
+CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+něCO|co|čeho?|čemu?|co?|co?|čem?|čím?
+tol|i?|ika?|ika?|i|ik?|ika?|ika?
+ONA|ona|jí?,#ní*?|ji,#ní*?|ji?,#ni?|-|ní*?|jí?,ní*?
+sÁM|ám?|amého?|amému?|mého,ama?|-|amém?|amým?|ami?|amých?|amým?|amy?|-|amých?|amými?|ám?|amého?|amému?|ám?|-|amém?|amým?|amy?|amých?|amým?|amy?|-|amých?|amými?|ama|amé?|amé?|amu?|-|amé?|amou?|amy?|amých?|amým?|amy?|-|amých?|amými?|amo?|amého?|amému?|amo?|-|amém?|amým?|ama?|amých?|amým?|ama?|-|amých?|amými?
+ON|on|ho*,jej,něj**jeho,něho**?|mô|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
 -
-MY|MY
-SE|SE
-t|tEN|tEN
-JÁ|JÁ
-vY|vY|vY
-CO|CO
-ně|ne|něCO|něCO
-až|aš||
-tolik|tol|tolik|tolik
-ONA|ONA
-s|sÁM|sÁM
-ON|ON
+|MY||MY|
+|SE||SE|
+t|tEN|t|tEN|
+|JÁ||JÁ|
+vY|vY|vY|vY|
+|CO||CO|
+ně|něCO|ne|něCO|
+až||aš||
+tolik|tolik|tol|tolik|
+|ONA||ONA|
+s|sÁM|s|sÁM|
+|ON||ON|
 -
 -
 -
-čtyřicet|štericed||
+čtyřicet||štericed||
 -
 viDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|z|zme|zte|děl|děl|děla|dělo|děli|děly|děly|děla|děn|děn|děna|děno|děni|děny|děny|děna
 JÍT|95|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|šed|šedši|šedše
@@ -134,49 +134,49 @@ mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(h
 MÍT|71|-1|mít?|mám?|máš?|má?|máme?|máte|maji|měj?|mějme?|mějte?|měl?|měl?|mňela|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 bolET|7|-1|et?|ím?|íš?|í?|íme?|íte?|ijó|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 -
-vi|viDĚT|viDĚT
-JÍT|JÍT
-oblÉ|oblÉCT|oblÉCT
-BÝT|BÝT
-blábolit|plkat||
-podív|poďiv|podívAT|poďivAŤ
-ne|JÍT|JÍT
-ne|n|neBÝT|nEBÝT
-mus|mos|musET|mosET
-vĚ|vĚDĚT|vĚDĚT
-děl|ďel|dělIT|dělIT
-počk|počkAT|počkAT
-cho|choDIT|choDIT
-mO|mOCT|mOCT
-MÍT|MÍT
-bol|bolET|bolET
-uhřát|zehřit||
+vi|viDĚT|vi|viDĚT|
+|JÍT||JÍT|
+oblÉ|oblÉCT|oblÉ|oblÉCT|
+|BÝT||BÝT|
+blábolit||plkat||
+podív|podívAT|poďiv|poďivAŤ|
+ne|JÍT|ne|JÍT|
+ne|neBÝT|n|nEBÝT|
+mus|musET|mos|mosET|
+vĚ|vĚDĚT|vĚ|vĚDĚT|
+děl|dělIT|ďel|dělIT|
+počk|počkAT|počk|počkAT|
+cho|choDIT|cho|choDIT|
+mO|mOCT|mO|mOCT|
+|MÍT||MÍT|
+bol|bolET|bol|bolET|
+uhřát||zehřit||
 -
-ještě|ešče
-dále,dál|dál
-tedy|teda
-pořád|furt
-tady|tuď,tade
-zase,zas|zaz
-tam
-tak|tag
-sem
-pak
-klidně|klidňe
+ještě|ešče|
+dále,dál|dál|
+tedy|teda|
+pořád|furt|
+tady|tuď||tade|
+zase,zas|zaz|
+tam|tam|
+tak|tag|
+sem|sem|
+pak|pak|
+klidně|klidňe|
 -
-s|
-i|aji,i|
-do|
-v|
-u|o|
-přes|přez|
+s||s|
+i||aji||i|
+do||do|
+v||v|
+u||o|
+přes||přez|
 -
-ještli|eše
-že
-vždyť|deď
-ale
-a
+ještli|eše|
+že|že|
+vždyť|deď|
+ale|ale|
+a|a|
 -
-no
-ne|né
+no|no|
+ne|né|
 -

@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 fSpisovná čeština
 tPříbor
 aGG
@@ -11,9 +11,10 @@ q0
 -
 -
 -
-Hadáli jsme se.|Spočítali zmy se.
+Hadáli jsme se.|1|Spočítali zmy se.|
 -
 -
+neustále pospíchá|1|lice jak cajtr|
 -
 -
 obch|opch
@@ -44,25 +45,25 @@ vepřovicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 kosť|1|?|i?|i?|?|i?|i?|i|i?|í?|em?|i?|i?|ech?|mi?
 bandúr|1||e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 -
-pouť|kost|0|pouť|kosť
-vepřovic|vepřovicE|0|bandúr|bandúr
+pouť|kost|0|pouť|kosť|
+vepřovic|vepřovicE|0|bandúr|bandúr|
 -
 -
 -
 -
-se|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-JÁ|-1|já|mě,mne|mně,mi|mě,mne|já|mně|mnou
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+se|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|já|mě,mne|mně,mi|mě,mne|já|mně|mnou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-se|-1|-|sebe?|si,sobě?|se,sebe?|-|sobě?|sebou?
-tEN|-1|en?|oho?|omu?|oho?|-|ym|im|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|ym|im|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|ym|im|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-JA|-1|ja|mě,mne?|mně,mi?|mě,mne?|já?|mně?|mnou?
-SE|-1|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
+se|-|sebe?|si,sobě?|se,sebe?|-|sobě?|sebou?
+tEN|en?|oho?|omu?|oho?|-|ym|im|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|ym|im|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|ym|im|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JA|ja|mě,mne?|mně,mi?|mě,mne?|já?|mně?|mnou?
+SE|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
 -
-t|tEN|tEN
-JÁ|JA
-SE|SE
+t|tEN|t|tEN|
+|JÁ||JA|
+|SE||SE|
 -
 třI|2|i|í,třech[1]|em|i|i|ech|emi
 čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
@@ -70,8 +71,8 @@ třI|2|i|í,třech[1]|em|i|i|ech|emi
 třI|2|i|í?,ech?|em?|i?|i?|ech?|emi?
 štyrY|2|y|čtyřech?|em?|i?|i?|ech?|tyřma?,mi?
 -
-tř|třI|třI
-čtyř|štyr|čtyřI|štyrY
+tř|třI|tř|třI|
+čtyř|čtyřI|štyr|štyrY|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 jít|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
@@ -81,18 +82,20 @@ BÝT|247|-1|být?|sem|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budet
 JÍŤ|127|-1|jiť|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 dožirAT|15|-1|at|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
 -
-BÝT|BÝT
-jít|JÍŤ
-otrav|otravOVAT|otravOVAT
+|BÝT||BÝT|
+|jít||JÍŤ|
+otrav|otravOVAT|otrav|otravOVAT|
+||on lice||
 -
-nahoře
-dneska|neska
-potom|potem
-kdysi|gdysik
+nahoře|nahoře|
+dneska|neska|
+potom|potem|
+kdysi|gdysik|
 -
-před|přet|
+před||přet|
 -
-protože|bo
-a
+protože|bo|
+a|a|
+jak|jak|
 -
 -

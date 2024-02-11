@@ -1,7 +1,8 @@
-TW v1.0
+TW v2
 tŽeleč
 aGG
 d23.10.2023 20:12:17
+c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/70/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n-V Stařechovicích, Čelechovicích, Kostelci, Bílovicích, Lešanech, Ohrozimi, Plumlově, Krumsíně, Uherčících, Dědkovicích, Brodku, Zelči, jakož i v sousedních západních osadách tohoto podřečí je přídechové v : voko, voves, vodehnal. \n-V Plumlově, v Kelčicích, Vřesovicích, Kobeřicích, Hradčanech, v Brodku a v Želčí jest jedno l, střední.\n-V Brodku a Želči je zástupné é a ó snížené, hrdelné: stréc, dobřé, omé, zakré.
 sBrodek u Prostějova
 g49.3457102,17.0973371
 q0
@@ -12,38 +13,46 @@ q0
 -
 -
 -
+o|vo
 -
 -
 -
 cibulKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+oKO|0|ko|ka|ku|ko|ko|ku|kem|či[1]|čí|čím|či|či|čích|čima*
+ovES|1|es|sa|su|es|se|su,se|sem|sy|sů|sům|sy|sy|sech|sy
 -
 cibulKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+voKO|0|ko|ka?|ku?|ko?|ko?|ku?|kem?|či[1]?|čí?|čím?|či?|či?|čích?|čima*?
+vovES|1|es|sa?|su?|es?|se?|su?,se?|sem?|sy?|sú?|súm?|sy?|sy?|sech?|sy?
 -
-cibul|cibulKA|0|cêbôlên|cibulKA
+cibul|cibulKA|0|cêbôlên|cibulKA|
+o|oKO|0|vo|voKO|
+ov|ovES|0|vov|vovES|
 -
 malÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 malÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-mal|malÝ|malÝ
+mal|malÝ|mal|malÝ|
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
-mŮJ|-1|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|je,é|ých|ým|je,é|je,é|ých|ými|je,á|jí,é|jí,é|ji,ou|je,á|jí,é|jí,ou|je,é|ých|ým|je,é|je,é|ých|ými|je,é|ého|ému|je,é|je,é|ém|ým|je,á|ých|ým|je,á|je,á|ých|ými
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+mŮJ|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|je,é|ých|ým|je,é|je,é|ých|ými|je,á|jí,é|jí,é|ji,ou|je,á|jí,é|jí,ou|je,é|ých|ým|je,é|je,é|ých|ými|je,é|ého|ému|je,é|je,é|ém|ým|je,á|ých|ým|je,á|je,á|ých|ými
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-tY|-1|ê|[1]?,ebe?|[1]?,obě?|[1]?,ebe?|y?|obě?|ebou?
-mŮJ|-1|ůj?|ého?|ému?|ého?|ůj?|ém?|ým?|ji?,í?|ých?|ým?|je?,é?|ji?,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|oja|jí?,é?|jí?,é?|ji?,ou?|je?,á?|jí?,é?|jí?,ou?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|je?,é?|ého?|ému?|je?,é?|je?,é?|ém?|ým?|je?,á?|ých?|ým?|je?,á?|je?,á?|ých?|ými?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+tY|ê|[1]?,ebe?|[1]?,obě?|[1]?,ebe?|y?|obě?|ebou?
+mŮJ|ůj?|ého?|ému?|ého?|ůj?|ém?|ým?|ji?,í?|ých?|ým?|je?,é?|ji?,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|oja|jí?,é?|jí?,é?|ji?,ou?|je?,á?|jí?,é?|jí?,ou?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|je?,é?|ého?|ému?|je?,é?|je?,é?|ém?|ým?|je?,á?|ých?|ým?|je?,á?|je?,á?|ých?|ými?
 -
-t|tEN|tEN
-t|tY|tY
-m|mŮJ|mŮJ
--
--
+t|tEN|t|tEN|
+t|tY|t|tY|
+m|mŮJ|m|mŮJ|
 -
 -
 -
 -
+-
+-
+||vodehnal||
 -
 -
 -

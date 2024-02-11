@@ -2,7 +2,7 @@ TW v2
 tOhrozim
 aGG
 d23.07.2023 16:24:37
-c#Zdroje dat\n-<a href="">sncj.ujc.cas.cz</a>
+c#Zdroje dat\n-<a href="">sncj.ujc.cas.cz</a>\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/69/mode/1up">textsDialektologie moravská</a>\n\n#Popis nářečí\n-v přídechové je v Bílovicích, Kostelci, Čelechovicích, Stařechovicích, Uherčících, Dědkovicích, Myslejovicích, v Ohrozimě, Krumsíně: vobá, vobřislo, vobec, vokurkê, vokno.\n-V Stařechovicích, Čelechovicích, Kostelci, Bílovicích, Lešanech, Ohrozimi, Plumlově, Krumsíně, Uherčících, Dědkovicích, Brodku, Zelči, jakož i v sousedních západních osadách tohoto podřečí je přídechové v : voko, voves, vodehnal. 
 g49.4881121,17.0199751
 q0
 -
@@ -12,17 +12,34 @@ q0
 -
 -
 -
+o|vo
 -
 -
 -
 cop|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
+obEC|1|ec|ce|ci|ec|ci|ci|cí|ce|cí|cím|ce|ce|cích|cemi
+okurKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+oKO|0|ko|ka|ku|ko|ko|ku|kem|či[1]|čí|čím|či|či|čích|čima*
+ovES|1|es|sa|su|es|se|su,se|sem|sy|sů|sům|sy|sy|sech|sy
 -
 cop|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 člônEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+vokNO|0|no|na?|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
+vobEC|1|ec|ce?|ci?|ec?|ci?|ci?|cí?|ce?|cí?|cím?|ce?|ce?|cích?|cemi?
+vokurKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|kê|ek?|kám?|ky?|ky?|kách?|kami?
+voKO|0|ko|ka?|ku?|ko?|ko?|ku?|kem?|či[1]?|čí?|čím?|či?|či?|čích?|čima*?
+vovES|1|es|sa?|su?|es?|se?|su?,se?|sem?|sy?|sú?|súm?|sy?|sy?|sech?|sy?
 -
 cop|cop|0|cuplék|cop|
 člun|člunEK|0|člôn|člônEK|
+ok|okNO|0|vok|vokNO|
+ob|obEC|0|vob|vobEC|
+okur|okurKA|0|vokur|vokurKA|
+||0|vobřislo||
+o|oKO|0|vo|voKO|
+ov|ovES|0|vov|vovES|
 -
 -
 -
@@ -30,11 +47,15 @@ cop|cop|0|cuplék|cop|
 -
 -
 -
+obA|2|a|ou|ěma|a|a|ou|ěma
+-
+vobA|2|á|ou?|jema?|a?|a?|ou?|jema?
+-
+ob|obA|vob|vobA|
 -
 -
 -
--
--
+||vodehnal||
 -
 -
 -

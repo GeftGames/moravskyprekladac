@@ -1,8 +1,9 @@
-TW v1.0
+TW v2
 tDub nad Moravou
 aGG
 d06.08.2023 13:28:00
 iďáh ví, co to belo za jídlo Dub nad Moravou OL – nikdo neví\nale u ďácha, još so zasék s ceste Dub nad Moravou OL\nale je toho očeňi na ďáche! Dub nad Moravou OL\ndo ďáchanta Dub nad Moravou OL – zaklení
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Dub+nad+Moravou+OL%22">SNČJ</a>\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/70/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n-V Dubě a přifařených Nenakonicích, pak ve Štítovicích t v infinitivě měkne: vołať, běžeť, młátiť kdežto v sousedních Vrbátkách už je tvrdé t.\n-Tak hanácké nářečí obyvatel Dubu se odlišovalo od hanáčtiny a není proto divu, že "praví" Hanáci se jim posmívali: Aha, te se z Dobo, co tam tak roztahojóho hobo! (hanácký kalendář, 1998, Společnost přátel vesnice a malého města v Olomouci) \n-V Pivíně, Štítovicích, Bedihošti, Dubě, Nenakonicích a v Senici je zástupné e (= ý, í) vyšší, skoro kojetské: léčet, čéhat, křéž, zavołé, stréc, bék, z té biłé hôse.\n-Ve Výšovicích, Vřesovicích, Stítovicích, v Dubě a Nenakovicích je ó (= ú) hodně vysoké = 6 : za našó zahradó.
 g49.4824789,17.2769199
 q0
 oHaná
@@ -11,47 +12,64 @@ oHaná
 -
 -
 -
-ďábel ví|ďáh ví
-z cesty|s ceste
-jsem zase|so zasék
+nikdo neví|1|ďáh ví|
+z cesty|1|s ceste|
+jsem zase|1|so zasék|
+velmi mnoho|1|na ďáche|
+sakraporte|1|do ďáchanta|?
 -
 -
 -
 -
 -
 cestA|0|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+ďábEL|2|el|la|lu,lovi|la|le|lu,lovi|lem|li,lové|lů|lům|ly|li,lové|lech|ly
+jídLO|0|lo|la|lu|lo|lo|lu,le|lem|la|el|lům|la|la|lech|ly
+učení|0|||||||m|||m|||ch|mi
 -
 cestA|0|a?|e|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+ďáCH|2|h|cha|lu?,lovi?|la?|le?|lu?,lovi?|lem?|li?,lové?|lú?|lúm?|che|li?,lové?|lech?|ly?
+jídLO|0|lo?|la?|lu?|lo|lo?|lu?,le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
+očeňi|0|?|?|?||?|?|m?|?|?|m?|?|?|ch?|mi?
 -
-jídlo||0|jídlo|
-ďábel||0|ďáh|
-cest|cestA|0|cest|cestA
+ďábel|ďábEL|0|ďá|ďáCH|
+cest|cestA|0|cest|cestA|
+jíd|jídLO|0|jíd|jídLO|
+učení|učení|0|očeňi|očeňi|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+CO|co|čeho|čemu|co,-č|-|čem|čím
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+CO|co?|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-t|tEN|tEN
+t|tEN||tEN|
+|CO||CO|
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|belo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|so,jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|belo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+vĚĎET|7|-1|ěďet?|ím?|íš?|í|íme?|íte?|ěďí?|ěz?|ězme?|ězte?|ěďel?|ěďel?|ěďela?|ěďelo?|ěďeli?|ěďely?|ěďely?|ěďela?
 -
-|BÝT|BÝT
+|BÝT||BÝT|
+v|vĚDĚT|v|vĚĎET|
 -
-již|još
-zase|zasék
+již|još|
+zase|zasék|
 -
-za|
-do|
-u|
+za||za|
+do||do|
+u||u|
+na||na|
+z||s|
 -
-ale
+ale|ale|
 -
 -

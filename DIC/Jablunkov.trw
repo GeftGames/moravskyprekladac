@@ -13,8 +13,12 @@ oSlezsko>Goralsko
 -
 -
 bramborové placky|1|stryki|
+pletením připojit|1|doštrykovač|
+tenkým proudem|1|čurčkym|
+z cizího|1|s cudzego|
 -
 -
+|
 -
 á|a
 í|i
@@ -29,6 +33,7 @@ smrt|1||i|i||i|i|í|i|í|ím|i|i|ích|mi
 řezníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 tatínEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
 chlÉB|3|éb|eba|ebu|éb|ebe|ebu,ebě|ebem|eby|ebů|ebům|eby|eby|ebech|eby
+krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 -
 odmaRA|1|ryja|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 kanEC|2|ec?|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
@@ -38,6 +43,7 @@ smrT|1|t?|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|ťím?|ťi?|ťi?|ťích?|tmi?
 mosoř|2|k?|ka?|ov́i|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 taťínEK|2|ek?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
 chlÉB|3|éb?|eba?|ebu?|éb?|ebe?|ebu?,ebje?|ebem?|eby?|ebú?|ebúm?|eby?|eby?|ebech?|eby?
+krEV|1|ev?|ve?|vi?|ev|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 -
 alma|almaRA|0|odma|odmaRA|
 kan|kanEC|0|gaň|kanEC|
@@ -47,13 +53,21 @@ smrt?||0|šm’erdž||
 řezní|řezníK|0|masoř|mosoř|
 tatín|tatínEK|0|tatul|taťínEK|
 chl|chlÉB|0|chl|chlÉB|
+||0|doachtlika ||
+kr|krEV|0|kr|krEV|
 -
 rezavÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+cizí|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
 rezavÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
+celÝ|-1|ṵé?|ṵého?|ṵému?|ṵé?|ṵé?|ṵém?|ṵým?|-|-|ṵá?|ṵých?|ṵým?|ṵá?|ṵá?|ṵých?|ṵými?|-|-|ṵá?|ṵé?|ṵé?|ṵou?|ṵá?|ṵé?|ṵou?|-|-|ṵé?|ṵých?|ṵým?|ṵé?|ṵé?|ṵých?|ṵými?|-|-|ṵý?|ṵého?|ṵému?|ṵého?|ṵý?|ṵém?|ṵým?|-|-|ṵí?|ṵých?|ṵým?|ṵé?|ṵí?|ṵých?|ṵými?|-|-|ṵy|ṵého?|ṵému?|ṵý?|ṵý?|ṵém?|ṵým?|-|-|ṵé?|ṵých?|ṵým?|ṵé?|ṵé?|ṵých?|ṵými?|-|-
+cudzEGO|-1|e?|eho?|emu?|e?|e?|em?|em?|-|-|e?|ech?|em?|e?|e?|ech?|emi?|-|-|e?|e?|e?|e?|e?|e?|e?|-|-|e?|ech?|em?|e?|e?|ech?|emi?|-|-|e?|ego|emu?|eho?|e?|em?|em?|-|-|e?|ech?|em?|e?|e?|ech?|emi?|-|-|e?|eho?|emu?|e?|e?|em?|em?|-|-|e?|ech?|em?|e?|e?|ech?|emi?|-|-
 -
 hotov|rezavÝ|hotov|rezavÝ|
 ||lep’i||
+cel|celÝ|ca|celÝ|
+cizí|cizí|cudz|cudzEGO|
 -
 tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 kDO|do|oho|omu|oho|do|om|ým
@@ -72,17 +86,24 @@ t|tEN||tEN|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 žÍT|15|-1|ít|iji|iješ|ije|ijeme|ijete|ijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+tÉCT|7|-1|éct|eku,teču|ečeš|eče|ečeme|ečete|ekou,tečou|eč|ečme|ečte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|bydžež|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 žÍT|15|-1|ič|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
+ČÉCT|7|-1|čéct?|čeku?,čteču?|čečeš?|čeče|čečeme?|čečete?|čekou?,čtečou?|čeč?|čečme?|čečte?|čekl?|čekl?|čekla?|čeklo?|čekli?|čekly?|čekly?|čekla?
 -
 |BÝT||BÝT|
 ž|žÍT|ž|žÍT|
+||vlyjče ||
+t|tÉCT||ČÉCT|
+net|tÉCT|ňe|ČÉCT|
 -
 jestli|jeśli|
 ještě|ješče|
 dlouho|długo||dṵugo|
+tam|tam|
 -
+do||do|
 -
 než|ňiž|
 -

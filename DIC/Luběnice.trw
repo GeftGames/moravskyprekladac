@@ -22,6 +22,7 @@ brambory|1|japka|
 dělat hluk|1|rablovat|
 tam je kdovíco|1|tam je dovičeho|
 uvývat zem|0|u?mý?vat? zeme|
+k slatinicím|1|ke slaťenicum|
 -
 -
 -
@@ -32,12 +33,14 @@ lopatA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 hrábĚ|1|-|-|-|-|-|-|-|ě|í|ím|ě|ě|ích|ěmi
 svátEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+slatinicE|3|e||ím|e|e|ích|emi|-|-|-|-|-|-|-
 -
 les|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
 lopatA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 hrad|3||u?|u?|?|e?|ě?,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 hrÁBĚ|1|-|-|-|-|-|-|-|ábě?|ábí?|ábím?|ábě?|ábě?|ábích?|abjama
 svátEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|kê|ky?|cích?|ky?
+slaťeňicE|3|e?|?|um|e?|e?|ích?|emi?|-|-|-|-|-|-|-
 -
 vesnice||0|dědina||
 prkno||0|deska||
@@ -48,6 +51,8 @@ bačkory||0|papuše||
 kapust|lopatA|0|kel|hrad|
 hráb|hrábĚ|0|hr|hrÁBĚ|
 svát|svátEK|0|svát|svátEK|
+slatinic|slatinicE|2|slaťeňic|slaťeňicE|
+brzdění||0|bržďeňi||
 -
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -77,8 +82,8 @@ dívAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly
 mySLET|15|-1|slet|slím|slíš|slí|slíme|slíte|slí,myslejí|sli|sleme|slete|slel|slel|slela|slelo|sleli|slely|slely|slela|šlen|šlen|šlena|šleno|šleni|šleny|šleny|šlena
 sklízET|15|-1|et|ím|íš|í|íme|íte|í,sklízejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
-pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
-zeptAT_SE|22|-1|at_se|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+pomOCT|30|-1|oct|ohu,ůžu|ůžeš|ůže|ůžeme|ůžete|ohou,ůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+zeptAT_SE|22|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
@@ -86,7 +91,7 @@ dívAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo
 meSLET|15|-1|slet?|slím?|slíš?|slí?|slíme?|slíte?|slí,myslejí?|sli?|sleme?|slete?|slel?|slel?|slela?|slelo?|słéle|slely?|slely?|slela?|šlen?|šlen?|šlena?|šleno?|šleni?|šleny?|šleny?|šlena?
 sklízET|15|-1|et|ím?|íš?|í?|íme?|íte?|í,sklízejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 utěkAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
-pomUCT|30|-1|uct|ohu,(hovorově) pomůžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) pomůžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|oženi?|oženy?|oženy?|ožena?
+pomUCT|30|-1|uct|ohu?,ůžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou?,ůžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|oženi?|oženy?|oženy?|ožena?
 zeptAT_SE|22|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 uĎELAT|30|-1|ďelat|dělám?|děláš?|dělá?|děláme?|děláte?|dělají?|ďelej?|ďelejme?|ďelejte?|ďelal?|ďelal?|ďelala?|ďelalo?|ďelali?|ďelaly?|ďelaly?|ďelala?|ďelán?|ďelán?|ďelána?|ďeláno?|ďeláňi?|ďelány?|ďelány?|ďelána?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|bêzte|by?
@@ -107,8 +112,12 @@ spolu|spolem|
 jestli|eši|
 dobře|dobrá|
 zatím|zaťim|
+doprostřed|naprostředek|
+|poboskê?|
 -
+ke||ke|
 -
 -
 jo|ja|
 -
+jejda|jéda|

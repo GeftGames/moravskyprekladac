@@ -2,7 +2,7 @@ TW v2
 tUrčice
 aGG
 d01.05.2023 19:47:39
-c#Zdroje dat\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str. 37
+c#Zdroje dat\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str. 37\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/69/mode/1up">textsDialektologie moravská</a>\n\n#Popis nářečí\n-v přídechové je v Bílovicích, Kostelci, Čelechovicích, Stařechovicích, Uherčících, Dědkovicích, Myslejovicích, v Ohrozimě, Krumsíně: vobá, vobřislo, vobec, vokurkê, vokno.\n-V Stařechovicích, Čelechovicích, Kostelci, Bílovicích, Lešanech, Ohrozimi, Plumlově, Krumsíně, Uherčících, Dědkovicích, Brodku, Zelči, jakož i v sousedních západních osadách tohoto podřečí je přídechové v : voko, voves, vodehnal. 
 g49.4305315,17.075338
 q0
 oHaná
@@ -14,6 +14,7 @@ oHaná
 -
 -
 uv|ôv
+o|vo
 -
 í|i
 ý|y
@@ -26,17 +27,33 @@ hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 cop|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 hřebíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
+obEC|1|ec|ce|ci|ec|ci|ci|cí|ce|cí|cím|ce|ce|cích|cemi
+okurKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+oKO|0|ko|ka|ku|ko|ko|ku|kem|či[1]|čí|čím|či|či|čích|čima*
+ovES|1|es|sa|su|es|se|su,se|sem|sy|sů|sům|sy|sy|sech|sy
 -
 školA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 městO|0|o|a?|u?|o|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 cop|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 hřebíK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+vokNO|0|no|na?|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
+vobEC|1|ec|ce?|ci?|ec?|ci?|ci?|cí?|ce?|cí?|cím?|ce?|ce?|cích?|cemi?
+vokurKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|kê|ek?|kám?|ky?|ky?|kách?|kami?
+voKO|0|ko|ka?|ku?|ko?|ko?|ku?|kem?|či[1]?|čí?|čím?|či?|či?|čích?|čima*?
+vovES|1|es|sa?|su?|es?|se?|su?,se?|sem?|sy?|sú?|súm?|sy?|sy?|sech?|sy?
 -
 brambor|hrad|0|hertepl|školA|
 mlék|městO|0|mlik|městO|
 hrnec||0|hrne℥||
 cop|cop|0|cuplê|hřebíK|
+ok|okNO|0|vok|vokNO|
+ob|obEC|0|vob|vobEC|
+okur|okurKA|0|vokur|vokurKA|
+||0|vobřislo||
+o|oKO|0|vo|voKO|
+ov|ovES|0|vov|vovES|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
@@ -47,14 +64,18 @@ syrov|zelenÝ|sêrov|zelenÝ|
 -
 -
 -
+obA|2|a|ou|ěma|a|a|ou|ěma
 -
+vobÁ|2|á|ou?|jema?|a?|a?|ou?|jema?
 -
+ob|obA|vob|vobÁ|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 BÝT|247|-1|být?|sem|jsi?|je?|zmê|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
 |BÝT||BÝT|
+||vodehnal||
 -
 -
 s||z|

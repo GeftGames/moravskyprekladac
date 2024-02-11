@@ -6,6 +6,7 @@ i#Zdroje dat\n-https://www.nulk.cz/ek-obsah/narvystava/html/kniha/texty/nv-0092.
 c#Zdroje dat\n-https://is.muni.cz/th/e4802/Narecni_slovnik_starsi_generace_obce_Hodslavice.doc\n-https://www.hodslavice.cz/hodslavske-nareci
 g49.5386857,18.023794
 q0
+oLašsko
 -
 -
 -
@@ -31,6 +32,8 @@ vaječná smaženice|1|škračenica |
 plachta na nošení trávy|1|trávnice |
 bramborová polévka|1|zupa||kobzolanka|
 obnošená obuv|1|bandur|
+okna drnčely|1|okna břynčaṵy|
+tenkým proudem|1|cúrkem|
 -
 -
 -
@@ -74,6 +77,7 @@ polštář|-1||e|i||i|i|em|e|ů|ům|e|e|ích|i
 žebříK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 petržel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 -
 strom|3|?|u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 polE|0|e?|e?|i?|e?|e?|i?|em?|e?|í?|ím?|a|e?|ích?|i?
@@ -105,6 +109,7 @@ zhlavEC|-1|ec|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
 žebř|3||ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 petrželÉ|1|é|e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 čúnEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+krEV|1|ev|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 -
 |gatě |0||gatě |
 babič|babičKA|0|stařen|babičKA|
@@ -112,6 +117,7 @@ borův|pohádKA|0|hafery ||
 bot|botA|0|škrbá|škrbáL|
 bouř|pohádKA|0|búř|pohádKA|
 brambory||0|kobzole ||
+člun|člunEK|0|čún|čúnEK|
 děvče||0|děcko ||
 halen|pohádKA|0|jup|pohádKA|
 holub||0|hołub ||
@@ -160,19 +166,22 @@ vemen|vemenO|0|vymen|vemenO|
 žebří|žebříK|0|žebř|žebř|
 žen|ženA|0|rob|ženA|
 židl|židlE|0|stoṵ|stolEK|
-člun|člunEK|0|čún|čúnEK|
+kr|krEV|0|kr|krEV|
 -
 -
 -
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 tY|y|,ebe|,obě|,ebe|y|obě|ebou
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
 -
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 tY|ty?|t[1]?,tebe?|ťi|t[1]?,tebe?|ty?|tobě?|tebou?
+ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
 -
 t|tEN||TEN|
 t|tY||tY|
+|ON||ON|
 -
 -
 -
@@ -182,12 +191,14 @@ rozsvÍTIT|30|-1|out|ítím|ítíš|ítí|ítíme|ítíte|ítí|iť|iťme|iťte|
 JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 naJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 zvedNOUT|30|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la|nut|nut|nuta|nuto|nuti|nuty|nuty|nuta
+tÉCT|7|-1|éct|eku,teču|ečeš|eče|ečeme|ečete|ekou,tečou|eč|ečme|ečte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla
 -
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 rožnOUT|30|-1|úť|u?|eš?|e?|eme?|ete?|ou?|i?|ěme?|ěte?|ul?|ul?|ula?|ulo?|uli?|uly?|uly?|ula?|ut?|ut?|uta?|uto?|uti?|uty?|uty?|uta?
 JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šło|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
 naJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jdi?|jděme?|jděte?|šel?|šel?|šla?|šło|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
 zvEDNOUT|30|-1|ednout?|ednu?|edneš?|edne?|edneme?|ednete?|ednou?|edni?|edněme?|edněte?|edl?|edl?|edla?|ihło|edli?|edly?|edly?|edla?|ednut?|ednut?|ednuta?|ednuto?|ednuti?|ednuty?|ednuty?|ednuta?
+tÉCT|7|-1|éct?|eku?,teču?|ečeš?|eče?|ečeme?|ečete?|ekou?,tečou?|eč?|ečme?|ečte?|ekl?|ekl?|ékła|eklo?|ekli?|ekly?|ekly?|ekla?
 -
 |BÝT||BÝT|
 rozsv|rozsvÍTIT|rožn|rožnOUT|
@@ -196,11 +207,13 @@ na|naJÍT|na|naJÍT|
 zved|zvedNOUT|zved|zvEDNOUT|
 bouchat||hňápať||
 rozsviť||rožhni||
+t|tÉCT|t|tÉCT|
 -
 jednou|ráz|
 zvláště,zvlášť|zvłášč|
 sem|sem|
 včera|fčera|
+slabě|cúrkem|tenkým proudem
 -
 i||ai|
 -

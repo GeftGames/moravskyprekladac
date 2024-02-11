@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tHrubčice
 aGG
 d14.04.2023 15:29:12
-c#Zdroje dat\nhttps://archive.org/details/dialektologiemor02bartuoft/page/93/mode/1up#page=93\n\n#Popis nářečí\n-Zvláštní je v podřečí tomto genitiv jedn. substantiv vzoru starosta na u vedle akkusativu na ", kdežto přece každé u se mění v o: To je bratr našeho Peku; ale jenom ve Vrahovicích (jako v Dubanech), v sousedních Hrubčicich a dále končí se na o jako akkusativ : Bel sem o Jánka Krópo, dostal sem to od Pavla Svobodo (tak i na Litovelsku a Zábřežsku).
+c#Zdroje dat\nhttps://archive.org/details/dialektologiemor02bartuoft/page/93/mode/1up#page=93\n\n#Popis nářečí\n-Zvláštní je v podřečí tomto genitiv jedn. substantiv vzoru starosta na u vedle akkusativu na ", kdežto přece každé u se mění v o: To je bratr našeho Peku; ale jenom ve Vrahovicích (jako v Dubanech), v sousedních Hrubčicich a dále končí se na o jako akkusativ : Bel sem o Jánka Krópo, dostal sem to od Pavla Svobodo (tak i na Litovelsku a Zábřežsku).\n-Občané Hrubčic svou milovanou vrchnost, držitele...Otta von Minvitz...poděkování:\nNás milostpán, baron\nMinkvic Ottto,\ndal postavit koreto toto,\nabe se napile telata a kráve\na on za to došil věčné sláve.
 g49.4498496,17.192946
 q0
 -
@@ -14,23 +14,85 @@ q0
 -
 -
 -
+ily|ile
+y|e
+-
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+milostpÁN|2|án|ána|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
+baron|2||a|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
+telE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+krÁVA|1|áva|ávy|ávě|ávu|ávo|ávě|ávou|ávy|av|avám,ávám|ávy|ávy|avách,ávách|avami,ávami
+slávA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+-
+dEN|0|en?|ňa|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
+milostpÁN|2|án|ána?|ánu?,ánovi?|ána?|ane?|ánu?,ánovi?|ánem?|áňi?,ánové?|ánú?|ánúm?|ány?|áňi?,ánové?|ánech?|ány?
+baroN|2|n|na?|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?,nové?|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
+telE|0|e?|ete?|eťi?|e?|e?|eťi?|etem?|ata|at?|atúm?|ata?|ata?|atech?|aty?
+krÁVA|1|áva?|ávy?|ávě?|ávu?|ávo?|ávě?|ávou?|áve|av?|avám?,ávám?|ávy?|ávy?|avách?,ávách?|avami?,ávami?
+slávA|1|a?|e|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+-
+d|dEN|0|d|dEN|
+milostp|milostpÁN|0|milostp|milostpÁN|
+baron|baron|0|baro|baroN|
+||0|koreto||
+tel|telE|0|tel|telE|
+kr|krÁVA|0|kr|krÁVA|
+sláv|slávA|0|sláv|slávA|
+-
+dnešní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
+věčnÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+-
+dnešňí|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
+věčNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
+-
+dnešní|dnešní|dnešňi|dnešňí|
+věčn|věčnÝ|vječ|věčNÝ|
+-
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tENTO|ento|ohoto|omuto|ohoto|-|omto|ímto|ito|ěchto|ěmto|ito|-|ěchto|ěmito|ento|ohoto|omuto|ento|-|omto|ímto|yto|ěchto|ěmto|yto|-|ěchto|ěmito|ato|éto|éto|uto|-|éto|outo|yto|ěchto|ěmto|yto|-|ěchto|ěmito|oto|ohoto|omuto|oto|-|omto|ímto|yto|ěchto|ěmto|yto|-|ěchto|ěmito
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
+-
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+TENTO|tento?|tohoto?|tomuto?|tohoto?|-|tomto?|tímto?|tito?|těchto?|těmto?|tito?|-|těchto?|těmito?|tento?|tohoto?|tomuto?|tento?|-|tomto?|tímto?|tyto?|těchto?|těmto?|tyto?|-|těchto?|těmito?|tato?|této?|této?|tuto?|-|této?|touto?|tyto?|těchto?|těmto?|tyto?|-|těchto?|těmito?|toto|tohoto?|tomuto?|toto?|-|tomto?|tímto?|tyto?|těchto?|těmto?|tyto?|-|těchto?|těmito?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+ON|on|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+-
+t|tEN||TEN|
+t|tENTO||TENTO|
+|SE||SE|
+|ON||ON|
 -
 -
 -
 -
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+čÍST|15|-1|íst|tu|teš|te|teme|tete|tou|ti|těme|těte|etl|etl|etla|etlo|etli|etly|etly|etla|ten|ten|tena|teno|teni|teny|teny|tena
+dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+postavIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+napÍT_SE|22|-1|ít_se|iji se,(hovorově) napiju|iješ|ije|ijeme|ijete|ijí se,(hovorově) napijou|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila
+doJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
+JÍT|31|-1|jít?|jdu?|jdeš?|ide|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
+čÍST|15|-1|isť|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
+dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+postavIT|30|-1|it|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+napÍT_SE|22|-1|ít_se?|iji se?,(hovorově) napiju?|iješ?|ije?|ijeme?|ijete?|ijí se?,(hovorově) napijou?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ile|ily?|ila?
+doJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jďi?|jďeme?|jďete?|šil|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
+|JÍT||JÍT|
+č|čÍST|č|čÍST|
+d|dÁT|d|dÁT|
+postav|postavIT|postav|postavIT|
+nap|napÍT_SE|nap|napÍT_SE|
+do|doJÍT|do|doJÍT|
 -
+tak|tak|
+tedy|teda|
 -
+do||do|
 -
--
--
--
--
--
--
--
--
--
+aby|abe|
+a|a|
 -
 -

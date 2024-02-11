@@ -1,8 +1,8 @@
-TW v1.0
+TW v2
 tTršice
 aGG
 d09.09.2023 13:55:06
-c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/v/mode/2up">Dialektologie moravská, str. V</a>\n\n#Popis náčečí\n-krátké u přechází v au
+c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/v/mode/2up">Dialektologie moravská, str. V</a>\n\n#Popis nářečí\n-V Tršicích staří lidé mluví právě tak jako v sousedních Lipjanech a j.: mladší pokolení „jôž se panšči".\n\n#Popis nářečí okolí\n-na Tršicku: šesté, sedmé; tak i: usmé — osmé\n-Na Tršicku vyslovuje se o (= u) zvláštním způsobem, jako by ou velmi rychle, ve zvláštní jeden zvuk vyslovil: stréčkou! na vózou.\n-Na Tršicku rozeznává se zcela jasně ľ a ł
 g49.5412897,17.4270513
 q0
 -
@@ -19,16 +19,19 @@ muž|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
 -
 muž|2|?|e?|i,ovi?|e?|i?|i,ovi?|em?|i,ové?|ů?|ům?|e?|i,ové?|ích?|i?
 -
-muž|muž|0|mauž|muž
+muž|muž|0|mauž|muž|
 -
 -
 -
 -
-vY|-1|y|ás|ám|ás|y|ás|ámi
+vY|y|ás|ám|ás|y|ás|ámi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-vY|-1|y?|ás?|ám?|ás?|y?|ás?|ámi?
+vY|y?|ás?|ám?|ás?|y?|ás?|ámi?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 -
-v|vY|vY
+v|vY|v|vY|
+|SE||SE|
 -
 -
 -
@@ -39,11 +42,13 @@ mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|baude|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 mÍT|7|-1|ít|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
-BÝT|BÝT
-m|mÍT|mÍT
+|BÝT||BÝT|
+m|mÍT|m|mÍT|
+panštit||panšči||stávat se výce panským
 -
+již|jôž|
 -
-u|au|
+u||au|
 -
 -
 -

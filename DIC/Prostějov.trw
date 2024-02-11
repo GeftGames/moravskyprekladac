@@ -1,9 +1,10 @@
-TW v1.0
+TW v2
 fSpisovná čeština
 tProstějov
 aGG
 d17.03.2023 7:39:00
-c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/dialektickslov00bartuoft/page/524/mode/1up#page=524
+icokolvjek Prostějov PV
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Prost%C4%9Bjov+PV%22">sncj</a>\n-https://archive.org/details/dialektickslov00bartuoft/page/524/mode/1up#page=524\n\n#Popis nářečí\n-Řeč města Prostějova má sice ráz podřečí okolního, ale již se značně „poměštila"; \n     a) hlásky v, «, y jsou čistý: budu, žito, hlina, ryby a t. d.; \n     b) ú mění se v ó, ý, ej v é jako v okolí: dobré stréc, dé; \n     c) í se krátí a mění se v é toliko v koncovce ík, po z, ž a š: vozék, nožék, košék.
 lHanáčtina
 g49.4723368,17.1101128
 xměstká mluva
@@ -13,11 +14,14 @@ oHaná>Prostějovsko
 -
 -
 -
-když mi ještě nebylo čtrnáct|nebelo mňe štrnást
+když mi ještě nebylo čtrnáct|1|nebelo mňe štrnást|
 -
-nebo ne|nebo né
-tanečník při muzice|zálečník
+nebo ne|1|nebo né|
+tanečník při muzice|1|zálečník|
+velice daleko|1|dalečansko|
+správce vinic|1|perkmajstr|
 -
+prodlužuje|1|dlóži|
 -
 -
 -
@@ -27,29 +31,40 @@ zedníK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 cop|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 hřebíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 -
 zedníK|2|k|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
 růžE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 abatyšA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 cop|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 hřebíK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 -
-čaroděj|čaroděj|0|čarovňi|zedníK
-abatyš|růžE|0|habatêš|abatyšA
-cop|cop|0|coplé|hřebíK
--
--
--
--
--
+čaroděj|čaroděj|0|čarovňi|zedníK|
+abatyš|růžE|0|habatêš|abatyšA|
+cop|cop|0|coplé|hřebíK|
+d|dEN|0|d|dEN|
+nosíček||0|noséček||
 -
 -
 -
 -
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+COKOLI|cokoli|čehokoli|čemukoli|cokoli||čemkoli|čímkoli
+-
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+COKOLI|cokolvjek|čehokoli?|čemukoli?|cokoli?|?|čemkoli?|čímkoli?
+-
+|SE||SE|
+|COKOLI||COKOLI|
 -
 -
 -
 -
+-
+-
+-
+prodlužovat|dlóži|
 -
 -
 -
