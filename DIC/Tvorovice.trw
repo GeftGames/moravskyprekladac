@@ -1,7 +1,9 @@
-TW v1.0
+TW v2
 tTvorovice
 aGG
 d09.09.2023 14:04:11
+ipomušte mňe z bide, šak pořáť se bobnoje, že se nemáme opóščed a se potporovat Tvorovice PV;
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Tvorovice+PV%22">SNČJ</a>
 g49.3743237,17.2219392
 q0
 -
@@ -14,23 +16,49 @@ q0
 -
 -
 -
+tlamA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+bÍDA|1|ída|ídy|ídě|ídu|ído|ídě|ídou|ídy|ěd|ídám|ídy|ídy|ídách|ídami
+-
+chṵamA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+bÍDA|1|ída?|ide|íďe?|ídu?|ído?|íďe?|ídou?|ídy?|jed?|ídám?|ídy?|ídy?|ídách?|ídami?
+-
+tlam|tlamA|0|chṵam?|chṵamA|vážně ṵ?
+b|bÍDA|0|b|bÍDA|
 -
 -
 -
 -
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+-
+JÁ|já?|mě?,(kňižňe) mne[2]?|mňe|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+-
+|JÁ||JÁ|
+|SE||SE|
 -
 -
 -
 -
+pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
+pomOCT|30|-1|oct?|ohu?,(hovorově) pomúžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) pomúžou?|oz?|ozme?|ušte|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|ožeňi?|oženy?|oženy?|ožena?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
+pom|pomOCT|pom|pomOCT|
+rozhlašovat||bobnoje||expr
+m|mÍT|m|mÍT|
+nem|mÍT|nem|mÍT|
+||opóščed||
+||potporovat se||
 -
+však|šak|
+pořád|pořáť|
 -
+z||z|
 -
--
--
--
--
-jestli|ešlê
+jestli|ešlê|
+že|že|
 -
 -

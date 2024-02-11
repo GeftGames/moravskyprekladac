@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tStarý Jičín
 aGG
 d28.06.2023 8:06:06
@@ -16,26 +16,37 @@ q0
 -
 almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 vepřovicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
+kašE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 -
 almaRA|1|ryj|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 bandúr|3||e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+kobzol|3|?|u?|u?|?|e?|u?|em?|e|ú?|úm?|y?|y?|ech?|y?
+blambA|1|e?|e?|i?|u|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 -
-alma|almaRA|0|arma|almaRA
-vepřovic|vepřovicE|0|bandúr|bandúr
--
--
--
--
--
--
+alma|almaRA|0|arma|almaRA|
+vepřovic|vepřovicE|0|bandúr|bandúr|
+brambor|brambor|0|kobzol|kobzol|
+kaš|kašE|0|blamb|blambA|
 -
 -
 -
--
+||rozvařené ||
 -
 -
 -
 -
+-
+-
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+-
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+-
+|BÝT||BÝT|
+-
+-
+na||na|
 -
 -
 -

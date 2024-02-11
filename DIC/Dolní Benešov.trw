@@ -1,4 +1,4 @@
-TW v0.1
+TW v2
 tDolní Benešov
 d03.06.2023 11:31:55
 c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch; str. 119
@@ -7,6 +7,7 @@ q0
 -
 -
 -
+Tak jo.|1|Tuž dobre.|
 -
 -
 -
@@ -26,44 +27,62 @@ polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 člověk|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+slovO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y|?|um|y?|y?|ách?|ami?
 polE|0|e?|e?|i?|e?|e?|i?|em?|e?|í?|ím?|a|e?|ích?|i?
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky|ek?|kám?|ky?|ky?|kách?|kami?
 strom|3|?|u?|u?|?|e?|u,ě?|em?|y?|ů?|um|y?|y?|ech?|y?
 člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|ludźe|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
+słovO|0|o|a?|u?|o?|o?|u?,ě?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
-vesnic|dźedzin|vesnicE|ženA
-pol|polE|polE
-ječmen|jačmeň||
-pšenice|žito||
-žito|rež||
-lou|łu|pohádKA|pohádKA
-strom|strom|strom
-člověk|člověk
--
--
--
--
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
--
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
-tEN|-1|en?|eho|emu|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|emu|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|eho|emu|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
--
-JÁ|JÁ
-t|tEN|tEN
+vesnic|vesnicE|0|dźedzin|ženA|
+pol|polE|0|pol|polE|
+ječmen||0|jačmeň||
+pšenice||0|žito||
+žito||0|rež||
+lou|pohádKA|0|łu|pohádKA|
+strom|strom|0|strom|strom|
+|člověk|0||člověk|
+slov|slovO|0|słov|słovO|
+||0|brytfanku||
 -
 -
 -
 -
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+MY|my|nás|nám|nás|my|nás|námi
+-
+JÁ|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+TEN|ten|teho|temu|toho?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ten?|teho|temu|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tu|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|teho|temu|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+kteRÝ|ry|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+MY|my?|nas|nám?|nás?|my?|nás?|námi?
+-
+|JÁ||JÁ|
+t|tEN||TEN|
+kte|kteRÝ|ke|kteRÝ|
+|MY||MY|
 -
 -
 -
 -
-okolo|około|
-proti|proči|
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
-ale
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pujdže|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
+-
+||přemłuvi||
+|JÍT||JÍT|
+-
+dříve|spješ|
+-
+okolo||około|
+proti||proči|
+z||z|
+s||s|
+-
+ale|ale|
+a|a|
 -
 -

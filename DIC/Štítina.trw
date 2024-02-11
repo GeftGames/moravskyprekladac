@@ -1,5 +1,6 @@
-TW v1.0
+TW v2
 tŠtítina
+aGG
 d25.06.2023 16:59:52
 ije na bombiky jag had na mleko Štítina OP\nstryg Vinceg byli celi dostrašeňi Štítina OP
 c#Zdroje dat\n-sncj.ujc.cas.cz
@@ -11,40 +12,63 @@ oSlezsko
 -
 -
 -
+bystrá žena|1|čujna ropka|
+pořád všude pozdě|1|dycky fšudže ňeskoro|
 -
 -
 -
 -
+ná|na
 -
 plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 buvol|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
+čtvrt|1||ě|i||i|i|í|ě|í|ím|ě|ě|ích|ěmi
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 plán|1||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 mleKO|0|ko?|ka?|ku?|ko|ko?|ku,ce?|kem?|ka?|k?|kům?|ka?|ka?|cích,kách?|ky?
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 bivoŁ|2|ł|ła?|łovi,łu?|ła?|łe?|łovi,łu?|łem?|łi,łové?|łů?|łům?|ły?|łi,łové?|łech?|ły?
+okNO|0|no?|na?|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
+čtvrČ|1|č|ťe?|ťi?|t?|ťi?|ťi?|ťí?|ťe?|ťí?|ťím?|ťe?|ťe?|ťích?|ťemi?
+kobzol|3|?|u?|u?|?|e?|u?|em?|y?|ú?|úm?|e|y?|ech?|y?
 -
-aeroplán|plán|0|eroplan|plán
-mlé|mléKO|0|mle|mleKO
-had||0|had|
-bonbon|hrad|0|bombik|hrad
-||0|stryg|
-||0|Vinceg|
-buvol|buvol|0|bivo|bivoŁ
+||0|stryg||
+||0|Vinceg||
+||0|ropka||
+aeroplán|plán|0|eroplan|plán|
+bonbon|hrad|0|bombik|hrad|
+buvol|buvol|0|bivo|bivoŁ|
+čtvrt|čtvrt|0|štvr|čtvrČ|
+had||0|had||
+mlé|mléKO|0|mle|mleKO|
+ok|okNO|0|ok|okNO|
+perna||0|štvr|čtvrČ|
+brambor|brambor|0|kobzol|kobzol|
+kryt na brambory||0|broha||
+loudala||0|cymbuła||
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|i|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
-zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|ný?|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ňi|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
+zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|na|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|ný?|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ňi|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|ný?|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 -
-cel|celÝ|celÝ
-vyděšen|dostraše|zelenÝ|zelenÝ
+cel|celÝ|cel|celÝ|
+vyděšen|zelenÝ|dostraše|zelenÝ|
+bystr|zelenÝ|čuj|zeleNÝ|
 -
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 -
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+taKY|ky|kého?|kému?|kého?|-|kém?|kým?|kí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
 -
+t|tEN||TEN|
+takov|takovÝ|ta|taKY|
 -
 -
 -
@@ -53,11 +77,20 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 -
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-BÝT|BÝT
+|BÝT||BÝT|
+-
+ještě|ešče|
+často|často|
+najednou|naraz|
+vždy|dycky|
+všude|fšudže|
+pozdě|ňeskoro|
+-
+na||na|
+do||do|
+-
+jak|jag|
+a|a|
 -
 -
-na|
--
-jak|jag
--
--
+|břyng|

@@ -2,6 +2,7 @@ TW v2
 tNové Město na Moravě
 aGG
 d18.11.2023 10:52:30
+ino tak sme mu kapku pomohli v blahej naďeji, že jako se v brskej dobje s ňim vidáme do přírodi Nové Město na Moravě ZR
 c#zdroje dat\n-https://sncj.ujc.cas.cz/
 g49.5614538,16.0731172
 q0
@@ -11,6 +12,7 @@ oHorácko
 -
 -
 -
+s ním|1|s ňim|
 -
 -
 -
@@ -18,40 +20,77 @@ oHorácko
 -
 brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 němčinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kapKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+nadějE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+dobA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+přírodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 brambor|1|?|u?|u?|?|e?|u?|em?|i|ů?|ům?|y?|y?|ech?|y?
 ňemčiNA|1|na?|ni|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+kapKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+naďejE|1|e?|e?|i?|i?|e?|i|í?|e?|í?|ím?|e?|e?|ích?|emi?
+dobA|1|a?|y?|je?|u?|o?|je|ou?|y?|?|ám?|y?|y?|ách?|ami?
+příroDA|1|da?|di|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 -
 brambor|brambor|0|brambor|brambor|
 němčin|němčinA|0|ňemči|ňemčiNA|
+kap|kapKA|0|kap|kapKA|
+naděj|nadějE|0|naďej|naďejE|
+dob|dobA|0|dob|dobA|
+přírod|přírodA|0|příro|příroDA|
+||0|Novomňestsku||
 -
 -
 -
 ||kutaní||
+||blahej||
+||v brskej ||
+snědý||čudej||
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
 -
 SE|-|sebe?|si?,sobě?|se,sebe?|-|sobě?|sebou?
+ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,#ňim
 -
 |SE||SE|
+|ON||ON|
 -
 -
 -
 -
 jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
+vydAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|eďí|ez?|ezme?|ezte?|edl?|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
+BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+pomOCT|30|-1|oct?|ohu?,(hovorově) pomúžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) pomúžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|ožeňi?|oženy?|oženy?|ožena?
+vidAT|30|-1|at?|ám?|áš?|á?|áme|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 j|jÍST|j|jÍST|
 |JÍT||JÍT|
+|BÝT||BÝT|
+pom|pomOCT|pom|pomOCT|
+vyd|vydAT|vid|vidAT|
+zlobit se||duřit se||
+rozčilovat se||duřit se||
 -
 |našupavo|
 tam|tam|
+tak|tak|
 -
 kvůli||dle|
+v||v|
+s||s|
+do||do|
 -
 nebo|nebo|
+že|že|
+jako|jako|
 -
+no|no|
 -

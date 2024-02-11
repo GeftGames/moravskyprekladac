@@ -2,7 +2,7 @@ TW v2
 tLutopecny
 aGG
 d02.06.2023 14:24:56
-c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch
+c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/37/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n-V Lutopecnech, Popovicích, Ratajích, Vážanech a v Drahlové přisouvá se ku genitivu množn. v ú a přídavnému přisvojovacímu souhláska m: pět grošum, nemá vołum, do svátkum, był sem u Sedľáčkum, u sósedum, chłapec Vrzałum, učeň kovářum.\n--V Popovicích, Lutopecnech, Sobělicích, Zlobících, Bojanovicícli, Jarohůovicích, Vážanecli, Drahlově, Věžkách, v Hulíně, Bilanech, Plešovci, v Břestě, Žalkovicích, v Bezmérově, Hradisku, v Chropyni 1. osoba mn. má koncovku my (m. me)
 g49.3016324,17.3440968
 q0
 oHaná
@@ -36,6 +36,13 @@ borovicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 třešnĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
 dÍTĚ|0|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
+groš|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+vŮL|2|ůl|ola|olu,olovi|ola|ole|olu,olovi|olem|oli,olové|olů|olům|oly|oli,olové|olech|oly
+svátEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+kovář|3||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
+chlapEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+soused|1||a|u,ovi|a|e|u,ovi|em|é,i|ů|ům|y|é,i|ech|y
+sedláčEK|2|ek|ka|kovi|ka|ku|kovi|kem|kové|ků|kům|ky|kové|cích|ky
 -
 strom|3|?|u?|u?|?|e?|u,ě?|em?|y|ů?|ům?|y?|y?|ech?|y?
 les|3|?|a?|u?|?|e?|i|em?|y?|ů?|ům?|y?|y?|ích?|y?
@@ -46,6 +53,13 @@ borovicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky|ek?|kám?|ky?|ky?|kách?|kami?
 střešnĚ|1|ě|ě?|i?|i?|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
 dÍTĚ|0|ítě?|ítěte?|ítěti?|ítě?|ítě?|ítěti?|ítětem?|ěti?|ětí?|ěťam|ěti?|ěti?|ětech?|ětmi?
+groš|3|?|e?|i?|?|i?|i?|em?|e?|um|úm?|e?|e?|ích?|i?
+vÚL|2|úl?|ola?|olu?,olovi?|ola?|ole?|olu?,olovi?|olem?|oli?,olové?|ołum|olúm?|oly?|oli?,olové?|olech?|oly?
+svátEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kum|kúm?|ky?|ky?|cích?|ky?
+kovář|3|?|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?|um|úm?|e?|i?|ích?|i?
+chlapEC|2|ec|ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
+soused|1|?|a?|u?,ovi?|a?|e?|u?,ovi?|em?|é?,i?|um|úm?|y?|é?,i?|ech?|y?
+sedláčEK|2|ek?|ka?|kovi?|ka?|ku?|kovi?|kem?|kové?|kum|kúm?|ky?|kové?|cích?|ky?
 -
 strom|strom|0|strom|strom|
 les|les|0|les|les|
@@ -59,6 +73,14 @@ osy|pohádKA|0|osy|pohádKA|
 třešně|třešnĚ|0|střešně|střešnĚ|
 vesnice||0|dědina||
 d|dÍTĚ|0|d|dÍTĚ|
+groš|groš|0|groš|groš|
+v|vŮL|0|v|vÚL|
+svát|svátEK|0|svát|svátEK|
+||0|učeň||
+kovář|kovář|0|kovář|kovář|
+chlap|chlapEC|0|chłap|chlapEC|
+soused|soused|0|sósed|soused|
+sedláč|sedláčEK|0|sedľáč|sedláčEK|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 tiCHÝ|-1|ché|chého|chému|ché|ché|chém|chým|||chá|chých|chým|chá|chá|chých|chými|||chá|ché|ché|chou|chá|ché|chou|||ché|chých|chým|ché|ché|chých|chými|||chý|chého|chému|chého|chý|chém|chým|||ší|chých|chým|ché|ší|chých|chými|||chý|chého|chému|chý|chý|chém|chým|||ché|chých|chým|ché|ché|chých|chými||
@@ -81,20 +103,27 @@ tEN|en?|oho?|emu|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|emu|en?
 t|tEN|t|tEN|
 -
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
+pět|2||i|i|||i|i
 -
 jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ním?|ni?|něch?|něm?|ny?|ni?|něch?|němi?|en?|noho?|nomu?|en?|en?|nom?|ním?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|na?|né?|né?|nu?|na?|né?|nó|ny?|něch?|něm?|ny?|ny?|něch?|němi?|no?|noho?|nomu?|no?|no?|nom?|ním?|na?|něch?|něm?|na?|na?|něch?|němi?
+pjeT|2|t|ťi?|ťi?|t?|t?|ťi?|ťi?
 -
 jed|jedEN|jed|jedEN|
+pět|pět|pje|pjeT|
 -
 povídAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 povídAT|6|-1|at?|ej?|ejme?|ejte?|?|?|?|?|?|ały|?|?
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|sem|jsi?|je?|zmy|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|był|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
 povídat||povidat||
 vznášet||vznášet||
 |BÝT||BÝT|
+m|mÍT|m|mÍT|
+nem|mÍT|nem|mÍT|
 -
 jednou|jednó|
 zvlášť|zvlášče|
@@ -102,6 +131,8 @@ jen,jenom|jenom|
 -
 v||v|
 na||na|
+do||do|
+u||u|
 -
 -
 -

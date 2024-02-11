@@ -2,7 +2,7 @@ TW v2
 tBřeclav
 aGG
 d09.06.2023 10:22:41
-c#Zdroje dat\n-<a href="https://www.jstor.org/stable/42692223">jstor.org/stable/42692223</a>
+c#Zdroje dat\n-<a href="https://www.jstor.org/stable/42692223">jstor.org/stable/42692223</a>\n-Nářečí na Břeclavsku a v dolním Pomoraví, František Svěrák
 g48.7600411,16.8800615
 q0
 oSlovácko
@@ -14,6 +14,10 @@ oSlovácko
 místo zpustlých lidí|1|pustárňa|
 průjezd do dvora|1|vráťňica|
 dobové stromy|1|dubičí|
+kovářský měch|1|dímač|
+hloupá žena|1|mjachula|
+usměvavé děvče|1|čuřinka|
+koryto na seno|1|krmelec|
 -
 -
 -
@@ -31,6 +35,9 @@ pavouK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,lidi|lidí|lidem|lidi|lidé,lidi|lidech|lidmi
 virtuos|2||a|u,ovi|a|e|u,ovi|em|ové|ů|ům|y|ové|ech|y
+pavézA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+fukar|3||u|u||u|u|em|y|ů|ům|y|u|ách|y
+řetízEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 -
 řepA|1|a?|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 ještěrKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
@@ -43,22 +50,28 @@ paúz|2||ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 svaDBA|1|dba|dby?|dbje?|dbu?|dbo?|dbje?|dbou?|dby?|deb?|dbám?|dby?|dby?|dbách?|dbami?
 ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|lidé?,liďi?|liďí?|lidem?|liďi?|lidé?,liďi?|lidech?|ludma
 virtous|2||a?|u?,ovi?|a?|e?|u?,ovi?|em?|ové?|ú?|úm?|y?|ové?|ech?|y?
+paúK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+povjetrňák|3||u?|u?|?|u?|u?|em?|y?|ú?|úm?|y?|u?|ách?|y?
+řetáSKA|3|ska|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 -
-řep|řepA|0|řep|řepA|
-?||0|dambor||
-ještěr|ještěrKA|0|jaščír|ještěrKA|
-okoun|okoun|0|ogún|okoun|
-svat|svatBA|0|svad|svaDBA|
-tvář|tvář|0|žgraň|žgraň|
-stříč|dědečEK|0|šrúč|ďedečEK|
-koropt|koroptEV|0|korut|kurotFA|
-viržinka||0|verdžinka||
-pavou|pavouK|0|paú|paúz||paúk||
-svat|svatBA|0|sva|svaDBA|
 |ČLOVĚK|0||ČLOVĚK|
-virtuos|virtuos|0|virtous|virtous|
 ||0|škrobač||
 ||0|žebrač||
+?||0|dambor||
+ještěr|ještěrKA|0|jaščír|ještěrKA|
+koropt|koroptEV|0|korut|kurotFA|
+okoun|okoun|0|ogún|okoun|
+pavéz|pavézA|0|paú|paúz|
+pavou|pavouK|0|paú|paúK|
+řep|řepA|0|řep|řepA|
+stříč|dědečEK|0|šrúč|ďedečEK|
+svat|svatBA|0|svad|svaDBA|
+svat|svatBA|0|sva|svaDBA|
+tvář|tvář|0|žgraň|žgraň|
+virtuos|virtuos|0|virtous|virtous|
+viržinka||0|verdžinka||
+fukar|fukar|0|povjetrňák|povjetrňák|
+řetíz|řetízEK|0|řetá|řetáSKA|
 -
 -
 -

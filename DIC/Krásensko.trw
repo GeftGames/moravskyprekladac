@@ -1,7 +1,9 @@
-TW v1.0
+TW v2
 tKrásensko
+aGG
 d09.09.2023 14:21:20
-c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/103/mode/2up#page=103">Dialektologie moravská</a> str. 103
+iz Krásenska: Bêl jednõ jeden mladè, svobodnè sedlák. Rodiči mô homřelê a von vod tè dobè neměl hô sebe ve statkô ani človička, měl jenom velkyho černyho kocõra. Sedlák tem bêl tôze pracovitě a přêčênlêvè; ráno každè deň si všecko sám poklôdil a dêž drôzi sedláci jelê do pola, jel jôž take. Him (jim) bêlo divny, hdo mô všecko popravôjé a dělá, ale dêž se ho na to zéptalê, říkával, že mô všecko hôdělá jeho kocõr. (Bartoš Dial. II., 102.)
+c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/103/mode/2up#page=103">Dialektologie moravská</a> str. 103\n\nE \njeden ė
 g49.3647684,16.8297267
 q0
 -
@@ -9,31 +11,101 @@ q0
 -
 -
 -
+na pole|1|do pola|
+potiše|1|po ťichô|
 -
 -
+um|hôm
 -
+ou|ó
 -
+ný|né
+řeli|řelê
 -
+sedláK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+rodič|2||e|ovi,i|e|i|ovi,i|em|e,ové|ů|ům|e|e,ové|ích|i
+dobA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+statEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+človíčEK|2|ek|ka|kovi,ku|ka|ku|kovi ,ku|kem|ci,kové,y,ové|ků,k|kům,ám|ky,y|ci,kové,y,ové|cích,ách|ky,ami
+kocouR|3|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 -
+sedláK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+roďič|2|?|e?|ovi?,i?|e?|i?|ovi?,i?|em?|i|ú?|úm?|e?|e?,ové?|ích?|i?
+dobA|1|a?|ê|je?|u?|o?|je?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+statEK|3|ek?|kô|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+človíčEK|2|ek?|ka|kovi?,ku?|ka?|ku?|kovi ?,ku?|kem?|ci?,kové?,y?,ové?|kú?,k?|kúm?,ám?|ky?,y?|ci?,kové?,y?,ové?|cích?,ách?|ky?,ami?
+kocouR|3|r?|ra|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
+vokNO|0|no?|na|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
 -
+sedlá|sedláK|0|sedlá|sedláK|
+rodič|rodič|0|roďič|roďič|
+dob|dobA|0|dob|dobA|
+stat|statEK|0|stat|statEK|
+človíč|človíčEK|0|človič|človíčEK|
+kocou|kocouR|0|kocó|kocouR|
+ok|okNO|0|vok|vokNO|
 -
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
 -
+zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|né|nyho|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
+velKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|-|-|ká?|kých?|kým?|ká?|ká?|kých?|kými?|-|-|ká?|ké?|ké?|kou?|ká?|ké?|kou?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kými?|-|-|ký?|kyho|kému?|kého?|ký?|kém?|kým?|-|-|cí?|kých?|kým?|ké?|cí?|kých?|kými?|-|-|ký?|kého?|kému?|ký?|ký?|kém?|kým?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kými?|-|-
 -
+svobodn|zelenÝ|svobod|zeleNÝ|
+vel|velKÝ|vel|velKÝ|
+čern|zelenÝ|čer|zeleNÝ|
 -
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
+ON|von|ho*?,jej?,ňej**jeho?,ňeho**?|mô,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tem?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+SE|-|sebe|si?,sobje?|se?,sebe?|-|sobje?|sebou?
 -
+|ON||ON|
+t|tEN||tEN|
+|SE||SE|
 -
+jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 -
+jedEN|4|en|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 -
+jed|jedEN|jed|jedEN|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+umřÍT|22|-1|ít|u,(zastarale) umru|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|bôdô|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+umřÍT|22|-1|ít?|u?,(zastarale) umru?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|el?|ela?|elo?|elê|ely?|ely?|ela?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ňel|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
-BÝT|BÝT
+|BÝT||BÝT|
+umř|umřÍT|hômř|umřÍT|
+m|mÍT|m|mÍT|
+nem|mÍT|nem|mÍT|
 -
+jednou|jednó|
+jen,jenom|jenom|
+tuze,velice|tôze|
+tady|tadê|
+domů|dom|
+však|šak|
+dál|dál|
 -
-na|
+na||na|
+od||vod|
+u||hô|
+ve||ve|
+do||do|
+s||s|
 -
+a|a|
+ani|aňi|
+když|dêž|
+proto|proto|
+aby|habê|
 -
 -

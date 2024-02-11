@@ -1,0 +1,75 @@
+TW v2
+tMoravský Beroun
+aGG
+d03.02.2024 20:35:52
+i vraceli zme se spátki do hájovni asi tag osum sed metrú smňerem g Berounu, gde bil cíl Moravský Beroun BR
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Moravsk%C3%BD+Beroun+BR%22">SNČJ</a>
+g49.7938988,17.4426954
+q0
+-
+-
+-
+-
+-
+osm set|1|osum sed|
+květenství orobince|1|čibuk|
+-
+-
+-
+-
+-
+hájovNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
+metr|3||u|u||e,e|u|em|y|ů|ům|y|y|ech|y
+směr|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+beroun|3||a|u||e|u,ě|em|-|-|-|-|-|-|-
+cíl|3||e|i||i|i|em|e|ů|ům|e|e|ech|i
+-
+hájovNA|1|na?|ni|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
+metr|3|?|u?|u?|?|e?,e?|u?|em?|y?|ú|úm?|y?|y?|ech?|y?
+směr|3|?|u?|u?|?|e?|u?|em|y?|ú?|úm?|y?|y?|ech?|y?
+beroun|3|?|a?|u|?|e?|u?,e?|em?|-|-|-|-|-|-|-
+cíl|3||e?|i?|?|i?|i?|em?|e?|ú?|úm?|e?|e?|ech?|i?
+-
+hájov|hájovNA|0|hájov|hájovNA|
+metr|metr|0|metr|metr|
+směr|směr|0|smňer|směr|
+beroun|beroun|2|beroun|beroun|
+cíl|cíl|0|cíl|cíl|
+pětikoruna||0|bura||
+-
+-
+-
+-
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+-
+SE|-|sebe?|si?,sobje?|se?,sebe?|-|sobje?|sebou?
+-
+|SE||SE|
+-
+osm|2||i|i|||i|i
+stO|3|o|a|u|o|o|u|em|a,ě|et|ům|a,ě|a|ech|y
+-
+osM|2|um?|i?|i?|um|?|i?|i?
+sTO|3|to?|ta?|tu?|to?|to?|tu?|tem?|ta?,tě?|ted|tům?|ta?,tě?|ta?|tech?|ty?
+-
+osm|osm|os|osM|
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+vracET|15|-1|et|ím|íš|í|íme|íte|ejí,vrací|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+-
+BÝT|247|-1|být?|jsem?|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bil|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+vracET|15|-1|et?|ím?|íš?|í?|íme?|íte?|ejí?,vrací?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+-
+|BÝT||BÝT|
+vrac|vracET|vrac|vracET|
+-
+zpátky,zpět|spátki|
+asi|asi|
+tak|tag|
+kde|gde|
+-
+do||do|
+k||g|
+-
+-
+-

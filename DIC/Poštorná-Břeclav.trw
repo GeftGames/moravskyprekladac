@@ -3,7 +3,7 @@ tPoštorná-Břeclav
 aGG
 d09.06.2023 10:01:18
 ipo str. 178
-c#Zdroje dat\n-https://www.jstor.org/stable/42692223\n-https://is.muni.cz/th/ae5u0/Diplomova_prace_Pavelkova_Jana.pdf\n-https://www.konare.cz/historie\n-https://cs.wikipedia.org/wiki/Po%C5%A1torn%C3%A1nář\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 178 (nevyčerpáno)\n\n#Popis\n-Neexistence ř
+c#Zdroje dat\n-https://www.jstor.org/stable/42692223\n-https://is.muni.cz/th/ae5u0/Diplomova_prace_Pavelkova_Jana.pdf\n-https://www.konare.cz/historie\n-https://cs.wikipedia.org/wiki/Po%C5%A1torn%C3%A1nář\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 178 (nevyčerpáno)\n\n#Popis\n-Neexistence ř\n-slovosled: chitáṵ rakú (chytal raky)
 g48.7485034,16.8698993
 rnář=Poštorňa
 q0
@@ -28,6 +28,7 @@ tak jim|1|tag jim|
 ona říká|1|ona povidá|
 z kopyta|1|s kopita|
 na sousedské posezení|1|na besedu|
+chytal raky|1|chitáṵ rakú|
 -
 šramotit|1|šromoťit|
 -
@@ -47,6 +48,7 @@ slat|sṵat
 nila|ňiṵa
 ovala|ovaṵa
 šla|šṵa
+tal|táṵ
 -
 řepA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
@@ -97,6 +99,7 @@ chlapEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 medvěd|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
 ponravA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 železničář|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
+raK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 -
 řepA|1|a?|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 kost|1|?|i|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
@@ -146,6 +149,7 @@ chlapEC|2|ec?|ce?|ci,covi?|ce?|če|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|c
 medveĎ|2|ď|da?|dovi?,du?|da?|de?|dovi?,du?|dem?|ďi?,dové?|dú?|dúm?|dy?|ďi?,dové?|dech?|dy?
 panravA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 železňáK|2|k|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
+raK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú|kúm?|ky?|ci?|cích?|ky?
 -
 řep|řepA|0|rep|řepA|
 řeč|kost|0|rec|kost|
@@ -205,6 +209,7 @@ medvěd|medvěd|0|medve|medveĎ|
 ponrav|ponravA|0|panrav|panravA|
 reneta||0|raneta||
 železničář|železničář|0|železňá|železňáK|
+ra|raK|0|ra|raK|
 -
 čeSKÝ|-1|ské|ského|skému|ské|ské|ském|ským|||ská|ských|ským|ská|ská|ských|skými|||ská|ské|ské|skou|ská|ské|skou|||ské|ských|ským|ské|ské|ských|skými|||ský|ského|skému|ského|ský|ském|ským|||ští|ských|ským|ské|ští|ských|skými|||ský|ského|skému|ský|ský|ském|ským|||ské|ských|ským|ské|ské|ských|skými||
 dolní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
@@ -314,6 +319,7 @@ ptÁT_SE|22|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly
 doJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 hřmĚT|7|-1|ět|ím|íš|í|íme|íte|í|i|ěme|ěte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 RŮST|23|-1|růst|rostu|rosteš|roste|rosteme|rostete|rostou|porostu|porosteš|poroste|porosteme|porostete|porostou|rosť|rosťme|rosťte|rostl|rostl|rostla|rostlo|rostli|rostly|rostly|rostla
+chytAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 NÉST|31|-1|nést?|nesu?|neseš?|nese?|neseme?|nesete?|nesou?|ponesu?|poneseš?|ponese?|poneseme?|ponesete?|ponesou?|nes?|nesme?|neste?|néséṵ|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseni?|neseny?|neseny?|nesena?
 BÝT|247|-1|být?|sem|jsi?|je?|sme|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bíṵ,biṵ|byl?|biṵa|bylo?|byli?|biṵi|biṵi|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
@@ -342,6 +348,7 @@ ptÁT_SE|22|-1|át?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?
 doJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jdi?|jděme?|jděte?|šel?|šel?|šṵa|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
 hrmĚT|7|-1|ět?|ím?|íš?|í|íme?|íte?|í?|i?|ěme?|ěte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 RÚST|23|-1|rost|rostu?|rosteš?|roste?|rosteme?|rostete?|rostou?|porostu?|porosteš?|poroste?|porosteme?|porostete?|porostou?|rosť?|rosťme?|rosťte?|rostl?|rostl?|rostla?|rostlo?|rostli?|rostly?|rostly?|rostla?
+chitAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|áṵ|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |NÉST||NÉST|
 |BÝT||BÝT|
@@ -376,6 +383,7 @@ do|doJÍT|do|doJÍT|
 hřm|hřmĚT|hrm|hrmĚT|
 šramotit||šromoťit||
 |RŮST||RÚST|
+chyt|chytAT|chit|chitAT|
 -
 honem,rychle|honem|
 tady|tadi|

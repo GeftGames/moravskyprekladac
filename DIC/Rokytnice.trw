@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tRokytnice
 aGG
 d24.08.2023 9:27:53
@@ -20,16 +20,19 @@ včelA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 -
 včelA|1|a?|y?|e?|u?|o?|e?|ou?|e|?|ám?|y?|y?|ách?|ami?
 -
-včel|včelA|0|fčel|včelA
+včel|včelA|0|fčel|včelA|
 -
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
-SE|-1|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
+SE|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
+JÁ|já?|mňe|mňe|mňe|já?|mňe|mnou?
 -
-SE|SE
+|SE||SE|
+|JÁ||JÁ|
 -
 -
 -
@@ -38,7 +41,7 @@ roJIT|15|-1|jit|jím|jíš|jí|jíme|jíte|jí|j|jme|jte|jil|jil|jila|jilo|jili|
 -
 rOJIT|15|-1|ojit?|jím?|jíš?|jí?|jíme?|jíte?|ójijó|j?|jme?|jte?|jil?|jil?|jila?|jilo?|jili?|jily?|jily?|jila?|jen?|jen?|jena?|jeno?|jeni?|jeny?|jeny?|jena?
 -
-ro|r|roJIT|rOJIT
+ro|roJIT|r|rOJIT|
 -
 -
 -
