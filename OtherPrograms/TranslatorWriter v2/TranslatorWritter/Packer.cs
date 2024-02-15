@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 
 namespace TranslatorWritter {
@@ -36,7 +37,8 @@ namespace TranslatorWritter {
             using (StreamWriter sw = new StreamWriter(outputFile)) {
                 foreach (string filePath in filePaths) {
                     // Název souboru
-                    sw.Write(Path.GetFileName(filePath));
+                  //  string fileNameText=Path.GetFileName(filePath);
+                  //  sw.Write(fileNameText.Substring(0,fileNameText.IndexOf('.')));
 
                     sw.Write(delimiter);
 
@@ -86,7 +88,37 @@ namespace TranslatorWritter {
                 for (i++; i<lines.Length; i++) { 
                     string line=lines[i];
                     if (line=="-") break;
-                    if (!line.StartsWith("i"))newLines.Add(line);
+
+                    if (line.StartsWith("d")) continue;
+                    if (line.StartsWith("l")) continue;
+                    if (line.StartsWith("x")) continue;
+                    if (line.StartsWith("z")) continue;
+                    if (line.StartsWith("f")) continue;
+                  //  if (line.StartsWith("t")) continue;
+                    if (line.StartsWith("a")) continue;
+                    if (line.StartsWith("i")) continue;
+
+                    if (line.StartsWith("t")) {newLines.Add(line); continue;}
+                    if (line.StartsWith("c")) {newLines.Add(line); continue;}
+                    if (line.StartsWith("o")) {newLines.Add(line); continue;}
+                    if (line.StartsWith("q")) {newLines.Add(line); continue;}
+                    if (line.StartsWith("g")){
+                        if (line.Length>3 && line.Contains(',')){
+                            string[]pos=line.Substring(1).Split(',');
+                            CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
+                            ci.NumberFormat.CurrencyDecimalSeparator = ".";
+
+                            float x=float.Parse(pos[0], NumberStyles.Any, ci);
+
+                            float y=float.Parse(pos[1], NumberStyles.Any, ci);
+                          //  if (isX && isY){
+                                x=(float)Math.Round(x,5);
+                                y=(float)Math.Round(y,5);
+                                newLines.Add("g"+x.ToString(System.Globalization.CultureInfo.InvariantCulture)+","+y.ToString(System.Globalization.CultureInfo.InvariantCulture)); 
+                                continue;
+                          //  }
+                        }
+                    }
                 }
                 newLines.Add("-");                              
                 
@@ -150,6 +182,7 @@ namespace TranslatorWritter {
                     ItemPhrase s = ItemPhrase.Load(line);    
                     if (s==null) continue;
                     char[] notAllowed=new char[]{'?', ';', '\t'};
+                    if (Methods.Contains(s.From, notAllowed)) continue;
                     if (Methods.Contains(s.To, notAllowed)) continue;
 
                     newLines.Add(s.Save());
@@ -178,6 +211,12 @@ namespace TranslatorWritter {
                     if (line == "-") break;
                     if (line == "") continue;
                     ItemReplaceS s = ItemReplaceS.Load(line);
+
+                    char[] notAllowed=new char[]{'?', ' ', ';', ',', '\t'};
+                    if (s.From.Contains(notAllowed)) continue;
+                    if (s.To.Contains(notAllowed)) continue;
+
+
                     if (s==null) continue;
 
                     newLines.Add(s.Save());
@@ -218,7 +257,7 @@ namespace TranslatorWritter {
                     ItemPatternNoun s = ItemPatternNoun.Load(line);
                     if (s==null) continue;
                     listPatternFromNoun.Add(s);                    
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -229,8 +268,8 @@ namespace TranslatorWritter {
                     if (line == "") continue;
                     ItemPatternNoun s = ItemPatternNoun.Load(line);
                     if (s==null) continue;
-                    listPatternToNoun.Add(s);                    
-                    newLines.Add(s.SavePacker());
+                    listPatternToNoun.Add(s);
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -266,7 +305,7 @@ namespace TranslatorWritter {
                     }
                     if (!pt) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -281,7 +320,7 @@ namespace TranslatorWritter {
                     if (s==null) continue;
                     listPatternFromAdjective.Add(s);
 
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -294,7 +333,7 @@ namespace TranslatorWritter {
                     if (s==null) continue;
                     listPatternToAdjective.Add(s);
 
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -330,7 +369,7 @@ namespace TranslatorWritter {
                     }
                     if (!pt) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -344,7 +383,7 @@ namespace TranslatorWritter {
                     ItemPatternPronoun s = ItemPatternPronoun.Load(line);
                     if (s==null) continue;
                     listPatternFromPronoun.Add(s);
-                    newLines.Add(s.SavePacker());
+                   if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -356,7 +395,7 @@ namespace TranslatorWritter {
                     ItemPatternPronoun s = ItemPatternPronoun.Load(line);
                     if (s==null) continue;
                     listPatternToPronoun.Add(s);
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -391,7 +430,7 @@ namespace TranslatorWritter {
                     }
                     if (!pt) continue;/**/
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -406,7 +445,8 @@ namespace TranslatorWritter {
                     if (s==null) continue;
                     listPatternFromNumber.Add(s);
 
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) 
+                        newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -419,7 +459,7 @@ namespace TranslatorWritter {
                     if (s==null) continue;
                     listPatternToNumber.Add(s);
 
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -454,7 +494,7 @@ namespace TranslatorWritter {
                     }
                     if (!pt) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -468,9 +508,10 @@ namespace TranslatorWritter {
                     ItemPatternVerb s = ItemPatternVerb.Load(line);
                     if (s==null) continue;
                     if (s.Name=="") continue; 
-                    listPatternFromVerb.Add(ItemPatternVerb.Load(line));                
+                  //  s.Infinitive=Methods.SavePackerStringMultiple()
+                    listPatternFromVerb.Add(s);                
 
-                    newLines.Add(s.SavePacker());
+                    if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -482,9 +523,9 @@ namespace TranslatorWritter {
                     ItemPatternVerb s = ItemPatternVerb.Load(line);
                     if (s==null) continue;
                     if (s.Name=="") continue; 
-                    listPatternToVerb.Add(ItemPatternVerb.Load(line));
+                    listPatternToVerb.Add(s/*ItemPatternVerb.Load(line)*/);
 
-                    newLines.Add(s.SavePacker());
+                   if (!s.IsEmpty()) newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -521,7 +562,7 @@ namespace TranslatorWritter {
                     }
                     if (!pt) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -537,7 +578,7 @@ namespace TranslatorWritter {
                    // if (s.From.Contains(notAllowed)) continue;
                    // if (Methods.Contains(s.To, notAllowed)) continue;
                     
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -553,7 +594,7 @@ namespace TranslatorWritter {
                   //  if (s.From.Contains(notAllowed)) continue;
                    // if (Methods.Contains(s.To, notAllowed)) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -569,7 +610,7 @@ namespace TranslatorWritter {
                    // if (s.From.Contains(notAllowed)) continue;
                     //if (Methods.Contains(s.To, notAllowed)) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -584,7 +625,7 @@ namespace TranslatorWritter {
                     if (s.From=="") continue;
                     //if (Methods.Contains(s.To, notAllowed)) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 
@@ -599,7 +640,7 @@ namespace TranslatorWritter {
                    // if (s.From.Contains(notAllowed)) continue;
                     //if (Methods.Contains(s.To, notAllowed)) continue;
 
-                    newLines.Add(s.Save());
+                    newLines.Add(s.SavePacker());
                 }
                 newLines.Add("-");
 

@@ -515,6 +515,7 @@ namespace TranslatorWritter {
                     case "q":
                         numericUpDownQuality.Value = int.Parse(line.Substring(1));
                         break;
+
                     case "o":
                         textBoxOblast.Text = line.Substring(1);
                         break;
@@ -575,7 +576,6 @@ namespace TranslatorWritter {
                 if (line == "")  continue;
                 itemsSimpleWords.Add(ItemSimpleWord.Load(line));
             }
-
 
             // ReplaceS
             for (i++; i < lines.Length; i++) {
@@ -7608,7 +7608,7 @@ namespace TranslatorWritter {
                 listBoxPatternPronounFrom.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -8109,7 +8109,7 @@ namespace TranslatorWritter {
                 listBoxPatternPronounTo.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -8578,7 +8578,7 @@ namespace TranslatorWritter {
         void ListBoxPronoun_SelectedIndexChanged(object sender, EventArgs e) {
             if (doingJob) return;
             doingJob=true;
-            SaveCurrentPronoun();
+            PronounSaveCurrent();
 
             int index=listBoxPronoun.SelectedIndex;
             if (itemsPronouns.Count==0) {
@@ -8592,7 +8592,7 @@ namespace TranslatorWritter {
 
             CurrentPronoun=itemsPronouns[index];
             SetCurrentPronoun();
-            SetListBoxPronoun();
+            PronounSetListBox();
           //  SetCurrent();
             doingJob=false;
         }
@@ -8607,7 +8607,7 @@ namespace TranslatorWritter {
         }
 
         void TextBoxPronounFilter_TextChanged(object sender, EventArgs e) {
-            SaveCurrentPronoun();
+            PronounSaveCurrent();
 
             // Získej aktuální prvek
             ItemPronoun selectedId=null;
@@ -8631,7 +8631,7 @@ namespace TranslatorWritter {
                 listBoxPronoun.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -8658,7 +8658,7 @@ namespace TranslatorWritter {
             itemsPronouns.Remove(CurrentPronoun);
         }
 
-        void SetListBoxPronoun() {
+        void PronounSetListBox() {
             //string filter=textBoxPronounFilter.Text;
             //bool useFilter = filter!="" && filter!="*";
 
@@ -8707,7 +8707,7 @@ namespace TranslatorWritter {
             doingJob=true;
             Edited=true;
             ChangeCaptionText();
-            SaveCurrentPronoun();
+            PronounSaveCurrent();
 
             var newItem=new ItemPronoun();
             newItem.To=new List<TranslatingToDataWithPattern>{ new TranslatingToDataWithPattern()};
@@ -8715,7 +8715,7 @@ namespace TranslatorWritter {
             itemsPronouns.Add(newItem);
             CurrentPronoun=newItem;
             PronounRefreshFilteredList();
-            SetListBoxPronoun();
+            PronounSetListBox();
             ListBoxSetCurrentPronoun();
             SetCurrentPronoun();
 
@@ -8727,7 +8727,7 @@ namespace TranslatorWritter {
             ChangeCaptionText();
             itemsPronouns.Remove(item);
             PronounRefreshFilteredList();
-            SetListBoxPronoun();
+            PronounSetListBox();
             SetCurrentPronoun();
         }
 
@@ -8789,7 +8789,7 @@ namespace TranslatorWritter {
             }
         }
 
-        void SaveCurrentPronoun() {
+        void PronounSaveCurrent() {
             if (CurrentPronoun==null) return;
             Edited=true;
 
@@ -12026,7 +12026,7 @@ namespace TranslatorWritter {
                 listBoxPreposition.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -12964,7 +12964,7 @@ namespace TranslatorWritter {
                 listBoxReplaceS.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -13182,7 +13182,7 @@ namespace TranslatorWritter {
                 listBoxReplaceG.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -13365,7 +13365,7 @@ namespace TranslatorWritter {
 
             CurrentReplaceE=itemsReplaceE[index];
             SetCurrentReplaceE();
-            SetListBoxReplaceE();
+            ReplaceESetListBox();
           //  SetCurrent();
             doingJob=false;
         }
@@ -13400,7 +13400,7 @@ namespace TranslatorWritter {
                 listBoxReplaceE.Items.Add(textToAdd);
             }
 
-            //SetListBoxPronoun();
+            //PronounSetListBox();
 
             // Zkus nasadit aktuální prvek, když ne tak +1
             if (selectedId!=null){
@@ -13595,7 +13595,7 @@ namespace TranslatorWritter {
                     if (CurrentPatternPronounFrom.Name != edit.ReturnString) {
                         if (!string.IsNullOrEmpty(edit.ReturnString)) {
                             PatternPronounFromSaveCurrent();
-                            SaveCurrentPronoun();
+                            PronounSaveCurrent();
 
                             foreach (ItemPronoun Pronoun in itemsPronouns) {
                                 if (Pronoun.PatternFrom == CurrentPatternPronounFrom.Name) {
@@ -13625,7 +13625,7 @@ namespace TranslatorWritter {
                     if (CurrentPatternPronounTo.Name != edit.ReturnString) {
                         if (!string.IsNullOrEmpty(edit.ReturnString)) {
                             PatternPronounToSaveCurrent();
-                            SaveCurrentPronoun();
+                            PronounSaveCurrent();
 
                             foreach (ItemPronoun Pronoun in itemsPronouns) {
                                 //if (Pronoun.PatternTo == CurrentPatternPronounTo.Name) {
@@ -14346,7 +14346,7 @@ namespace TranslatorWritter {
                     }
 
                     ReplaceERefreshFilteredList();
-                    SetListBoxReplaceE();
+                    ReplaceESetListBox();
                     ListBoxSetCurrentReplaceE();
                     SetCurrentReplaceE();
 
@@ -14954,7 +14954,7 @@ namespace TranslatorWritter {
                             AdjectiveSetListBox();
 
                             PronounRefreshFilteredList();
-                            SetListBoxPronoun();
+                            PronounSetListBox();
 
                             NumberRefreshFilteredList();
                             SetListBoxNumber();
@@ -15434,6 +15434,48 @@ namespace TranslatorWritter {
             itemsReplaceG = itemsReplaceG.OrderBy(a => a.From).ToList();
             ReplaceGRefreshFilteredList();
             ReplaceGSetListBox();
+            doingJob = false;
+        }
+
+        private void toolStripMenuItem151_Click(object sender, EventArgs e) {
+            doingJob = true;
+            SaveCurrentReplaceE();
+            itemsReplaceE = itemsReplaceE.OrderBy(a => a.From).ToList();
+            ReplaceERefreshFilteredList();
+            ReplaceESetListBox();
+            doingJob = false;
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e) {            
+            doingJob = true;
+            PronounSaveCurrent();
+            itemsPronouns = itemsPronouns.OrderBy(a => a.From).ToList();
+            PronounRefreshFilteredList();
+            PronounSetListBox();
+            doingJob = false;
+        }
+
+        private void aBCEndingToolStripMenuItem_Click(object sender, EventArgs e) {
+            doingJob = true;
+            SaveCurrentReplaceE();
+            itemsReplaceE = itemsReplaceE.OrderBy(a => ReverseString(a.From)).ToList();
+            ReplaceERefreshFilteredList();
+            ReplaceESetListBox();
+            doingJob = false;
+
+            string ReverseString(string str) {                 
+                char[] charArray = str.ToCharArray();
+                Array.Reverse(charArray);
+                return new string(charArray);
+            }
+        }
+
+        private void toolStripMenuItem81_Click(object sender, EventArgs e) {        
+            doingJob = true;
+            PatternPronounToSaveCurrent();
+            itemsPatternPronounTo = itemsPatternPronounTo.OrderBy(a => a.Name).ToList();
+            PatternPronounToRefreshFilteredList();
+            PatternPronounToSetListBox();
             doingJob = false;
         }
 
@@ -16006,7 +16048,7 @@ namespace TranslatorWritter {
         }
 
         void tENToolStripMenuItem2_Click(object sender, EventArgs e) {
-            SaveCurrentPronoun();
+            PronounSaveCurrent();
             ItemPronoun pronoun = ItemPronoun.tEN;
 
             if (!itemsPatternPronounFrom.ExistsWithName("tEN")) {//exist
@@ -16025,7 +16067,7 @@ namespace TranslatorWritter {
 
         void PronounRefresh(){
             PronounRefreshFilteredList();
-            SetListBoxPronoun();
+            PronounSetListBox();
             SetCurrentPronoun();
         }
 
@@ -16354,7 +16396,7 @@ namespace TranslatorWritter {
         }
 
         void tENHLEToolStripMenuItem_Click(object sender, EventArgs e) {
-            SaveCurrentPronoun();
+            PronounSaveCurrent();
             ItemPronoun pronoun =ItemPronoun.tENHLE;
 
             if (!itemsPatternPronounFrom.ExistsWithName("tENHLE")) {//exist
@@ -16387,6 +16429,29 @@ namespace TranslatorWritter {
         void addLinkedFromtoToolStripMenuItem2_Click(object sender, EventArgs e) {
              string name = GetString("", "Název adjektiva");
             if (name == null) return;
+
+            if (name=="rád") { 
+                ItemAdjective adj=new ItemAdjective();
+                adj.From="rád";
+                adj.PatternFrom="rád";
+                adj.To=new List<TranslatingToDataWithPattern>{new TranslatingToDataWithPattern{Body="rá", Pattern="ráD" } };
+                itemsAdjectives.Add(adj);
+
+                ItemPatternAdjective patternFrom=ItemPatternAdjective.rad();
+                patternFrom.Optimize();
+                itemsPatternAdjectiveFrom.Add(patternFrom);
+
+                ItemPatternAdjective patternTo=ItemPatternAdjective.rad_ph();
+                patternTo.ConvertToPhonetics();
+                patternTo.Optimize();
+                patternTo.AddQuestionMark();
+                itemsPatternAdjectiveTo.Add(patternTo);
+                
+                AdjectiveRefresh();
+                PatternAdjectiveFromRefresh();
+                PatternAdjectiveToRefresh();
+                return;
+            }
 
             DownloadDataCompletedEventHandler handler=null;
             #if !DEBUG
@@ -16566,7 +16631,7 @@ namespace TranslatorWritter {
             SetCurrentVerb();
         }
 
-        void SetListBoxReplaceE() {
+        void ReplaceESetListBox() {
             int index=listBoxReplaceE.SelectedIndex;
             listBoxReplaceE.Items.Clear();
             for (int i=0; i<itemsReplaceEFiltered.Count; i++) {
@@ -16611,7 +16676,7 @@ namespace TranslatorWritter {
         }
 
         private void tENTOToolStripMenuItem_Click(object sender, EventArgs e) {
-            SaveCurrentPronoun();
+            PronounSaveCurrent();
             ItemPronoun pronoun =new ItemPronoun{
                 From="t",
                 PatternFrom="tENTO",
@@ -16640,6 +16705,19 @@ namespace TranslatorWritter {
             if (dr==DialogResult.OK) {
                 if (File.Exists(ofd.FileName)) {
                     string[] lines=File.ReadAllLines(ofd.FileName);
+
+                    var _LoadedSaveVersion=FormMain.LoadedSaveVersion;
+                    var _LoadedVersionNumber=FormMain.LoadedVersionNumber;
+
+                    LoadedSaveVersion=lines[0];
+                    if (LoadedSaveVersion.Length>4){
+                        string num=LoadedSaveVersion.Substring(4);
+                        if (num=="1.0") LoadedVersionNumber=1;
+                        else if (num=="0.1") LoadedVersionNumber=0;
+                        else{
+                            if (float.TryParse(num, out LoadedVersionNumber)) { } else LoadedVersionNumber=-1;
+                        }
+                    }
 
                     // Head
                     int i = 0;
@@ -16746,7 +16824,6 @@ namespace TranslatorWritter {
                         if (line == "")  continue;
                         itemsSimpleWords.Add(ItemSimpleWord.Load(line));
                     }
-
 
                     // ReplaceS
                     for (i++; i < lines.Length; i++) {
@@ -16931,6 +17008,18 @@ namespace TranslatorWritter {
                         itemsInterjections.Add(ItemInterjection.Load(line));
                     }
 
+                    // PhrasePattern
+                    for (i++; i < lines.Length; i++) {
+                        string line = lines[i];
+                        if (line == "-") break;
+                        if (line == "")  continue;
+                        itemsPhrasePattern.Add(ItemPhrasePattern.Load(line));
+                    }
+
+                    
+                    LoadedSaveVersion = _LoadedSaveVersion;
+                    LoadedVersionNumber = _LoadedVersionNumber;
+
                     TextBoxSentencePatternFilter_TextChanged(null, null);
                     TextBoxSentenceFilter_TextChanged(null, null);
                     TextBoxSimpleWordFilter_TextChanged(null, null);
@@ -16998,7 +17087,7 @@ namespace TranslatorWritter {
             itemsReplaceE.Add(newItem);
             CurrentReplaceE=newItem;
             ReplaceERefreshFilteredList();
-            SetListBoxReplaceE();
+            ReplaceESetListBox();
             ListBoxSetCurrentReplaceE();
             SetCurrentReplaceE();
 
@@ -17010,7 +17099,7 @@ namespace TranslatorWritter {
             ChangeCaptionText();
             itemsReplaceE.Remove(item);
             ReplaceERefreshFilteredList();
-            SetListBoxReplaceE();
+            ReplaceESetListBox();
             SetCurrentReplaceE();
         }
 

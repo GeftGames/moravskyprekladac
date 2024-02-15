@@ -42,7 +42,6 @@
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.zabaličkovačToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vytvořitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.obaličkovatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxSentenceSource = new System.Windows.Forms.TextBox();
             this.listBoxSentencePatterns = new System.Windows.Forms.ListBox();
             this.buttonSentencePatternAdd = new System.Windows.Forms.Button();
@@ -1694,6 +1693,7 @@
             this.toolStripMenuItem149 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem150 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem151 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBCEndingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator63 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem152 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripSentencePart = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -2086,25 +2086,17 @@
             // zabaličkovačToolStripMenuItem
             // 
             this.zabaličkovačToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vytvořitToolStripMenuItem,
-            this.obaličkovatToolStripMenuItem});
+            this.vytvořitToolStripMenuItem});
             this.zabaličkovačToolStripMenuItem.Name = "zabaličkovačToolStripMenuItem";
-            this.zabaličkovačToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.zabaličkovačToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.zabaličkovačToolStripMenuItem.Text = "zabaličkovač";
             // 
             // vytvořitToolStripMenuItem
             // 
             this.vytvořitToolStripMenuItem.Name = "vytvořitToolStripMenuItem";
-            this.vytvořitToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.vytvořitToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.vytvořitToolStripMenuItem.Text = "Zabaličkovat";
             this.vytvořitToolStripMenuItem.Click += new System.EventHandler(this.vytvořitToolStripMenuItem_Click);
-            // 
-            // obaličkovatToolStripMenuItem
-            // 
-            this.obaličkovatToolStripMenuItem.Name = "obaličkovatToolStripMenuItem";
-            this.obaličkovatToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.obaličkovatToolStripMenuItem.Text = "Obaličkovat";
-            this.obaličkovatToolStripMenuItem.Click += new System.EventHandler(this.obaličkovatToolStripMenuItem_Click);
             // 
             // textBoxSentenceSource
             // 
@@ -2241,7 +2233,7 @@
             this.textBoxInfo.Multiline = true;
             this.textBoxInfo.Name = "textBoxInfo";
             this.textBoxInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxInfo.Size = new System.Drawing.Size(1272, 855);
+            this.textBoxInfo.Size = new System.Drawing.Size(1272, 869);
             this.textBoxInfo.TabIndex = 3;
             this.textBoxInfo.TextChanged += new System.EventHandler(this.TextBoxInfo_TextChanged);
             // 
@@ -10927,7 +10919,7 @@
             this.textBoxComment.Multiline = true;
             this.textBoxComment.Name = "textBoxComment";
             this.textBoxComment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxComment.Size = new System.Drawing.Size(1272, 786);
+            this.textBoxComment.Size = new System.Drawing.Size(1272, 800);
             this.textBoxComment.TabIndex = 3;
             this.textBoxComment.TextChanged += new System.EventHandler(this.TextBoxInfo_TextChanged);
             // 
@@ -16244,6 +16236,7 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(97, 22);
             this.toolStripMenuItem5.Text = "ABC";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripSeparator19
             // 
@@ -17199,6 +17192,7 @@
             this.toolStripMenuItem81.Name = "toolStripMenuItem81";
             this.toolStripMenuItem81.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem81.Text = "ABC";
+            this.toolStripMenuItem81.Click += new System.EventHandler(this.toolStripMenuItem81_Click);
             // 
             // toolStripMenuItem82
             // 
@@ -17863,39 +17857,39 @@
             this.toolStripSeparator61,
             this.toolStripMenuItem145});
             this.contextMenuStripReplaceG.Name = "contextMenuStripSimpleWord";
-            this.contextMenuStripReplaceG.Size = new System.Drawing.Size(181, 148);
+            this.contextMenuStripReplaceG.Size = new System.Drawing.Size(123, 126);
             // 
             // toolStripMenuItem139
             // 
             this.toolStripMenuItem139.Name = "toolStripMenuItem139";
-            this.toolStripMenuItem139.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem139.Size = new System.Drawing.Size(122, 22);
             this.toolStripMenuItem139.Text = "Add";
             this.toolStripMenuItem139.Click += new System.EventHandler(this.ToolStripMenuItem139_Click);
             // 
             // toolStripMenuItem140
             // 
             this.toolStripMenuItem140.Name = "toolStripMenuItem140";
-            this.toolStripMenuItem140.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem140.Size = new System.Drawing.Size(122, 22);
             this.toolStripMenuItem140.Text = "Load raw";
             this.toolStripMenuItem140.Click += new System.EventHandler(this.toolStripMenuItem140_Click);
             // 
             // toolStripSeparator60
             // 
             this.toolStripSeparator60.Name = "toolStripSeparator60";
-            this.toolStripSeparator60.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator60.Size = new System.Drawing.Size(119, 6);
             // 
             // toolStripMenuItem141
             // 
             this.toolStripMenuItem141.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem142});
             this.toolStripMenuItem141.Name = "toolStripMenuItem141";
-            this.toolStripMenuItem141.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem141.Size = new System.Drawing.Size(122, 22);
             this.toolStripMenuItem141.Text = "Selected";
             // 
             // toolStripMenuItem142
             // 
             this.toolStripMenuItem142.Name = "toolStripMenuItem142";
-            this.toolStripMenuItem142.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem142.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItem142.Text = "Remove";
             // 
             // toolStripMenuItem143
@@ -17903,25 +17897,25 @@
             this.toolStripMenuItem143.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem144});
             this.toolStripMenuItem143.Name = "toolStripMenuItem143";
-            this.toolStripMenuItem143.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem143.Size = new System.Drawing.Size(122, 22);
             this.toolStripMenuItem143.Text = "Sort";
             // 
             // toolStripMenuItem144
             // 
             this.toolStripMenuItem144.Name = "toolStripMenuItem144";
-            this.toolStripMenuItem144.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem144.Size = new System.Drawing.Size(97, 22);
             this.toolStripMenuItem144.Text = "ABC";
             this.toolStripMenuItem144.Click += new System.EventHandler(this.toolStripMenuItem144_Click);
             // 
             // toolStripSeparator61
             // 
             this.toolStripSeparator61.Name = "toolStripSeparator61";
-            this.toolStripSeparator61.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator61.Size = new System.Drawing.Size(119, 6);
             // 
             // toolStripMenuItem145
             // 
             this.toolStripMenuItem145.Name = "toolStripMenuItem145";
-            this.toolStripMenuItem145.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem145.Size = new System.Drawing.Size(122, 22);
             this.toolStripMenuItem145.Text = "Cancel";
             // 
             // contextMenuStripReplaceE
@@ -17972,7 +17966,8 @@
             // toolStripMenuItem150
             // 
             this.toolStripMenuItem150.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem151});
+            this.toolStripMenuItem151,
+            this.aBCEndingToolStripMenuItem});
             this.toolStripMenuItem150.Name = "toolStripMenuItem150";
             this.toolStripMenuItem150.Size = new System.Drawing.Size(122, 22);
             this.toolStripMenuItem150.Text = "Sort";
@@ -17980,8 +17975,16 @@
             // toolStripMenuItem151
             // 
             this.toolStripMenuItem151.Name = "toolStripMenuItem151";
-            this.toolStripMenuItem151.Size = new System.Drawing.Size(97, 22);
+            this.toolStripMenuItem151.Size = new System.Drawing.Size(137, 22);
             this.toolStripMenuItem151.Text = "ABC";
+            this.toolStripMenuItem151.Click += new System.EventHandler(this.toolStripMenuItem151_Click);
+            // 
+            // aBCEndingToolStripMenuItem
+            // 
+            this.aBCEndingToolStripMenuItem.Name = "aBCEndingToolStripMenuItem";
+            this.aBCEndingToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.aBCEndingToolStripMenuItem.Text = "ABC ending";
+            this.aBCEndingToolStripMenuItem.Click += new System.EventHandler(this.aBCEndingToolStripMenuItem_Click);
             // 
             // toolStripSeparator63
             // 
@@ -20021,7 +20024,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem zabaličkovačToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vytvořitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem obaličkovatToolStripMenuItem;
         private System.Windows.Forms.Label label168;
         private System.Windows.Forms.Label label167;
         private System.Windows.Forms.TextBox textBoxLocOriginal;
@@ -20108,6 +20110,7 @@
         private System.Windows.Forms.Label labelPhrasePatternTo;
         private System.Windows.Forms.CheckBox checkBoxSentencePart;
         private System.Windows.Forms.ToolStripMenuItem duplikovatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aBCEndingToolStripMenuItem;
     }
 }
 

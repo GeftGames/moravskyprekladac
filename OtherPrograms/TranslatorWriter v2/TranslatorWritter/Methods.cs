@@ -206,7 +206,7 @@ namespace TranslatorWritter {
                // bool add=false;
                 List<string> add=new List<string>();
                 foreach (string str in strings) { 
-                    if (!str.Contains('?') && !str.Contains(')') && !str.Contains('(') && !str.Contains(' ') && !str.Contains('*')){// ret+="?,";
+                    if (!str.Contains('?') && !str.Contains(')') && !str.Contains('(') && !str.Contains(' ') && !str.Contains('*')) {// ret+="?,";
                     // else 
                        // ret+=str+","; 
                         add.Add(str);
@@ -222,25 +222,81 @@ namespace TranslatorWritter {
                 else return src;                 
             }
         }
-        public static string SavePackerStringMultipleSA(string src){ 
+
+        public static string SavePackerStringMultiple(string src, char[] not){ 
             if (src.Contains(',')) { 
-                string ret="";
+               // string ret="";
                 string[] strings=src.Split(',');
-                bool add=false;
-                foreach (string str in strings) { 
-                    if (!str.Contains('?') && !str.Contains(')') && !str.Contains('(') && !str.Contains(' ')){// ret+="?,";
+               // bool add=false;
+                List<string> add=new List<string>();
+                foreach (string str in strings) {
+                    bool con=false;
+                    foreach (char ch in not) {
+                        if (str.Contains(ch)){ 
+                            con=true;
+                            break;    
+                        }
+                    }
+                    if (str.Contains('?'))con=true;
+                    if (!con/*!str.Contains('?') && !str.Contains(')') && !str.Contains('(') && !str.Contains(' ') && !str.Contains('*')*/){// ret+="?,";
                     // else 
-                        ret+=str+",";    
-                        add=true;
+                        add.Add(str);    
+                        //add=true;
                     }
                 }
-                if (!add) return "?";
-
-                return ret.Substring(0, ret.Length-1);
+                if (add.Count==0) return "?";
+                //if (!add) return "?";
+                return System.String.Join(",", add);
+               // return ret.Substring(0, ret.Length-1);
             } else { 
                 if (src.Contains('?')) return "?";
                 else return src;                 
             }
         }
+
+        
+        // komprese dat "s|f|?|?|?|?|" => "s|f|?×4|"
+        public static List<string> CompressPackerData(List<string> shapes){
+            for (int i=0; i<shapes.Count; i++) {
+                string s = shapes[i];
+                if (s=="?") { 
+                    int cnt=GetNumberOfUndefined(i);
+                    if (cnt>=3) { // 2 se nevyplatí
+                        shapes.RemoveRange(i, cnt);
+                        // Compressed unknown data
+                        shapes.Insert(i, "?×"+cnt);
+                        i++;
+                     //   continue;
+                    }
+                }                
+                if (s=="-") { 
+                    int cnt=GetNumberOfNotDefined(i);
+                    if (cnt>=3) { // 2 se nevyplatí
+                        shapes.RemoveRange(i, cnt);
+                        // Compressed known data
+                        shapes.Insert(i, "-×"+cnt);
+                        i++;
+                      //  continue;
+                    }
+                }
+            }
+
+            return shapes;
+
+            int GetNumberOfUndefined(int start) {
+                int i=start;
+                for (; i<shapes.Count; i++) {
+                    if (shapes[i]!="?") return i-start;
+                }
+                return i-start;
+            }
+            int GetNumberOfNotDefined(int start) {
+                int i=start;
+                for (; i<shapes.Count; i++) {
+                    if (shapes[i]!="-") return i-start;
+                }
+                return i-start;
+            }
+        } 
     }
 }
