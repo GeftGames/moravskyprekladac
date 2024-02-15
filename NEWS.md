@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 15.2. 
+- Asi o 10% lepší komprese slovníku
+- Export mapy do GML (Geography Markup Language)
+  
 ### 2024 5.2. 
 - Záznamů je již +40 000 
 
