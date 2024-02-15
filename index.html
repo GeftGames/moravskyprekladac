@@ -80,6 +80,7 @@
 		
 		<!-- Title -->
 		<title>Moravský překladač</title><!-- - Přeložení do moravského jazyka-->
+		<meta id="cententlang" http-equiv="Content-Language" content="cs">
 				
 		<!-- Search -->
 		<meta name="description" content="Přeložení do moravského jazyka! Překlad text na text; slovník; překlad souborů, titulků či generování mapy. Překlad moravština, hanácky, slovácky, valašsky, lašsky, ... " id="metaDescription">
@@ -189,7 +190,7 @@
 							<a class="btnApp" id="tabApp2_mapper" onclick="TabSwitch('mapper');">V mapě</a>
 						</div>
 						<!--my dev-->	
-						<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="ShowPageOwnLang()">
+						<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="PopPageShow('pageOwnLang')">
 							<svg class="ib" viewBox="0 0 24 24" >
 								<path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
 							</svg>
@@ -390,8 +391,8 @@
 						<div class="sisetting">
 							<p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
 							
-							<span id="textAbout"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">O překladači</span>
-							<a id="textAdd" style="text-shadow: var(--tsh);    font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
+							<span id="textAbout"  onclick="PopPageShow('about');/*ShowAboutPage()*/" class="settingLink" data-href="#about">O překladači</span>
+							<a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
 							<!--<span id="textNews"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">Novinky</span>-->
 							<!-- report -->
 							<div class="settingItem">
@@ -457,10 +458,10 @@
 									</div>-->
 								</div>
 								<div style="display: flex;">
-									<span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="ShowMapPage();">
+									<span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
 										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
 									</span>
-									<span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="ShowPageInfoLang();">
+									<span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="PopPageShow('pageInfoLang');">
 										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
 									</span> 
 								</div>
@@ -734,6 +735,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
 										<div class="mapperNavrh" onclick="navrhClick('šel')">ŠEL</div>
 										<div class="mapperNavrh" onclick="navrhClick('udělat')">UDĚLAT</div>
+										<div class="mapperNavrh" onclick="navrhClick('mohl')">MOHL</div>
 									</div>
 									<p>Příslovce</p>
 									<div class="navrhCat">
@@ -786,9 +788,11 @@
 									</div>
 									<p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
 									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=í}>')">í</div>
 										<div class="mapperNavrh" onclick="navrhClick('<{exists=á}>')">á</div>
 										<div class="mapperNavrh" onclick="navrhClick('<{exists=é}>')">é</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=í}>')">í</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ú}>')">ú</div>
+										<div class="mapperNavrh" onclick="navrhClick('<{exists=ó}>')">ó</div>
 										<div class="mapperNavrh" onclick="navrhClick('<{exists=ł}>')">ł</div>
 										<div class="mapperNavrh" onclick="navrhClick('<{exists=ľ}>')">ľ</div>
 										<div class="mapperNavrh" onclick="navrhClick('<{exists=ṵ}>')">ṵ</div>
@@ -911,77 +915,8 @@
 					</div>
 				</div>
 			</div>
-
-			<div id="phoneticsPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
-				<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
-					<div onclick="ClosePageMapper()" class="pageFromDownClose" id="closeMapperPage">
-						<div rel="nofollow" onclick="ClosePageMapper()">
-							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
-								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-							</svg>
-						</div>
-						<p style="display:inline;" id="closeMapper">Zavřít</p>
-					</div>
-					<div>
-						<p class="mapperPageHeader" id="mapperGanerateMap">Fonetika</p>
-						Fonetický zápis 		
-						<div>ďe, ťe, ňe</div>	značí dě, tě, ně, jsou psány z důvodu uniiverzálnosti př. existence dloužení (chťél, kvjéct)
-						<div>ďé, ťé, ňé</div>	dlouhé dě, tě, ně
-						<div>mňe, mje</div>		značí mě, čte se různě v nářečí
-						
-						Speciální znaky
-						<table>
-							<!--znak						výslovnost IPA				popis 			umístění-->
-							<tr><td>ạ́</td>		  <!--<div>ɔ???</div>-->	  <td>Zaokrouhlené dlouhé A</td> 			(Židlochovicko)</tr>
-							<tr><div>ê</div>		<!--<div>æ???</div>--> 		<div>široké e</div> 	(Haná)</tr>
-							<tr><div>ə</div>		<!--<div>ə</div>-->			<div>polovokál e</div> (Znojemsko, Šumpersko)	</tr>					
-							<tr><div>ô</div>		<!---->						<div>široké o</div> 	(Haná)</tr>
-							
-							<tr><div>ŕ</div>		<!--<div>rː</div>--> 		<div>dlouhé r</div> 			(Valašsko) př. vŕba</tr>
-							<tr><div>ĺ, Ĺ</div> 								<div>dlouhé l, L</div> (Slovácko, Valašsko)</tr>
-							
-							<tr><div>ľ, Ľ</div> 								<div>měkké l, L</div> (Slovácko, Valašsko)</tr>
-							<tr><div>ł, Ł</div> 								<div>tvrdé l, L</div> (Slovácko, Goralsko)</tr>
-							<tr><div>ṵ</div> 									<div>tvrdé ł, Ł přecházející do u, U</div> (Slovácko, Goralsko)</tr>
-							<tr><div>ů</div> 									<div>slezské O</div> (Slezsko)</tr>
-							
-							<tr><div>ṕe, ḿe, v́e ,́ b́e </div> 					<div>poloměkké, nevivinuté měkčení pě</div> (někde taky psané jako p'e )			 (Valašsko, Lašsko, Slezsko)</tr>			
-						</table>
-
-						ʒ... dz slezsko prostijovsko?
-
-						ve slezsku??? preferuj před formou m' (cepam'i)
-						ṕ... -
-						́b
-						ḱ
-						ḿ
-						v́
-						ʒ́
-						ǵ
-
-						valašsko ě
-						b'ežte
-
-						
-						
-						
-						slovácko y>i
-
-						Jemnicko
-						ŷ
-
-
-						nahrazení 
-					"z" - zpřeškový pro slezsko, polský pravopis
-						"j" - zjednodušení fonetického zápisu ďe -> dě apod.
-
-
-
-					</div>
-				</div>
-			</div>
 			
-			<div id="pagePop_mapperInfo" class="pageFromDown" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
+			<div id="pagePop_mapperInfo" class="pagePop" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
 				<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
 					<div onclick="PopPageClose('mapperInfo')" class="pageFromDownClose" id="closeMapperPage">
 						<div rel="nofollow" onclick="PopPageClose('mapperInfo')">
@@ -1005,10 +940,10 @@
 				</div>
 			</div>
 
-			<div id="aboutPage" class="pageFromDown" style="display: none; top:500px; z-index: 9;">
+			<div id="pagePop_about" class="pagePop" style="display: none; top:500px; z-index: 9;">
 				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="CloseAboutPage()" class="pageFromDownClose" id="closeAboutPage">
-						<div rel="nofollow" onclick="CloseAboutPage()"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+					<div onclick="PopPageClose('about')" class="pageFromDownClose" id="closeAboutPage">
+						<div rel="nofollow" onclick="PopPageClose('about')"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
 							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 						</svg></div>
 						<p style="display:inline;" id="closeAbout">Zavřít</p>
@@ -1049,7 +984,7 @@
 				</div>
 			</div>
 
-			<div id="pagePop_phonetics" class="pageFromDown" style="display: none; top:500px; z-index: 9;">
+			<div id="pagePop_phonetics" class="pagePop" style="display: none; top:500px; z-index: 9;">
 				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
 					<div onclick="PopPageClose('phonetics')" class="pageFromDownClose" id="closeAboutPage">
 						<div rel="nofollow" onclick="PopPageClose('phonetics')"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
@@ -1125,14 +1060,15 @@
 						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_cvs();PopPageClose('mapper_download_options')">CSV</span> 			<span style="width: 90px;">tabulka</span></div>
 						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_geojson();PopPageClose('mapper_download_options')">GeoJSON</span> 	<span style="width: 90px;">gis</span></div>
 						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_klm();PopPageClose('mapper_download_options')">KML</span> 	<span style="width: 90px;">gis</span></div>
+						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gml();PopPageClose('mapper_download_options')">GML</span> 	<span style="width: 90px;">gis</span></div>
 					</div>
 				</div>
 			</div>
 
-			<div id="mapPage" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;height: -webkit-fill-available;">
+			<div id="pagePop_mapPage" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;height: -webkit-fill-available;">
 				<div class="pageInside" id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="CloseMapPage()" class="pageFromDownClose" id="closeSelectorPage">
-						<div rel="nofollow" onclick="CloseMapPage()">
+					<div onclick="PopPageClose('mapPage')" class="pageFromDownClose" id="closeSelectorPage">
+						<div rel="nofollow" onclick="PopPageClose('mapPage')">
 							<svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
@@ -1152,10 +1088,10 @@
 				</div>
 			</div>	
 
-			<div id="pageInfoLang" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+			<div id="pagePop_pageInfoLang" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
 				<div class="pageInside" id="infolang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="ClosePageInfoLang()" class="pageFromDownClose" id="closeSelectorPage">
-						<div rel="nofollow" onclick="ClosePageInfoLang()">
+					<div onclick="PopPageClose('pageInfoLang')" class="pageFromDownClose" id="closeSelectorPage">
+						<div rel="nofollow" onclick="PopPageClose('pageInfoLang')">
 							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
@@ -1167,10 +1103,10 @@
 				</div>
 			</div>		
 
-			<div id="pageOwnLang" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+			<div id="pagePop_pageOwnLang" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
 				<div class="pageInside" id="ownpagelang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="ClosePageOwnLang()" class="pageFromDownClose" id="closeOwnLangPage">
-						<div rel="nofollow" onclick="ClosePageOwnLang()">
+					<div onclick="PopPageClose('pageOwnLang')" class="pageFromDownClose" id="closeOwnLangPage">
+						<div rel="nofollow" onclick="PopPageClose('pageOwnLang')">
 							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
@@ -1185,10 +1121,10 @@
 				</div>
 			</div>	
 
-			<div id="pageLangD" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+			<div id="pagePop_pageLangD" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
 				<div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="ClosePageLangD()" class="pageFromDownClose" id="closeLangD">
-						<div rel="nofollow" onclick="ClosePageLangD()">
+					<div onclick="PopPageClose('pageLangD')" class="pageFromDownClose" id="closeLangD">
+						<div rel="nofollow" onclick="PopPageClose('pageLangD')">
 							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
@@ -1196,15 +1132,15 @@
 						<p style="display:inline;" id="closeSelector">Zavřít</p>
 					</div>
 					<div><p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm"></span></p></div>
-					<dicv id="pagelangDFill"></div>
+					<div id="pagelangDFill"></div>
 					<br>
 				</div>
 			</div>
 
-			<div id="pageWords" class="pageFromDown" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+			<div id="pagePop_pageWords" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
 				<div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="ClosePageLangD()" class="pageFromDownClose" id="closeLangD">
-						<div rel="nofollow" onclick="ClosePageLangD()">
+					<div onclick="PopPageClose('pageWords')" class="pageFromDownClose" id="closeLangD">
+						<div rel="nofollow" onclick="PopPageClose('pageWords')">
 							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
@@ -1212,7 +1148,7 @@
 						<p style="display:inline;" id="closeSelector">Zavřít</p>
 					</div>
 					<div><p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Seznam zajímavých moravských slov</span></p></div>
-					<dicv id="pageWords">
+					<div id="pageWords">
 						<div><p class="wordsItem">Lůžko</p> - <a onclick="mapperSetWord(this)">postel</a></div> 
 						<div><p class="wordsItem">Zhlavec</p> - <a onclick="mapperSetWord(this)">polštář</a></div> 
 						<div><p class="wordsItem">Duchna</p> - <a onclick="mapperSetWord(this)">peřina</a></div> 
