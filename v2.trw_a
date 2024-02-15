@@ -9575,6 +9575,7 @@ ze žlabu|1|z ryny|
 jako bince ze žlabu|1|jak chlušče z ryny|
 kde jsi|1|kdes|
 v lese|1|v lesi|
+pyšně vykračuje|1|camuje|
 -
 rozkvétá|1|rozkvetá|
 -
@@ -9619,6 +9620,7 @@ pec|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
 vrbA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 anténA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 mořE|0|?×14
 kuřE|0|?×7|ata|?×6
@@ -9647,6 +9649,7 @@ pec|1|?×14
 pÁN|2|?×4|ane|?×9
 vrbA|1|a|?×13
 antéNA|1|?×3|nu|?×10
+robA|1|a|?×13
 -
 děvč|kuřE|0|ďefč|kuřE
 stře|střeCHA|0|stře|střeCHA
@@ -9671,6 +9674,7 @@ pec|pec|0|pec|pec
 p|pÁN|0|p|pÁN
 vrb|vrbA|0|vrb|vrbA
 antén|anténA|0|anté|antéNA
+žen|ženA|0|rob|robA
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
@@ -18489,20 +18493,31 @@ q0
 pro případ že bude bída|1|dla bidy|
 pro případ že bude|1|dla|
 do sytosti|1|dosyta|
+prsatá žena|1|cyckata roba|
+prsatice|1|cyckata roba|
 -
 -
 -
 ou|u
 -
+á|a
 -
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+vesnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+dědinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 školA|1|?×3|u|?×10
 ženA|1|?×14
 růžE|1|?×14
+robA|1|a|?×13
+vesňicE|1|?×14
+ďeďiNA|1|na|?×13
 -
+vesnic|vesnicE|0|ďeďi|ďeďiNA
+žen|ženA|0|rob|robA
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
@@ -29625,6 +29640,59 @@ pod||pod|
 do||do|
 -
 a|a
+-
+-
+-§§tKopřivnice
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Kop%C5%99ivnice">SNČJ</a>
+q0
+-
+-
+-
+-
+-
+rafinovaná žena|1|bykovana roba|
+-
+-
+ne|ňe
+-
+ne|ňe
+ý|y
+-
+aneš|aňeš
+-
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+-
+robA|1|a|?×13
+-
+žen|ženA|0|rob|robA
+-
+-
+-
+-
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+-
+TEN|?×4|-|?×6|-|?×6|-|?×6|-|?×6|-|?×6|-|?|?|to|?×3|-|?×6|-|?|?
+-
+t|tEN||TEN
+-
+-
+-
+-
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
+-
+BÝT|247|-1|?×3|je|?×32
+dostaT|22|-1|?|?|neš|?×15
+-
+|BÝT||BÝT
+dosta|dostaT|dosta|dostaT
+nedosta|dostaT|ňedosta|dostaT
+-
+tady|tu
+tak|tag
+lehce|lechko
+-
+-
 -
 -
 -§§tKopytov
@@ -70683,6 +70751,7 @@ oLašsko
 dokonce i|1|baj aji|
 -
 -
+ne|ňe
 -
 á|a
 ů|u
@@ -70695,15 +70764,26 @@ ou|u
 dila|dz'ła
 la|ła
 at|ać
+níš|ňiš
+těla|ćeła
 -
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu|nem|ni,ny,básnicky|ní,nů|nům|ni,ny|ni,ny,básnicky|nech|ny
+bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
+synEK|2|ek|ka|kovi,ku|ka|ku|kovi,ku|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 pohádKA|1|ka|?×13
 dEN|0|źiň|?×13
+bÚH|2|?×4|ože|?×9
+synEK|2|?×4|ku|?×9
+robA|1|a|?×13
 -
 babič|pohádKA|0|stařen|pohádKA
 d|dEN|0|d|dEN
+b|bŮH|0|b|bÚH
+syn|synEK|0|syn|synEK
+žen|ženA|0|rob|robA
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
@@ -70717,6 +70797,10 @@ ONA|ona|jí,#ní|jí,#ní|ji,#ni|-|#ní|jí,#ní
 jaKÝSI|kýsi|kéhosi|kémusi|kéhosi|-|kémsi|kýmsi|císi|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kýsi|kéhosi|kémusi|kýsi|-|kémsi|kýmsi|kési|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kási|kési|kési|kousi|-|kési|kousi|kési|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kési|kéhosi|kémusi|kési|-|kémsi|kýmsi|kási|kýchsi|kýmsi|kási|-|kýchsi|kýmisi
 každÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 COKOLI|cokoli|čehokoli|čemukoli|cokoli||čemkoli|čímkoli
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
 -
 TEN|tyn|?×3|-|?×6|-|?×6|-|?×6|-|?|?|ta|?×3|-|?|?|ty|?×3|-|?×6|-|?×6|-|?|?
 JÁ|ja|?|mje|?×4
@@ -70724,6 +70808,10 @@ ONA|?|jí|i|ji|-|?|jí
 jaKÝSI|?×4|-|?×6|-|?×6|-|?×6|-|?×5|kuśi|-|?×6|-|?×6|-|?×6|-|?|?
 kažDÝ|?×4|-|?×6|-|?|?|dy|?×3|-|?×6|-|?×6|-|?×6|-|?×6|-|?×6|-|?|?
 COKOLI|?×6|čimkolvjek
+TY|ty|?×6
+SE|-|?|?|se,će|-|?|?
+takovÝ|?×4|-|?×6|-|?×6|-|?×6|-|?|?|o|?×3|-|?×6|-|?×6|-|?×6|-|?|?
+keRÝ|?×4|-|?×6|-|?×6|-|?×6|-|?|?|ro|?×3|-|?×6|-|?×6|-|?×6|-|?|?
 -
 t|tEN||TEN
 |JÁ||JÁ
@@ -70731,6 +70819,10 @@ t|tEN||TEN
 ja|jaKÝSI|ja|jaKÝSI
 každ|každÝ|kaž|kažDÝ
 |COKOLI||COKOLI
+t|tY||TY
+|SE||SE
+takov|takovÝ|takov|takovÝ
+kte|kteRÝ|ke|keRÝ
 -
 -
 -
@@ -70739,16 +70831,23 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 vnímAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+ožeNIT|30|-1|nit|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|nil|nil|nila|nilo|nili|nily|nily|nila|něn|něn|něna|něno|něni|něny|něny|něna
+chTÍT|15|-1|tít|ci|ceš|ce|ceme|cete|tějí|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
 -
-BÝT|247|-1|?×18|była|?×17
+BÝT|247|-1|?|?|si|?×15|była|?×13|by|?×3
 choDIT|15|-1|?×12|dz'ła|?×13
 musET|5|-1|?×6|ejí|el|el|ela|elo|eli|ely|ely|ela
 čUT|15|-1|?|uju|?×24
+ožiňIT|30|-1|?|?|iš|?×23
+chŤÍT|15|-1|?×12|ćeła|?×13
 -
 |BÝT||BÝT
 cho|choDIT|cho|choDIT
 musE|musET|musE|musET
 vním|vnímAT|č|čUT
+ože|ožeNIT|ožeň|ožiňIT
+neože|ožeNIT|ňeožiň|ožiňIT
+ch|chTÍT|ch|chŤÍT
 -
 tak|tak
 nikdy|ňigda
@@ -70764,6 +70863,8 @@ na||na|
 i||aji|
 -
 a|a
+ani|aňi
+protože,neboť|bo
 -
 -
 -§§tRašovice
@@ -73538,6 +73639,7 @@ jako vloni|1|jag łóňi|
 jak loni|1|jag łóňi|
 nezralá švestka|1|bocán|
 ve světnici|1|f jizb́e|
+|1||
 -
 a|1|a|
 abatyše|1|abatyša|
@@ -75552,6 +75654,7 @@ světnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 jizBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 bleCHA|1|cha|chy|še|chu|cho|še|chou|chy|ch|chám|chy|chy|chách|chami
 bOUDA|1|ouda|oudy|oudě|oudu|oudo|oudě|oudou|oudy|ud|oudám|oudy|oudy|oudách|oudami
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 cukrovÉ|1|é|ého|?×12
 ČLOVĚK|3|člověk|člověka|člověkovi|člověka|člověču|člověku|člověkom|ludé|ludí|luďom|ludi|ludé|luďoch|luďmi
@@ -75602,6 +75705,7 @@ aprýl|3|?×6|em|?×7
 jizBA|1|?×5|b́e|?×8
 bleCHA|1|?×8|h|?×5
 bOUDA|1|?×5|úďe|?×8
+robA|1|a|?×13
 -
 |ČLOVĚK|0||ČLOVĚK
 brn|městO|0|brn|městO
@@ -75714,6 +75818,7 @@ světnic|světnicE|0|jiz|jizBA
 jiz|jizBA|0|jiz|jizBA
 ble|bleCHA|0|ble|bleCHA
 b|bOUDA|0|b|bOUDA
+žen|ženA|0|rob|robA
 -
 mladý|-1||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -75788,7 +75893,7 @@ svŮJ|ůj|ého|ému|ého|ůj|ém|ým|i,í|ých|ým|e,é|i,í|ých|ými|ůj|ého|
 ON|on|jej|jemu|jej|-|něm**|jím
 ONA|ona|jí|jí|ji|-|ní*|jí
 -
-TEN|ten|teho|temu|teho|-|tem|tým|ťi,ťí|?×3|-|?|tych|ten|?|temu|ten|-|tem|tým|?×4|-|?|tych|?×4|-|?|?|ty|?|?|ty|-|?|tych|?|?|temu|?|-|tem|tým|?×4|-|?|tych
+TEN|ten|teho|temu|teho|-|tem|tým|ťi,ťí|?×3|-|?|tych|ten|?|temu|ten|-|tem|tým|?×4|-|?|tych|?×4|-|?|?|ty|?|?|ty|-|?|tych|to|?|temu|?|-|tem|tým|?×4|-|?|tych
 DO|do|keho|komu|keho|do|kom|kým
 JÁ|já||||||
 on|on|ho,#ňho|mu,#němu|ho,#ňho|-|měm|jím,#ním
@@ -75894,7 +75999,7 @@ chTĚŤ|39|-1|těť|cu|ceš|ce|cem|cete|chú|ěj|ějme|ějte|ťéł|ťéł|ťé�
 JECŤ|39|-1|jecť|ím|íš|í|íme|íte|ijá|jecz|jezme|jezte|jed|jed|jedła|jedło|jedłi|jedły|jedły|jedła|jeďa|-|-
 mňeť|7|-1|mňeť|mám|máš|má|máme|máte|majú|maj|majme|majte|mňéł|mňéł|mňéła|mňéło|mňéłi|mňéły|mňéły|mňéła
 mosET|5|-1|?×4|ýme|?×10
-nEBÝŤ|151|-1|ebyť|ésu,ésem|ési|éňi|ésme|éste|ésú|ebúdu|ebúdeš|ebude|ebudem|edudete|edudó|ebuď|ebuďme|ebuďte|ebýł|ebýł|ebýła|ebýło|ebýłi|ebýły|ebýły|ebýła|ebych|ebys|eby|ebysme|ebyste|eby
+nEBÝŤ|151|-1|ebyť|ésu,ésem|ési|éňi,eňi|ésme|éste|ésú|ebúdu|ebúdeš|ebude|ebudem|edudete|edudó|ebuď|ebuďme|ebuďte|ebýł|ebýł|ebýła|ebýło|ebýłi|ebýły|ebýły|ebýła|ebych|ebys|eby|ebysme|ebyste|eby
 nÉSŤ|7|-1|ésť||||eséme||esú||me|te|es|es|esła|esło|esłi|esły|esły|esła
 odsÚDIŤ|15|-1|údiť|oudím|oudíš|oudí|oudíme|oudíte|oudijú|uď|uďme|uďte|údíł|údíł|údíła|údíłlo|údíłi|údíły|údíły|údíła|úzen|úzen|úzena|úzený|úzeni|úzeny|úzeny|úzena
 ostaT|22|-1|?×10|ł|?×7
