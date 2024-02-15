@@ -962,6 +962,37 @@ function mapper_save_klm() {
 	}	
 }
 
+//gml
+function mapper_save_gml() {
+	if (points.length>0) {
+		let data=//	<SimpleField name="kategorie" type="string"></SimpleField>
+`<?xml version="1.0" encoding="utf-8" ?>
+<ogr:FeatureCollection
+     gml:id="aFeatureCollection"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://ogr.maptools.org/ mp_mapper_hned_KML.xsd"
+     xmlns:ogr="http://ogr.maptools.org/"
+     xmlns:gml="http://www.opengis.net/gml/3.2">\r\n`;
+		let id=1;
+		for (let pt of points) {
+		 	data+=`<ogr:featureMember><ogr:mp_preklady gml:id="mp_preklad.`+id+`">
+	<ogr:geometryProperty><gml:Point srsName="urn:ogc:def:crs:EPSG::4326" gml:id="mp_preklad.geom.`+id+`"><gml:pos>`+pt.lang.gpsY+` `+pt.lang.gpsX+`</gml:pos></gml:Point></ogr:geometryProperty>
+	<ogr:ObjectId>`+id+`</ogr:ObjectId>
+	<ogr:Name>`+pt.text+`</ogr:Name>
+	<ogr:nazev>`+pt.name+`</ogr:nazev>
+	<ogr:preklad>`+pt.text+`</ogr:preklad>
+	<ogr:x>`+pt.lang.gpsX+`</ogr:x>
+	<ogr:y>`+pt.lang.gpsY+`</ogr:y>			
+</ogr:mp_preklady></ogr:featureMember>\r\n`;  
+			id++;
+		}
+
+		data+='</ogr:FeatureCollection>';
+
+		download_file("mp_mapper "+inputTextmapper+"_GML.gml", data, "text/gml");
+	}	
+}
+
 function download_file(name, contents, mime_type) {
 	mime_type = mime_type || "text/plain";
 

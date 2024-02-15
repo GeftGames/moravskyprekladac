@@ -114,23 +114,44 @@ class ItemPatternNoun {
 
 	static Load(data) {
 		let raw = data.split('|');
-		if (raw.length != 14 + 2) {
-			if (dev)console.log("PatternNoun - Chybná délka");
-			return null;
-		}
+	//	if (raw.length != 14 + 2) {
+			//if (dev)console.log("PatternNoun - Chybná délka");
+		//	return null;
+		//}
 		let item = new ItemPatternNoun();
 		item.Name = raw[0];
-		if (raw[1]=="0") item.Gender = "str";
-		if (raw[1]=="1") item.Gender = "zen";
-		if (raw[1]=="2") item.Gender = "muz ziv";
-		if (raw[1]=="3") item.Gender = "muz neziv";
+		if (raw[1]=="0") item.Gender = "n";
+		if (raw[1]=="1") item.Gender = "f";
+		if (raw[1]=="2") item.Gender = "ma";
+		if (raw[1]=="3") item.Gender = "mi";
 		
-		item.Shapes = [];
-		for (let i=2; i<=15; i++) {
-			let add=[];
-			let unknown=false;
+		item.Shapes = LoadArr(raw,14,2);
 
-			for (let r of raw[i].split(',')) {
+		
+	/*	for (let i=2; i<=15 && i<raw.length; i++) {
+			let rawShapes=raw[i];
+			if (!rawShapes.includes(",")) {
+				if (rawShapes.startsWith("?×")){
+					let cntRaw=rawShapes.substring(2);
+					let cnt=parseInt(cntRaw);
+					for (let j=0; j<cnt; j++) item.Shapes.push("?");
+					i+=cnt;
+					continue;
+				} else if (rawShapes.startsWith("-×")){
+					let cntRaw=rawShapes.substring(2);
+					let cnt=parseInt(cntRaw);
+					for (let j=0; j<cnt; j++) item.Shapes.push("-");
+					i+=cnt;
+					continue;
+				}
+			}
+
+		//	for (let r of raw[i].split(',')) {				
+		//		add.push(r);
+			//}
+			item.Shapes.push(rawShapes.split(','));
+
+			/*for (let r of raw[i].split(',')) {
 				if (r.includes("?")) unknown=true;
 				else add.push(r);
 			}
@@ -138,7 +159,11 @@ class ItemPatternNoun {
 			if (unknown) {
 				 if (add.length>0) item.Shapes.push(add); // např jeden neznámý + jeden známý
 				 else item.Shapes.push("?");
-			} else item.Shapes.push(add);
+			} else item.Shapes.push(add);*/
+	//	}
+		if (item.Shapes.length != 14) {
+			if (dev)console.log("PatternNoun - Chybná délka", item.Shapes);
+			return null;
 		}
 	//	item.Shapes = [raw[2].split(','), raw[3].split(','), raw[4].split(','), raw[5].split(','), raw[6].split(','), raw[7].split(','), raw[8].split(','), raw[9].split(','), raw[10].split(','), raw[11].split(','), raw[12].split(','), raw[13].split(','), raw[14].split(','), raw[15].split(',')];
 		return item;
@@ -1833,11 +1858,13 @@ class ItemPatternPronoun{
 			}
 			if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
 		} else if (loadedVersionNumber==2) {
-			if (raw.length==14+1){
+			let shapesAll=LoadArr(raw,14*4,1)
+
+			if (shapesAll.length==14){
 				let item=new ItemPatternPronoun();
 				item.Name=raw[0];
 				item.Type=1;
-				item.Shapes=[14];
+			/*	item.Shapes=[14];
 				for (let i=0; i<14; i++) {
 					let shapes=raw[1+i].split(',');
 					item.Shapes[i]=[];
@@ -1845,43 +1872,47 @@ class ItemPatternPronoun{
 						if (!s.includes('?')) item.Shapes[i].push(s);
 					}
 					if (item.Shapes[i].length==0)item.Shapes[i]="?";
-				}
+				}*/
+				item.Shapes=shapesAll;
 				return item; 
 			}
-			if (raw.length==7+1){
+			if (shapesAll.length==7){
 				let item=new ItemPatternPronoun();
 				item.Name=raw[0];
 				item.Type=2;
-				item.Shapes=[7];
+				/*item.Shapes=[7];
 				for (let i=0; i<7; i++){
 					let shapes=raw[1+i].split(',');
 					item.Shapes[i]=[];
 					for (let s of shapes) {
 						if (!s.includes('?')) item.Shapes[i].push(s);
 					}
-				}
+				}*/
+				item.Shapes=shapesAll;
 				return item; 
 			}
-			if (raw.length==1+1){
+			if (shapesAll.length==1){
 				let item=new ItemPatternPronoun();
 				item.Name=raw[0];
 				item.Type=3;
-				if (raw[1].includes('?')) item.Shapes=['?'];
-				else item.Shapes=raw[1].split(',');
+			//	if (raw[1].includes('?')) item.Shapes=['?'];
+				//else item.Shapes=raw[1].split(',');
+				item.Shapes=shapesAll;
 				return item; 
 			}
-			if (raw.length==14*4+1){
+			if (shapesAll.length==14*4){
 				let item=new ItemPatternPronoun();
 				item.Name=raw[0];
 				item.Type=4;
 				item.Shapes=[14*4];
-				for (let i=0; i<14*4; i++) {
-					let shapes=raw[1+i].split(',');
+				item.Shapes=shapesAll;
+			//	for (let i=0; i<14*4; i++) {
+					/*let shapes=raw[1+i].split(',');
 					item.Shapes[i]=[];
 					for (let s of shapes) {
 						if (!s.includes('?')) item.Shapes[i].push(s);
-					}
-				}
+					}*/
+				//}
 				return item; 
 			}
 			if (dev) console.log("⚠️ PatternPronoun - Chybná délka ("+raw.length+")");
@@ -2540,6 +2571,7 @@ class ItemPatternAdjective{
 		this.MasculineAnimate=[];
 		this.MasculineInanimate=[];
 	}
+		
 
 	static Load(data) {
 		if (loadedversion=="TW v0.1"){
@@ -2551,6 +2583,7 @@ class ItemPatternAdjective{
 			let item=new ItemPatternAdjective();
 			item.Name=raw[0];
 			item.adjectiveType=parseInt(raw[1]);
+			
 			item.Middle             =[raw[2],  raw[3],  raw[4],  raw[5],  raw[6],  raw[7],  raw[8],  "", "", raw[ 9], raw[10], raw[11], raw[12], raw[13], raw[14], raw[15], "", ""];
 			item.Feminine           =[raw[16], raw[17], raw[18], raw[19], raw[20], raw[21], raw[22], "", "", raw[23], raw[24], raw[25], raw[26], raw[27], raw[28], raw[29], "", ""];
 			item.MasculineAnimate   =[raw[30], raw[31], raw[32], raw[33], raw[34], raw[35], raw[36], "", "", raw[37], raw[38], raw[39], raw[40], raw[41], raw[42], raw[43], "", ""];
@@ -2558,27 +2591,32 @@ class ItemPatternAdjective{
 			return item;
 		} else {
 			let raw=data.split('|');
-			if (raw.length!=18*4+2) {
-				if (dev) console.log("PatternPronoun - Chybná délka");
-				return null;
-			}
-			let pos=2;
+			//if (raw.length!=18*4+2) {
+			//	if (dev) console.log("PatternPronoun - Chybná délka");
+			//	return null;
+			//}
 			let item=new ItemPatternAdjective();
 			item.Name=raw[0];
 			item.adjectiveType=parseInt(raw[1]);
+
+			let rawArr=LoadArr(raw, 18*4, 2)
+			let pos=0;
 			item.Middle             = GetArray();
 			item.Feminine           = GetArray();
 			item.MasculineAnimate   = GetArray();
 			item.MasculineInanimate = GetArray();
+			
+			if (rawArr.length!=18*4) {
+				if (dev) console.log("PatternPronoun - Chybná délka",rawArr);
+				return null;
+			}
 			return item;	
 			
 			function GetArray() {
 				let arr=[];
 				let len=18;
 				for (let i=0; i<len; i++) {
-					let str=raw[i+pos];
-					if (str.includes('?')) str="?";
-					arr.push(str);
+					arr.push(rawArr[i+pos]);
 				}
 				pos+=len;
 				return arr;
@@ -3069,7 +3107,33 @@ class ItemPatternNumber{
 	constructor() {
 		this.Name;
 		this.Shapes=[];
-	}
+	}	
+	
+/*	static LoadArr(rawArr, len, start) {
+		let arr=[];
+		for (let i=start; i<len+start && i<rawArr.length; i++) {
+			let rawShape=rawArr[i];
+			//console.log(rawShape);
+			if (!rawShape.includes(",")) {
+				if (rawShape.startsWith("?×")){
+					let cntRaw=rawShape.substring(2);
+					let cnt=parseInt(cntRaw);
+					for (let j=0; j<cnt; j++) arr.push("?");
+					i+=cnt;
+					continue;
+				} else if (rawShape.startsWith("-×")){
+					let cntRaw=rawShape.substring(2);
+					let cnt=parseInt(cntRaw);
+					for (let j=0; j<cnt; j++) arr.push("-");
+					i+=cnt;
+					continue;
+				}
+			}
+			arr.push(rawShape.split(','));
+		}
+		console.log(arr);
+		return arr;
+	}*/
 		
 	static Load(data) {
 		let raw=data.split('|');
@@ -3077,26 +3141,32 @@ class ItemPatternNumber{
 		let item=new ItemPatternNumber();
 		item.Name=raw[0];
 		//item.Gender=parseInt(raw[1]);
-		
-		if (raw.length==14+2) {
-			for (let i=0; i<14; i++) { 
-				if (raw[2+i].includes('?')) item.Shapes.push('?'); 
-				else item.Shapes.push(raw[2+i].split(',')); 
-			}
-		} else if (raw.length==7+2) {
-			for (let i=0; i<7; i++) { 
-				if (raw[2+i].includes('?')) item.Shapes.push('?'); 
-				else item.Shapes.push(raw[2+i].split(',')); 
-			}
+			
+		item.Shapes=LoadArr(raw, 14*4, 2);
+
+		/*if (item.Shapes.length==14+2) {
+			//for (let i=0; i<14; i++) { 
+			//	if (raw[2+i].includes('?')) item.Shapes.push('?'); 
+			//	else item.Shapes.push(raw[2+i].split(',')); 
+			//}
+			item.Shapes=LoadArr(raw, 14, 2);
+		} else if (item.Shapes.length==7+2) {
+			//for (let i=0; i<7; i++) { 
+			//	if (raw[2+i].includes('?')) item.Shapes.push('?'); 
+			//	else item.Shapes.push(raw[2+i].split(',')); 
+			//}
+			item.Shapes=LoadArr(raw, 7, 2);
 		} else if (raw.length==1+2) {
-			if (raw[2].includes('?')) item.Shapes.push('?'); 
-			else item.Shapes =[raw[2].split(',')];
+			//if (raw[2].includes('?')) item.Shapes.push('?'); 
+			//else item.Shapes =[raw[2].split(',')];			
+			item.Shapes=LoadArr(raw, 1, 2);
 		} else if (raw.length==14*4+2) {
-			for (let i=0; i<14*4; i++) { 
-				if (raw[2+i].includes('?')) item.Shapes.push('?'); 
-				else item.Shapes.push(raw[2+i].split(',')); 
-			}
-		} else return null;
+			//for (let i=0; i<14*4; i++) { 
+			//	if (raw[2+i].includes('?')) item.Shapes.push('?'); 
+			//	else item.Shapes.push(raw[2+i].split(',')); 
+			//}
+			item.Shapes=LoadArr(raw, 14*4, 2);
+		} else return null;*/
 
 		return item;
 	}
@@ -3159,14 +3229,16 @@ class ItemNumber{
 
 			let paternFrom = this.GetPatternByNameFrom(raw[1]);
 			if (paternFrom == null) {
-				if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
+				if (dev) console.log("Cannot load pattern '"+raw[1]+"'", this.pattensFrom);
 				return null;
 			}
 			item.PatternFrom=paternFrom;
 
 			item.To = FastLoadTranslateToWithPattern(raw, 2, this);
-			if (item.To == null) return null;
-			
+			if (item.To == null) {
+				if (dev) console.log("Cannot load pattern '"+raw[1]+"'", this.pattensTo);
+				return null;
+			}
 			return item;
 		}
 		return null;
@@ -3570,7 +3642,7 @@ class ItemPatternVerb{
 	}	
 	
 	static GetArray(source, pos, len) { 
-		let arr = [len];
+		/*let arr = [len];
 		for (let i=0; i<len; i++) {			
 			if (source[pos+i].includes(",")) {
 				arr[i]=[];
@@ -3579,8 +3651,12 @@ class ItemPatternVerb{
 					else arr[i].push(f); 
 				}
 			}//arr[i]=source[pos+i].split(',');
-			else if (source[pos/*2*/+i].includes('?')) arr[i]='?'; 
+			else if (source[pos+i].includes('?')) arr[i]='?'; 
 			else arr[i]=source[pos+i];
+		}*/
+		let arr = [];
+		for (let i=pos; i<pos+len; i++) {
+			arr.push(source[i]);
 		}
 		return arr;
 	}
@@ -3591,13 +3667,6 @@ class ItemPatternVerb{
 		item.Name=raw[0];
 		//item.TypeShow=parseInt(raw[1]);
 		let num=parseInt(raw[1]);
-		item.Type=parseInt(raw[2]);
-
-		if (raw[3].includes('?')) item.Infinitive='?';
-		else item.Infinitive=raw[3];
-
-		let index=4;
-
 		item.SContinous          = (num &   1) ==  1;
 		item.SImperative         = (num &   2) ==  2;
 		item.SPastActive         = (num &   4) ==  4;
@@ -3606,16 +3675,49 @@ class ItemPatternVerb{
 		item.STransgressiveCont  = (num &  32) == 32;
 		item.STransgressivePast  = (num &  64) == 64;
 		item.SAuxiliary          = (num & 128) ==128;
+
+		item.Type=parseInt(raw[2]);
+
+		// uncompress array
+		let arrayOfShapes=LoadArr(raw,100,3);
+	/*	for (let i=3; i<raw.length; i++) {
+			let rawShapes=raw[i];
+			
+			if (!rawShapes.includes(",")) {
+				if (rawShapes.startsWith("?×")){
+					let cntRaw=rawShapes.substring(2);
+					let cnt=parseInt(cntRaw);
+					for (let j=0; j<cnt; j++) arrayOfShapes.push("?");
+					i+=cnt;
+					continue;
+				} else if (rawShapes.startsWith("-×")){
+					let cntRaw=rawShapes.substring(2);
+					let cnt=parseInt(cntRaw);
+					for (let j=0; j<cnt; j++) arrayOfShapes.push("-");
+					i+=cnt;
+					continue;
+				}
+			}
+
+			arrayOfShapes.push(raw[i].split(','));
+		}*/
+		
+
+		//if (arrayOfShapes[0].includes('?')) item.Infinitive='?';
+		//else 
+		item.Infinitive=arrayOfShapes[0];
+
+		let index=1;
 		//console.log(this);
 	//	try {
-		if (item.SContinous) {	     item.Continous 		 	= this.GetArray(raw, index, 6); index+=6;}
-		if (item.SFuture) {          item.Future 			= this.GetArray(raw, index, 6); index+=6;}
-		if (item.SImperative) {      item.Imperative 		= this.GetArray(raw, index, 3); index+=3;}
-		if (item.SPastActive) {      item.PastActive 		= this.GetArray(raw, index, 8); index+=8;}
-		if (item.SPastPassive) {     item.PastPassive 	 	= this.GetArray(raw, index, 8); index+=8;}
-		if (item.STransgressiveCont) {item.TransgressiveCont	= this.GetArray(raw, index, 3); index+=3;}
-		if (item.STransgressivePast) {item.TransgressivePast	= this.GetArray(raw, index, 3); index+=3;}
-		if (item.SAuxiliary) {        item.Auxiliary 		= this.GetArray(raw, index, 6); index+=6;}
+		if (item.SContinous) {	     item.Continous 		= this.GetArray(arrayOfShapes, index, 6); index+=6;}
+		if (item.SFuture) {          item.Future 			= this.GetArray(arrayOfShapes, index, 6); index+=6;}
+		if (item.SImperative) {      item.Imperative 		= this.GetArray(arrayOfShapes, index, 3); index+=3;}
+		if (item.SPastActive) {      item.PastActive 		= this.GetArray(arrayOfShapes, index, 8); index+=8;}
+		if (item.SPastPassive) {     item.PastPassive 	 	= this.GetArray(arrayOfShapes, index, 8); index+=8;}
+		if (item.STransgressiveCont) {item.TransgressiveCont= this.GetArray(arrayOfShapes, index, 3); index+=3;}
+		if (item.STransgressivePast) {item.TransgressivePast= this.GetArray(arrayOfShapes, index, 3); index+=3;}
+		if (item.SAuxiliary) {        item.Auxiliary 		= this.GetArray(arrayOfShapes, index, 6); index+=6;}
 //			console.log(item);
 		return item;
 	//} catch {
@@ -4115,7 +4217,17 @@ class ItemVerb{
 					
 					if (shape==match) {
 						for (let to of this.To) {
+						//	console.log(to,pattenShapesName,to.Pattern);
 							let patternShapesTo=to.Pattern[pattenShapesName];
+							if (patternShapesTo==undefined) continue;
+							let shapes=patternShapesTo[i];
+							if (!Array.isArray(patternShapesTo[i])) shapes=[shapes];
+
+							for (const e of shapes) {
+								if (e=='?') continue;
+								this.ret.push({Text: to.Body+e, Number: num, Person: 1+i-fromIndex, Form: name});
+							}
+/*
 							if (Array.isArray(patternShapesTo[i])) {
 								for (const e of patternShapesTo[i]) {
 									if (e=='?') continue;
@@ -4125,7 +4237,7 @@ class ItemVerb{
 								if (patternShapesTo[i]=='?') continue;
 								this.ret.push({Text: to.Body+patternShapesTo[i], Number: num, Person: 1+i-fromIndex, Form: name});
 								break;
-							}
+							}*/
 						}
 					}
 				}
@@ -4675,9 +4787,9 @@ class LanguageTr {
 					this.Category=line.substring(1).split('>');
 					break;
 
-				case "z":
+			/*	case "z":
 					this.baseLangName=line.substring(1);
-					break;
+					break;*/
 			}
 		}
 			
@@ -6937,7 +7049,9 @@ function ApplyPostRules(text) {
 
 function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
 	let ret=[];
+	//console.log(rawData.length);
 	for (let i=indexStart; i<rawData.length; i+=3) {
+	//	console.log(i);
 		let rawBody=rawData[i], rawPattern=rawData[i+1];
 
 		if (rawBody.includes('?')) continue;
@@ -6961,7 +7075,9 @@ function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
 
 function FastLoadTranslateTo(rawData, indexStart) {
 	let ret=[];
+	//console.log(rawData.length);
 	for (let i=indexStart; i<rawData.length; i+=2) {
+	//	console.log(i);
 		let rawText=rawData[i];
 
 		if (rawText=='') continue;
@@ -7014,4 +7130,32 @@ function ApplyTranscription(str){
 
 	console.log("Replaced: ", ret);
 	return ret;
+}
+
+function LoadArr(rawArr, len, start) {
+	let arr=[];
+	for (let i=start; i<len+start && i<rawArr.length; i++) {
+		let rawShape=rawArr[i];
+		//console.log(rawShape);
+		if (!rawShape.includes(",")) {
+			// Uncompress
+			if (rawShape.startsWith("?×")){
+				let cntRaw=rawShape.substring(2);
+				let cnt=parseInt(cntRaw);
+				for (let j=0; j<cnt; j++) arr.push("?");
+				//i+=cnt;
+				continue;
+			} else if (rawShape.startsWith("-×")){
+				let cntRaw=rawShape.substring(2);
+				let cnt=parseInt(cntRaw);
+				for (let j=0; j<cnt; j++) arr.push("-");
+				//i+=cnt;
+				continue;
+			}
+		}
+
+		arr.push(rawShape.split(','));
+	}
+	//console.log(arr);
+	return arr;
 }

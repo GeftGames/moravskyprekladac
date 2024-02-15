@@ -459,7 +459,7 @@ function mapClick(mX,mY) {
 		(isTouchDevice() && 入っちゃった(mX, mY, map_LocX+p.locationX*map_Zoom-circleRadius, map_LocY+p.locationY*map_Zoom-circleRadius, circleRadius*2,circleRadius*2))) {
 			console.log("click",{ mX: mX, my: mY, x: map_LocX+p.locationX*map_Zoom-circleRadius, y: map_LocY+p.locationY*map_Zoom-circleRadius, w: circleRadius*2, h:circleRadius*2});
 			p.option.selected=true;
-			CloseMapPage();
+			PopPageClose('mapPage');
 			Translate();
 			GetDic()
 			return;
