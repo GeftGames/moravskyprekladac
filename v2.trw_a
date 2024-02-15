@@ -23482,6 +23482,7 @@ q0
 -
 -
 -
+plody lopuchu|1|ceganski bleche|
 -
 -
 obk|vopk
@@ -28642,10 +28643,13 @@ ou|u
 kají|kaju
 -
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé|lidí|lidem|lidi|lidé|lidech|lidmi
+houští|0|||||||m|||m|||ch|mi
 -
 ČLOVĚK|2|človjek|?×13
+hóščí|0|?×6|m|?×7
 -
 |ČLOVĚK|0||ČLOVĚK
+houští|houští|0|hóščí|hóščí
 -
 veselÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
@@ -28668,15 +28672,18 @@ ni|niC|ňi|ňiC
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
 chTÍT|15|-1|tít|ci|ceš|ce|ceme|cete|tějí|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 MÍT|103|-1|mňet|?×5|maju|?×17
 chTÍT|15|-1|?|cu|?×4|cu|?×19
-BÝT|247|-1|?|su|?×34
+BÝT|247|-1|?|su,sem|?×34
+JÍT|31|-1|?×16|šél|?×15
 -
 |MÍT||MÍT
 ch|chTÍT|ch|chTÍT
 |BÝT||BÝT
 nech|chTÍT|nech|chTÍT
+|JÍT||JÍT
 -
 jen,jenom|ene
 potom|potym
@@ -60768,6 +60775,7 @@ q0
 -
 puchrovitostí napadené švestky|1|bouchorky|
 švestky napadené puchrovitostí|1|bouchorky|
+plody lopuchu|1|cyganske knefle|
 -
 -
 -
@@ -61390,6 +61398,7 @@ zakrnělá švestka|1|babina|expr.
 scvrklá švestka|1|babina|expr.
 na klasech|0|na klasi|
 s ním|1|s ňim|
+na plodech lopuchů|1|na bapkách|
 -
 -
 ně|ne
@@ -61445,6 +61454,7 @@ soused|1||a|u,ovi|a|e|u,ovi|em|é,i|ů|ům|y|é,i|ech|y
 apríl|3||u,a|u||e|u,e|em|y|ů|ům|y|y|ech|y
 dubEN|3|en|na|nu|en|ne|nu|nem|ny|nů|nům|ny|ny|nech|ny
 brÁNA|1|ána|ány|áně|ánu|áno|áně|ánou,anou|ány|an|ánám,anám|ány|ány|ánách,anách|ánami,anami
+stehlíK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 -
 april|3|?×3||?×10
 banďur|3|?×12|áh|?
@@ -61484,6 +61494,7 @@ tMA|1|?×14
 václaV|2|f|?×13
 vokNO|0|no|?×13
 brÁNA|1|?|áne|?×12
+stehlíK|2|?×8|ku|?×5
 -
 apríl|apríl|0|april|april
 aut|městO|0|aut|městO
@@ -61521,6 +61532,7 @@ t|tMA|0|t|tMA
 taš|tašKA|0|kabel|kabelA
 václav|václav|2|václa|václaV
 br|brÁNA|0|br|brÁNA
+stehlí|stehlíK|0|stehli|stehlíK
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 pěknÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -83597,6 +83609,7 @@ v tom|1|f tym|
 do dnešního dne|1|do neskajška|
 |1|Na kasarňi|
 dodnes|1|do neskajška|
+plod lopuchu|1|babi kořen|
 -
 -
 ne|ňe
@@ -90844,6 +90857,7 @@ z té|1|s téj|
 z té|1|s téj|
 z toho|1|s teho|
 naprosto|1|na čisté čisto|
+lopuch plstnatý|1|čérní koreň|
 -
 -
 -
@@ -90868,6 +90882,7 @@ dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu|nem|ni,ny,básnicky|ní,nů|nům|ni,ny|ni,ny,b�
 vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 úterý|0|||||||m|||m|||ch|mi
 středA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kořen|3||e,u|i,u||i|i,u|em|y|ů|ům|y|y|ech|y
 -
 pohádKA|1|ka|ky|?×12
 ženA|1|?|i|?|u|?×10
@@ -90883,6 +90898,7 @@ dEN|0|eň|?×13
 voDA|1|?|di|?×12
 úterí|0||?×13
 streDA|1|da|?×13
+koreN|3|ň|?×13
 -
 studán|pohádKA|0|studén|pohádKA
 vod|vodA|0|vo|voDA
@@ -90895,12 +90911,16 @@ koži|kožiCH|0|kožu|kožiCH
 d|dEN|0|d|dEN
 úterý|úterý|0|úterí|úterí
 střed|středA|0|stre|streDA
+kořen|kořen|0|kore|koreN
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+černÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 celÝ|-1|?×7|-|-|?×7|-|-|?×7|-|-|?×7|-|-|?×7|-|-|?×7|-|-|ṵí|?×6|-|-|?×7|-|-
+čérNÝ|-1|?×7|-|-|?×7|-|-|?×7|-|-|?×7|-|-|?×7|-|-|?×7|-|-|ní|?×6|-|-|?×7|-|-
 -
 cel|celÝ|ce|celÝ
+čern|černÝ|čér|čérNÝ
 -
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 MY|my|nás|nám|nás|my|nás|námi
