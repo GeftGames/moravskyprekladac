@@ -523,7 +523,7 @@ function ChangeTesting() {
 function SwitchHide(e) {
     e.classList.toggle("hidden");
 }
-
+/*
 function ShowAboutPage(){
 	location.hash="about";
 	
@@ -590,15 +590,12 @@ function CloseAboutPage(){
 	setTimeout(()=>{ 
 		document.getElementById("aboutPage").style.display="none";
 	}, 300);
-}
+}*/
 let PopPage_lastOpen="";
 
 function PopPageShow(name) {
 	//close old
-	let old=document.getElementById(PopPage_lastOpen);
-	if (old!=undefined) {
-		if (old.style.opacity=="1") PopPageClose(PopPage_lastOpen);
-	}
+	CloseLastPopup();
 	
 	//open
 	let element=document.getElementById("pagePop_"+name);
@@ -615,10 +612,34 @@ function PopPageShow(name) {
 		document.getElementById('nav').style.opacity='0.1';
 	}
 	PopPage_lastOpen=name;
+
+	
+	document.body.style.overflow="unset";
+
+	if (name=="mapPage") {
+		window.requestAnimationFrame(mapRedraw);
+
+		document.body.style.overflow="clip";
+		window.scrollTo({ top: 0});
+	} else if (name=="pageInfoLang") {
+		//console.log(lang);
+		let lang=GetCurrentLanguage();
+		if (dev){
+			let element=document.getElementById("infoLangText");
+			element.innerHTML="Umístění: ";	
+			if (lang.Category === undefined)element.innerHTML+="neznámé";
+			else element.innerHTML+=lang.Category.join(" > ");
+			element.innerHTML+="<br>"+"Počet zázamů: "+lang.Stats()+"<br>"+lang.Comment;	
+		}else{
+			document.getElementById("infoLangText").innerHTML=lang.Comment;
+		}
+	}
 }
 
 function PopPageClose(name) {
 	let element=document.getElementById("pagePop_"+name);
+	
+	document.body.style.overflow="unset";
 
 	element.style.opacity="0";
 	element.style.top="500px";
@@ -634,7 +655,7 @@ function PopPageClose(name) {
 		element.style.display="none";
 	}, 300);
 }
-
+/*
 function ShowPageOwnLang(){
 	document.getElementById("pageOwnLang").style.display="block";
 	document.getElementById("pageOwnLang").style.opacity="1";
@@ -663,7 +684,7 @@ function ClosePageOwnLang(){
 	setTimeout(()=>{ 
 		document.getElementById("pageOwnLang").style.display="none";
 	}, 300);
-}
+}*/
 
 function ShowPageLangD(element){
 	document.body.style.overflow="clip";
@@ -703,7 +724,7 @@ function ClosePageLangD(){
 		document.getElementById("pageLangD").style.display="none";
 	}, 300);
 }
-
+/*
 function ShowPageInfoLang(){
 	let lang=GetCurrentLanguage();
 	if (lang==null) return;
@@ -746,7 +767,8 @@ function ClosePageInfoLang(){
 		document.getElementById("pageInfoLang").style.display="none";
 	}, 300);
 }
-
+*/
+/*
 function ShowMapPage(){
 	document.getElementById("mapPage").style.display="block";
 	document.getElementById("mapPage").style.opacity="1";
@@ -779,7 +801,7 @@ function CloseMapPage(){
 		document.getElementById("mapPage").style.display="none";
 	}, 300);
 }
-
+*/
 let langFile;
 function SetLanguage() {
 	let tmpLang;
@@ -813,6 +835,7 @@ function SetLanguage() {
 
 	var headID = document.getElementsByTagName('manifest');
 	headID.href = "data/manifests/manifest" + tmpLang.toUpperCase() + ".json";
+	cententlang.content = tmpLang;
 
     document.getElementById("from").innerText = langFile.From;
     document.getElementById("to").innerText = langFile.To;
@@ -5135,6 +5158,8 @@ function TabSwitch(newAppName) {
 	ShowAppPage(newAppName);
 }
 function SetSwitchForced() {
+	CloseLastPopup();
+	
 	let selectedClassName = "selectedApp";
 	for (let tab of document.getElementById("appsTab").childNodes) {
 		if (tab.nodeName !== '#text') {
@@ -5149,9 +5174,23 @@ function SetSwitchForced() {
 	document.getElementById("tabApp_"+appSelected).classList.add(selectedClassName);
 	document.getElementById("tabApp2_"+appSelected).classList.add(selectedClassName);
 }
+
+function CloseLastPopup(){	
+	console.log(PopPage_lastOpen);
+	
+	document.body.style.overflow="unset";
+
+	let old=document.getElementById("pagePop_"+PopPage_lastOpen);
+	if (old!=undefined) {
+		if (old.style.opacity=="1") PopPageClose(PopPage_lastOpen);
+	}
+}
+
 //let timerTab=false;
 function ShowAppPage(name) {
 	if (name==appSelected) return;
+
+	CloseLastPopup();
 
 	// To left or right?
 	let apps=["translator", "search","mapper"];
