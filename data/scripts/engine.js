@@ -686,6 +686,7 @@ function ClosePageOwnLang(){
 	}, 300);
 }*/
 
+// ze slovníku tvarosloví
 function ShowPageLangD(element){
 	document.body.style.overflow="clip";
 	window.scrollTo({ top: 0});
@@ -695,10 +696,10 @@ function ShowPageLangD(element){
 	pagelangDFill.innerHTML="";
 	pagelangDFill.appendChild(element);
 
-	document.getElementById("pageLangD").style.display="block";
-	document.getElementById("pageLangD").style.opacity="1";
-	document.getElementById("pageLangD").style.position="absolute";
-	document.getElementById("pageLangD").style.top="99px";
+	document.getElementById("pagePop_pageLangD").style.display="block";
+	document.getElementById("pagePop_pageLangD").style.opacity="1";
+	document.getElementById("pagePop_pageLangD").style.position="absolute";
+	document.getElementById("pagePop_pageLangD").style.top="99px";
 	if (document.getElementById('nav').style.opacity=='1') {
 		document.getElementById('butShow').style.opacity='1';
 		document.getElementById('butclose').style.opacity='0'; 
