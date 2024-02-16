@@ -792,7 +792,8 @@ option,optgroup{
 	width: 100%;
 	height: auto;
 	/*height: -webkit-fill-available;*/
-	height: 100%;
+	min-height: -webkit-fill-available;
+	padding-bottom: 1cm;
 }
 .download_option{
 	display: flex;
