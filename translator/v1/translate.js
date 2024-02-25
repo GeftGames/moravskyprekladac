@@ -183,14 +183,17 @@ class ItemPatternNoun {
 			let trh=document.createElement("tr");
 			let tdph=document.createElement("td");
 			tdph.innerText="pád";
+			tdph.style.fontWeight="bold";
 			trh.appendChild(tdph);
 
 			let tdnh=document.createElement("td");
-			tdnh.innerText="Jednotné";
+			tdnh.innerText="jednotné";
+			tdnh.style.fontWeight="bold";
 			trh.appendChild(tdnh);
 			
 			let tdmh=document.createElement("td");
-			tdmh.innerText="Množné";
+			tdmh.innerText="množné";
+			tdmh.style.fontWeight="bold";
 			trh.appendChild(tdmh);
 
 			tbody.appendChild(trh);
@@ -200,14 +203,16 @@ class ItemPatternNoun {
 			let tr=document.createElement("tr");
 
 			let tdp=document.createElement("td");
-			tdp.innerText=c+1;
+			tdp.innerText=(c+1)+".";
 			tr.appendChild(tdp);
 
 			let td1=document.createElement("td");
 			let endingS="";
 			if (Array.isArray(this.Shapes[c])) {
 				endingS=this.Shapes[c].join(", ");
-				td1.innerText=starting+endingS;
+				if (endingS=="?") td1.innerText="?";
+				else if (endingS=="-") td1.innerText="-";
+				else td1.innerText=starting+endingS;
 			} else {
 				if (this.Shapes[c]=="?")td1.innerText="?";
 				else td1.innerText=starting+this.Shapes[c];
@@ -218,9 +223,11 @@ class ItemPatternNoun {
 			let endingP="";
 			if (Array.isArray(this.Shapes[c+7])) {
 				endingP=this.Shapes[c+7].join(", ");
-				td2.innerText=starting+this.Shapes[c+7];
+				if (endingP=="?") td1.innerText="?";
+				else td2.innerText=starting+this.Shapes[c+7];
 			} else {
 				if (this.Shapes[c+7]=="?") td2.innerText="?";
+				else if (this.Shapes[c+7]=="-") td2.innerText="-";
 				else td2.innerText=starting+this.Shapes[c+7];
 			}
 			tr.appendChild(td2);
@@ -756,7 +763,8 @@ class ItemSimpleWord {
 			r.className="dicMoreInfo";
 			p.appendChild(r);
 		}
-		return {from: this.input, to: out, name: "", element: p};
+
+		return {from: Array.isArray(this.input) ? this.input[0] : this.input, to: out, name: "", element: p};
 	}
 }
 
@@ -843,7 +851,7 @@ class ItemAdverb {
 					if (to.Comment!="") {
 						let c = document.createElement("span");
 						c.innerText=to.Comment;
-						r.className="dicMeaning";
+						c.className="dicMeaning";
 						p.appendChild(c);
 					}
 				}
@@ -873,7 +881,7 @@ class ItemAdverb {
 			r.className="dicMoreInfo";
 			p.appendChild(r);
 		}
-		return {from: this.input, to: out, name: "", element: p};
+		return {from: Array.isArray(this.input) ? this.input[0] : this.input, to: out, name: "", element: p};
 	}
 }
 
@@ -1217,16 +1225,17 @@ class ItemPreposition {
 	GetDicForm(name) {		
 		let p = document.createElement("p");
 		let f = document.createElement("span");
-		f.innerText=this.input;
+		f.innerText=this.input.join(", ");
 		p.appendChild(f);
 		
 		let e = document.createElement("span");
 		e.innerText=" → ";
 		p.appendChild(e);
 		
-		for (const to of this.output) {
+		//for (const to of this.output) {
+		for (let i=0; i<this.output.length; i++) {
+			let to=this.output[i];
 			let t = document.createElement("span");
-//			console.log(to);
 			t.innerText=to.Text;
 			p.appendChild(t);	
 			
@@ -1238,6 +1247,7 @@ class ItemPreposition {
 					p.appendChild(t);
 				}
 			}
+			if (i!=this.output.length-1) p.appendChild(document.createTextNode(", "));
 		}
 
 		let r = document.createElement("span");
@@ -1249,8 +1259,8 @@ class ItemPreposition {
 		r.className="dicMoreInfo";
 		p.appendChild(r);
 		
-		if (this.fall.length>0) return {from: this.input, to: this.output.join(', '), name: langFile.Fall+": "+this.fall.join(', '), element: p};
-		else return {from: this.input, to: this.output.join(', '), name: name, element: p};
+		if (this.fall.length>0) return {from: this.input.join(", "), to: this.output.join(', '), name: langFile.Fall+": "+this.fall.join(', '), element: p};
+		else return {from: this.input.join(", "), to: this.output.join(', '), name: name, element: p};
 	}
 }
 
@@ -2788,9 +2798,9 @@ class ItemAdjective{
 						let shape=shapes[j];
 						
 						if (obj.From+shape==str) {
-							console.log(obj.From+shape);
+							//console.log(obj.From+shape);
 
-							console.log(obj.To);
+						//	console.log(obj.To);
 							for (let to of obj.To) {
 								let shapesTo=to.Pattern[gender][i];
 								if (!Array.isArray(shapesTo)) shapesTo=[shapesTo];
@@ -5316,8 +5326,11 @@ class LanguageTr {
 
 		// Setřídit
 		out=out.sort((a, b) => {
-			if (a.to instanceof String) return a.to.localeCompare(b.to);
-			return  false;
+			if (typeof a.from == 'string') return a.from.localeCompare(b.from);
+			else {
+				if (dev) console.log("Type is not string", typeof a.from, a);
+				return false;
+			}
 		});
 
 		// Zkrátit
@@ -5593,8 +5606,8 @@ class LanguageTr {
 				else if (type=="Conjunction") {
 					printableString=string.output[0].Text;
 				}else if (type=="Phrase") {
-					if (Array.isArray(string))printableString=string[0].Text[0];
-					else printableString=string.Text/*.output*/;
+					if (Array.isArray(string))printableString=string[0].Text.join(" ");
+					else printableString=string.Text.join(" ")/*.output*/;
 				}else if (type=="Particle") {
 					printableString=string.output[0].Text;
 				} else if (type=="Interjection") {
@@ -6578,6 +6591,8 @@ class LanguageTr {
 
 				//console.log("Phrase",variantPhrase);
 				if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
+					//let output=phrase.output;
+					//if (Array.isArray(phrase.output)) output=phrase.output[0];
 					let ret=ApplyMatch(arrOfWords, start, start+variantPhrase.length, phrase.output);
 					/*if (ret!=null)*/ return ret;
 				}
@@ -6589,7 +6604,7 @@ class LanguageTr {
 			// Verob puvodni string
 			let str="";
 			for (let w=startIndex; w<endIndex; w++) {
-				console.log(arrSource,w);
+//				console.log(arrSource,w);
 				str+=arrSource[w][1];
 			}
 
@@ -7095,9 +7110,9 @@ function FastLoadTranslateTo(rawData, indexStart) {
 }
 
 function ApplyTranscription(str){
-	console.log("transcription: ", transcription);
+//	console.log("transcription: ", transcription);
 	if (transcription==null) return str;
-	console.log("before: ", str);
+//	console.log("before: ", str);
 
 	let PatternAlrearyReplaced=[];
 	for (let i=0; i<=str.length; i++) {
