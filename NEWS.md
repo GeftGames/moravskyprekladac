@@ -1,6 +1,7 @@
 # Poslední změny
 ### 2024 25.2. 
 - drobné opravy ve slovníku a drobné změny ve vzhledu (zadávací pole slovníku, placeholder, řazení slovníku abc, ...)
+- k názevu částečně slezský 
 
 ### 2024 15.2. 
 - Asi o 10% lepší komprese slovníku
