@@ -105,18 +105,20 @@ span{
 #outputtext{
     text-align: left;
 }
+/*
 #specialTextarea[data-placeholder]:empty:before {
 	content: attr(data-placeholder);
 	color: rgba(150,150,150) !important;
 	text-shadow: .5px .5px 2px var(--RawColorForw05);
 	filter: blur(0.5px);
 	cursor: text;
-}
+}*/
 body{
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: transparent;
 	margin: 0;
+	scrollbar-color: var(--ColorThemeAccentBack) var(--ConBack);
 }
 #body{
 	margin: 0;
@@ -238,7 +240,7 @@ html{
 	outline-offset: 3px;
 	display: flex;
 /*	margin-left: 10px;*/
-	margin-right: 10px;
+/*	margin-right: 10px;*/
 	flex-direction: column;
 	background-color: var(--ConBack);
 }
@@ -498,17 +500,18 @@ li:focus, li:active, li:hover{
 a:hover{
 	color:#0066ff;
 }
-.placeholder {
+.placeholder, input::placeholder, #specialTextarea::placeholder{
 	color: rgba(150,150,150) !important;
 	text-shadow: .5px .5px 2px var(--RawColorForw05);
-	filter: blur(0.5px);
+	filter: blur(0.25px);
 	user-select: none;
+	transition: color .3s;
 }
 #lte:focus-within,#dicLte:focus-within {
-	box-shadow: 0px 0px 3px rgb(99,167,255);
+	box-shadow: 0px 0px 3px var(--ColorOrig);
 }
 #lte:focus-visible ,#dicLte:focus-visible{
-	box-shadow: 0px 0px 3px rgb(99,167,255);
+	box-shadow: 0px 0px 3px var(--ColorOrig);
 	outline: var(--tDash);
 	outline-offset: 5px;
 }
@@ -1504,4 +1507,17 @@ caption{
 }
 .locShortcut{
 	cursor: pointer;
+}
+#dicInput{
+    border: none;
+	padding: 9px;
+	border-radius: 5px;    
+	height: auto;
+    font-size: inherit;
+}
+input:focus{
+	outline: none;
+}
+#dicLte:focus-within > #dicInput::placeholder, #lte:focus-within > #specialTextarea::placeholder{
+	color: rgba(200,200,200) !important;
 }
