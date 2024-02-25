@@ -20,7 +20,8 @@ class ItemSentence {
 			if (raw[0]=='') return null;			
 			let item = new ItemSentence();
 			item.input = raw[0];			
-			item.output=FastLoadTranslateTo(raw, 1);
+			item.output=FastLoadTranslateTo(raw, 2);
+			if (item.output==null) return null;
 			return item;						
 		}
     }
@@ -169,6 +170,21 @@ class ItemPatternNoun {
 		return item;
 	}
 
+	GetShape(starting, fall) {
+		let shapes=this.Shapes[fall];
+		if (!Array.isArray(shapes))shapes=[shapes];
+		let out="";
+		for (let i=0; i<shapes.length; i++) {
+			let shape=shapes[i];
+			if (shape!="?" && shape!="-") {
+				out+=starting+shape;
+			}
+			if (i!=shapes.length-1) out+=", ";
+		}
+		if (out=="") out=undefined;
+		return out;
+	}
+
 	GetTable(starting) {
 		let table=document.createElement("table");
 		table.className="tableDic";
@@ -207,8 +223,10 @@ class ItemPatternNoun {
 			tr.appendChild(tdp);
 
 			let td1=document.createElement("td");
-			let endingS="";
-			if (Array.isArray(this.Shapes[c])) {
+			//let endingS="";
+			let shapesS=this.Shapes[c];
+			let os="";
+			/*if (Array.isArray(this.Shapes[c])) {
 				endingS=this.Shapes[c].join(", ");
 				if (endingS=="?") td1.innerText="?";
 				else if (endingS=="-") td1.innerText="-";
@@ -216,20 +234,37 @@ class ItemPatternNoun {
 			} else {
 				if (this.Shapes[c]=="?")td1.innerText="?";
 				else td1.innerText=starting+this.Shapes[c];
+			}*/
+			for (let i=0; i<shapesS.length; i++) {
+				let sh = shapesS[i];
+				if (sh!="?" && sh!="-") os+=starting+sh;
+				if (sh=="-") os+="-";
+				// separator
+				if (i!=shapesS.length-1) os+=", ";
 			}
+			if (os=="") td1.innerText="?";
+			else td1.innerText=os;	
 			tr.appendChild(td1);
 
 			let td2=document.createElement("td");
-			let endingP="";
-			if (Array.isArray(this.Shapes[c+7])) {
-				endingP=this.Shapes[c+7].join(", ");
-				if (endingP=="?") td1.innerText="?";
-				else td2.innerText=starting+this.Shapes[c+7];
-			} else {
+			//let endingP="";
+			let shapesP=this.Shapes[c+7];
+			let op="";
+			if (!Array.isArray(shapesP)) shapesP=[shapesP];
+			for (let i=0; i<shapesP.length; i++) {
+				let sh = shapesP[i];
+				if (sh!="?" && sh!="-") op+=starting+sh;
+				if (sh=="-") op+="-";
+				// separator
+				if (i!=shapesP.length-1)op+=", ";
+			}
+			if (op=="") td2.innerText="?";
+			else td2.innerText=op;				
+			/*} else {
 				if (this.Shapes[c+7]=="?") td2.innerText="?";
 				else if (this.Shapes[c+7]=="-") td2.innerText="-";
 				else td2.innerText=starting+this.Shapes[c+7];
-			}
+			}*/
 			tr.appendChild(td2);
 
 			tbody.appendChild(tr);
@@ -411,16 +446,37 @@ class ItemNoun {
 		let body=to.Body, pattern=to.Pattern;
 		if (typeof(pattern) == "undefined") return null;
 
-		let str_form="", str_to="";
+		let str_form=undefined, str_to=undefined;
+		/*
+		1.  1 2
+		2.  5
+		3.    9
+		4.  3 4
+		5. 
+		6.    8
+		7.  7 6
 		
+		*/
+		let try_shapes = [0,7, 4,11, 1,13,6,12,9];
+
+		for (let i=0; i<try_shapes.length; i++) {
+			let index=try_shapes[i];
+			str_form=this.PatternFrom.GetShape(this.From, index);
+			str_to=pattern.GetShape(body, index);
+			//str_to=body+pattern.Shapes[index];
+			if (str_form!=undefined && str_to!=undefined) break;
+		}
+		if (str_form==undefined || str_to==undefined) return null;
+
+		/*
 		if (pattern.Shapes[0]!="?") {
-			str_form=this.From+this.PatternFrom.Shapes[0];
+			str_form=this.PatternFrom.GetShape(this.From,0);
 			str_to=body+pattern.Shapes[0];
 		} else if (pattern.Shapes[7]!="?") {
-			str_form=this.From+this.PatternFrom.Shapes[7];
+			str_form=this.PatternFrom.GetShape(this.From,7);
 			str_to=body+pattern.Shapes[7];
-		} else return null;
-			
+		} else return null;*/
+
 		// Create p snap
 		let p = document.createElement("p");
 		let f = document.createElement("span");
