@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 25.2. 
+- drobné opravy ve slovníku
+- drobné změny ve vzhledu
+
 ### 2024 15.2. 
 - Asi o 10% lepší komprese slovníku
 - Export mapy do GML (Geography Markup Language)
