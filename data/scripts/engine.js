@@ -246,26 +246,26 @@ function customTheme() {
 			if (themeLight=="dark") {
 				if (themeDay) {
 				//	console.log("dark, day");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 15%)');
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 17%)');
 					styles.setProperty('--ColorText', 	'white');
 					styles.setProperty('--ConBack', 	'#2f2f2f');
 					styles.setProperty('--ColorBack', 	'#101010');
 					styles.setProperty('--ColorThemeAccent', 		HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
 					styles.setProperty('--ColorThemeForward', 		'hsl('+colorH+'deg 30% 90%)');
-					styles.setProperty('--ColorThemeAccentBack', 	'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeAccentBack', 	'hsl('+colorH+'deg 30% 80%)');
 
 					styles.setProperty('--RawColorForw','0, 0, 0');
 					styles.setProperty('--RawColorBack','255, 255, 255');
 					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
 				} else {
 				//	console.log("dark, night");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 8%)');
+					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 12%)');
 					styles.setProperty('--ColorText', 	'lightgray');
 					styles.setProperty('--ConBack', 	'#1a1a1a');
 					styles.setProperty('--ColorBack', 	'black');
 					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
 					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 90%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 10%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 85%)');
 
 					styles.setProperty('--RawColorForw','0, 0, 0');
 					styles.setProperty('--RawColorBack','255, 255, 255');
@@ -304,11 +304,11 @@ function customTheme() {
 				//	console.log("semi, day");
 					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 90%)');
 					styles.setProperty('--ColorText', 	'black');
-					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 100% 99%)');
-					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 100% 98%)');
+					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 60% 99%)');
+					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 60% 98%)');
 					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50));//styles.setProperty('--ColorThemeAccent', 	);
 					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 85%)');
 
 					styles.setProperty('--RawColorForw','255, 255, 255');
 					styles.setProperty('--RawColorBack','0, 0, 0');
@@ -317,11 +317,11 @@ function customTheme() {
 					//console.log("semi, night");
 					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 90%)');
 					styles.setProperty('--ColorText', 	'black');
-					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 30% 90%)');
-					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 30% 95%)');
+					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 30% 94%)');
 					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH,30,50));/*'hsl('+colorH+'deg 30% 50%, .4)');*/
 					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 80%)');
 
 					styles.setProperty('--RawColorForw','255, 255, 255');
 					styles.setProperty('--RawColorBack','0, 0, 0');
@@ -364,6 +364,7 @@ function toggleTransitionOn() {
     document.querySelectorAll('button').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('select').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('option').forEach(e => e.classList.add('theme'));
+    document.querySelectorAll('input').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('.ib').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('.innertxttranscont').forEach(e => e.classList.add('theme'));
     document.getElementById('lte').classList.add('theme');
@@ -382,6 +383,7 @@ function toggleTransitionOff() {
     document.querySelectorAll('button').forEach(e => e.classList.remove('theme'));
     document.querySelectorAll('select').forEach(e => e.classList.remove('theme'));
     document.querySelectorAll('option').forEach(e => e.classList.remove('theme'));
+    document.querySelectorAll('input').forEach(e => e.classList.remove('theme'));
     document.querySelectorAll('.ib').forEach(e => e.classList.remove('theme'));
     document.querySelectorAll('.innertxttranscont').forEach(e => e.classList.remove('theme'));
 
@@ -406,6 +408,7 @@ function toggleNoTransitionOn() {
     document.querySelectorAll('span').forEach(e => SetTransition(e));
     document.querySelectorAll('button').forEach(e => SetTransition(e));
     document.querySelectorAll('select').forEach(e => SetTransition(e));
+    document.querySelectorAll('input').forEach(e => SetTransition(e));
     document.querySelectorAll('option').forEach(e => SetTransition(e));
     document.querySelectorAll('.ib').forEach(e => SetTransition(e));
     document.querySelectorAll('.innertxttranscont').forEach(e => SetTransition(e));
@@ -1165,6 +1168,8 @@ function Load() {
 	} else if (location.hash=="#text") {
 		TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
 	}
+
+	simpleTabContent=window.innerWidth<550;
 	
 	SetSwitchForced();
 
