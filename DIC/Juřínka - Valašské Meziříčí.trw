@@ -2,7 +2,7 @@ TW v2
 tJuřínka
 aGG
 d11.02.2024 13:18:13
-ipodýšu - co je to
+iNeznámé: podýšu, říču (číst?)
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Vala%C5%A1sk%C3%A9+Mezi%C5%99%C3%AD%C4%8D%C3%AD+VS+%28Ju%C5%99%C3%ADnka%29%22">SNČJ</a> (nevyčerpáno)\n-<a href="https://archive.org/details/rozpravyeskakad00goog/page/n116/mode/2up">Rozpravy České Akademie Věd a Umění, Třída 3</a> str.109 (nevyčerpáno; od začátku str 110)
 sValašské Meziříčí
 g49.4838936,17.9453705
@@ -21,7 +21,8 @@ tak to jsem|1|toš to sem|
 v kostele|0|f kosteľe|
 od toho|1|ot teho|
 až nyní|1|aš toťka|
-|1||
+|1|aľe tag říču bez brýlí|
+v tolika letech|1|že uš tolké roky|
 -
 -
 jd|id
@@ -39,6 +40,7 @@ kostel|3||a|u||e|e|em|y|ů|ům|y|y|ech,ích|y
 kousEK|3|ek|ku,ka|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
 závraŤ|1|ť|tě|ti|ť|ti|ti|tí|tě|tí|tím|tě|tě|tích|těmi
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
+roK|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
 -
 dvÚR|3|úr?|ora?,oru?|oru?|úr?|ore?|oře|orem?|ory?|orú?|orúm?|ory?|ory?|orech?|ory?
 kÚŇ|3|úň?|oňe?|oňi?,oňovi?|oňe?,archaicky) kúň[4][5]?|oňi?|oňi?,oňovi?|oňem?|oňe?|oňí?,oňú?|oňím?,oňúm?|oňe?|oňe?|oňoch|oňi?,oňmi?
@@ -49,6 +51,7 @@ kosteL|3|l?|la?|lu?|l?|le?|ľe|lem?|ly?|lú?|lúm?|ly?|ly?|lech?,lích?|ly?
 kúsčEK|3|ek?|ku?,ka?|ku?|eg|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?,kách?|ky?
 točeňí|0||e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 BRÝLE|1|-|-|-|-|-|-|-|brýle?|brýlí|brýlím?|brýle?|brýle?|brýlích?|brýlemi?
+roK|3|k?|ku?,ka?|ku?|k?|ku?|ku?,ce?|kem?|ky?|kú?|kúm?|ky|ky?|cích?|ky?
 -
 dv|dvŮR|0|dv|dvÚR|
 k|kŮŇ|0|k|kÚŇ|
@@ -59,6 +62,7 @@ kostel|kostel|0|koste|kosteL|
 kous|kousEK|0|kúsč|kúsčEK|
 závra|závraŤ|0|točeňí|točeňí|
 |BRÝLE|0||BRÝLE|
+ro|roK|0|ro|roK|
 -
 milÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
@@ -109,6 +113,7 @@ mus|musET|mus|musET|
 zůsta|zůstaT|osta|ostaT|
 st|stÁT|st|stÁŤ|
 č|čÍST|ř|řÍST|
+|| říču||
 -
 už|uš|
 až|aš|

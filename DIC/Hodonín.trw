@@ -1,12 +1,43 @@
-TW v1.0
+TW v2
 tHodonín
 aGG
 d13.07.2023 10:46:41
 ičást oděvu zhotovená z delénu a sukně: delinka Hodonín HO
+c#Zdroje dat\n- Nářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n-jména mláďat zakončená na -e (húsa - húse, tela - tele)
 lSlováčtina
 g48.8555939,17.1198014
 q0
-oSlovácko>Poluží
+oSlovácko
+-
+-
+-
+-
+-
+rajčata|1|paradajské japka|
+-
+blb|1|chumaj|
+-
+-
+-
+-
+vEJCE|0|ejce|ejce,v&#160;obecném jazyce) vejcete|ejci|ejce|ejce|ejci|ejcem|ejce|ajec|ejcím|ejce|ejce|ejcích|ejci
+podmáslí|0|||||||m|||m|||ch|mi
+petržel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
+BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
+-
+vEJCE|0|ajce?|ejce,v&#160;obecném jazyce) vejcete?|ejci?|ejce?|ejce?|ejci?|ejcem?|ajce|ajec?|ejcím?|ejce?|ejce?|ejcích?|ejci?
+podmáslí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+petržel|1|?|e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+svaďBA|1|ba|by?|bje?|bu?|bo?|bje?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
+BRÝLE|1|-|-|-|-|-|-|-|brídle|brýlí?|brýlím?|brýle?|brýle?|brýlích?|brýlemi?
+-
+v|vEJCE|0|v|vEJCE|
+hajný||0|hajní||
+podmáslí|podmáslí|0|podmáslí|podmáslí|
+petržel|petržel|0|petrželí|podmáslí|
+svat|svatBA|0|svaď|svaďBA|
+|BRÝLE|0||BRÝLE|
 -
 -
 -
@@ -17,20 +48,11 @@ oSlovácko>Poluží
 -
 -
 -
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
 -
+řÍCT|30|-1|íct|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
 -
--
--
--
--
--
--
--
--
--
--
--
--
+ř|řÍCT|ř|řÍCT|
 -
 -
 -
