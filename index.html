@@ -527,8 +527,8 @@
 							<!-- Slovník-->
 							<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
 								<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
-									<div id="dicLte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;width: -webkit-fill-available;width: -moz-available; ">
-										<textarea oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo"></textarea>
+									<div id="dicLte" style="/*min-height:75px;*/display: flex;/*justify-content: flex-end;flex-direction: row;*/width: -webkit-fill-available;width: -moz-available; ">
+										<input type="text" oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo">
 										<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
 											<svg id="butclose" class="ib" viewBox="0 0 24 24">
 												<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
@@ -693,6 +693,7 @@
 										<div class="mapperNavrh" onclick="navrhClick('mlýn')">MLÝN</div>
 										<div class="mapperNavrh" onclick="navrhClick('břicho')">BŘICHO</div>
 										<div class="mapperNavrh" onclick="navrhClick('vítr')">VÍTR</div>
+										<div class="mapperNavrh" onclick="navrhClick('kořen')">KOŘEN</div>
 
 										<!-- Měkčení na konci slov-->
 										<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
