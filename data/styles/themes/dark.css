@@ -9,8 +9,9 @@
 	--conBackH: #222222; /*controls background hover*/
 }
 html.theme {
-	background-color: black;
+	background-color: black;	
 }
+
 center.theme, p.theme, span.theme  {
 	color: white;
 }
@@ -29,7 +30,7 @@ center.theme, p.theme, span.theme  {
 	background-color: var(--conBack);
 	box-shadow: 0px 0px 4px #ffffff;
 }
-.placeholder.theme, textarea::placeholder.theme {
+.placeholder.theme, textarea::placeholder.theme, input::placeholder.theme {
 	color: rgba(70,70,70) !important;
 	text-shadow: .5px .5px 2px rgba(255,255,255,.05);
 	filter: blur(0.5px);
@@ -196,4 +197,9 @@ option{color:white; background-color: #252525;}
 }
 #closeAboutPage:hover{
 	background-color: var(--thCol55);
+}
+input.theme {
+	background-color: var(--conBack);
+    color: white;
+	text-shadow: 0.5px 0.5px 2px #ffffff66;
 }
