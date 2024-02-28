@@ -1534,8 +1534,20 @@ input:focus{
 #searchInputText{
 	width: inherit;
 }
-@media not all and (min-resolution: .001dpcm) {
+/*@media not all and (min-resolution: .001dpcm) {*/
+	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
+		filter: blur(3px);
+	}
+/*}
+* Mozilla Firefox 
+@-moz-document url-prefix() {
 	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
 		filter: blur(.3px);
 	}
-}
+}*/
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
+		filter: blur(0px);
+	}
+}}
