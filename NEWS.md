@@ -1,4 +1,7 @@
 # Poslední změny
+### 2024 28.2. 
+- Drobné grafické úpravy (chrome animace placeholderu, vyhledávání textarea->input,...)
+
 ### 2024 25.2. 
 - Drobné opravy ve slovníku a drobné změny ve vzhledu (zadávací pole slovníku, placeholder, řazení slovníku abc, ...)
 - K názvu + částečně slezský 
