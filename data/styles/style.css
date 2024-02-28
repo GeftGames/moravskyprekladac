@@ -1551,9 +1551,8 @@ input:focus{
 }
 }*/
 
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) {
+@supports (hanging-punctuation: first) and (-webkit-appearance: none) {
 	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
 		filter: blur(0px) !important;
 	}
-}}
+}
