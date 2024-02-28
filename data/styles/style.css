@@ -1545,9 +1545,8 @@ input:focus{
 		filter: blur(.3px);
 	}
 }*/
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) {
-	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
-		filter: blur(0px) !important;
-	}
-}}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+::i-block-chrome,input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
+	filter: blur(0px) !important;
+}
+}
