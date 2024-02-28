@@ -507,11 +507,12 @@ a:hover{
 	color:#0066ff;
 }
 input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
-	color: rgba(150,150,150) !important;
+	color: rgba(150,150,150);
 	text-shadow: .5px .5px 2px var(--RawColorForw05);
-	filter: blur(0.2px);
+	-webkit-filter: blur(0.2px);
+	-moz-filter: blur(0.2px);
 	user-select: none;
-	transition: color .3s;
+	transition: color 0.3s;
 }
 #lte:focus-within,#dicLte:focus-within{
 	box-shadow: 0px 0px 3px var(--ColorOrig);
@@ -1530,9 +1531,9 @@ caption{
 input:focus{
 	outline: none;
 }
-#dicLte:focus-within > #dicInput::placeholder, #lte:focus-within > #specialTextarea::placeholder, #searchIn:focus-within > #searchInputText::placeholder{
-	color: rgba(200,200,200) !important;
+#dicLte:focus-within > #dicInput::placeholder, #lte:focus-within > #specialTextarea::placeholder, #searchIn:focus-within > #searchInputText::placeholder, textarea:focus::placeholder, input:focus::placeholder{
+	color: rgba(200,200,200);
 }
 #searchInputText{
-	width: -webkit-fill-available;
+	width: inherit;
 }
