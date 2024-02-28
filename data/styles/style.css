@@ -39,6 +39,11 @@
 
 	--filterShadow1: drop-shadow(0px 0px 5px var(--RawColorBack1));
 	--filterShadow2: drop-shadow(0px 0px 5px var(--RawColorBack1));
+
+	--fontSizeSmall: 4mm;
+	--fontSize: 4.7mm;
+	--fontSizeBigger: 5.2mm;
+	--fontSizeBig: 8mm;
 }
 @font-face {
 	font-family: NotoSans;
@@ -85,7 +90,7 @@ span{
     resize: both;
     border: none;
     padding: 5px;
-    font-size: 5mm;
+    font-size: var(--fontSize);
     width: 100%;
     outline: none;
     text-shadow: var(--tsh);
@@ -96,7 +101,7 @@ span{
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: 100%;
-    font-size: 5mm;
+    font-size: var(--fontSize);
     line-height: 28px;
     font-family: var(--f);
 	height: -webkit-fill-available;
@@ -197,7 +202,7 @@ html{
 	outline: 2px transparent dashed;
 	outline-offset: 3px;
 	transition:  outline var(--transitionRFast), outline-offset var(--transitionRFast), box-shadow var(--transitionSlow);
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	max-height: 75vh;
 	/*max-width: 50vw;	*/
 	display: flex;
@@ -229,7 +234,7 @@ html{
 	outline: 2px transparent dashed;
 	outline-offset: 3px;
 	transition:  outline var(--transitionRFast), outline-offset var(--transitionRFast), box-shadow var(--transitionSlow);
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	max-height: 75vh;
 	max-width: 50vw;
 }
@@ -286,11 +291,12 @@ li {
 	text-align: center;
 	width: 100%;
 }
+/*
 .btnsm {
 	display: table-cell;
 	vertical-align: middle;
 	font-size: 7mm;
-}
+}*/
 .button {
 	color: var(--ColorText);
 	font-family: var(--f);
@@ -301,7 +307,7 @@ li {
 	display: inline-block;
 	margin: 3px 2px;
 	cursor: pointer;
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	user-select: none;
 	background-color: var(--ConBack);
 	background-clip: padding-box;
@@ -331,7 +337,7 @@ li {
 }
 input[type="file"] {
 	text-shadow: var(--tsh);
-	font-size: 5mm;
+	font-size: var(--fontSize);
 }
 input[type="file"]::file-selector-button {
 	background-color: var(--ConBack);
@@ -340,7 +346,7 @@ input[type="file"]::file-selector-button {
 	margin-right: 2mm;
 	color: var(--ColorText);
 	border-radius: 3px;
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	cursor: pointer;
 	text-shadow: var(--tsh);
 	padding: 4px 4px;
@@ -378,7 +384,7 @@ select {
 	border-radius: 4px;
 	text-shadow: var(--tsh);
 	margin-top: 5px;
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	box-shadow: var(--ksh);
 	padding: 4px;
 	font-family: var(--f);
@@ -413,21 +419,21 @@ a{
 p{
 	margin: 10px;
 	text-shadow: var(--tsh);
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	font-family: var(--f);
 	transition: color var(--transitionSlow);
 	color: var(--ColorText);
 }
 span{
 	text-shadow: var(--tsh);
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	font-family: var(--f);
 	transition: color var(--transitionSlow);
 	color: var(--ColorText);
 }
 li{
 	text-shadow: var(--tsh);
-	font-size: 5mm;
+	font-size: var(--fontSize);
 	font-family: var(--f);
 	transition: color var(--transitionSlow);
 	color: var(--ColorText);
@@ -500,20 +506,23 @@ li:focus, li:active, li:hover{
 a:hover{
 	color:#0066ff;
 }
-.placeholder, input::placeholder, #specialTextarea::placeholder{
+input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
 	color: rgba(150,150,150) !important;
 	text-shadow: .5px .5px 2px var(--RawColorForw05);
-	filter: blur(0.25px);
+	filter: blur(0.2px);
 	user-select: none;
 	transition: color .3s;
 }
-#lte:focus-within,#dicLte:focus-within {
+#lte:focus-within,#dicLte:focus-within{
 	box-shadow: 0px 0px 3px var(--ColorOrig);
 }
-#lte:focus-visible ,#dicLte:focus-visible{
+#lte:focus-visible ,#dicLte:focus-visible {
 	box-shadow: 0px 0px 3px var(--ColorOrig);
 	outline: var(--tDash);
 	outline-offset: 5px;
+}
+input[type="text"]:focus-within{
+	box-shadow: 0px 0px 3px var(--ColorOrig);
 }
 .switch {
 	position: relative;
@@ -651,7 +660,7 @@ a:focus-visible {
 }
 .moreinfo {
 	max-width: 320px;
-	font-size: 4mm;
+	font-size: var(--fontSizeSmall);
 	display: flex;
 }
 #savedDiv {
@@ -762,14 +771,14 @@ option,optgroup{
 }
 .settingHeader{
 	font-weight: 350;
-	font-size: 8mm;
+	font-size: var(--fontSizeBig);
 }
 .settingSection{
-	margin-bottom: 5mm;
+	margin-bottom: var(--fontSize);
 }
 .pageFromDownHeader{
 	font-weight: 350;
-	font-size: 8mm;
+	font-size: var(--fontSizeBig);
 	margin-top: 100px;
 }
 #rowSelectTo{
@@ -825,7 +834,7 @@ option,optgroup{
     display: flex;
 	border-radius: 35px;
 	outline: none;
-	margin-top: 5mm;
+	margin-top: var(--fontSize);
 }
 .pageFromDownClose:focus-visible{
 	border: var(--tDash);
@@ -835,7 +844,7 @@ option,optgroup{
 	background-color: #66ccff55;
 }
 .tab{
-    font-size: 5.5mm;
+    font-size: var(--fontSizeBigger);
 	user-select: none;
 	color: var(--ColorText);
 	background-color: var(--ConBack);
@@ -972,6 +981,9 @@ option,optgroup{
 #translateFromToSelect{
 	margin-left: 1cm;
 	margin-right: 1cm;
+}
+#from, #czech, #to, #selectorTo{
+	font-size: var(--fontSizeBigger);
 }
 @media only screen and (min-width: 2000px) {
 	#transarea{
@@ -1152,7 +1164,7 @@ option,optgroup{
 		width: -moz-available;
 	}
 	.tab{
-		font-size: 4.5mm;
+		font-size: var(--fontSize);
 	}
 	#transarea{
 		padding:3px;
@@ -1476,7 +1488,7 @@ caption{
 	border-bottom: 3px solid var(--ColorTheme);
 	color: var(--ColorText);
 	text-shadow: .5px .5px 1.5px rgba(var(--RawColorBack), .15);
-	font-size: 4.5mm;
+	font-size: var(--fontSize);
 	margin: 6px 6px 3px 6px;
 }
 .btnApp:not(.selectedApp):hover{
@@ -1518,6 +1530,9 @@ caption{
 input:focus{
 	outline: none;
 }
-#dicLte:focus-within > #dicInput::placeholder, #lte:focus-within > #specialTextarea::placeholder{
+#dicLte:focus-within > #dicInput::placeholder, #lte:focus-within > #specialTextarea::placeholder, #searchIn:focus-within > #searchInputText::placeholder{
 	color: rgba(200,200,200) !important;
+}
+#searchInputText{
+	width: -webkit-fill-available;
 }
