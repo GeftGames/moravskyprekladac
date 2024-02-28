@@ -30,6 +30,7 @@
   
 ### Poznámky
 - [Poslední změny](NEWS.md)
+- Úprava databáze textů [TranslatorWritter](https://github.com/GeftGames/TranslatorWritter/)
 - Podle výsledků statistiky z vyhledávačů se ukazuje, že stránku navštíví v průměru **jeden až dva lidé za den**, děkujeme
 
 # moravskyprekladac
