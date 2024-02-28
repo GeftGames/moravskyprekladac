@@ -1536,7 +1536,7 @@ input:focus{
 }
 /*@media not all and (min-resolution: .001dpcm) {*/
 	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
-		filter: blur(3px);
+		filter: blur(.3px);
 	}
 /*}
 * Mozilla Firefox 
@@ -1548,6 +1548,6 @@ input:focus{
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) {
 	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
-		filter: blur(0px);
+		filter: blur(0px) !important;
 	}
 }}
