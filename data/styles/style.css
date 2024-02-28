@@ -512,7 +512,7 @@ input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputTex
 	user-select: none;
 	transition: color 0.3s;	
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@supports not (-webkit-touch-callout: none) {
 	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
 		filter: blur(.3px);
 	}
