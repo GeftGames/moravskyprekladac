@@ -512,12 +512,7 @@ input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputTex
 	user-select: none;
 	transition: color 0.3s;	
 }
-@supports (-webkit-appearance:none) {
-	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
-		filter: blur(.3px);
-	}
-}
-@-moz-document url-prefix() {
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
 		filter: blur(.3px);
 	}
