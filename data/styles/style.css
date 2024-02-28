@@ -509,10 +509,18 @@ a:hover{
 input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
 	color: rgba(150,150,150);
 	text-shadow: .5px .5px 2px var(--RawColorForw05);
-	-webkit-filter: blur(0.2px);
-	-moz-filter: blur(0.2px);
 	user-select: none;
-	transition: color 0.3s;
+	transition: color 0.3s;	
+}
+@supports (-webkit-appearance:none) {
+	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
+		filter: blur(.3px);
+	}
+}
+@-moz-document url-prefix() {
+	input::placeholder, .placeholder, #specialTextarea::placeholder, #searchInputText::placeholder{
+		filter: blur(.3px);
+	}
 }
 #lte:focus-within,#dicLte:focus-within{
 	box-shadow: 0px 0px 3px var(--ColorOrig);
