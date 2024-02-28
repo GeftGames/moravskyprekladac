@@ -264,7 +264,7 @@ function customTheme() {
 					styles.setProperty('--ConBack', 	'#1a1a1a');
 					styles.setProperty('--ColorBack', 	'black');
 					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
-					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 90%)');
+					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 10% 70%)');
 					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 85%)');
 
 					styles.setProperty('--RawColorForw','0, 0, 0');
@@ -5163,6 +5163,7 @@ function TabSwitch(newAppName) {
 
 	ShowAppPage(newAppName);
 }
+
 function SetSwitchForced() {
 	CloseLastPopup();
 	
@@ -5327,6 +5328,9 @@ function SetCurrentTranscription(transCode) {
 
 		{ from: "di", to: "dy"},
 		{ from: "dí", to: "dý"},
+		{ from: "ẹ", to: "e"},
+		{ from: "ọ", to: "o"},
+		{ from: "ó́", to: "ó"},
 	];	
 	
 	if (transCode=="czech") return[
@@ -5336,6 +5340,9 @@ function SetCurrentTranscription(transCode) {
 		{ from: "au", to: "au̯"},
 		{ from: "eu", to: "eu̯"},
 		{ from: "ou", to: "ou̯"},
+		{ from: "ẹ", to: "e"},
+		{ from: "ọ", to: "e"},
+		{ from: "ó́", to: "ó"},
 	];
 
 	if (transCode=="moravian") return[
@@ -5350,6 +5357,12 @@ function SetCurrentTranscription(transCode) {
 		{ from: "Ď", to: "Dj" },
 		{ from: "Ť", to: "Tj" },
 		{ from: "Ň", to: "Nj" },
+		
+		{ from: "ẹ", to: "e"},
+		{ from: "ọ", to: "o"},
+
+		{ from: "ň", to: "ň", type: "end"},
+		{ from: "ó́", to: "ó"},
 	];	
 
 	if (transCode=="silezian") return[
@@ -5395,6 +5408,9 @@ function SetCurrentTranscription(transCode) {
 		{from: "V", to: "W"},
 		
 		{from: "ṵ", to: "ł"},
+		{from: "ẹ", to: "e"},
+		{ from: "ọ", to: "o"},
+		{ from: "ó́", to: "ó"},
 	];
 	
 	if (transCode=="ipa") return [
@@ -5422,6 +5438,7 @@ function SetCurrentTranscription(transCode) {
 		{ from: "č", 	to: "t͡ʃ" },
 		{ from: "dž", 	to: "d͡ʒ" },
 		{ from: "ch", 	to: "x" },
+		//{ from: "ch", 	to: "ɣ", type: "end"},
 		{ from: "h", 	to: "ɦ" },
 
 		{ from: "ai", 	to: "aɪ̯" },
@@ -5434,9 +5451,17 @@ function SetCurrentTranscription(transCode) {
 		{ from: "ň", 	to: "ɲ" },
 		{ from: "ně", 	to: "ɲe" },
 
+		{ from: "ẹ", to: "e"},
+		{ from: "ọ", to: "o"},
+		{ from: "ó́", to: "ó"},
 	];	
 	
-	if (transCode=="default") return null;
+	// málo vyskytující se jevy potlačit (v datech moc neřešené)
+	if (transCode=="default") return[
+		{ from: "ẹ", to: "e"},
+		{ from: "ọ", to: "o"},
+		{ from: "ó́", to: "ó"},
+	];
 
 	console.log("Unknown code transcription: ", transCode)
 	return null;
