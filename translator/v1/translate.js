@@ -182,7 +182,7 @@ class ItemPatternNoun {
 			if (i!=shapes.length-1) out+=", ";
 		}
 		if (out=="") out=undefined;
-		return out;
+		return ApplyPostRules(out);
 	}
 
 	GetTable(starting) {
@@ -772,13 +772,13 @@ class ItemSimpleWord {
 		p.appendChild(e);
 
 		//console.log(this);
-		let out="";
+		let out=[];
 		//if (Array.isArray(this.output)) {
 			for (let i=0; i<this.output.length; i++) {
 				let to = this.output[i];
-				let o = to.Text;
+				let o = ApplyPostRules(to.Text);
 
-				out += o+", ";
+				out.push(o);
 				if (o=="") return null;
 
 				let t = document.createElement("span");
@@ -820,7 +820,7 @@ class ItemSimpleWord {
 			p.appendChild(r);
 		}
 
-		return {from: Array.isArray(this.input) ? this.input[0] : this.input, to: out, name: "", element: p};
+		return {from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p};
 	}
 }
 
@@ -894,7 +894,7 @@ class ItemAdverb {
 		//if (Array.isArray(this.output)) {
 			for (let i=0; i<this.output.length; i++) {
 				let to = this.output[i];
-				let o = to.Text;
+				let o = ApplyPostRules(to.Text);
 
 				out += o+", ";
 				if (o=="") return null;
@@ -1101,7 +1101,7 @@ class ItemPhrase{
 		p.appendChild(e);
 
 		let t = document.createElement("span");
-		t.innerText=out;
+		t.innerText=ApplyPostRules(out);
 		p.appendChild(t);
 
 		t.addEventListener("click", () => {
@@ -1292,7 +1292,7 @@ class ItemPreposition {
 		for (let i=0; i<this.output.length; i++) {
 			let to=this.output[i];
 			let t = document.createElement("span");
-			t.innerText=to.Text;
+			t.innerText=ApplyPostRules(to.Text);
 			p.appendChild(t);	
 			
 			if (to.Comment!=undefined) {
@@ -2255,27 +2255,27 @@ class ItemPronoun{
 		let ret=[];
 		if (this.PatternFrom.Shapes.length==14*4) {
 			{
-				let forms1=this.IsStringThisWordGetTo(0,  7, str, 1, 0, "muz");
+				let forms1=this.IsStringThisWordGetTo(0,  7, str, 1, 0, "mz");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(7, 14, str, 2, -7, "mun");
+				let forms2=this.IsStringThisWordGetTo(7, 14, str, 2, -7, "mn");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 			{
-				let forms1=this.IsStringThisWordGetTo(14, 21, str, 1, -14, "mun");
+				let forms1=this.IsStringThisWordGetTo(14, 21, str, 1, -14, "mn");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(21, 28, str, 2, -21, "mun");
+				let forms2=this.IsStringThisWordGetTo(21, 28, str, 2, -21, "mn");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 			{
-				let forms1=this.IsStringThisWordGetTo(28, 35, str, 1, -28, "zen");
+				let forms1=this.IsStringThisWordGetTo(28, 35, str, 1, -28, "z");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(35, 42, str, 2, -35, "zen");
+				let forms2=this.IsStringThisWordGetTo(35, 42, str, 2, -35, "z");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 			{
-				let forms1=this.IsStringThisWordGetTo(42, 49, str, 1, -42, "str");
+				let forms1=this.IsStringThisWordGetTo(42, 49, str, 1, -42, "s");
 				if (forms1.length>0) ret.push(...forms1);
-				let forms2=this.IsStringThisWordGetTo(49, 56, str, 2, -49, "str");
+				let forms2=this.IsStringThisWordGetTo(49, 56, str, 2, -49, "s");
 				if (forms2.length>0) ret.push(...forms2);
 			}
 
@@ -2603,7 +2603,7 @@ class ItemPronoun{
 		
 //			console.log(to);
 			let t = document.createElement("span");
-			if (to.Pattern.Shapes[0]!="?" && to.Pattern.Shapes[0]!="-") t.innerText+=to.Body+to.Pattern.Shapes[0];
+			if (to.Pattern.Shapes[0]!="?" && to.Pattern.Shapes[0]!="-") t.innerText+=ApplyPostRules(to.Body+to.Pattern.Shapes[0]);
 			else return null;
 			p.appendChild(t);
 			
@@ -2862,7 +2862,7 @@ class ItemAdjective{
 								if (!Array.isArray(shapesTo)) shapesTo=[shapesTo];
 								
 								for (let shapeTo of shapesTo) {
-									if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Number: start==0?1:2, Fall: i+1, Gender: gender});
+									if (shapeTo!="?") ret.push({Text: to.Body+shapeTo, Number: start==0?1:2, Fall: i+1-start, Gender: gender});
 								}								
 							}
 							break;	
@@ -3130,7 +3130,7 @@ class ItemAdjective{
 
 		for (let t of this.To) {
 			if (t.Shapes[0]!="?") {
-				to+=t.Body+t.Pattern.Shapes[0]+", ";
+				to+=ApplyPostRules(t.Body+t.Pattern.Shapes[0])+", ";
 			} else return null;
 		}
 		
@@ -3667,7 +3667,7 @@ class ItemNumber{
 		p.appendChild(e);
 
 		let t = document.createElement("span");
-		t.innerText=this.To+this.PatternTo[0];
+		t.innerText=ApplyPostRules(this.To+this.PatternTo[0]);
 		p.appendChild(t);
 		
 		if (this.PatternTo.Shapes.length>1){	
@@ -4570,7 +4570,7 @@ class ItemVerb{
 			found=true;
 			let t = document.createElement("span");
 		//	to+=tto.Body+pattern;
-			t.innerText=tto.Body+pattern;
+			t.innerText=ApplyPostRules(tto.Body+pattern);
 			p.appendChild(t);
 
 			t.addEventListener("click", () => {
@@ -5388,7 +5388,7 @@ class LanguageTr {
 				return false;
 			}
 		});
-
+		lastDic=out;
 		// Zkrátit
 		let zkr=false;
 		if (out.length>50){ out.splice(50, out.length-50); zkr=true; }
@@ -5483,6 +5483,7 @@ class LanguageTr {
 				{
 					let cw=this.CustomWord(word);
 					if (cw!=null){
+					//	console.log(cw.Type);
 						BuildingSentence.push(cw);
 						continue;
 					}
@@ -5656,7 +5657,6 @@ class LanguageTr {
 				else if (type=="Number") printableString=string.Shapes;
 				else if (type=="Verb") printableString=string.Shapes;
 				else if (type=="Adverb") {
-					//console.log(string);
 					printableString=string.output[0].Text;
 				}else if (type=="Preposition") printableString=string[0];
 				else if (type=="Conjunction") {
@@ -5671,15 +5671,14 @@ class LanguageTr {
 				} else if (type=="Symbol") printableString=string;
 				else if (type=="Unknown") {
 					if (Array.isArray(string)) printableString=string[0];
-					else 
-					printableString=string;
+					else printableString=string;
 				} else if (type=="SimpleWord") {
 					printableString=string.output;
 					//console.log(printableString, string);
 				}else if (type=="NumberLetters") printableString=string;
 				else if (type=="Check") printableString=string;
 				else {
-					if (dev) console.log("Unknown type", string);
+					if (dev) console.log("⚠️ Unknown type", string);
 					printableString=string.To;
 				}
 
@@ -5937,6 +5936,7 @@ class LanguageTr {
 	searchWordAdjective(input) {
 		for (const n of this.Adjectives) {
 			let z=n.IsStringThisWord(input);
+//			console.log(z);
 			if (z!==null) return z;
 		}
 		return null;
@@ -6268,13 +6268,13 @@ class LanguageTr {
 
 	AddText(x, parentElement, className){
 		
-		if (typeof x === "string"){
-			if (!this.html) return x;
-			this.AddTextOne(x, parentElement, className);
+		if (typeof x === "string") {
+			if (!this.html) return ApplyPostRules(x);
+			else this.AddTextOne(x, parentElement, className);
 			return;
 		}
 		if (Array.isArray(x)) {
-			if (!this.html) return x[0];
+			if (!this.html) return ApplyPostRules(x[0]);
 			let earr=[];
 			// Remove more info
 			for (let i of x) {
@@ -6282,7 +6282,6 @@ class LanguageTr {
 					earr.push(i[0]);
 				} else earr.push(i);
 			}
-		//	console.log(earr);
 			
 			// Remove dup
 			let sarr=[];
@@ -6299,13 +6298,18 @@ class LanguageTr {
 					sarr.push(a);
 				}
 			}	
-			
-			if (sarr.length==1) {
-				this.AddTextOne(sarr[0], parentElement, className);
-				return;
-			}
+			if (this.html) {
+				if (sarr.length==1) {
+					this.AddTextOne(sarr[0], parentElement, className);
+					return;
+				}
 
-			this.AddTextMultiple(sarr, parentElement, className);
+				this.AddTextMultiple(sarr, parentElement, className);
+			}else{
+				let v=ApplyPostRules(sarr[0]);
+			//	if (v.includes("v")) console.log("!!transc", sarr,v);
+				return v;
+			}
 			return;
 		}
 	}
@@ -6354,27 +6358,27 @@ class LanguageTr {
 	}
 
 	AddTextOne(string, parentElement, className) {
-		if (this.html) {
+	//	if (this.html) {
 			let span = document.createElement("span");
 			span.innerText = ApplyPostRules(string);
 			if (styleOutput) span.className = className;
 			parentElement.appendChild(span);
-		}else{
-			parentElement+=string;
-		}
+		//}else{
+		//	parentElement+=ApplyPostRules(string);
+		//}
 	}
 	
-	AddSymbol(symbol, parentElement) {
+	/*AddSymbol(symbol, parentElement) {
 		if (this.html){
 			let node = document.createTextNode(symbol);
 			parentElement.appendChild(node);
 		}else{
 			parentElement+=symbol;
 		}
-	}
+	}*/
 	
 	AddTextMultiple(variants, parentElement, className) {
-		if (this.html){
+		//if (this.html){
 			let pack = document.createElement("span");
 			pack.className = "traMOp";
 
@@ -6391,7 +6395,7 @@ class LanguageTr {
 			for (let i = 0; i < variants.length; i++) {
 				let tag = document.createElement("li");
 				tag.style = "cursor: pointer;";
-				tag.innerHTML = ApplyPostRules(variants[i]);
+				tag.innerText = ApplyPostRules(variants[i]);
 				tag.addEventListener('click', function () {
 					selectedIndex = i;
 					span.innerText = ApplyPostRules(variants[i]);
@@ -6440,9 +6444,9 @@ class LanguageTr {
 			parentElement.appendChild(pack);
 
 			idPops++;
-		}else{
-				parentElement+=variants[0];
-		}
+		//}else{
+		//	parentElement+=ApplyPostRules(variants[0]);
+		//}
 	}
 
 	MultipleSplit(string, separators) {
@@ -6771,30 +6775,47 @@ class LanguageTr {
 
 					case "prid":
 						{
-							let cislo=-1, pad=-1, rod=-1;
-							for (const nrule of vars) {
-								if (nrule[0]=="cislo") {
-									cislo=nrule[1];
-									break;
-								}
+							let cislo, pad, rod;
+							if (rules["cislo"]!=undefined) {
+								if (rules["cislo"]=="m") cislo=2;
+								else if (rules["cislo"]=="j") cislo=1;
+								else cislo=parseInt(rules["cislo"]);
 							}
-							for (const nrule of vars) {
-								if (nrule[0]=="pad") {
-									pad=nrule[1];
-									break;
-								}
+							
+							if (rules["pad"]!=undefined) {
+								pad=parseInt(rules["pad"]);
 							}
-							for (const nrule of vars) {
-								if (nrule[0]=="rod") {
-									rod=nrule[1];
-									break;
-								}
-							}
+				
+							if (rules["rod"]!=undefined) {
+								switch (rules["rod"]){
+									case "mz":
+										rod="MasculineAnimate";
+										break;
+										
+									case "mn":
+										rod="MasculineInanimate";
+										break;
+										
+									case "z":
+										rod="Feminine";
+										break;
 
+									case "s":
+										rod="Neuter";
+										break;
+								}
+							}
+							
 							let words=this.searchWordAdjective(word);
-							for (let word of words[0]){
-								if (w[1]==cislo && w[2]==pad && w[3]==rod) {
-									return {Type: "Advective", To: w, From: word};
+							//console.log(words);
+							if (words!=null){
+								for (let w of words) {
+									if (w.Number==cislo && w.Fall==pad && w.Gender==rod) {
+										//console.log(w, w.Number==cislo && w.Fall==pad && w.Gender==rod, w.Number==cislo, w.Fall==pad, w.Gender==rod);
+										return {Type: "Adjective", To: [w], From: word};
+										//BuildingSentence.push({Type: "Adjective", To: n, From: Zword});
+										//ret.push({Text: to.Body+shapeTo, Number: start==0?1:2, Fall: i+1-start, Gender: gender});
+									}
 								}
 							}
 						}
@@ -6803,29 +6824,42 @@ class LanguageTr {
 					case "zajm":
 						{
 							let cislo=-1, pad=-1, rod="";
-							for (const nrule of vars) {
-								if (nrule[0]=="cislo") {
-									cislo=nrule[1];
-									break;
-								}
+							
+							if (rules["cislo"]!=undefined) {
+								if (rules["cislo"]=="m") cislo=2;
+								else if (rules["cislo"]=="j") cislo=1;
+								else cislo=parseInt(rules["cislo"]);
 							}
-							for (const nrule of vars) {
-								if (nrule[0]=="pad") {
-									pad=nrule[1];
-									break;
-								}
+							if (rules["pad"]!=undefined) {
+								pad=parseInt(rules["pad"]);
 							}
-							for (const nrule of vars) {
-								if (nrule[0]=="rod") {
-									rod=nrule[1];
-									break;
+							if (rules["rod"]!=undefined) {
+								switch (rules["rod"]) {
+									case "mz":
+										rod="mz";
+										break;
+										
+									case "mn":
+										rod="mn";
+										break;
+										
+									case "z":
+										rod="z";
+										break;
+
+									case "s":
+										rod="s";
+										break;
 								}
 							}
 
 							let words=this.searchWordPronoun(word);
-							for (let w of words[0]){
-								if ((w[1]==cislo || cislo==-1) && (w[2]==pad || pad==-1) && (w[3]==rod || rod=="")) {
-									return {Type: "Adjective", To: w, From: word};
+							if (words!=null) {
+								for (const w of words.Shapes){
+									if ((w.Number==cislo || cislo==-1) && (w.Fall==pad || pad==-1) && (w.Gender==rod || rod=="")) {
+										//console.log(w,(w.Number==cislo || cislo==-1) , (w.Fall==pad || pad==-1), (w.Gender==rod || rod==""));
+										return {Type: "Pronoun", To: [w], From: word};
+									}
 								}
 							}
 						}
@@ -6907,7 +6941,6 @@ class LanguageTr {
 			return {Type: "Unknown", To: "?", From: str};
 		}
 	}
-	
 }
 
 class Selector{
@@ -7067,8 +7100,8 @@ function PrepareRulesLocal(){
 
 function ApplyPostRules(text) {
 //	let ret=text;
-
-	return ApplyTranscription(text);
+	if (typeof text === "string") return ApplyTranscription(text);
+	return "";
 	// 1=nahrazeno, 0=nenahrazeno
 	/*let pattern = CreatePattern(text.length);
 
@@ -7177,29 +7210,59 @@ function ApplyTranscription(str){
 
 	let ret=str;
 	for (let g of transcription) {
-		if (ret.includes(g.from)) {
-			let startOfReplace=str.indexOf(g.from);
-
-			// Pokuď néni obsazene
-			let doReplace=true;
-			for (let i=startOfReplace; i<g.from.length; i++) {
-				if (PatternAlrearyReplaced[i]!="o") {
-					doReplace=false;
-					break;
-				}
-			}
-
-			if (doReplace) {
-				ret=ret.replace(g.from, g.to);
-
+		if (ret.type=="end"){
+			if (ret.endsWith(g.from)) {
+				let startOfReplace=str.lastIndexOf(g.from);
+	
+				// Pokuď néni obsazene
+				let doReplace=true;
 				for (let i=startOfReplace; i<g.from.length; i++) {
-					PatternAlrearyReplaced[i]="x";
+					if (PatternAlrearyReplaced[i]!="o") {
+						doReplace=false;
+						break;
+					}
+				}
+	
+				if (doReplace) {
+					ret=ret.substring(0,str.length-g.from.length)+g.to;
+	
+					for (let i=startOfReplace; i<g.from.length; i++) {
+						PatternAlrearyReplaced[i]="x";
+					}
 				}
 			}
-		}			
+		}else{
+			let ind=-1;
+			for (let i=0; i<10; i++) {
+				if (ret.includes(g.from)) {
+					let startOfReplace;
+					if (ind>0){
+ 						startOfReplace=str.substring(0,ind+g.from.length).indexOf(g.from)+g.from.length;
+					} else startOfReplace=str.indexOf(g.from);
+					ind=startOfReplace;
+					
+					// Pokuď néni obsazene
+					let doReplace=true;
+					for (let i=startOfReplace; i<g.from.length; i++) {
+						if (PatternAlrearyReplaced[i]!="o") {
+							doReplace=false;
+							break;
+						}
+					}
+
+					if (doReplace) {
+						ret=ret.replace(g.from, g.to);
+
+						for (let i=startOfReplace; i<g.from.length; i++) {
+							PatternAlrearyReplaced[i]="x";
+						}
+					} else break;
+				} else break;
+			}
+		}
 	}
 
-	console.log("Replaced: ", ret);
+//	console.log("Replaced: ", ret);
 	return ret;
 }
 

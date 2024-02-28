@@ -1073,3 +1073,23 @@ function mapper_edit() {
 
 	if (mapperRenderOptions.advanced) MapperMode('expert');
 }
+
+var lastDic="";
+function dic_save_csv() {
+	let lang = GetCurrentLanguage();
+	let input = dicInput.value;
+		
+	if (lang !== null) {
+		let langTranslating=lang.GetDic(input);
+		
+		if (lastDic.length>0) {
+			let data='from,to'+'\n';
+
+			for (let dic of lastDic) {
+				data+=dic.from+',"'+dic.to+'"\n';
+			}
+
+			download_file("mp_dic_"+langTranslating.Name+"_"+input+"-.csv", data, "text/csv");
+		}
+	}	
+}

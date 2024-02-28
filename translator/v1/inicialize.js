@@ -1401,51 +1401,10 @@ function _CalculateGeoreferenceOfNewMap(handlovaPxX, handlovaPxY, nymburkPxX, ny
 
 	// Georeferenční místa: handlova + nymburk	
 	// handlovaPtX, handlovaPtY, nymburkPtX, nymburkPtY = pozice v px od horního levého okraje 
-	let handlovaGpsX=18.7590888,
-		handlovaGpsY=48.7283153,
-		nymburkGpsX =15.0428904,
-		nymburkGpsY =50.1856607;	
+	let handlovaGpsX=18.7590888, handlovaGpsY=48.7283153,
+		nymburkGpsX =15.0428904, nymburkGpsY =50.1856607;	
 
-	// --- Měřítko --- //
-	// vzdálenost gps 
-/*	let lGpsX=handlovaGpsX-nymburkGpsX,
-	    lGpsY=handlovaGpsY-nymburkGpsY;
-	
-	// vzdálenost px
-	let lPxX=handlovaPxX-nymburkPxX,
-	    lPxY=handlovaPxY-nymburkPxY;
-
-	// měřítko
-	zX=lGpsX*lPxX;
-	zY=lGpsY*lPxY;
-*/
-
-	// --- Posun --- //
-	//gps px[0,0]
-	//0=(handlovaGpsX-?)*xZ;
-	/*mhX=handlovaGpsX-handlovaPxX/zX;//-handlovaPxX*xZ
-	mhY=handlovaGpsY-handlovaPxY/zY;//-handlovaPxY*yZ
-
-	mnX=nymburkGpsX-nymburkPxX/zX;
-	mnY=nymburkGpsY-nymburkPxY/zY;
-
-	mX=(mhX+mnX)/2;
-	mY=(mhY+mnY)/2;
-	*/
-	/*
-	// Střed pt
-	//let centerPtX=(handlovaPxX+nymburkPxX)/2;
-	//let centerPtY=(handlovaPxY+nymburkPxY)/2;
-	
-	// Střed gps
-	let centerGpsX=(handlovaGpsX+nymburkGpsX)/2;
-	let centerGpsY=(handlovaGpsY+nymburkGpsY)/2;
-
-	// absolutní posun
-	xM=(centerGpsX-centerPtX)/xZ;
-	yM=(centerGpsY-centerPtY)/yZ;
-	*/
-	
+	//2 rovnice oo dvou neznámých
 	zX=(nymburkPxX-handlovaPxX)/(nymburkGpsX-handlovaGpsX);
 	zY=(nymburkPxY-handlovaPxY)/(nymburkGpsY-handlovaGpsY);
 
