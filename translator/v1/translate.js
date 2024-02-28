@@ -181,7 +181,7 @@ class ItemPatternNoun {
 			}
 			if (i!=shapes.length-1) out+=", ";
 		}
-		if (out=="") out=undefined;
+		if (out=="") return undefined;
 		return ApplyPostRules(out);
 	}
 
@@ -467,7 +467,7 @@ class ItemNoun {
 			if (str_form!=undefined && str_to!=undefined) break;
 		}
 		if (str_form==undefined || str_to==undefined) return null;
-
+		if (str_to=="") console.log(str_form);
 		/*
 		if (pattern.Shapes[0]!="?") {
 			str_form=this.PatternFrom.GetShape(this.From,0);
