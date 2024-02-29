@@ -1,8 +1,9 @@
-TW v1.0
+TW v2
 tŠtěpánkovice
+aGG
 d27.06.2023 15:15:57
 ibonbon: eli my znali bombiky? Štěpánkovice OP
-c#Zdroje dat\n-sncj.ujc.cas.cz
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-snčj
 g49.9574817,18.0359595
 q0
 oSlezsko
@@ -11,37 +12,103 @@ oSlezsko
 -
 -
 -
+tak se|0|tak se|
 -
 -
+ne|ňe
 -
 -
+klo|kło
+ovat|ovač
 -
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
+hospodář|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
+konEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
+oj|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+kapSA|1|sa|sy|se|su|so|se|sou|sy|es|sám|sy|sy|sách|sami
+cep|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y|y?|ech?|y?
+hospodář|2|?|e?|i?,ovi?|e?|u|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
+koŇEC|3|ňec?|ňce?|ňci?|ňedz|ňci?|ňci?|ňcem?|ňce?|ňcú?|ňcúm?|ňce?|ňce?|ňcích?|ňci?
+oj|1|?|a|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+kapSA|1|sa?|sy?|se?|su?|so?|se?|sou?|sy|es?|sám?|sy?|sy?|sách?|sami?
+cep|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-bonbon|hrad|0|bombik|hrad
+bonbon|hrad|0|bombik|hrad|
+hospodář|hospodář|0|hospodář|hospodář|
+||0|šmiry||
+kon|konEC|0|ko|koŇEC|
+oj|oj|0|oj|oj|
+kap|kapSA|0|kap|kapSA|
+||0|žyto,žytu 3p||
+cep|cep|0|cep|cep|
 -
 -
 -
+suchoučké||suchučke||
 -
-MY|-1|my|nás|nám|nás|my|nás|námi
+MY|my|nás|nám|nás|my|nás|námi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
+takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 -
-MY|-1|my|nás?|nám?|nás?|my?|nás?|námi?
+MY|my|nás?|nám?|nás?|my?|nás?|námi?
+JÁ|já?|mě?,(kňižňe) mne[2]?|mi|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|temu|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+taKY|ký?|kého?|kému?|kého?|-|kém?|kým?|kí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ke|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
 -
-MY|MY
+|MY||MY|
+|JÁ||JÁ|
+t|tEN||TEN|
+|SE||SE|
+|ON||ON|
+takov|takovÝ|ta|taKY|
 -
 -
 -
 -
 znÁT|15|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+pravIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+vyčerpAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+ukazOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+bÍT|15|-1|ít|iji,biju|iješ|ije|ijeme|ijete|ijí,bijou|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
 -
 znÁT|15|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
+pravIT|15|-1|it?|ím?|íš?|i|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+brakNOUT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budžeš|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+ukazOVAT|15|-1|ovač|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováňi?|ovány?|ovány?|ována?
+mušET|5|-1|et?|ím?|yž|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
+bÍT|15|-1|ič|iji?,biju?|iješ?|ije?|ijeme?|ijete?|ijí?,bijou?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
 -
-zn|znÁT|znÁT
+zn|znÁT|zn|znÁT|
+prav|pravIT|prav|pravIT|
+vyčerp|vyčerpAT|brak|brakNOUT|
+||hazały||
+||bombylały ||
+|BÝT||BÝT|
+ukaz|ukazOVAT|ukaz|ukazOVAT|
+mus|musET|muš|mušET|
+nemus|musET|ňemuš|mušET|
+b|bÍT|b|bÍT|
 -
+ještě|ešče|
+tak|tak|
+jen,jenom|ene|
+hodně|fest|
+tam|tam|
 -
+na||na|
 -
-jestli|eli
+jestli|eli|
+že|že|
+ani|aňi|
 -
 -

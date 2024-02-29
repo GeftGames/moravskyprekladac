@@ -1,8 +1,8 @@
-TW v0.1
+TW v2
 tŽarošice
 aGG
 d14.04.2023 17:50:19
-c#Zdroje dat\n-České nářeční texty; Lamprecht Arnošt, Michálková Věra; str. 212
+c#Zdroje dat\n-České nářeční texty; Lamprecht Arnošt, Michálková Věra; str. 212\n-Nářečí na Kyjovsku a Ždánsku-Kolaja, Maxmilian; str. 105 (nevyčerpáno)
 lSlováčtina
 g49.0402303,16.9664371
 q0
@@ -12,9 +12,12 @@ oSlovácko>Kyjovsko
 -
 -
 -
-jak jsi|jaks
-ne a ne|né a né
-v těch|f tech
+jak jsi|1|jaks|
+ne a ne|1|né a né|
+v těch|1|f tech|
+no tak|1|no tóš|
+v komoře|1|f komoři|
+na půdě,v podkroví|1|na húři|
 -
 -
 -
@@ -25,19 +28,25 @@ val|vál
 ej|é
 -
 odpolednE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ech|y
+komoRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
+tetičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 odpoledNE|0|ňa|e?|i?|e?|e?|i?|em?|e?|í?|ím?|e?|e?|ech?|y?
+komoRA|1|ra?|ry?|ře?|ru?|ro?|ři|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
+teťenKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-odpoledn|otpoled|odpolednE|odpolednE
+odpoledn|odpolednE|0|otpoled|odpolednE|
+komo|komoRA|0|komo|komoRA|
+tetič|tetičKA|0|teťen|teťenKA|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ech|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ech|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ech|ěm?|y?|-|ěch?|ěmi?
 -
-t|tEN|tEN
+t|tEN|t|tEN|
 -
 -
 -
@@ -50,24 +59,23 @@ BÝT|247|-1|byt|sem|jsi?|je?|jsme?|jste?|só|budu|budeš?|bude?|budeme?|budete?|
 JÍT|127|-1|it|du|jdeš?|jide|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 neBÝT|119|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
 -
-BÝT|BÝT
-JÍT|JÍT
-ne|neBÝT|neBÝT
+|BÝT||BÝT|
+|JÍT||JÍT|
+ne|neBÝT|ne|neBÝT|
 -
-ještě|ešče
-domů|dom
-zase|zaz
-jindy|indá
-jinak|inádž
-hned|hneť
-
+ještě|ešče|
+domů|dom|
+zase|zaz|
+jindy|indá|
+jinak|inádž|
+hned|hneť|
 -
-i|aji|
-po|
-z|s|
+i||aji|
+po||po|
+z||s|
 -
-když|dyž
+když|dyž|
 -
-ano
-vůbec|vúbec
+ano|ano|
+vůbec|vúbec|
 -

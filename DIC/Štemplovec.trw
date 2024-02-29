@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tŠtemplovec
 aGG
 d21.09.2023 11:51:54
@@ -12,14 +12,16 @@ q0
 -
 -
 -
-brajgl|brafčyňec
-neumyté děti|džecka ňeumyčy
+brajgl|1|brafčyňec|
+neumyté děti|1|džecka ňeumyčy|
 -
 ne|ňe
 -
 é|e
+á|a
 -
 děli|dželi
+áte|ače
 -
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 cestA|0|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
@@ -32,11 +34,12 @@ cestA|0|a?|y?|ě?|u?|o?|ě?|ou?|y|?|ám?|y?|y?|ách?|ami?
 člověk|2|člověk?|člověka?|člověku,člověkovi?|člověka?|člověče?|člověku,člověkovi?|člověkem?|lude|lidí?|lidem?|lidi?|lidé,(v&#160;obecném jazyce) lidi?|lidech?|lidmi?
 džecKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka|ek?|kám,kům?|ka?|ka?|kách?|ky?
 -
-měst|městO|0|mje|měSTO
-cest|cestA|0|cest|cestA
-|člověk|0||člověk
-děc|děcKO|0|džec|džecKO
-d|dÍTĚ|0|džec|džecKO
+měst|městO|0|mje|měSTO|
+cest|cestA|0|cest|cestA|
+|člověk|0||člověk|
+děc|děcKO|0|džec|džecKO|
+d|dÍTĚ|0|džec|džecKO|
+||0|baraček||
 -
 špinavÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 zlatÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -44,22 +47,37 @@ zlatÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou
 špinavÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|e|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 zlaTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|t?|t?|tá?|tých?|tým?|tá?|tá?|tých?|tými?|t?|t?|tá?|té?|té?|tou?|tá?|té?|tou?|t?|t?|té?|tých?|tým?|té?|té?|tých?|tými?|t?|t?|tý?|tého?|tému?|tého?|tý?|tém?|tým?|t?|t?|tí?|tých?|tým?|té?|tí?|tých?|tými?|t?|t?|tý?|tého?|tému?|tý?|tý?|tém?|tým?|t?|t?|té?|tých?|tým?|té?|té?|tých?|tými?|t?|t?
 -
-špinav|špinavÝ|špinavÝ
-umyt|umy|zlatÝ|zlaTÝ
-neumyt|ňeumy|zlatÝ|zlaTÝ
+špinav|špinavÝ|špinav|špinavÝ|
+umyt|zlatÝ|umy|zlaTÝ|
+neumyt|zlatÝ|ňeumy|zlaTÝ|
 -
+TEN|ten|toho|tomu|toho|-|tom|tím|ti|těch|těm|ti|-|těch|těmi|ten|toho|tomu|ten|-|tom|tím|ty|těch|těm|ty|-|těch|těmi|ta|té|té|tu|-|té|tou|ty|těch|těm|ty|-|těch|těmi|to|toho|tomu|to|-|tom|tím|ty|těch|těm|ty|-|těch|těmi
+vY|y|ás|ám|ás|y|ás|ámi
 -
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
+vY|y?|as|ám?|ás?|y?|ás?|ámi?
 -
+|TEN||tEN|
+v|vY|v|vY|
 -
 -
 -
 -
 viDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|z|zme|zte|děl|děl|děla|dělo|děli|děly|děly|děla|děn|děn|děna|děno|děni|děny|děny|děna
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 viDĚT|15|-1|dět?|dím?|díš?|dí?|díme?|díte?|dí?|z?|zme?|zte?|děl?|děl?|děla?|dělo?|dželi|děly?|děly?|děla?|děn?|děn?|děna?|děno?|děni?|děny?|děny?|děna?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|ače|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-vi|viDĚT|viDĚT
+vi|viDĚT|vi|viDĚT|
+m|mÍT|m|mÍT|
+|BÝT||BÝT|
 -
+jen,jenom|ene|
+tady|tu|
+moc|moc|
 -
 -
 -

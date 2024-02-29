@@ -143,6 +143,8 @@ slÁMA|1|áma|ámy|ámě|ámu|ámo|ámě|ámou|ámy|am|ámám|ámy|ámy|ámách|
 obilí|0|||||||m|||m|||ch|mi
 typ|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 vrstVA|1|va|vy|vě|vu|vo|vě|vou|vy|ev|vám|vy|vy|vách|vami
+čmeláK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+vosA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 -
 ancuK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 božatKO|2|ko|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
@@ -190,6 +192,8 @@ sṵÁMA|1|ůma|ámy?|ámě?|ámu?|ámo?|ámě?|ámou?|ámy?|am?|ámám?|ámy?|�
 obiLI|0|ĺi|lo|lí?|lí?|lí?|lí?|lím?|lí?|lí?|lím?|lí?|lí?|lích?|lími?
 zortA|3|a|u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 vrstVA|1|́fa|vy?|vě?|vu?|vo?|vě?|vou?|vy?|ev?|vám?|vy?|vy?|vách?|vami?
+pščoL|2|k?|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ṵy?|kú?|kúm?|ṵy|ci?|cích?|ky?
+usA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y|y?|ách?|ami?
 -
 ||0|kf’itu||
 |ČLOVĚK|0||ČLOVĚK|
@@ -250,6 +254,9 @@ typ|typ|0|zort|zortA|
 plev||0|plevy||
 vrst|vrstVA|0|vorst|vrstVA|
 na sení?||0|na naśyńi||
+čmelá|čmeláK|0|pščo|pščoL|
+vos|vosA|0|us|usA|
+nejaké hmyz?||0|buncy||
 -
 rád|-1|-|-|-|-|-|-|-|o|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|y|-|-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|i|-|-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|y|-
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
@@ -361,7 +368,7 @@ házET|15|-1|et|ím|íš|í|íme|íte|í,házejí|ej|ejme|ejte|el|el|ela|elo|eli
 bÁT_SE|7|-1|át_se?|ojím?|ojiš|ojí?|ojíme?|ojíte?|ojí?|oj?|ojme?|ojte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
 bolET|7|-1|et?|ím?|íš?|i|íme?|íte?|í?,bolejí?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 BRÁT|15|-1|brát?|beru?|bereš?|b́ere|bereme?|berete?|berou?|ber?|berme?|berte?|bral?|bral?|brala?|bralo?|brali|braly?|braly?|brala?|brán?|brán?|brána?|bráno?|bráňi?|brány?|brány?|brána?
-BÝT|247|-1|být?|jsem?|jsi?|je,jez|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byṵ|byṵ|byla?|byṵo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je,jez|jsme?|jste?|sum|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byṵ|byṵ|byla?|byṵo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 čUT|15|-1|at?|ujym|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 dÁT|30|-1|át?|um|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 dostAT|22|-1|at?|anu?|aneš?|ane?|aneme?|anete?|anou?|aň?|aňme?|aňte?|oṵ|al?|ala?|alo?|ali?|aly?|aly?|ala?
@@ -426,22 +433,22 @@ ház|házET|chy|chyBAĆ|
 ||leći||
 oddělit||ṵoddźelo?||
 -
-ještě|ješče|
-vždy|dycḱi|
 dost|doźdź||dość|
-také|teš||tež|
-úplně,zcela|gandz|
-potom,poté|potym|
-málo|maṵo|
-tak|tag||tak|
-pryč|preč|
-také|teš|
-teď,nyní|teraz||teras|
-nejdříve|nejpřůt|
 jednou|roz|
-už|už|
+ještě|ješče|
+málo|maṵo|
+nejdříve|nejpřůt|
+potom,poté|potym|
 prvně|ṕyrše|
+pryč|preč|
+tak|tag||tak|
+také|teš||tež|
+teď,nyní|teraz||teras|
+úplně,zcela|gandz|
+už|už|
+vždy|dycḱi|
 zase,zas|zaś|
+tady|tu|
 -
 s||s|
 od||ud||ot|
@@ -451,6 +458,7 @@ ke||ku|
 do||do||dů|např. dů důmu
 za||za|
 vedle||vedle|
+i||aji|
 -
 a|a|
 jak|jak||jag|

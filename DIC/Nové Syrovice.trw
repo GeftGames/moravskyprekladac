@@ -31,6 +31,7 @@ na klasech|0|na klasi|
 s ním|1|s ňim|
 na plodech lopuchů|1|na bapkách|
 měl jsem smolný den,měl jsem špatný den|1|mjel sem černé den|
+okolky?, průtahy?|1|ďilo s chlebama|
 -
 -
 ně|ne
@@ -47,6 +48,7 @@ zímu|zimo
 ojíš|ojiš
 ky|ke
 ny|ne
+ají|aji
 -
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 silnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
@@ -90,6 +92,8 @@ stehlíK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 chlapEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
+ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+pekař|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
 -
 april|3|?|u?,a?|u?||e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 banďur|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|áh|ky?
@@ -133,6 +137,8 @@ stehlíK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|ku|kúm?|ky?|ci?|cích?|k
 dEN|0|en?|ne?|ňi?,nu?|en|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 chlapEC|2|ec?|ce?|ci?,covi?|ce?|če|ci?,covi?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
 BRÝLE|1|-|-|-|-|-|-|-|brýle?|brýlí?|brýlím?|bréle|brýle?|brýlích?|brýlemi?
+ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|liďi|liďí?|lidem?|liďi?|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
+pekař|2|?|a|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
 -
 ||0|potvora ||
 ||0|||
@@ -184,6 +190,8 @@ stehlí|stehlíK|0|stehli|stehlíK|
 d|dEN|0|d|dEN|
 chlap|chlapEC|0|chlap|chlapEC|
 |BRÝLE|0||BRÝLE|
+|ČLOVĚK|0||ČLOVĚK|
+pekař|pekař|0|pekař|pekař|
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 pěknÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -202,6 +210,7 @@ skvěl|celÝ|šikov|pjekNÝ|
 šikovn|celÝ|šikov|pjekNÝ|
 lepší|cizí|lepči|cizi|
 čern|pěknÝ|čer|pjekNÝ|
+spokojen|pěknÝ|spokoje|pjekNÝ|
 -
 MY|my|nás|nám|nás|my|nás|námi
 nějaKÝ|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
@@ -241,7 +250,7 @@ t|tY||TY|
 -
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 -
-jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ním?|ni?|něch?|něm?|ny?|ni?|něch?|němi?|en?|noho?|nomu?|en?|en?|nom?|ním?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|no?|noho?|nomu?|no?|no?|nom?|ním?|na?|něch?|něm?|na?|na?|něch?|němi?
+jedEN|4|en?|noho|nomu?|noho?|en?|nom?|ním?|ni?|něch?|něm?|ny?|ni?|něch?|němi?|en?|noho?|nomu?|en?|en?|nom?|ním?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|něch?|něm?|ny?|ny?|něch?|němi?|no?|noho?|nomu?|no?|no?|nom?|ním?|na?|něch?|něm?|na?|na?|něch?|němi?
 -
 jed|jedEN|jed|jedEN|
 -
@@ -280,6 +289,8 @@ projeT|30|-1|t|du|deš|de|deme|dete|dou|ď|ďme|ďte|l|l|la|lo|li|ly|ly|la|t|t|t
 poSLAT|30|-1|slat|šlu|šleš|šle|šleme|šlete|šlou|šli|šleme|šlete|slal|slal|slala|slalo|slali|slaly|slaly|slala|slán|slán|slána|sláno|sláni|slány|slány|slána
 podAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 přečÍST|30|-1|íst|tu|teš|te|teme|tete|tou|ti|těme|těte|etl|etl|etla,(zřídka) přečtla|etlo,(zřídka) přečtlo|etli,(zřídka) přečtli|etly,(zřídka) přečtly|etly,(zřídka) přečtly|etla,(zřídka) přečtla|ten|ten|tena|teno|teni|teny|teny|tena
+dělAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+pÉCT|15|-1|éct|eču,(zastarale) peku|ečeš|eče|ečeme|ečete|ečou,(zastarale) pekou|eč,(zastarale) pec|ečme,(zastarale) pecme|ečte,(zastarale) pecte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
 -
 bRÁT|15|-1|rat|eru?|ereš?|ere?|ereme?|erete?|erou?|er?|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráňi?|rány?|rány?|rána?
 BÝT|247|-1|být?|sem|seš|je|jsme?|jste?|só|budu?|budeš?|bude?|budem|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|bela|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bech|bys?|by?|bychom?|byste?|by?
@@ -316,6 +327,8 @@ projeT|30|-1|t|du?|deš?|de?|deme?|dete?|dou?|ď?|ďme?|ďte?|l?|l?|la?|lo?|li?|
 poSLAT|30|-1|slat?|šlu?|šleš?|šle?|šleme?|šlete?|šlou?|šli?|šleme?|šlete?|slal?|slal?|slala?|slalo?|slali|slaly?|slaly?|slala?|slán?|slán?|slána?|sláno?|sláňi?|slány?|slány?|slána?
 podAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 přečÍST|30|-1|íst?|tu|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?,(zřídka) přečtla?|etlo?,(zřídka) přečtlo?|etli?,(zřídka) přečtli?|etly?,(zřídka) přečtly?|etly?,(zřídka) přečtly?|etla?,(zřídka) přečtla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
+ďelAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|aji|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+pÉCT|15|-1|éct?|ečo|ečeš?|eče?|ečeme?|ečete?|ečou?,(zastarale) pekou?|eč?,(zastarale) pec?|ečme?,(zastarale) pecme?|ečte?,(zastarale) pecte?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeňi?|ečeny?|ečeny?|ečena?
 -
 |BÝT||BÝT|
 ||poďivéte||
@@ -359,6 +372,8 @@ po|poSLAT|po|poSLAT|
 pod|podAT|pod|podAT|
 přeč|přečÍST|přeč|přečÍST|
 nepřeč|přečÍST|nepřeč|přečÍST|
+děl|dělAT|ďel|ďelAT|
+p|pÉCT|p|pÉCT|
 -
 zas,zase|zas|
 pěkně|pjekňe|
@@ -376,6 +391,7 @@ loni,vloni|vluňi|
 přeci,přece|přece|
 trošku|troško|
 takhle|takle|
+pořád|furd|
 -
 na||na|
 ke||ke|

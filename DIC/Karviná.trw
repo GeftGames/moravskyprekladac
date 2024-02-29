@@ -1,6 +1,8 @@
-TW v1.0
+TW v2
 tKarviná
+aGG
 d05.05.2023 10:45:07
+c#Zdroje dat\n-snčj
 g49.8543186,18.5415012
 q0
 -
@@ -8,26 +10,41 @@ q0
 -
 -
 -
-k dostání|ku dostańu
+k dostání|1|ku dostańu|
+do sytosti|1|dosyta|
+sotva jednoho dne|1|ledve roz dňa|
+dřevěné nádoby na krmení dobytka|1|bućory|
 -
 -
 -
 -
 -
 školA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+jídLO|0|lo|la|lu|lo|lo|lu,le|lem|la|el|lům|la|la|lech|ly
 -
 škoLA|1|a?|ły|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+dEN|0|en?|ňa|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
+jídLO|0|ṵo|la?|lu?|lo?|lo?|lu?,le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
 -
-bída||0|byda|
-živnost||0|žyvnośći|
-jídlo||0|jedło|
-škol|školA|0|ško|škoLA
+bída||0|byda||
+živnost||0|žyvnośći||
+jídlo||0|jedło||
+škol|školA|0|ško|škoLA|
+d|dEN|0|d|dEN|
+jíd|jídLO|0|jod|jídLO|
+||0|groćičk’i||
+||0|žbery||
+||0|putňe ||
 -
 -
 -
 -
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
 -
+t|tEN||TEN|
 -
 -
 -
@@ -36,21 +53,25 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 neBÝT|87|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|byv|byvši|byvše
 pSÁT|15|-1|sát|íši,píšu|íšeš|íše|íšeme|íšete|íší,píšou|iš|išme|ište|sal|sal|sala|salo|sali|saly|saly|sala|sán|sán|sána|sáno|sáni|sány|sány|sána
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sum|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|byṵo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 neBÝT|87|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|byv?|byvši?|byvše?
 pSÁT|15|-1|isać|íši,píšu?|íšeš?|íše?|íšeme?|íšete?|íší,píšou?|iš?|išme?|ište?|sal?|sal?|sala?|salo?|sali?|saly?|saly?|sala?|sán?|sán?|sána?|sáno?|sáni?|sány?|sány?|sána?
 -
-BÝT|BÝT
-ne|ňe|neBÝT|neBÝT
-p|pSÁT|pSÁT
+|BÝT||BÝT|
+ne|neBÝT|ňe|neBÝT|
+p|pSÁT|p|pSÁT|
 -
-tady|tu
-tehdy,tehdá|ftedy
-ještě|ješče
-potom|potym
+tady|tu|
+tehdy,tehdá|ftedy|
+ještě|ješče|
+potom|potym|
+sotva|ledve|
+jednou|roz|
+ještě|jeśće|
 -
 -
-a
-protože|bo
+a|a|
+protože|bo|
 -
+ne|ňi|
 -
