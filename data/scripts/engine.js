@@ -5300,6 +5300,10 @@ function SetCurrentTranscription(transCode) {
 		{ from: "ťe", to: "tě"},	
 		{ from: "ňe", to: "ně"},
 
+		{ from: "ďi", to: "di"},	
+		{ from: "ťi", to: "ti"},	
+		{ from: "ňi", to: "ni"},
+
 		{ from: "ijo", to: "io"},
 		{ from: "iju", to: "iu"},
 		{ from: "ije", to: "ie"},
