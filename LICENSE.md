@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 GeftGames
+Copyright (c) 2024 GeftGames
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,4 +20,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-*Nevztahuje se na následujcí části: Písma
+(Nevztahuje se na následujcí části: Písma)
