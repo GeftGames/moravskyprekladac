@@ -499,6 +499,7 @@ function ChangeDev() {
         document.getElementById('refresh').style.display = 'none';
     }
 }
+
 function ChangeBetaFunctions() {
     if (!loaded) return;
     betaFunctions = document.getElementById('betaFunctions').checked;
@@ -5270,7 +5271,6 @@ function ShowAppPage(name) {
 
 		// Hide
 		pageB.style.display="none";
-
 	}, 310);
 }
 
