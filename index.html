@@ -473,7 +473,7 @@
 
                     <div style="display: flex; justify-content: center;margin-top: 20px;height: 38px;">
                         <h2 rel="nofollow" id="tabText" class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));" shorttext="Text">Text</h2>
-                        <h2 rel="nofollow" id="tabDic" class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));" shorttext="Slovník">Slovník</h2>
+                        <h2 rel="nofollow" id="tabDic" class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()" shorttext="Slovník">Slovník</h2>
                         <!---->
                         <h2 rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));" shorttext="Soubory">Textové soubory</h2>
                         <h2 rel="nofollow" id="tabSubs" class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));" shorttext="Titulky">Titulky k filmu</h2>
@@ -484,7 +484,7 @@
 
                     <div id="transarea" style="justify-content: center; display: flex">
                         <div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">
-                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste slovník nebo změnit místo.</span>
+                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()">slovník</a> nebo změnit místo.</span>
                             <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
                                 <!-- Source translated text -->
                                 <div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
