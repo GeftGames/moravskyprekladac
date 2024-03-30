@@ -1,15 +1,15 @@
-﻿const serverName="https://moravskyprekladac.pages.dev/";
+﻿const serverName = "https://moravskyprekladac.pages.dev/";
 var imgMap;
 var imgMap_bounds;
-var appSelected="translate";
-var transcription=null;
+var appSelected = "translate";
+var transcription = null;
 
 class savedTraslation {
-	constructor() {
-	    this.language = -1;
-		this.input ="";
-		this.output = "";
-	}
+    constructor() {
+        this.language = -1;
+        this.input = "";
+        this.output = "";
+    }
 }
 var usingTheme;
 var error = false;
@@ -73,288 +73,288 @@ var lastInputText = [];
 var textNote;
 
 function PushError(str) {
-	let parrentElement=document.getElementById("pageErrors");
-	let element=document.createElement("p");
-	element.classList.push("error");
-	parrentElement.childNodes.push(element);
+    let parrentElement = document.getElementById("pageErrors");
+    let element = document.createElement("p");
+    element.classList.push("error");
+    parrentElement.childNodes.push(element);
 }
 
 function PushNote(str) {
-	let parrentElement=document.getElementById("pageErrors");
-	let element=document.createElement("p");
-	element.classList.push("note");
-	parrentElement.childNodes.push(element);
+    let parrentElement = document.getElementById("pageErrors");
+    let element = document.createElement("p");
+    element.classList.push("note");
+    parrentElement.childNodes.push(element);
 }
 
 function getOS() {
-	var userAgent = window.navigator.userAgent,
-		platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
-		macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-		windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-		iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-		os = null;
-  
-	if (macosPlatforms.indexOf(platform) !== -1) {
-	  	os = 'Mac OS';
-	} else if (iosPlatforms.indexOf(platform) !== -1) {
-	  	os = 'iOS';
-	} else if (windowsPlatforms.indexOf(platform) !== -1) {
-	  	os = 'Windows';
-	} else if (/Android/.test(userAgent)) {
-	  	os = 'Android';
-	} else if (/Linux/.test(platform)) {
-	  	os = 'Linux';
-	}
+    var userAgent = window.navigator.userAgent;
+    var platform = window.navigator ? window.navigator.userAgentData : window.navigator.platform || window.navigator.platform;
+    var macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
 
-	return os;
+    if (macosPlatforms.indexOf(platform) !== -1) {
+        os = 'Mac OS';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+        os = 'iOS';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+        os = 'Windows';
+    } else if (/Android/.test(userAgent)) {
+        os = 'Android';
+    } else if (/Linux/.test(platform)) {
+        os = 'Linux';
+    }
+
+    return os;
 }
 
 const HSLToRGB = (h, s, l) => {
-	s /= 100;
-	l /= 100;
-	const k = n => (n + h / 30) % 12;
-	const a = s * Math.min(l, 1 - l);
-	const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
-	return Math.round(255 * f(0))+", "+Math.round(255 * f(8))+", "+Math.round(255 * f(4));
-  };
+    s /= 100;
+    l /= 100;
+    const k = n => (n + h / 30) % 12;
+    const a = s * Math.min(l, 1 - l);
+    const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+    return Math.round(255 * f(0)) + ", " + Math.round(255 * f(8)) + ", " + Math.round(255 * f(4));
+};
 
-function customText(){
-	TranscriptionText = document.getElementById("textTranscription").value;
-	localStorage.setItem('Transcription', TranscriptionText);
+function customText() {
+    TranscriptionText = document.getElementById("textTranscription").value;
+    localStorage.setItem('Transcription', TranscriptionText);
 
-	transcription=SetCurrentTranscription(TranscriptionText);
+    transcription = SetCurrentTranscription(TranscriptionText);
 }
 
 function customTheme() {
-	ThemeLight= document.getElementById("themeLight").value;
-	Power= document.getElementById("power").value;
-	ThemeDay= document.getElementById("themeDay").value;
+    ThemeLight = document.getElementById("themeLight").value;
+    Power = document.getElementById("power").value;
+    ThemeDay = document.getElementById("themeDay").value;
 
-	localStorage.setItem('ThemeLight', ThemeLight);
-	localStorage.setItem('ThemeDay', ThemeDay);
-	localStorage.setItem('Power', Power);
+    localStorage.setItem('ThemeLight', ThemeLight);
+    localStorage.setItem('ThemeDay', ThemeDay);
+    localStorage.setItem('Power', Power);
 
-	// Dark/Light
-	let themeLight; // true or false
-	if (ThemeLight == "default") {
-		if (window.matchMedia) { 
-			themeLight=!window.matchMedia('(prefers-color-scheme: dark)').matches;
-		} else themeLight=true;
-    } else themeLight=ThemeLight;
-	
-	// Day/Night
-	let themeDay; // true or false
-	if (ThemeDay == "default") {
-		if (window.matchMedia) { 
-			themeDay = !window.matchMedia('(prefers-color-scheme: night)').matches;
-		} else themeDay=true;
-    } else themeDay=(ThemeDay=="day");
-	
-	// (low / optimal / high) tier
-	let power;
-	if (Power == "default") {
-		while (true){
-			// Some win
-			if (window.navigator.userAgent.indexOf("Windows") !=-1) {
-				if (window.navigator.userAgent.indexOf('like Gecko') !=-1) {
-					// Win 10
-					if (window.navigator.userAgent.indexOf('Windows NT 10') !=-1) power="fancy";
-					// Win 8.1
-					else if (window.navigator.userAgent.indexOf('Windows NT 6.3') !=-1) power="fancy";
-					// Win 8 
-					else if (window.navigator.userAgent.indexOf('Windows NT 6.2') !=-1) power="fancy"; 
-					// Win 7 
-					else if (window.navigator.userAgent.indexOf('Windows NT 6.1') !=-1) power="optimal"; 
-					// Win ?
-					else if (window.navigator.userAgent.indexOf('compatible') !=-1) power="optimal";  
-					else power="fancy";
-					break;
-				}else if (window.navigator.userAgent.indexOf('Trident') !=-1) power="fast";
-				else power="optimal"; 
-				break;
-			// new Mac
-			} else if (navigator.platform.indexOf("MacIntel") !=-1) {power="fancy";break;}
+    // Dark/Light
+    let themeLight; // true or false
+    if (ThemeLight == "default") {
+        if (window.matchMedia) {
+            themeLight = !window.matchMedia('(prefers-color-scheme: dark)').matches;
+        } else themeLight = true;
+    } else themeLight = ThemeLight;
 
-			// Old win
-			try{
-				if (window.navigator.indexOf("Win98") !=-1){ power="fast";break;}
-			}catch{}
+    // Day/Night
+    let themeDay; // true or false
+    if (ThemeDay == "default") {
+        if (window.matchMedia) {
+            themeDay = !window.matchMedia('(prefers-color-scheme: night)').matches;
+        } else themeDay = true;
+    } else themeDay = (ThemeDay == "day");
 
-			// old mac
-			try{
-				if (window.navigator.indexOf("Mac68K") !=-1) {ower="fast";break;}
-			}catch{}
+    // (low / optimal / high) tier
+    let power;
+    if (Power == "default") {
+        while (true) {
+            // Some win
+            if (window.navigator.userAgent.indexOf("Windows") != -1) {
+                if (window.navigator.userAgent.indexOf('like Gecko') != -1) {
+                    // Win 10
+                    if (window.navigator.userAgent.indexOf('Windows NT 10') != -1) power = "fancy";
+                    // Win 8.1
+                    else if (window.navigator.userAgent.indexOf('Windows NT 6.3') != -1) power = "fancy";
+                    // Win 8 
+                    else if (window.navigator.userAgent.indexOf('Windows NT 6.2') != -1) power = "fancy";
+                    // Win 7 
+                    else if (window.navigator.userAgent.indexOf('Windows NT 6.1') != -1) power = "optimal";
+                    // Win ?
+                    else if (window.navigator.userAgent.indexOf('compatible') != -1) power = "optimal";
+                    else power = "fancy";
+                    break;
+                } else if (window.navigator.userAgent.indexOf('Trident') != -1) power = "fast";
+                else power = "optimal";
+                break;
+                // new Mac
+            } else if (navigator.platform.indexOf("MacIntel") != -1) { power = "fancy"; break; }
 
-			// old win phone
-			try{
-				if (/windows phone/i.test(userAgent)) {power="fast";break;}
-			}catch{}
-		
-			// apple
-			try{
-				if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) { 
-					power="fancy";
-					break;
-				}
-			}catch{}
-			
-			// Unix
-			try{
-				if (window.navigator.userAgent.indexOf("X11") != -1) {
-					power="optimal";
-					break;
-				}
-			}catch{}
+            // Old win
+            try {
+                if (window.navigator.indexOf("Win98") != -1) { power = "fast"; break; }
+            } catch (error) {}
 
-			// Linux
-			try{
-				if (window.navigator.userAgent.indexOf("Linux") != -1) {
-					power="optimal";
-					break;
-				}
-			}catch{}
+            // old mac
+            try {
+                if (window.navigator.indexOf("Mac68K") != -1) { ower = "fast"; break; }
+            } catch (error) {}
 
-			// android
-			try{
-				if (/android/i.test(window.navigator)) {
-					if (window.innerWidth > 800) {
-						power="fancy";
-					} else if(window.innerWidth < 400) {
-						power="fast";
-					} else power="optimal";
-					//if (window.opera) power="optimal";
-					//else power="optimal";
-				}else power="optimal";
-			}catch{}
-			break;
-		}
-    } else power=Power;
-	
-	let colorH=myRange.value;
-	localStorage.setItem('Color', colorH);
+            // old win phone
+            try {
+                if (/windows phone/i.test(userAgent)) { power = "fast"; break; }
+            } catch (error) {}
 
-	for (let s of document.styleSheets) {
-		/*if (s.href.endsWith('blue.css')) {
-			let rules=s.cssRules;
-			console.log('hsl('+myRange.value+'% 0% 0%)');
-			rules[0].style.setProperty('--ColorTheme', 'hsl('+myRange.value+'deg 100% 80%)');
-			rules[0].style.setProperty('--ColorBack', 'hsl('+myRange.value+'deg 100% 97%)');
-		} else */
-		if (s.href.endsWith('style.css')) {
-			let styles=s.cssRules[0].style;
+            // apple
+            try {
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    power = "fancy";
+                    break;
+                }
+            } catch (error) {}
 
-			if (themeLight=="dark") {
-				if (themeDay) {
-				//	console.log("dark, day");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 17%)');
-					styles.setProperty('--ColorText', 	'white');
-					styles.setProperty('--ConBack', 	'#2f2f2f');
-					styles.setProperty('--ColorBack', 	'#101010');
-					styles.setProperty('--ColorThemeAccent', 		HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
-					styles.setProperty('--ColorThemeForward', 		'hsl('+colorH+'deg 30% 90%)');
-					styles.setProperty('--ColorThemeAccentBack', 	'hsl('+colorH+'deg 30% 80%)');
+            // Unix
+            try {
+                if (window.navigator.userAgent.indexOf("X11") != -1) {
+                    power = "optimal";
+                    break;
+                }
+            } catch (error) {}
 
-					styles.setProperty('--RawColorForw','0, 0, 0');
-					styles.setProperty('--RawColorBack','255, 255, 255');
-					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
-				} else {
-				//	console.log("dark, night");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 12%)');
-					styles.setProperty('--ColorText', 	'lightgray');
-					styles.setProperty('--ConBack', 	'#1a1a1a');
-					styles.setProperty('--ColorBack', 	'black');
-					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
-					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 10% 70%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 85%)');
+            // Linux
+            try {
+                if (window.navigator.userAgent.indexOf("Linux") != -1) {
+                    power = "optimal";
+                    break;
+                }
+            } catch (error) {}
 
-					styles.setProperty('--RawColorForw','0, 0, 0');
-					styles.setProperty('--RawColorBack','255, 255, 255');
-					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
-				}			
-			} else if (themeLight=="light") {
-				if (themeDay) {					
-				//	console.log("light, day");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 96%)');
-					styles.setProperty('--ColorText', 	'black');
-					styles.setProperty('--ConBack', 	'white');
-					styles.setProperty('--ColorBack', 	'white');
-					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 100% 50%)'*/);
-					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+            // android
+            try {
+                if (/android/i.test(window.navigator)) {
+                    if (window.innerWidth > 800) {
+                        power = "fancy";
+                    } else if (window.innerWidth < 400) {
+                        power = "fast";
+                    } else power = "optimal";
+                    //if (window.opera) power="optimal";
+                    //else power="optimal";
+                } else power = "optimal";
+            } catch (error) {}
+            break;
+        }
+    } else power = Power;
 
-					styles.setProperty('--RawColorForw','255, 255, 255');
-					styles.setProperty('--RawColorBack','0, 0, 0');
-					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
-				} else {
-				//	console.log("light, night");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 97%)');
-					styles.setProperty('--ColorText', 	'black');
-					styles.setProperty('--ConBack', 	'white');
-					styles.setProperty('--ColorBack', 	'white');
-					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50)/*'hsl('+colorH+'deg 30% 50%)'*/);
-					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 90%)');
+    let colorH = myRange.value;
+    localStorage.setItem('Color', colorH);
 
-					styles.setProperty('--RawColorForw','200, 200, 200');
-					styles.setProperty('--RawColorBack','0, 0, 0');
-					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
-				}
-			} else {// Semilight
-				if (themeDay){
-				//	console.log("semi, day");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 100% 90%)');
-					styles.setProperty('--ColorText', 	'black');
-					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 60% 99%)');
-					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 60% 98%)');
-					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH, 0,50));//styles.setProperty('--ColorThemeAccent', 	);
-					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 85%)');
+    for (let s of document.styleSheets) {
+        /*if (s.href.endsWith('blue.css')) {
+        	let rules=s.cssRules;
+        	console.log('hsl('+myRange.value+'% 0% 0%)');
+        	rules[0].style.setProperty('--ColorTheme', 'hsl('+myRange.value+'deg 100% 80%)');
+        	rules[0].style.setProperty('--ColorBack', 'hsl('+myRange.value+'deg 100% 97%)');
+        } else */
+        if (s.href.endsWith('style.css')) {
+            let styles = s.cssRules[0].style;
 
-					styles.setProperty('--RawColorForw','255, 255, 255');
-					styles.setProperty('--RawColorBack','0, 0, 0');
-					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
-				} else {
-					//console.log("semi, night");
-					styles.setProperty('--ColorTheme',  'hsl('+colorH+'deg 80% 90%)');
-					styles.setProperty('--ColorText', 	'black');
-					styles.setProperty('--ConBack', 	'hsl('+colorH+'deg 30% 95%)');
-					styles.setProperty('--ColorBack', 	'hsl('+colorH+'deg 30% 94%)');
-					styles.setProperty('--ColorThemeAccent', 	HSLToRGB(colorH,30,50));/*'hsl('+colorH+'deg 30% 50%, .4)');*/
-					styles.setProperty('--ColorThemeForward', 	'hsl('+colorH+'deg 30% 10%)');
-					styles.setProperty('--ColorThemeAccentBack','hsl('+colorH+'deg 30% 80%)');
+            if (themeLight == "dark") {
+                if (themeDay) {
+                    //	console.log("dark, day");
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 17%)');
+                    styles.setProperty('--ColorText', 'white');
+                    styles.setProperty('--ConBack', '#2f2f2f');
+                    styles.setProperty('--ColorBack', '#101010');
+                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 0, 50) /*'hsl('+colorH+'deg 30% 50%)'*/ );
+                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 30% 90%)');
+                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 80%)');
 
-					styles.setProperty('--RawColorForw','255, 255, 255');
-					styles.setProperty('--RawColorBack','0, 0, 0');
-					styles.setProperty('--ColorOrig', 	'hsl('+colorH+'deg 100% 50%)');
-				}
-			}
+                    styles.setProperty('--RawColorForw', '0, 0, 0');
+                    styles.setProperty('--RawColorBack', '255, 255, 255');
+                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                } else {
+                    //	console.log("dark, night");
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 80% 12%)');
+                    styles.setProperty('--ColorText', 'lightgray');
+                    styles.setProperty('--ConBack', '#1a1a1a');
+                    styles.setProperty('--ColorBack', 'black');
+                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 0, 50) /*'hsl('+colorH+'deg 30% 50%)'*/ );
+                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 10% 70%)');
+                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 85%)');
 
-			if (Power=="fancy") {
-				styles.setProperty('--transitionSlow','.3s');
-				styles.setProperty('--transitionFast','.15s');
-				styles.setProperty('--transitionRFast','50ms');
-				styles.setProperty('--tsh', '.5px .5px 2px rgba(var(--RawColorBack), .2)');
-				styles.setProperty('-filterShadow1', 'drop-shadow(0px 0px 5px var(--RawColorBack1));');
-				styles.setProperty('--filterShadow2', 'drop-shadow(0px 0px 5px var(--RawColorBack2));');
-			} else if (Power=="fast") {
-				styles.setProperty('--transitionSlow','0s');
-				styles.setProperty('--transitionFast','0s');
-				styles.setProperty('--transitionRFast','0s');
-				styles.setProperty('--tsh', 'none');
-				styles.setProperty('-filterShadow1', 'none');
-				styles.setProperty('--filterShadow2', 'none');
-			} else {//Optimal
-				styles.setProperty('--transitionSlow','.25s');
-				styles.setProperty('--transitionFast','.15s');
-				styles.setProperty('--transitionRFast','0s');
-				styles.setProperty('--tsh', '.5px .5px 1.5px rgba(var(--RawColorBack), .2)');
-				styles.setProperty('-filterShadow1', 'none');
-				styles.setProperty('--filterShadow2', 'drop-shadow(0px 0px 5px var(--RawColorBack2));');
-			} 
-			break;
-		}
-	}
-	window.requestAnimationFrame(mapRedraw);
+                    styles.setProperty('--RawColorForw', '0, 0, 0');
+                    styles.setProperty('--RawColorBack', '255, 255, 255');
+                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                }
+            } else if (themeLight == "light") {
+                if (themeDay) {
+                    //	console.log("light, day");
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 96%)');
+                    styles.setProperty('--ColorText', 'black');
+                    styles.setProperty('--ConBack', 'white');
+                    styles.setProperty('--ColorBack', 'white');
+                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 0, 50) /*'hsl('+colorH+'deg 100% 50%)'*/ );
+                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 30% 10%)');
+                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 90%)');
+
+                    styles.setProperty('--RawColorForw', '255, 255, 255');
+                    styles.setProperty('--RawColorBack', '0, 0, 0');
+                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                } else {
+                    //	console.log("light, night");
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 97%)');
+                    styles.setProperty('--ColorText', 'black');
+                    styles.setProperty('--ConBack', 'white');
+                    styles.setProperty('--ColorBack', 'white');
+                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 0, 50) /*'hsl('+colorH+'deg 30% 50%)'*/ );
+                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 30% 10%)');
+                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 90%)');
+
+                    styles.setProperty('--RawColorForw', '200, 200, 200');
+                    styles.setProperty('--RawColorBack', '0, 0, 0');
+                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                }
+            } else { // Semilight
+                if (themeDay) {
+                    //	console.log("semi, day");
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 90%)');
+                    styles.setProperty('--ColorText', 'black');
+                    styles.setProperty('--ConBack', 'hsl(' + colorH + 'deg 60% 99%)');
+                    styles.setProperty('--ColorBack', 'hsl(' + colorH + 'deg 60% 98%)');
+                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 0, 50)); //styles.setProperty('--ColorThemeAccent', 	);
+                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 30% 10%)');
+                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 85%)');
+
+                    styles.setProperty('--RawColorForw', '255, 255, 255');
+                    styles.setProperty('--RawColorBack', '0, 0, 0');
+                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                } else {
+                    //console.log("semi, night");
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 80% 90%)');
+                    styles.setProperty('--ColorText', 'black');
+                    styles.setProperty('--ConBack', 'hsl(' + colorH + 'deg 30% 95%)');
+                    styles.setProperty('--ColorBack', 'hsl(' + colorH + 'deg 30% 94%)');
+                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 30, 50)); /*'hsl('+colorH+'deg 30% 50%, .4)');*/
+                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 30% 10%)');
+                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 80%)');
+
+                    styles.setProperty('--RawColorForw', '255, 255, 255');
+                    styles.setProperty('--RawColorBack', '0, 0, 0');
+                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                }
+            }
+
+            if (Power == "fancy") {
+                styles.setProperty('--transitionSlow', '.3s');
+                styles.setProperty('--transitionFast', '.15s');
+                styles.setProperty('--transitionRFast', '50ms');
+                styles.setProperty('--tsh', '.5px .5px 2px rgba(var(--RawColorBack), .2)');
+                styles.setProperty('-filterShadow1', 'drop-shadow(0px 0px 5px var(--RawColorBack1));');
+                styles.setProperty('--filterShadow2', 'drop-shadow(0px 0px 5px var(--RawColorBack2));');
+            } else if (Power == "fast") {
+                styles.setProperty('--transitionSlow', '0s');
+                styles.setProperty('--transitionFast', '0s');
+                styles.setProperty('--transitionRFast', '0s');
+                styles.setProperty('--tsh', 'none');
+                styles.setProperty('-filterShadow1', 'none');
+                styles.setProperty('--filterShadow2', 'none');
+            } else { //Optimal
+                styles.setProperty('--transitionSlow', '.25s');
+                styles.setProperty('--transitionFast', '.15s');
+                styles.setProperty('--transitionRFast', '0s');
+                styles.setProperty('--tsh', '.5px .5px 1.5px rgba(var(--RawColorBack), .2)');
+                styles.setProperty('-filterShadow1', 'none');
+                styles.setProperty('--filterShadow2', 'drop-shadow(0px 0px 5px var(--RawColorBack2));');
+            }
+            break;
+        }
+    }
+    window.requestAnimationFrame(mapRedraw);
 }
 
 function toggleTransitionOn() {
@@ -446,12 +446,12 @@ function SaveTrans() {
 }
 
 function ChangeDic() {
-   // let selFrom = document.getElementById('selectorFrom');
+    // let selFrom = document.getElementById('selectorFrom');
     let selTo = document.getElementById('selectorTo');
-	if (selTo.value!="*own*")
-   // localStorage.setItem('trFrom', selFrom.value);
-    localStorage.setItem('trTo', selTo.value);
-location.hash.to=selTo.value;
+    if (selTo.value != "*own*")
+    // localStorage.setItem('trFrom', selFrom.value);
+        localStorage.setItem('trTo', selTo.value);
+    location.hash.to = selTo.value;
     //let n;
     //let headername = document.getElementById('headername');
 
@@ -465,7 +465,7 @@ location.hash.to=selTo.value;
     	document.getElementById('char').style.display = "none";
     }
     SpellingJob();*/
-   // prepareToTranslate(true);
+    // prepareToTranslate(true);
 }
 
 function ShowError(text) {
@@ -492,10 +492,10 @@ function ChangeDev() {
     if (dev) {
         document.getElementById('whiteabout').style.display = 'block';
         document.getElementById('refresh').style.display = 'block';
-		document.getElementById('uploadown').style.display = 'block';
+        document.getElementById('uploadown').style.display = 'block';
     } else {
         document.getElementById('whiteabout').style.display = 'none';
-		document.getElementById('uploadown').style.display = 'none';
+        document.getElementById('uploadown').style.display = 'none';
         document.getElementById('refresh').style.display = 'none';
     }
 }
@@ -505,7 +505,7 @@ function ChangeBetaFunctions() {
     betaFunctions = document.getElementById('betaFunctions').checked;
     localStorage.setItem('setting-betaFunctions', betaFunctions);
 
-	if (confirm("Aby se změna aplikovala, tak je nutné stránku znovu načíst. Chcete teď stránku znovu načíst? V případě, že kliknete na ZRUŠIT, tak prosím auktualizujte stránku sami až se Vám to bude hodit.")) location.reload();
+    if (confirm("Aby se změna aplikovala, tak je nutné stránku znovu načíst. Chcete teď stránku znovu načíst? V případě, že kliknete na ZRUŠIT, tak prosím auktualizujte stránku sami až se Vám to bude hodit.")) location.reload();
 }
 
 function ChangeStylizate() {
@@ -595,69 +595,69 @@ function CloseAboutPage(){
 		document.getElementById("aboutPage").style.display="none";
 	}, 300);
 }*/
-let PopPage_lastOpen="";
+let PopPage_lastOpen = "";
 
 function PopPageShow(name) {
-	//close old
-	CloseLastPopup();
-	
-	//open
-	let element=document.getElementById("pagePop_"+name);
-	
-	element.style.display="block";
-	element.style.opacity="1";
-	element.style.position="absolute";
-	element.style.top="99px";
+    //close old
+    CloseLastPopup();
 
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	PopPage_lastOpen=name;
+    //open
+    let element = document.getElementById("pagePop_" + name);
 
-	
-	document.body.style.overflow="unset";
+    element.style.display = "block";
+    element.style.opacity = "1";
+    element.style.position = "absolute";
+    element.style.top = "99px";
 
-	if (name=="mapPage") {
-		window.requestAnimationFrame(mapRedraw);
+    if (document.getElementById('nav').style.opacity == '1') {
+        document.getElementById('butShow').style.opacity = '1';
+        document.getElementById('butclose').style.opacity = '0';
+        document.getElementById('nav').classList.add('navTrans');
+        document.getElementById('nav').style.opacity = '0.1';
+    }
+    PopPage_lastOpen = name;
 
-		document.body.style.overflow="clip";
-		window.scrollTo({ top: 0});
-	} else if (name=="pageInfoLang") {
-		//console.log(lang);
-		let lang=GetCurrentLanguage();
-		if (dev){
-			let element=document.getElementById("infoLangText");
-			element.innerHTML="Umístění: ";	
-			if (lang.Category === undefined)element.innerHTML+="neznámé";
-			else element.innerHTML+=lang.Category.join(" > ");
-			element.innerHTML+="<br>"+"Počet zázamů: "+lang.Stats()+"<br>"+lang.Comment;	
-		}else{
-			document.getElementById("infoLangText").innerHTML=lang.Comment;
-		}
-	}
+
+    document.body.style.overflow = "unset";
+
+    if (name == "mapPage") {
+        window.requestAnimationFrame(mapRedraw);
+
+        document.body.style.overflow = "clip";
+        window.scrollTo({ top: 0 });
+    } else if (name == "pageInfoLang") {
+        //console.log(lang);
+        let lang = GetCurrentLanguage();
+        if (dev) {
+            let element = document.getElementById("infoLangText");
+            element.innerHTML = "Umístění: ";
+            if (lang.Category === undefined) element.innerHTML += "neznámé";
+            else element.innerHTML += lang.Category.join(" > ");
+            element.innerHTML += "<br>" + "Počet zázamů: " + lang.Stats() + "<br>" + lang.Comment;
+        } else {
+            document.getElementById("infoLangText").innerHTML = lang.Comment;
+        }
+    }
 }
 
 function PopPageClose(name) {
-	let element=document.getElementById("pagePop_"+name);
-	
-	document.body.style.overflow="unset";
+    let element = document.getElementById("pagePop_" + name);
 
-	element.style.opacity="0";
-	element.style.top="500px";
-	element.style.position="fixed";
-	
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		element.style.display="none";
-	}, 300);
+    document.body.style.overflow = "unset";
+
+    element.style.opacity = "0";
+    element.style.top = "500px";
+    element.style.position = "fixed";
+
+    if (document.getElementById('nav').style.opacity == '1') {
+        document.getElementById('butShow').style.opacity = '1';
+        document.getElementById('butclose').style.opacity = '0';
+        document.getElementById('nav').classList.add('navTrans');
+        document.getElementById('nav').style.opacity = '0.1';
+    }
+    setTimeout(() => {
+        element.style.display = "none";
+    }, 300);
 }
 /*
 function ShowPageOwnLang(){
@@ -691,43 +691,43 @@ function ClosePageOwnLang(){
 }*/
 
 // ze slovníku tvarosloví
-function ShowPageLangD(element){
-	document.body.style.overflow="clip";
-	window.scrollTo({ top: 0});
+function ShowPageLangD(element) {
+    document.body.style.overflow = "clip";
+    window.scrollTo({ top: 0 });
 
-	if (typeof element == undefined) return;
-	const pagelangDFill = document.getElementById("pagelangDFill");
-	pagelangDFill.innerHTML="";
-	pagelangDFill.appendChild(element);
+    if (typeof element == undefined) return;
+    const pagelangDFill = document.getElementById("pagelangDFill");
+    pagelangDFill.innerHTML = "";
+    pagelangDFill.appendChild(element);
 
-	document.getElementById("pagePop_pageLangD").style.display="block";
-	document.getElementById("pagePop_pageLangD").style.opacity="1";
-	document.getElementById("pagePop_pageLangD").style.position="absolute";
-	document.getElementById("pagePop_pageLangD").style.top="99px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
+    document.getElementById("pagePop_pageLangD").style.display = "block";
+    document.getElementById("pagePop_pageLangD").style.opacity = "1";
+    document.getElementById("pagePop_pageLangD").style.position = "absolute";
+    document.getElementById("pagePop_pageLangD").style.top = "99px";
+    if (document.getElementById('nav').style.opacity == '1') {
+        document.getElementById('butShow').style.opacity = '1';
+        document.getElementById('butclose').style.opacity = '0';
+        document.getElementById('nav').classList.add('navTrans');
+        document.getElementById('nav').style.opacity = '0.1';
+    }
 }
 
-function ClosePageLangD(){
-	document.body.style.overflow="unset";
-	document.getElementById("pageLangD").style.opacity="0";
-	document.getElementById("pageLangD").style.top="500px";
-	document.getElementById("pageLangD").style.position="fixed";
-	//document.getElementById("aboutPage").style.display="none";
-	//document.getElementById("translatingPage").style.display="block";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		document.getElementById("pageLangD").style.display="none";
-	}, 300);
+function ClosePageLangD() {
+    document.body.style.overflow = "unset";
+    document.getElementById("pageLangD").style.opacity = "0";
+    document.getElementById("pageLangD").style.top = "500px";
+    document.getElementById("pageLangD").style.position = "fixed";
+    //document.getElementById("aboutPage").style.display="none";
+    //document.getElementById("translatingPage").style.display="block";
+    if (document.getElementById('nav').style.opacity == '1') {
+        document.getElementById('butShow').style.opacity = '1';
+        document.getElementById('butclose').style.opacity = '0';
+        document.getElementById('nav').classList.add('navTrans');
+        document.getElementById('nav').style.opacity = '0.1';
+    }
+    setTimeout(() => {
+        document.getElementById("pageLangD").style.display = "none";
+    }, 300);
 }
 /*
 function ShowPageInfoLang(){
@@ -808,39 +808,40 @@ function CloseMapPage(){
 }
 */
 let langFile;
+
 function SetLanguage() {
-	let tmpLang;
+    let tmpLang;
     if (language == "default") {
         var userLang = navigator.language || navigator.userLanguage;
-		let defc=localStorage.getItem("DefaultCountry");
+        let defc = localStorage.getItem("DefaultCountry");
         if (userLang == "cs") {
-			if (defc === null) {
-				tmpLang = "cs";
-			} else {
-				if (defc=="Morava") tmpLang = "mor";
-				else if (defc=="Slezsko") tmpLang = "slz";
-				else if (defc=="Slezsko") tmpLang = "ces";
-				tmpLang = "cs";//console.log(defc=="Morava");
-			}			
-		} else if (userLang == "de") tmpLang = "de";
+            if (defc === null) {
+                tmpLang = "cs";
+            } else {
+                if (defc == "Morava") tmpLang = "mor";
+                else if (defc == "Slezsko") tmpLang = "slz";
+                else if (defc == "Slezsko") tmpLang = "ces";
+                tmpLang = "cs"; //console.log(defc=="Morava");
+            }
+        } else if (userLang == "de") tmpLang = "de";
         else if (userLang == "sk") tmpLang = "sk";
         else if (userLang == "jp") tmpLang = "jp";
         else tmpLang = "en";
-    }else tmpLang=language;
+    } else tmpLang = language;
 
-	langFile=langs[tmpLang];
-	if (langFile==undefined) {
-		console.log("Unknown lang: "+lang+", userLang"+tmpLang);
-		return;
-	}
-	
-	localStorage.setItem('setting-language', language);
-  
+    langFile = langs[tmpLang];
+    if (langFile == undefined) {
+        console.log("Unknown lang: " + lang + ", userLang" + tmpLang);
+        return;
+    }
+
+    localStorage.setItem('setting-language', language);
+
     document.documentElement.lang = tmpLang;
 
-	var headID = document.getElementsByTagName('manifest');
-	headID.href = "data/manifests/manifest" + tmpLang.toUpperCase() + ".json";
-	cententlang.content = tmpLang;
+    var headID = document.getElementsByTagName('manifest');
+    headID.href = "data/manifests/manifest" + tmpLang.toUpperCase() + ".json";
+    cententlang.content = tmpLang;
 
     document.getElementById("from").innerText = langFile.From;
     document.getElementById("to").innerText = langFile.To;
@@ -866,130 +867,130 @@ function SetLanguage() {
     document.getElementById("textCookies").innerText = langFile.CookiesMessage;
     document.getElementById("textRemove").innerText = langFile.Remove;
     document.getElementById("textSettings").innerText = langFile.Settings;
-	document.getElementById("textAbout").innerText = langFile.About;
+    document.getElementById("textAbout").innerText = langFile.About;
     document.getElementById("txtSavedTrans").innerText = langFile.SavedTrans;
     document.getElementById("specialTextarea").placeholder = langFile.WriteSomething;
-	document.getElementById("note").innerText = langFile.noteStillInDev;
-	//document.getElementById("textTranslator").innerText = langFile.Translator;
-	document.getElementById("tabText").innerText = langFile.Text;
-	document.getElementById("tabTxtFiles").innerText = simpleTabContent ? langFile.TextFilesShort : langFile.TextFiles;
-	document.getElementById("tabSubs").innerText = simpleTabContent ? langFile.SubtitlesFilesShort : langFile.SubtitlesFiles;
-	document.getElementById("textSettingsTranslate").innerText = langFile.TranslateOptions;
-	document.getElementById("textbetaFunctions").innerText = langFile.UnfinishedTranslate;
-	document.getElementById("textSettings").innerText = langFile.Settings;
-	document.getElementById("closeAbout").innerText = langFile.Close;
-	document.getElementById("aboutTranslator").innerText = langFile.About;
-	document.getElementById("comment").innerText = langFile.Comment;
-	document.getElementById("contact").innerText = langFile.Contact;
-	document.getElementById("forGoodComputerUsers").innerText = langFile.CommentForDev;
-	document.getElementById("downloadSubs").innerText = langFile.Download;
-	document.getElementById("downloadFile").innerText = langFile.Download;
-	document.getElementById("btnTranslateTxt").innerText = langFile.Translate;
-	document.getElementById("btnTranslateSubs").innerText = langFile.Translate;
-	document.getElementById("VideoNote").innerText = langFile.VideoNote;
-	document.getElementById("supportFiles").innerText = langFile.FileSupport;
-	document.getElementById("textbetaFunctionsDetails").innerText = langFile.MoreInfoBetaTranslate;
-	document.getElementById("czech").innerText = langFile.Czech;
-	document.getElementById("aboutTranslatorText").innerText = langFile.AboutTranslator;
-	document.getElementById("textItsNotBest").innerText = langFile.ItsNotBest;
-	document.getElementById("textNoMoney").innerText = langFile.NoMoney;
-	document.getElementById("textWhatIsQ").innerText = langFile.WhatIsQ;
-	document.getElementById("textStillWorking").innerText = langFile.StillWorking;
-	document.getElementById("textWhatWeUse").innerText = langFile.WhatWeUse;
-	document.getElementById("textHowWeTranslate").innerText = langFile.HowWeTranslate;
-	document.getElementById("textWeFree").innerText = langFile.WeFree;
-	document.getElementById("tabDic").innerText = langFile.Dic;
-	document.getElementById("textDownloadingList").innerText = langFile.DownloadingDic;
-	document.getElementById("tabApp_translate").innerText = langFile.AppTabTranslate;
-	document.getElementById("tabApp_search").innerText = langFile.AppTabSearch;
-	document.getElementById("tabApp_mapper").innerText = langFile.AppTabMapper;
-	document.getElementById("tabApp2_translate").innerText = langFile.AppTabTranslateShort;
-	document.getElementById("tabApp2_search").innerText = langFile.AppTabSearchShort;
-	document.getElementById("tabApp2_mapper").innerText = langFile.AppTabMapperShort;
-	document.getElementById("searchInputCaption").innerText = langFile.SearchInputCaption;
-	document.getElementById("searchButton").innerText = langFile.SearchButton;
-	document.getElementById("mapperSearchWord").innerText = langFile.MapperInputLabel;
-	document.getElementById("btnMakeMap").innerText = langFile.MapperMakeMap;
-	if (document.getElementById("searchOutPlaceholder")!=undefined) document.getElementById("searchOutPlaceholder").innerText = langFile.HereShow;
-	document.getElementById("textMode").innerText = langFile.Mode;
-	document.getElementById("textPower").innerText = langFile.Power;
-	document.getElementById("textThemeColor").innerText = langFile.Color;
+    document.getElementById("note").innerText = langFile.noteStillInDev;
+    //document.getElementById("textTranslator").innerText = langFile.Translator;
+    document.getElementById("tabText").innerText = langFile.Text;
+    document.getElementById("tabTxtFiles").innerText = simpleTabContent ? langFile.TextFilesShort : langFile.TextFiles;
+    document.getElementById("tabSubs").innerText = simpleTabContent ? langFile.SubtitlesFilesShort : langFile.SubtitlesFiles;
+    document.getElementById("textSettingsTranslate").innerText = langFile.TranslateOptions;
+    document.getElementById("textbetaFunctions").innerText = langFile.UnfinishedTranslate;
+    document.getElementById("textSettings").innerText = langFile.Settings;
+    document.getElementById("closeAbout").innerText = langFile.Close;
+    document.getElementById("aboutTranslator").innerText = langFile.About;
+    document.getElementById("comment").innerText = langFile.Comment;
+    document.getElementById("contact").innerText = langFile.Contact;
+    document.getElementById("forGoodComputerUsers").innerText = langFile.CommentForDev;
+    document.getElementById("downloadSubs").innerText = langFile.Download;
+    document.getElementById("downloadFile").innerText = langFile.Download;
+    document.getElementById("btnTranslateTxt").innerText = langFile.Translate;
+    document.getElementById("btnTranslateSubs").innerText = langFile.Translate;
+    document.getElementById("VideoNote").innerText = langFile.VideoNote;
+    document.getElementById("supportFiles").innerText = langFile.FileSupport;
+    document.getElementById("textbetaFunctionsDetails").innerText = langFile.MoreInfoBetaTranslate;
+    document.getElementById("czech").innerText = langFile.Czech;
+    document.getElementById("aboutTranslatorText").innerText = langFile.AboutTranslator;
+    document.getElementById("textItsNotBest").innerText = langFile.ItsNotBest;
+    document.getElementById("textNoMoney").innerText = langFile.NoMoney;
+    document.getElementById("textWhatIsQ").innerText = langFile.WhatIsQ;
+    document.getElementById("textStillWorking").innerText = langFile.StillWorking;
+    document.getElementById("textWhatWeUse").innerText = langFile.WhatWeUse;
+    document.getElementById("textHowWeTranslate").innerText = langFile.HowWeTranslate;
+    document.getElementById("textWeFree").innerText = langFile.WeFree;
+    document.getElementById("tabDic").innerText = langFile.Dic;
+    document.getElementById("textDownloadingList").innerText = langFile.DownloadingDic;
+    document.getElementById("tabApp_translate").innerText = langFile.AppTabTranslate;
+    document.getElementById("tabApp_search").innerText = langFile.AppTabSearch;
+    document.getElementById("tabApp_mapper").innerText = langFile.AppTabMapper;
+    document.getElementById("tabApp2_translate").innerText = langFile.AppTabTranslateShort;
+    document.getElementById("tabApp2_search").innerText = langFile.AppTabSearchShort;
+    document.getElementById("tabApp2_mapper").innerText = langFile.AppTabMapperShort;
+    document.getElementById("searchInputCaption").innerText = langFile.SearchInputCaption;
+    document.getElementById("searchButton").innerText = langFile.SearchButton;
+    document.getElementById("mapperSearchWord").innerText = langFile.MapperInputLabel;
+    document.getElementById("btnMakeMap").innerText = langFile.MapperMakeMap;
+    if (document.getElementById("searchOutPlaceholder") != undefined) document.getElementById("searchOutPlaceholder").innerText = langFile.HereShow;
+    document.getElementById("textMode").innerText = langFile.Mode;
+    document.getElementById("textPower").innerText = langFile.Power;
+    document.getElementById("textThemeColor").innerText = langFile.Color;
 
-	
-	document.getElementById("notePhonetics").innerHTML = langFile.UsePhonetics.substring(0,langFile.UsePhonetics.indexOf("%"))+`<a class="link" onclick="PopPageShow('phonetics')">`+langFile.UsePhonetics.substring(langFile.UsePhonetics.indexOf("%")+1, langFile.UsePhonetics.lastIndexOf("%"))+"</a>"+langFile.UsePhonetics.substring(langFile.UsePhonetics.lastIndexOf("%")+1);
 
-    if (document.getElementById('specialTextarea').value == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' +  langFile.HereShow + '</span>';
+    document.getElementById("notePhonetics").innerHTML = langFile.UsePhonetics.substring(0, langFile.UsePhonetics.indexOf("%")) + `<a class="link" onclick="PopPageShow('phonetics')">` + langFile.UsePhonetics.substring(langFile.UsePhonetics.indexOf("%") + 1, langFile.UsePhonetics.lastIndexOf("%")) + "</a>" + langFile.UsePhonetics.substring(langFile.UsePhonetics.lastIndexOf("%") + 1);
+
+    if (document.getElementById('specialTextarea').value == "") document.getElementById('outputtext').innerHTML = '<span class="placeholder">' + langFile.HereShow + '</span>';
 
     let headername = document.getElementById('headername');
     headername.innerText = langFile.TranslatorCM;
-   
 
-	var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis)";
-	var re = new RegExp(botPattern, 'i');
-	var userAgent = navigator.userAgent; 
-	
-	// if not crawler
-	if (!re.test(userAgent)) {
-		document.title = langFile.TranslatorCM;
-	}
 
-	let manifest=document.getElementById("manifest");
-	if (manifest==null) {
-		manifest=document.createElement("link");
-		manifest.href="data/manifests/manifest" + langFile.Code.toUpperCase() + ".json";
-		manifest.rel="manifest";
-		manifest.id="manifest";
-		document.getElementsByTagName('head')[0].appendChild(manifest);	
-	} else {
-		manifest.href = "data/manifests/manifest" + langFile.Code.toUpperCase() + ".json";
-	}
+    var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis)";
+    var re = new RegExp(botPattern, 'i');
+    var userAgent = navigator.userAgent;
+
+    // if not crawler
+    if (!re.test(userAgent)) {
+        document.title = langFile.TranslatorCM;
+    }
+
+    let manifest = document.getElementById("manifest");
+    if (manifest == null) {
+        manifest = document.createElement("link");
+        manifest.href = "data/manifests/manifest" + langFile.Code.toUpperCase() + ".json";
+        manifest.rel = "manifest";
+        manifest.id = "manifest";
+        document.getElementsByTagName('head')[0].appendChild(manifest);
+    } else {
+        manifest.href = "data/manifests/manifest" + langFile.Code.toUpperCase() + ".json";
+    }
 }
 
 function TabSelect(enableElement, tab) {
-	if (tab==tabText) {
-		location.hash="text";
-		tabText.classList.add("tabSelected");
-		tabSubs.classList.remove("tabSelected");
-		tabDic.classList.remove("tabSelected");
-		tabTxtFiles.classList.remove("tabSelected");
-	}else if (tab==tabSubs) {
-		location.hash="subs";
-		tabText.classList.remove("tabSelected");
-		tabSubs.classList.add("tabSelected");
-		tabDic.classList.remove("tabSelected");
-		tabTxtFiles.classList.remove("tabSelected");
-   	}else if (tab==tabTxtFiles){
-		location.hash="files";
-		tabText.classList.remove("tabSelected");
-		tabDic.classList.remove("tabSelected");
-		tabSubs.classList.remove("tabSelected");
-		tabTxtFiles.classList.add("tabSelected");
-	}else if (tab==tabDic){
-		location.hash="dic";
-		tabText.classList.remove("tabSelected");
-		tabTxtFiles.classList.remove("tabSelected");
-		tabSubs.classList.remove("tabSelected");
-		tabDic.classList.add("tabSelected");
-	}
+    if (tab == tabText) {
+        location.hash = "text";
+        tabText.classList.add("tabSelected");
+        tabSubs.classList.remove("tabSelected");
+        tabDic.classList.remove("tabSelected");
+        tabTxtFiles.classList.remove("tabSelected");
+    } else if (tab == tabSubs) {
+        location.hash = "subs";
+        tabText.classList.remove("tabSelected");
+        tabSubs.classList.add("tabSelected");
+        tabDic.classList.remove("tabSelected");
+        tabTxtFiles.classList.remove("tabSelected");
+    } else if (tab == tabTxtFiles) {
+        location.hash = "files";
+        tabText.classList.remove("tabSelected");
+        tabDic.classList.remove("tabSelected");
+        tabSubs.classList.remove("tabSelected");
+        tabTxtFiles.classList.add("tabSelected");
+    } else if (tab == tabDic) {
+        location.hash = "dic";
+        tabText.classList.remove("tabSelected");
+        tabTxtFiles.classList.remove("tabSelected");
+        tabSubs.classList.remove("tabSelected");
+        tabDic.classList.add("tabSelected");
+    }
 
-	// Disable all
-	translateText.style.display='none'; 
-	translateDic.style.display='none'; 
-	translateSubs.style.display='none';
-	translateFiles.style.display='none';
+    // Disable all
+    translateText.style.display = 'none';
+    translateDic.style.display = 'none';
+    translateSubs.style.display = 'none';
+    translateFiles.style.display = 'none';
 
-	//tabText.style.zIndex=0;
-	//tabSubs.style.zIndex=0;
-	//tabTxtFiles.style.zIndex=0;
+    //tabText.style.zIndex=0;
+    //tabSubs.style.zIndex=0;
+    //tabTxtFiles.style.zIndex=0;
 
-	//tabText.style.backgroundColor="white";
-	//tabSubs.style.backgroundColor="white";
-	//tabTxtFiles.style.backgroundColor="white";
+    //tabText.style.backgroundColor="white";
+    //tabSubs.style.backgroundColor="white";
+    //tabTxtFiles.style.backgroundColor="white";
 
-	// Enable
-	enableElement.style.display='block'; 
-	//tab.style.zIndex=3;
-	//tab.style.backgroundColor="aliceBlue";
+    // Enable
+    enableElement.style.display = 'block';
+    //tab.style.zIndex=3;
+    //tab.style.backgroundColor="aliceBlue";
 }
 
 function RemoveTrans() {
@@ -1022,7 +1023,7 @@ function RegisterSpecialTextarea() {
                     if (lastInputText.length > 0) {
                         sp.innerText = lastInputText.pop();
                         //	SpellingJob();
-                     //   prepareToTranslate(true);
+                        //   prepareToTranslate(true);
                     }
                     break;
             }
@@ -1078,7 +1079,7 @@ function RegisterSpecialTextarea() {
             if (lastInputText.length > 10) lastInputText.shift();
         }
 
-     //   prepareToTranslate(true);
+        //   prepareToTranslate(true);
     }, false);
 }
 
@@ -1088,28 +1089,28 @@ function SetTheme() {
     if (ThemeLight == bef) return;
 
     // Off
-   // toggleTransitionOff();
+    // toggleTransitionOff();
 
     if (dev) console.log("Set Theme: " + ThemeLight);
     if (ThemeLight == "default") {
-        if (window.matchMedia){ 
-			let constrast=window.matchMedia('(prefers-contrast: more)').matches;
-			let dark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (window.matchMedia) {
+            let constrast = window.matchMedia('(prefers-contrast: more)').matches;
+            let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-			if (dark) {
-				if (constrast) {
-			//		document.getElementById("themeAplicator").href = "./data/styles/themes/dark.css";
-				}else{
-			//		document.getElementById("themeAplicator").href = "./data/styles/themes/darknight.css";	
-				}
-			}else{
-				if (constrast) {
-				//	document.getElementById("themeAplicator").href = "./data/styles/themes/light.css";
-				}else{	
-				//	document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
-				}
-			}            
-		} //else document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
+            if (dark) {
+                if (constrast) {
+                    //		document.getElementById("themeAplicator").href = "./data/styles/themes/dark.css";
+                } else {
+                    //		document.getElementById("themeAplicator").href = "./data/styles/themes/darknight.css";	
+                }
+            } else {
+                if (constrast) {
+                    //	document.getElementById("themeAplicator").href = "./data/styles/themes/light.css";
+                } else {
+                    //	document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
+                }
+            }
+        } //else document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
     } //else document.getElementById("themeAplicator").href = "./data/styles/themes/" + ThemeLight + ".css";
     // On
     //toggleTransitionOn();
@@ -1134,10 +1135,10 @@ function hideNav() {
 }
 
 function Load() {
-	//geolocation();
+    //geolocation();
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cacheTabSelect */
-	//if (window.location=="https://geftgames.github.io/moravskyprekladac/") window.location="https://moravskyprekladac.pages.dev/"
+    //if (window.location=="https://geftgames.github.io/moravskyprekladac/") window.location="https://moravskyprekladac.pages.dev/"
     if (window.location.hash == "#reload") {
         console.log("INFO|Reloading...");
         /*caches.keys().then(function (names) {
@@ -1151,28 +1152,28 @@ function Load() {
         window.location = hashless_url;
         return;
     }
-	//console.log(location.hash);
-	if (location.hash=="#about") {
-		ShowAboutPage()
-	} else if (location.hash=="#mapper") { 
-		appSelected="mapper";
-	} else if (location.hash=="#search") { 
-		appSelected="search";
-	} else if (location.hash=="#translate") { 
-		appSelected="translate";
-	} else if (location.hash=="#dic") {
-		TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
-	} else if (location.hash=="#files") {
-		TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));
-	} else if (location.hash=="#subs") {
-		TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
-	} else if (location.hash=="#text") {
-		TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
-	}
+    //console.log(location.hash);
+    if (location.hash == "#about") {
+        ShowAboutPage()
+    } else if (location.hash == "#mapper") {
+        appSelected = "mapper";
+    } else if (location.hash == "#search") {
+        appSelected = "search";
+    } else if (location.hash == "#translate") {
+        appSelected = "translate";
+    } else if (location.hash == "#dic") {
+        TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
+    } else if (location.hash == "#files") {
+        TabSelect(document.getElementById('translateFiles'), document.getElementById('tabTxtFiles'));
+    } else if (location.hash == "#subs") {
+        TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
+    } else if (location.hash == "#text") {
+        TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
+    }
 
-	simpleTabContent=window.innerWidth<550;
-	
-	SetSwitchForced();
+    simpleTabContent = window.innerWidth < 550;
+
+    SetSwitchForced();
 
     /*
     	if ('serviceWorker' in navigator) {
@@ -1189,32 +1190,31 @@ function Load() {
     	}
     */
 
-	document.getElementById("mapperInput").addEventListener("keydown", (e) => {
-		if(e.key === 'Enter') {
-			mapper_init();        
-		}
-	});
+    document.getElementById("mapperInput").addEventListener("keydown", (e) => {
+        if (e.key === 'Enter') {
+            mapper_init();
+        }
+    });
 
     // Load setting
     let ztheme;
     try {
         ztheme = localStorage.getItem('ThemeLight');
-    } catch {}
+    } catch (error) {}
 
     if (ztheme === null) {
         ThemeLight = "default";
     } else ThemeLight = ztheme;
 
-    if (ThemeLight == "default") {
-    } else {
+    if (ThemeLight == "default") {} else {
         switch (ThemeLight) {
             case "light":
                 document.getElementById("themeLight").selectedIndex = 1;
                 break;
 
-			default: //semi
-				document.getElementById("themeLight").selectedIndex = 2;
-				break;
+            default: //semi
+                document.getElementById("themeLight").selectedIndex = 2;
+                break;
 
             case "dark":
                 document.getElementById("themeLight").selectedIndex = 3;
@@ -1222,17 +1222,16 @@ function Load() {
         }
     }
 
-	let zthemeDay;
+    let zthemeDay;
     try {
         zthemeDay = localStorage.getItem('ThemeDay');
-    } catch {}
+    } catch (error) {}
 
     if (zthemeDay === null) {
         ThemeDay = "default";
     } else ThemeDay = zthemeDay;
 
-    if (ThemeDay == "default") {
-    } else {
+    if (ThemeDay == "default") {} else {
         switch (ThemeDay) {
             case "day":
                 document.getElementById("themeDay").selectedIndex = 1;
@@ -1244,17 +1243,16 @@ function Load() {
         }
     }
 
-	let zPower;
+    let zPower;
     try {
         zPower = localStorage.getItem('Power');
-    } catch {}
+    } catch (error) {}
 
     if (zPower === null) {
         Power = "default";
     } else Power = zPower;
 
-    if (Power == "default") {
-    } else {
+    if (Power == "default") {} else {
         switch (Power) {
             case "fast":
                 document.getElementById("power").selectedIndex = 3;
@@ -1263,23 +1261,23 @@ function Load() {
             case "optimal":
                 document.getElementById("power").selectedIndex = 2;
                 break;
-				
-			case "fancy":
-				document.getElementById("power").selectedIndex = 1;
-				break;
+
+            case "fancy":
+                document.getElementById("power").selectedIndex = 1;
+                break;
         }
     }
 
-	let zColor;
+    let zColor;
     try {
         zColor = localStorage.getItem('Color');
-    } catch {}
-	if (zColor === null) {
+    } catch (error) {}
+    if (zColor === null) {
         Power = 208;
     } else Power = parseInt(zColor);
-    myRange.value=Power;
+    myRange.value = Power;
 
-  //  toggleNoTransitionOn();
+    //  toggleNoTransitionOn();
 
     document.documentElement.style.display = "unset";
 
@@ -1295,58 +1293,58 @@ function Load() {
     let trTo = "mo";
     let trFrom = "cs";
     let zTestingFunc;
-	let zTranscription;
+    let zTranscription;
     try {
         zlanguage = localStorage.getItem('setting-language');
         zautoTranslate = localStorage.getItem('setting-autoTranslate');
         zstyleOutput = localStorage.getItem('setting-styleOutput');
         zTestingFunc = localStorage.getItem('setting-testingFunc');
-        zdev = localStorage.getItem('setting-dev'); 
-		zbetaFunctions = localStorage.getItem('setting-betaFunctions');
-		zTranscription = localStorage.getItem('Transcription');
-		
+        zdev = localStorage.getItem('setting-dev');
+        zbetaFunctions = localStorage.getItem('setting-betaFunctions');
+        zTranscription = localStorage.getItem('Transcription');
+
         savedget = localStorage.getItem('saved');
         zmyvocabHA = localStorage.getItem('vocab-ha');
         zmyvocabCS = localStorage.getItem('vocab-cs');
         trTo = localStorage.getItem('trTo');
         trFrom = localStorage.getItem('trFrom');
 
-		zTextStyle=localStorage.getItem('TextStyle');
-    } catch {}
+        zTextStyle = localStorage.getItem('TextStyle');
+    } catch (error) {}
 
-  /*  if (trFrom === null) {
-        if (trFrom == "cs") document.getElementById("selRevFcs").selected = true;
-    } else {
-        if (trFrom == "cs") document.getElementById("selRevFcs").selected = true;
-        if (trFrom == "ha") document.getElementById("selRevFha").selected = true;
-        if (trFrom == "va") document.getElementById("selRevFva").selected = true;
-        if (trFrom == "so") document.getElementById("selRevFso").selected = true;
-        if (trFrom == "sk") document.getElementById("selRevFsk").selected = true;
-        if (trFrom == "mo") document.getElementById("selRevFmo").selected = true;
-        if (trFrom == "la") document.getElementById("selRevFla").selected = true;
-        if (trFrom == "ceskytesin") document.getElementById("selRevFceskytesin").selected = true;
-        if (trFrom == "slez") document.getElementById("selRevFslez").selected = true;
-    }
+    /*  if (trFrom === null) {
+          if (trFrom == "cs") document.getElementById("selRevFcs").selected = true;
+      } else {
+          if (trFrom == "cs") document.getElementById("selRevFcs").selected = true;
+          if (trFrom == "ha") document.getElementById("selRevFha").selected = true;
+          if (trFrom == "va") document.getElementById("selRevFva").selected = true;
+          if (trFrom == "so") document.getElementById("selRevFso").selected = true;
+          if (trFrom == "sk") document.getElementById("selRevFsk").selected = true;
+          if (trFrom == "mo") document.getElementById("selRevFmo").selected = true;
+          if (trFrom == "la") document.getElementById("selRevFla").selected = true;
+          if (trFrom == "ceskytesin") document.getElementById("selRevFceskytesin").selected = true;
+          if (trFrom == "slez") document.getElementById("selRevFslez").selected = true;
+      }
 
 
-    if (trTo === null) {
-        if (trTo == "mo") document.getElementById("selRevTmo").selected = true;
-    } else {
-        if (trTo == "cs") document.getElementById("selRevTcs").selected = true;
-        if (trTo == "ha") document.getElementById("selRevTha").selected = true;
-        if (trTo == "va") document.getElementById("selRevTva").selected = true;
-        if (trTo == "so") document.getElementById("selRevTso").selected = true;
-        if (trTo == "mo") document.getElementById("selRevTmo").selected = true;
-        if (trTo == "sk") document.getElementById("selRevTsk").selected = true;
-        if (trTo == "la") document.getElementById("selRevTla").selected = true;
-        if (trTo == "ceskytesin") document.getElementById("selRevTceskytesin").selected = true;
-        if (trTo == "slez") document.getElementById("selRevTslez").selected = true;
-    }*/
-	
-	if (zTextStyle === null) {
-		TextStyle="";
+      if (trTo === null) {
+          if (trTo == "mo") document.getElementById("selRevTmo").selected = true;
+      } else {
+          if (trTo == "cs") document.getElementById("selRevTcs").selected = true;
+          if (trTo == "ha") document.getElementById("selRevTha").selected = true;
+          if (trTo == "va") document.getElementById("selRevTva").selected = true;
+          if (trTo == "so") document.getElementById("selRevTso").selected = true;
+          if (trTo == "mo") document.getElementById("selRevTmo").selected = true;
+          if (trTo == "sk") document.getElementById("selRevTsk").selected = true;
+          if (trTo == "la") document.getElementById("selRevTla").selected = true;
+          if (trTo == "ceskytesin") document.getElementById("selRevTceskytesin").selected = true;
+          if (trTo == "slez") document.getElementById("selRevTslez").selected = true;
+      }*/
+
+    if (zTextStyle === null) {
+        TextStyle = "";
     } else TextStyle = zTextStyle;
-//	document.getElementById("textStyle").value=TextStyle;
+    //	document.getElementById("textStyle").value=TextStyle;
 
     if (zmyvocabCS === null) {
         myVocabCS = new Array();
@@ -1356,14 +1354,14 @@ function Load() {
     if (zmyvocabHA === null) {
         myVocabHA = new Array();
         myVocabHA.push('');
-    } else myVocabHA = zmyvocabHA; 
-	
-	if (zTranscription === null) {
+    } else myVocabHA = zmyvocabHA;
+
+    if (zTranscription === null) {
         TranscriptionText = "default";
     } else TranscriptionText = zTranscription;
-	if (document.getElementById("textTranscription")!==null) document.getElementById("textTranscription").value = TranscriptionText;
+    if (document.getElementById("textTranscription") !== null) document.getElementById("textTranscription").value = TranscriptionText;
 
-	transcription=SetCurrentTranscription(TranscriptionText);
+    transcription = SetCurrentTranscription(TranscriptionText);
 
     if (savedget === null) saved = new Array();
     else saved = JSON.parse(savedget);
@@ -1377,43 +1375,43 @@ function Load() {
         //	
 
         language = zlanguage;
-        if (document.getElementById("manifest")!==null) document.getElementById("manifest").href = "data/manifests/manifest" + zlanguage.toUpperCase() + ".json";
+        if (document.getElementById("manifest") !== null) document.getElementById("manifest").href = "data/manifests/manifest" + zlanguage.toUpperCase() + ".json";
     } else {
-      
+
         var userLang = navigator.language || navigator.userLanguage;
-		language="default";
-		let l="";
+        language = "default";
+        let l = "";
         if (userLang == "de") l = "de";
         else if (userLang == "sk") l = "sk";
         else if (userLang == "jp") l = "jp";
-		else if (userLang == "cs") l = "cs";
-        else l = "en";/**/
+        else if (userLang == "cs") l = "cs";
+        else l = "en"; /**/
 
-		let el=document.getElementById("manifest");
-		if (el==undefined) {
-			let manifest = document.createElement("link");
-			manifest.link= "data/manifests/manifest" + l.toUpperCase() + ".json";
-			manifest.id  = "manifest";
-			manifest.rel = "manifest";
-			document.head.appendChild(manifest);
-		} else el.href = "data/manifests/manifest" + l.toUpperCase() + ".json";
-    }	
-	DetectLoacation();
+        let el = document.getElementById("manifest");
+        if (el == undefined) {
+            let manifest = document.createElement("link");
+            manifest.link = "data/manifests/manifest" + l.toUpperCase() + ".json";
+            manifest.id = "manifest";
+            manifest.rel = "manifest";
+            document.head.appendChild(manifest);
+        } else el.href = "data/manifests/manifest" + l.toUpperCase() + ".json";
+    }
+    DetectLoacation();
     if (zdev == null) dev = false;
     else dev = (zdev == "true");
-	if (dev) {
+    if (dev) {
         document.getElementById('whiteabout').style.display = 'block';
         document.getElementById('refresh').style.display = 'block';
-		document.getElementById('uploadown').style.display = 'block';
+        document.getElementById('uploadown').style.display = 'block';
     } else {
         document.getElementById('whiteabout').style.display = 'none';
         document.getElementById('refresh').style.display = 'none';
-		document.getElementById('uploadown').style.display = 'none';
+        document.getElementById('uploadown').style.display = 'none';
     }
 
-	   if (zbetaFunctions == null) betaFunctions = false;
+    if (zbetaFunctions == null) betaFunctions = false;
     else betaFunctions = (zbetaFunctions == "true");
-	  document.getElementById('betaFunctions').checked = betaFunctions;
+    document.getElementById('betaFunctions').checked = betaFunctions;
 
     if (zstyleOutput == null) styleOutput = false;
     else styleOutput = (zstyleOutput == "true");
@@ -1439,20 +1437,20 @@ function Load() {
 
     //let n;
 
- /*   if (document.getElementById('selectorTo').value == "ha") {
-        //n = "hanácko-český";
-        document.getElementById('charHa').style.display = "flex";
-        document.getElementById('charSo').style.display = "none";
-    }
-    if (document.getElementById('selectorTo').value == "so") {
-        //n = "hanácko-český";
-        document.getElementById('charSo').style.display = "flex";
-        document.getElementById('charHa').style.display = "none";
-    } else {
-        //n = "česko-hanácký";
-        document.getElementById('charsHa').style.display = "none";
-        document.getElementById('charsVa').style.display = "none";
-    }*/
+    /*   if (document.getElementById('selectorTo').value == "ha") {
+           //n = "hanácko-český";
+           document.getElementById('charHa').style.display = "flex";
+           document.getElementById('charSo').style.display = "none";
+       }
+       if (document.getElementById('selectorTo').value == "so") {
+           //n = "hanácko-český";
+           document.getElementById('charSo').style.display = "flex";
+           document.getElementById('charHa').style.display = "none";
+       } else {
+           //n = "česko-hanácký";
+           document.getElementById('charsHa').style.display = "none";
+           document.getElementById('charsVa').style.display = "none";
+       }*/
 
     if (!autoTranslate) {
         document.getElementById('autoTranslate').style.display = "inline-block";
@@ -1461,7 +1459,7 @@ function Load() {
     document.getElementById('lang').value = language;
     document.getElementById('manual').checked = autoTranslate;
     document.getElementById('styleOutput').checked = styleOutput;
-   /* document.getElementById('testingFunc').checked = testingFunc;*/
+    /* document.getElementById('testingFunc').checked = testingFunc;*/
     document.getElementById('dev').checked = dev;
 
 
@@ -1474,16 +1472,16 @@ function Load() {
     		document.getElementById('refresh').style.display = 'none';
     	}*/
     loaded = true;
-	imgMap = new Image();
-	imgMap.src="data/images/map.svg";
+    imgMap = new Image();
+    imgMap.src = "data/images/map.svg";
 
-	imgMap_bounds = new Image();
-	imgMap_bounds.src="data/images/map_bounds.svg";
+    imgMap_bounds = new Image();
+    imgMap_bounds.src = "data/images/map_bounds.svg";
 
-	imgMap_hory = new Image();
-	imgMap_hory.src="data/images/morava_hory.png";
+    imgMap_hory = new Image();
+    imgMap_hory.src = "data/images/morava_hory.png";
     SetSavedTranslations();
-	customTheme();
+    customTheme();
 
     //GetVocabulary();
     /*
@@ -1523,266 +1521,274 @@ function Load() {
     document.getElementById("lte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("rte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
     document.getElementById("header").style.transition="background-color .3s, color .3s;";*/
-	window.addEventListener("resize", (event) => {
-		window.requestAnimationFrame(mapRedraw);
-	});
-	
-	mapSelectLang.addEventListener("wheel", function(e) {
-		e.preventDefault();
-		let prevZoom=map_Zoom;
-		let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
+    window.addEventListener("resize", (event) => {
+        window.requestAnimationFrame(mapRedraw);
+    });
 
-		if (delta > 0) map_Zoom *= 1.2; else  map_Zoom /= 1.2;
-		if (map_Zoom<=0.2)map_Zoom=0.2;
-		if (map_Zoom>12)map_Zoom=12;
+    mapSelectLang.addEventListener("wheel", function(e) {
+        e.preventDefault();
+        let prevZoom = map_Zoom;
+        let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
 
-		const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-		const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-		const mouseY = e.clientY -rect.top;
+        if (delta > 0) map_Zoom *= 1.2;
+        else map_Zoom /= 1.2;
+        if (map_Zoom <= 0.2) map_Zoom = 0.2;
+        if (map_Zoom > 12) map_Zoom = 12;
 
-		const imgMX = mouseX-map_LocX,
-			  imgMY = mouseY-map_LocY;	
+        const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
+        const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
+        const mouseY = e.clientY - rect.top;
 
-		const imgPMX = imgMX/(imgMap.width*prevZoom),
-			  imgPMY = imgMY/(imgMap.height*prevZoom);		
-		
-		map_LocX-=(map_Zoom-prevZoom)*imgMap.width*imgPMX;
-		map_LocY-=(map_Zoom-prevZoom)*imgMap.height*imgPMY;
+        const imgMX = mouseX - map_LocX,
+            imgMY = mouseY - map_LocY;
 
-		window.requestAnimationFrame(mapRedraw);
-	});
+        const imgPMX = imgMX / (imgMap.width * prevZoom),
+            imgPMY = imgMY / (imgMap.height * prevZoom);
 
-	// Počet prstů na obrazovce
-	mapSelectLang.addEventListener('mousedown', (e) => {
-		e.preventDefault();
-		moved = true;
-		map_LocTmpX=e.clientX-map_LocX;
-		map_LocTmpY=e.clientY-map_LocY;	
-		
-		window.requestAnimationFrame(mapRedraw);
-	});
-	
-	mapSelectLang.addEventListener('mouseup', (e) => {
-		moved = false;	
-		window.requestAnimationFrame(mapRedraw);
-	});
+        map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX;
+        map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY;
 
-	mapSelectLang.addEventListener('click', (e) => {
-		const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-			const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-			const mouseY = e.clientY  -rect.top/*-*/;
-		mapClick(mouseX,mouseY);
-		window.requestAnimationFrame(mapRedraw);
-	});
+        window.requestAnimationFrame(mapRedraw);
+    });
 
-	mapSelectLang.addEventListener('mousemove', (e) => {
-		e.preventDefault();
-		if (moved) {
-		//	console.log('moved');
-			map_LocX=e.clientX-map_LocTmpX;
-			map_LocY=e.clientY-map_LocTmpY;
+    // Počet prstů na obrazovce
+    mapSelectLang.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        moved = true;
+        map_LocTmpX = e.clientX - map_LocX;
+        map_LocTmpY = e.clientY - map_LocY;
 
-	//		const rect = document.getElementById("mapSelectLang"); // Get canvas position relative to viewport
+        window.requestAnimationFrame(mapRedraw);
+    });
 
-	//		if (map_LocX>rect.clientWidth)map_LocX=rect.clientWidth;
-	//		else if (map_LocX<-rect.clientWidth)map_LocX=-rect.clientWidth;
+    mapSelectLang.addEventListener('mouseup', (e) => {
+        moved = false;
+        window.requestAnimationFrame(mapRedraw);
+    });
 
-	//		if (map_LocY>rect.clientHeight)map_LocY=rect.clientHeight;
-		//	else if (map_LocY<-rect.clientHeight)map_LocY=-rect.clientHeight;
+    mapSelectLang.addEventListener('click', (e) => {
+        const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
+        const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
+        const mouseY = e.clientY - rect.top /*-*/ ;
+        mapClick(mouseX, mouseY);
+        window.requestAnimationFrame(mapRedraw);
+    });
 
-		//	console.log(map_LocX,rect.clientWidth);
-			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
-			//setTransform();	
-			//mapRedraw();
-			window.requestAnimationFrame(mapRedraw);
-			//mapZoom.style.top=positionY+"px";
-			//mapZoom.style.left=positionX+"px";
-		} else {
-			const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-			const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-			const mouseY = e.clientY - rect.top;
-			//console.log('not moved')
-			mapMove(mouseX, mouseY);
-		}
-	});
+    mapSelectLang.addEventListener('mousemove', (e) => {
+        e.preventDefault();
+        if (moved) {
+            //	console.log('moved');
+            map_LocX = e.clientX - map_LocTmpX;
+            map_LocY = e.clientY - map_LocTmpY;
 
-	var map_Touches=-1;
-	var map_TouchStartX, map_TouchStartY;
-	var map_MoveTime;
-	mapSelectLang.addEventListener('touchstart', (e) => {
-		//start move
-		const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
-		var touch1 = e.touches[0] || e.changedTouches[0];
-		let mx=touch1.pageX, my=touch1.pageY-rect.top;
+            //		const rect = document.getElementById("mapSelectLang"); // Get canvas position relative to viewport
 
-		if (e.touches.length == 1) {
-			console.log("touchstart move");
-			e.preventDefault();
-			moved = true;
-			
-			map_LocTmpX=mx-map_LocX;
-			map_LocTmpY=my-map_LocY;	
-			
-			map_TouchStartX=mx;
-			map_TouchStartY=my;
-			map_MoveTime=Date.now();
-			map_Touches=1;
-			window.requestAnimationFrame(mapRedraw);
-		}else{
-			console.log("touchstart zoom");
-			var touch2 = e.touches[1] || e.changedTouches[1];
-			let m2x=touch2.pageX, m2y=touch2.pageY-rect.top;
-			map_Touches=2;
-			e.preventDefault();
+            //		if (map_LocX>rect.clientWidth)map_LocX=rect.clientWidth;
+            //		else if (map_LocX<-rect.clientWidth)map_LocX=-rect.clientWidth;
 
-			// nastav hodnoty začáteční pozice
-			map_LocTmpX=mx-map_LocX;
-			map_LocTmpY=my-map_LocY;
-			map_LocTmp2X=m2x-map_LocX;
-			map_LocTmp2Y=m2y-map_LocY;
-			map_ZoomInit=map_Zoom;
-		}
-	});
+            //		if (map_LocY>rect.clientHeight)map_LocY=rect.clientHeight;
+            //	else if (map_LocY<-rect.clientHeight)map_LocY=-rect.clientHeight;
 
-	mapSelectLang.addEventListener('touchend', (e) => {
-		console.log("touchend");
-		var touch = e.touches[0] || e.changedTouches[0];
-		const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
+            //	console.log(map_LocX,rect.clientWidth);
+            //path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
+            //setTransform();	
+            //mapRedraw();
+            window.requestAnimationFrame(mapRedraw);
+            //mapZoom.style.top=positionY+"px";
+            //mapZoom.style.left=positionX+"px";
+        } else {
+            const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
+            const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
+            const mouseY = e.clientY - rect.top;
+            //console.log('not moved')
+            mapMove(mouseX, mouseY);
+        }
+    });
 
-		// Jeden prst
-		if (map_Touches==1) {
-			let mx=touch.pageX;
-			let my=touch.pageY-rect.top;
+    var map_Touches = -1;
+    var map_TouchStartX, map_TouchStartY;
+    var map_MoveTime;
+    mapSelectLang.addEventListener('touchstart', (e) => {
+        //start move
+        const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
+        var touch1 = e.touches[0] || e.changedTouches[0];
+        let mx = touch1.pageX,
+            my = touch1.pageY - rect.top;
 
-			if (map_Touches==2){
-				map_LocX-=map_LocTmpX;
-				map_LocY-=map_LocTmpY;
+        if (e.touches.length == 1) {
+            console.log("touchstart move");
+            e.preventDefault();
+            moved = true;
 
-				map_LocTmpX=0;
-				map_LocTmpY=0;
-				map_Touches=1;
-			}
+            map_LocTmpX = mx - map_LocX;
+            map_LocTmpY = my - map_LocY;
 
-			// <300ms kliknutí
-			if ((Date.now()-map_MoveTime)<300) {
-				// <10px vzdálenost od začátku 
-				let dX=mx-map_TouchStartX, dY=my-map_TouchStartY;
-				let d=Math.sqrt(dX*dX+dY*dY);
-				if (d<10) {
-					console.log("click!");
-					mapClick(mx,my);
-					return;
-				}
-			}
-			map_Touches=1;
-		}
-		
-		window.requestAnimationFrame(mapRedraw);
-	});
-	let map_ZoomInit;
-	mapSelectLang.addEventListener('touchmove', (e) => {
-		e.preventDefault();
-		const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
-		
+            map_TouchStartX = mx;
+            map_TouchStartY = my;
+            map_MoveTime = Date.now();
+            map_Touches = 1;
+            window.requestAnimationFrame(mapRedraw);
+        } else {
+            console.log("touchstart zoom");
+            var touch2 = e.touches[1] || e.changedTouches[1];
+            let m2x = touch2.pageX,
+                m2y = touch2.pageY - rect.top;
+            map_Touches = 2;
+            e.preventDefault();
 
-		if (e.touches.length==1) {
-			console.log("mousemove move");
-			var touch = e.touches[0] || e.changedTouches[0];
-			let mx=touch.pageX, my=touch.pageY-rect.top;
-		/*	if (map_Touches==2){
-				map_LocX-=map_LocTmpX;
-				map_LocY-=map_LocTmpY;
+            // nastav hodnoty začáteční pozice
+            map_LocTmpX = mx - map_LocX;
+            map_LocTmpY = my - map_LocY;
+            map_LocTmp2X = m2x - map_LocX;
+            map_LocTmp2Y = m2y - map_LocY;
+            map_ZoomInit = map_Zoom;
+        }
+    });
 
-				map_LocTmpX=0;
-				map_LocTmpY=0;
-				map_Touches=1;
-			}*/
-			//console.log(touch.pageX,touch.pageY);
+    mapSelectLang.addEventListener('touchend', (e) => {
+        console.log("touchend");
+        var touch = e.touches[0] || e.changedTouches[0];
+        const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
 
-			if (moved) {
-				map_LocX=mx-map_LocTmpX;
-				map_LocY=my-map_LocTmpY;
-	
-				window.requestAnimationFrame(mapRedraw);
-			} else {
-				mapMove(touch.pageX,touch.pageY);
-			}
-			map_Touches=1;
-		}else if (e.touches.length==2) {
-			console.log("mousemove zoom");
-			var touch1 = e.touches[0] || e.changedTouches[0];
-			let m1x=touch1.pageX, m1y=touch1.pageY-rect.top;
-			
-			var touch2 = e.touches[1] || e.changedTouches[1];
-			let m2x=touch2.pageX, m2y=touch2.pageY-rect.top;
+        // Jeden prst
+        if (map_Touches == 1) {
+            let mx = touch.pageX;
+            let my = touch.pageY - rect.top;
 
-			// start
-			if (map_Touches!=2) {
-				map_LocTmpX=m1x-map_LocX;
-				map_LocTmpY=m1y-map_LocY;
-				map_LocTmp2X=m2x-map_LocX;
-				map_LocTmp2Y=m2y-map_LocY;
-				map_ZoomInit=map_Zoom;
-				map_Touches=2;
-			}else{
-				// start distance
-				let dx=map_LocTmpX-map_LocTmp2X, dy=map_LocTmpY-map_LocTmp2Y;
-				
-				let start=Math.sqrt(dx*dx+dy*dy);
+            if (map_Touches == 2) {
+                map_LocX -= map_LocTmpX;
+                map_LocY -= map_LocTmpY;
 
-				// now distance
-				dx=(m1x-map_LocX)-(m2x-map_LocX), dy=(m1y-map_LocY)-(m2y-map_LocY);
-				console.log(map_LocTmpX,m1x-map_LocX);
-				console.log(map_LocTmpY,m1y-map_LocY);
-				console.log(map_LocTmp2Y,m2y-map_LocY);
-				console.log(map_LocTmp2Y,m2y-map_LocY);
-				let now=Math.sqrt(dx*dx+dy*dy);
-				let prevZoom=map_Zoom;
-				map_Zoom=map_ZoomInit/(start/now);
-				
-				// corect center of zoom
-				const imgMX = (m1x+m2x)/2-map_LocX,
-					  imgMY = (m1y+m2y)/2-map_LocY;	
+                map_LocTmpX = 0;
+                map_LocTmpY = 0;
+                map_Touches = 1;
+            }
 
-				const imgPMX = imgMX/(imgMap.width*prevZoom),
-					  imgPMY = imgMY/(imgMap.height*prevZoom);
+            // <300ms kliknutí
+            if ((Date.now() - map_MoveTime) < 300) {
+                // <10px vzdálenost od začátku 
+                let dX = mx - map_TouchStartX,
+                    dY = my - map_TouchStartY;
+                let d = Math.sqrt(dX * dX + dY * dY);
+                if (d < 10) {
+                    console.log("click!");
+                    mapClick(mx, my);
+                    return;
+                }
+            }
+            map_Touches = 1;
+        }
 
-				map_LocX-=(map_Zoom-prevZoom)*imgMap.width*imgPMX;
-				map_LocY-=(map_Zoom-prevZoom)*imgMap.height*imgPMY;
+        window.requestAnimationFrame(mapRedraw);
+    });
+    let map_ZoomInit;
+    mapSelectLang.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
 
-				window.requestAnimationFrame(mapRedraw);
-			}
-		}
-	});
 
-/*	mapSelectLang.addEventListener('gesturechange', (e) => {
-		var touch = e.touches[0] || e.changedTouches[0];
-		//e.scale
-		//mapRedraw();
-	});
-	
-	mapSelectLang.addEventListener('gestureend', (e) => {
-		var touch = e.touches[0] || e.changedTouches[0];
-		
-		//mapRedraw();
-	});
-	
-	mapSelectLang.addEventListener('gesturestart', (e) => {
-		var touch = e.touches[0] || e.changedTouches[0];
-	//	e.scale
-		//mapRedraw();
-	});*/
-	
+        if (e.touches.length == 1) {
+            console.log("mousemove move");
+            var touch = e.touches[0] || e.changedTouches[0];
+            let mx = touch.pageX,
+                my = touch.pageY - rect.top;
+            /*	if (map_Touches==2){
+            		map_LocX-=map_LocTmpX;
+            		map_LocY-=map_LocTmpY;
 
-//	let el=document.getElementById("mapSelector");
-//	var zoom=1;
-//	let ZOOM_SPEED=1.2;
-//	var positionX=0;
-	//var positionY=0;
-	//let mapZoom=document.getElementById("map");
-	let moved;
-//	let dPosX=0,dPosY=0;
-	/*el.addEventListener("wheel", function(e) {
+            		map_LocTmpX=0;
+            		map_LocTmpY=0;
+            		map_Touches=1;
+            	}*/
+            //console.log(touch.pageX,touch.pageY);
+
+            if (moved) {
+                map_LocX = mx - map_LocTmpX;
+                map_LocY = my - map_LocTmpY;
+
+                window.requestAnimationFrame(mapRedraw);
+            } else {
+                mapMove(touch.pageX, touch.pageY);
+            }
+            map_Touches = 1;
+        } else if (e.touches.length == 2) {
+            console.log("mousemove zoom");
+            var touch1 = e.touches[0] || e.changedTouches[0];
+            let m1x = touch1.pageX,
+                m1y = touch1.pageY - rect.top;
+
+            var touch2 = e.touches[1] || e.changedTouches[1];
+            let m2x = touch2.pageX,
+                m2y = touch2.pageY - rect.top;
+
+            // start
+            if (map_Touches != 2) {
+                map_LocTmpX = m1x - map_LocX;
+                map_LocTmpY = m1y - map_LocY;
+                map_LocTmp2X = m2x - map_LocX;
+                map_LocTmp2Y = m2y - map_LocY;
+                map_ZoomInit = map_Zoom;
+                map_Touches = 2;
+            } else {
+                // start distance
+                let dx = map_LocTmpX - map_LocTmp2X,
+                    dy = map_LocTmpY - map_LocTmp2Y;
+
+                let start = Math.sqrt(dx * dx + dy * dy);
+
+                // now distance
+                dx = (m1x - map_LocX) - (m2x - map_LocX), dy = (m1y - map_LocY) - (m2y - map_LocY);
+                console.log(map_LocTmpX, m1x - map_LocX);
+                console.log(map_LocTmpY, m1y - map_LocY);
+                console.log(map_LocTmp2Y, m2y - map_LocY);
+                console.log(map_LocTmp2Y, m2y - map_LocY);
+                let now = Math.sqrt(dx * dx + dy * dy);
+                let prevZoom = map_Zoom;
+                map_Zoom = map_ZoomInit / (start / now);
+
+                // corect center of zoom
+                const imgMX = (m1x + m2x) / 2 - map_LocX,
+                    imgMY = (m1y + m2y) / 2 - map_LocY;
+
+                const imgPMX = imgMX / (imgMap.width * prevZoom),
+                    imgPMY = imgMY / (imgMap.height * prevZoom);
+
+                map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX;
+                map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY;
+
+                window.requestAnimationFrame(mapRedraw);
+            }
+        }
+    });
+
+    /*	mapSelectLang.addEventListener('gesturechange', (e) => {
+    		var touch = e.touches[0] || e.changedTouches[0];
+    		//e.scale
+    		//mapRedraw();
+    	});
+    	
+    	mapSelectLang.addEventListener('gestureend', (e) => {
+    		var touch = e.touches[0] || e.changedTouches[0];
+    		
+    		//mapRedraw();
+    	});
+    	
+    	mapSelectLang.addEventListener('gesturestart', (e) => {
+    		var touch = e.touches[0] || e.changedTouches[0];
+    	//	e.scale
+    		//mapRedraw();
+    	});*/
+
+
+    //	let el=document.getElementById("mapSelector");
+    //	var zoom=1;
+    //	let ZOOM_SPEED=1.2;
+    //	var positionX=0;
+    //var positionY=0;
+    //let mapZoom=document.getElementById("map");
+    let moved;
+    //	let dPosX=0,dPosY=0;
+    /*el.addEventListener("wheel", function(e) {
 		//positionX=e.pageX-dPosX;
 		//positionY=e.pageY-dPosY;
 		e.preventDefault();
@@ -2178,7 +2184,7 @@ function handleEnter(e) {
 }
 
 function textAreaAdjust() {
-	let textarea=document.getElementById("specialTextarea");
+    let textarea = document.getElementById("specialTextarea");
     textarea.style.height = "1px";
     textarea.style.height = (25 + textarea.scrollHeight) + "px";
 }
@@ -3479,13 +3485,13 @@ function insertAtCursor(myField, myValue) {
 }
 
 function MapperMode(mode) {
-	if (mode=="basic") {
-		expertModeMapper.style.display="none";
-		basicModeMapper.style.display="flex";
-	} else if (mode=="expert") {
-		expertModeMapper.style.display="block";
-		basicModeMapper.style.display="none";		
-	}
+    if (mode == "basic") {
+        expertModeMapper.style.display = "none";
+        basicModeMapper.style.display = "flex";
+    } else if (mode == "expert") {
+        expertModeMapper.style.display = "block";
+        basicModeMapper.style.display = "none";
+    }
 }
 
 function Copy(elementId) {
@@ -3500,7 +3506,7 @@ function Copy(elementId) {
 function CopyLink() {
     HidePopUps();
     //encodeURIComponent(document.getElementById('specialTextarea').value)
-    let copyText = serverName+"?text=" + encodeURIComponent(document.getElementById('specialTextarea').value) + "&t=" + document.getElementById('selectorTo').selected;
+    let copyText = serverName + "?text=" + encodeURIComponent(document.getElementById('specialTextarea').value) + "&t=" + document.getElementById('selectorTo').selected;
 
     navigator.clipboard.writeText(copyText).then(function() {
         if (dev) console.log('Copying to clipboard was successful!');
@@ -4630,367 +4636,367 @@ function auto_grow() {
     document.getElementById("specialTextarea").style.minHeight = (document.getElementById('specialTextarea').scrollHeight) + "px";
 }
 
-function mapper_download(){
-	let canvas= document.getElementById('mapperCanvas');
-	var a = document.createElement("a");
-	a.href = canvas.toDataURL("image/png");
-	a.download = "Mapa.png";
-	a.click();
+function mapper_download() {
+    let canvas = document.getElementById('mapperCanvas');
+    var a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
+    a.download = "Mapa.png";
+    a.click();
 }
 
-function geolocation(){
-/*1	https://geolocation-db.com/json/
--1	https://ip-api.io/json/
-https://lite.ip2location.com/czechia-ip-address-ranges
-geoip_isp_by_name
+function geolocation() {
+    /*1	https://geolocation-db.com/json/
+    -1	https://ip-api.io/json/
+    https://lite.ip2location.com/czechia-ip-address-ranges
+    geoip_isp_by_name
 
-<script>
-var x = document.getElementById("demo");
-function getLocation() {*/
-  if (navigator.geolocation) {
- let pos =   navigator.geolocation.getCurrentPosition(showPosition);
- console.log(navigator.geolocation);
-  } else {
-    console.log(  "Geolocation is not supported by this browser.");
- }
+    <script>
+    var x = document.getElementById("demo");
+    function getLocation() {*/
+    if (navigator.geolocation) {
+        let pos = navigator.geolocation.getCurrentPosition(showPosition);
+        console.log(navigator.geolocation);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
 
- function showPosition(position) {
-	console.log(position);
-//	x.innerHTML = "Latitude: " + position.coords.latitude +
-	//"<br>Longitude: " + position.coords.longitude;
-  }
+    function showPosition(position) {
+        console.log(position);
+        //	x.innerHTML = "Latitude: " + position.coords.latitude +
+        //"<br>Longitude: " + position.coords.longitude;
+    }
 
 }
 
 // function showPosition(position) {
-	// if (navigator.geolocation) {
+// if (navigator.geolocation) {
 // - x.innerHTML = "Latitude: " + position.coords.latitude +
-  //"<br>Longitude: " + position.coords.longitude;
+//"<br>Longitude: " + position.coords.longitude;
 //}
 //</script>
 //
 //}
 
 function DetectLoacation() {
-	if (!navigator.languages.includes('cs') && !navigator.languages.includes('cz')) return;
-	if (language != "default") return;
-	if (localStorage.getItem('DefaultCountry') !== null) return;
-	/*
-	//https://api.criminalip.io/v1/ip/data?ip=1.1.1.1&full=true
-	let url="http://ip-api.com/json";
+    if (!navigator.languages.includes('cs') && !navigator.languages.includes('cz')) return;
+    if (language != "default") return;
+    if (localStorage.getItem('DefaultCountry') !== null) return;
+    /*
+    //https://api.criminalip.io/v1/ip/data?ip=1.1.1.1&full=true
+    let url="http://ip-api.com/json";
 	
-	const xhttp = new XMLHttpRequest();
-	xhttp.onload = function() {
-		
-		let json=this.responseText;	
-		let data=JSON.parse(json);
-		if (data.status=="success") {
-			if (data.countryCode=="CZ") {			
-				let country=LocationNormalize(data);
-				localStorage.setItem('DefaultCountry', country);
-				SetLanguage();
-			}
-		}
-	}
-	xhttp.open("GET", url, true);
-	//xhttp.send();
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+    	
+    	let json=this.responseText;	
+    	let data=JSON.parse(json);
+    	if (data.status=="success") {
+    		if (data.countryCode=="CZ") {			
+    			let country=LocationNormalize(data);
+    			localStorage.setItem('DefaultCountry', country);
+    			SetLanguage();
+    		}
+    	}
+    }
+    xhttp.open("GET", url, true);
+    //xhttp.send();
 
-	function LocationNormalize(data) {
-		let country="";
+    function LocationNormalize(data) {
+    	let country="";
 
-		switch (data.regionName) {
-			case "Zlínský kraj":
-				country="Morava";
-				break;
+    	switch (data.regionName) {
+    		case "Zlínský kraj":
+    			country="Morava";
+    			break;
 
-			case "Olomoucky kraj":
-				switch (data.city) {
-					case "Uničov":
-						country="Morava";f
-						break;
+    		case "Olomoucky kraj":
+    			switch (data.city) {
+    				case "Uničov":
+    					country="Morava";f
+    					break;
 
-					case "Olomouc":
-						country="Morava";
-						break;
+    				case "Olomouc":
+    					country="Morava";
+    					break;
 
-					case "Přerov":
-						country="Morava";
-						break;
+    				case "Přerov":
+    					country="Morava";
+    					break;
 
-					case "Prostějov":
-						country="Morava";
-						break;
+    				case "Prostějov":
+    					country="Morava";
+    					break;
 
-					case "Zábřeh":
-						country="Morava";
-						break;
+    				case "Zábřeh":
+    					country="Morava";
+    					break;
 
-					case "Šumperk":
-						country="Morava";
-						break;
+    				case "Šumperk":
+    					country="Morava";
+    					break;
 
-					case "Bruntál":
-						country="Slezsko";
-						break;
+    				case "Bruntál":
+    					country="Slezsko";
+    					break;
 
-					case "Krnov":
-						country="Slezsko";
-						break;
+    				case "Krnov":
+    					country="Slezsko";
+    					break;
 
-					case "Jeseník":
-						country="Slezsko";
-						break;
-					
-					case "Rýmařov":
-						country="Morava";
-						break;
-					
-					case "Šternberk":
-						country="Morava";
-						break;
+    				case "Jeseník":
+    					country="Slezsko";
+    					break;
+    				
+    				case "Rýmařov":
+    					country="Morava";
+    					break;
+    				
+    				case "Šternberk":
+    					country="Morava";
+    					break;
 
-					case "Osoblaha":
-						country="Morava";
-						break;
+    				case "Osoblaha":
+    					country="Morava";
+    					break;
 
-					default:
-						country="Morava";
-						break;
-				}
-				break;
+    				default:
+    					country="Morava";
+    					break;
+    			}
+    			break;
 
-			case "Moravskoslezský kraj":
-				switch (data.city) {
-					case "Ostrava":
-						country="Morava";
-						break;
+    		case "Moravskoslezský kraj":
+    			switch (data.city) {
+    				case "Ostrava":
+    					country="Morava";
+    					break;
 
-					case "Příbor":
-						country="Morava";
-						break;
+    				case "Příbor":
+    					country="Morava";
+    					break;
 
-					case "Nový Jíčín":
-						country="Morava";
-						break;
+    				case "Nový Jíčín":
+    					country="Morava";
+    					break;
 
-					case "MOravský Beroun":
-						country="Morava";
-						break;
+    				case "MOravský Beroun":
+    					country="Morava";
+    					break;
 
-					case "Budišov nad Budišovkou":
-						country="Morava";
-						break;
+    				case "Budišov nad Budišovkou":
+    					country="Morava";
+    					break;
 
-					case "Bruntál":
-						country="Slezsko";
-						break;
+    				case "Bruntál":
+    					country="Slezsko";
+    					break;
 
-					case "Krnov":
-						country="Slezsko";
-						break;
+    				case "Krnov":
+    					country="Slezsko";
+    					break;
 
-					case "Opava":
-						country="Slezsko";
-						break;
+    				case "Opava":
+    					country="Slezsko";
+    					break;
 
-					case "Bohumín":
-						country="Slezsko";
-						break;
-					
-					case "Karviná":
-						country="Slezsko";
-						break;
-					
-					case "Havířov":
-						country="Slezsko";
-						break;
+    				case "Bohumín":
+    					country="Slezsko";
+    					break;
+    				
+    				case "Karviná":
+    					country="Slezsko";
+    					break;
+    				
+    				case "Havířov":
+    					country="Slezsko";
+    					break;
 
-					case "Český Těšín":
-						country="Slezsko";
-						break;
-							
-					case "Jablunkov":
-						country="Slezsko";
-						break;
-						
-					case "Šenov":
-						country="Slezsko";
-						break;
+    				case "Český Těšín":
+    					country="Slezsko";
+    					break;
+    						
+    				case "Jablunkov":
+    					country="Slezsko";
+    					break;
+    					
+    				case "Šenov":
+    					country="Slezsko";
+    					break;
 
-					case "Bílovec":
-						country="Slezsko";
-						break;
+    				case "Bílovec":
+    					country="Slezsko";
+    					break;
 
-					case "Vítkov":
-						country="Slezsko";
-						break;
+    				case "Vítkov":
+    					country="Slezsko";
+    					break;
 
-					case "Horní Benešov":
-						country="Slezsko";
-						break;
+    				case "Horní Benešov":
+    					country="Slezsko";
+    					break;
 
-					default:
-						country="Slezsko";
-						break;
-				}
-				break;
+    				default:
+    					country="Slezsko";
+    					break;
+    			}
+    			break;
 
-			case "Jihomoravský kraj":
-				country="Morava";
-				break;
+    		case "Jihomoravský kraj":
+    			country="Morava";
+    			break;
 
-			case "Pardubický kraj":
-				switch (data.city) {
-					case "Svitavy":
-						country="Morava";
-						break;
+    		case "Pardubický kraj":
+    			switch (data.city) {
+    				case "Svitavy":
+    					country="Morava";
+    					break;
 
-					case "Moravská Třebová":
-						country="Morava";
-						break;
+    				case "Moravská Třebová":
+    					country="Morava";
+    					break;
 
-					case "Březová nad Svitavou":
-						country="Morava";
-						break;
+    				case "Březová nad Svitavou":
+    					country="Morava";
+    					break;
 
-					case "Jevíčko":
-						country="Morava";
-						break;
+    				case "Jevíčko":
+    					country="Morava";
+    					break;
 
-					default:
-						country="Čechy";
-						break;
-				}
-				break;
+    				default:
+    					country="Čechy";
+    					break;
+    			}
+    			break;
 
-			case "Kraj Vysočina":
-				switch (data.city) {
-					case "Telč":
-						country="Morava";
-						break;
+    		case "Kraj Vysočina":
+    			switch (data.city) {
+    				case "Telč":
+    					country="Morava";
+    					break;
 
-					case "Jihlava":
-						country="Morava";
-						break;
+    				case "Jihlava":
+    					country="Morava";
+    					break;
 
-					case "Třebíč":
-						country="Morava";
-						break;
+    				case "Třebíč":
+    					country="Morava";
+    					break;
 
-					case "Ždár nad Sázavou":
-						country="Morava";
-						break;
+    				case "Ždár nad Sázavou":
+    					country="Morava";
+    					break;
 
-					case "nové Město na Moravě":
-						country="Morava";
-						break;
+    				case "nové Město na Moravě":
+    					country="Morava";
+    					break;
 
-					case "Velké Meziříčí":
-						country="Morava";
-						break;
+    				case "Velké Meziříčí":
+    					country="Morava";
+    					break;
 
-					case "Třebíč":
-						country="Morava";
-						break;
+    				case "Třebíč":
+    					country="Morava";
+    					break;
 
-					case "Náměšť nad Oslavou":
-						country="Morava";
-						break;
+    				case "Náměšť nad Oslavou":
+    					country="Morava";
+    					break;
 
-					case "Třešť":
-						country="Morava";
-						break;
-					
-					case "Bystřice nad Perštejnem":
-						country="Morava";
-						break;
-					
-					case "Moravské Budějovice":
-						country="Morava";
-						break;
-					
-					case "Humpolec":
-						country="Čechy";
-						break;
-				
-					case "Pelhřimoc":
-						country="Čechy";
-						break;
-			
-					case "Havlíčkův Brod":
-						country="Čechy";
-						break;
-		
-					case "Chotěboř":
-						country="Čechy";
-						break;
+    				case "Třešť":
+    					country="Morava";
+    					break;
+    				
+    				case "Bystřice nad Perštejnem":
+    					country="Morava";
+    					break;
+    				
+    				case "Moravské Budějovice":
+    					country="Morava";
+    					break;
+    				
+    				case "Humpolec":
+    					country="Čechy";
+    					break;
+    			
+    				case "Pelhřimoc":
+    					country="Čechy";
+    					break;
+    		
+    				case "Havlíčkův Brod":
+    					country="Čechy";
+    					break;
+    	
+    				case "Chotěboř":
+    					country="Čechy";
+    					break;
 	
-					case "Pacov":
-						country="Čechy";
-						break;
+    				case "Pacov":
+    					country="Čechy";
+    					break;
 
-					case "Habry":
-						country="Čechy";
-						break;
+    				case "Habry":
+    					country="Čechy";
+    					break;
 
-					case "Světlá nad Sázavou":
-						country="Čechy";
-						break;
+    				case "Světlá nad Sázavou":
+    					country="Čechy";
+    					break;
 
-					case "Přybyslav":
-						country="Čechy";
-						break;
+    				case "Přybyslav":
+    					country="Čechy";
+    					break;
 
-					case "Horní Cerekev":
-						country="Čechy";
-						break;
+    				case "Horní Cerekev":
+    					country="Čechy";
+    					break;
 
-					default:
-						country="Morava";
-						break;
-				}
-				break;
+    				default:
+    					country="Morava";
+    					break;
+    			}
+    			break;
 
-			case "Jihočeský kraj":
-				switch (data.city) {
-					case "Dačice":
-						country="Morava";
-						break;
+    		case "Jihočeský kraj":
+    			switch (data.city) {
+    				case "Dačice":
+    					country="Morava";
+    					break;
 
-					case "Slavonice":
-						country="Morava";
-						break;
+    				case "Slavonice":
+    					country="Morava";
+    					break;
 
-					case "Staré Hobzí":
-						country="Morava";
-						break;
+    				case "Staré Hobzí":
+    					country="Morava";
+    					break;
 
-					case "Dešná":
-						country="Morava";
-						break;
+    				case "Dešná":
+    					country="Morava";
+    					break;
 
-					case "Písečné":
-						country="Morava";
-						break;
+    				case "Písečné":
+    					country="Morava";
+    					break;
 
-					case "Budíškovice":
-						country="Morava";
-						break;
+    				case "Budíškovice":
+    					country="Morava";
+    					break;
 
-					default:
-						country="Čechy";
-						break;
-				}
-				break;
+    				default:
+    					country="Čechy";
+    					break;
+    			}
+    			break;
 
-			default:
-				country="Čechy";
-				break;
-		}
+    		default:
+    			country="Čechy";
+    			break;
+    	}
 
-		return country;
-	}*/
-	return "Morava";
+    	return country;
+    }*/
+    return "Morava";
 }
 
 /*
@@ -5010,463 +5016,483 @@ function ExtractMergedFiles(inputFile) {
 	return 
 }*/
 
-function navrhClick(text,customStyle) {
-	mapperInput.value=text;
-	mapper_init(customStyle!=undefined, customStyle);
+function navrhClick(text, customStyle) {
+    mapperInput.value = text;
+    mapper_init(customStyle != undefined, customStyle);
 }
 
 let ownLang;
-let loadedOwnLang=false;
+let loadedOwnLang = false;
 //var loadedVersionNumber;
 
-function loadLang() {		
-	if (loadedOwnLang) {
-		loadedOwnLang=false;
-		ownLang=undefined;
+function loadLang() {
+    if (loadedOwnLang) {
+        loadedOwnLang = false;
+        ownLang = undefined;
 
-	//	document.getElementById("ownLangType").innerText ="Nenačtené";
-		//document.getElementById("ownLangFile").style.display="block";
-	//	document.getElementById("ownLangFileLoad").innerText ="Načíst překlad";
-	} else {
-		var file = document.getElementById("ownLangFile").files[0];
-		if (file) {
-		//	alert("loaded");
-			var reader = new FileReader();
-			reader.readAsText(file, "UTF-8");
-			reader.onload = function (event) {
-				loadedOwnLang=true;
-				let ownLangContent = event.target.result;
+        //	document.getElementById("ownLangType").innerText ="Nenačtené";
+        //document.getElementById("ownLangFile").style.display="block";
+        //	document.getElementById("ownLangFileLoad").innerText ="Načíst překlad";
+    } else {
+        var file = document.getElementById("ownLangFile").files[0];
+        if (file) {
+            //	alert("loaded");
+            var reader = new FileReader();
+            reader.readAsText(file, "UTF-8");
+            reader.onload = function(event) {
+                loadedOwnLang = true;
+                let ownLangContent = event.target.result;
 
-				let lines=ownLangContent.split('\r\n');
-				ownLang=new LanguageTr();
-				//loadedversion=lines[0];
-			//	loadedVersionNumber=parseFloat(loadedversion.substr(4));
-			//	if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
-					ownLang.Load(lines);
-					//AddLang(ownLang);
-			//	} else {
-				//	console.log("Incorrect file version", lines);
-			//	}
-				let ele=document.createElement("option");
-				ele.innerText="*own*";
+                let lines = ownLangContent.split('\r\n');
+                ownLang = new LanguageTr();
+                //loadedversion=lines[0];
+                //	loadedVersionNumber=parseFloat(loadedversion.substr(4));
+                //	if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
+                ownLang.Load(lines);
+                //AddLang(ownLang);
+                //	} else {
+                //	console.log("Incorrect file version", lines);
+                //	}
+                let ele = document.createElement("option");
+                ele.innerText = "*own*";
 
-				document.getElementById("selectorTo").appendChild(ele);
-				//document.getElementById("ownLangType").innerText ="Načtené";
-				document.getElementById("ownLangFile").style.display="none";
-				document.getElementById("ownLangFileLoad").innerText ="Uvolnit";
-			}
-		} else alert("Načti soubor přes horní tlačítko - Vybrat soubor");
-	}			
+                document.getElementById("selectorTo").appendChild(ele);
+                //document.getElementById("ownLangType").innerText ="Načtené";
+                document.getElementById("ownLangFile").style.display = "none";
+                document.getElementById("ownLangFileLoad").innerText = "Uvolnit";
+            }
+        } else alert("Načti soubor přes horní tlačítko - Vybrat soubor");
+    }
 }
 
 function HashSet(varibleName, value) {
-	if (typeof value == "undefined") {
-		HashDelete(varibleName);
-	} else if (typeof value == "boolean") {
-		if (!value) HashDelete(varibleName);
-	} else if (value="") HashDelete(varibleName);
+    if (typeof value == "undefined") {
+        HashDelete(varibleName);
+    } else if (typeof value == "boolean") {
+        if (!value) HashDelete(varibleName);
+    } else if (value = "") HashDelete(varibleName);
 
-	// if exist overwrite
-	let overwrite=false;
-	let varsRaw=location.hash.split('&');
-	let vars=[];
+    // if exist overwrite
+    let overwrite = false;
+    let varsRaw = location.hash.split('&');
+    let vars = [];
 
-	for (let i=0; i<varsRaw.length; i++) {
-		if (varsRaw[i].includes('=')) {
-			vars[i] = varsRaw[i].split("=");
-			if (vars[i][0]==varibleName) {
-				vars[i][0]=value;
-				overwrite=true;
-			}
-		// bool types
-		} else if (varsRaw[i]==varibleName) {
-			vars[i]=varibleName;
-			overwrite=true;
-		}
-	}
-	if (overwrite) {
-		let str="";
-		for (let i=0; i<vars.length; i++) {
-			if (i!=0)str+="&";
-			if (Array.isArray(vars[i])) {
-				str+=vars[i][0]+"="+vars[i][1];
-			} else {
-				str+=vars[i];
-			}			
-		}
-		return;
-	}
+    for (let i = 0; i < varsRaw.length; i++) {
+        if (varsRaw[i].includes('=')) {
+            vars[i] = varsRaw[i].split("=");
+            if (vars[i][0] == varibleName) {
+                vars[i][0] = value;
+                overwrite = true;
+            }
+            // bool types
+        } else if (varsRaw[i] == varibleName) {
+            vars[i] = varibleName;
+            overwrite = true;
+        }
+    }
+    if (overwrite) {
+        let str = "";
+        for (let i = 0; i < vars.length; i++) {
+            if (i != 0) str += "&";
+            if (Array.isArray(vars[i])) {
+                str += vars[i][0] + "=" + vars[i][1];
+            } else {
+                str += vars[i];
+            }
+        }
+        return;
+    }
 
-	// new attach
-	let set="";
-	if (location.hash!="" && location.hash!="#") set+="&";
+    // new attach
+    let set = "";
+    if (location.hash != "" && location.hash != "#") set += "&";
 
-	if (typeof value == "boolean") set+=varibleName;
-	else set+=varibleName+"="+value;
-	location.hash+=set;
+    if (typeof value == "boolean") set += varibleName;
+    else set += varibleName + "=" + value;
+    location.hash += set;
 }
 
 function HashDelete(varibleName) {
-	// if exist overwrite
-	let vars=location.hash.split('&');
-	for (let i=0; i<vars.length; i++) {
-		if (vars[i].includes('=')) {
-			vars[i]=vars[i].split("=");
-			if (vars[i][0]==varibleName) {
-				if (value=="") vars[i][1]="";
-				vars[i][0]=value;
-				overwrite=true;
-			}
-		// bool types
-		} else if (vars[i]==varibleName) {
-			if (!value) vars[i]="";
-			overwrite=true;
-		}
-	}
-	if (overwrite) {
-		let str="";
-		for (let i=0; i<vars.length; i++) {
-			if (i!=0)str+="&";
-			if (Array.isArray(vars[i])) {
-				if (vars[i][0]!="") {
-					str+=vars[i][0]+"="+vars[i][1];
-				}
-			} else {
-				//if (i==0)str+="&";
-				if (vars[i]!="") str+="&"+vars[i];
-			}			
-		}
-		return;
-	}
+    // if exist overwrite
+    let vars = location.hash.split('&');
+    for (let i = 0; i < vars.length; i++) {
+        if (vars[i].includes('=')) {
+            vars[i] = vars[i].split("=");
+            if (vars[i][0] == varibleName) {
+                if (value == "") vars[i][1] = "";
+                vars[i][0] = value;
+                overwrite = true;
+            }
+            // bool types
+        } else if (vars[i] == varibleName) {
+            if (!value) vars[i] = "";
+            overwrite = true;
+        }
+    }
+    if (overwrite) {
+        let str = "";
+        for (let i = 0; i < vars.length; i++) {
+            if (i != 0) str += "&";
+            if (Array.isArray(vars[i])) {
+                if (vars[i][0] != "") {
+                    str += vars[i][0] + "=" + vars[i][1];
+                }
+            } else {
+                //if (i==0)str+="&";
+                if (vars[i] != "") str += "&" + vars[i];
+            }
+        }
+        return;
+    }
 }
 
 function HashGet(varibleName) {
-	for (const hashpart in location.hash.split('&')) {
-		// values types
-		if (hashpart.includes('=')){
-			let parts=hashpart.split("=");
-			if (parts[0]==varibleName) return parts[0];
+    for (const hashpart in location.hash.split('&')) {
+        // values types
+        if (hashpart.includes('=')) {
+            let parts = hashpart.split("=");
+            if (parts[0] == varibleName) return parts[0];
 
-		// bool types
-		} else if (hashpart==varibleName) return true;
-	}
-	return;
+            // bool types
+        } else if (hashpart == varibleName) return true;
+    }
+    return;
 }
 
 function TabSwitch(newAppName) {
-	let selectedClassName = "selectedApp";
-	let tabs=document.getElementsByClassName("btnApp");
+    let selectedClassName = "selectedApp";
+    let tabs = document.getElementsByClassName("btnApp");
 
-	document.getElementById("tabApp_"+appSelected).classList.remove(selectedClassName);
-	document.getElementById("tabApp2_"+appSelected).classList.remove(selectedClassName);
-	document.getElementById("tabApp_"+newAppName).classList.add(selectedClassName);
-	document.getElementById("tabApp2_"+newAppName).classList.add(selectedClassName);
+    document.getElementById("tabApp_" + appSelected).classList.remove(selectedClassName);
+    document.getElementById("tabApp2_" + appSelected).classList.remove(selectedClassName);
+    document.getElementById("tabApp_" + newAppName).classList.add(selectedClassName);
+    document.getElementById("tabApp2_" + newAppName).classList.add(selectedClassName);
 
-	ShowAppPage(newAppName);
+    ShowAppPage(newAppName);
 }
 
 function SetSwitchForced() {
-	CloseLastPopup();
-	
-	let selectedClassName = "selectedApp";
-	for (let tab of document.getElementById("appsTab").childNodes) {
-		if (tab.nodeName !== '#text') {
-			if (tab.classList.length>0) tab.classList.remove(selectedClassName);
-		}
-	}
-	for (let tab of document.getElementById("appsTab2").childNodes) {
-		if (tab.nodeName !== '#text') {
-			if (tab.classList.length>0) tab.classList.remove(selectedClassName);
-		}
-	}
-	document.getElementById("tabApp_"+appSelected).classList.add(selectedClassName);
-	document.getElementById("tabApp2_"+appSelected).classList.add(selectedClassName);
+    CloseLastPopup();
+
+    let selectedClassName = "selectedApp";
+    for (let tab of document.getElementById("appsTab").childNodes) {
+        if (tab.nodeName !== '#text') {
+            if (tab.classList.length > 0) tab.classList.remove(selectedClassName);
+        }
+    }
+    for (let tab of document.getElementById("appsTab2").childNodes) {
+        if (tab.nodeName !== '#text') {
+            if (tab.classList.length > 0) tab.classList.remove(selectedClassName);
+        }
+    }
+    document.getElementById("tabApp_" + appSelected).classList.add(selectedClassName);
+    document.getElementById("tabApp2_" + appSelected).classList.add(selectedClassName);
 }
 
-function CloseLastPopup(){	
-	console.log(PopPage_lastOpen);
-	
-	document.body.style.overflow="unset";
+function CloseLastPopup() {
+    //    console.log(PopPage_lastOpen);
 
-	let old=document.getElementById("pagePop_"+PopPage_lastOpen);
-	if (old!=undefined) {
-		if (old.style.opacity=="1") PopPageClose(PopPage_lastOpen);
-	}
+    document.body.style.overflow = "unset";
+
+    let old = document.getElementById("pagePop_" + PopPage_lastOpen);
+    if (old != undefined) {
+        if (old.style.opacity == "1") PopPageClose(PopPage_lastOpen);
+    }
 }
 
 //let timerTab=false;
 function ShowAppPage(name) {
-	if (name==appSelected) return;
+    if (name == appSelected) return;
 
-	CloseLastPopup();
+    CloseLastPopup();
 
-	// To left or right?
-	let apps=["translator", "search","mapper"];
-	let left=apps.indexOf(name) > apps.indexOf(appSelected);
-	
-	// id of pages
-	let pageId="appPage_"+name;
-	let pageC=document.getElementById(pageId);
-	
-	let pageIdB="appPage_"+appSelected;
-	let pageB=document.getElementById(pageIdB);
+    // To left or right?
+    let apps = ["translator", "search", "mapper"];
+    let left = apps.indexOf(name) > apps.indexOf(appSelected);
 
-	// absolute specified position
-	let topPx=(document.getElementById("header").clientHeight+1)+"px";
-	
-	// Set both as absolute
-	pageB.style.position="absolute";
-	pageB.style.top=topPx;
-	pageB.style.width="100%";	
-	pageB.style.zIndex=0;
-	
-	pageC.style.position="absolute";
-	pageC.style.top=topPx;
-	pageC.style.width="100%";
-	pageC.style.display="block";
-	pageC.style.zIndex=10;
+    // id of pages
+    let pageId = "appPage_" + name;
+    let pageC = document.getElementById(pageId);
 
-	//Init values
-	pageB.style.opacity=1;
-	pageB.style.left="0%";
+    let pageIdB = "appPage_" + appSelected;
+    let pageB = document.getElementById(pageIdB);
 
-	pageC.style.opacity=0.5;
-	pageC.style.left=left ? "100%" : "-100%";	
+    // absolute specified position
+    let topPx = (document.getElementById("header").clientHeight + 1) + "px";
 
-	//console.log(pageC);
+    // Set both as absolute
+    pageB.style.position = "absolute";
+    pageB.style.top = topPx;
+    pageB.style.width = "100%";
+    pageB.style.zIndex = 0;
 
-	// Start animation
-	pageC.classList.add("appani");	
-	pageB.classList.add("appani");	
+    pageC.style.position = "absolute";
+    pageC.style.top = topPx;
+    pageC.style.width = "100%";
+    pageC.style.display = "block";
+    pageC.style.zIndex = 10;
 
-	// Proč to chce timeout????
-	setTimeout(()=>{
-		pageC.style.opacity=1;
-		pageC.style.left="0%";	
-		
-		pageB.style.opacity=0.5;
-		pageB.style.left=left ? "-100%" : "100%";
-	}, 10);
+    //Init values
+    pageB.style.opacity = 1;
+    pageB.style.left = "0%";
 
-	appSelected=name;
-	location.hash=name;
+    pageC.style.opacity = 0.5;
+    pageC.style.left = left ? "100%" : "-100%";
 
-	// Remove animation
-	setTimeout(()=>{
-		pageB.classList.remove("appani");		
-		pageC.classList.remove("appani");
-		if (name!=appSelected) return;
+    //console.log(pageC);
 
-		pageC.style.top="unset";
-		pageC.style.position="unset";
-		pageC.style.zIndex=0;
-		pageC.style.width="unset";
-		
-		pageB.style.width="unset";
-		pageB.style.left="unset";			
-		pageB.style.top="unset";
-		pageB.style.position="unset";
-		pageB.style.zIndex=0;
-		pageB.style.left="unset";
+    // Start animation
+    pageC.classList.add("appani");
+    pageB.classList.add("appani");
 
-		// Hide
-		pageB.style.display="none";
-	}, 310);
+    // Proč to chce timeout????
+    setTimeout(() => {
+        pageC.style.opacity = 1;
+        pageC.style.left = "0%";
+
+        pageB.style.opacity = 0.5;
+        pageB.style.left = left ? "-100%" : "100%";
+    }, 10);
+
+    appSelected = name;
+    location.hash = name;
+
+    // Remove animation
+    setTimeout(() => {
+        pageB.classList.remove("appani");
+        pageC.classList.remove("appani");
+        if (name != appSelected) return;
+
+        pageC.style.top = "unset";
+        pageC.style.position = "unset";
+        pageC.style.zIndex = 0;
+        pageC.style.width = "unset";
+
+        pageB.style.width = "unset";
+        pageB.style.left = "unset";
+        pageB.style.top = "unset";
+        pageB.style.position = "unset";
+        pageB.style.zIndex = 0;
+        pageB.style.left = "unset";
+
+        // Hide
+        pageB.style.display = "none";
+    }, 310);
 }
 
-let simpleTabContent=false;
-window.addEventListener('resize', function(){
-	if (window.innerWidth<550) {
-		if (!simpleTabContent){
-			simpleTabContent=true;
-			SetLanguage();
-		}
-	}else{
-		if (simpleTabContent) {
-			simpleTabContent=false;		
-			SetLanguage();	
-		}
-	}
+let simpleTabContent = false;
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 550) {
+        if (!simpleTabContent) {
+            simpleTabContent = true;
+            SetLanguage();
+        }
+    } else {
+        if (simpleTabContent) {
+            simpleTabContent = false;
+            SetLanguage();
+        }
+    }
 });
 
 function SetCurrentTranscription(transCode) {
 
-	if (transCode=="czechsimple") return [
-		{ from: "mňe", to: "mě"},		
-		{ from: "fje", to: "fě"},
-		{ from: "pje", to: "pě"},
+    if (transCode == "czechsimple") return [
+        { from: "mňe", to: "mě" },
+        { from: "fje", to: "fě" },
+        { from: "pje", to: "pě" },
 
-		{ from: "ďe", to: "dě"},	
-		{ from: "ťe", to: "tě"},	
-		{ from: "ňe", to: "ně"},
+        { from: "ďe", to: "dě" },
+        { from: "ťe", to: "tě" },
+        { from: "ňe", to: "ně" },
 
-		{ from: "ďi", to: "di"},	
-		{ from: "ťi", to: "ti"},	
-		{ from: "ňi", to: "ni"},
+        { from: "ďi", to: "di" },
+        { from: "ťi", to: "ti" },
+        { from: "ňi", to: "ni" },
 
-		{ from: "ijo", to: "io"},
-		{ from: "iju", to: "iu"},
-		{ from: "ije", to: "ie"},
-		{ from: "ija", to: "ia"},
+        { from: "ďí", to: "dí" },
+        { from: "ťí", to: "tí" },
+        { from: "ňí", to: "ní" },
 
-		{ from: "ijó", to: "ió"},
-		{ from: "ijú", to: "iú"},
-		{ from: "ijé", to: "ié"},
-		{ from: "ijá", to: "iá"},
+        { from: "ijo", to: "io" },
+        { from: "iju", to: "iu" },
+        { from: "ije", to: "ie" },
+        { from: "ija", to: "ia" },
 
-		{ from: "ô", to: "o"},
-		{ from: "ê", to: "e"},
-		{ from: "ạ́", to: "ó"},
-		{ from: "ạ́", to: "ó"},
-		{ from: "ə", to: "e"},
-		{ from: "ṵ", to: "u"},
-		{ from: "ł", to: "l"},
-		{ from: "ŕ", to: "r"},
-		{ from: "ĺ", to: "l"},
+        { from: "ijó", to: "ió" },
+        { from: "ijú", to: "iú" },
+        { from: "ijé", to: "ié" },
+        { from: "ijá", to: "iá" },
 
-		{ from: "ni", to: "ny"},
-		{ from: "ní", to: "ný"},
+        { from: "ô", to: "o" },
+        { from: "ê", to: "e" },
+        { from: "ạ́", to: "ó" },
+        { from: "ạ́", to: "ó" },
+        { from: "ə", to: "e" },
+        { from: "ṵ", to: "u" },
+        { from: "ł", to: "l" },
+        { from: "ŕ", to: "r" },
+        { from: "ĺ", to: "l" },
 
-		{ from: "ti", to: "ty"},
-		{ from: "tí", to: "tý"},
+        { from: "ni", to: "ny" },
+        { from: "ní", to: "ný" },
 
-		{ from: "di", to: "dy"},
-		{ from: "dí", to: "dý"},
-		{ from: "ẹ", to: "e"},
-		{ from: "ọ", to: "o"},
-		{ from: "ó́", to: "ó"},
-	];	
-	
-	if (transCode=="czech") return[
-		{ from: "dz", to: "ʒ"},		
-		{ from: "dž", to: "ʒ̆"},
-		
-		{ from: "au", to: "au̯"},
-		{ from: "eu", to: "eu̯"},
-		{ from: "ou", to: "ou̯"},
-		{ from: "ẹ", to: "e"},
-		{ from: "ọ", to: "e"},
-		{ from: "ó́", to: "ó"},
-	];
+        { from: "ti", to: "ty" },
+        { from: "tí", to: "tý" },
 
-	if (transCode=="moravian") return[
-		{ from: "ch", to: "x" },
-		{ from: "x", to: "ks" },
-		{ from: "ď", to: "dj" },
-		{ from: "ť", to: "tj" },
-		{ from: "ň", to: "nj" },
+        { from: "di", to: "dy" },
+        { from: "dí", to: "dý" },
 
-		{ from: "Ch", to: "X" },
-		{ from: "X", to: "Ks" },
-		{ from: "Ď", to: "Dj" },
-		{ from: "Ť", to: "Tj" },
-		{ from: "Ň", to: "Nj" },
-		
-		{ from: "ẹ", to: "e"},
-		{ from: "ọ", to: "o"},
+        { from: "chi", to: "chy" },
+        { from: "hi", to: "hy" },
+        { from: "ki", to: "ky" },
+        { from: "ri", to: "ry" },
 
-		{ from: "ň", to: "ň", type: "end"},
-		{ from: "ó́", to: "ó"},
-	];	
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "o" },
+        { from: "ó́", to: "ó" },
 
-	if (transCode=="silezian") return[
-		{from: "bje", to: "bie"},
-		{from: "mje", to: "mie"},
-		{from: "mě", to: "mie"},
-		{from: "dźe", to: "dzie"},
-		{from: "ňa", to: "nia"},
-		{from: "ňe", to: "nie"},
-		{from: "ně", to: "nie"},
+        { from: "vje", to: "vě", type: "end" },
+        { from: "bje", to: "bě", type: "end" },
+        { from: "bjející", to: "bějící", type: "end" },
+    ];
 
-		{from: "ća", to: "cia"},
-		{from: "će", to: "cie"},
-		{from: "ći", to: "ci"},
-		{from: "ćo", to: "cio"},
-		{from: "ću", to: "ciu"},
-		{from: "ćy", to: "ciy"},
-		
-		{from: "śa", to: "sia"},
-		{from: "śe", to: "sie"},
-		{from: "śi", to: "si"},
-		{from: "śo", to: "sio"},
-		{from: "śu", to: "siu"},
-		{from: "śy", to: "siy"},
+    if (transCode == "czech") return [
+        { from: "dz", to: "ʒ" },
+        { from: "dž", to: "ʒ̆" },
+        { from: "vě", to: "vje" },
+        { from: "bě", to: "bje" },
+        { from: "pě", to: "pje" },
 
-		{from: "źa", to: "zia"},
-		{from: "źe", to: "zie"},
-		{from: "źi", to: "zi"},
-		{from: "źo", to: "zio"},
-		{from: "źu", to: "ziu"},
-		{from: "źy", to: "ziy"},
+        { from: "au", to: "au̯" },
+        { from: "eu", to: "eu̯" },
+        { from: "ou", to: "ou̯" },
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "e" },
+        { from: "ó́", to: "ó" },
+    ];
 
-		{from: "č", to: "cz"},
-		{from: "š", to: "sz"},
-		{from: "ř", to: "rz"},
-		{from: "ž", to: "ż"},
-		{from: "v", to: "w"},
-		
-		{from: "Č", to: "Cz"},
-		{from: "Š", to: "Sz"},
-		{from: "Ř", to: "Rz"},
-		{from: "Ž", to: "Ż"},
-		{from: "V", to: "W"},
-		
-		{from: "ṵ", to: "ł"},
-		{from: "ẹ", to: "e"},
-		{ from: "ọ", to: "o"},
-		{ from: "ó́", to: "ó"},
-	];
-	
-	if (transCode=="ipa") return [
-		{ from: "ř", 	to: "r̝̊" },//̝̊
-		{ from: "vě", 	to: "vjɛ" },
-		{ from: "mě", 	to: "mɲɛ" },
-		{ from: "mňe", 	to: "mɲɛ" },
-		{ from: "u", 	to: "ʊ" },
+    if (transCode == "moravian") return [
+        { from: "ch", to: "x" },
+        { from: "x", to: "ks" },
+        { from: "ď", to: "dj" },
+        { from: "ť", to: "tj" },
+        { from: "ň", to: "nj" },
 
-		{ from: "á", 	to: "aː" },
-		{ from: "é", 	to: "eː" },
-		{ from: "í", 	to: "iː" },
-		{ from: "ó", 	to: "ɔː" },
-		{ from: "ú", 	to: "uː" },
-		{ from: "ů", 	to: "uː" },
+        { from: "Ch", to: "X" },
+        { from: "X", to: "Ks" },
+        { from: "Ď", to: "Dj" },
+        { from: "Ť", to: "Tj" },
+        { from: "Ň", to: "Nj" },
 
-		{ from: "au", 	to: "aʊ" },
-		{ from: "eu", 	to: "eʊ" },
-		{ from: "ou", 	to: "oʊ̯" },
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "o" },
 
-		{ from: "ť", 	to: "c" },
-		{ from: "ď", 	to: "ɟ" },
-		{ from: "c", 	to: "t͡s" },
-		{ from: "dz", 	to: "d͡z" },
-		{ from: "č", 	to: "t͡ʃ" },
-		{ from: "dž", 	to: "d͡ʒ" },
-		{ from: "ch", 	to: "x" },
-		//{ from: "ch", 	to: "ɣ", type: "end"},
-		{ from: "h", 	to: "ɦ" },
+        { from: "ň", to: "ň", type: "end" },
+        { from: "ó́", to: "ó" },
+    ];
 
-		{ from: "ai", 	to: "aɪ̯" },
-		{ from: "ei", 	to: "eɪ̯" },
-		{ from: "oi", 	to: "ɔɪ̯" },
+    if (transCode == "silezian") return [
+        { from: "bje", to: "bie" },
+        { from: "vje", to: "vie" },
+        { from: "vě", to: "vie" },
+        { from: "pě", to: "pie" },
+        { from: "mje", to: "mie" },
+        { from: "mě", to: "mie" },
+        { from: "dźe", to: "dzie" },
+        { from: "ňa", to: "nia" },
+        { from: "ňe", to: "nie" },
+        { from: "ně", to: "nie" },
 
-		{ from: "š", 	to: "ʃ" },
-		{ from: "ž", 	to: "ʒ" },
+        { from: "ća", to: "cia" },
+        { from: "će", to: "cie" },
+        { from: "ći", to: "ci" },
+        { from: "ćo", to: "cio" },
+        { from: "ću", to: "ciu" },
+        { from: "ćy", to: "ciy" },
 
-		{ from: "ň", 	to: "ɲ" },
-		{ from: "ně", 	to: "ɲe" },
+        { from: "śa", to: "sia" },
+        { from: "śe", to: "sie" },
+        { from: "śi", to: "si" },
+        { from: "śo", to: "sio" },
+        { from: "śu", to: "siu" },
+        { from: "śy", to: "siy" },
 
-		{ from: "ẹ", to: "e"},
-		{ from: "ọ", to: "o"},
-		{ from: "ó́", to: "ó"},
-	];	
-	
-	// málo vyskytující se jevy potlačit (v datech moc neřešené)
-	if (transCode=="default") return[
-		{ from: "ẹ", to: "e"},
-		{ from: "ọ", to: "o"},
-		{ from: "ó́", to: "ó"},
-	];
+        { from: "źa", to: "zia" },
+        { from: "źe", to: "zie" },
+        { from: "źi", to: "zi" },
+        { from: "źo", to: "zio" },
+        { from: "źu", to: "ziu" },
+        { from: "źy", to: "ziy" },
 
-	console.log("Unknown code transcription: ", transCode)
-	return null;
+        { from: "č", to: "cz" },
+        { from: "š", to: "sz" },
+        { from: "ř", to: "rz" },
+        { from: "ž", to: "ż" },
+        { from: "v", to: "w" },
+
+        { from: "Č", to: "Cz" },
+        { from: "Š", to: "Sz" },
+        { from: "Ř", to: "Rz" },
+        { from: "Ž", to: "Ż" },
+        { from: "V", to: "W" },
+
+        { from: "ṵ", to: "ł" },
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "o" },
+        { from: "ó́", to: "ó" },
+    ];
+
+    if (transCode == "ipa") return [
+        { from: "ř", to: "r̝̊" }, //̝̊
+        { from: "vě", to: "vjɛ" },
+        { from: "mě", to: "mɲɛ" },
+        { from: "mňe", to: "mɲɛ" },
+        { from: "u", to: "ʊ" },
+
+        { from: "á", to: "aː" },
+        { from: "é", to: "eː" },
+        { from: "í", to: "iː" },
+        { from: "ó", to: "ɔː" },
+        { from: "ú", to: "uː" },
+        { from: "ů", to: "uː" },
+
+        { from: "au", to: "aʊ" },
+        { from: "eu", to: "eʊ" },
+        { from: "ou", to: "oʊ̯" },
+
+        { from: "ť", to: "c" },
+        { from: "ď", to: "ɟ" },
+        { from: "c", to: "t͡s" },
+        { from: "dz", to: "d͡z" },
+        { from: "č", to: "t͡ʃ" },
+        { from: "dž", to: "d͡ʒ" },
+        { from: "ch", to: "x" },
+        //{ from: "ch", 	to: "ɣ", type: "end"},
+        { from: "h", to: "ɦ" },
+
+        { from: "ai", to: "aɪ̯" },
+        { from: "ei", to: "eɪ̯" },
+        { from: "oi", to: "ɔɪ̯" },
+
+        { from: "š", to: "ʃ" },
+        { from: "ž", to: "ʒ" },
+
+        { from: "ň", to: "ɲ" },
+        { from: "ně", to: "ɲe" },
+
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "o" },
+        { from: "ó́", to: "ó" },
+    ];
+
+    // málo vyskytující se jevy potlačit (v datech moc neřešené)
+    if (transCode == "default") return [
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "o" },
+        { from: "ó́", to: "ó" },
+    ];
+
+    console.log("Unknown code transcription: ", transCode)
+    return null;
 }
