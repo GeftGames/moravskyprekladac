@@ -140,7 +140,7 @@ let translations = [
 
 	"Ostatní"
 ];
-
+var currentLang;
 var languagesList = [];
 var languagesListAll = [];
 
@@ -192,7 +192,6 @@ function GetTranslations() {
 			nymburk.Load("TW v0.1\ntNymburk\ncTesting point\ng50.1856607,15.0428904\nq=5".split('\n'));
 			AddLang(nymburk);
 		}
-	//	console.log("Finished 1!");
 
 		const delimiter='§'
 		let fileContents = this.responseText.split(delimiter);
@@ -201,17 +200,17 @@ function GetTranslations() {
 		for (let i = 0; i < fileContents.length; i += 2) {
 			let fileName = fileContents[i], 
 			fileText = fileContents[i + 1];
-		//	console.log(fileName,fileText);
+
 			if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, fileName);
-			// Zápis souboru
-			//using (StreamWriter sw = new StreamWriter(filePath)) sw.Write(fileText);
 		}
 		
 		document.getElementById("totalstats").innerText = CalculateTotalStats();
 
-		//console.log("Finished!");
 		document.getElementById("appPage_"+appSelected).style.display="block";
 		document.getElementById("appPage_"+appSelected).style.opacity="0%";
+
+		currentLang = GetCurrentLanguage();
+
 		setTimeout(function () {
 			document.getElementById("appPage_"+appSelected).style.opacity="100%";
 			document.getElementById("loadingPage").style.display="none";
@@ -365,13 +364,8 @@ function mapRedraw(){
 	
 	//ctx.save();
 	ctx.globalAlpha = 0.5;
-	//ctx.imageSmoothingEnabled= true;
 	ctx.drawImage(imgMap, map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
-	//ctx.fillStyle="rgba(255,255,255,.5)";
 	ctx.globalAlpha = 1;
-	//ctx.fillRect(map_LocX, map_LocY, imgMap.width*map_Zoom, imgMap.height*map_Zoom);
-
-	
 
 	// point of location	
 	let circleRadius=3*map_Zoom;
@@ -379,31 +373,23 @@ function mapRedraw(){
 	if (circleRadius<2)circleRadius=2;
 	if (circleRadius>8)circleRadius=8;
 	ctx.lineCap = 'round';
+
 	// generate dots
 	for (let p of languagesList){
-		if (p.Quality==0 && map_Zoom<1.5) continue;
+		if (p.Quality==0 && map_Zoom<1.5 && !(p.Name==currentLang.Name)) continue;
 
 		//out of map
 		if (入っちゃった(map_LocX+p.locationX*map_Zoom+circleRadius*2,map_LocY+p.locationY*map_Zoom+circleRadius*2, 0, 0, map_DisplayWidth+circleRadius*4,map_DisplayHeight+circleRadius*4)){
-
-			//ctx.strokeStyle = 'Black';
-			ctx.fillStyle=p.ColorFillStyle;
-			/*if (p.Quality==5) ctx.fillStyle="Gold";		
-			else if (p.Quality==4) ctx.fillStyle="Yellow";		
-			else if (p.Quality==3) ctx.fillStyle="Orange";		
-			else if (p.Quality==2){ ctx.fillStyle="#cd7f32";		ctx.strokeStyle = 'rgb(0,0,0,.9)';}	
-			else if (p.Quality==1) {ctx.fillStyle="Red";	ctx.strokeStyle = 'rgb(0,0,0,.8)';}	
-			else if (p.Quality==0) {ctx.fillStyle="rgb(128,128,128,.1)";ctx.strokeStyle = 'rgb(0,0,0,.5)';}
-			else ctx.fillStyle="Black";*/
+			
+			if (p.Name==currentLang.Name) ctx.fillStyle="Black";
+			else ctx.fillStyle=p.ColorFillStyle;
 			
 			ctx.beginPath();
 			ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
-			ctx.fill();		
+			ctx.fill();
 			
 			
 			ctx.strokeStyle=p.ColorStrokeStyle;
-			//ctx.beginPath();		
-			//ctx.arc(map_LocX+p.locationX*map_Zoom/*-circleRadius*/, map_LocY+p.locationY*map_Zoom/*-circleRadius*/, circleRadius, 0, 2 * Math.PI);
 			ctx.stroke();
 		}
 	}
@@ -414,7 +400,7 @@ function mapRedraw(){
 	// generate texts
 	let z= dev? 3.5:2.5;
 	for (let p of languagesList){
-		if ((map_Zoom>z && p.Quality<2) || p.Quality>=2) {
+		if ((map_Zoom>z && p.Quality<2) || p.Quality>=2 || p.Name==currentLang.Name) {
 			
 			//out of map
 			if (入っちゃった(map_LocX+p.locationX*map_Zoom+circleRadius*2, map_LocY+p.locationY*map_Zoom+circleRadius*2,0,0,map_DisplayWidth+circleRadius*4,map_DisplayHeight+circleRadius*4)){
@@ -550,50 +536,48 @@ function ClearTextbox(textbox) {
 }
 
 function Translate() {	
-//	textAreaAdjust();
-	let lang = GetCurrentLanguage();
+	currentLang = GetCurrentLanguage();
 	let input=document.getElementById("specialTextarea").value;
 	if (input=="") document.getElementById("ClearTextbox").style.display="none";
 	else document.getElementById("ClearTextbox").style.display="block";
-	//console.log("input: ", input);
 
-	if (lang !== null) {
+	if (currentLang !== null) {
 		let outputParernt=document.getElementById("outputtext");
 		outputParernt.innerHTML="";
-		let out=lang.Translate(input,true);
+		let out=currentLang.Translate(input,true);
 		if (dev) console.log("Transtated as: ", out);
 		outputParernt.appendChild(out);
 
-		BuildSelect(lang);
+		BuildSelect(currentLang);
 	}
 }
 
 function TranslateSimpleText(input) {	
-	let lang = GetCurrentLanguage();
+	currentLang = GetCurrentLanguage();
 	//console.log("input: ", input);
 
-	if (lang !== null) {		
-		let out=lang.Translate(input,false);
+	if (currentLang !== null) {		
+		let out=currentLang.Translate(input,false);
 		if (dev) console.log("Transtated as: ", out);
 		return out;
 	}
 }
 
 function GetDic() {	
-	let lang = GetCurrentLanguage();
+	currentLang = GetCurrentLanguage();
 	let input = dicInput.value;
 	
-	if (lang.Quality<2) document.getElementById("nodeTranslateTextLowQuality").style.display="block";
+	if (currentLang.Quality<2) document.getElementById("nodeTranslateTextLowQuality").style.display="block";
 	else document.getElementById("nodeTranslateTextLowQuality").style.display="none";
 
-	//if (input=="") document.getElementById("dicOut").innerHTML="";
-	/*else*/ if (lang !== null) {
-		let out=lang.GetDic(input);
+	if (currentLang !== null) {
+		let out=currentLang.GetDic(input);
 		document.getElementById("dicOut").innerHTML="";
 		document.getElementById("dicOut").appendChild(out);
 	}
 }
 
+// Získat zvolený překlad
 function GetCurrentLanguage() {
 	let ele2=document.getElementById("selectorTo").value;
 	if (ele2=="*own*" && loadedOwnLang) {
@@ -1370,10 +1354,6 @@ function SearchInMoravian() {
 			record.appendChild(document.createTextNode(" "));
 			
 			let locData=GetLocString(sw.Location);
-		/*	let loc;
-			if (locData) loc = document.createElement("span");
-			else loc = document.createElement("a");	
-			loc.innerText=locData[0];*/
 			record.appendChild(locData);
 
 			outElement.appendChild(record);
