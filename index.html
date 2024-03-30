@@ -1,158 +1,153 @@
 ﻿<!DOCTYPE html>
 <html lang="cs" style="min-height: 100%">
-	<head>
-		<meta charset="UTF-8">
 
-		<script type="application/ld+json"> {
-			"@context":"http://schema.org",
-			"@type":"ItemList",
-			"itemListOrder": "Ascending",
-			"itemListElement":[
-				{
-					"@type": "ItemList", 
-					"name": "Přeložit text",
-					"position": 1, 
-					"url": "https://moravskyprekladac.pages.dev/#text"
-				},
-				{
-					"@type": "ItemList", 
-					"name": "Slovník",
-					"position": 2, 
-					"url": "https://moravskyprekladac.pages.dev/dic.html"
-				},
-				{
-					"@type": "ItemList", 
-					"name": "Přeložit titulky",
-					"position": 3, 
-					"url": "https://moravskyprekladac.pages.dev/subs.html"
-				},
-				{
-					"@type": "ItemList", 
-					"name": "Generátor map",
-					"position": 4, 
-					"url": "https://moravskyprekladac.pages.dev/mapper.html"
-				},
-				{
-					"@type": "ItemList", 
-					"name": "Přeložení souborů",
-					"position": 5, 
-					"url": "https://moravskyprekladac.pages.dev/files.html"
-				},
-				{
-					"@type": "ItemList
-					", 
-					"name": "Vyhledávání slov",
-					"position": 6, 
-					"url": "https://moravskyprekladac.pages.dev/search.html"
-				}
-			]
-		}
-		</script>
-		<script type="application/ld+json">
-			{
-			  "@context": "https://schema.org",
-			  "@type": "SoftwareApplication",
-			  "name": "Moravský překladač",
-			  "operatingSystem": "ALL",
-			  "applicationCategory": "Translator",
+<head>
+    <meta charset="UTF-8">
 
-			  "potentialAction": {
-				"@type": "ViewAction",
-				"target": [
-				  "https://moravskyprekladac.pages.dev",
-				  {
-					"@type": "EntryPoint",
-					"contentType": "application/json+ld"
-				  }
-				]
-			  }
-			}
-		</script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "ItemList",
+            "itemListOrder": "Ascending",
+            "itemListElement": [{
+                "@type": "ItemList",
+                "name": "Přeložit text",
+                "position": 1,
+                "url": "https://moravskyprekladac.pages.dev/#text"
+            }, {
+                "@type": "ItemList",
+                "name": "Slovník",
+                "position": 2,
+                "url": "https://moravskyprekladac.pages.dev/dic.html"
+            }, {
+                "@type": "ItemList",
+                "name": "Přeložit titulky",
+                "position": 3,
+                "url": "https://moravskyprekladac.pages.dev/subs.html"
+            }, {
+                "@type": "ItemList",
+                "name": "Generátor map",
+                "position": 4,
+                "url": "https://moravskyprekladac.pages.dev/mapper.html"
+            }, {
+                "@type": "ItemList",
+                "name": "Přeložení souborů",
+                "position": 5,
+                "url": "https://moravskyprekladac.pages.dev/files.html"
+            }, {
+                "@type": "ItemList
+                ", 
+                "name": "Vyhledávání slov",
+                "position": 6,
+                "url": "https://moravskyprekladac.pages.dev/search.html"
+            }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Moravský překladač",
+            "operatingSystem": "ALL",
+            "applicationCategory": "Translator",
 
-		<!-- Links -->
-		<link href="data/styles/style.css" rel="stylesheet" type="text/css">
-		<script src="data/scripts/engine.js"></script>
-		<script src="translator/v1/inicialize.js"></script>
-		<script src="translator/v1/translate.js"></script>
-		<script src="data/scripts/langs.js"></script>
-		<script src="translator/v1/mapper.js"></script>
-		<!--<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
-		
-		<!-- Title -->
-		<title>Moravský překladač</title><!-- - Přeložení do moravského jazyka-->
-		<meta id="cententlang" http-equiv="Content-Language" content="cs">
-				
-		<!-- Search -->
-		<meta name="description" content="Přeložení do moravského jazyka! Překlad text na text; slovník; překlad souborů, titulků či generování mapy. Překlad moravština, hanácky, slovácky, valašsky, lašsky, ... " id="metaDescription">
-		<meta name="keywords" content="moravština, moravsky, překladač, hanáčtina, valaština, laština, hantec, slovník, dialekt, Haná, Valašsko, Slovácko, titulky, translator, valašsky, slovácky, hanácky, Podluží, goralsko, Brno, po nasymu, po nasimu, silezian, dialekty, interdialekty, čeština, česky, překladač do moravštiny, slovenština, GeftGames">
-		<meta property="og:locale" content="cs_CZ" id="metalocale">
-	
-		<!-- Appereance -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+            "potentialAction": {
+                "@type": "ViewAction",
+                "target": [
+                    "https://moravskyprekladac.pages.dev", {
+                        "@type": "EntryPoint",
+                        "contentType": "application/json+ld"
+                    }
+                ]
+            }
+        }
+    </script>
 
-		<!-- Theme -->
-		<meta name="theme-color" content="#66ccff">
-		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+    <!-- Links -->
+    <link href="data/styles/style.css" rel="stylesheet" type="text/css">
+    <script src="data/scripts/engine.js"></script>
+    <script src="translator/v1/inicialize.js"></script>
+    <script src="translator/v1/translate.js"></script>
+    <script src="data/scripts/langs.js"></script>
+    <script src="translator/v1/mapper.js"></script>
+    <!--<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
 
-		<!-- Icon-->
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Title -->
+    <title>Moravský překladač</title>
+    <!-- - Přeložení do moravského jazyka-->
+    <meta id="cententlang" http-equiv="Content-Language" content="cs">
 
-		<!-- General aplication -->
-		<meta id="metaDescription2" name="application-name" content="Moravský překladač">
-		<!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.ga"-->
+    <!-- Search -->
+    <meta name="description" content="Přeložení do moravského jazyka! Překlad text na text; slovník; překlad souborů, titulků či generování mapy. Překlad moravština, hanácky, slovácky, valašsky, lašsky, ... " id="metaDescription">
+    <meta name="keywords" content="moravština, moravsky, překladač, hanáčtina, valaština, laština, hantec, slovník, dialekt, Haná, Valašsko, Slovácko, titulky, translator, valašsky, slovácky, hanácky, Podluží, goralsko, Brno, po nasymu, po nasimu, silezian, dialekty, interdialekty, čeština, česky, překladač do moravštiny, slovenština, GeftGames">
+    <meta property="og:locale" content="cs_CZ" id="metalocale">
 
-		<!-- Windows modern UI -->
-		<meta name="msapplication-TileColor" content="#66ccff">
-		<meta name="msapplication-square64x64logo" content="favicon.ico">
+    <!-- Appereance -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- Apple aplication -->
-		<link rel="apple-touch-icon" href="favicon.ico">
-		<link rel="apple-touch-startup-image" href="favicon.ico">
-		<meta id="metaDescription3" name="apple-mobile-web-app-title" content="Moravský překladač">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Theme -->
+    <meta name="theme-color" content="#66ccff">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 
-		<!-- PWA -->
-		<!--<link id="manifest" rel="manifest">-->
-		<script>
-		if ('serviceWorker' in navigator) {
-			let location=window.location;
-			// !localhost
-			if (/*location=="https://moravskyprekladac.ga/" 
-			||*/  location=="https://moravskyprekladac.pages.dev/" 
-			||  location=="https://geftgames.github.io/moravskyprekladac/") {
-				window.addEventListener('load', function () {
-					navigator.serviceWorker.register(location+'service-worker.js')
-						.then(function (registration) {
-							// Registration was successful
-							console.log('ServiceWorker registration successful with scope: ', registration.scope);
-						})
-						.catch(function (err) {
-							// registration failed :(
-							console.log('ServiceWorker registration failed: ', err);
-						})
-				});
-			}
-		}
-		</script>
+    <!-- Icon-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-		<!--<link rel="preconnect" href="https://api.github.com/" />-->
-		<link rel="alternate" type="text/html" href="https://moravskyprekladac.pages.dev/">
-		<link rel="alternate" type="text/html" href="https://geftgames.github.io/moravskyprekladac/">
-	</head>
-	<body onload="Load();init();" style="min-height: 100%;">
-		<div id="body" style="min-height: 100vh; /*display: none*/">
-			<div style="padding: 0px; /*height: -webkit-fill-available;*/z-index: 10; ">
+    <!-- General aplication -->
+    <meta id="metaDescription2" name="application-name" content="Moravský překladač">
+    <!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.ga"-->
 
-				<!-- Header -->
-				<div id="header" style="display: flex;align-items: center;flex-direction: column;   align-items: flex-start;">
-					<div style="display: flex; align-items: center;">
-						<button class="butIc tooltipR"
-							data-tooltip="Zobrazit nastavení"
-							aria-label="Toggle settings"						
-							onclick="
+    <!-- Windows modern UI -->
+    <meta name="msapplication-TileColor" content="#66ccff">
+    <meta name="msapplication-square64x64logo" content="favicon.ico">
+
+    <!-- Apple aplication -->
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="apple-touch-startup-image" href="favicon.ico">
+    <meta id="metaDescription3" name="apple-mobile-web-app-title" content="Moravský překladač">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- PWA -->
+    <!--<link id="manifest" rel="manifest">-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            let location = window.location;
+            // !localhost
+            if (
+                /*location=="https://moravskyprekladac.ga/" 
+                			||*/
+                location == "https://moravskyprekladac.pages.dev/" ||
+                location == "https://geftgames.github.io/moravskyprekladac/") {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register(location + 'service-worker.js')
+                        .then(function(registration) {
+                            // Registration was successful
+                            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        })
+                        .catch(function(err) {
+                            // registration failed :(
+                            console.log('ServiceWorker registration failed: ', err);
+                        })
+                });
+            }
+        }
+    </script>
+
+    <!--<link rel="preconnect" href="https://api.github.com/" />-->
+    <link rel="alternate" type="text/html" href="https://moravskyprekladac.pages.dev/">
+    <link rel="alternate" type="text/html" href="https://geftgames.github.io/moravskyprekladac/">
+</head>
+
+<body onload="Load();init();" style="min-height: 100%;">
+    <div id="body" style="min-height: 100vh; /*display: none*/">
+        <div style="padding: 0px; /*height: -webkit-fill-available;*/z-index: 10; ">
+
+            <!-- Header -->
+            <div id="header" style="display: flex;align-items: center;flex-direction: column;   align-items: flex-start;">
+                <div style="display: flex; align-items: center;">
+                    <button class="butIc tooltipR" data-tooltip="Zobrazit nastavení" aria-label="Toggle settings" onclick="
 								if (document.getElementById('nav').style.opacity=='1') {
 									document.getElementById('butShow').style.opacity='1';
 									document.getElementById('butclose').style.opacity='0'; 
@@ -174,82 +169,82 @@
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
 						</button>
-						<div style="display: flex; flex-direction: column;">
-							<h1 rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">Moravský překladač</h1>
-							<span style="font-size: 3.2mm;">a částečně slezský</span>
-						</div>
-					</div>	
+                    <div style="display: flex; flex-direction: column;">
+                        <h1 rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">Moravský překladač</h1>
+                        <span style="font-size: 3.2mm;">a částečně slezský</span>
+                    </div>
+                </div>
 
-					<div id="appstabContainer">
-						<div id="appsTab">
-							<a class="btnApp" id="tabApp_translate" onclick="TabSwitch('translate');">Překlad do jazyka moravského</a>	
-							<a class="btnApp" id="tabApp_search" onclick="TabSwitch('search');">Hledání v jazyce moravském</a>	
-							<a class="btnApp" id="tabApp_mapper" onclick="TabSwitch('mapper');">Jazyk moravský v mapě</a>
-						</div>
-						<div id="appsTab2">
-							<a class="btnApp" id="tabApp2_translate" onclick="TabSwitch('translate');">Překlad</a>	
-							<a class="btnApp" id="tabApp2_search" onclick="TabSwitch('search');">Hledání</a>	
-							<a class="btnApp" id="tabApp2_mapper" onclick="TabSwitch('mapper');">V mapě</a>
-						</div>
-						<!--my dev-->	
-						<button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="PopPageShow('pageOwnLang')">
-							<svg class="ib" viewBox="0 0 24 24" >
+                <div id="appstabContainer">
+                    <div id="appsTab">
+                        <h2 class="btnApp" id="tabApp_translate" onclick="TabSwitch('translate');">Překlad do jazyka moravského</h2>
+                        <h2 class="btnApp" id="tabApp_search" onclick="TabSwitch('search');">Hledání v jazyce moravském</h2>
+                        <h2 class="btnApp" id="tabApp_mapper" onclick="TabSwitch('mapper');">Jazyk moravský v mapě</h2>
+                    </div>
+                    <div id="appsTab2">
+                        <h2 class="btnApp" id="tabApp2_translate" onclick="TabSwitch('translate');">Překlad</h2>
+                        <h2 class="btnApp" id="tabApp2_search" onclick="TabSwitch('search');">Hledání</h2>
+                        <h2 class="btnApp" id="tabApp2_mapper" onclick="TabSwitch('mapper');">V mapě</h2>
+                    </div>
+                    <!--my dev-->
+                    <button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="PopPageShow('pageOwnLang')">
+							<svg class="ib" viewbox="0 0 24 24" >
 								<path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
 							</svg>
 						</button>
 
-						<!--write about-->	
-						<button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(GetCurrentLanguage());">
-							<svg class="ib" viewBox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
+                    <!--write about-->
+                    <button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(GetCurrentLanguage());">
+							<svg class="ib" viewbox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
 						</button>
 
-						<!--reload-->					
-						<button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
+                    <!--reload-->
+                    <button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
 							caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
 							HidePopUps();
 							window.location.reload();
 							window.location='https://moravskyprekladac.ga/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
-							<svg class="ib" viewBox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
+							<svg class="ib" viewbox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
 						</button>
-					</div>
-				</div>
+                </div>
+            </div>
 
-				<!-- Links, settings, info -->
-				<!-- Settings-->
-				<div id="nav" class="navTrans settingSection">
+            <!-- Links, settings, info -->
+            <!-- Settings-->
+            <div id="nav" class="navTrans settingSection">
 
-					<!-- Current translation, only transtation page -->
-					<div class="settingSection">
-					<!--	<p style="display:inline-block;" id="textTranslator" class="settingHeader">Funkce</p>-->
-						<div class="sisetting">
-						
+                <!-- Current translation, only transtation page -->
+                <div class="settingSection">
+                    <!--	<p style="display:inline-block;" id="textTranslator" class="settingHeader">Funkce</p>-->
+                    <div class="sisetting">
 
-						<!-- Copy current translation -->
-						<!--<div class="btnSideApp" onclick="ShowPageMapper()">
+
+                        <!-- Copy current translation -->
+                        <!--<div class="btnSideApp" onclick="ShowPageMapper()">
 							<img src="data/images/logo_mapper.svg" style="width: 36px" alt="Podklad míst - Mapa Moravy">
 							<span id="textMapper"   style="display:block" data-href="#mapper">Generátor map</span>
 						</div>-->
-						<!--<p><a id="textAbout">Kontakt</a></p>-->
-						
-						<!-- Save current translation
+                        <!--<p><a id="textAbout">Kontakt</a></p>-->
+
+                        <!-- Save current translation
 						<button class="button" id="textSaveTrans" onclick="SaveTrans()">Uložit tento&nbsp;překlad</button>
 						<div style="margin: 10px 0 10px 0;"></div>-->
-						</div>
-					</div> 
+                    </div>
+                </div>
 
-					<!-- General settings-->
-					<div class="settingSection">
-						<p style="display:inline-block" id="textSettings" class="settingHeader">Obecná nastavení</p>
-						<div class="sisetting">
-						
-							<div style="display: flex; justify-content: space-between; align-items: center;">
-							
-							<!-- Jazyk -->
-								<p style="flex-direction: column">
-									<span id="textWeblanguage">Jazyk webu</span>
-									<span class="moreinfo">Language</span>
-								</p>
-								<select id="lang" style="margin: 5px;text-align: center;" onchange="language=this.options[this.selectedIndex].value; localStorage.setItem('setting-language', language); SetLanguage();">
+                <!-- General settings-->
+                <div class="settingSection">
+                    <p style="display:inline-block" id="textSettings" class="settingHeader">Obecná nastavení</p>
+                    <div class="sisetting">
+
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                            <!-- Jazyk -->
+                            <p style="flex-direction: column">
+                                <span id="textWeblanguage">Jazyk webu</span>
+                                <span class="moreinfo">Language</span>
+                            </p>
+                            <select id="lang" style="margin: 5px;text-align: center;" onchange="language=this.options[this.selectedIndex].value; localStorage.setItem('setting-language', language); SetLanguage();">
 									<option id="textDefault" style="font-weight: bold" value="default">Výchozí</option>
 									<option value="cs">Čeština</option>
 									<option value="en">English</option>
@@ -262,121 +257,121 @@
 									<option value="mor_radikalni">Moravsky</option>
 									<!--<option value="slz">Slezsky</option>-->
 								</select>
-							</div>
+                        </div>
 
-							<!-- Světlý/Tmavý -->
-							<div style="display: flex; justify-content: space-between; align-items: center">
-								<p style="flex-direction: column">
-									<span id="textTheme">Motiv</span>
-								</p>
-								<select id="themeLight" style="margin: 5px;text-align: center;" onchange="customTheme();">
+                        <!-- Světlý/Tmavý -->
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <p style="flex-direction: column">
+                                <span id="textTheme">Motiv</span>
+                            </p>
+                            <select id="themeLight" style="margin: 5px;text-align: center;" onchange="customTheme();">
 									<option id="textDefaultTheme" style="font-weight: bold" value="default">Výchozí</option>
 									<option id="textLight" value="light">Světlý</option>
 									<option id="textSemi" value="semi">Semi</option>
 									<option id="textDark" value="dark">Tmavý</option>
 								</select>
-							</div>
+                        </div>
 
-							<!-- Denní/Noční -->
-							<div style="display: flex; justify-content: space-between; align-items: center">
-								<p style="flex-direction: column">
-									<span id="textMode">Režim</span>
-								</p>
-								<select id="themeDay" style="margin: 5px;text-align: center;" onchange="customTheme();">
+                        <!-- Denní/Noční -->
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <p style="flex-direction: column">
+                                <span id="textMode">Režim</span>
+                            </p>
+                            <select id="themeDay" style="margin: 5px;text-align: center;" onchange="customTheme();">
 									<option id="textDefaultNight" value="default" style="font-weight: bold">Výchozí</option>
 									<option id="textDay" value="day">Denní</option>
 									<option id="textNight" value="night">Noční</option>
 								</select>
-							</div>
-							
-							<!-- Optimalizace -->
-							<div style="display: flex; justify-content: space-between; align-items: center">
-								<p style="flex-direction: column">
-									<span id="textPower">Optimalizace</span>
-								</p>
-								<select id="power" style="margin: 5px;text-align: center;" onchange="customTheme();">
+                        </div>
+
+                        <!-- Optimalizace -->
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <p style="flex-direction: column">
+                                <span id="textPower">Optimalizace</span>
+                            </p>
+                            <select id="power" style="margin: 5px;text-align: center;" onchange="customTheme();">
 									<option id="textDefaultPower" value="default" style="font-weight: bold">Výchozí</option>
 									<option id="textFancy" value="fancy">Pěkný</option>
 									<option id="textOptimal" value="optimal">Optimální</option>
 									<option id="textFast" value="fast">Rychlý</option>
 								</select>
-							</div>
-							
-							<!-- Colorize -->
-							<div style="display: flex; justify-content: space-between; align-items: center">
-								<p style="flex-direction: column">
-									<span id="textThemeColor">Barva</span>
-								</p>
-								<div class="slidecontainer">
-								<input onchange="customTheme();" type="range" min="0" max="360" value="50" class="slider" id="myRange">
-								</div>
-							</div>
+                        </div>
 
-							<!-- Dev -->
-							<div class="settingItem">
-								<p>
-									<span id="textMoreInfo">Pro&nbsp;vývojáře</span>
-									<span class="moreinfo" id="textMoreInfoDev">Nechte vypnuté</span>
-								</p>
+                        <!-- Colorize -->
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <p style="flex-direction: column">
+                                <span id="textThemeColor">Barva</span>
+                            </p>
+                            <div class="slidecontainer">
+                                <input onchange="customTheme();" type="range" min="0" max="360" value="50" class="slider" id="myRange">
+                            </div>
+                        </div>
 
-								<label class="switch">
+                        <!-- Dev -->
+                        <div class="settingItem">
+                            <p>
+                                <span id="textMoreInfo">Pro&nbsp;vývojáře</span>
+                                <span class="moreinfo" id="textMoreInfoDev">Nechte vypnuté</span>
+                            </p>
+
+                            <label class="switch">
 									<input type="checkbox" id="dev" onchange="ChangeDev()" >
 									<span class="slider round"></span>
 								</label>
-							</div>
-							
-							<!-- Developng funtions-->
-							<div class="settingItem">
-								<p>
-									<span id="textbetaFunctions">Testovací&nbsp;funkce</span>
-									<span class="moreinfo" id="textbetaFunctionsDetails">Nehotové překlady, ...</span>
-								</p>
+                        </div>
 
-								<label class="switch">
+                        <!-- Developng funtions-->
+                        <div class="settingItem">
+                            <p>
+                                <span id="textbetaFunctions">Testovací&nbsp;funkce</span>
+                                <span class="moreinfo" id="textbetaFunctionsDetails">Nehotové překlady, ...</span>
+                            </p>
+
+                            <label class="switch">
 									<input type="checkbox" id="betaFunctions" onchange="ChangeBetaFunctions()" >
 									<span class="slider round"></span>
 								</label>
-							</div>
-						</div>
-					</div>
+                        </div>
+                    </div>
+                </div>
 
-					<!-- Translate options-->
-					<div class="settingSection">
-						<div class="sisetting">
-							<!-- Automatic translate -->
-							<p style="display:inline-block" id="textSettingsTranslate" class="settingHeader">Nastavení překladu</p>
-							<div class="settingItem">
-								<p id="textAutoTranslate">Automatický překlad</p>
+                <!-- Translate options-->
+                <div class="settingSection">
+                    <div class="sisetting">
+                        <!-- Automatic translate -->
+                        <p style="display:inline-block" id="textSettingsTranslate" class="settingHeader">Nastavení překladu</p>
+                        <div class="settingItem">
+                            <p id="textAutoTranslate">Automatický překlad</p>
 
-								<label class="switch">
+                            <label class="switch">
 									<input id="manual" type="checkbox" checked onchange="ChangeManual()">
 									<span class="slider round"></span>
 								</label>
-							</div>
+                        </div>
 
-							<!-- Text stylizate -->
-							<div class="settingItem">
-								<p id="textMark">Zvýraznění překladu</p>
+                        <!-- Text stylizate -->
+                        <div class="settingItem">
+                            <p id="textMark">Zvýraznění překladu</p>
 
-								<label class="switch">
+                            <label class="switch">
 									<input id="styleOutput" type="checkbox" onchange="ChangeStylizate()">
 									<span class="slider round"></span>
 								</label>
-							</div>
+                        </div>
 
-							<!-- Clear saved -->
-							<div class="settingItem">
-								<p id="textSaved">Uložené překlady</p>
-								<button id="textRemove" class="button" onclick="RemoveTrans()">Vymazat</button>
-							</div>
+                        <!-- Clear saved -->
+                        <div class="settingItem">
+                            <p id="textSaved">Uložené překlady</p>
+                            <button id="textRemove" class="button" onclick="RemoveTrans()">Vymazat</button>
+                        </div>
 
-							
-							<!-- Zápis -->
-							<div style="display: flex; justify-content: space-between; align-items: center">
-								<p style="flex-direction: column">
-									<span id="textText">Transkripce</span>
-								</p>
-								<select id="textTranscription" style="margin: 5px;text-align: center;" onchange="customText();">
+
+                        <!-- Zápis -->
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <p style="flex-direction: column">
+                                <span id="textText">Transkripce</span>
+                            </p>
+                            <select id="textTranscription" style="margin: 5px;text-align: center;" onchange="customText();">
 									<option id="textDefaultText" value="default" style="font-weight: bold">Výchozí fonetická</option>
 									<option id="textCes" value="ipa">IPA (zjednodušené)</option>
 									<option id="textCes" value="czechsimple">Česká zjednodušená</option>
@@ -384,117 +379,122 @@
 									<option id="textMor" value="moravian">Moravská</option>
 									<option id="textMor" value="silezian">Slezská (Slabikářův)</option>
 								</select>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Translate options-->
-					<div class="settingSection">
-						<div class="sisetting">
-							<p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
-							
-							<span id="textAbout"  onclick="PopPageShow('about');/*ShowAboutPage()*/" class="settingLink" data-href="#about">O překladači</span>
-							<a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
-							<!--<span id="textNews"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">Novinky</span>-->
-							<!-- report -->
-							<div class="settingItem">
-								<p>
-									<span id="textReport">Nahlásit&nbsp;problém</span>
-									<span class="moreinfo" id="textMoreReport">nebo návrh ke zlepšení</span>
-								</p>
-								<a  class="button" href="https://github.com/GeftGames/moravskyprekladac/issues">Nahlásit</a>
-							</div>
-						</div>
-					</div>
+                        </div>
+                    </div>
+                </div>
 
-					<!-- Poznámka -->
-					<div class="settingSection">
-						<p style="display:inline-block" id="textPCSaving" class="settingHeader">Ukládání do počítače</p>
-						<p style="display:inline-block" id="textCookies">Tato stránka nepoužívá cookies. K&nbsp;ukládání do&nbsp;nastavení se používá localStorage. Žádné informace se nesdílí s dalšími suběkty.</p>
-					</div>
-				</div>
-			</div>
+                <!-- Translate options-->
+                <div class="settingSection">
+                    <div class="sisetting">
+                        <p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
 
-			<div id="loadingPage" style="flex-direction: column; display:flex; align-items: center;">
-				<div id="loadingBar">
-					<div id="progness"></div>
-				</div>
-				<span id="textDownloadingList">Downloading list of dictionaries...</span>
-				<span id="textDownloadingDic" style="display:none">Downloading dictionaries...</span>
-				<span style="display:none" onclick="">Zastavit</span>
-			</div>
-			<div id="pageErrors"></div>
+                        <span id="textAbout" onclick="PopPageShow('about');/*ShowAboutPage()*/" class="settingLink" data-href="#about">O překladači</span>
+                        <a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
+                        <!--<span id="textNews"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">Novinky</span>-->
+                        <!-- report -->
+                        <div class="settingItem">
+                            <p>
+                                <span id="textReport">Nahlásit&nbsp;problém</span>
+                                <span class="moreinfo" id="textMoreReport">nebo návrh ke zlepšení</span>
+                            </p>
+                            <a class="button" href="https://github.com/GeftGames/moravskyprekladac/issues">Nahlásit</a>
+                        </div>
+                    </div>
+                </div>
 
-			<div id="apps">		
-				<div class="appPage" id="appPage_translate" style="display: none">
-					<!--<div onclick="hideNav()" style="flex-grow: 1;">-->
-					<!-- Trash browser, where will content not work -->
-					<p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
-					
-					<!-- No JavaScript -->
-					<noscript>
+                <!-- Poznámka -->
+                <div class="settingSection">
+                    <p style="display:inline-block" id="textPCSaving" class="settingHeader">Ukládání do počítače</p>
+                    <p style="display:inline-block" id="textCookies">Tato stránka nepoužívá cookies. K&nbsp;ukládání do&nbsp;nastavení se používá localStorage. Žádné informace se nesdílí s dalšími suběkty.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="loadingPage" style="flex-direction: column; display:flex; align-items: center;">
+            <div id="loadingBar">
+                <div id="progness"></div>
+            </div>
+            <span id="textDownloadingList">Downloading list of dictionaries...</span>
+            <span id="textDownloadingDic" style="display:none">Downloading dictionaries...</span>
+            <span style="display:none" onclick="">Zastavit</span>
+        </div>
+        <div id="pageErrors"></div>
+
+        <div id="apps">
+            <div class="appPage" id="appPage_translate" style="display: none">
+                <!--<div onclick="hideNav()" style="flex-grow: 1;">-->
+                <!-- Trash browser, where will content not work -->
+                <p id="errorMessage" class="error" style="margin-bottom: 15px; display: none"></p>
+
+                <!-- No JavaScript -->
+                <noscript>
 						<p class="error">Tato stránka nefunguje bez javaskriptu<br>This site not work without java script</p>
 					</noscript>
-					
-					<center style="display: none"><p id="note">Překladač je stále ve vývoji</p></center>
-				
-					<div id="translator">
-					
-						<!-- Combobox From-To -->
-						<div id="translatorSelLang"><!---->
-							<div id="changeLangSection">
-								<div id="translateFromToSelect" style="display: flex;flex-wrap: wrap;justify-content: center;">
-									<p id="from" style="display: inline">Z</p>
-								<!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->				
-									<p id="czech" style="display: flex">češtiny</p>
-								<!--</div>
+
+                <center style="display: none">
+                    <p id="note">Překladač je stále ve vývoji</p>
+                </center>
+
+                <div id="translator">
+
+                    <!-- Combobox From-To -->
+                    <div id="translatorSelLang">
+                        <!---->
+                        <div id="changeLangSection">
+                            <div id="translateFromToSelect" style="display: flex;flex-wrap: wrap;justify-content: center;">
+                                <p id="from" style="display: inline">Z</p>
+                                <!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->
+                                <p id="czech" style="display: flex">češtiny</p>
+                                <!--</div>
 								<div style="display: flex" id="rowSelectTo">-->
-									<p id="to" style="display: inline;display: flex;align-items: center;">do</p>
-									<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
-								</div>
-								<div>
-									<button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
-									
-									<!--<div style="display: none" id="noteMOGEN">
+                                <p id="to" style="display: inline;display: flex;align-items: center;">do</p>
+                                <select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
+                            </div>
+                            <div>
+                                <button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
+
+                                <!--<div style="display: none" id="noteMOGEN">
 										<br><p>Ucelená moravština <i>neexistuje</i>, zde "moravština" zahrnuje stejné rysy moravských nářečí nebo blízké, popř. doplňuje o známé výrazy</p>
 									</div>-->
-								</div>
-								<div style="display: flex;">
-									<span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
+                            </div>
+                            <div style="display: flex;">
+                                <span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
 										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
 									</span>
-									<span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="PopPageShow('pageInfoLang');">
+                                <span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="PopPageShow('pageInfoLang');">
 										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
-									</span> 
-								</div>
-								<div style="display:none" id="optionsSelect"></div>
-							</div>
+									</span>
+                            </div>
+                            <div style="display:none" id="optionsSelect"></div>
+                        </div>
 
-						</div><!---->
+                    </div>
+                    <!---->
 
-						<div style="display: flex; justify-content: center;margin-top: 20px;height: 38px;">
-							<span rel="nofollow" id="tabText" 	class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));" shorttext="Text">Text</span>
-							<span rel="nofollow" id="tabDic" 	class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));" shorttext="Slovník">Slovník</span><!---->
-							<span rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));" shorttext="Soubory">Textové soubory</span>
-							<span rel="nofollow" id="tabSubs" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));" shorttext="Titulky">Titulky k filmu</span>
-							<!--<span rel="nofollow" id="tabWeb" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Doplněk prohlížeče - překlad youtube titulků, webu</span>-->
-						</div>
+                    <div style="display: flex; justify-content: center;margin-top: 20px;height: 38px;">
+                        <h2 rel="nofollow" id="tabText" class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));" shorttext="Text">Text</h2>
+                        <h2 rel="nofollow" id="tabDic" class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));" shorttext="Slovník">Slovník</h2>
+                        <!---->
+                        <h2 rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));" shorttext="Soubory">Textové soubory</h2>
+                        <h2 rel="nofollow" id="tabSubs" class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));" shorttext="Titulky">Titulky k filmu</h2>
+                        <!--<span rel="nofollow" id="tabWeb" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Doplněk prohlížeče - překlad youtube titulků, webu</span>-->
+                    </div>
 
-						<div id="tabBackGround"></div>
+                    <div id="tabBackGround"></div>
 
-						<div id="transarea" style="justify-content: center; display: flex">
-							<div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">							
-								<span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste slovník nebo změnit místo.</span>
-								<div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
-									<!-- Source translated text -->
-									<div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
-										<textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
-										<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('specialTextarea');">
-											<svg id="butclose" class="ib" viewBox="0 0 24 24">
+                    <div id="transarea" style="justify-content: center; display: flex">
+                        <div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">
+                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste slovník nebo změnit místo.</span>
+                            <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
+                                <!-- Source translated text -->
+                                <div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
+                                    <textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
+                                    <span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('specialTextarea');">
+											<svg id="butclose" class="ib" viewbox="0 0 24 24">
 												<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 											</svg>
 										</span>
-									<!--	<div id="charsHa" style="user-select:none; cursor:normal; display: none; ">Dej mouku ze mlýna na vozík.
+                                    <!--	<div id="charsHa" style="user-select:none; cursor:normal; display: none; ">Dej mouku ze mlýna na vozík.
 											<span id="addchar">Vložit znak</span>
 											<a class="charIns" onclick="insert2('ê');"><div class="btnsm">ê</div></a>
 											<a class="charIns" onclick="insert2('Ê');"><div class="btnsm">Ê</div></a>
@@ -508,120 +508,120 @@
 											<a class="charIns" onclick="insert2('ŕ');"><div class="btnsm">ŕ</div></a>
 											<a class="charIns" onclick="insert2('Ŕ');"><div class="btnsm">Ŕ</div></a>
 										</div>-->
-									</div>
+                                </div>
 
-									<!-- Translated text out -->
-									<div id="rte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;">
-										<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
-											<p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
-										</div>
-										<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
-											<span rel="nofollow" class="butIc tooltipL" data-tooltip="Ukazuje v % jak je kvalitní překlad" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
-											<span rel="nofollow" class="butIc tooltipL" data-tooltip="Kopírovat překlad" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-											<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>-->
-											<span rel="nofollow" class="butIc tooltipL" data-tooltip="Uložit překlad" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
-											<!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
-										</div>
-									</div>
-								</div>
-							</div>
+                                <!-- Translated text out -->
+                                <div id="rte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;">
+                                    <div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
+                                        <p id="outputtext" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+                                    </div>
+                                    <div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
+                                        <span rel="nofollow" class="butIc tooltipL" data-tooltip="Ukazuje v % jak je kvalitní překlad" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
+                                        <span rel="nofollow" class="butIc tooltipL" data-tooltip="Kopírovat překlad" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
+                                        <!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>-->
+                                        <span rel="nofollow" class="butIc tooltipL" data-tooltip="Uložit překlad" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
+                                        <!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-							<!-- Slovník-->
-							<div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
-								<div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
-									<div id="dicLte" style="/*min-height:75px;*/display: flex;/*justify-content: flex-end;flex-direction: row;*/width: -webkit-fill-available;width: -moz-available; ">
-										<input type="text" oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo">
-										<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
+                        <!-- Slovník-->
+                        <div id="translateDic" style="display: none;width: -webkit-fill-available;width: calc(100% - 1cm);">
+                            <div style="display: flex; justify-content: center;    flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;">
+                                <div id="dicLte" style="/*min-height:75px;*/display: flex;/*justify-content: flex-end;flex-direction: row;*/width: -webkit-fill-available;width: -moz-available; ">
+                                    <input type="text" oninput="GetDic()" spellcheck="true" id="dicInput" style="height:auto; font-size: inherit;" autofocus placeholder="Zadejte slovo">
+                                    <span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
 											<svg id="butclose" class="ib" viewBox="0 0 24 24">
 												<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 											</svg>
 										</span>
-									</div>
+                                </div>
 
-									<!-- Translated text out -->
-									<div id="dicRte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;margin-top: 0px">
-										<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
-											<p id="dicOut" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
-										</div>
-										<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
-										<!--	<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>-->
-											<span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-										<!--	<span rel="nofollow" class="butIc tooltipC" data-tooltip="Stáhnout" onclick="dic_save_csv()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 25 29"><path class="st0" d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"/></svg></span>-->
-											<!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
+                                <!-- Translated text out -->
+                                <div id="dicRte" style="display: flex;flex-direction: column;  min-height:50px;width: -webkit-fill-available;width: -moz-available;margin-top: 0px">
+                                    <div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
+                                        <p id="dicOut" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+                                    </div>
+                                    <div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
+                                        <!--	<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>-->
+                                        <span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
+                                        <!--	<span rel="nofollow" class="butIc tooltipC" data-tooltip="Stáhnout" onclick="dic_save_csv()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 25 29"><path class="st0" d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"/></svg></span>-->
+                                        <!--<span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
 											<span rel="nofollow" class="butIc" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>-->
-										</div>
-									</div>
-								</div>
-							</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-							<div id="translateFiles" style="display: none">
-								<div class="filesBox">
-									<p id="supportFiles">Podporujeme soubory .TXT</p>
-									<input type="file" id="file-input">
-									<button class="button" id="btnTranslateTxt" onclick="TranslateFile()">Translate</button>
-									<!--<h3>Contents of the file:</h3>
+                        <div id="translateFiles" style="display: none">
+                            <div class="filesBox">
+                                <p id="supportFiles">Podporujeme soubory .TXT</p>
+                                <input type="file" id="file-input">
+                                <button class="button" id="btnTranslateTxt" onclick="TranslateFile()">Translate</button>
+                                <!--<h3>Contents of the file:</h3>
 									<pre id="file-content"></pre>-->
-									<!--<div id="downloadFile"></div>-->
-									<a rel="nofollow" id="downloadFile" class="button" style="display:none">Download</a>
-								</div>
-							</div>
-							<div id="translateSubs" style="display: none">
-								<div class="filesBox">
-									<p id="VideoNote">Podporujeme soubory .ASS a .SRT. Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte.</p>
-									<!-- 
+                                <!--<div id="downloadFile"></div>-->
+                                <a rel="nofollow" id="downloadFile" class="button" style="display:none">Download</a>
+                            </div>
+                        </div>
+                        <div id="translateSubs" style="display: none">
+                            <div class="filesBox">
+                                <p id="VideoNote">Podporujeme soubory .ASS a .SRT. Pokuď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky a ty semka načtěte.</p>
+                                <!-- 
 										Vyhledávání titulků: https://www.opensubtitles.org/ 
 										Překlad do češtiny: https://www.nikse.dk/subtitleedit/online
 										Překlad do češtiny: https://www.syedgakbar.com/projects/dst
 									-->
-									<input type="file" id="subs-input">
-									<button class="button" id="btnTranslateSubs" onclick="TranslateSubs()">Translate</button>
-									<!--<h3>Contents of the file:</h3>
+                                <input type="file" id="subs-input">
+                                <button class="button" id="btnTranslateSubs" onclick="TranslateSubs()">Translate</button>
+                                <!--<h3>Contents of the file:</h3>
 									<pre id="file-content"></pre>-->
-									<!--<div id="downloadFile"></div>-->
-									<a rel="nofollow" id="downloadSubs" class="button" style="display:none">Download</a>
-								</div>
-							</div>						
-						</div>
+                                <!--<div id="downloadFile"></div>-->
+                                <a rel="nofollow" id="downloadSubs" class="button" style="display:none">Download</a>
+                            </div>
+                        </div>
+                    </div>
 
-						<!-- Saved text -->
-						<div id="savedDiv" style=" display: none">
-							<p style="text-decoration-line: underline;" id="txtSavedTrans">Uložené překlady</p>
-							<div id="transl" style="max-height: 100vh; overflow: auto; scroll-behavior: smooth;"></div>
-						</div>
-					</div>
-				</div>	
+                    <!-- Saved text -->
+                    <div id="savedDiv" style=" display: none">
+                        <p style="text-decoration-line: underline;" id="txtSavedTrans">Uložené překlady</p>
+                        <div id="transl" style="max-height: 100vh; overflow: auto; scroll-behavior: smooth;"></div>
+                    </div>
+                </div>
+            </div>
 
-				<div class="appPage" id="appPage_search" style="display: none;">
-					<div style="display: flex; justify-content: center;">
-						<div id="formSearch" style="display: flex; justify-content: center; flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;margin-top: 1cm;">
-							<span style="align-self: start;margin: 0mm 3mm 3mm 0mm;" id="searchInputCaption">Hledám co znamená...</span>
-							<div id="searchIn" style="min-height:75px;width: -webkit-fill-available;width: -moz-available; ">
-								<input type="text" oninput="" spellcheck="false" id="searchInputText" onkeydown="if(event.key === 'Enter') SearchInMoravian();" style="font-size: 5mm;height:auto; font-size: inherit; padding: 10px;" autofocus placeholder="např. šufan, křidla, šnitlich, ...">
-								<span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
+            <div class="appPage" id="appPage_search" style="display: none;">
+                <div style="display: flex; justify-content: center;">
+                    <div id="formSearch" style="display: flex; justify-content: center; flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;margin-top: 1cm;">
+                        <span style="align-self: start;margin: 0mm 3mm 3mm 0mm;" id="searchInputCaption">Hledám co znamená...</span>
+                        <div id="searchIn" style="min-height:75px;width: -webkit-fill-available;width: -moz-available; ">
+                            <input type="text" oninput="" spellcheck="false" id="searchInputText" onkeydown="if(event.key === 'Enter') SearchInMoravian();" style="font-size: 5mm;height:auto; font-size: inherit; padding: 10px;" autofocus placeholder="např. šufan, křidla, šnitlich, ...">
+                            <span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
 									<svg id="butclose" class="ib" viewBox="0 0 24 24">
 										<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 									</svg>
 								</span>
-							</div>
-							<p id="notePhonetics">Použijte <a class="link" onclick="PopPageShow('phonetics')">fonetický zápis</a>.</p>
+                        </div>
+                        <p id="notePhonetics">Použijte <a class="link" onclick="PopPageShow('phonetics')">fonetický zápis</a>.</p>
 
-							<button class="button" style="width: fit-content;margin-top: 5mm;align-self: end;" id="searchButton" onclick="SearchInMoravian()">Vyhledat</button>
+                        <button class="button" style="width: fit-content;margin-top: 5mm;align-self: end;" id="searchButton" onclick="SearchInMoravian()">Vyhledat</button>
 
-							<!-- Translated text out -->
-							<div id="searchOut" class="fakeTextbox" style="margin-top: 1cm">
-								<div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
-									<p id="searchOutText" style="line-height: 32px;"><span class="placeholder" id="searchOutPlaceholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
-								</div>
-								<div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">						
-									<span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('searchOutText')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                        <!-- Translated text out -->
+                        <div id="searchOut" class="fakeTextbox" style="margin-top: 1cm">
+                            <div style="max-height: 80vh;overflow: auto;height: -webkit-fill-available;">
+                                <p id="searchOutText" style="line-height: 32px;"><span class="placeholder" id="searchOutPlaceholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
+                            </div>
+                            <div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
+                                <span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('searchOutText')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-				<div class="appPage" id="appPage_mapper" style="display: none;">
-					<!--<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
+            <div class="appPage" id="appPage_mapper" style="display: none;">
+                <!--<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
 						<div onclick="ClosePageMapper()" class="pageFromDownClose" id="closeMapperPage">
 							<div rel="nofollow" onclick="ClosePageMapper()">
 								<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
@@ -636,208 +636,209 @@
 						</div>
 					</div>-->
 
-					<div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;height: -webkit-fill-available;*/display: flex; justify-content: center;">
-						<div id="areaStartGenerate" class="listButtons" style="width: -webkit-fill-available;">
-							<div id="basicModeMapper">
-								<div id="mapperBasicInput">
-									<p id="mapperSearchWord">Hledané slovo nebo fráze</p>
-									<input type="text" placeholder="okno" id="mapperInput" value="" style="font-size: 5mm;">
-									<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(false)" style="width: fit-content;margin-top: 5mm;align-self: end;" >Vytvořit mapu</a>
-									<br>
-									<span class="settingLink" id="mapperSearchWord" onclick="MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
-								</div>
-											
-								<p id="">Uložené</p>	
-								<div id="mapperSaved" style="display: inline-block;"></div>
-								
-								<br>	
-								
-								<p id="">Návrhy</p>	
-								<div id="mapperNavrh" style="display: flex;flex-wrap: wrap;justify-content: flex-start;width: -webkit-fill-available;flex-direction: column;" >
-									<p>Podstatná jména</p>
-									<div class="navrhCat">										
-										<!-- Unikátní slova-->
-										<div class="mapperNavrh" onclick="navrhClick('<{word=vesnice|typ=pods|cislo=j|pad=1}>')">VESNICE</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{word=mrkev|typ=pods|cislo=j|pad=1}>')">MRKEV</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{word=jaro|typ=pods|cislo=j|pad=1}>')">JARO</div>
-										<div class="mapperNavrh" onclick="navrhClick('polštář')">POLŠTÁŘ</div>
-										<div class="mapperNavrh" onclick="navrhClick('peřina')">PEŘINA</div>
-										<div class="mapperNavrh" onclick="navrhClick('postel')">POSTEL</div>
-										<!--<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>-->
-										<div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>
-										<div class="mapperNavrh" onclick="navrhClick('dědeček')">DĚDEČEK</div>
-										<div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
-										<div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
-										<div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
-										<div class="mapperNavrh" onclick="navrhClick('míč')">MÍČ</div>
-										<div class="mapperNavrh" onclick="navrhClick('brambory')">BRAMBORY</div>
-										<div class="mapperNavrh" onclick="navrhClick('žena')">ŽENA</div>
-										
-										<!-- změna části slova-->
-										<div class="mapperNavrh" onclick="navrhClick('slunce')">SLUNCE</div>
-										<div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
-									<!--	<div class="mapperNavrh" onclick="navrhClick('kachna')">KACHNA</div>-->
-																				
-										<!-- Atipické skloňování-->
-										<div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div>
-										<div class="mapperNavrh" onclick="navrhClick('stromům')">ke STROMŮM</div>
-										
-										<!-- Krátkost-->
-										<div class="mapperNavrh" onclick="navrhClick('<{word=práce|typ=pods|cislo=j|pad=1}>')">PRÁCE</div>
-										<div class="mapperNavrh" onclick="navrhClick('bláto')">BLÁTO</div>
-										<div class="mapperNavrh" onclick="navrhClick('lípa')">LÍPA</div>
-										<div class="mapperNavrh" onclick="navrhClick('zima')">ZIMA</div>
-										<div class="mapperNavrh" onclick="navrhClick('růže')">RŮŽE</div>
-										<!--<div class="mapperNavrh" onclick="navrhClick('mák')">MÁK</div>-->
-										
-										<!-- Změna -->
-										<div class="mapperNavrh" onclick="navrhClick('doktor')">DOKTOR</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{word=lidé|typ=pods|cislo=m|pad=1}>')">LIDÉ</div>
-										<div class="mapperNavrh" onclick="navrhClick('mlýn')">MLÝN</div>
-										<div class="mapperNavrh" onclick="navrhClick('břicho')">BŘICHO</div>
-										<div class="mapperNavrh" onclick="navrhClick('vítr')">VÍTR</div>
-										<div class="mapperNavrh" onclick="navrhClick('kořen')">KOŘEN</div>
+                <div id="mapperInner" style="/*display: flex; flex-direction: row-reverse; align-items: flex-start;height: -webkit-fill-available;*/display: flex; justify-content: center;">
+                    <div id="areaStartGenerate" class="listButtons" style="width: -webkit-fill-available;">
+                        <div id="basicModeMapper">
+                            <div id="mapperBasicInput">
+                                <p id="mapperSearchWord">Hledané slovo nebo fráze</p>
+                                <input type="text" placeholder="okno" id="mapperInput" value="" style="font-size: 5mm;">
+                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(false)" style="width: fit-content;margin-top: 5mm;align-self: end;">Vytvořit mapu</a>
+                                <br>
+                                <span class="settingLink" id="mapperSearchWord" onclick="MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
+                            </div>
 
-										<!-- Měkčení na konci slov-->
-										<div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
-									<!--	<div class="mapperNavrh" onclick="navrhClick('kost')">KOST</div>-->
-									</div>
-									<p>Přídavná jména</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('<{word=celý|typ=prid|rod=mz|cislo=j|pad=1}>')">CELÝ muž</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=z|cislo=j|pad=1}>')">CELÁ žena</div>
-										<!--<div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=s|cislo=m|pad=1}>')">CELÁ kuřata</div>
+                            <p id="">Uložené</p>
+                            <div id="mapperSaved" style="display: inline-block;"></div>
+
+                            <br>
+
+                            <p id="">Návrhy</p>
+                            <div id="mapperNavrh" style="display: flex;flex-wrap: wrap;justify-content: flex-start;width: -webkit-fill-available;flex-direction: column;">
+                                <p>Podstatná jména</p>
+                                <div class="navrhCat">
+                                    <!-- Unikátní slova-->
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=vesnice|typ=pods|cislo=j|pad=1}>')">VESNICE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=mrkev|typ=pods|cislo=j|pad=1}>')">MRKEV</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=jaro|typ=pods|cislo=j|pad=1}>')">JARO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('polštář')">POLŠTÁŘ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('peřina')">PEŘINA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('postel')">POSTEL</div>
+                                    <!--<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>-->
+                                    <div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('dědeček')">DĚDEČEK</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('míč')">MÍČ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('brambory')">BRAMBORY</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('žena')">ŽENA</div>
+
+                                    <!-- změna části slova-->
+                                    <div class="mapperNavrh" onclick="navrhClick('slunce')">SLUNCE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
+                                    <!--	<div class="mapperNavrh" onclick="navrhClick('kachna')">KACHNA</div>-->
+
+                                    <!-- Atipické skloňování-->
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('stromům')">ke STROMŮM</div>
+
+                                    <!-- Krátkost-->
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=práce|typ=pods|cislo=j|pad=1}>')">PRÁCE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('bláto')">BLÁTO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('lípa')">LÍPA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('zima')">ZIMA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('růže')">RŮŽE</div>
+                                    <!--<div class="mapperNavrh" onclick="navrhClick('mák')">MÁK</div>-->
+
+                                    <!-- Změna -->
+                                    <div class="mapperNavrh" onclick="navrhClick('doktor')">DOKTOR</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=lidé|typ=pods|cislo=m|pad=1}>')">LIDÉ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('mlýn')">MLÝN</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('břicho')">BŘICHO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('vítr')">VÍTR</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('kořen')">KOŘEN</div>
+
+                                    <!-- Měkčení na konci slov-->
+                                    <div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
+                                    <!--	<div class="mapperNavrh" onclick="navrhClick('kost')">KOST</div>-->
+                                </div>
+                                <p>Přídavná jména</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=celý|typ=prid|rod=mz|cislo=j|pad=1}>')">CELÝ muž</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=z|cislo=j|pad=1}>')">CELÁ žena</div>
+                                    <!--<div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=s|cislo=m|pad=1}>')">CELÁ kuřata</div>
 										<div class="mapperNavrh" onclick="navrhClick('<{word=celé|typ=prid|rod=mn|cislo=m|pad=1}>')">CELÉ hrady</div>-->
-									</div>
-									<p>Zájmena</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('já')">JÁ</div>
-										<div class="mapperNavrh" onclick="navrhClick('on')">ON</div>
-										<div class="mapperNavrh" onclick="navrhClick('oni')">ONI</div>
+                                </div>
+                                <p>Zájmena</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('já')">JÁ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('on')">ON</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('oni')">ONI</div>
 
-										<div class="mapperNavrh" onclick="navrhClick('ten')">TEN kluk</div>
-										<div class="mapperNavrh" onclick="navrhClick('toho')">bez TOHO</div>
-										<div class="mapperNavrh" onclick="navrhClick('tomu')">k TOMU</div>
-										<div class="mapperNavrh" onclick="navrhClick('tom')">při TOM</div>
-										<div class="mapperNavrh" onclick="navrhClick('těch')">o TĚCH</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('ten')">TEN kluk</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('toho')">bez TOHO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('tomu')">k TOMU</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('tom')">při TOM</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('těch')">o TĚCH</div>
 
-										<div class="mapperNavrh" onclick="navrhClick('se')">podívat SE</div>
-										<div class="mapperNavrh" onclick="navrhClick('si')">sedl SI</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('se')">podívat SE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('si')">sedl SI</div>
 
-										<div class="mapperNavrh" onclick="navrhClick('něco')">NĚCO jako</div>
-									</div>
-									<p>Číslovky</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('jeden')">JEDEN</div>
-										<div class="mapperNavrh" onclick="navrhClick('čtyři')">ČTYŘI</div>
-									</div>
-									<p>Slovesa</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('jsou')">oni JSOU</div>
-										<div class="mapperNavrh" onclick="navrhClick('byl')">on BYL</div>
-										<div class="mapperNavrh" onclick="navrhClick('bylo')">BYLO</div>
-										<div class="mapperNavrh" onclick="navrhClick('není')">NENÍ</div>
-										<div class="mapperNavrh" onclick="navrhClick('by')">já BY</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('něco')">NĚCO jako</div>
+                                </div>
+                                <p>Číslovky</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('jeden')">JEDEN</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('čtyři')">ČTYŘI</div>
+                                </div>
+                                <p>Slovesa</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('jsou')">oni JSOU</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('byl')">on BYL</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('bylo')">BYLO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('není')">NENÍ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('by')">já BY</div>
 
-										<div class="mapperNavrh" onclick="navrhClick('mít')">MÍT</div>
-										<div class="mapperNavrh" onclick="navrhClick('měl')">MĚL</div>
-										<div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
-										<div class="mapperNavrh" onclick="navrhClick('šel')">ŠEL</div>
-										<div class="mapperNavrh" onclick="navrhClick('udělat')">UDĚLAT</div>
-										<div class="mapperNavrh" onclick="navrhClick('mohl')">MOHL</div>
-									</div>
-									<p>Příslovce</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('jen')">JEN</div>
-										<div class="mapperNavrh" onclick="navrhClick('teď')">TEĎ</div>
-										<div class="mapperNavrh" onclick="navrhClick('nyní')">NYNÍ</div>
-										<div class="mapperNavrh" onclick="navrhClick('potom')">POTOM</div>
-										<div class="mapperNavrh" onclick="navrhClick('hned')">HNED</div>
-										<div class="mapperNavrh" onclick="navrhClick('zase')">ZASE</div>									
-										<div class="mapperNavrh" onclick="navrhClick('domů')">jdu DOMŮ</div>
-										<div class="mapperNavrh" onclick="navrhClick('doma')">DOMA</div>
-										<div class="mapperNavrh" onclick="navrhClick('nahorů')">NAHORŮ</div>									
-										<div class="mapperNavrh" onclick="navrhClick('až')">AŽ</div>
-										<div class="mapperNavrh" onclick="navrhClick('však')">VŠAK</div>
-										<div class="mapperNavrh" onclick="navrhClick('ještě')">JEŠTĚ</div>									
-										<div class="mapperNavrh" onclick="navrhClick('najednou')">NAJEDNOU</div>
-										<div class="mapperNavrh" onclick="navrhClick('jednou')">JEDNOU</div>
-										<div class="mapperNavrh" onclick="navrhClick('vždy')">VŽDY</div>									
-										<div class="mapperNavrh" onclick="navrhClick('taky')">TAKY</div>
-										<div class="mapperNavrh" onclick="navrhClick('kde')">KDE</div>
-										<div class="mapperNavrh" onclick="navrhClick('večer')">VEČER</div>
-										<div class="mapperNavrh" onclick="navrhClick('dolů')">DOLŮ</div>
-									</div>
-									<p>Předložky</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('do')">DO školy</div>
-										<div class="mapperNavrh" onclick="navrhClick('u')">U okna</div>
-										<div class="mapperNavrh" onclick="navrhClick('od')">OD</div>
-										<div class="mapperNavrh" onclick="navrhClick('za')">ZA</div>
-									</div>
-									<p>Spojky</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('i')">I toto</div>
-										<div class="mapperNavrh" onclick="navrhClick('když')">KDYŽ</div>
-										<div class="mapperNavrh" onclick="navrhClick('jestli')">JESTLI</div>
-										<div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
-										<div class="mapperNavrh" onclick="navrhClick('protože')">PROTOŽE</div>
-										<div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
-										<div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
-									</div>
-									<p>Částice</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('ne')">NE</div>
-										<div class="mapperNavrh" onclick="navrhClick('no')">NO</div>
-										<div class="mapperNavrh" onclick="navrhClick('jo')">JO</div>
-									</div>
-									<p>Citoslovce</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('ach')">ach</div>
-									</div>
-									<p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
-									<div class="navrhCat">
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=á}>')">á</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=é}>')">é</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=í}>')">í</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ú}>')">ú</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ó}>')">ó</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ł}>')">ł</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ľ}>')">ľ</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ṵ}>')">ṵ</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ạ́}>')">ạ́</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ə}>')">ə</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ŕ}>')">ŕ</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=́b}>')">́b</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ê}>')">ê</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=ô}>')">ô</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dź</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dž</div>
-									</div>
-								</div>								
-							</div>
-							<div id="expertModeMapper" style="display:none;width: 1000px;    max-width: -webkit-fill-available;">
-								<div>
-									<p id="mapperSearchWord">Hledaná fráze</p>
-									<input type="text" id="mapperSearchPattern"  placeholder="<{word=vesnice|typ=pods|cislo=j|pad=2}>" style="width: -webkit-fill-available;"><!--placeholder='To je <"dub"->"pods,č=j,pád=1">!; "buk"'-->
-								</div>
-								<div>
-									<p>Obarvení pozadí</p>
-									<textarea id="mapperOptionColorBack" placeholder='->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red'></textarea>
-								</div>
-								<div>
-									<p>Doprovodný text</p>
-									<textarea id="mapperOptionText" placeholder='Přeložení slova dub, v česko-moravkých a východomoravských je tvar dub, ve střední části moravy je tvar dob, místy dôb.'></textarea>
-								</div>
-								<div>
-									<p>Zkratky míst</p>
-									<p><input type="checkbox" checked id="mapperOptionPlaceNames">Zobrazit zkratky míst</p>
-								</div>
-							<!--	<div>
-									<p>Minimální kvalita</p>
-									<input type="range" id="mapperOptionMinimalQuality" value="50" min="0" max="99">
-								</div>
-								<div>
+                                    <div class="mapperNavrh" onclick="navrhClick('mít')">MÍT</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('měl')">MĚL</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('šel')">ŠEL</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('udělat')">UDĚLAT</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('mohl')">MOHL</div>
+                                </div>
+                                <p>Příslovce</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('jen')">JEN</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('teď')">TEĎ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('nyní')">NYNÍ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('potom')">POTOM</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('hned')">HNED</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('zase')">ZASE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('domů')">jdu DOMŮ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('doma')">DOMA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('nahorů')">NAHORŮ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('až')">AŽ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('však')">VŠAK</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('ještě')">JEŠTĚ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('najednou')">NAJEDNOU</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('jednou')">JEDNOU</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('vždy')">VŽDY</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('taky')">TAKY</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('kde')">KDE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('večer')">VEČER</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('dolů')">DOLŮ</div>
+                                </div>
+                                <p>Předložky</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('do')">DO školy</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('u')">U okna</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('od')">OD</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('za')">ZA</div>
+                                </div>
+                                <p>Spojky</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('i')">I toto</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('když')">KDYŽ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('jestli')">JESTLI</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('protože')">PROTOŽE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
+                                </div>
+                                <p>Částice</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('ne')">NE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('no')">NO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('jo')">JO</div>
+                                </div>
+                                <p>Citoslovce</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('ach')">ach</div>
+                                </div>
+                                <p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=á}>')">á</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=é}>')">é</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=í}>')">í</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ú}>')">ú</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ó}>')">ó</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ł}>')">ł</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ľ}>')">ľ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ṵ}>')">ṵ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ạ́}>')">ạ́</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ə}>')">ə</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ŕ}>')">ŕ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=́b}>')">́b</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ê}>')">ê</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=ô}>')">ô</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dź</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dž</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="expertModeMapper" style="display:none;width: 1000px;    max-width: -webkit-fill-available;">
+                            <div>
+                                <p id="mapperSearchWord">Hledaná fráze</p>
+                                <input type="text" id="mapperSearchPattern" placeholder="<{word=vesnice|typ=pods|cislo=j|pad=2}>" style="width: -webkit-fill-available;">
+                                <!--placeholder='To je <"dub"->"pods,č=j,pád=1">!; "buk"'-->
+                            </div>
+                            <div>
+                                <p>Obarvení pozadí</p>
+                                <textarea id="mapperOptionColorBack" placeholder="->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red"></textarea>
+                            </div>
+                            <div>
+                                <p>Doprovodný text</p>
+                                <textarea id="mapperOptionText" placeholder="Přeložení slova dub, v česko-moravkých a východomoravských je tvar dub, ve střední části moravy je tvar dob, místy dôb."></textarea>
+                            </div>
+                            <div>
+                                <p>Zkratky míst</p>
+                                <p><input type="checkbox" checked id="mapperOptionPlaceNames">Zobrazit zkratky míst</p>
+                            </div>
+                            <div>
+                                <p>Minimální kvalita</p>
+                                <input type="range" id="mapperOptionMinimalQuality" value="50" min="0" max="100">
+                            </div>
+                            <!--<div>
 									<p>Převod přeložení, ignorování</p>
 									<textarea id="mapperOptionConvert" placeholder='"dub"->"dôb" => "dob"; "dub"->"bub" => ignore; "dub"->def => ignore'></textarea>
 									<br>
@@ -863,345 +864,412 @@
 										<option>Všechny popisky</option>
 									</select>
 								</div>-->
-								<div>
-									<p>Síla pozadí</p>
-									<input id='mapperOptionBackgroundOpacity' type="range" min="0" max="1" step="0.1">
-								</div>
-								<div>
-									<p>Limit vzdálenosti</p>
-									<select id="mapperOptionLimit">
+                            <div>
+                                <p>Síla pozadí</p>
+                                <input id='mapperOptionBackgroundOpacity' type="range" min="0" max="1" step="0.1">
+                            </div>
+                            <div>
+                                <p>Limit vzdálenosti</p>
+                                <select id="mapperOptionLimit">
 										<option value="0">Žádný</option>
 										<option value="5">Vzdálený</option>
 										<option value="10">Střední</option>
 										<option value="20">Krátký</option>
 									</select>
-								</div>
-								<div>
-									<p>Geometrie sestavení hranic</p>
-									<select id="mapperOptionGeometry">
+                            </div>
+                            <div>
+                                <p>Geometrie sestavení hranic</p>
+                                <select id="mapperOptionGeometry">
 										<option value="nearest">Nejbližší místo</option>
 										<option value="3x">Zaoblené hranaté</option>
 										<option value="45">Po 45°</option>
 										<option value="45max">Po 45° pootočeně</option>
 										<option value="none">Žádné hranice</option>
 									</select>
-								</div>
-								<div>
-									<a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(true)" style="margin-top: 5mm;" >Vytvořit mapu</a>
-									<br>
-									<span id="mapperSearchWord" class="settingLink" onclick="MapperMode('basic')">Zjednodušená tvorba map</span>
-								</div>
-							</div>
-						</div>
-						
-						
-						<div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
-							<div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;">
-								<a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Vytvořit další mapu</a>
-							</div>
-							<div style="display:flex;flex-wrap: wrap;flex-direction: column;">
-								<div class="listButtons" id="mapperButtons" style="flex-direction: row;">
-									<a rel="nofollow" data-tooltip="Upravit mapu" class="butIc tooltipC" id="mapper_edit" onclick="mapper_edit()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 24 24"><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"></path></svg></a>
-									<a rel="nofollow" data-tooltip="Stáhnout mapu" class="butIc tooltipC" id="downloadMap" onclick="PopPageShow('mapper_download_options')" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 25 29"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"/></svg></a>
-									<a rel="nofollow" data-tooltip="Uložit mapu" class="butIc tooltipC" id="mapperZoomOut" onclick="mapper_save();" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 29 29"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"/></svg></a>
-									<a rel="nofollow" data-tooltip="Zobrazit info" class="butIc tooltipC" id="mapperInfo" onclick="PopPageShow('mapperInfo')" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"/></svg></a>
-									<a rel="nofollow" data-tooltip="Přiblížit" class="butIc tooltipC" id="mapperZoomIn" onclick="mapper_zoomIn()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 20 20"><path d="M20 18 15 13C18.69 8.621 15.467 1.894 11.339.58 4-1.9-1.8 4.7.42 11.56 1.89 15.821 8.6 19 13 15L18 20 20 18M13 13C9.1 16.8 3.7 14.9 2.016 11.143.104 5.502 5.057.354 10.4 1.9 14 3 17 9 13 13M-2.111 7.991 19 8M7.2 3.8 9.4 3.8 9.4 6.8 12.6 6.8 12.6 9.2 9.4 9.2 9.4 12.2 7.2 12.2 7.2 9.2 4.2 9.2 4.2 6.8 7.2 6.8 7.2 3.8M7.986-2.015 8 18"/></svg></a>
-									<a rel="nofollow" data-tooltip="Oddálit" class="butIc tooltipC" id="mapperZoomOut" onclick="mapper_zoomOut()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 20 20"><path d="M20 18 15 13C18.69 8.621 15.467 1.894 11.339.58 4-1.9-1.8 4.7.42 11.56 1.89 15.821 8.6 19 13 15L18 20 20 18M13 13C9.1 16.8 3.7 14.9 2.016 11.143.104 5.502 5.057.354 10.4 1.9 14 3 17 9 13 13M-2.111 7.991 19 8M4.2 6.8 12.6 6.8 12.6 9.2 4.2 9.2 4.2 6.8M7.986-2.015 8 18"/></svg></a>
-									<!--<p><input type="checkbox" checked id="mapperNote" onclick="mapper_Note()">Poznámka vygenerované</p>-->
-									<!--<p><input type="checkbox" checked id="mapperOnlyGood" onclick="mapper_OnlyGood()">Pouze kvalitní překlady</p>-->
-									<!--<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>-->
-									<!--<p style="margin-bottom: 1cm;">Mapa nemusí mít přesné hranice, může obsahovat chyby</p>-->
-								</div>
-								<span id="noteMapperNotFound" style="font-size:6mm;color: var(--ColorOrig);">Nenalezen žádný záznam, nelze vytvořit mapa.</span>
+                            </div>
+                            <div>
+                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(true)" style="margin-top: 5mm;">Vytvořit mapu</a>
+                                <br>
+                                <span id="mapperSearchWord" class="settingLink" onclick="MapperMode('basic')">Zjednodušená tvorba map</span>
+                            </div>
+                        </div>
+                    </div>
 
-								<div id="mapperAreaMap" style="max-width: 100%; overflow: auto; max-height: 100vh; width: fit-content;align-self: center;">
-									<div id="mapperOuter" style="width: -webkit-fill-available; height: -webkit-fill-available; border: none;overflow: hidden;">
-										<canvas id="mapperCanvas" style="height: -webkit-fill-available;"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div id="pagePop_mapperInfo" class="pagePop" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
-				<div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
-					<div onclick="PopPageClose('mapperInfo')" class="pageFromDownClose" id="closeMapperPage">
-						<div rel="nofollow" onclick="PopPageClose('mapperInfo')">
-							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+
+                    <div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
+                        <div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;">
+                            <a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Vytvořit další mapu</a>
+                        </div>
+                        <div style="display:flex;flex-wrap: wrap;flex-direction: column;">
+                            <div class="listButtons" id="mapperButtons" style="flex-direction: row;">
+                                <a rel="nofollow" data-tooltip="Upravit mapu" class="butIc tooltipC" id="mapper_edit" onclick="mapper_edit()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 24 24"><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"></path></svg></a>
+                                <a rel="nofollow" data-tooltip="Stáhnout mapu" class="butIc tooltipC" id="downloadMap" onclick="PopPageShow('mapper_download_options')" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 25 29"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"/></svg></a>
+                                <a rel="nofollow" data-tooltip="Uložit mapu" class="butIc tooltipC" id="mapperZoomOut" onclick="mapper_save();" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 29 29"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"/></svg></a>
+                                <a rel="nofollow" data-tooltip="Zobrazit info" class="butIc tooltipC" id="mapperInfo" onclick="PopPageShow('mapperInfo')" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"/></svg></a>
+                                <a rel="nofollow" data-tooltip="Přiblížit" class="butIc tooltipC" id="mapperZoomIn" onclick="mapper_zoomIn()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 20 20"><path d="M20 18 15 13C18.69 8.621 15.467 1.894 11.339.58 4-1.9-1.8 4.7.42 11.56 1.89 15.821 8.6 19 13 15L18 20 20 18M13 13C9.1 16.8 3.7 14.9 2.016 11.143.104 5.502 5.057.354 10.4 1.9 14 3 17 9 13 13M-2.111 7.991 19 8M7.2 3.8 9.4 3.8 9.4 6.8 12.6 6.8 12.6 9.2 9.4 9.2 9.4 12.2 7.2 12.2 7.2 9.2 4.2 9.2 4.2 6.8 7.2 6.8 7.2 3.8M7.986-2.015 8 18"/></svg></a>
+                                <a rel="nofollow" data-tooltip="Oddálit" class="butIc tooltipC" id="mapperZoomOut" onclick="mapper_zoomOut()" style="margin-top: 5px;width: 27px;display: flex;align-items: center;justify-content: center;font-size: 7mm; height: 27px;"><svg class="ib" viewBox="0 0 20 20"><path d="M20 18 15 13C18.69 8.621 15.467 1.894 11.339.58 4-1.9-1.8 4.7.42 11.56 1.89 15.821 8.6 19 13 15L18 20 20 18M13 13C9.1 16.8 3.7 14.9 2.016 11.143.104 5.502 5.057.354 10.4 1.9 14 3 17 9 13 13M-2.111 7.991 19 8M4.2 6.8 12.6 6.8 12.6 9.2 4.2 9.2 4.2 6.8M7.986-2.015 8 18"/></svg></a>
+                                <!--<p><input type="checkbox" checked id="mapperNote" onclick="mapper_Note()">Poznámka vygenerované</p>-->
+                                <!--<p><input type="checkbox" checked id="mapperOnlyGood" onclick="mapper_OnlyGood()">Pouze kvalitní překlady</p>-->
+                                <!--<a rel="nofollow" class="button" id="mapperZoomOut" onclick="mapperRedraw()" style="margin-top: 5px;">Překreslit</a>-->
+                                <!--<p style="margin-bottom: 1cm;">Mapa nemusí mít přesné hranice, může obsahovat chyby</p>-->
+                            </div>
+                            <span id="noteMapperNotFound" style="font-size:6mm;color: var(--ColorOrig);">Nenalezen žádný záznam, nelze vytvořit mapa.</span>
+
+                            <div id="mapperAreaMap" style="max-width: 100%; overflow: auto; max-height: 100vh; width: fit-content;align-self: center;">
+                                <div id="mapperOuter" style="width: -webkit-fill-available; height: -webkit-fill-available; border: none;overflow: hidden;">
+                                    <canvas id="mapperCanvas" style="height: -webkit-fill-available;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pagePop_mapperInfo" class="pagePop" style="display: none; top:500px; z-index: 9;height: -webkit-fill-available;">
+            <div id="mapper" style="margin-left: 10%; margin-right: 10%; margin-bottom: 1cm;display: flex; flex-direction: column;">
+                <div onclick="PopPageClose('mapperInfo')" class="pageFromDownClose" id="closeMapperPage">
+                    <div rel="nofollow" onclick="PopPageClose('mapperInfo')">
+                        <svg class="ib" viewBox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
-						</div>
-						<p style="display:inline;" id="closeMapper">Zavřít</p>
-					</div>
-					<div>
-						<p class="mapperPageHeader" id="mapperGanerateMap">Poznámky k vygenerované mapě</p>
-						<li>Některé zdroje (snčj) nerozlišují ľ a l, kde bylo dostupné je použité (mělo by být místy na Slovácku; na západní Hané; na Valachách, Lašsku, Záhoří, Slezsku)</li>
-						<li>Pozor na asimilace např. když -> diž nebo diš, ono v mapě by se to nemělo ignorovat, protože záleží na kontextu</li>
-						<li>Mapa zobrazuje hromadu dat, takže se zvyšuje možnost zobrazení chyby. Vždy může obsahovat chybu/chyby</li>
-						<li>Nářečí není všude, někde bývali Němci, jejich nářečí určitě je hodně zajímavé, ale na ty se nezaměřujeme, snad kdyby byly data a hlavně čas.</li>
-						<li>Hranice mezi nářečními tvary jsou tak přesné, jak je mapa hustá z hlediska množství nalezených bodů.</li>
-						<li>Mapa je mapa regionů tzn. kulturní, ne nářečních oblastí! Vlastně nářeční oblasti se v historii měnily, třeba moravskoslovenská oblast se rozdělila na východomoravskou a ... a to je zajímavé třeba na článek do nějakého blogu. </li>
-						<li>Málo zabrazených bodů? Zkuste jiný tvar (pád, osobu, nebo ...)</li>
-						<li>Pozor! Hledáte li slova, která mají ve spisovné češtině v skloňování/časování více stejných travů, překlad může mít rozličné. Např. vesnice, bez vesnice bude v mapě vyhledáno pro 1. i 2. pád, v mapě se objeví ďeďina i ďeďiny, lze to omezit zadáním specifikace &lt;{word=vesnice|typ=pods|cislo=j|pad=1}&gt;, v některých slovách to asi tolik vadit nebude např. pro den (1. a 4.) a může se tak zvýšit množství výsledků.</li>
-					</div>
-				</div>
-			</div>
+                    </div>
+                    <p style="display:inline;" id="closeMapper">Zavřít</p>
+                </div>
+                <div>
+                    <p class="mapperPageHeader" id="mapperGanerateMap">Poznámky k vygenerované mapě</p>
+                    <li>Některé zdroje (snčj) nerozlišují ľ a l, kde bylo dostupné je použité (mělo by být místy na Slovácku; na západní Hané; na Valachách, Lašsku, Záhoří, Slezsku)</li>
+                    <li>Pozor na asimilace např. když -> diž nebo diš, ono v mapě by se to nemělo ignorovat, protože záleží na kontextu</li>
+                    <li>Mapa zobrazuje hromadu dat, takže se zvyšuje možnost zobrazení chyby. Vždy může obsahovat chybu/chyby</li>
+                    <li>Nářečí není všude, někde bývali Němci, jejich nářečí určitě je hodně zajímavé, ale na ty se nezaměřujeme, snad kdyby byly data a hlavně čas.</li>
+                    <li>Hranice mezi nářečními tvary jsou tak přesné, jak je mapa hustá z hlediska množství nalezených bodů.</li>
+                    <li>Mapa je mapa regionů tzn. kulturní, ne nářečních oblastí! Vlastně nářeční oblasti se v historii měnily, třeba moravskoslovenská oblast se rozdělila na východomoravskou a ... a to je zajímavé třeba na článek do nějakého blogu. </li>
+                    <li>Málo zabrazených bodů? Zkuste jiný tvar (pád, osobu, nebo ...)</li>
+                    <li>Pozor! Hledáte li slova, která mají ve spisovné češtině v skloňování/časování více stejných travů, překlad může mít rozličné. Např. vesnice, bez vesnice bude v mapě vyhledáno pro 1. i 2. pád, v mapě se objeví ďeďina i ďeďiny, lze to
+                        omezit zadáním specifikace &lt;{word=vesnice|typ=pods|cislo=j|pad=1}&gt;, v některých slovách to asi tolik vadit nebude např. pro den (1. a 4.) a může se tak zvýšit množství výsledků.</li>
+                </div>
+            </div>
+        </div>
 
-			<div id="pagePop_about" class="pagePop" style="display: none; top:500px; z-index: 9;">
-				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="PopPageClose('about')" class="pageFromDownClose" id="closeAboutPage">
-						<div rel="nofollow" onclick="PopPageClose('about')"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+        <div id="pagePop_about" class="pagePop" style="display: none; top:500px; z-index: 9;">
+            <div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+                <div onclick="PopPageClose('about')" class="pageFromDownClose" id="closeAboutPage">
+                    <div rel="nofollow" onclick="PopPageClose('about')"><svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 						</svg></div>
-						<p style="display:inline;" id="closeAbout">Zavřít</p>
-					</div>
-					<div><p class="aboutPageHeader" id="aboutTranslator">O Překladači</p></div>
-					<p id="aboutTranslatorText">Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část a slezský jazyk není řešený primárně (překladač je funguje přesněji pro jazyk moravský). Plánuje s i další okolí (Čech, Slovenska, Polska, Rakouska?). K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.</p>
-					<p id="textItsNotBest">Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.</p>
-					<p id="textNoMoney">Projekt není finacován. Reklamy zde umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněn od 2023, doufáme, že jeho vývoj bude pokračovat.</p>
+                    <p style="display:inline;" id="closeAbout">Zavřít</p>
+                </div>
+                <div>
+                    <p class="aboutPageHeader" id="aboutTranslator">O Překladači</p>
+                </div>
+                <p id="aboutTranslatorText">Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část a slezský jazyk není řešený primárně (překladač je funguje přesněji pro jazyk moravský). Plánuje s i další okolí (Čech, Slovenska, Polska, Rakouska?).
+                    K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.</p>
+                <p id="textItsNotBest">Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.</p>
+                <p id="textNoMoney">Projekt není finacován. Reklamy zde umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněn od 2023 (2021 velmi raná verze), doufáme, že jeho vývoj bude pokračovat.</p>
 
-					<div><p class="aboutPageHeader">K dělení na regiony</p></div>
-					<p>Moravu a Slezsko dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
-					<div style="display: flex; justify-content: center">
-					<img src="data/images/morava s popisky.svg" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy">
-					</div>
-					
-					<div><p class="aboutPageHeader" id="comment">Poznámka</p></div>
-					<p id="textWhatIsQ">Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.</p>
+                <div>
+                    <p class="aboutPageHeader">K dělení na regiony</p>
+                </div>
+                <p>Moravu a Slezsko dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
+                <div style="display: flex; justify-content: center">
+                    <img src="data/images/morava s popisky.svg" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy">
+                </div>
 
-					<div><p class="aboutPageHeader" id="contact">Kontakt</p></div>
-					<p id="textStillWorking">Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači pracujeme, ještě není úplně hotový.</p>
-					<p>E-mail: <a href="mailto:geftgames@gmail.com">geftgames@gmail.com</a></p>
-					<p>Další odkazy: <a href="https://github.com/GeftGames/moravskyprekladac">Github</a></p>
-					<p>Licence: <a href="LICENSE.md">MIT</a></p>
+                <div>
+                    <p class="aboutPageHeader" id="comment">Poznámka</p>
+                </div>
+                <p id="textWhatIsQ">Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.</p>
 
-					<div><p class="aboutPageHeader" id="forGoodComputerUsers">Komentář počítačově zkušenějším</p></div>
-					<p id="textWhatWeUse">Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.</p>
-					<p id="textHowWeTranslate">Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozebereme, 
-						detekujeme, co je kažné slovo za slovní druh. Poté se podíváme do databáze vět a jestli věta má větný vzorec tak jej aplikujem.
-						Jestli ne, tak přeložíme slova zvlášť. A jesli ani dané slovo nedokážeme přeložit, tak zkusíme nahrazovat části slov. 
-						Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. 
-						No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.</p>
-					<p id="textWeFree">Měli by jít web stáhnout jako aplikace PWA. Běžíme na free web stránkách, včetně domény.</p>
+                <div>
+                    <p class="aboutPageHeader" id="contact">Kontakt</p>
+                </div>
+                <p id="textStillWorking">Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači pracujeme, ještě není úplně hotový.</p>
+                <p>E-mail: <a href="mailto:geftgames@gmail.com">geftgames@gmail.com</a></p>
+                <p>Další odkazy: <a href="https://github.com/GeftGames/moravskyprekladac">Github</a></p>
+                <p>Licence: <a href="LICENSE.md">MIT</a></p>
 
-					<p>Aktuální počet slov (nezapočitáno skloňování, časování, nahrazování překladače): <span id="totalstats"></span></p>
+                <div>
+                    <p class="aboutPageHeader" id="forGoodComputerUsers">Komentář počítačově zkušenějším</p>
+                </div>
+                <p id="textWhatWeUse">Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.</p>
+                <p id="textHowWeTranslate">Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozebereme, detekujeme, co je kažné slovo za
+                    slovní druh. Poté se podíváme do databáze vět a jestli věta má větný vzorec tak jej aplikujem. Jestli ne, tak přeložíme slova zvlášť. A jesli ani dané slovo nedokážeme přeložit, tak zkusíme nahrazovat části slov. Např. dvojhlásku ve
+                    slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.</p>
+                <p id="textWeFree">Měli by jít web stáhnout jako aplikace PWA. Běžíme na free web stránkách, včetně domény.</p>
 
-					<div><p class="aboutPageHeader" id="news">Aktuality</p></div>
-					<p><a href="https://github.com/GeftGames/moravskyprekladac/blob/main/NEWS.md">Poslední změny</a></p>
-				</div>
-			</div>
+                <p>Aktuální počet slov (nezapočitáno skloňování, časování, nahrazování překladače): <span id="totalstats"></span></p>
 
-			<div id="pagePop_phonetics" class="pagePop" style="display: none; top:500px; z-index: 9;">
-				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="PopPageClose('phonetics')" class="pageFromDownClose" id="closeAboutPage">
-						<div rel="nofollow" onclick="PopPageClose('phonetics')"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+                <div>
+                    <p class="aboutPageHeader" id="news">Aktuality</p>
+                </div>
+                <p><a href="https://github.com/GeftGames/moravskyprekladac/blob/main/NEWS.md">Poslední změny</a></p>
+            </div>
+        </div>
+
+        <div id="pagePop_phonetics" class="pagePop" style="display: none; top:500px; z-index: 9;">
+            <div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+                <div onclick="PopPageClose('phonetics')" class="pageFromDownClose" id="closeAboutPage">
+                    <div rel="nofollow" onclick="PopPageClose('phonetics')"><svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 						</svg></div>
-						<p style="display:inline;" id="closeAbout">Zavřít</p>
-					</div>
-					<div><p class="aboutPageHeader" id="aboutTranslator">Fonetický zápis</p></div>
-					<p>Používá se aktuálně tento zápis: </p>
-					<ul>
-						<li><b>ňi</b> - vyslovuje se jako v češtině ni</li>
-						<li><b>ďi</b>, <b>ťi</b> nápodobně</li>
-						<li><b>ňí</b> - vyslovuje se jako v češtině ní</li>
-						<li><b>ďí</b>, <b>ťí</b> nápodobně</li>
+                    <p style="display:inline;" id="closeAbout">Zavřít</p>
+                </div>
+                <div>
+                    <p class="aboutPageHeader" id="aboutTranslator">Fonetický zápis</p>
+                </div>
+                <p>Používá se aktuálně tento zápis: </p>
+                <ul>
+                    <li><b>ňi</b> - vyslovuje se jako v češtině ni</li>
+                    <li><b>ďi</b>, <b>ťi</b> nápodobně</li>
+                    <li><b>ňí</b> - vyslovuje se jako v češtině ní</li>
+                    <li><b>ďí</b>, <b>ťí</b> nápodobně</li>
 
-						<li><b>ni</b> - vyslovuje se jako [ny] v češtině</li>
-						<li><b>di</b>, <b>ti</b> nápodobně</li>
-						<li><b>ní</b> - vyslovuje se jako [ný] v češtině</li>
-						<li><b>dí</b>, <b>tí</b> nápodobně</li>
+                    <li><b>ni</b> - vyslovuje se jako [ny] v češtině</li>
+                    <li><b>di</b>, <b>ti</b> nápodobně</li>
+                    <li><b>ní</b> - vyslovuje se jako [ný] v češtině</li>
+                    <li><b>dí</b>, <b>tí</b> nápodobně</li>
 
-						<li><b>ny</b> - vyslovuje se trošku tvrději jak [ny] v češtině (Valašsko, Lašsko)</li>
-						<li><b>dy</b>, <b>ty</b> nápodobně</li>
-						<li><b>ný</b> - vyslovuje se trošku tvrději jak [ný] v češtině (Valašsko, Lašsko)</li>
-						<li><b>dý</b>, <b>tý</b> nápodobně</li>
+                    <li><b>ny</b> - vyslovuje se trošku tvrději jak [ny] v češtině (Valašsko, Lašsko)</li>
+                    <li><b>dy</b>, <b>ty</b> nápodobně</li>
+                    <li><b>ný</b> - vyslovuje se trošku tvrději jak [ný] v češtině (Valašsko, Lašsko)</li>
+                    <li><b>dý</b>, <b>tý</b> nápodobně</li>
 
-						<li><b>bje</b> - vyslovuje se jako v češtině bě</li>
-						<li><b>vje</b> - vyslovuje se jako v češtině vě</li>
-						<li><b>ďe</b> - vyslovuje se jako v češtině dě</li>
-						<li><b>ťe</b> - vyslovuje se jako v češtině tě</li>
-						<li><b>ňe</b> - vyslovuje se jako v češtině ně</li>
-						<li><b>ḿe</b> - nevyvinuté mě (něco mezi [mje] a [me])</li>
-						<li><b>ṕe</b> - nevyvinuté pě (něco mezi [pje] a [pe])</li>
-						<li><b>v́e</b> - nevyvinuté vě (něco mezi [vje] a [ve])</li>
-						<li><b>b́</b>, <b>ḱ</b>, <b>ǵ</b>, .. nápodobně</li>
-						
-						<li><b>ŕ</b> - dlouhé r, IPA [r̩ː]</li>
-						<li><b>ĺ</b> - dlouhé l, IPA [l̩ː]</li>
-						<li><b>ł</b> - tvrdé l, IPA [ɫ]?</li>
-						<li><b>l</b> - střední l, IPA [l]</li>
-						<li><b>ľ</b> - měkké l, IPA [l̩]</li>
-						
-						<li><b>ạ́</b> - židlochovické á (něco mezi ó a á)</li>
-						<li><b>ê</b> - hanácké hubaté e</li>
-						<li><b>ǝ</b> - znojemské nebo kravařské e (polovokál)</li>
-						<li><b>ô</b> - hanácké hubaté o</li>
-						<li><b>ů</b> - slezské o</li>
-						<li><b>ṵ</b> - lašské nebo slovácké obalované u (vzniklo z ł)</li>
-					</ul>
-					<p>Pozn. Výslovnost může kolísat např. hanáckého ê</p>
-					<p>Pozn. Můžete odkud kopírovat znaky.</p>
-					
-					<p>Tyto znaky se nepoužívají pro zápis: </p>
-					<ul>
-						<li><b>x</b> [ks] nebo [ch] se nepoužívá! Rozepsává sa jako ks</li>
-						<li><b>mě</b> se snažíme v databázi nepoužívat, ale všechna zdrojová data to nerozlišují. Rozepsává sa jako mje nebo jako mňe</li>
-						<li><b>ʒ</b> [dz] se nepoužívá! Rozepsává sa jako dz</li>
-						<li><b>ǯ</b> [dž] se nepoužívá! Rozepsává sa jako dž</li>
-					</ul>
-				</div>
-			</div>
+                    <li><b>bje</b> - vyslovuje se jako v češtině bě</li>
+                    <li><b>vje</b> - vyslovuje se jako v češtině vě</li>
+                    <li><b>ďe</b> - vyslovuje se jako v češtině dě</li>
+                    <li><b>ťe</b> - vyslovuje se jako v češtině tě</li>
+                    <li><b>ňe</b> - vyslovuje se jako v češtině ně</li>
+                    <li><b>ḿe</b> - nevyvinuté mě (něco mezi [mje] a [me])</li>
+                    <li><b>ṕe</b> - nevyvinuté pě (něco mezi [pje] a [pe])</li>
+                    <li><b>v́e</b> - nevyvinuté vě (něco mezi [vje] a [ve])</li>
+                    <li><b>b́</b>, <b>ḱ</b>, <b>ǵ</b>, .. nápodobně</li>
 
-			<div id="pagePop_mapper_download_options" class="pagePop" style="display: none; top:500px; z-index: 9;">
-				<div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="PopPageClose('mapper_download_options')" class="pageFromDownClose" id="closeAboutPage">
-						<div rel="nofollow" onclick="PopPageClose('mapper_download_options')"><svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+                    <li><b>ŕ</b> - dlouhé r, IPA [r̩ː]</li>
+                    <li><b>ĺ</b> - dlouhé l, IPA [l̩ː]</li>
+                    <li><b>ł</b> - tvrdé l, IPA [ɫ]?</li>
+                    <li><b>l</b> - střední l, IPA [l]</li>
+                    <li><b>ľ</b> - měkké l, IPA [l̩]</li>
+
+                    <li><b>ạ́</b> - židlochovické á (něco mezi ó a á)</li>
+                    <li><b>ê</b> - hanácké hubaté e</li>
+                    <li><b>ǝ</b> - znojemské nebo kravařské e (polovokál)</li>
+                    <li><b>ô</b> - hanácké hubaté o</li>
+                    <li><b>ů</b> - slezské o</li>
+                    <li><b>ṵ</b> - lašské nebo slovácké obalované u (vzniklo z ł)</li>
+                </ul>
+                <p>Pozn. Výslovnost může kolísat např. hanáckého ê</p>
+                <p>Pozn. Můžete odkud kopírovat znaky.</p>
+
+                <p>Tyto znaky se nepoužívají pro zápis: </p>
+                <ul>
+                    <li><b>x</b> [ks] nebo [ch] se nepoužívá! Rozepsává sa jako ks</li>
+                    <li><b>mě</b> se snažíme v databázi nepoužívat, ale všechna zdrojová data to nerozlišují. Rozepsává sa jako mje nebo jako mňe</li>
+                    <li><b>ʒ</b> [dz] se nepoužívá! Rozepsává sa jako dz</li>
+                    <li><b>ǯ</b> [dž] se nepoužívá! Rozepsává sa jako dž</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="pagePop_mapper_download_options" class="pagePop" style="display: none; top:500px; z-index: 9;">
+            <div id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+                <div onclick="PopPageClose('mapper_download_options')" class="pageFromDownClose" id="closeAboutPage">
+                    <div rel="nofollow" onclick="PopPageClose('mapper_download_options')"><svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 							<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 						</svg></div>
-						<p style="display:inline;" id="closeAbout">Zavřít</p>
-					</div>
-					<div><p class="aboutPageHeader" id="aboutTranslator">Výběr stáhnutí mapy</p></div>
-					<div style="display: flex;justify-content: center;align-items: center;flex-direction: column;align-self: center;">
-						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_download();PopPageClose('mapper_download_options')">PNG</span> 			<span style="width: 90px;">obrázek</span></div>
-						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_cvs();PopPageClose('mapper_download_options')">CSV</span> 			<span style="width: 90px;">tabulka</span></div>
-						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_geojson();PopPageClose('mapper_download_options')">GeoJSON</span> 	<span style="width: 90px;">gis</span></div>
-						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_klm();PopPageClose('mapper_download_options')">KML</span> 	<span style="width: 90px;">gis</span></div>
-						<div class="download_option"><svg class="ib" viewBox="0 0 25 29"style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gml();PopPageClose('mapper_download_options')">GML</span> 	<span style="width: 90px;">gis</span></div>
-					</div>
-				</div>
-			</div>
+                    <p style="display:inline;" id="closeAbout">Zavřít</p>
+                </div>
+                <div>
+                    <p class="aboutPageHeader" id="aboutTranslator">Výběr stáhnutí mapy</p>
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;align-self: center;">
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_download();PopPageClose('mapper_download_options')">PNG</span>                        <span style="width: 90px;">obrázek</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_cvs();PopPageClose('mapper_download_options')">CSV</span>                        <span style="width: 90px;">tabulka</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_geojson();PopPageClose('mapper_download_options')">GeoJSON</span>                        <span style="width: 90px;">gis</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_klm();PopPageClose('mapper_download_options')">KML</span>                        <span style="width: 90px;">gis</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gml();PopPageClose('mapper_download_options')">GML</span>                        <span style="width: 90px;">gis</span></div>
+                </div>
+            </div>
+        </div>
 
-			<div id="pagePop_mapPage" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;height: -webkit-fill-available;">
-				<div class="pageInside" id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="PopPageClose('mapPage')" class="pageFromDownClose" id="closeSelectorPage">
-						<div rel="nofollow" onclick="PopPageClose('mapPage')">
-							<svg  class="ib" viewBox="0 0 24 24" style="display: flex;">
+        <div id="pagePop_mapPage" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;height: -webkit-fill-available;">
+            <div class="pageInside" id="about" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+                <div onclick="PopPageClose('mapPage')" class="pageFromDownClose" id="closeSelectorPage">
+                    <div rel="nofollow" onclick="PopPageClose('mapPage')">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
-						</div>
-						<p style="display:inline;" id="closeSelector">Zavřít</p>
-					</div>
-					<div><p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě)</p></div>
-					<div>
-						<div id="mapSelector" style="position: fixed; width: 100%; overflow: hidden;left: 0px;height: 100%;">
-							<div id="map" style="display: flex;transform-origin: left 0px; height: 100%;">
-								<div id="mapZoom" style="width: 100%;height: 100%;">
-									<canvas id="mapSelectLang" style="width: 100%;height: 100%;"></canvas>		  
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě)</p>
+                </div>
+                <div>
+                    <div id="mapSelector" style="position: fixed; width: 100%; overflow: hidden;left: 0px;height: 100%;">
+                        <div id="map" style="display: flex;transform-origin: left 0px; height: 100%;">
+                            <div id="mapZoom" style="width: 100%;height: 100%;">
+                                <canvas id="mapSelectLang" style="width: 100%;height: 100%;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<div id="pagePop_pageInfoLang" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
-				<div class="pageInside" id="infolang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
-					<div onclick="PopPageClose('pageInfoLang')" class="pageFromDownClose" id="closeSelectorPage">
-						<div rel="nofollow" onclick="PopPageClose('pageInfoLang')">
-							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+        <div id="pagePop_pageInfoLang" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+            <div class="pageInside" id="infolang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column;">
+                <div onclick="PopPageClose('pageInfoLang')" class="pageFromDownClose" id="closeSelectorPage">
+                    <div rel="nofollow" onclick="PopPageClose('pageInfoLang')">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
-						</div>
-						<p style="display:inline;" id="closeSelector">Zavřít</p>
-					</div>
-					<div><p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p></div>
-					<p id="infoLangText"></p>
-				</div>
-			</div>		
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p>
+                </div>
+                <p id="infoLangText"></p>
+            </div>
+        </div>
 
-			<div id="pagePop_pageOwnLang" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
-				<div class="pageInside" id="ownpagelang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="PopPageClose('pageOwnLang')" class="pageFromDownClose" id="closeOwnLangPage">
-						<div rel="nofollow" onclick="PopPageClose('pageOwnLang')">
-							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+        <div id="pagePop_pageOwnLang" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+            <div class="pageInside" id="ownpagelang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('pageOwnLang')" class="pageFromDownClose" id="closeOwnLangPage">
+                    <div rel="nofollow" onclick="PopPageClose('pageOwnLang')">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
-						</div>
-						<p style="display:inline;" id="closeSelector">Zavřít</p>
-					</div>
-					<div><p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p></div>
-					<input type="file" id="ownLangFile">
-					<a class="button" onclick="loadLang()" id="ownLangFileLoad">Načíst překlad</a>
-					<a class="button" style="display: none" onclick="removeLang()">Uvolnit překlad</a>
-					<br>
-				</div>
-			</div>	
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="mapPageHeader" id="mapPlace"><span id="langName" style="font-size:10mm"></span></p>
+                </div>
+                <input type="file" id="ownLangFile">
+                <a class="button" onclick="loadLang()" id="ownLangFileLoad">Načíst překlad</a>
+                <a class="button" style="display: none" onclick="removeLang()">Uvolnit překlad</a>
+                <br>
+            </div>
+        </div>
 
-			<div id="pagePop_pageLangD" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
-				<div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="PopPageClose('pageLangD')" class="pageFromDownClose" id="closeLangD">
-						<div rel="nofollow" onclick="PopPageClose('pageLangD')">
-							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+        <div id="pagePop_pageLangD" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+            <div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('pageLangD')" class="pageFromDownClose" id="closeLangD">
+                    <div rel="nofollow" onclick="PopPageClose('pageLangD')">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
-						</div>
-						<p style="display:inline;" id="closeSelector">Zavřít</p>
-					</div>
-					<div><p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm"></span></p></div>
-					<div id="pagelangDFill"></div>
-					<br>
-				</div>
-			</div>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm"></span></p>
+                </div>
+                <div id="pagelangDFill"></div>
+                <br>
+            </div>
+        </div>
 
-			<div id="pagePop_pageWords" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
-				<div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
-					<div onclick="PopPageClose('pageWords')" class="pageFromDownClose" id="closeLangD">
-						<div rel="nofollow" onclick="PopPageClose('pageWords')">
-							<svg class="ib" viewBox="0 0 24 24" style="display: flex;">
+        <div id="pagePop_pageWords" class="pagePop" style="display: none; top:500px;z-index: 9; height: inherit;min-height: -webkit-fill-available;">
+            <div class="pageInside" id="pageinsideLangD" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('pageWords')" class="pageFromDownClose" id="closeLangD">
+                    <div rel="nofollow" onclick="PopPageClose('pageWords')">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
 								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
 							</svg>
-						</div>
-						<p style="display:inline;" id="closeSelector">Zavřít</p>
-					</div>
-					<div><p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Seznam zajímavých moravských slov</span></p></div>
-					<div id="pageWords">
-						<div><p class="wordsItem">Lůžko</p> - <a onclick="mapperSetWord(this)">postel</a></div> 
-						<div><p class="wordsItem">Zhlavec</p> - <a onclick="mapperSetWord(this)">polštář</a></div> 
-						<div><p class="wordsItem">Duchna</p> - <a onclick="mapperSetWord(this)">peřina</a></div> 
-						<div><p class="wordsItem">Dědina</p> - <a onclick="mapperSetWord(this)">vesnice</a></div> 
-						<div><p class="wordsItem">Haluz</p> - <a onclick="mapperSetWord(this)">větev</a></div> 
-						<div><p class="wordsItem">Baňka</p> - <a onclick="mapperSetWord(this)">vánoční koule</a></div> 
-						<div><p class="wordsItem">Zapacknout</p> - <a onclick="mapperSetWord(this)">zakopnout</a></div> 
-						<div><p class="wordsItem">Rožnout</p> - <a onclick="mapperSetWord(this)">rozsvítit</a></div> 
-						<div><p class="wordsItem">Fčil</p> - <a onclick="mapperSetWord(this)">teď</a></div> 
-						<div><p class="wordsItem">Šufan</p> - <a onclick="mapperSetWord(this)">naběračka</a></div> 
-						<div><p class="wordsItem">Pjesnička</p> - <a onclick="mapperSetWord(this)">písnička</a></div> 
-						<div><p class="wordsItem">Kmocháček</p> - <a onclick="mapperSetWord(this)">kmotr</a></div> 
-						<div><p class="wordsItem">Kmotřenka</p> - <a onclick="mapperSetWord(this)">kmotra</a></div> 
-						<div><p class="wordsItem">Stařenka</p> - <a onclick="mapperSetWord(this)">babička</a></div> 
-						<div><p class="wordsItem">Stařeček</p> - <a onclick="mapperSetWord(this)">dědeček</a></div> 
-						<div><p class="wordsItem">Dénko, dynko</p> - <a onclick="mapperSetWord(this)">krájecí podložka</a></div> 
-						<div><p class="wordsItem">Cigánit</p> - <a onclick="mapperSetWord(this)">krást</a>, <a onclick="mapperSetWord(this)">lhát</a></div> 
-						<div><p class="wordsItem">Naňuhňané</p> - <a onclick="mapperSetWord(this)">namačkané</a></div> 
-						<div><p class="wordsItem">Zavazet</p> - <a onclick="mapperSetWord(this)">překážet</a></div> 
-						<div><p class="wordsItem">Turkyň</p> - <a onclick="mapperSetWord(this)">kukuřice</a></div> 
-						<div><p class="wordsItem">Karfiól</p> - <a onclick="mapperSetWord(this)">květák</a></div> 
-						<div><p class="wordsItem">Panáček</p> - <a onclick="mapperSetWord(this)">farář</a></div> 
-						<div><p class="wordsItem">Škraň</p> - <a onclick="mapperSetWord(this)">tvář</a></div> 
-						<div><p class="wordsItem">Žbuliny</p> - <a onclick="mapperSetWord(this)">bubliny</a></div> 
-						<div><p class="wordsItem">Čudit</p> - <a onclick="mapperSetWord(this)">čadit</a></div> 
-						<div><p class="wordsItem">Čupět, čapět</p> - <a onclick="mapperSetWord(this)">dřepět</a></div> 
-						<div><p class="wordsItem">Prča</p> - <a onclick="mapperSetWord(this)">legrace</a></div> 
-						<div><p class="wordsItem">Čapa</p> - <a onclick="mapperSetWord(this)">hnáty</a> (expresivně noha)</div> 
-						<div><p class="wordsItem">Aji</p> - <a onclick="mapperSetWord(this)">i</a></div> 
-						<div><p class="wordsItem">Čuňa</p> - <a onclick="mapperSetWord(this)">huba</a> (expresivně)</div> 
-						<div><p class="wordsItem">Baňa</p> - <a onclick="mapperSetWord(this)">rána</a> (pěstí)</div> 
-						<div><p class="wordsItem">Babóňat, babúňat</p> - <a onclick="mapperSetWord(this)">ponocovat</a></div> 
-						<div><p class="wordsItem">Víno</p> - <a onclick="mapperSetWord(this)">hroznové kuličky</a></div> 
-						<div><p class="wordsItem">Shnilý</p> - <a onclick="mapperSetWord(this)">líný</a></div> 
-						<div><p class="wordsItem">Chrobák</p> - <a onclick="mapperSetWord(this)">brouk</a></div> 
-						<div><p class="wordsItem">Kél</p> - <a onclick="mapperSetWord(this)">kapusta</a></div> 
-						<div><p class="wordsItem">Kamilky</p> - <a onclick="mapperSetWord(this)">heřmánek</a></div> 
-						<div><p class="wordsItem">Tož</p> - <a onclick="mapperSetWord(this)">tak</a> (pouze někde)</div> 
-						<div><p class="wordsItem">Chudý</p> - <a onclick="mapperSetWord(this)">hubený</a></div> 
-						<div><p class="wordsItem">Zerz</p> - <a onclick="mapperSetWord(this)">rez</a></div> 
-					</div>
-					<br>
-				</div>
-			</div>
-		</div>
-	</body>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Seznam zajímavých moravských slov</span></p>
+                </div>
+                <div id="pageWords">
+                    <div>
+                        <p class="wordsItem">Lůžko</p> - <a onclick="mapperSetWord(this)">postel</a></div>
+                    <div>
+                        <p class="wordsItem">Zhlavec</p> - <a onclick="mapperSetWord(this)">polštář</a></div>
+                    <div>
+                        <p class="wordsItem">Duchna</p> - <a onclick="mapperSetWord(this)">peřina</a></div>
+                    <div>
+                        <p class="wordsItem">Dědina</p> - <a onclick="mapperSetWord(this)">vesnice</a></div>
+                    <div>
+                        <p class="wordsItem">Haluz</p> - <a onclick="mapperSetWord(this)">větev</a></div>
+                    <div>
+                        <p class="wordsItem">Baňka</p> - <a onclick="mapperSetWord(this)">vánoční koule</a></div>
+                    <div>
+                        <p class="wordsItem">Zapacknout</p> - <a onclick="mapperSetWord(this)">zakopnout</a></div>
+                    <div>
+                        <p class="wordsItem">Rožnout</p> - <a onclick="mapperSetWord(this)">rozsvítit</a></div>
+                    <div>
+                        <p class="wordsItem">Fčil</p> - <a onclick="mapperSetWord(this)">teď</a></div>
+                    <div>
+                        <p class="wordsItem">Šufan</p> - <a onclick="mapperSetWord(this)">naběračka</a></div>
+                    <div>
+                        <p class="wordsItem">Pjesnička</p> - <a onclick="mapperSetWord(this)">písnička</a></div>
+                    <div>
+                        <p class="wordsItem">Kmocháček</p> - <a onclick="mapperSetWord(this)">kmotr</a></div>
+                    <div>
+                        <p class="wordsItem">Kmotřenka</p> - <a onclick="mapperSetWord(this)">kmotra</a></div>
+                    <div>
+                        <p class="wordsItem">Stařenka</p> - <a onclick="mapperSetWord(this)">babička</a></div>
+                    <div>
+                        <p class="wordsItem">Stařeček</p> - <a onclick="mapperSetWord(this)">dědeček</a></div>
+                    <div>
+                        <p class="wordsItem">Dénko, dynko</p> - <a onclick="mapperSetWord(this)">krájecí podložka</a></div>
+                    <div>
+                        <p class="wordsItem">Cigánit</p> - <a onclick="mapperSetWord(this)">krást</a>, <a onclick="mapperSetWord(this)">lhát</a></div>
+                    <div>
+                        <p class="wordsItem">Naňuhňané</p> - <a onclick="mapperSetWord(this)">namačkané</a></div>
+                    <div>
+                        <p class="wordsItem">Zavazet</p> - <a onclick="mapperSetWord(this)">překážet</a></div>
+                    <div>
+                        <p class="wordsItem">Turkyň</p> - <a onclick="mapperSetWord(this)">kukuřice</a></div>
+                    <div>
+                        <p class="wordsItem">Karfiól</p> - <a onclick="mapperSetWord(this)">květák</a></div>
+                    <div>
+                        <p class="wordsItem">Panáček</p> - <a onclick="mapperSetWord(this)">farář</a></div>
+                    <div>
+                        <p class="wordsItem">Škraň</p> - <a onclick="mapperSetWord(this)">tvář</a></div>
+                    <div>
+                        <p class="wordsItem">Žbuliny</p> - <a onclick="mapperSetWord(this)">bubliny</a></div>
+                    <div>
+                        <p class="wordsItem">Čudit</p> - <a onclick="mapperSetWord(this)">čadit</a></div>
+                    <div>
+                        <p class="wordsItem">Čupět, čapět</p> - <a onclick="mapperSetWord(this)">dřepět</a></div>
+                    <div>
+                        <p class="wordsItem">Prča</p> - <a onclick="mapperSetWord(this)">legrace</a></div>
+                    <div>
+                        <p class="wordsItem">Čapa</p> - <a onclick="mapperSetWord(this)">hnáty</a> (expresivně noha)</div>
+                    <div>
+                        <p class="wordsItem">Aji</p> - <a onclick="mapperSetWord(this)">i</a></div>
+                    <div>
+                        <p class="wordsItem">Čuňa</p> - <a onclick="mapperSetWord(this)">huba</a> (expresivně)</div>
+                    <div>
+                        <p class="wordsItem">Baňa</p> - <a onclick="mapperSetWord(this)">rána</a> (pěstí)</div>
+                    <div>
+                        <p class="wordsItem">Babóňat, babúňat</p> - <a onclick="mapperSetWord(this)">ponocovat</a></div>
+                    <div>
+                        <p class="wordsItem">Víno</p> - <a onclick="mapperSetWord(this)">hroznové kuličky</a></div>
+                    <div>
+                        <p class="wordsItem">Shnilý</p> - <a onclick="mapperSetWord(this)">líný</a></div>
+                    <div>
+                        <p class="wordsItem">Chrobák</p> - <a onclick="mapperSetWord(this)">brouk</a></div>
+                    <div>
+                        <p class="wordsItem">Kél</p> - <a onclick="mapperSetWord(this)">kapusta</a></div>
+                    <div>
+                        <p class="wordsItem">Kamilky</p> - <a onclick="mapperSetWord(this)">heřmánek</a></div>
+                    <div>
+                        <p class="wordsItem">Tož</p> - <a onclick="mapperSetWord(this)">tak</a> (pouze někde)</div>
+                    <div>
+                        <p class="wordsItem">Chudý</p> - <a onclick="mapperSetWord(this)">hubený</a></div>
+                    <div>
+                        <p class="wordsItem">Zerz</p> - <a onclick="mapperSetWord(this)">rez</a></div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
