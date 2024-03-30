@@ -469,9 +469,10 @@ class ItemNoun {
 		
         */
         let try_shapes = [0, 7, 4, 11, 1, 13, 6, 12, 9];
-
+        let used_fall;
         for (let i = 0; i < try_shapes.length; i++) {
             let index = try_shapes[i];
+            used_fall = index;
             str_form = this.PatternFrom.GetShape(this.From, index);
             str_to = pattern.GetShape(body, index);
             //str_to=body+pattern.Shapes[index];
@@ -527,6 +528,12 @@ class ItemNoun {
         else if (pattern.Gender == "str") info += ", rod stř.";
         else if (pattern.Gender == "muz ziv") info += ", rod muž. ž.";
         else if (pattern.Gender == "muz neziv") info += ", rod muž. n.";
+
+        if (used_fall != 0) {
+            if (used_fall < 7) info += ", č. j., pád " + (used_fall + 1) + ".";
+            else info += ", č. m., pád " + (used_fall - 7 + 1) + ".";
+        }
+
         r.innerText = info + ")";
         r.className = "dicMoreInfo";
         p.appendChild(r);
