@@ -255,7 +255,7 @@ function GetTranslations() {
     }*/
 
     function RegisterLang(content, fileName) {
-        let lines = content.split(/\r\n|\n/);
+        let lines = content.split(/\r?\n/);
 
         if (lines.length < 5) {
             if (dev) console.log("WARLING| Downloaded twr seems too small");
@@ -320,13 +320,25 @@ function GetTranslations() {
                 //				console.log(category);
 
                 // Add color
-                if (lang.Quality == 5) { lang.ColorFillStyle = "Gold";
-                    lang.ColorStrokeStyle = "Black"; } else if (lang.Quality == 4) { lang.ColorFillStyle = "Yellow";
-                    lang.ColorStrokeStyle = "Black"; } else if (lang.Quality == 3) { lang.ColorFillStyle = "Orange";
-                    lang.ColorStrokeStyle = "Black"; } else if (lang.Quality == 2) { lang.ColorFillStyle = "#cd7f32";
-                    lang.ColorStrokeStyle = 'rgb(0,0,0,.9)'; } else if (lang.Quality == 1) { lang.ColorFillStyle = "Red";
-                    lang.ColorStrokeStyle = 'rgb(0,0,0,.8)'; } else if (lang.Quality == 0) { lang.ColorFillStyle = "rgb(128,128,128,.1)";
-                    lang.ColorStrokeStyle = 'rgb(0,0,0,.5)'; } else { lang.ColorFillStyle = "Black"; }
+                if (lang.Quality == 5) {
+                    lang.ColorFillStyle = "Gold";
+                    lang.ColorStrokeStyle = "Black";
+                } else if (lang.Quality == 4) {
+                    lang.ColorFillStyle = "Yellow";
+                    lang.ColorStrokeStyle = "Black";
+                } else if (lang.Quality == 3) {
+                    lang.ColorFillStyle = "Orange";
+                    lang.ColorStrokeStyle = "Black";
+                } else if (lang.Quality == 2) {
+                    lang.ColorFillStyle = "#cd7f32";
+                    lang.ColorStrokeStyle = 'rgb(0,0,0,.9)';
+                } else if (lang.Quality == 1) {
+                    lang.ColorFillStyle = "Red";
+                    lang.ColorStrokeStyle = 'rgb(0,0,0,.8)';
+                } else if (lang.Quality == 0) {
+                    lang.ColorFillStyle = "rgb(128,128,128,.1)";
+                    lang.ColorStrokeStyle = 'rgb(0,0,0,.5)';
+                } else { lang.ColorFillStyle = "Black"; }
 
                 let nodeLang = document.createElement('option');
                 lang.option = nodeLang;
@@ -651,7 +663,7 @@ function BuildSelect(lang) {
 function translateContentsSubs(contents, name) {
     console.log("Translating file...");
 
-    let lines = contents.split("\r\n").join('\n').split("\n");
+    let lines = contents.split(/\r?\n/);
 
     if (lines.length >= 1) {
         if (name.endsWith(".srt")) {

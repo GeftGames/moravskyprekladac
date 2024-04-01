@@ -4798,7 +4798,7 @@ class LanguageTr {
             switch (subtype) {
                 // Comment info
                 case "i":
-                    this.Info = line.substring(1).replaceAll('\\n', "<br>");
+                    this.Info = line.substring(1).replaceAll(/\\r?\\n/, "<br>");
                     break;
 
                     //case "a":
@@ -4832,7 +4832,7 @@ class LanguageTr {
                     {
                         let stri = line.substring(1);
                         //		if (stri instanceof String || typeof myVar === 'string') {
-                        let l = stri.replaceAll('\\n', "\n").replaceAll("->", "➔").split('\n');
+                        let l = stri.replaceAll(/\r?\n/, "\n").replaceAll("->", "➔").split('\\n');
                         let text = "";
                         let ul = false;
                         for (let i of l) {
