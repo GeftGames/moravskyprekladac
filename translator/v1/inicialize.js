@@ -684,7 +684,7 @@ function translateContentsSubsASS(lines) {
             let lineCont = ToXOcur(",", 7, line);
             output += lineCont[0];
 
-            let linesOfSubs = lineCont[1].split("\\n");
+            let linesOfSubs = lineCont[1].split(/\r?\n/);
 
             for (const sl of linesOfSubs) {
                 let translated = TranslateSimpleText(sl);
@@ -1275,7 +1275,14 @@ function SearchInMoravian() {
             for (let phrase of lang.Phrases) {
                 for (let to of phrase.output) {
                     if (to.Text == inputText) {
-                        arrDataT = AddTo(arrDataT, { Type: "Fráze", Meaning: phrase.input.join(" "), Comment: to.Comment, Location: [lang.Name] });
+                        str = "";
+                        for (let f of phrase.input) {
+                            // if (Array.isArray(f)) {
+                            str += f.join(" ")
+                                // } else str += phrase.input.join(" ");
+                        }
+
+                        arrDataT = AddTo(arrDataT, { Type: "Fráze", Meaning: str /*phrase.input.join(" ")*/ , Comment: to.Comment, Location: [lang.Name] });
                         break;
                     }
                 }

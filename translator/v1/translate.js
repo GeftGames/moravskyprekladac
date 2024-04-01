@@ -1103,9 +1103,14 @@ class ItemPhrase {
             out += o.Text.join(" ");
             //for (let o2 of o) o2+" ";
         }
+        console.log("sfdsdfs");
         if (Array.isArray(this.input)) {
-            for (let i of this.input) {
-                inp += i.join(" ");
+
+            for (let mul_i of this.input) {
+                for (let i of mul_i) {
+                    inp += i + " ";
+                }
+                // inp += ", ";
                 //for (let i2 of i) inp+=i2+" ";
             }
         } else inp = this.input;
