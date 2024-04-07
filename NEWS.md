@@ -1,4 +1,7 @@
 # Poslední změny
+### 2024 4.4. 
+- Podpora překladů JSON
+  
 ### 2024 28.2. 
 - Drobné grafické úpravy (chrome animace placeholderu, vyhledávání textarea->input,...)
 - TW je zvlášť v reposity
