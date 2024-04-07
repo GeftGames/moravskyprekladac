@@ -180,7 +180,7 @@ class ItemPatternNoun {
         return item;
     }
 
-    GetShape(starting, fall) {
+    GetShapeTr(starting, fall) {
         let shapes = this.Shapes[fall];
         if (!Array.isArray(shapes)) shapes = [shapes];
         let out = "";
@@ -193,6 +193,21 @@ class ItemPatternNoun {
         }
         if (out == "") return undefined;
         return ApplyPostRules(out);
+    }
+
+    GetShape(starting, fall) {
+        let shapes = this.Shapes[fall];
+        if (!Array.isArray(shapes)) shapes = [shapes];
+        let out = "";
+        for (let i = 0; i < shapes.length; i++) {
+            let shape = shapes[i];
+            if (shape != "?" && shape != "-") {
+                out += starting + shape;
+            }
+            if (i != shapes.length - 1) out += ", ";
+        }
+        if (out == "") return undefined;
+        return out;
     }
 
     GetTable(starting) {
@@ -474,7 +489,7 @@ class ItemNoun {
             let index = try_shapes[i];
             used_fall = index;
             str_form = this.PatternFrom.GetShape(this.From, index);
-            str_to = pattern.GetShape(body, index);
+            str_to = pattern.GetShapeTr(body, index);
             //str_to=body+pattern.Shapes[index];
             if (str_form != undefined && str_to != undefined) break;
         }
@@ -1103,13 +1118,13 @@ class ItemPhrase {
             out += o.Text.join(" ");
             //for (let o2 of o) o2+" ";
         }
-        console.log("sfdsdfs");
+
         if (Array.isArray(this.input)) {
 
-            for (let mul_i of this.input) {
-                for (let i of mul_i) {
-                    inp += i + " ";
-                }
+            for (let i of this.input) {
+                // for (let i of mul_i) {
+                inp += i.join(" ");
+                // }
                 // inp += ", ";
                 //for (let i2 of i) inp+=i2+" ";
             }

@@ -782,9 +782,21 @@ function TranslateFile() {
     reader.addEventListener('load', function(e) {
         // contents of the file
         let text = e.target.result;
-        let translated = TranslateSimpleText(text);
-        //makeTextFile(file_name,text);
+        let translated = "";
 
+        console.log(file_name);
+        // simple txt
+        if (file_name.endsWith(".txt")) translated = TranslateSimpleText(text);
+
+        // json
+        else if (file_name.endsWith(".json")) translated = TranslateJsonFile(text);
+
+        // lang
+        else if (file_name.endsWith(".lang")) translated = TranslateJavaLangFile(text);
+
+        // unknown
+        else translated = TranslateSimpleText(text);
+        // možná přibudou: ini, csv
 
         var link = document.getElementById('downloadFile');
         link.setAttribute('download', file_name);
@@ -800,6 +812,106 @@ function TranslateFile() {
     });
 
     reader.readAsText(file);
+}
+
+function TranslateJavaLangFile(text) {
+    lines_in = text.split("\n");
+    let lines_out = [];
+
+    for (let line_in of lines_in) {
+        // komentář
+        if (line_in.startsWith("##")) {
+            lines_out.push(line_in);
+            continue;
+        }
+
+        if (line_in.includes("=")) {
+            // přeložit od = na konec textu, není -li nakonci ## komentář
+            let splited = line_in.split("=");
+            let text_to_translate, text_at_end;
+            if (splited[1].includes('##')) {
+                // let parts = splited[1].split("##");
+                var i = s.indexOf('##');
+                let parts = [s.slice(0, i), s.slice(i)];
+
+                text_to_translate = parts[0];
+                text_at_end = parts[1];
+            } else {
+                text_at_end = "";
+                text_to_translate = splited[1];
+            }
+
+            // %s a %n nepřekládat (pro java)
+            text_to_translate = text_to_translate.replaceAll("%s", "$1$");
+            text_to_translate = text_to_translate.replaceAll("%n", "$2$");
+
+            let translated = TranslateSimpleText(text_to_translate);
+
+            translated = translated.replaceAll("$1$", "%s");
+            translated = translated.replaceAll("$2$", "%n");
+
+            lines_out.push(splited[0] + "=" + translated + text_at_end);
+        } else {
+            lines_out.push(line_in);
+        }
+    }
+    return lines_out.join("\n");
+}
+
+function TranslateJsonFile(text) {
+    // console.log("json");
+    lines_in = text.split("\n");
+    let lines_out = [];
+
+    for (let line_in of lines_in) {
+        //   console.log(line_in);
+        if (line_in.includes(":")) {
+            console.log(":");
+            // přeložit od = na konec textu, není -li nakonci ## komentář
+            let splited = line_in.split(":");
+            if (splited.length != 2) {
+                lines_out.push(line_in);
+                continue;
+            }
+            let potencial_text_to_translate, text_to_translate, text_at_start, text_at_end;
+            text_at_end = "";
+            potencial_text_to_translate = splited[1];
+            text_at_start = splited[0] + ":";
+
+            if (potencial_text_to_translate.includes('"')) {
+                let parts = potencial_text_to_translate.split('"');
+                console.log("''''");
+                if (parts.length == 3) {
+                    text_at_start = text_at_start + parts[0] + '"';
+                    text_to_translate = parts[1];
+                    text_at_end = '"' + parts[2] + text_at_end;
+                    console.log(text_to_translate);
+                } else {
+                    lines_out.push(line_in);
+                    continue;
+                }
+            } else {
+                lines_out.push(line_in);
+                continue;
+            }
+
+            // %s a %n nepřekládat (pro java)
+            text_to_translate = text_to_translate.replaceAll("%s", "$1$");
+            text_to_translate = text_to_translate.replaceAll("%n", "$2$");
+
+            let translated = TranslateSimpleText(text_to_translate);
+
+            translated = translated.replaceAll("$1$", "%s");
+            translated = translated.replaceAll("$2$", "%n");
+
+            if (translated.endsWith(" ")) translated = translated.substring(0, translated.length - 1);
+
+            lines_out.push(text_at_start + translated + text_at_end);
+        } else {
+            lines_out.push(line_in);
+        }
+    }
+    return lines_out.join("\n");
 }
 
 function TranslateSubs() {

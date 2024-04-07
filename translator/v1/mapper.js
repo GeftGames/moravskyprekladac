@@ -22,7 +22,6 @@ function mapper_zoomOut(){
 	mapperRedraw();
 }
 
-
 function mapper_init(advanced,customStyle) {
 	mapperAdvanced=advanced;
 	mapperRenderOptions=new RenderMapperOptions();
@@ -79,8 +78,8 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 		if (word!=undefined) {
 			if (!word.includes('undefined')) { // Toto by se stávat nemělo
 				if (word!="") { // Toto by se stávat nemělo
-					if (mapper_OylyGood){
-						if (lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated>0) {
+					//if (mapper_OylyGood){
+						if (lang.qualityTrTotalTranslatedWell/lang.qualityTrTotalTranslated >= mapperRenderOptions.minQuality/*0*/) {
 							found=true;
 							pts.push({
 								x: lang.locationX*mapperRenderOptions.scale, 
@@ -92,7 +91,7 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 							});
 							continue;
 						}
-					}else{
+					/*}else{
 						found=true;
 						pts.push({
 							x: lang.locationX*mapperRenderOptions.scale, 
@@ -103,7 +102,7 @@ function mapper_GetPointsTranslated(langs, w) {//spec=["podstatné jméno", "pá
 							id: -1
 						});
 						continue;
-					}
+					}*/
 				}			
 			}	
 		}
@@ -150,7 +149,6 @@ function Voronoi_borders(points, imageDataBounds) {
 
 		let imageData = ctx.createImageData(canvasMap.width, canvasMap.height);
 		
-
 		//var img_read = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
 
 		let data = imageData.data, 
@@ -535,8 +533,7 @@ function mapper_compute() {
 	ctx.font = "11px sans-serif";
 	status_mapper="";
 
-	// Get points
-	
+	// Get points	
 	if (mapperAdvanced) inputTextmapper=document.getElementById("mapperSearchPattern").value;
 	else inputTextmapper=document.getElementById("mapperInput").value;
 
@@ -731,7 +728,7 @@ class RenderMapperOptions{
 		this.text="";
 		this.advanced=false;
 		this.backgroundRegionMapOpacity=0.5;
-
+		this.minQuality=0.5;
 		this.ShowPlacesShorts=true;
 		// For future
 		//this.font;
@@ -751,8 +748,9 @@ class RenderMapperOptions{
 		if (this.advanced) this.inputText=document.getElementById("mapperSearchPattern").value=mapperRenderOptions.inputText;
 		else this.inputText=document.getElementById("mapperInput").value;
 		this.ShowPlacesShorts=document.getElementById('mapperOptionPlaceNames').checked;
-
-		this.ComputeColors();
+		this.minQuality=document.getElementById('mapperOptionMinimalQuality').value/100;	
+		console.log()
+		this.ComputeColors(this.minQuality);
 	}
 	
 	SetElements() {
@@ -764,6 +762,7 @@ class RenderMapperOptions{
 		if (this.advanced) document.getElementById("mapperSearchPattern").value=mapperRenderOptions.inputText=this.inputText;
 		else document.getElementById("mapperInput").value=this.inputText;
 		document.getElementById('mapperOptionPlaceNames').checked=this.ShowPlacesShorts;
+		document.getElementById('mapperOptionMinimalQuality').value=this.minQuality*100;	
 	}
 	
 	ComputeColors(){
@@ -797,7 +796,7 @@ class RenderMapperOptions{
 			this.inputText=parts[7];
 			this.backgroundRegionMapOpacity=parts[8];
 			this.ShowPlacesShorts=parts[8]=="true";
-
+			this.minQuality=[9];
 			this.ComputeColors();
 		}
 	}
@@ -813,7 +812,7 @@ class RenderMapperOptions{
 		data+=this.inputText+"|";
 		data+=this.backgroundRegionMapOpacity+"|";
 		data+=this.ShowPlacesShorts+="|";
-
+		data+=this.minQuality+="|";
 		return data;
 	}
 }
