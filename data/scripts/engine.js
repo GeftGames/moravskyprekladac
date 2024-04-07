@@ -1931,7 +1931,7 @@ function SetSavedTranslations() {
             txt.onclick = function() {
                 if (!tr.fromTo) document.getElementById("selectorTo").selectedIndex = 1;
                 else document.getElementById("selectorTo").selectedIndex = 0;
-                document.getElementById("specialTextarea").innerText = tr.input;
+                document.getElementById("specialTextarea").value = tr.input;
                 //document.getElementById("specialTextarea").value = tr.input;
                 document.getElementById("outputtext").innerText = tr.output;
                 /*textAreaAdjust(document.getElementById("specialTextarea"));*/
@@ -5790,13 +5790,16 @@ function SetCurrentTranscription(transCode) {
         { from: "jo", to: "Ⱖ" },
         { from: "ju", to: "Ⱓ" },
         { from: "ch", to: "Ⱈ" },
+
+        { from: "h", to: "ⱈ" },
+
         { from: "dz", to: "Ⰷ" },
 
         { from: "ť", to: "ⱏ" },
 
 
-        { from: "a", to: "Ⰰ" }, { from: "A", to: "Ⰰ" },
-        { from: "b", to: "Ⰱ" }, { from: "B", to: "Ⰱ" },
+        { from: "a", to: "ⰰ" }, { from: "A", to: "Ⰰ" },
+        { from: "b", to: "ⰱ" }, { from: "B", to: "Ⰱ" },
         { from: "v", to: "Ⰲ" }, { from: "V", to: "Ⰲ" },
         { from: "g", to: "Ⰳ" }, { from: "G", to: "Ⰳ" },
         { from: "d", to: "Ⰴ" }, { from: "D", to: "Ⰴ" },
