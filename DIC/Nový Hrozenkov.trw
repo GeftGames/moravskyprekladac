@@ -1,0 +1,82 @@
+TW v2
+tNový Hrozenkov
+aGG
+d16.03.2024 15:10:33
+c#Zdroje dat\n-Karlovické nářečí-Svěrák, František\n\n#Popis nářečí\n-krácení staršího dlouhého í a ú: žižeň, zapřihať, krajic, mňesic, otevřiť; oňi piju, krajaju, ve vrbju\n-3. osoba sloves pl. : oňi prosá, seďá, vozá 
+g49.3373225,18.196637
+x3
+q0
+oValašsko
+-
+-
+-
+-
+-
+|1|ve vrbju|
+-
+-
+-
+-
+řít|řiť
+jíc|jic
+síc|sic
+hat|hať
+její|jaju
+-
+žízEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
+krajíc|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+zajíc|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+měsíc|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+vrbA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+-
+žižEŇ|1|eň|ňe?|ňi?|eň?|ňi?|ňi?|ňí?|ňe?|ňí?|ňím?|ňe?|ňe?|ňích?|ňemi?
+krajic|3||e?|i?|?|i?|i?|em?|e?|ú?|úm?|e?|e?|ích?|i?
+zajic|2||e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?,ové?|ú?|úm?|e?|i?,ové?|ích?|i?
+mňesic|3||e?|i?|?|i?|i?|em?|e?|ú?|úm?|e?|e?|ích?|i?
+vrbA|1|a?|y?|je?|u?|o?|ju|ou?|y?|?|ám?|y?|y?|ách?|ami?
+-
+žíz|žízEŇ|0|žiž|žižEŇ|
+krajíc|krajíc|0|krajic|krajic|
+zajíc|zajíc|0|zajic|zajic|
+měsíc|měsíc|0|mňesic|mňesic|
+vrb|vrbA|0|vrb|vrbA|
+-
+-
+-
+-
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+-
+OŇI|oňi|jich?,ňich*?|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
+-
+|ONI||OŇI|
+-
+-
+-
+-
+otevřÍT|30|-1|ít|u|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+pÍT|15|-1|ít|iju,piji|iješ|ije|ijeme|ijete|ijou,pijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+krájET|15|-1|et|ím|íš|í|íme|íte|í,krájejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+proSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
+seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen, seděn|zen, seděn|zena, seděna|zeno, seděno|zeni, seděni|zeny, seděny|zeny, seděny|zena, seděna
+voZIT|15|-1|zit|zím|zíš|zí|zíme|zíte|zí|z|zme|zte|zil|zil|zila|zilo|zili|zily|zily|zila|žen|žen|žena|ženo|ženi|ženy|ženy|žena
+-
+otevřÍT|30|-1|iť|u?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+pÍT|15|-1|ít?|iju?,piji?|iješ?|ije?|ijeme?|ijete?|iju|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
+krájET|15|-1|et?|ím?|íš?|í?|íme?|íte?|aju|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+proSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sá|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeňi?|šeny?|šeny?|šena?
+seĎET|15|-1|ďet?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďá|ď?|ďme?|ďte?|ďel?|ďel?|ďela?|ďelo?|ďeli?|ďely?|ďely?|ďela?|zen?|zen?, seďen?|zena?, seďena?|zeno?, seďeno?|zeňi?, seďeňi?|zeny?, seďeny?|zeny?, seďeny?|zena?, seďena?
+voZIT|15|-1|zit?|zím?|zíš?|zí?|zíme?|zíte?|zá|z?|zme?|zte?|zil?|zil?|zila?|zilo?|zili?|zily?|zily?|zila?|žen?|žen?|žena?|ženo?|žeňi?|ženy?|ženy?|žena?
+-
+||zapřihať||
+otevř|otevřÍT|otevř|otevřÍT|
+p|pÍT|p|pÍT|
+kráj|krájET|kráj|krájET|
+pro|proSIT|pro|proSIT|
+se|seDĚT|se|seĎET|
+vo|voZIT|vo|voZIT|
+-
+-
+ve||ve|
+-
+-
+-

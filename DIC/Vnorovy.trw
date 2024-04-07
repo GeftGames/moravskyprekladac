@@ -5,6 +5,7 @@ d11.06.2023 19:29:14
 ivipili štfrtku na poseďeňí, ale do práce také bili Vnorovy HO\nčfachtat sa Vnorovy HO
 c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 254\n-sncj.ujc.cas.cz\n-https://www.avcr.cz/export/sites/avcr.cz/.content/galerie-souboru/pro-verejnost/Cechy-versus-Morava-tentokrat-v-jazyce.pdf\n-<a href="https://archive.org/details/diaktologiemorav00bartuoft/page/31/mode/1up">Diaktologie moravská</a> \n\n#Popis nářečí\n-Duální tvary jsou častější : do rukú, do patú (Znorovy)\n- ú-ova-ovo : súsedú, Juráskú (Znorovy)\n-teho, temu — tech, tem (Znorovy, Strážnice, Milotice, Hovorany)\n-koho, komu (Blatnice, Znorovy, Strážnice)
 g48.9315902,17.3508621
+x3
 q0
 oSlovácko
 -
@@ -18,16 +19,21 @@ nepravidelný kousek pole na rozcestí polních cest|1|čupec|
 bezedného sudu|1|bucharóna|
 do dvou ruk|1|do dvúch? rukú|
 do dvou pat|1|do dvúch? patú|
+tenkým proudem|1|cicúrkem|
 -
 -
 -
 ou|ú
+dě|ďe
+ů|ú
 -
 ilo|iṵo
 klo|kṵo
 ala|aṵa
 dají|dajú
 čil|čiṵ
+lají|ṵajú
+kla|kṵa
 -
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
@@ -39,8 +45,14 @@ svinĚ|1|ě|ě|i|i|ě|i|í|ě|í,čeji) sviň|ím|ě|ě|ích|ěmi
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 ruKA|1|ka|ky|ce|ku|ko|ce|kou|ce|kou|kám|ce|ce|kou,kách|kama
 patA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+apríl|3||u,a|u||e|u,e|em|y|ů|ům|y|y|ech|y
+slavobrÁNA|1|ána|ány|áně|ánu|ánoslavo|áně|ánou,anou|ány|an|ánám,anám|ány|ány|ánách,anách|ánami,anami
+děvčE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
+cihelNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
 -
-růžE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+růžE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e|e?|ích?|emi?
 pohádKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 stavení|0|?|?|?||?|?|m?|?|?|m?|?|?|ch?|mi?
 prÁCE|1|áce?|áce|áci?|áci?|áce?|áci?|ací?|áce?|ací?|acím,ářečně,astarale) pracem[2]?|áce?|áce?|acích,ářečně,astarale) pracech[2]?|acemi?
@@ -50,10 +62,16 @@ sviňA|1|a|ě?|i?|i?|ě?|i?|í?|ě?|í,čeji) sviň?|ím?|ě?|ě?|ích?|ěmi?
 čunEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 ruKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ce?|kú|kám?|ce?|ce?|kou?,kách?|kama?
 paTA|1|ta?|ty?|ťe?|tu?|to?|ťe?|tou?|ty?|tú|tám?|ty?|ty?|tách?|tami?
+apríl|3||u?,a?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+brÁNA|1|ána?|ány?|áňe?|ánu|ánoslavo?|áňe?|ánou?,anou?|ány?|an?|ánám?,anám?|ány?|ány?|ánách?,anách?|ánami?,anami?
+ďevčE|0|e?|ete?|eťi?|e?|e?|eťi?|etem?|ata|at?|atúm?|ata?|ata?|atech?|aty?
+krEV|1|ev?|ve?|vi?|év|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+ťihLA|1|ṵa|ly?|le?|lu?|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
+ťihélŇA|1|ňa|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 -
 babička||0|stařenka||
 angrešt||0|egrešt||
-abatyš|růžE|0|habatiš|růžE|
+abatyš|růžE|0|habatiš|růžE|vtip 1. nebo 30. dubna
 čtvrt|pohádKA|0|štfrt|pohádKA|
 posezení|stavení|0|poseďeňí|stavení|
 pr|prÁCE|0|pr|prÁCE|
@@ -65,6 +83,12 @@ svin|svinĚ|0|sfiň|sviňA|
 ||0|šusy?, šuse||
 ru|ruKA|0|ru|ruKA|
 pat|patA|0|pa|paTA|
+apríl|apríl|0|apríl|apríl|
+slavobr|slavobrÁNA|0|br|brÁNA|
+děvč|děvčE|0|ďefč|ďevčE|
+kr|krEV|0|kr|krEV|
+cih|cihLA|0|ťih|ťihLA|
+cihel|cihelNA|0|ťihél|ťihélŇA|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -86,6 +110,7 @@ tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ě
 ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 MY|my|nás|nám|nás|my|nás|námi
 kDO|do|oho|omu|oho|do|om|ým
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
 -
 SE|-|sebe?|si|sa|-|sobě?|sebou?
 ONA|ona?|jí?,ní*?|jí?,ní*?|ju,#ni?|-|ní*?|jí?,ní*?
@@ -95,6 +120,7 @@ TEN|ten?|teho|temu|toho?|-|tom?|tím?|ty?|tech|tem|ty?|-|těch?|těmi?|ten?|toho
 ONI|oni?|jich,nich*?|jim,nim*?|je,ně*?|-|#ňech|jimi,nimi*?
 MY|my?|nás?|nám|nás?|my?|nás?|námi?
 KDO|kdo?|koho|komu|koho?|kdo?|kom?|kým?
+ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
 -
 |SE||SE|
 |ONA||ONA|
@@ -104,6 +130,7 @@ t|tEN||TEN|
 |ONI||ONI|
 |MY||MY|
 k|kDO||KDO|
+|ON||ON|
 -
 nesklonné|1|
 třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
@@ -120,6 +147,7 @@ vypÍT|30|-1|ít|iji,vypiju|iješ|ije|ijeme|ijete|ijí,vypijou|ij|ijme|ijte|il|i
 musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 čvachtAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 poručIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+tÉCT|7|-1|éct|eku,teču|ečeš|eče|ečeme|ečete|ekou,tečou|eč|ečme|ečte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla
 -
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|biṵ|byl?|byla?|bylo?|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
@@ -127,6 +155,7 @@ vypÍT|30|-1|ít?|iji,vypiju?|iješ?|ije?|ijeme?|ijete?|ijí,vypijou?|ij?|ijme?|
 musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 čvachtAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 poručIT|30|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|iṵ|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+tÉCT|7|-1|éct?|eku?,teču?|ečeš?|eče?|ečeme?|ečete?|ekou?,tečou?|eč?|ečme?|ečte?|ekl?|ekl?|ékṵa|eklo?|ekli?|ekly?|ekly?|ekla?
 -
 |BÝT||BÝT|
 dÁ|dÁT|dÁ|dÁT|
@@ -136,6 +165,7 @@ nabrat||nabrau̯||
 mus|musET|mos|musET|
 čvacht|čvachtAT|čfacht|čvachtAT|
 poruč|poručIT|poruč|poručIT|
+t|tÉCT|t|tÉCT|
 -
 obvykle|običajňe|
 teďka|fčilkaj|

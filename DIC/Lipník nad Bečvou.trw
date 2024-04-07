@@ -5,17 +5,25 @@ d16.07.2023 20:55:09
 iObyvatelé Lipníka vyslovují veskrze l střední jako v obecné češtině, neznají rozdíl mezi i a y (podobně je tomu v Hranicích; srov. výše)\n\n\nhttp://sas.ujc.cas.cz/archiv.php?art=870\nhttp://www.historie.hranet.cz/zk/zk16-1.pdf
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n<a href="https://archive.org/details/dialektologiemor02bartuoft/">Dialektologie moravská, František Bartoš</a>\n\n#Popis nářečí\n-Řeč města Lipníka má ráz lašský nedostatkem dlouhých slabik a přízvukem polským: patek, mačka, sedľak, chľib, poľivka, krupy, muka, dobry pivo — dobryho atd.
 g49.5270776,17.585816
+x1
 q0
 -
 -
+Tam kde je bývalý <id=0,pods,pad=1,rod=muz> |Jak je <id=0,pods,pad=1,rod=muz> byvalej
 -
 -
 -
 dobré pivo|0|dobry pivo|
+tak to je|1|toš to je|
+jak je|1|jag je|
 -
 -
 -
+á|a
+ý|y
 -
+lý|lej
+nec|nedz
 -
 pátEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 omáčKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
@@ -26,6 +34,8 @@ krOUPA|1|oupa|oupy|oupě|oupu|oupo|oupě|oupou|oupy|up|oupám|oupy|oupy|oupách|
 mouKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 pivO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 knížKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+brÁNA|1|ána|ány|áně|ánu|áno|áně|ánou,anou|ány|an|ánám,anám|ány|ány|ánách,anách|ánami,anami
+cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
 -
 patEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 mačKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
@@ -36,6 +46,8 @@ krOUPA|1|oupa?|oupy?|oupje?|oupu?|oupo?|oupje?|oupou?|upy|up?|oupám?|oupy?|oupy
 muKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 pivO|0|o|a?|u?|o?|o?|u?,ě?|em?|a?|?|úm?|a?|a?|ech?|y?
 kňiŽKA|1|žka?|žky?|žce?|žku?|žko?|žce?|žkou?|žky?|žek?|žkám?|šky|žky?|žkách?|žkami?
+brÁNA|1|ana|ány?|áňe?|ánu?|áno?|áňe?|ánou?,anou?|ány?|an?|ánám?,anám?|ány?|ány?|ánách?,anách?|ánami?,anami?
+ťehLA|1|la|ly?|le?|lu?|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
 -
 pát|pátEK|0|pat|patEK|
 omáč|omáčKA|0|mač|mačKA|
@@ -46,16 +58,22 @@ kr|krOUPA|0|kr|krOUPA|
 mou|mouKA|0|mu|muKA|
 piv|pivO|0|piv|pivO|
 kníž|knížKA|0|kňi|kňiŽKA|
+chudobinec||0|chudobinedz||
+br|brÁNA|0|br|brÁNA|
+cih|cihLA|0|ťeh|ťehLA|
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 jarní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
+bývalÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 dobRÝ|-1|ry|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|rý?|ryho|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 jarňí|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-||ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
+byvalÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ej|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 -
 dob|dobRÝ|dob|dobRÝ|
 školní|jarní|školňi|jarňí|
 ostatní|jarní|ostatňi |jarňí|
+býval|bývalÝ|byval|byvalÝ|
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
@@ -63,8 +81,11 @@ TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten
 -
 t|tEN||TEN|
 -
+jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 -
+jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 -
+jed|jedEN|jed|jedEN|
 -
 podvádĚT|15|-1|ět|ím|íš|í|íme|íte|í|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
 lHÁT|7|-1|hát|žu|žeš|že|žeme|žete|žou|ži|žeme|žete|hal|hal|hala|halo|hali|haly|haly|hala
@@ -74,7 +95,7 @@ mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorov
 -
 cigaŇIT|15|-1|ňit|ím?|íš?|í?|íme?|íte?|í?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 lHÁT|7|-1|hát?|žu?|žeš?|že?|žeme?|žete?|žou?|ži?|žeme?|žete?|hal?|hal?|hala?|halo?|hali?|haly?|haly?|hala?
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 mOCT|5|-1|oct|ohu?,(hovorově) múžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) múžou?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 čÍST|15|-1|yst|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
 -
@@ -86,10 +107,12 @@ m|mOCT|m|mOCT|
 -
 jenom|jenom|
 nejen|ne jenom|
+také|taky|
 -
 i||i|
 -
 ale|ale|
+jak|jag|
 -
 ne|ne|
 -

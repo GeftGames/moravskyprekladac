@@ -5,6 +5,7 @@ d23.07.2023 14:50:22
 idiť ti seš taki jag ďelo Telč JI – tlustý
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Tel%C4%8D+JI">sncj.ujc.cas.cz</a>
 g49.1840209,15.4540425
+x0
 q0
 oHorácko
 -
@@ -13,35 +14,61 @@ oHorácko
 -
 -
 tlustý|1|jag ďelo|
+je výplatní den|1|je svatího Berouse|
+ostružiny|1|černí malini|
+neodlehčená cihla,plná cihla|1|plná cihla|
 -
 -
 -
 -
 -
+bratranEC|2|ec|ce|covi,ci|ce|če|covi,ci|cem|ci|ců|cům|ce|ci|cích|ci
+česneK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
 -
+bratránEC|2|ek|ce?|covi?,ci?|ce?|če?|covi?,ci?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
+česneK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+cihLA|1|la|ly?|le?|lu?|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
 -
+bratran|bratranEC|0|bratrán|bratránEC|
+česne|česneK|0|česne|česneK|
+cih|cihLA|0|cih|cihLA|
 -
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
+zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 -
+pln|zelenÝ|pl|zeleNÝ|
 -
 tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+něCO|co|čeho|čemu|co|co|čem|čím
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
 tY|y|[1]?,ebe?|[1]?,obě?|[1]?,ebe?|y?|obě?|ebou?
 takÝ|y|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+ňeCO|co|čeho?|čemu?|co?|co?|čem?|čím?
+JÁ|já|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 -
 t|tY|t|tY|
 takov|takovÝ|tak|takÝ|
+ně|něCO|ňe|ňeCO|
+|JÁ||JÁ|
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+vnímAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 BÝT|247|-1|být?|jsem?|seš|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+čUT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ul|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |BÝT||BÝT|
+vním|vnímAT|ču|čUT|
 -
+zítra|zejtra|
+už|už|
 -
 -
 vždyť|diť|

@@ -1,4 +1,4 @@
-TW v1.0
+TW v2
 tŠemíkovice
 d17.07.2023 15:12:16
 sRouchovany
@@ -9,29 +9,40 @@ q0
 -
 -
 -
-neotravuj mě|nedožiré mňe
+neotravuj mě|1|nedožiré mňe|
 -
 -
 -
 -
 -
+vozíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
+-
+vozíK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?,kách?|ky?
+-
+vozí|vozíK|0|vozí|vozíK|
+-
+celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+-
+celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|é|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
+-
+cel|celÝ|cel|celÝ|
+poškozený||dolámané||
+zničený||dolámané||
+-
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+-
+JÁ|já?|mňe|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+-
+|JÁ||JÁ|
 -
 -
 -
 -
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
--
-JÁ|-1|já?|mňe|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
--
-JÁ|JÁ
--
--
--
--
--
--
+|BÝT||BÝT|
 -
 -
 -

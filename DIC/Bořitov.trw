@@ -4,6 +4,7 @@ d28.06.2023 8:23:34
 imajó se dubře, kópili si nuví ótu Bořitov BK\n deš sem jel na vujno, bel sem jag břenek Bořitov BK – čilý, zdravý
 c#Zdroje dat\n-sncj.ujc.cas.cz
 g49.4262886,16.5901933
+x3
 q0
 -
 -
@@ -12,6 +13,7 @@ q0
 -
 do války|1|na vujno|
 zdravý|1|jag břenek|
+tak křičíš|1|tag békáš|
 -
 -
 -
@@ -41,10 +43,13 @@ nov|novÝ|nuv|novÝ|
 špatn|špatnÝ|špat|špatNÝ|
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+CO|co|čeho|čemu|co,-č|-|čem|čím
 -
 SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
+CO|cu|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
 |SE||SE|
+|CO||CO|
 -
 -
 -
@@ -53,21 +58,26 @@ MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|m�
 kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 JET|31|-1|jet|jedu|jedeš|jede|jedeme|jedete|jedou|pojedu|pojedeš|pojede|pojedeme|pojedete|pojedou|jeď|jeďme|jeďte|jel|jel|jela|jelo|jeli|jely|jely|jela|jet|jet|jeta|jeto|jeti|jety|jety|jeta
+křičET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
 MÍT|71|-1|mít?|mám?|máš?|má?|máme|máte?|majó|měj?|mějme?|mějte?|měl?|měl?|měla?|mělo?|měli?|měly?|měly?|měla?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 kOUPIT|15|-1|oupit?|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|oupila?|oupilo?|ópili|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeni?|oupeny?|oupeny?|oupena?
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bel|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 JET|31|-1|jet?|jedu?|jedeš?|jede?|jedeme?|jedete?|jedou?|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
+békAT|15|-1|et?|ím?|áš|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
 |MÍT||MÍT|
 k|kOUPIT|k|kOUPIT|
 |BÝT||BÝT|
 |JET||JET|
 ||napekli||
+křič|křičET|bék|békAT|
 -
 dobře|dubře|
 letos|letos|
 hodně|plno|
+tady|tade|
+tak|tag|
 -
 na||na|
 i||aji|

@@ -5,6 +5,7 @@ d06.02.2024 10:07:09
 islabě, tenkým proudem: krev mu tekła čurem Skotnice NJ
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Skotnice+NJ%22">SNČJ</a>
 g49.6575056,18.132786
+x3
 q0
 -
 -
@@ -36,10 +37,13 @@ ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ň
 -
 -
 tÉCT|7|-1|éct|eku,teču|ečeš|eče|ečeme|ečete|ekou,tečou|eč|ečme|ečte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla
+ponocOVAT|7|-1|ovat|uji (hovorově: ponocuju)|uješ|uje|ujeme|ujete|ují (hovorově: ponocujou)|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala
 -
 tÉCT|7|-1|éct?|eku?,teču?|ečeš?|eče?|ečeme?|ečete?|ekou?,tečou?|eč?|ečme?|ečte?|ekl?|ekl?|ekła|eklo?|ekli?|ekly?|ekly?|ekla?
+bantošIT|7|-1|iť|uji (hovorově: ponocuju)?|uješ?|uje?|ujeme?|ujete?|ují (hovorově: ponocujou)?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?
 -
 t|tÉCT|t|tÉCT|
+ponoc|ponocOVAT|bantoš|bantošIT|
 -
 slabě|čurem|tenkým proudem
 -

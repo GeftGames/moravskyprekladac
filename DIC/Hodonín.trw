@@ -6,6 +6,7 @@ ičást oděvu zhotovená z delénu a sukně: delinka Hodonín HO
 c#Zdroje dat\n- Nářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n-jména mláďat zakončená na -e (húsa - húse, tela - tele)
 lSlováčtina
 g48.8555939,17.1198014
+x1
 q0
 oSlovácko
 -
@@ -20,17 +21,19 @@ blb|1|chumaj|
 -
 -
 -
-vEJCE|0|ejce|ejce,v&#160;obecném jazyce) vejcete|ejci|ejce|ejce|ejci|ejcem|ejce|ajec|ejcím|ejce|ejce|ejcích|ejci
+vEJCE|0|ejce|ejce?,ejcete|ejci|ejce|ejce|ejci|ejcem|ejce|ajec|ejcím|ejce|ejce|ejcích|ejci
 podmáslí|0|||||||m|||m|||ch|mi
 petržel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
+pekáč|-1||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
-vEJCE|0|ajce?|ejce,v&#160;obecném jazyce) vejcete?|ejci?|ejce?|ejce?|ejci?|ejcem?|ajce|ajec?|ejcím?|ejce?|ejce?|ejcích?|ejci?
+vEJCE|0|ajce?|ejce?|ejci?|ejce?|ejce?|ejci?|ejcem?|ajce|ajec?|ejcím?|ejce?|ejce?|ejcích?|ejci?
 podmáslí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 petržel|1|?|e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 svaďBA|1|ba|by?|bje?|bu?|bo?|bje?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 BRÝLE|1|-|-|-|-|-|-|-|brídle|brýlí?|brýlím?|brýle?|brýle?|brýlích?|brýlemi?
+protvaN|-1|n|ne?|ni?|n?|ni?|ni?|nem?|ne?|nú?|núm?|ne?|ne?|ních?|ni?
 -
 v|vEJCE|0|v|vEJCE|
 hajný||0|hajní||
@@ -38,6 +41,7 @@ podmáslí|podmáslí|0|podmáslí|podmáslí|
 petržel|petržel|0|petrželí|podmáslí|
 svat|svatBA|0|svaď|svaďBA|
 |BRÝLE|0||BRÝLE|
+pekáč|pekáč|0|protva|protvaN|
 -
 -
 -
