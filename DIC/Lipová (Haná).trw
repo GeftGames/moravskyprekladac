@@ -2,8 +2,8 @@ TW v2
 tLipová
 aGG
 d22.08.2023 16:20:22
-iješle to pozná, tag mňe zabije Li\npokuď be to vedrželo, tak to zapře kamenem Li\nspávával tade, deš sem ješče jezdíval\njag nepřešil, tak pudem dom Li\npřipaďe že bech homřela, tag zďeďi fšecko Julka\nf páďe že bel vopilé, tag mo daji flastr Li\ndet si neco hošetře a me te předáme Li\njak šil pikem, tak sme to vehrále Li\n— jag nám te peňize pučele, tag behme bele bévale to chálópko postavile L\n— abehme neco f tim lese našle, tag mosime jit skoro ráno L
-c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/101367.pdf
+iješle to pozná, tag mňe zabije Li\npokuď be to vedrželo, tak to zapře kamenem Li\nspávával tade, deš sem ješče jezdíval\njag nepřešil, tak pudem dom Li\npřipaďe že bech homřela, tag zďeďi fšecko Julka\nf páďe že bel vopilé, tag mo daji flastr Li\ndet si neco hošetře a me te předáme Li\njak šil pikem, tak sme to vehrále Li\n— jag nám te peňize pučele, tag behme bele bévale to chálópko postavile L\n— abehme neco f tim lese našle, tag mosime jit skoro ráno L\n\n mňel sme dobriho koňa, ale tento se zdá bt ešče lepši Lipová PV
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/101367.pdf\n-snčj
 g49.525901,16.8617224
 q0
 oDrahansko
@@ -13,42 +13,76 @@ oDrahansko
 -
 -
 z něj|1|z ňeho|
+bez černý|1|černí bes|
 -
 -
 -
+mě|mňe
 -
 -
 doktoR|2|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
+špalEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+bez|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
 -
 doktoR|2|r|ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|ry?
+beZ|3|s|zu?|zu?|z?|ze?|zu?|zem?|zy?|zú?|zúm?|zy?|zy?|zech?|zy?
+kÚŇ|3|úň?|oňa|oňi?,oňovi?|oňe?,archaicky) kúň[4][5]?|oňi?|oňi?,oňovi?|oňem?|oňe?|oňí?,oňú?|oňím?,oňúm?|oňe?|oňe?|oňích?|oňi?,oňmi?
 -
 dokto|doktoR|0|dochto|doktoR|
+špal|špalEK|0|špal|špalEK|
+bez|bez|0|be|beZ|
+k|kŮŇ|0|k|kÚŇ|
 -
+černÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
+lepší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
+čerNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ní|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
+dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|rý?|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|riho|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
+lepši|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-||ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
 -
+čern|černÝ|čer|čerNÝ|
+dob|dobRÝ|dob|dobRÝ|
+lepší|lepší|lepši|lepši|
 -
 ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
 jaKÝSI|kýsi|kéhosi|kémusi|kéhosi|-|kémsi|kýmsi|císi|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kýsi|kéhosi|kémusi|kýsi|-|kémsi|kýmsi|kési|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kási|kési|kési|kousi|-|kési|kousi|kési|kýchsi|kýmsi|kési|-|kýchsi|kýmisi|kési|kéhosi|kémusi|kési|-|kémsi|kýmsi|kási|kýchsi|kýmsi|kási|-|kýchsi|kýmisi
+tENTO|ento|ohoto|omuto|ohoto|-|omto|ímto|ito|ěchto|ěmto|ito|-|ěchto|ěmito|ento|ohoto|omuto|ento|-|omto|ímto|yto|ěchto|ěmto|yto|-|ěchto|ěmito|ato|éto|éto|uto|-|éto|outo|yto|ěchto|ěmto|yto|-|ěchto|ěmito|oto|ohoto|omuto|oto|-|omto|ímto|yto|ěchto|ěmto|yto|-|ěchto|ěmito
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
 ON|on?|ho*?,jej?,ňej**jeho?,ňeho|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím*?
 jaKÝSI|kési|kéhosi?|kémusi?|kéhosi?|-|kémsi?|kýmsi?|císi?|kýchsi?|kýmsi?|kési?|-|kýchsi?|kýmisi?|kýsi?|kéhosi?|kémusi?|kýsi?|-|kémsi?|kýmsi?|kési?|kýchsi?|kýmsi?|kési?|-|kýchsi?|kýmisi?|kási?|kési?|kési?|kousi?|-|kési?|kousi?|kési?|kýchsi?|kýmsi?|kési?|-|kýchsi?|kýmisi?|kési?|kéhosi?|kémusi?|kési?|-|kémsi?|kýmsi?|kási?|kýchsi?|kýmsi?|kási?|-|kýchsi?|kýmisi?
+tENTO|ento?|ohoto?|omuto?|ohoto?|-|omto?|ímto?|ito?|ěchto?|ěmto?|ito?|-|ěchto?|ěmito?|ento|ohoto?|omuto?|ento?|-|omto?|ímto?|yto?|ěchto?|ěmto?|yto?|-|ěchto?|ěmito?|ato?|éto?|éto?|uto?|-|éto?|outo?|yto?|ěchto?|ěmto?|yto?|-|ěchto?|ěmito?|oto?|ohoto?|omuto?|oto?|-|omto?|ímto?|yto?|ěchto?|ěmto?|yto?|-|ěchto?|ěmito?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 -
 |ON||ON|
 ja|jaKÝSI|ja|jaKÝSI|
+t|tENTO|t|tENTO|
+|SE||SE|
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+zdÁT_SE|7|-1|át_se|ám|áš|á|áme|áte|ají|ej|ejme|ejte|ál|ál|ála|álo|áli|ály|ály|ála
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bôde|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|bêt|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bôde|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ňelê|ěly?|ěly?|ěla?
+zdÁT_SE|7|-1|át_se?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
 -
 |BÝT||BÝT|
+m|mÍT|m|mÍT|
+zd|zdÁT_SE|zd|zdÁT_SE|
 -
+ještě|ešče|
 -
 z||z|
 -
 jestli|ješle|
+ale|ale|
+||
 -
 prý|pré|
 -

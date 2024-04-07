@@ -4,11 +4,11 @@ tPříkazy
 aGG
 d17.03.2023 8:31:00
 iměkký infinitiv jít->jiť\n\n
-c#Zdroje dat\n- http://eyetracking.upol.cz/naki_vystava_nareci/\n-< ahref="https://archive.org/details/dialektologiemor02bartuoft/page/69/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n-V Přikazích, Skrbeni, v Nákle na Olomoucku, v Myslejovicích na Prostějovsku jest ł před každým a, o, ó a na konci slov: stodoła, łampa, taboła, koło, małovat, vołał, oheł, ôčêteł, před e, ê, é je střední l: pacholek, zělené, lêd, leto, rohlék.
+c#Zdroje dat\n- http://eyetracking.upol.cz/naki_vystava_nareci/\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/69/mode/1up">Dialektologie moravská</a>\n-České nářeční texty - Lamprecht, Arnošt; str. 163 (nevyčerpáno)\n\n#Popis nářečí\n-V Přikazích, Skrbeni, v Nákle na Olomoucku, v Myslejovicích na Prostějovsku jest ł před každým a, o, ó a na konci slov: stodoła, łampa, taboła, koło, małovat, vołał, oheł, ôčêteł, před e, ê, é je střední l: pacholek, zělené, lêd, leto, rohlék.
 zCS_HA-Náměšť
 lHanáčtina
 g49.6430397,17.1464557
-xlokální mluva
+x3
 q0
 oHaná
 -
@@ -16,6 +16,7 @@ oHaná
 -
 -
 -
+po smrti|1|po úmrťi|
 -
 si|1|si|
 -
@@ -47,6 +48,8 @@ nit|ňid
 pme|bmy
 bme|bmy
 kový|kové
+vali|valê
+dý|dé
 -
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
@@ -63,6 +66,12 @@ učitel|2||e|i,ovi|e|i|i,ovi|em|é|ů|ům|e|é|ích|i
 lid|3||u|u||e|u|em|-|-|-|-|-|-|-
 lÉTO|0|éto|éta|étu|éto|éto|étu,étě|étem|éta|et|étům,etům|éta|éta|étech,etech|éty,ety
 rohlíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+čáp|2||a|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
+polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+úmrtí|0|||||||m|||m|||ch|mi
+hospodář|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
+část|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+domkař|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
 -
 městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 kosť|1|?|i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
@@ -78,6 +87,12 @@ koŁO|0|ło|ła?|łu?|ło?|ło?|łe?|łem?|ła?|ł?|łúm?|ła?|ła?|łech?|ły?
 lêd|3||u?|u?|?|e?|u?|em?|-|-|-|-|-|-|-
 lÉTO|0|eto|éta?|étu?|éto?|éto?|étu?,éťe?|étem?|éta?|et?|étúm?,etúm?|éta?|éta?|étech?,etech?|éty?,ety?
 rohléK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+bogdal|2||a?|u?,ovi?|a?|e?|u?,ovi?|em?|i?,ové?|ú?|úm?|y?|i?,ové?|ech?|y?
+polE|0|e|e?|i?|e|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
+úmrťí|0|i?|i?|i?|i?|i?|i|im?|i?|i?|im?|i?|i?|ich?|imi?
+hospodář|2|?|e|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ích?|i?
+čásT|1|ť|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|tem?|ťi?|ťi?|tech?|tmi?
+domkař|2|?|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i|ú?|úm?|e?|i?|ích?|i?
 -
 síto||0|seto||
 část|kost|0|čásť|kosť|
@@ -96,6 +111,12 @@ pacholek||0|pacholek||
 lid|lid|0|lêd|lêd|
 l|lÉTO|0|l|lÉTO|
 rohlí|rohlíK|0|rohlé|rohléK|
+čáp|čáp|0|bogdal|bogdal|
+pol|polE|0|pol|polE|
+úmrtí|úmrtí|0|úmrť|úmrťí|
+hospodář|hospodář|0|hospodář|hospodář|
+část|část|0|čás|čásT|
+domkař|domkař|0|domkař|domkař|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
@@ -105,12 +126,21 @@ zelen|zelenÝ|zele|zeleNÝ|
 -
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 oni|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+každÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 -
 tEN|en?|eho|omu?|oho?|-|om?|ím?|y?|ěch?|em|y?|-|ěch?|ema|en?|eho|omu?|en?|-|om?|ím?|y?|ěch?|em|y?|-|ěch?|ema|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ema|o|eho|omu?|o?|-|om?|ím?|y?|ěch?|em|y?|-|ěch?|ema
 oni|oni?|ih,nich|im,#ňim|je,ně*?|-|nich*?|jimi,nimi*?
+SE|-|sebe?|si,sobje?|se?,sebe?|-|sobje?|sebou?
+keRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ři|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+kažDÝ|dé|dého?|dému?|dého?|-|dém?|dým?|ďí?|dých?|dým?|dé?|-|dých?|dými?|dý?|dého?|dému?|dý?|-|dém?|dým?|dé?|dých?|dým?|dé?|-|dých?|dými?|dá?|dé?|dé?|dou?|-|dé?|dou?|dé?|dých?|dým?|dé?|-|dých?|dými?|dé?|dého?|dému?|dé?|-|dém?|dým?|dá?|dých?|dým?|dá?|-|dých?|dými?
 -
 t|tEN|t|tEN|
 |oni||oni|
+|SE||SE|
+kte|kteRÝ|ke|keRÝ|
+každ|každÝ|kaž|kažDÝ|
 -
 -
 -
@@ -122,6 +152,7 @@ JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|
 čÍST|15|-1|íst|tu|teš|te|teme|tete|tou|ti|těme|těte|etl|etl|etla|etlo|etli|etly|etly|etla|ten|ten|tena|teno|teni|teny|teny|tena
 malOVAT|15|-1|ovat|uji,maluju|uješ|uje|ujeme|ujete|ují,malujou|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 volAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|byl?|byla?|bêlo|bêlê|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 mosET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
@@ -129,6 +160,7 @@ JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?
 čÍST|15|-1|est|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
 maŁOVAT|15|-1|łovat|łuji?,łmaluju?|łuješ?|łuje?|łujeme?|łujete?|łují?,łmalujou?|łuj?|łujme?|łujte?|łoval?|łoval?|łovala?|łovalo?|łovali?|łovaly?|łovaly?|łovala?|łován?|łován?|łována?|łováno?|łováňi?|łovány?|łovány?|łována?
 voŁAT|15|-1|łat?|łám?|łáš?|łá?|łáme?|łáte?|łají?|łej?|łejme?|łejte?|łał|łal?|łala?|łalo?|łali?|łaly?|łaly?|łala?|łán?|łán?|łána?|łáno?|łáňi?|łány?|łány?|łána?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ňelê|ěly?|ěly?|ěla?
 -
 |BÝT||BÝT|
 změkčit||změkčet||
@@ -137,6 +169,9 @@ musE|musET|musE|mosET|
 č|čÍST|č|čÍST|
 mal|malOVAT|ma|maŁOVAT|
 vol|volAT|vo|voŁAT|
+||pachtovalê||
+||spachtovalê||
+m|mÍT|m|mÍT|
 -
 někdy|negdê|
 také,taky|takê|
@@ -145,6 +180,7 @@ zase|zas|
 skoro|skoro|
 opravdu|opravdô|
 teprve|teprvá|
+tak|tak|
 -
 po||po|
 u||ô|

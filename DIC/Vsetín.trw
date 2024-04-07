@@ -8,7 +8,7 @@ c#Zdroje dat\n-https://www.nulk.cz/ek-obsah/ceskylid/html/knihy/ceskylid12/texty
 zCS_VA-Rožnov
 lValaština
 g49.3398239,17.9930793
-xMěstká mluva
+x0
 q0
 oValašsko
 -
@@ -42,6 +42,7 @@ ek|eg
 et|eť
 at|ať
 vali|vały
+vlekli |vlékli 
 -
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
@@ -57,6 +58,7 @@ blátO|0|o|a|u|o|o|ě|em|a||ům|a|a|ech|y
 klas|1||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
 suknĚ|0|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
 krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
 -
 rúžA|1|a|||||||||||||
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
@@ -71,6 +73,7 @@ bláTO|0|to?|ta?|tu?|to?|to?|ťe|tem?|ta?|t?|túm?|ta?|ta?|tech?|ty?
 klas|1||u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 sukňA|0|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 krEV|1|év|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+baraN|3|n?|na|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?|nú?|núm?|ny?|ňi?|nech?|ny?
 -
 |ČLOVĚK|0||ČLOVĚK|
 b|bŮH|0|b|bÚH|
@@ -86,6 +89,7 @@ tan|tanEC|0|tan|tanEC|
 vrchol|vrchol|0|vrš|vršEK|
 zvon|zvon|0|zvon|zvon|
 kr|krEV|0|kr|krEV|
+beran|beran|0|bara|baraN|
 -
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -143,7 +147,8 @@ slyš|slyšET|č|čUT|
 zvo|zvoNIT|zv|zvOŇIT|
 dosta|dostaT|dosta|dostaT|
 zabečet||zabedž||
-řinout se||neblboce ||
+neřinout se||neblboce ||
+||dovlékli ||
 -
 napůl|napoły|
 teď|fčíľkaj|
@@ -155,6 +160,7 @@ nyní|fčíľ|
 ticho|ťicho|
 ještě|ešče|
 jednou|ráz|
+tam|tam|
 -
 na||na|
 při||přy|

@@ -2,7 +2,7 @@ TW v2
 tBučovice
 aGG
 d12.01.2024 14:13:39
-ivokno uďelalo cink a bilo na kóski Bučovice VY\nexpr. nestydatý, nemravný člověk: takovímu čurandovi rači se, ďefčata, vihňite! Bučovice VY\nuž dávno se mohl s kostela vráťit Bučovice VY
+ivokno uďelalo cink a bilo na kóski Bučovice VY\nexpr. nestydatý, nemravný člověk: takovímu čurandovi rači se, ďefčata, vihňite! Bučovice VY\nuž dávno se mohl s kostela vráťit Bučovice VY\nna obrásku só namalovaňí baraňí a ovečki Bučovice VY
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Bu%C4%8Dovice+VY">sncj.ujc.cas.cz</a>
 g49.1490351,17.0018071
 q0
@@ -22,12 +22,13 @@ z kostela|0|s kostela|
 -
 vy|vi
 -
-ou|ú
+ou|ó
 ý|í
 y|i
 ně|ňe
 ni|ňi
 dě|ďe
+ní|ňí
 -
 něte|ňite
 -
@@ -39,14 +40,20 @@ kousEK|3|ek|ku,ka|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
 děvčE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
 KALHOTY|1|-|-|-|-|-|-|-|kalhoty|kalhot|kalhotám|kalhoty|kalhoty|kalhotách|kalhotami
 kostel|3||a|u||e|e|em|y|ů|ům|y|y|ech,ích|y
+obrázEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
+ovečKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 cesTA|0|ta?|ti|ťe?|tu?|to?|ťe?|tou?|ty?|t?|tám?|ty?|ty?|tách?|tami?
-ďeďiNA|1|na?|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+ďeďiNA|1|na?|ny?|ňe?|nu|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 vokNO|0|no|na?|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
 kousEK|3|ek?|ku?,ka?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ki|ky?|cích?,kách?|ky?
 ďevčE|0|e?|ete?|eťi?|e?|e?|eťi?|etem?|ata|at?|atúm?|ata?|ata?|atech?|aty?
 GATĚ|1|-|-|-|-|-|-|-|kalhoty?|kalhot?|kalhotám?|gaťe|kalhoty?|kalhotách?|kalhotami?
 kostel|3|?|a|u?|?|e?|e?|em?|y?|ú?|úm?|y?|y?|ech?,ích?|y?
+obrázEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+baraN|3|n?|na?|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňí|nú?|núm?|ny?|ňi?|nech?|ny?
+ovečKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ki|ek?|kám?|ky?|ky?|kách?|kami?
 -
 cest|cestA|0|ces|cesTA|
 dědin|dědinA|0|ďeďi|ďeďiNA|
@@ -59,13 +66,19 @@ děvč|děvčE|0|ďevč|ďevčE|
 |KALHOTY|0||GATĚ|
 šulin||0|čurák ||
 kostel|kostel|0|kostel|kostel|
+obráz|obrázEK|0|obrá|obrázEK|
+beran|beran|0|bara|baraN|
+oveč|ovečKA|0|oveč|ovečKA|
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+jarní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
 celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ó|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
+jarňÍ|-1|í|ího?|ímu?|í?|í?|ím?|ím?|-|-|í?|ích?|ím?|í?|í?|ích?|ími?|-|-|í?|í?|í?|í?|í?|í?|í?|-|-|í?|ích?|ím?|í?|í?|ích?|ími?|-|-|í?|ího?|ímu?|ího?|í?|ím?|ím?|-|-|í?|ích?|ím?|í?|í?|ích?|ími?|-|-|í?|ího?|ímu?|í?|í?|ím?|ím?|-|-|í?|ích?|ím?|í?|í?|ích?|ími?|-|-
 -
-lepší||lepší||
+lepší|jarní|lepš|jarňÍ|
 cel|celÝ|cel|celÝ|
+namalovaný||namalovaňí ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -94,7 +107,7 @@ zapNOUT|30|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|jal,zapnul|jal,zapnul
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 vrÁTIT|30|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|átil|átil|átila|átilo|átili|átily|átily|átila|ácen|ácen|ácena|áceno|áceni|áceny|áceny|ácena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bilo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bilo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 vypadAT|7|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 chŤÍT|15|-1|ťít?|ci?,(nářečňe) chcu?|ceš?|ce?|ceme?|cete?|ťejí?,(zastarale) chťí?,(nářečňe) chcou?|ťej?|ťejme?|ťejte?|ťel|ťel?|ťela?|ťelo?|ťeli?|ťely?|ťely?|ťela?|ťen?|ťen?|ťena?|ťeno?|ťeňi?|ťeny?|ťeny?|ťena?
 vypÁLIT|30|-1|álit|álím?|álíš?|álí?|álíme?|álíte?|álí?|al?|alme?|alte?|álil?|álil?|álila?|álilo?|álili?|álily?|álily?|álila?|álen?|álen?|álena?|áleno?|áleňi?|áleny?|áleny?|álena?

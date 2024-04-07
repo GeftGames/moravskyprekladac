@@ -1,0 +1,104 @@
+TW v2
+tMalhotice
+aGG
+d29.03.2024 16:28:20
+iskupina čtyř mlatců: tož młáťiło se cełou zymu cepama ve štfero Malhotice PR;\nto je ot tebe błahová řeč Malhotice PR\n potem se to rozhrabało po humje a dokolečka furt se młáťiło Malhotice PR\nco se to bimbá na hałuzy? Malhotice PR
+c#Zdroje dat\n-snčj
+g49.489693,17.7636675
+x3
+q0
+oZáhoří
+-
+-
+-
+Co se to kýve na větvi?|1|Co se to bimbá na hałuzy?|
+Co se to houpá na větvi?|1|Co se to bimbá na hałuzy?|
+-
+-
+ve skupince čtyř|1|ve štfero|
+na větvi|1|na hałuzy|
+od tebe|1|ot tebe|
+nerozumná řeč,pošetilá řeč|1|błahová řeč|
+-
+-
+mlá|młá
+čtve|štfe
+-
+ti|ťi
+-
+tilo|ťiło
+ami|ama
+zi|zy
+-
+zimA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+cep|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+větEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+haluz|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+řeč|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+humNO|0|no|na|nu|no|no|ně|nem|na|en|nům|na|na|nech|ny
+-
+zymA|1|a?|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+cep|3|?|u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|ama
+větEV|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+hałuz|1|?|e?|i?|?|i?|y|í?|e?|í?|ím?|e?|e?|ích?|emi?
+řeč|1||i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
+humNO|0|no?|na?|nu?|no?|no?|je|nem?|na?|en?|núm?|na?|na?|nech?|ny?
+-
+zim|zimA|0|zym|zymA|
+cep|cep|0|cep|cep|
+vět|větEV|0|hałuz|hałuz|
+řeč|řeč|0|řeč|řeč|
+hum|humNO|0|hum|humNO|
+-
+celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+bláhovÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+-
+ceŁÝ|-1|łé?|łého?|łému?|łé?|łé?|łém?|łým?|-|-|łá?|łých?|łým?|łá?|łá?|łých?|łými?|-|-|łá?|łé?|łé?|łou|łá?|łé?|łou?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-|łý?|łého?|łému?|łého?|łý?|łém?|łým?|-|-|łí?|łých?|łým?|łé?|łí?|łých?|łými?|-|-|łý?|łého?|łému?|łý?|łý?|łém?|łým?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-
+błahovÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
+-
+cel|celÝ|ce|ceŁÝ|
+||||
+bláhov|bláhovÝ|błahov|błahovÝ|
+-
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+CO|co|čeho|čemu|co,-č|-|čem|čím
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+-
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to|toho?|tomu?|to|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
+TY|ty?|ťe[1]?,tebe|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
+-
+|SE||SE|
+|CO||CO|
+t|tEN||TEN|
+t|tY||TY|
+-
+-
+-
+-
+mlÁTIT|15|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|átil|átil|átila|átilo|átili|átily|átily|átila|ácen|ácen|ácena|áceno|áceni|áceny|áceny|ácena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+-
+mlÁŤIT|15|-1|áťit?|áťím?|áťíš?|áťí?|áťíme?|áťíte?|áťí?|ať?|aťme?|aťte?|áťil?|áťil?|áťila?|áťiło|áťili?|áťily?|áťily?|áťila?|ácen?|ácen?|ácena?|áceno?|áceňi?|áceny?|áceny?|ácena?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+-
+ml|mlÁTIT|mł|mlÁŤIT|
+kývat,houpat||bimbá||
+|BÝT||BÝT|
+||rozhrabało ||
+-
+|tož|
+potom|potem|
+opakovaně|dokolečka|
+pořád|furt|
+-
+ve||ve|
+na||na|
+od||ot|
+po||po|
+-
+a|a|
+-
+-

@@ -5,6 +5,7 @@ d25.12.2023 14:18:54
 idej tyn kožuh mam’e, una to mo rada Třinec FM;\n jo iny roz v’idžaṵa barṵog ud borsuka, to byṵ kop’ec! Třinec FM\ntata dyck’i ty bumbolce ćapo z dachu \nrynke m’oṵ jedyn bumbolec, jag go ṵusy poščipały\ntak’i božatko kocurka žeh vyćungṵa z vody Třinec FM\n\nco je to: dej, iny roz,barṵog, "to byṵ kop’ec", ćapoṵ (tápal?), rynke, žeh, vyćungṵa (vytunhla?)\nḱejśi, ve verku, ercplac, voźiṵech vůngli i šlam a ṵoroṵech (vozilech vonhli i šlam a lorolech?), pynzyjnůnovyny, nojynte, gyśi (kdysi?, husy?), do protku
 c#Zdroje dat\n-snčj\n-Kellner, Adolf - Východolašská nářečí\n-https://is.muni.cz/th/bt2bp/Diplomka_3.pdf
 g49.680313,18.6680996
+x1
 q0
 -
 -
@@ -145,6 +146,8 @@ typ|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 vrstVA|1|va|vy|vě|vu|vo|vě|vou|vy|ev|vám|vy|vy|vách|vami
 čmeláK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 vosA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
+roH|-1|h|hu|hu|h|hu|hu|hem|hy|hů|hům|hy|hy|zích|hy
 -
 ancuK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 božatKO|2|ko|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
@@ -194,6 +197,8 @@ zortA|3|a|u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 vrstVA|1|́fa|vy?|vě?|vu?|vo?|vě?|vou?|vy?|ev?|vám?|vy?|vy?|vách?|vami?
 pščoL|2|k?|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ṵy?|kú?|kúm?|ṵy|ci?|cích?|ky?
 usA|1|a?|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y|y?|ách?|ami?
+baraN|3|n?|na|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?|nú?|núm?|ny?|ňi?|nech?|ny?
+roH|-1|h?|hu?|hu?|h?|hu?|hu?|hem?|hy?|hú?|húm?|ǵi|hy?|zích?|hy?
 -
 ||0|kf’itu||
 |ČLOVĚK|0||ČLOVĚK|
@@ -257,6 +262,8 @@ na sení?||0|na naśyńi||
 čmelá|čmeláK|0|pščo|pščoL|
 vos|vosA|0|us|usA|
 nejaké hmyz?||0|buncy||
+beran|beran|0|bara|baraN|
+ro|roH|0|ro|roH|
 -
 rád|-1|-|-|-|-|-|-|-|o|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|y|-|-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|i|-|-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|y|-
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
@@ -364,6 +371,8 @@ mlÁTIT|15|-1|átit|átím|átíš|átí|átíme|átíte|átí|ať|aťme|aťte|�
 vZÍT|30|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata
 vÁZAT|15|-1|ázat|ážu|ážeš|áže|ážeme|ážete|ážou|až|ažme|ažte|ázal|ázal|ázala|ázalo|ázali|ázaly|ázaly|ázala|ázán|ázán|ázána|ázáno|ázáni|ázány|ázány|ázána
 házET|15|-1|et|ím|íš|í|íme|íte|í,házejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+držET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
+beran|0|-1|
 -
 bÁT_SE|7|-1|át_se?|ojím?|ojiš|ojí?|ojíme?|ojíte?|ojí?|oj?|ojme?|ojte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
 bolET|7|-1|et?|ím?|íš?|i|íme?|íte?|í?,bolejí?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
@@ -392,6 +401,7 @@ vybRAT|30|-1|rat?|eru?|ereš?|ere?|ereme?|erete?|erou?|er?|erme?|erte?|ral?|ral?
 vZÍT|30|-1|zít?|ezmu?|ezmeš?|eźńe|ezmeme?|ezmete?|eznům|ezmi?|ezměme?|ezměte?|zal?|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zaťi?|zaty?|zaty?|zata?
 VÁZAT|15|-1|vázat?|vážu?|vážeš?|v́ůže|vážeme?|vážete?|vážou?|važ?|važme?|važte?|vázal?|vázal?|vázala?|vázalo?|vázali?|vázaly?|vázaly?|vázala?|vázán?|vázán?|vázána?|vázáno?|vázáňi?|vázány?|vázány?|vázána?
 chyBAĆ|15|-1|et?|ím?|íš?|b́e|íme?|íte?|í?,házejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+dźeržET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?||me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
 |BÝT||BÝT|
 |JÍT||JÍT|
@@ -432,6 +442,7 @@ profukuje||v́eje||
 ház|házET|chy|chyBAĆ|
 ||leći||
 oddělit||ṵoddźelo?||
+drž|držET|dźerž|dźeržET|
 -
 dost|doźdź||dość|
 jednou|roz|

@@ -5,6 +5,7 @@ d04.06.2023 17:39:32
 iZachyceno:\ndo ósťina (osťina?) - do ústína/nu\nmysleli->mesłéle   ł takové nenápadné L\n\n\n\nhttps://theses.cz/id/1tmdiz/15008735\nne vokno\nne a, ě kaše\nnaše, vaše\nk frantô, vidím frantô\nfrantův kabát->frantu kabát\nne ť
 c#Zdroj dat\n-Neznámý
 g49.575983,17.1214823
+x3
 q0
 oHaná
 -
@@ -23,6 +24,7 @@ dělat hluk|1|rablovat|
 tam je kdovíco|1|tam je dovičeho|
 uvývat zem|0|u?mý?vat? zeme|
 k slatinicím|1|ke slaťenicum|
+berany berany duc|1|berani berani duc|
 -
 -
 -
@@ -71,6 +73,7 @@ moderní|jarní|modérňi|jarní|
 otevřen|zelenÝ|rozglábe|zeleNÝ|
 ||lubové||maso
 nemocn|zelenÝ|nascipa|zeleNÝ|
+vrbový||vrbjené||
 -
 MY|my|nás|nám|nás|my|nás|námi
 několik||a|a|||a|a
@@ -92,6 +95,7 @@ pomOCT|30|-1|oct|ohu,ůžu|ůžeš|ůže|ůžeme|ůžete|ohou,ůžou|oz|ozme|ozt
 zeptAT_SE|22|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 udělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 dívAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 meSLET|15|-1|slet?|slím?|slíš?|slí?|slíme?|slíte?|slí,myslejí?|sli?|sleme?|slete?|slel?|slel?|slela?|slelo?|słéle|slely?|slely?|slela?|šlen?|šlen?|šlena?|šleno?|šleni?|šleny?|šleny?|šlena?
@@ -101,6 +105,7 @@ pomUCT|30|-1|uct|ohu?,ůžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou?,ůžou?|oz?
 zeptAT_SE|22|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 uĎELAT|30|-1|ďelat|dělám?|děláš?|dělá?|děláme?|děláte?|dělají?|ďelej?|ďelejme?|ďelejte?|ďelal?|ďelal?|ďelala?|ďelalo?|ďelali?|ďelaly?|ďelaly?|ďelala?|ďelán?|ďelán?|ďelána?|ďeláno?|ďeláňi?|ďelány?|ďelány?|ďelána?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|bêzte|by?
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|poď,póď,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
 dív|dívAT|div|dívAT|
 my|mySLET|me|meSLET|
@@ -114,6 +119,7 @@ zept|zeptAT_SE|zopt|zeptAT_SE|
 uděl|udělAT|po|uĎELAT|
 |BÝT||BÝT|
 ||popršélo (šêło?)||
+|JÍT||JÍT|
 -
 spolu|spolem|
 jestli|eši|
@@ -121,6 +127,7 @@ dobře|dobrá|
 zatím|zaťim|
 doprostřed|naprostředek|
 |poboskê?|
+samozřejmě|samozdřémňe|
 -
 ke||ke|
 -

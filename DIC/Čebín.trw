@@ -2,8 +2,9 @@ TW v2
 tČebín
 aGG
 d28.01.2024 11:08:12
-c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22%C4%8Ceb%C3%ADn+BO%22p">snčj</a>
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22%C4%8Ceb%C3%ADn+BO%22p">snčj</a>\n\n#Popis nářečí\n-kráčení i: zabijački
 g49.3130182,16.4774361
+x3
 q0
 -
 -
@@ -59,6 +60,7 @@ ránO|0|o|a|u|o|o|u|em|a||ům|a|a|ech|y
 les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 brouK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 cikán|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+zabíjačKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 zahraDA|1|da?|dy?|ďe?|dô|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 čmoCH|3|ch?|chu?|chu?|ch|chu?|chu?|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
@@ -75,34 +77,38 @@ ránO|0|u|a?|u?|o?|o?|u?|em?|a?|?|úm?|a?|a?|ech?|y?
 les|3|?|a?|u?|?|e?|e|em?|y?|ú?|úm?|y?|y?|ích?|y?
 brabóK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú|kúm?|ky?|ci?|cích?|ky?
 cegáN|2|n|na?|novi?,nu?|na?|ne?|novi?,nu?|nem?|ňi?,nové?|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
+zabijačKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ki|ky?|kách?|kami?
 -
-sakra||0|safra||
-zahrad|zahradA|0|zahra|zahraDA|
-či|čiCH|0|čmo|čmoCH|
-blb|blb|0|bl|blB|
-sběr|sběr|0|zbjer|sbjer|
 ||0|mucka ||
-sporá|sporáK|0|šporá|šporáK|
-bot|botA|0|bu|boTKA|
-děvč|děvčE|0|ďefč|ďefčE|
-vlas|vlas|0|vlas|vlas|
-vous|vous|0|paróse ||expr.
-bezvědomí|bezvědomí|0|bezjedumí|bezjedumí|
-d|dEN|0|d|dEN|
-rán|ránO|0|rán|ránO|
 ||0|kafé ||
+bezvědomí|bezvědomí|0|bezjedumí|bezjedumí|
+blb|blb|0|bl|blB|
 bonbón||0|comel ||
-les|les|0|les|les|
+bot|botA|0|bu|boTKA|
 brou|brouK|0|brabók|brabóK|
 cikán|cikán|0|cegá|cegáN|
+či|čiCH|0|čmo|čmoCH|
+d|dEN|0|d|dEN|
+děvč|děvčE|0|ďefč|ďefčE|
+les|les|0|les|les|
+rán|ránO|0|rán|ránO|
+sakra||0|safra||
+sběr|sběr|0|zbjer|sbjer|
+sporá|sporáK|0|šporá|šporáK|
+vlas|vlas|0|vlas|vlas|
+vous|vous|0|paróse ||expr.
+zahrad|zahradA|0|zahra|zahraDA|
+zabíjač|zabíjačKA|0|zabijač|zabijačKA|
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 černÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+nejlepší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
 celÝ|-1|í|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|é|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|ré|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 čerNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|néh|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
+nejlepší|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-||ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
 -
 cel|celÝ|cel|celÝ|
 poslintaný||dukaňené||expr
@@ -110,6 +116,7 @@ dob|dobRÝ|dub|dobRÝ|
 přerostl|celÝ|přerústl|celÝ|
 čern|černÝ|čer|čerNÝ|
 prolhan|černÝ|prulha|čerNÝ|
+nejlepší|nejlepší|nélepši|nejlepší|
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
@@ -227,6 +234,7 @@ vůbec|vúbec|
 až|až|
 však|šag|
 nejvíce,nejvíc|névíc|
+doma|duma|
 -
 na||na|
 do||du|

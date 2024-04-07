@@ -2,6 +2,7 @@ TW v2
 tRataje
 aGG
 d04.11.2023 11:54:27
+io berľich  ľ l ł?
 sTěšetice
 lHanáčtina
 g49.5880087,17.1119728
@@ -16,22 +17,40 @@ včera jsem se najezdil|1|fčera sem bêl dlóhá trasa|
 -
 -
 -
+ou|ó
 -
+lích|lich
+dili|ďile
 -
 kněZ|2|z|ze|zi,zovi|ze|zi|zi,zovi|zem|ží|ží|žím|ze|ží|žích|žími
 mravenEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 trasA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+berlE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+babičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+dědečEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
+kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
 -
 panáčEK|2|ek|ze?|zi?,zovi?|ze?|zi?|zi?,zovi?|zem?|ží?|ží?|žím?|ze?|ží?|žích?|žími?
 brablenEC|2|ec|ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|ci|ců?|cům?|ce?|ci?|cích?|ci?
 trasA|1|a|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|lidé?,(v&#160;obecném jazyce) liďi?|liďí?|lêďum|liďi?|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
+berlE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ich|emi?
+stařenKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+ďedečEK|2|ek|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
+kÚŇ|3|úň?|oňe?|oňi?,oňovi?|oňe?,archaicky) kúň[4][5]?|oňi?|oňi?,oňovi?|oňem?|oňe?|oňí?,oňú?|oňum|oňe?|oňe?|oňích?|oňma
 -
 kně|kněZ|0|panáč|panáčEK|
 mraven|mravenEC|0|brablen|brablenEC|
 tras|trasA|0|tras|trasA|
 |ČLOVĚK|0||ČLOVĚK|
+berl|berlE|0|berl|berlE|
+babič|babičKA|0|stařen|stařenKA|
+dědeč|dědečEK|0|stařeč|ďedečEK|
+brambor||0|jabka||
+k|kŮŇ|0|k|kÚŇ|
+Třebčín||0|Třebčén,v Třebčéňe||
+vesnice||0|ďeďina||
 -
 dlouHÝ|-1|hé|hého|hému|hé|hé|hém|hým|||há|hých|hým|há|há|hých|hými|||há|hé|hé|hou|há|hé|hou|||hé|hých|hým|hé|hé|hých|hými|||hý|hého|hému|hého|hý|hém|hým|||zí|hých|hým|hé|zí|hých|hými|||hý|hého|hému|hý|hý|hém|hým|||hé|hých|hým|hé|hé|hých|hými||
 -
@@ -46,13 +65,17 @@ dlou|dlouHÝ|dló|dlouHÝ|
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 -
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+choĎIT|15|-1|ďit?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďile|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
 -
 |BÝT||BÝT|
+cho|choDIT|cho|choĎIT|
 -
 pěšky|pješórem|
 včera|fčera|
+vždy|dêcki|
 -
 -
 -

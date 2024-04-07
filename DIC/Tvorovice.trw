@@ -2,15 +2,17 @@ TW v2
 tTvorovice
 aGG
 d09.09.2023 14:04:11
-ipomušte mňe z bide, šak pořáť se bobnoje, že se nemáme opóščed a se potporovat Tvorovice PV;
-c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Tvorovice+PV%22">SNČJ</a>
+ipomušte mňe z bide, šak pořáť se bobnoje, že se nemáme opóščed a se potporovat Tvorovice PV;\n
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Tvorovice+PV%22">SNČJ</a>\n-https://veslovech.cz/zvukovy-archiv/zivot-na-ukrajine-behem-valky/ (nevyčerpáno)
 g49.3743237,17.2219392
+x3
 q0
 -
 -
 -
 -
 -
+s nimi|1|s ňema|
 -
 -
 -
@@ -30,21 +32,28 @@ b|bÍDA|0|b|bÍDA|
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 -
 JÁ|já?|mě?,(kňižňe) mne[2]?|mňe|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+OŇI|oňi?|jich?,ňich*?|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňema
 -
 |JÁ||JÁ|
 |SE||SE|
+|ONI||OŇI|
 -
 -
 -
 -
 pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+znÁT|15|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 pomOCT|30|-1|oct?|ohu?,(hovorově) pomúžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) pomúžou?|oz?|ozme?|ušte|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|ožeňi?|oženy?|oženy?|ožena?
 mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+BÝT|247|-1|být?|jsem?|jsi?|je?|zme,sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|biło|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+znÁT|15|-1|ať|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 pom|pomOCT|pom|pomOCT|
 rozhlašovat||bobnoje||expr
@@ -52,11 +61,16 @@ m|mÍT|m|mÍT|
 nem|mÍT|nem|mÍT|
 ||opóščed||
 ||potporovat se||
+|BÝT||BÝT|
+zn|znÁT|zn|znÁT|
 -
 však|šak|
 pořád|pořáť|
+tak|tak|
+ještě|ešče|
 -
 z||z|
+s||s|
 -
 jestli|ešlê|
 že|že|
