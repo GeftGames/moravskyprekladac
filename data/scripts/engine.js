@@ -1,4 +1,5 @@
 ﻿const serverName = "https://moravskyprekladac.pages.dev/";
+var input_lang="";
 var imgMap;
 var imgMap_bounds;
 var appSelected = "translate";
@@ -1152,15 +1153,45 @@ function Load() {
         window.location = hashless_url;
         return;
     }
+
+    let hashes=location.hash.split("#");
+   
     //console.log(location.hash);
     if (location.hash == "#about") {
-        ShowAboutPage()
+        //ShowAboutPage()
+        PopPageShow("about");
     } else if (location.hash == "#mapper") {
         appSelected = "mapper";
     } else if (location.hash == "#search") {
         appSelected = "search";
-    } else if (location.hash == "#translate") {
+    } else if (hashes.includes("translate")) {
         appSelected = "translate";
+
+        //#translate#input=Hello%20world
+        var input_text="";
+       
+        let input_text_var="input=", input_lang_var="lang=";
+
+        for (let l of hashes) {            
+            if (l.startsWith(input_text_var)) {
+                let s=input_text_var.length;
+                input_text=decodeURI(l.substring(s));
+                
+                if (input_text!="") {
+                    document.getElementById("specialTextarea").value=input_text;
+                }
+            }            
+            
+            if (l.startsWith(input_lang_var)) {
+                let s=input_lang_var.length;
+                input_lang=decodeURI(l.substring(s));
+                
+                if (input_lang!="") {
+                    document.getElementById("selectorTo").value=input_lang;
+                }
+            }
+        }
+       
     } else if (location.hash == "#dic") {
         TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
     } else if (location.hash == "#files") {
@@ -1170,6 +1201,7 @@ function Load() {
     } else if (location.hash == "#text") {
         TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
     }
+  
 
     simpleTabContent = window.innerWidth < 550;
 
@@ -3506,7 +3538,7 @@ function Copy(elementId) {
 function CopyLink() {
     HidePopUps();
     //encodeURIComponent(document.getElementById('specialTextarea').value)
-    let copyText = serverName + "?text=" + encodeURIComponent(document.getElementById('specialTextarea').value) + "&t=" + document.getElementById('selectorTo').selected;
+    let copyText = serverName + "#translate#input=" + encodeURIComponent(document.getElementById('specialTextarea').value) + "#lang=" + encodeURIComponent(document.getElementById('selectorTo').value);
 
     navigator.clipboard.writeText(copyText).then(function() {
         if (dev) console.log('Copying to clipboard was successful!');
@@ -5352,6 +5384,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
 
+        { from: "ŋ", to: "n" },
+
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },
         { from: "bjející", to: "bějící", type: "end" },
@@ -5387,6 +5421,7 @@ function SetCurrentTranscription(transCode) {
 
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
+        { from: "ŋ", to: "n" },
 
         { from: "ň", to: "ň", type: "end" },
         { from: "ó́", to: "ó" },
@@ -5420,6 +5455,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ďí", to: "dí" },
         { from: "ďe", to: "dě" },
 
+        { from: "ŋ", to: "n" },
     ];
 
     if (transCode == "silezian_slabikorzovy") return [
@@ -5471,6 +5507,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
+
+        { from: "ŋ", to: "n" },
     ];
 
     if (transCode == "ipa") return [
@@ -5640,6 +5678,7 @@ function SetCurrentTranscription(transCode) {
 
 
         { from: "n", to: "ン" }, { from: "N", to: "ン" },
+        { from: "ŋ", to: "ン" },
     ];
 
     if (transCode == "hiragana") return [
@@ -5734,7 +5773,7 @@ function SetCurrentTranscription(transCode) {
         { from: "é", to: "ええ" }, { from: "É", to: "ええ" },
         { from: "ó", to: "おお" }, { from: "Ó", to: "おお" },
 
-        { from: "n", to: "ん" }, { from: "N", to: "ん" },
+        { from: "n", to: "ん" }, { from: "N", to: "ん" }, { from: "ŋ", to: "ん" },
     ];
 
     if (transCode == "steuer") return [
@@ -5763,7 +5802,7 @@ function SetCurrentTranscription(transCode) {
         { from: "w", to: "ᚹ" }, { from: "W", to: "ᚹ" },
         { from: "v", to: "ᚹ" }, { from: "V", to: "ᚹ" },
         { from: "h", to: "ᚺ" },
-        { from: "n", to: "ᚾ" },
+        { from: "n", to: "ᚾ" },{ from: "ŋ", to: "ᚾ" },
         { from: "i", to: "ᛁ" },
         { from: "i", to: "ᛁᛁ" },
         { from: "y", to: "ᛁ" },
@@ -5814,7 +5853,7 @@ function SetCurrentTranscription(transCode) {
         { from: "k", to: "Ⰽ" }, { from: "K", to: "Ⰽ" },
         { from: "l", to: "Ⰾ" }, { from: "L", to: "Ⰾ" },
         { from: "m", to: "Ⰿ" }, { from: "M", to: "Ⰿ" },
-        { from: "n", to: "Ⱀ" }, { from: "N", to: "Ⱀ" },
+        { from: "n", to: "Ⱀ" }, { from: "N", to: "Ⱀ" },{ from: "ŋ", to: "Ⱀ" },
         { from: "o", to: "Ⱁ" }, { from: "O", to: "Ⱁ" },
         { from: "ô", to: "Ⱁ" }, { from: "Ô", to: "Ⱁ" },
         { from: "p", to: "Ⱂ" }, { from: "P", to: "Ⱂ" },
@@ -5895,7 +5934,7 @@ function SetCurrentTranscription(transCode) {
 
         { from: "p", to: "п" }, { from: "P", to: "П" },
 
-        { from: "n", to: "н" }, { from: "N", to: "Н" },
+        { from: "n", to: "н" }, { from: "N", to: "Н" }, { from: "ŋ", to: "н" },
 
         { from: "m", to: "м" }, { from: "M", to: "М" },
 
@@ -5915,6 +5954,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
+        { from: "ŋ", to: "n" },
     ];
 
     console.log("Unknown code transcription: ", transCode)

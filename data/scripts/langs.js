@@ -237,7 +237,7 @@ langs["cs"] = {
     WhatIsQ: "Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
     StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači pracujeme, ještě není úplně hotový.",
     WhatWeUse: "Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.",
-    HowWeTranslate: "Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozebereme," +
+    HowWeTranslate: "Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat a také jsou různě formátovaná (různé přepisy) či nezdigitalizovaná (rastrová). Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozebereme," +
         "detekujeme, co je kažné slovo za slovní druh. Poté se podíváme do databáze vět a jestli věta má větný vzorec tak jej aplikujem." +
         "Jestli ne, tak přeložíme slova zvlášť. jesli ani dané slovo nedokážeme přeložit, tak zkusíme nahrazovat části slov. " +
         "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. " +
