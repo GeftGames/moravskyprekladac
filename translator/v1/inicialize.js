@@ -203,17 +203,22 @@ function GetTranslations() {
 
             if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, fileName);
         }
+        
 
         document.getElementById("totalstats").innerText = CalculateTotalStats();
 
         document.getElementById("appPage_" + appSelected).style.display = "block";
         document.getElementById("appPage_" + appSelected).style.opacity = "0%";
 
+        //console.log(input_lang);
+        if (input_lang!="" && input_lang!=undefined) document.getElementById("selectorTo").value=input_lang;
         currentLang = GetCurrentLanguage();
+        if (input_lang!="" && input_lang!=undefined) Translate();
 
         setTimeout(function() {
             document.getElementById("appPage_" + appSelected).style.opacity = "100%";
             document.getElementById("loadingPage").style.display = "none";
+
         }, 100)
     }
     xhttp.addEventListener('error', (e) => {
