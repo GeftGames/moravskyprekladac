@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 8.4. 
+- Oprava odkazu #about
+- Zprovoznění odkazu {url}#translate#input={text}
+  
 ### 2024 4.4. 
 - Podpora překladů JSON
   
