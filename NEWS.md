@@ -3,6 +3,7 @@
 - Nyní se ve výchozím režinu zobrazují i néně kvalitní překlady
 - Oprava jazyku po první otevření stranky
 - Slovník má na konci tlačítko "ABC", které zobrazí všechny slova a zvýrazní písmeno abecedy
+- Upozornění že je daný slovník prázdný
 
 ### 2024 8.4. 
 - Oprava odkazu #about
