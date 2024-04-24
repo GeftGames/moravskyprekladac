@@ -75,7 +75,7 @@ class ItemSentencePart {
             let item = new ItemSentencePart();
             let raw = data.split('|');
             item.input = raw[0];
-            item.output = { Text: raw[1] };
+            item.output = [{ Text: raw[1] }];
             return item;
         } else if (loadedVersionNumber == 2) {
             let raw = data.split('|');
