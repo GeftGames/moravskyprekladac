@@ -5478,6 +5478,14 @@ class LanguageTr {
 
         display = document.createElement("div");
         
+        if (out.length == 0) {
+            let no = document.createElement("p");
+            no.style = "font-style: italic";
+            no.innerText = "Slovníček tohoto místa je prádzný.";
+            display.appendChild(no);
+            return display;
+        }
+
         let lastCh="";
         if (out.length != 0) {
             for (let z of out) {
