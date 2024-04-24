@@ -4,7 +4,7 @@ var imgMap;
 var imgMap_bounds;
 var appSelected = "translate";
 var transcription = null;
-
+var dicAbc=false;
 class savedTraslation {
     constructor() {
         this.language = -1;
@@ -499,6 +499,15 @@ function ChangeDev() {
         document.getElementById('uploadown').style.display = 'none';
         document.getElementById('refresh').style.display = 'none';
     }
+}
+
+function ChangeAbcDic() {
+    if (!loaded) return;
+    //dicAbc = document.getElementById('dev').checked;
+    dicAbc=!dicAbc;
+    localStorage.setItem('setting-dic-abc', dicAbc);   
+
+    GetDic();
 }
 
 function ChangeBetaFunctions() {
@@ -1324,6 +1333,7 @@ function Load() {
     let zmyvocabCS;
     let trTo = "mo";
     let trFrom = "cs";
+    let zDicAbc = false;
     let zTestingFunc;
     let zTranscription;
     try {
@@ -1334,6 +1344,7 @@ function Load() {
         zdev = localStorage.getItem('setting-dev');
         zbetaFunctions = localStorage.getItem('setting-betaFunctions');
         zTranscription = localStorage.getItem('Transcription');
+        zDicAbc = localStorage.getItem('setting-dic-abc');
 
         savedget = localStorage.getItem('saved');
         zmyvocabHA = localStorage.getItem('vocab-ha');
@@ -1383,6 +1394,8 @@ function Load() {
         myVocabCS.push('');
     } else myVocabCS = zmyvocabCS;
 
+    dicAbc = zDicAbc;
+
     if (zmyvocabHA === null) {
         myVocabHA = new Array();
         myVocabHA.push('');
@@ -1413,11 +1426,13 @@ function Load() {
         var userLang = navigator.language || navigator.userLanguage;
         language = "default";
         let l = "";
-        if (userLang == "de") l = "de";
+        if (navigator.language.includes("cs")) l = "cs";
+        else if (navigator.userLanguage.includes("cs")) l = "cs";
+        else if (userLang == "cs") l = "cs";
+        else if (userLang == "de") l = "de";
         else if (userLang == "sk") l = "sk";
         else if (userLang == "jp") l = "jp";
-        else if (userLang == "cs") l = "cs";
-        else l = "en"; /**/
+        else l = "en";
 
         let el = document.getElementById("manifest");
         if (el == undefined) {
@@ -5561,6 +5576,10 @@ function SetCurrentTranscription(transCode) {
         { from: " ", to: "・" },
 
         { from: "ła", to: "ワ" }, { from: "Ła", to: "ワ" },
+        
+        { from: "mě", to: "ミェ" }, { from: "Mě", to: "ミェ" },
+        { from: "mje", to: "ミェ" }, { from: "Mje", to: "ミェ" },
+
 
         { from: "dy", to: "ディ" }, { from: "Dy", to: "ディ" },
         { from: "fi", to: "フィ" }, { from: "Fi", to: "フィ" },
@@ -5574,14 +5593,14 @@ function SetCurrentTranscription(transCode) {
         { from: "vu", to: "ヴ" }, { from: "Vu", to: "ヴ" },
         { from: "vů", to: "ヴー" }, { from: "Vů", to: "ヴー" },
 
-        { from: "ka", to: "カ" }, { from: "ka", to: "カ" },
+        { from: "ka", to: "カ" }, { from: "Ka", to: "カ" },
         { from: "ká", to: "カー" }, { from: "Ká", to: "カー" },
 
         { from: "ra", to: "ラ" }, { from: "Ra", to: "ラ" },
         { from: "rá", to: "ラー" }, { from: "Rá", to: "ラー" },
 
-        { from: "la", to: "ラ" }, { from: "La", to: "ラ" },
-        { from: "lá", to: "ラー" }, { from: "Lá", to: "ラー" },
+        { from: "la", to: "ラ゚" },   { from: "La", to: "ラ゚" },
+        { from: "lá", to: "ラ゚ー" }, { from: "Lá", to: "ラ゚ー" },
 
         { from: "sa", to: "サ" }, { from: "Sa", to: "サ" },
         { from: "sá", to: "サー" }, { from: "Sá", to: "サー" },
@@ -5651,6 +5670,11 @@ function SetCurrentTranscription(transCode) {
         { from: "ry", to: "リ" }, { from: "Ry", to: "リ" },
         { from: "rý", to: "リー" }, { from: "Rý", to: "リー" },
 
+        { from: "li", to: "リ゚" },   { from: "Li", to: "リ゚" },
+        { from: "lí", to: "リ゚ー" }, { from: "Lí", to: "リ゚ー" },
+        { from: "ly", to: "リ゚" },   { from: "Ly", to: "リ゚" },
+        { from: "lý", to: "リ゚ー" }, { from: "Lý", to: "リ゚ー" },
+
         { from: "vi", to: "ヰ" }, { from: "Vi", to: "ヰ" },
         { from: "ví", to: "ヰー" }, { from: "Ví", to: "ヰー" },
         { from: "vy", to: "ヰ" }, { from: "Vy", to: "ヰ" },
@@ -5670,13 +5694,118 @@ function SetCurrentTranscription(transCode) {
         { from: "pi", to: "ピ" }, { from: "Pi", to: "ピ" },
         { from: "pí", to: "ピー" }, { from: "Pí", to: "ピー" },
 
-        { from: "i", to: "イ" }, { from: "I", to: "イ" },
-        { from: "í", to: "イー" }, { from: "Í", to: "イー" },
-
-        { from: "a", to: "ア" }, { from: "A", to: "ア" },
-        { from: "á", to: "アー" }, { from: "Á", to: "アー" },
+        { from: "py", to: "ピ" }, { from: "Py", to: "ピ" },
+        { from: "pý", to: "ピー" }, { from: "Pý", to: "ピー" },
 
 
+        { from: "nu", to: "ヌ" },   { from: "Nu", to: "ヌ" },
+        { from: "nů", to: "ヌー" }, { from: "Nů", to: "ヌー" },
+
+        { from: "su", to: "ス" },   { from: "Su", to: "ス" },
+        { from: "sů", to: "スー" }, { from: "Sů", to: "スー" },
+
+        { from: "lu", to: "ル゚" },   { from: "Lu", to: "ル゚" },
+        { from: "lů", to: "ル゚ー" }, { from: "Lů", to: "ル゚ー" },
+                
+        { from: "du", to: "ドゥ" },   { from: "Du", to: "ドゥ" },
+        { from: "dů", to: "ドゥー" }, { from: "Dů", to: "ドゥー" },
+        
+        { from: "pu", to: "プ" },   { from: "Pu", to: "プ" },
+        { from: "pů", to: "プー" }, { from: "Pů", to: "プー" },
+        
+        { from: "ru", to: "ル" },   { from: "Ru", to: "ル" },
+        { from: "rů", to: "ルー" }, { from: "Rů", to: "ルー" },
+        
+        { from: "ču", to: "チゥ" },   { from: "Ču", to: "チゥ" },
+        { from: "čů", to: "チゥー" }, { from: "Čů", to: "チゥー" },
+        { from: "čú", to: "チゥー" }, { from: "Čú", to: "チゥー" },
+        
+
+        { from: "ne", to: "ネ" },   { from: "Ne", to: "ネ" },
+        { from: "né", to: "ネー" }, { from: "Né", to: "ネー" },
+        
+        { from: "ke", to: "ケ" },   { from: "Ke", to: "ケ" },
+        { from: "ké", to: "ケー" }, { from: "Ké", to: "ケー" },
+ 
+        { from: "se", to: "セ" },   { from: "Se", to: "セ" },
+        { from: "sé", to: "セー" }, { from: "Sé", to: "セー" },
+ 
+        { from: "re", to: "レ" },   { from: "Re", to: "レ" },
+        { from: "ré", to: "レー" }, { from: "Ré", to: "レー" },
+
+        { from: "le", to: "レ゚" },   { from: "Le", to: "レ゚" },
+        { from: "lê", to: "レ゚" },   { from: "Lê", to: "レ゚" },
+        { from: "lé", to: "レ゚ー" }, { from: "Lé", to: "レ゚ー" },
+
+        { from: "me", to: "メ" },   { from: "Me", to: "メ" },
+        { from: "mé", to: "メー" }, { from: "Mé", to: "メー" },
+
+        { from: "ve", to: "ヱ" },   { from: "Ve", to: "ヱ" },
+        { from: "vé", to: "ヱー" }, { from: "Vé", to: "ヱー" },
+
+
+        { from: "to", to: "ト" },   { from: "To", to: "ト" },
+        { from: "tó", to: "トー" }, { from: "Tó", to: "トー" },
+         
+        { from: "ho", to: "ホ" },   { from: "Ho", to: "ホ" },
+        { from: "hó", to: "ホー" }, { from: "Hó", to: "ホー" },
+         
+        { from: "ro", to: "ロ" },   { from: "Ro", to: "ロ" },
+        { from: "rô", to: "ロ" },   { from: "Rô", to: "ロ" },
+        { from: "ró", to: "ロー" }, { from: "Ró", to: "ロー" },   
+  
+        { from: "ko", to: "コ" },   { from: "Ko", to: "コ" },
+        { from: "kô", to: "コ" },   { from: "Kô", to: "コ" },
+        { from: "kó", to: "コー" }, { from: "Kó", to: "コー" },
+  
+        { from: "do", to: "ド" },   { from: "Do", to: "ド" },
+        { from: "dó", to: "ドー" }, { from: "Dó", to: "ドー" },
+  
+        { from: "no", to: "ノ" },   { from: "No", to: "ノ" },
+        { from: "nó", to: "ノー" }, { from: "Nó", to: "ノー" },
+
+        { from: "bo", to: "ボ" },   { from: "Bo", to: "ボ" },
+        { from: "bó", to: "ボー" }, { from: "Bó", to: "ボー" },
+
+        { from: "lo", to: "ロ゚" },   { from: "Lo", to: "ロ゚" },
+        { from: "ló", to: "ロ゚ー" }, { from: "Ló", to: "ロ゚ー" },
+
+        { from: "vo", to: "ヲ" },   { from: "Vo", to: "ヲ" },
+        { from: "vô", to: "ヲ" },   { from: "Vô", to: "ヲ" },
+        { from: "vó", to: "ヲー" }, { from: "Vó", to: "ヲー" },
+ 
+        { from: "po", to: "ポ" },   { from: "Po", to: "ポ" },
+        { from: "pó", to: "ポー" }, { from: "Pó", to: "ポー" },
+ 
+
+        { from: "je", to: "イエ" },   { from: "Je", to: "イエ" },
+        { from: "jé", to: "イエー" }, { from: "Jé", to: "イエー" },
+
+        { from: "še", to: "シェ" },   { from: "Še", to: "シェ" },
+        { from: "šé", to: "シェー" }, { from: "Šé", to: "シェー" },
+
+
+        { from: "vje", to: "ヴィェ" },  { from: "Vje", to: "ヴィェ" },
+        { from: "vě", to: "ヴィェ" },   { from: "Vě", to: "ヴィェ" },
+
+        { from: "nje", to: "ニェ" },  { from: "Nje", to: "ニェ" },
+        { from: "ně", to: "ニェ" },   { from: "Ně", to: "ニェ" },
+
+        { from: "pje", to: "ピェ" },  { from: "Pje", to: "ピェ" },
+        { from: "pě", to: "ピェ" },   { from: "Pě", to: "ピェ" },
+
+        { from: "bje", to: "ビェ" },  { from: "Bje", to: "ビェ" },
+        { from: "bě", to: "ビェ" },   { from: "Bě", to: "ビェ" },
+
+
+        { from: "i", to: "イ" },    { from: "I", to: "イ" },
+        { from: "í", to: "イー" },  { from: "Í", to: "イー" },
+
+        { from: "a", to: "ア" },    { from: "A", to: "ア" },
+        { from: "á", to: "アー" },  { from: "Á", to: "アー" },
+
+
+        { from: "ň", to: "ン" }, { from: "Ň", to: "ン" },
         { from: "n", to: "ン" }, { from: "N", to: "ン" },
         { from: "ŋ", to: "ン" },
     ];
@@ -5690,7 +5819,7 @@ function SetCurrentTranscription(transCode) {
 
         { from: "dži", to: "ぢ" },
 
-        { from: "ka", to: "か" },
+        { from: "ka", to: "か" }, { from: "Ka", to: "か" },
         { from: "ga", to: "が" },
 
         { from: "ki", to: "き" },
@@ -5750,6 +5879,29 @@ function SetCurrentTranscription(transCode) {
         { from: "vů", to: "ゔう" }, { from: "Vů", to: "ゔう" },
 
 
+        { from: "ne", to: "ね" }, { from: "Ne", to: "ね" },
+        { from: "né", to: "ねえ" }, { from: "ne", to: "ねえ" },
+
+        { from: "da", to: "だ" },   { from: "Da", to: "だ" },
+        { from: "dá", to: "だあ" }, { from: "Dá", to: "だあ" },
+
+        { from: "ky", to: "き" },   { from: "Ky", to: "き" },
+        { from: "ký", to: "きい" }, { from: "Ký", to: "きい" },
+   
+    
+        { from: "va", to: "わ" },   { from: "Va", to: "わ" },
+        { from: "Vá", to: "わあ" }, { from: "Vá", to: "わあ" },
+ 
+        { from: "vo", to: "を" },   { from: "Vo", to: "を" },
+        { from: "vó", to: "をう" }, { from: "Vó", to: "をう" },
+
+
+        { from: "ho", to: "ほ" }, { from: "Ho", to: "ほ" },
+        { from: "hó", to: "ほう" }, { from: "Hó", to: "ほう" },
+
+        { from: "fi", to: "ふい" }, { from: "Fi", to: "ふい" },
+        { from: "fí", to: "ふいい" }, { from: "Fí", to: "ふいい" },
+
         { from: "ľu", to: "りゅ" },
         { from: "sa", to: "さ" },
         { from: "na", to: "な" },
@@ -5788,36 +5940,50 @@ function SetCurrentTranscription(transCode) {
         { from: "ma", to: "ᛖ" }, { from: "Ma", to: "ᛖ" },
         { from: "r", to: "ᚱ" }, { from: "R", to: "ᚱ" },
         { from: "já", to: "ᚢ" }, { from: "Já", to: "ᚢ" },
-
-        //?????https://www.wmmagazin.cz/wp-content/uploads/2020/09/slovani3-slovnik-praslovani.jpg
-
-        { from: "f", to: "ᚠ" },
-        { from: "u", to: "ᚢ" },
+        
+        //?????https://www.wmmagazin.cz/wp-content/uploads/2020/09/slovani3-slovnik-praslovani.jpg        
+        { from: "f", to: "ᚠ" }, { from: "F", to: "ᚠ" },
+        { from: "u", to: "ᚢ" }, { from: "U", to: "ᚢ" },
         { from: "a", to: "ᚨ" }, { from: "A", to: "ᚨ" },
         { from: "á", to: "ᚨᚨ" }, { from: "Á", to: "ᚨᚨ" },
+        
+        { from: "ně", to: "ᚾᛁᛖ" }, { from: "Ně", to: "ᚾᛁᛖ" },
+        { from: "ňe", to: "ᚾᛁᛖ" }, { from: "Ňe", to: "ᚾᛁᛖ" },
 
+        { from: "vě", to: "ᚹᛁᛖ" }, { from: "Vě", to: "ᚹᛁᛖ" },
+        { from: "vje", to: "ᚹᛖ" }, { from: "Vje", to: "ᚹᛁᛖ" },
+        
+        { from: "mňe", to: "ᛗᚾᛁᛖ" }, { from: "Mňe", to: "ᛗᚾᛁᛖ" },
+        { from: "mě", to: "ᛗᚾᛁᛖ" }, { from: "Mě", to: "ᛗᚾᛁᛖ" },
 
-        { from: "k", to: "ᚲ" },
-        { from: "g", to: "ᚷ" },
+        { from: "x", to: "ᚲᛊ" }, { from: "X", to: "ᚲᛊ" },
+        
+        { from: "ř", to: "ᚱᛉ" }, { from: "Ř", to: "ᚱᛉ" },
+        { from: "ž", to: "ᛉᚺ" }, { from: "Ž", to: "ᛉᚺ" },
+        
+        { from: "k", to: "ᚲ" },{ from: "K", to: "ᚲ" },
+        { from: "g", to: "ᚷ" }, { from: "G", to: "ᚷ" },
         { from: "w", to: "ᚹ" }, { from: "W", to: "ᚹ" },
         { from: "v", to: "ᚹ" }, { from: "V", to: "ᚹ" },
-        { from: "h", to: "ᚺ" },
-        { from: "n", to: "ᚾ" },{ from: "ŋ", to: "ᚾ" },
-        { from: "i", to: "ᛁ" },
-        { from: "i", to: "ᛁᛁ" },
+        { from: "h", to: "ᚺ" }, { from: "H", to: "ᚺ" },
+        { from: "n", to: "ᚾ" }, { from: "N", to: "ᚾ" },{ from: "ŋ", to: "ᚾ" },
+        { from: "i", to: "ᛁ" }, { from: "I", to: "ᛁ" },
+        { from: "í", to: "ᛁᛁ" },
         { from: "y", to: "ᛁ" },
         { from: "ý", to: "ᛁᛁ" },
 
-        { from: "j", to: "ᛃ" },
-        { from: "p", to: "ᛈ" },
-        { from: "z", to: "ᛉ" },
-        { from: "s", to: "ᛊ" },
-        { from: "t", to: "ᛏ" },
-        { from: "b", to: "ᛒ" },
-        { from: "e", to: "ᛖ" },
-        { from: "m", to: "ᛗ" },
-        { from: "l", to: "ᛚ" },
-        { from: "d", to: "ᛞ" },
+                { from: "j", to: "ᛃ" }, { from: "J", to: "ᛃ" },
+        { from: "p", to: "ᛈ" }, { from: "P", to: "ᛈ" },
+        { from: "z", to: "ᛉ" }, { from: "Z", to: "ᛉ" },
+        { from: "s", to: "ᛊ" }, { from: "S", to: "ᛊ" },
+        { from: "t", to: "ᛏ" }, { from: "T", to: "ᛏ" },
+        { from: "b", to: "ᛒ" }, { from: "B", to: "ᛒ" },
+        { from: "e", to: "ᛖ" }, { from: "E", to: "ᛖ" },
+        { from: "ê", to: "ᛖ" }, { from: "Ê", to: "ᛖ" },
+        { from: "é", to: "ᛖᛖ" }, { from: "É", to: "ᛖᛖ" },
+        { from: "m", to: "ᛗ" }, { from: "M", to: "ᛗ" },
+        { from: "l", to: "ᛚ" }, { from: "L", to: "ᛚ" },
+        { from: "d", to: "ᛞ" }, { from: "D", to: "ᛞ" },
         { from: "o", to: "ᛟ" }, { from: "O", to: "ᛟ" },
         { from: "ô", to: "ᛟ" }, { from: "Ô", to: "ᛟ" },
 
@@ -5825,46 +5991,52 @@ function SetCurrentTranscription(transCode) {
     ];
 
     if (transCode == "hlaholice") return [
-        { from: "št", to: "Ⱋ" },
-        { from: "jo", to: "Ⱖ" },
-        { from: "ju", to: "Ⱓ" },
-        { from: "ch", to: "Ⱈ" },
+        //{ from: "št", to: "Ⱋ" }, { from: "Št", to: "Ⱋ" },
+        { from: "jo", to: "ⱖ" }, { from: "Jo", to: "Ⱖ" },
+        { from: "ju", to: "ⱓ" }, { from: "Ju", to: "Ⱓ" },
+        { from: "ch", to: "ⱈ" }, { from: "Ch", to: "Ⱈ" },
 
         { from: "h", to: "ⱈ" },
 
         { from: "dz", to: "Ⰷ" },
 
         { from: "ť", to: "ⱏ" },
-
+        { from: "ň", to: "ⱀ" },
+        { from: "ž", to: "ⰶ" }, { from: "Ž", to: "Ⰶ" },
 
         { from: "a", to: "ⰰ" }, { from: "A", to: "Ⰰ" },
+        { from: "á", to: "ⰰⰰ" }, { from: "Á", to: "ⰀⰀ" },
         { from: "b", to: "ⰱ" }, { from: "B", to: "Ⰱ" },
-        { from: "v", to: "Ⰲ" }, { from: "V", to: "Ⰲ" },
-        { from: "g", to: "Ⰳ" }, { from: "G", to: "Ⰳ" },
-        { from: "d", to: "Ⰴ" }, { from: "D", to: "Ⰴ" },
-        { from: "e", to: "Ⰵ" }, { from: "E", to: "Ⰵ" },
-        { from: "ê", to: "Ⰵ" }, { from: "Ê", to: "Ⰵ" },
+        { from: "v", to: "ⰲ" }, { from: "V", to: "Ⰲ" },
+        { from: "g", to: "ⰳ" }, { from: "G", to: "Ⰳ" },
+        { from: "d", to: "ⰴ" }, { from: "D", to: "Ⰴ" },
+        { from: "e", to: "ⰵ" }, { from: "E", to: "Ⰵ" },
+        { from: "é", to: "ⰵⰵ" }, { from: "É", to: "ⰅⰅ" },
+        { from: "ê", to: "ⰵ" }, { from: "Ê", to: "Ⰵ" },
         { from: "ʒ", to: "Ⰶ" },
-        { from: "z", to: "Ⰸ" }, { from: "Z", to: "Ⰸ" },
-        { from: "i", to: "Ⰹ" },
-        { from: "pě", to: "Ⰹ" },
-        { from: "y", to: "Ⰹ" }, { from: "Y", to: "Ⰹ" },
-        { from: "j", to: "Ⰻ" }, { from: "J", to: "Ⰻ" },
-        { from: "k", to: "Ⰽ" }, { from: "K", to: "Ⰽ" },
-        { from: "l", to: "Ⰾ" }, { from: "L", to: "Ⰾ" },
-        { from: "m", to: "Ⰿ" }, { from: "M", to: "Ⰿ" },
-        { from: "n", to: "Ⱀ" }, { from: "N", to: "Ⱀ" },{ from: "ŋ", to: "Ⱀ" },
-        { from: "o", to: "Ⱁ" }, { from: "O", to: "Ⱁ" },
-        { from: "ô", to: "Ⱁ" }, { from: "Ô", to: "Ⱁ" },
-        { from: "p", to: "Ⱂ" }, { from: "P", to: "Ⱂ" },
-        { from: "r", to: "Ⱃ" }, { from: "R", to: "Ⱃ" },
-        { from: "s", to: "Ⱄ" }, { from: "S", to: "Ⱄ" },
-        { from: "t", to: "Ⱅ" }, { from: "T", to: "Ⱅ" },
-        { from: "u", to: "Ⱆ" }, { from: "U", to: "Ⱆ" },
-        { from: "f", to: "Ⱇ" }, { from: "F", to: "Ⱇ" },
+        { from: "z", to: "ⰸ" }, { from: "Z", to: "Ⰸ" },
+        { from: "i", to: "ⰹ" },{ from: "I", to: "Ⰹ" },
+        { from: "í", to: "ⰹⰹ" }, { from: "Í", to: "ⰉⰉ" },
+        { from: "pě", to: "ⱂⰵ" }, { from: "Pě", to: "Ⱂⰵ" },
+        { from: "y", to: "ⱏⰺ" }, { from: "Y", to: "ⰟⰊ" },
+        { from: "ý", to: "ⱏⰺⰺ" }, { from: "Ý", to: "ⰟⰊⰊ" },
+        { from: "j", to: "ⰺ" }, { from: "J", to: "Ⰻ" },
+        { from: "k", to: "ⰽ" }, { from: "K", to: "Ⰽ" },
+        { from: "l", to: "ⰾ" }, { from: "L", to: "Ⰾ" },
+        { from: "m", to: "ⰿ" }, { from: "M", to: "Ⰿ" },
+        { from: "n", to: "ⱀ" }, { from: "N", to: "Ⱀ" }, { from: "ŋ", to: "Ⱀ" },
+        { from: "o", to: "ⱁ" }, { from: "O", to: "Ⱁ" },
+        { from: "ó", to: "ⱁⱁ" }, { from: "Ó", to: "ⰑⰑ" },
+        { from: "ô", to: "ⱁ" }, { from: "Ô", to: "Ⱁ" },
+        { from: "p", to: "ⱂ" }, { from: "P", to: "Ⱂ" },
+        { from: "r", to: "ⱃ" }, { from: "R", to: "Ⱃ" },
+        { from: "s", to: "ⱄ" }, { from: "S", to: "Ⱄ" },
+        { from: "t", to: "ⱅ" }, { from: "T", to: "Ⱅ" },
+        { from: "u", to: "ⱆ" }, { from: "U", to: "Ⱆ" },
+        { from: "f", to: "ⱇ" }, { from: "F", to: "Ⱇ" },
         { from: "č", to: "ⱍ" }, { from: "Č", to: "ⱍ" },
-        { from: "c", to: "Ⱌ" }, { from: "C", to: "Ⱌ" },
-        { from: "š", to: "Ⱎ" },
+        { from: "c", to: "ⱌ" }, { from: "C", to: "Ⱌ" },
+        { from: "š", to: "ⱎ" }, { from: "Š", to: "Ⱎ" },
     ];
 
     if (transCode == "cyrilice") return [
