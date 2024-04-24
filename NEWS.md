@@ -1,4 +1,9 @@
 # Poslední změny
+### 2024 24.4. 
+- Nyní se ve výchozím režinu zobrazují i néně kvalitní překlady
+- Oprava jazyku po první otevření stranky
+- Slovník má na konci tlačítko "ABC", které zobrazí všechny slova a zvýrazní písmeno abecedy
+
 ### 2024 8.4. 
 - Oprava odkazu #about
 - Zprovoznění odkazu {url}#translate#input={text}
