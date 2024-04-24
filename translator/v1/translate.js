@@ -86,7 +86,7 @@ class ItemSentencePart {
 
             item.show = raw[1] == "1";
             item.output = FastLoadTranslateTo(raw, 2);
-            return item;
+            if (item.output!=null) return item;
         }
     }
 
