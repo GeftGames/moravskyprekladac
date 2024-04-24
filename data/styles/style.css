@@ -1845,3 +1845,8 @@ input::placeholder,
         filter: blur(0px) !important;
     }
 }
+
+.abcCh{
+    font-size: larger;
+    font-weight: bold;
+}
