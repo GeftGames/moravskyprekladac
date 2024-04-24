@@ -5466,16 +5466,31 @@ class LanguageTr {
             }
         });
         lastDic = out;
+
         // Zkrátit
         let zkr = false;
-        if (out.length > 50) {
-            out.splice(50, out.length - 50);
-            zkr = true;
+        if (!dicAbc) {
+            if (out.length > 50) {
+                out.splice(50, out.length - 50);
+                zkr = true;
+            }
         }
-        display = document.createElement("div");
 
+        display = document.createElement("div");
+        
+        let lastCh="";
         if (out.length != 0) {
             for (let z of out) {
+                if (dicAbc) {
+                    if (z.from[0]!=lastCh) {
+                        let ch=document.createElement("p");
+                        ch.innerText=z.from[0];
+                        ch.className="abcCh";
+                        display.appendChild(ch);
+                        
+                        lastCh=z.from[0];
+                    }
+                }
                 //if (typeof z[3] === "string") {
                 //if (z[2]=="") display+="<p>"+z[0]+" → "+z[1]+"  <i>"+z[3]+"</i></p>";
                 //else display+="<p>"+z[0]+" → "+z[1]+"; "+z[2]+"  <i>"+z[3]+"</i></p>";

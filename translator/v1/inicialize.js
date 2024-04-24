@@ -298,12 +298,12 @@ function GetTranslations() {
 
         languagesListAll.push(lang);
         if (lang.Name != "") {
-            if ((!betaFunctions && lang.Quality >= 1) || (betaFunctions && lang.Quality >= 0) || dev) {
+            let stats=lang.Stats();
+            if ((!betaFunctions && stats >= 10) || (betaFunctions && lang.Quality >= 0) || dev) {
                 let name = lang.Name;
                 //if (betaFunctions || dev){
                 if (lang.Quality > 2) name += " ✅";
-                //}
-                if (lang.Stats() == 0) name += " 💩";
+                if (stats == 0) name += " 💩";
                 //else 
                 //if (lang.Quality<=1) name+=" 👎";
 
@@ -464,14 +464,16 @@ function mapClick(mX, mY) {
     // generate dots
     for (let p of languagesList) {
         if (isNaN(p.locationX)) continue;
-        if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2) ||
-            (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2))) {
-            console.log("click", { mX: mX, my: mY, x: map_LocX + p.locationX * map_Zoom - circleRadius, y: map_LocY + p.locationY * map_Zoom - circleRadius, w: circleRadius * 2, h: circleRadius * 2 });
-            p.option.selected = true;
-            PopPageClose('mapPage');
-            Translate();
-            GetDic()
-            return;
+        if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
+            if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2) ||
+                (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2))) {
+                console.log("click", { mX: mX, my: mY, x: map_LocX + p.locationX * map_Zoom - circleRadius, y: map_LocY + p.locationY * map_Zoom - circleRadius, w: circleRadius * 2, h: circleRadius * 2 });
+                p.option.selected = true;
+                PopPageClose('mapPage');
+                Translate();
+                GetDic()
+                return;
+            }
         }
     }
 }
@@ -498,9 +500,11 @@ function mapMove(mX, mY) {
     // generate dots
     for (let p of languagesList) {
         if (isNaN(p.locationX)) continue;
-        if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2)) {
-            if (canvasMap.style.cursor != "pointer") canvasMap.style.cursor = "pointer";
-            return;
+        if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
+            if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2)) {
+                if (canvasMap.style.cursor != "pointer") canvasMap.style.cursor = "pointer";
+                return;
+            }
         }
     }
     if (canvasMap.style.cursor != "move") canvasMap.style.cursor = "move";
