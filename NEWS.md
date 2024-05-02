@@ -1,4 +1,7 @@
 # Poslední změny
+### 2024 2.5. 
+- Přes 50 000 nářečních slov!
+  
 ### 2024 24.4. 
 - Nyní se ve výchozím režinu zobrazují i néně kvalitní překlady
 - Oprava jazyku po první otevření stranky
