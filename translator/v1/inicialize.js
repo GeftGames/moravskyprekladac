@@ -10,11 +10,11 @@ var loadedVersionNumber = 2;
 let translations = [
     "Morava", [
         "Slovácko", [
-            /*	"Podluží",
+            	"Podluží",
             	"Horňácko",
             	"Hanácké Slovácko",
-
-            	// Dolňácko
+                "Dolňácko",
+                /*	// Dolňácko
             	"Kyjovsko",
             	"Uherskohradišstko",
 
@@ -22,11 +22,11 @@ let translations = [
 
             	//Klobouvsko
             	"Klobukovsko",
-
+                */
             	// nekdy k Valachách
             	"Luhačovické Zálesí",
 
-            	"Moravské Kopanice"*/
+            	"Moravské Kopanice"
         ],
 
         "Valašsko", [
@@ -80,6 +80,13 @@ let translations = [
         ],
 
         "Haná", [
+            "Horní haná",
+            "Čuhácko",
+            "Blaťácko",
+            "Zábečví",
+            "Vyškovsko",
+            "Jižní Haná",
+            "Litovelsko",
             /*	"Zábřežsko",
             	"Litovelsko",
             	"Olomoucko",
@@ -92,10 +99,14 @@ let translations = [
         ],
 
         "Hranicko",
+        "Pobečví",
+        "Šumpersko",
 
-        "Hostýnské záhoří, Pobečví", [
+        "Záhoří", [
             //"Pobečví",
-            //	"Kelečsko",
+            "Kelečsko",
+            "Hostýnské Záhoří",
+            "Lipeňské Záhoří",
         ],
 
         "Drahany", [
@@ -202,8 +213,7 @@ function GetTranslations() {
                 fileText = fileContents[i + 1];
 
             if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, fileName);
-        }
-        
+        }        
 
         document.getElementById("totalstats").innerText = CalculateTotalStats();
 
@@ -214,12 +224,21 @@ function GetTranslations() {
         if (input_lang!="" && input_lang!=undefined) document.getElementById("selectorTo").value=input_lang;
         currentLang = GetCurrentLanguage();
         if (input_lang!="" && input_lang!=undefined) Translate();
-
+        
+        if (mapper_starting_input!=undefined){
+            //console.log(mapper_starting_input);
+            document.getElementById("mapperInput").value=mapper_starting_input;
+            mapper_init(false)
+            mapper_starting_input=undefined;
+        }
+        
         setTimeout(function() {
             document.getElementById("appPage_" + appSelected).style.opacity = "100%";
             document.getElementById("loadingPage").style.display = "none";
-
+            
         }, 100)
+
+       
     }
     xhttp.addEventListener('error', (e) => {
         console.log('error', e);
@@ -1486,13 +1505,34 @@ function SearchInMoravian() {
             }
 
             let mea = document.createElement("span");
-            mea.innerText = sw.Meaning;
+            mea.innerText = sw.Meaning;  
+            mea.classList="link";
+            mea.addEventListener("click", (event) => {
+                TabSwitch('mapper');
+                navrhClick(sw.Meaning);
+            });
+            
             record.appendChild(mea);
 
             record.appendChild(document.createTextNode(" "));
 
             let locData = GetLocString(sw.Location);
             record.appendChild(locData);
+
+            
+/*
+            let openInMapper=document.createElement("a");
+           
+            openInMapper.style="margin-left: 5px;";
+           
+            openInMapper.innerText="Otevřít v mapě";
+*/
+            /*let imgMap=document.createElement("svg");
+            imgMap.innerHTML="<image xlink:href='data/images/logo_mapper.svg' src='data/images/logo_mapper.svg' style='height: inherit'/>";
+            imgMap.classList="butImg";
+            record.appendChild(imgMap);
+
+            record.appendChild(openInMapper);*/
 
             outElement.appendChild(record);
         }

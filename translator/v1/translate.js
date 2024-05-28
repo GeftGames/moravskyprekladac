@@ -4417,7 +4417,9 @@ class ItemVerb {
 
         this.ForeachArr("PastPassive", 0, 4, 1, "PastPassive", str);
         this.ForeachArr("PastPassive", 4, 8, 2, "PastPassive", str);
-
+        
+        this.ForeachArr("TransgressiveCont", 0, 3, 1, "TransgressiveCont", str);
+        this.ForeachArr("TransgressivePast", 3, 6, 2, "TransgressivePast", str);
 
         this.ForeachArr("Auxiliary", 0, 3, 1, "Auxiliary", str);
         this.ForeachArr("Auxiliary", 3, 6, 2, "Auxiliary", str);
@@ -4611,10 +4613,162 @@ class ItemVerb {
         }
     }
 
+    TryDicForm(varible, index){
+        if (this.PatternFrom[varible]==undefined) {
+            return null;
+        }
+        //From
+        let str_from=[];
+        let from_pattern=this.PatternFrom[varible][index];
+      //  console.log(from_pattern, this.PatternFrom[varible]);
+        if (Array.isArray(from_pattern)){
+            let str_from_a=[];
+            
+            for (let fro of from_pattern) {
+                str_from_a.push(this.From+fro);
+            }
+            str_from.push(str_from_a.join(", "));
+        } else {
+            if (from_pattern == "?") return null;
+            else str_from.push(from_pattern);
+        }
+
+        // To
+        let str_to=[];
+        let comm=[];
+        let found=false;
+        for (let tto of this.To) {
+            let pattern=tto.Pattern[varible][index];
+            if (Array.isArray(pattern)) {
+                let str_to_a=[];
+                
+                for (let tto2 of pattern) {
+                    if (!tto2.includes('?')) str_to_a.push(tto.Body +tto2);
+                }
+                if (str_to_a.length>0){
+                    str_to.push(str_to_a.join(", "));
+                    comm.push(tto.Comment);
+                    found=true;
+                }
+            }else{
+                if (!pattern.includes('?')) {
+                    str_to.push(pattern);
+                    found = true;
+                }
+            }   
+        }
+        if (found) return {"comment": comm, "from":str_from, "to":str_to}
+        else return null;
+    }
+
+    TryDicForm2(varible){
+       // console.log(this.PatternFrom[varible]);
+        if (this.PatternFrom[varible]==undefined) {
+            return null;
+        }
+        //From
+        let str_from=[];
+        if (Array.isArray(this.PatternFrom[varible])){
+            let str_from_a=[];
+            
+            for (let fro of this.PatternFrom[varible]) {
+                str_from_a.push(this.From+fro);
+            }
+            str_from.push(str_from_a.join(", "));
+        } else {
+            if (this.PatternFrom[varible] == "?") return null;
+            else str_from.push(this.PatternFrom[varible]);
+        }
+
+        // To
+        let str_to=[];
+        let found=false;
+        let comm=[];
+        for (let tto of this.To) {
+            let pattern=tto.Pattern[varible];
+            if (Array.isArray(pattern)) {
+                let str_to_a=[];
+                
+                for (let tto2 of pattern) {
+                    if (!tto2.includes('?')) str_to_a.push(tto.Body +tto2);
+                }
+                if (str_to_a.length>0){
+                    comm.push(tto.Comment);
+                    str_to.push(str_to_a.join(", "));
+                    found=true;   
+                }            
+            }else{
+                if (!pattern.includes('?')) {
+                    str_to.push(pattern);
+                    comm.push(tto.Comment);
+                    found=true;
+                }
+            }   
+        }
+        if (found) return {"comment": comm, "from":str_from, "to":str_to};
+        else return null;
+    }
+
     GetDicForm(name) {
         if (typeof this.PatternFrom == undefined) return null;
         if (typeof this.To == undefined) return null;
+
+        let try_form_arr=[
+            {"varible": "Infinitive"},
+            {"varible": "PastActive", "index": 0},
+            {"varible": "Continous", "index": 0},
+            {"varible": "Future", "index": 0},
+            {"varible": "PastActive", "index": 4},
+        ];
+       
+        for (let try_form of try_form_arr){
+            let form;
+            if (try_form["varible"]=="Infinitive"){
+                form=this.TryDicForm2(try_form["varible"]);
+            }else{
+                form=this.TryDicForm(try_form["varible"], try_form["index"]);
+            }
+            console.log(form);
+            if (form!=null) {//console.log(form);   
+                let p = document.createElement("p");
+                let f = document.createElement("span");
+                f.innerText = form["from"].join(", ");
+                p.appendChild(f);
+
+                let e = document.createElement("span");
+                e.innerText = " → ";
+                p.appendChild(e);
+
+                let t = document.createElement("span");
+                t.innerText = ApplyPostRules(form["to"].join(", "));
+                p.appendChild(t);
+
+                t.addEventListener("click", () => {
+                    ShowPageLangD(this.To[0].Pattern.GetTable());
+                });
+                t.class = "dicCustom";
+
+                if (form.comment != undefined) {
+                    if (form.Comment != "") {
+                        let c = document.createElement("span");
+                        c.innerText = form["comment"];
+                        c.className = "dicMeaning";
+                        p.appendChild(c);
+                    }
+                }
+
+                let r = document.createElement("span");
+                r.innerText = " (slov.)";
+                r.className = "dicMoreInfo";
+                p.appendChild(r);
+
+                return { from: form.from.join(", "), to: form.to.join(", "), name: name, element: p };
+            }
+        }
+        
+/*
         let from;
+
 
         if (this.PatternFrom.Infinitive == "?") return null;
         from = this.From + this.PatternFrom.Infinitive;
@@ -4628,34 +4782,42 @@ class ItemVerb {
         p.appendChild(e);
 
         let found = false;
+        let from_str="", to_str="", str_comment;
         for (let tto of this.To) {
             let pattern;
-            if (tto.Pattern.Infinitive != '?') pattern = tto.Pattern.Infinitive;
+            if (tto.Pattern.Infinitive != '?') {
+                pattern = tto.Pattern.Infinitive;
+                str_to=tto.Body + pattern;
+                str_comment=tto.Comment;
+            }
             //else if (tto.Pattern.PastActive[0]!='?') pattern=tto.Pattern.PastActive[0];
             else continue;
-            found = true;
-            let t = document.createElement("span");
-            //	to+=tto.Body+pattern;
-            t.innerText = ApplyPostRules(tto.Body + pattern);
-            p.appendChild(t);
-
-            t.addEventListener("click", () => {
-                ShowPageLangD(t.GetTable());
-            });
-            t.class = "dicCustom";
-
-            if (tto.Comment != undefined) {
-                if (tto.Comment != "") {
-                    let c = document.createElement("span");
-                    c.innerText = tto.Comment;
-                    c.className = "dicMeaning";
-                    p.appendChild(c);
-                }
-            }
+            found = true;      
         }
+
+
         //	if (to=="") return null;
         if (!found) return null;
 
+        let t = document.createElement("span");
+        //	to+=tto.Body+pattern;
+        t.innerText = ApplyPostRules(str_to);
+        p.appendChild(t);
+
+        t.addEventListener("click", () => {
+            ShowPageLangD(t.GetTable());
+        });
+        t.class = "dicCustom";
+
+        if (str_comment != undefined) {
+            if (tto.Comment != "") {
+                let c = document.createElement("span");
+                c.innerText = str_comment;
+                c.className = "dicMeaning";
+                p.appendChild(c);
+            }
+        }
+        
 
         //to=this.To+this.PatternTo.Infinitive;
 
@@ -4665,7 +4827,7 @@ class ItemVerb {
         r.className = "dicMoreInfo";
         p.appendChild(r);
 
-        return { from: from, to: to, name: name, element: p };
+        return { from: from, to: to, name: name, element: p };*/
     }
 }
 
@@ -4840,7 +5002,8 @@ class LanguageTr {
                 case "r":
                     this.Names = [];
                     for (let l of line.substring(1).split(",")) {
-                        this.Names.push(l.split("="));
+                        let v=l.split("=");
+                        this.Names[v[0]]=v[1];
                     }
                     break;
 
@@ -5481,7 +5644,7 @@ class LanguageTr {
         if (out.length == 0) {
             let no = document.createElement("p");
             no.style = "font-style: italic";
-            no.innerText = "Slovníček tohoto místa je prádzný.";
+            no.innerText = "Slovníček tohoto místa je prázdný.";
             display.appendChild(no);
             return display;
         }
@@ -5586,7 +5749,7 @@ class LanguageTr {
                 {
                     let cw = this.CustomWord(word);
                     if (cw != null) {
-                        //	console.log(cw.Type);
+                        console.log(cw);
                         BuildingSentence.push(cw);
                         continue;
                     }
@@ -5769,6 +5932,7 @@ class LanguageTr {
                     //console.log(printableString, string);
                 } else if (type == "NumberLetters") printableString = string;
                 else if (type == "Check") printableString = string;
+                else if (type == "Special") printableString = string;
                 else {
                     if (dev) console.log("⚠️ Unknown type", string);
                     printableString = string.To;
@@ -5832,6 +5996,35 @@ class LanguageTr {
         }
         if (html) return output;
         else return stringOutput;
+    }
+
+    CalcSimilarity(text) {
+        let same=0, notsame=0,maybe=0;
+        // text = nářeční
+
+        for (let word in sentence) {
+            // search
+            for (let s in SimpleWords) {
+                for (let si in s.output) {
+                    if (si==word) {
+                        same++;
+                        continue;
+                    }
+                }
+            }
+
+            // try reverse replace
+            //maybe++;
+            //continue;
+
+            //unknown
+            notsame++;
+        }
+
+        total=notsame+maybe+same;
+
+        // ještě vyřešit aby to nebylo závislé podle velikosti slovníku
+        return (same+maybe*0.7)/total;
     }
 
     sentenceIncludesWord(sentence, word) {
@@ -6816,7 +7009,7 @@ class LanguageTr {
                 let rule = p.split("=");
                 if (rule.length == 2) {
                     rules[rule[0]] = rule[1];
-                } else return { Type: "Unknown", To: word, From: str };
+                } else rules[rule[0]]=true;//return { Type: "Unknown", To: word, From: str };
             }
 
             if (rules["word"] != undefined) {
@@ -7035,10 +7228,19 @@ class LanguageTr {
                 let ch = rules["exists"];
                 if (this.Stats() > 0) {
                     let words = this.searchExists(ch);
-
                     if (words != null) return { Type: "Check", To: "A", From: ch };
                     else return { Type: "Check", To: "N", From: ch };
                 } else return { Type: "Unknown", To: "?", From: ch };
+            }else if (rules["quality"] != undefined) {
+                let q=this.Stats();
+                return { Type: "Special", To: q.toString(), From: "quality" };
+            }else if (rules["name"] != undefined) {
+                if (this.Names!=undefined) {
+                    console.log("name");
+                    let ch = rules["name"];
+                    let n=this.Names[ch];
+                    return { Type: "Special", To: n, From: "name" };
+                }else return { Type: "Unknown", To: "?", From: "name" };
             }
 
             return { Type: "Unknown", To: "?", From: str };
