@@ -147,7 +147,7 @@
             <!-- Header -->
             <div id="header" style="display: flex;align-items: center;flex-direction: column;   align-items: flex-start;">
                 <div style="display: flex; align-items: center;">
-                    <button class="butIc tooltipR" data-tooltip="Zobrazit nastavení" aria-label="Toggle settings" onclick="
+                    <button id="openCloseNav" class="butIc tooltipR" data-tooltip="Zobrazit nastavení" aria-label="Toggle settings" onclick="
 								if (document.getElementById('nav').style.opacity=='1') {
 									document.getElementById('butShow').style.opacity='1';
 									document.getElementById('butclose').style.opacity='0'; 
@@ -160,8 +160,7 @@
 									document.getElementById('nav').style.opacity='1';
 									document.getElementById('nav').classList.remove('navTrans');
 									this.classList.remove('tooltipR');
-								}
-							">
+								}							">
 							<svg id="butShow" class="ib" viewBox="0 0 24 24" style="position: absolute;">
 								<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
 							</svg>
@@ -212,7 +211,17 @@
             <!-- Links, settings, info -->
             <!-- Settings-->
             <div id="nav" class="navTrans settingSection">
-
+                <a id="butcloseNav" onclick="
+                    document.getElementById('butShow').style.opacity='1';
+                    document.getElementById('butclose').style.opacity='0'; 
+                    document.getElementById('nav').classList.add('navTrans');
+                    document.getElementById('nav').style.opacity='0.1';
+                    document.getElementById('openCloseNav').classList.add('tooltipR');">
+                    <svg viewBox="0 0 24 24" style="height: 22px;" class="ib">
+                        <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                    </svg>
+                    <span style="margin-left: 3px;">Zavřít</span>
+                </a>
                 <!-- Current translation, only transtation page -->
                 <div class="settingSection">
                     <!--	<p style="display:inline-block;" id="textTranslator" class="settingHeader">Funkce</p>-->
@@ -822,6 +831,12 @@
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dź</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>')">dž</div>
                                 </div>
+                                <p>Další</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('<{quality}>')">Velikost slovníku</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{name=nář}>')">Název míst v místní podobě</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{name=de}>')">Název míst v němčině</div>
+                                </div>
                             </div>
                         </div>
                         <div id="expertModeMapper" style="display:none;width: 1000px;    max-width: -webkit-fill-available;">
@@ -939,8 +954,8 @@
                 <div onclick="PopPageClose('mapperInfo')" class="pageFromDownClose" id="closeMapperPage">
                     <div rel="nofollow" onclick="PopPageClose('mapperInfo')">
                         <svg class="ib" viewBox="0 0 24 24" style="display: flex;">
-								<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-							</svg>
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                        </svg>
                     </div>
                     <p style="display:inline;" id="closeMapper">Zavřít</p>
                 </div>
@@ -1005,12 +1020,26 @@
                     slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.</p>
                 <p id="textWeFree">Měli by jít web stáhnout jako aplikace PWA. Běžíme na free web stránkách, včetně domény.</p>
 
+                <div>
+                    <p class="aboutPageHeader" id="func">Funkce</p>
+                </div>
+                <p id="gis">Vygenerovaná mapa nářečí lze exportovat do GISu - JSON (testováno ArcGis Pro), KML (testováno Google Earth), GML</p>
+                <p id="textabc">Tlačítko ABC dole ve slovníku umožní zobrazit <strong>celý slovník nářečí</strong> všctně písmen v abcedy v záhlaví</p>
+
+                <div>
+                    <p class="aboutPageHeader" id="stats">Statistika</p>
+                </div>
                 <p>Aktuální počet slov (nezapočitáno skloňování, časování, nahrazování překladače): <span id="totalstats"></span></p>
 
                 <div>
                     <p class="aboutPageHeader" id="news">Aktuality</p>
                 </div>
                 <p><a href="https://github.com/GeftGames/moravskyprekladac/blob/main/NEWS.md">Poslední změny</a></p>
+
+                <div>
+                    <p class="aboutPageHeader" id="tagsheader">Tagy</p>
+                </div>
+                <p class="aboutPageHeader" id="tags"><span>slovník moravských dialektů</span>, <span>moravský slovník</span>, <span>interaktivní sklovník</span>, <span>slovník moravských slov</span>, <span>moravština slovník</span>, <span>česko moravský slovník</span>, <span>česko-moravský slovník</span>, <span>moravština</span>, <span>moravština slova</span></p>
             </div>
         </div>
 
@@ -1110,7 +1139,7 @@
                     <p style="display:inline;" id="closeSelector">Zavřít</p>
                 </div>
                 <div>
-                    <p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě)</p>
+                    <p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě; obecná nářečí a hantec nejsou v mapě, jenom v menu)</p>
                 </div>
                 <div>
                     <div id="mapSelector" style="position: fixed; width: 100%; overflow: hidden;left: 0px;height: 100%;">
@@ -1193,86 +1222,46 @@
                     <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Seznam zajímavých moravských slov</span></p>
                 </div>
                 <div id="pageWords">
-                    <div>
-                        <p class="wordsItem">Lůžko</p> - <a onclick="mapperSetWord(this)">postel</a></div>
-                    <div>
-                        <p class="wordsItem">Zhlavec</p> - <a onclick="mapperSetWord(this)">polštář</a></div>
-                    <div>
-                        <p class="wordsItem">Duchna</p> - <a onclick="mapperSetWord(this)">peřina</a></div>
-                    <div>
-                        <p class="wordsItem">Dědina</p> - <a onclick="mapperSetWord(this)">vesnice</a></div>
-                    <div>
-                        <p class="wordsItem">Haluz</p> - <a onclick="mapperSetWord(this)">větev</a></div>
-                    <div>
-                        <p class="wordsItem">Baňka</p> - <a onclick="mapperSetWord(this)">vánoční koule</a></div>
-                    <div>
-                        <p class="wordsItem">Zapacknout</p> - <a onclick="mapperSetWord(this)">zakopnout</a></div>
-                    <div>
-                        <p class="wordsItem">Rožnout</p> - <a onclick="mapperSetWord(this)">rozsvítit</a></div>
-                    <div>
-                        <p class="wordsItem">Fčil</p> - <a onclick="mapperSetWord(this)">teď</a></div>
-                    <div>
-                        <p class="wordsItem">Šufan</p> - <a onclick="mapperSetWord(this)">naběračka</a></div>
-                    <div>
-                        <p class="wordsItem">Pjesnička</p> - <a onclick="mapperSetWord(this)">písnička</a></div>
-                    <div>
-                        <p class="wordsItem">Kmocháček</p> - <a onclick="mapperSetWord(this)">kmotr</a></div>
-                    <div>
-                        <p class="wordsItem">Kmotřenka</p> - <a onclick="mapperSetWord(this)">kmotra</a></div>
-                    <div>
-                        <p class="wordsItem">Stařenka</p> - <a onclick="mapperSetWord(this)">babička</a></div>
-                    <div>
-                        <p class="wordsItem">Stařeček</p> - <a onclick="mapperSetWord(this)">dědeček</a></div>
-                    <div>
-                        <p class="wordsItem">Dénko, dynko</p> - <a onclick="mapperSetWord(this)">krájecí podložka</a></div>
-                    <div>
-                        <p class="wordsItem">Cigánit</p> - <a onclick="mapperSetWord(this)">krást</a>, <a onclick="mapperSetWord(this)">lhát</a></div>
-                    <div>
-                        <p class="wordsItem">Naňuhňané</p> - <a onclick="mapperSetWord(this)">namačkané</a></div>
-                    <div>
-                        <p class="wordsItem">Zavazet</p> - <a onclick="mapperSetWord(this)">překážet</a></div>
-                    <div>
-                        <p class="wordsItem">Turkyň</p> - <a onclick="mapperSetWord(this)">kukuřice</a></div>
-                    <div>
-                        <p class="wordsItem">Karfiól</p> - <a onclick="mapperSetWord(this)">květák</a></div>
-                    <div>
-                        <p class="wordsItem">Panáček</p> - <a onclick="mapperSetWord(this)">farář</a></div>
-                    <div>
-                        <p class="wordsItem">Škraň</p> - <a onclick="mapperSetWord(this)">tvář</a></div>
-                    <div>
-                        <p class="wordsItem">Žbuliny</p> - <a onclick="mapperSetWord(this)">bubliny</a></div>
-                    <div>
-                        <p class="wordsItem">Čudit</p> - <a onclick="mapperSetWord(this)">čadit</a></div>
-                    <div>
-                        <p class="wordsItem">Čupět, čapět</p> - <a onclick="mapperSetWord(this)">dřepět</a></div>
-                    <div>
-                        <p class="wordsItem">Prča</p> - <a onclick="mapperSetWord(this)">legrace</a></div>
-                    <div>
-                        <p class="wordsItem">Čapa</p> - <a onclick="mapperSetWord(this)">hnáty</a> (expresivně noha)</div>
-                    <div>
-                        <p class="wordsItem">Aji</p> - <a onclick="mapperSetWord(this)">i</a></div>
-                    <div>
-                        <p class="wordsItem">Čuňa</p> - <a onclick="mapperSetWord(this)">huba</a> (expresivně)</div>
-                    <div>
-                        <p class="wordsItem">Baňa</p> - <a onclick="mapperSetWord(this)">rána</a> (pěstí)</div>
-                    <div>
-                        <p class="wordsItem">Babóňat, babúňat</p> - <a onclick="mapperSetWord(this)">ponocovat</a></div>
-                    <div>
-                        <p class="wordsItem">Víno</p> - <a onclick="mapperSetWord(this)">hroznové kuličky</a></div>
-                    <div>
-                        <p class="wordsItem">Shnilý</p> - <a onclick="mapperSetWord(this)">líný</a></div>
-                    <div>
-                        <p class="wordsItem">Chrobák</p> - <a onclick="mapperSetWord(this)">brouk</a></div>
-                    <div>
-                        <p class="wordsItem">Kél</p> - <a onclick="mapperSetWord(this)">kapusta</a></div>
-                    <div>
-                        <p class="wordsItem">Kamilky</p> - <a onclick="mapperSetWord(this)">heřmánek</a></div>
-                    <div>
-                        <p class="wordsItem">Tož</p> - <a onclick="mapperSetWord(this)">tak</a> (pouze někde)</div>
-                    <div>
-                        <p class="wordsItem">Chudý</p> - <a onclick="mapperSetWord(this)">hubený</a></div>
-                    <div>
-                        <p class="wordsItem">Zerz</p> - <a onclick="mapperSetWord(this)">rez</a></div>
+                    <div><p class="wordsItem">Lůžko</p> - <a onclick="mapperSetWord(this)">postel</a></div>
+                    <div><p class="wordsItem">Zhlavec</p> - <a onclick="mapperSetWord(this)">polštář</a></div>
+                    <div><p class="wordsItem">Duchna</p> - <a onclick="mapperSetWord(this)">peřina</a></div>
+                    <div><p class="wordsItem">Dědina</p> - <a onclick="mapperSetWord(this)">vesnice</a></div>
+                    <div><p class="wordsItem">Haluz</p> - <a onclick="mapperSetWord(this)">větev</a></div>
+                    <div><p class="wordsItem">Baňka</p> - <a onclick="mapperSetWord(this)">vánoční koule</a></div>
+                    <div><p class="wordsItem">Zapacknout, opacknout</p> - <a onclick="mapperSetWord(this)">zakopnout</a></div>
+                    <div><p class="wordsItem">Rožnout</p> - <a onclick="mapperSetWord(this)">rozsvítit</a></div>
+                    <div><p class="wordsItem">Fčil</p> - <a onclick="mapperSetWord(this)">teď</a></div>
+                    <div><p class="wordsItem">Šufan</p> - <a onclick="mapperSetWord(this)">naběračka</a></div>
+                    <div><p class="wordsItem">Pjesnička</p> - <a onclick="mapperSetWord(this)">písnička</a></div>
+                    <div><p class="wordsItem">Kmocháček</p> - <a onclick="mapperSetWord(this)">kmotr</a></div>
+                    <div><p class="wordsItem">Kmotřenka</p> - <a onclick="mapperSetWord(this)">kmotra</a></div>
+                    <div><p class="wordsItem">Stařenka</p> - <a onclick="mapperSetWord(this)">babička</a></div>
+                    <div><p class="wordsItem">Stařeček</p> - <a onclick="mapperSetWord(this)">dědeček</a></div>
+                    <div><p class="wordsItem">Dénko, dynko</p> - <a onclick="mapperSetWord(this)">krájecí podložka</a></div>
+                    <div><p class="wordsItem">Cigánit</p> - <a onclick="mapperSetWord(this)">krást</a>, <a onclick="mapperSetWord(this)">lhát</a></div>
+                    <div><p class="wordsItem">Naňuhňané</p> - <a onclick="mapperSetWord(this)">namačkané</a></div>
+                    <div><p class="wordsItem">Zavazet</p> - <a onclick="mapperSetWord(this)">překážet</a></div>
+                    <div><p class="wordsItem">Turkyň</p> - <a onclick="mapperSetWord(this)">kukuřice</a></div>
+                    <div><p class="wordsItem">Karfiól</p> - <a onclick="mapperSetWord(this)">květák</a></div>
+                    <div><p class="wordsItem">Panáček</p> - <a onclick="mapperSetWord(this)">farář</a></div>
+                    <div><p class="wordsItem">Škraň</p> - <a onclick="mapperSetWord(this)">tvář</a></div>
+                    <div><p class="wordsItem">Žbuliny</p> - <a onclick="mapperSetWord(this)">bubliny</a></div>
+                    <div><p class="wordsItem">Čudit</p> - <a onclick="mapperSetWord(this)">čadit</a></div>
+                    <div><p class="wordsItem">Čupět, čapět</p> - <a onclick="mapperSetWord(this)">dřepět</a></div>
+                    <div><p class="wordsItem">Prča</p> - <a onclick="mapperSetWord(this)">legrace</a></div>
+                    <div><p class="wordsItem">Čapa</p> - <a onclick="mapperSetWord(this)">hnáty</a> (expresivně noha)</div>
+                    <div><p class="wordsItem">Aji</p> - <a onclick="mapperSetWord(this)">i</a></div>
+                    <div><p class="wordsItem">Čuňa</p> - <a onclick="mapperSetWord(this)">huba</a> (expresivně)</div>
+                    <div><p class="wordsItem">Baňa</p> - <a onclick="mapperSetWord(this)">rána</a> (pěstí)</div>
+                    <div><p class="wordsItem">Babóňat, babúňat</p> - <a onclick="mapperSetWord(this)">ponocovat</a></div>
+                    <div><p class="wordsItem">Víno</p> - <a onclick="mapperSetWord(this)">hroznové kuličky</a></div>
+                    <div><p class="wordsItem">Shnilý</p> - <a onclick="mapperSetWord(this)">líný</a></div>
+                    <div><p class="wordsItem">Chrobák</p> - <a onclick="mapperSetWord(this)">brouk</a></div>
+                    <div><p class="wordsItem">Kél</p> - <a onclick="mapperSetWord(this)">kapusta</a></div>
+                    <div><p class="wordsItem">Kamilky</p> - <a onclick="mapperSetWord(this)">heřmánek</a></div>
+                    <div><p class="wordsItem">Tož</p> - <a onclick="mapperSetWord(this)">tak</a> (pouze někde)</div>
+                    <div><p class="wordsItem">Chudý</p> - <a onclick="mapperSetWord(this)">hubený</a></div>
+                    <div><p class="wordsItem">Zerz</p> - <a onclick="mapperSetWord(this)">rez</a></div>
                 </div>
                 <br>
             </div>
