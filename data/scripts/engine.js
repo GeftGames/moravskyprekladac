@@ -4,7 +4,7 @@ var imgMap;
 var imgMap_bounds;
 var appSelected = "translate";
 var transcription = null;
-var dicAbc=false;
+var dicAbc=true;
 class savedTraslation {
     constructor() {
         this.language = -1;
@@ -12,6 +12,7 @@ class savedTraslation {
         this.output = "";
     }
 }
+var mapper_starting_input;
 var usingTheme;
 var error = false;
 var errorText;
@@ -1169,8 +1170,22 @@ function Load() {
     if (location.hash == "#about") {
         //ShowAboutPage()
         PopPageShow("about");
-    } else if (location.hash == "#mapper") {
+    } else if (hashes.includes("mapper")) {
         appSelected = "mapper";
+        let input_text_var="input=";
+        for (let l of hashes) {  
+            if (l.startsWith(input_text_var)) {
+                let s=input_text_var.length;
+                input_text=decodeURI(l.substring(s));
+                
+                if (input_text!="") {
+                   // document.getElementById("specialTextarea").value=input_text;
+                    mapper_starting_input=input_text;
+                    //console.log("mapeer");
+                 //   mapper_init(false,input_text)
+                }
+            }     
+        }
     } else if (location.hash == "#search") {
         appSelected = "search";
     } else if (hashes.includes("translate")) {
@@ -5697,6 +5712,9 @@ function SetCurrentTranscription(transCode) {
         { from: "py", to: "ピ" }, { from: "Py", to: "ピ" },
         { from: "pý", to: "ピー" }, { from: "Pý", to: "ピー" },
 
+        { from: "ci", to: "チィ" }, { from: "Ci", to: "チィ" },
+        { from: "cí", to: "チィー" }, { from: "Cí", to: "チィー" },
+
 
         { from: "nu", to: "ヌ" },   { from: "Nu", to: "ヌ" },
         { from: "nů", to: "ヌー" }, { from: "Nů", to: "ヌー" },
@@ -5709,6 +5727,9 @@ function SetCurrentTranscription(transCode) {
                 
         { from: "du", to: "ドゥ" },   { from: "Du", to: "ドゥ" },
         { from: "dů", to: "ドゥー" }, { from: "Dů", to: "ドゥー" },
+        
+        { from: "bu", to: "ブ" },   { from: "Bu", to: "ブ" },
+        { from: "bů", to: "ブー" }, { from: "Bů", to: "ブー" },
         
         { from: "pu", to: "プ" },   { from: "Pu", to: "プ" },
         { from: "pů", to: "プー" }, { from: "Pů", to: "プー" },
@@ -5874,6 +5895,13 @@ function SetCurrentTranscription(transCode) {
 
         { from: "za", to: "ざ" }, { from: "Za", to: "ざ" },
         { from: "zá", to: "ざあ" }, { from: "Zá", to: "ざあ" },
+
+        { from: "bu", to: "ぶ" }, { from: "Bu", to: "ぶ" },
+        { from: "bů", to: "ぶう" }, { from: "Bů", to: "ぶう" },
+
+        { from: "du", to: "どぅづ" }, { from: "Du", to: "どぅ" },
+        { from: "dů", to: "どぅう" }, { from: "Dů", to: "どぅう" },
+
 
         { from: "vu", to: "ゔ" }, { from: "Vu", to: "ゔ" },
         { from: "vů", to: "ゔう" }, { from: "Vů", to: "ゔう" },
@@ -6127,8 +6155,272 @@ function SetCurrentTranscription(transCode) {
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
         { from: "ŋ", to: "n" },
+        { from: "vě", to: "vje" },
+        { from: "bě", to: "bje" },
+        { from: "pě", to: "pje" },
+        { from: "ně", to: "ňe" },
+        { from: "dě", to: "ďe" },
+        { from: "tě", to: "ťe" },
     ];
+
+    if (transCode == "none") return [];
 
     console.log("Unknown code transcription: ", transCode)
     return null;
+}
+
+function GetVocalSimilaryty(syllable1, syllable2) {
+    const diacriticsMapSillables = [
+        // soundsSame: 1=stejně znějící, 0=úplně jiná výslovnost
+        { 
+            shapes1: ['vě', 'vje'], shapes2: ['v́e'],
+            soundsSame: 0.7
+        }, 
+        {
+            shapes1: ['bě', 'bje'], shapes2: ['b́e'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['pě', 'pje'], shapes2: ['ṕe'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ê'], shapes2: ['e'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ô'], shapes2: ['o'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ʒ'], shapes2: ['dz'],
+            soundsSame: 0.5
+        },        
+        {
+            shapes1: ['ʒ'], shapes2: ['c'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ʒ́'], shapes2: ['dź'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ć'], shapes2: ['ť'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ɣ'], shapes2: ['ch'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ə'], shapes2: ['e'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ł'], shapes2: ['l'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ľ'], shapes2: ['l'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ŕ'], shapes2: ['r'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ạ́'], shapes2: ['á'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ạ́'], shapes2: ['ó'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ŷj'], shapes2: ['ý'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ŷ'], shapes2: ['ý'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['mě'], shapes2: ['me'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['mě'], shapes2: ['mje'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['mě'], shapes2: ['ḿe'],
+            soundsSame: 0.7
+        },
+        {
+            shapes1: ['ry'], shapes2: ['ri'],
+            soundsSame: 0.8
+        },
+        {
+            shapes1: ['ý'], shapes2: ['y'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['í'], shapes2: ['i'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['č'], shapes2: ['ć'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ž'], shapes2: ['ź'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ou'], shapes2: [''],
+            soundsSame: 0.3
+        },
+        {
+            shapes1: ['c'], shapes2: ['dz'],
+            soundsSame: 0.3
+        },
+        {
+            shapes1: ['š'], shapes2: ['č'],
+            soundsSame: 0.2
+        },
+        {
+            shapes1: ['ł'], shapes2: ['ṵ'],
+            soundsSame: 0.4
+        },
+        {
+            shapes1: ['ł'], shapes2: ['ľ'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ai'], shapes2: ['aji'],
+            soundsSame: 0.8
+        },
+        {
+            shapes1: ['ṵ'], shapes2: ['u'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ei'], shapes2: ['eji'],
+            soundsSame: 0.8
+        },
+        {
+            shapes1: ['č'], shapes2: ['dž'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['šť'], shapes2: ['šč'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['b’e'], shapes2: ['bě'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['p’e'], shapes2: ['pě'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['v’e'], shapes2: ['vě'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['ći'], shapes2: ['ťi'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['dz’e'], shapes2: ['dě'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['s’'], shapes2: ['s'],
+            soundsSame: 0.5
+        },
+        {
+            shapes1: ['z’'], shapes2: ['z'],
+            soundsSame: 0.5
+        },
+    ];
+
+    for (let shapes in diacriticsMapSilables){
+        if (shapes.shapes1.includes(syllable1) && shapes.shapes2.includes(syllable2)) {
+           return shapes.soundsSame;
+        }
+    }
+    // reverse
+    for (let shapes in diacriticsMapSilables){
+        if (shapes.shapes1.includes(syllable2) && shapes.shapes2.includes(syllable1)) {
+           return shapes.soundsSame;
+        }
+    }
+    return null;
+}
+
+// Calculate similarity
+function removeDiacritic(char) {
+    const diacriticsMap = {
+        'á': 'a', 'à': 'a', 'ä': 'a', 'â': 'a', 'å': 'a',
+        'č': 'c', 'ć': 'c',
+        'é': 'e', 'è': 'e', 'ë': 'e', 'ê': 'e',
+        'í': 'i', 'ì': 'i', 'ï': 'i', 'î': 'i', 
+        'ł': 'l',
+        'ń': 'n', 'ň': 'n',
+        'ó': 'o', 'ô': 'o',
+        'ř': 'r',
+        'ś': 's', 'š': 's',
+        'ú': 'u', 'ů': 'u', 'û': 'u',
+        'ý': 'y', 'ŷ': 'y',
+        'ž': 'z', 'ź': 'z'
+    };
+  
+
+    return diacriticsMap[char] || char;
+}
+
+function isSimilarChar(char1, char2) {
+    return removeDiacritic(char1) === removeDiacritic(char2) && char1 !== char2;
+}
+
+function customLevenshtein(s1, s2) {
+    const s1_len = s1.length;
+    const s2_len = s2.length;
+    const d = Array.from({ length: s1_len + 1 }, () => Array(s2_len + 1).fill(0));
+
+    for (let i = 0; i <= s1_len; i++) {
+        d[i][0] = i;
+    }
+    for (let j = 0; j <= s2_len; j++) {
+        d[0][j] = j;
+    }
+
+    for (let i = 1; i <= s1_len; i++) {
+        for (let j = 1; j <= s2_len; j++) {
+            let cost;
+            if (s1[i - 1] === s2[j - 1]) {
+                cost = 0;
+            } else if (isSimilarChar(s1[i - 1], s2[j - 1])) {
+                cost = 0.5;
+            } else {
+                cost = 1;
+            }
+            d[i][j] = Math.min(
+                d[i - 1][j] + 1,
+                d[i][j - 1] + 1,
+                d[i - 1][j - 1] + cost
+            );
+        }
+    }
+
+    return d[s1_len][s2_len];
+}
+
+function similarityOfTwoWords(s1, s2) {
+    let len;
+    if (s1.length>s2.length) len=s1.length; else s2.length;
+
+    return 1-customLevenshtein(s1, s2)/len;
 }
