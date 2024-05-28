@@ -1442,7 +1442,7 @@ function Load() {
         language = "default";
         let l = "";
         if (navigator.language.includes("cs")) l = "cs";
-        else if (navigator.userLanguage.includes("cs")) l = "cs";
+        else if (userLang.includes("cs")) l = "cs";
         else if (userLang == "cs") l = "cs";
         else if (userLang == "de") l = "de";
         else if (userLang == "sk") l = "sk";
