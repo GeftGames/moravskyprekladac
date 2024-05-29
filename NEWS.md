@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 28.5. 
+- Další funkce mapperu - lokální názvy míst
+- url https://moravskyprekladac.pages.dev/#mapper#input=slovo
+  
 ### 2024 2.5. 
 - Přes 50 000 nářečních slov!
   
