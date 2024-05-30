@@ -1169,7 +1169,7 @@ function Load() {
     else if (location.search.startsWith("?")) hashes=location.search.substring(1).split("&");
 
     //console.log(location.hash);
-    if (location.hash == "#about") {
+    if (hashes.include("about")) {
         //ShowAboutPage()
         PopPageShow("about");
     } else if (hashes.includes("mapper")) {
@@ -1188,7 +1188,7 @@ function Load() {
                 }
             }     
         }
-    } else if (location.hash == "#search") {
+    } else if (hashes.include("#search")) {
         appSelected = "search";
     } else if (hashes.includes("translate")) {
         appSelected = "translate";
@@ -1218,13 +1218,13 @@ function Load() {
             }
         }
        
-    } else if (location.hash == "#dic") {
+    } else if (hashes.include("dic")) {
         TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
-    } else if (location.hash == "#files") {
+    } else if (hashes.include("files")) {
         TabSelect(document.getElementById('translateFiles'), document.getElementById('tabTxtFiles'));
-    } else if (location.hash == "#subs") {
+    } else if (hashes.include("subs")) {
         TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
-    } else if (location.hash == "#text") {
+    } else if (hashes.include("text")) {
         TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
     }
   
