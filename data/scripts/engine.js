@@ -1164,7 +1164,7 @@ function Load() {
         return;
     }
 
-    let hashes;
+    let hashes=[];
     if (location.hash.startsWith("#")) hashes=location.hash.split("#");
     else if (location.search.startsWith("?")) hashes=location.search.substring(1).split("&");
 
