@@ -1164,9 +1164,10 @@ function Load() {
         return;
     }
 
-    let hashes=[];
-    if (location.hash.startsWith("#")) hashes=location.hash.split("#");
-    else if (location.search.startsWith("?")) hashes=location.search.substring(1).split("&");
+    let hashes=[];    
+    if (location.search.startsWith("?")) {
+        hashes=location.search.substring(1).split("&");
+    } else if (location.hash.startsWith("#")) hashes=location.hash.split("#");
 
     //console.log(location.hash);
     if (hashes.includes("about")) {
