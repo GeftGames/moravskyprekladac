@@ -1,6 +1,8 @@
 # Poslední změny
 ### 2024 30.5. 
 - url https://moravskyprekladac.pages.dev/?mapper&input=slovo
+- V mapě heslo <{finished}> které zjistí zda je někde něco nevyčerpaného
+- V mapě heslo <{source=sncj}> pro hledání citací
   
 ### 2024 28.5. 
 - Další funkce mapperu - lokální názvy míst
