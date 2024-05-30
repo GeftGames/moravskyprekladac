@@ -4966,6 +4966,16 @@ class LanguageTr {
         return stats;
     }
 
+    Finished() {
+        if (this.Comment.includes("nezpracováno")) return "0";
+        if (this.Comment.includes("nezpracovano")) return "0";
+        if (this.Comment.includes("nezpracované")) return "0";
+        if (this.Comment.includes("nevyčerpáno")) return "0";
+        if (this.Comment.includes("nevyčerpáné")) return "0";
+
+        return "1";
+    }
+
     Load(lines) {
         this.state = "loading";
         enabletranslate = true;
@@ -7234,6 +7244,12 @@ class LanguageTr {
             }else if (rules["quality"] != undefined) {
                 let q=this.Stats();
                 return { Type: "Special", To: q.toString(), From: "quality" };
+            }else if (rules["finished"] != undefined) {
+                let q=this.Finished();
+                return { Type: "Special", To: q.toString(), From: "finished" };
+            }else if (rules["source"] != undefined) {
+                let q=this.Comment.includes(rules["source"]);                
+                return { Type: "Special", To: q ? "1" : "0", From: "source" };
             }else if (rules["name"] != undefined) {
                 if (this.Names!=undefined) {
                     console.log("name");
