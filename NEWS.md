@@ -1,4 +1,7 @@
 # Poslední změny
+### 2024 30.5. 
+- url https://moravskyprekladac.pages.dev/?mapper&input=slovo
+  
 ### 2024 28.5. 
 - Další funkce mapperu - lokální názvy míst
 - url https://moravskyprekladac.pages.dev/#mapper#input=slovo
