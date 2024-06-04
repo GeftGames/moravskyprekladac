@@ -1,4 +1,7 @@
 # Poslední změny
+### 2024 4.6. 
+- První překlady blízko za hranice Moravy
+  
 ### 2024 30.5. 
 - url https://moravskyprekladac.pages.dev/?mapper&input=slovo
 - V mapě heslo <{finished}> které zjistí zda je někde něco nevyčerpaného
