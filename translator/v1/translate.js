@@ -3736,7 +3736,7 @@ class ItemNumber {
 class ItemPatternVerb {
     constructor() {
         this.Name;
-        this.Infinitive = "";
+        //this.Infinitive = "";
 
         this.SContinous = false;
         this.SImperative = false;
@@ -3812,7 +3812,9 @@ class ItemPatternVerb {
 
         //if (arrayOfShapes[0].includes('?')) item.Infinitive='?';
         //else 
-        item.Infinitive = arrayOfShapes[0];
+        if (arrayOfShapes[0].includes(",")){
+            item.Infinitive = arrayOfShapes[0].split(',');
+        } else item.Infinitive = arrayOfShapes[0];
 
         let index = 1;
         //console.log(this);
@@ -3898,7 +3900,8 @@ class ItemPatternVerb {
             parent.appenChild(tableI);
 
             let caption = document.createTextNode("caption");
-            caption.innerText = langFile.Infinitive;
+            if (Array.isArray(langFile.Infinitive))caption.innerText = langFile.Infinitive[0];
+            else caption.innerText = langFile.Infinitive;
             table.appendChild(caption);
 
             let tbody = document.createElement("tbody");
@@ -4428,21 +4431,27 @@ class ItemVerb {
         // [[tvar, číslo, osoba], rod]
 
         {
-            if (this.From + this.PatternFrom.Infinitive == str) {
-                if (Array.isArray(this.To)) {
-                    for (let to of this.To) {
+            let inf=[];
+            if (Array.isArray(this.PatternFrom.Infinitive)) inf=this.PatternFrom.Infinitive;
+            else inf.push(this.PatternFrom.Infinitive);
+
+            for (let infinitive in inf){
+                if (this.From + infinitive == str) {
+                    if (Array.isArray(this.To)) {
+                        for (let to of this.To) {
+                            if (to.Pattern.Infinitive != '?') {
+                                this.ret.push({ Text: to.Body + to.Pattern.Infinitive, Type: "verb", Form: "Infinitive" });
+                            }
+                        }
+                    } else {
+                        //console.log(this);
+                        let to = this.To;
                         if (to.Pattern.Infinitive != '?') {
                             this.ret.push({ Text: to.Body + to.Pattern.Infinitive, Type: "verb", Form: "Infinitive" });
                         }
                     }
-                } else {
-                    //console.log(this);
-                    let to = this.To;
-                    if (to.Pattern.Infinitive != '?') {
-                        this.ret.push({ Text: to.Body + to.Pattern.Infinitive, Type: "verb", Form: "Infinitive" });
-                    }
+                    break;
                 }
-
             }
         }
         //}
@@ -5007,6 +5016,10 @@ class LanguageTr {
 
                 case "t":
                     this.Name = line.substring(1);
+                    break;
+
+                case "u":
+                    this.Country = parseInt(line.substring(1));
                     break;
 
                 case "r":

@@ -318,7 +318,8 @@ function GetTranslations() {
         languagesListAll.push(lang);
         if (lang.Name != "") {
             let stats=lang.Stats();
-            if ((!betaFunctions && stats >= 10) || (betaFunctions && lang.Quality >= 0) || dev) {
+            
+            if ((!betaFunctions && stats >= 10 && FilterCountry(lang.Country)) || (betaFunctions && lang.Quality >= 0) || dev) {
                 let name = lang.Name;
                 //if (betaFunctions || dev){
                 if (lang.Quality > 2) name += " ✅";
@@ -1572,4 +1573,24 @@ function _CalculateGeoreferenceOfNewMap(handlovaPxX, handlovaPxY, nymburkPxX, ny
     mY = (nymburkGpsY * handlovaPxY - nymburkPxY * handlovaGpsY) / (nymburkPxY - handlovaPxY);
 
     return { xM: mX, yM: mY, xZ: zX, yZ: zY }
+}
+
+function FilterCountry(country) {
+    // vše
+    if (onlyMoravia=="all") return true;
+
+    // neznámé
+    if (country<=0) return true;
+    if (country==undefined) return true;
+
+    // morava
+    if (country==1) return true;
+
+    // morav enklávy
+    if (country==8 && (onlyMoravia=="mor+e"|| onlyMoravia=="mor+sl"|| onlyMoravia=="default")) return true;
+    
+    // slezsko v čr
+    if (country==2 && (onlyMoravia=="mor+sl" || onlyMoravia=="default")) return true;
+
+    return false;
 }
