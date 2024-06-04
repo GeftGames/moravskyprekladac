@@ -95,8 +95,8 @@ textarea {
     color: var(--ColorText);
     background-color: var(--ConBack);
     -moz-appearance: textfield-multiline;
-    white-space: pre-line;
     -webkit-appearance: textarea;
+    white-space: pre-line;
     border: 1px solid gray;
     font: medium -moz-fixed;
     font: -webkit-small-control;
@@ -1844,4 +1844,21 @@ input::placeholder,
     #searchInputText::placeholder {
         filter: blur(0px) !important;
     }
+}
+
+#butcloseNav{
+    float: right;
+    border-radius: 9px;
+    margin: 5px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transition: .3s;
+}
+#butcloseNav:hover{
+    background-color: rgba(var(--ColorThemeAccent), .4)
+    /*background-color: var(--ConBack);
+    box-shadow: var(--ksh);*/
 }
