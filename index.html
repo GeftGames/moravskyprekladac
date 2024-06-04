@@ -324,9 +324,9 @@
                             </p>
 
                             <label class="switch">
-									<input type="checkbox" id="dev" onchange="ChangeDev()" >
-									<span class="slider round"></span>
-								</label>
+                                <input type="checkbox" id="dev" onchange="ChangeDev()" >
+                                <span class="slider round"></span>
+                            </label>
                         </div>
 
                         <!-- Developng funtions-->
@@ -337,10 +337,26 @@
                             </p>
 
                             <label class="switch">
-									<input type="checkbox" id="betaFunctions" onchange="ChangeBetaFunctions()"  checked>
-									<span class="slider round"></span>
-								</label>
+                                <input type="checkbox" id="betaFunctions" onchange="ChangeBetaFunctions()"  checked>
+                                <span class="slider round"></span>
+                            </label>
                         </div>
+
+                        <!-- Only moravia-->
+                        <div class="settingItem">
+                            <p>
+                                <span id="textOnlyMoravia">Oblast</span>
+                                <span class="moreinfo" id="textOnlyMoraviaMore">Země s překlady</span>
+                            </p>
+
+                            <select id="onlyMoravia" style="margin: 5px;text-align: center;" onchange="ChangeOnlyMoravia();">
+                                <option id="textDefaultText" value="default" style="font-weight: bold">Výchozí</option>
+                                <option id="textMorSl" value="mor+sl">Morava + Slezsko v ČR</option>
+                                <option id="textMor" value="mor">Morava</option>
+                                <option id="textMorE" value="mor+e">Morava + Enkl.</option>
+                                <option id="textAll" value="all">Vše</option>
+                            </select>
+                        </div><!---->
                     </div>
                 </div>
 
@@ -353,9 +369,9 @@
                             <p id="textAutoTranslate">Automatický překlad</p>
 
                             <label class="switch">
-									<input id="manual" type="checkbox" checked onchange="ChangeManual()">
-									<span class="slider round"></span>
-								</label>
+                                <input id="manual" type="checkbox" checked onchange="ChangeManual()">
+                                <span class="slider round"></span>
+                            </label>
                         </div>
 
                         <!-- Text stylizate -->
@@ -363,9 +379,9 @@
                             <p id="textMark">Zvýraznění překladu</p>
 
                             <label class="switch">
-									<input id="styleOutput" type="checkbox" onchange="ChangeStylizate()">
-									<span class="slider round"></span>
-								</label>
+                                <input id="styleOutput" type="checkbox" onchange="ChangeStylizate()">
+                                <span class="slider round"></span>
+                            </label>
                         </div>
 
                         <!-- Clear saved -->
