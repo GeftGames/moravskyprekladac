@@ -4,6 +4,7 @@ var imgMap;
 var imgMap_bounds;
 var appSelected = "translate";
 var transcription = null;
+var onlyMoravia;
 var dicAbc=true;
 class savedTraslation {
     constructor() {
@@ -515,6 +516,14 @@ function ChangeBetaFunctions() {
     if (!loaded) return;
     betaFunctions = document.getElementById('betaFunctions').checked;
     localStorage.setItem('setting-betaFunctions', betaFunctions);
+
+    if (confirm("Aby se změna aplikovala, tak je nutné stránku znovu načíst. Chcete teď stránku znovu načíst? V případě, že kliknete na ZRUŠIT, tak prosím auktualizujte stránku sami až se Vám to bude hodit.")) location.reload();
+}
+
+function ChangeOnlyMoravia() {
+    if (!loaded) return;
+    onlyMoravia = document.getElementById('onlyMoravia').value;
+    localStorage.setItem('setting-Country', onlyMoravia);
 
     if (confirm("Aby se změna aplikovala, tak je nutné stránku znovu načíst. Chcete teď stránku znovu načíst? V případě, že kliknete na ZRUŠIT, tak prosím auktualizujte stránku sami až se Vám to bude hodit.")) location.reload();
 }
@@ -1361,6 +1370,7 @@ function Load() {
         zTestingFunc = localStorage.getItem('setting-testingFunc');
         zdev = localStorage.getItem('setting-dev');
         zbetaFunctions = localStorage.getItem('setting-betaFunctions');
+        zOnlyMoravia = localStorage.getItem('setting-Country');
         zTranscription = localStorage.getItem('Transcription');
         zDicAbc = localStorage.getItem('setting-dic-abc');
 
@@ -1477,6 +1487,10 @@ function Load() {
     if (zbetaFunctions == null) betaFunctions = false;
     else betaFunctions = (zbetaFunctions == "true");
     document.getElementById('betaFunctions').checked = betaFunctions;
+
+    if (zOnlyMoravia == null) onlyMoravia = "default";
+    else onlyMoravia = zOnlyMoravia;
+    document.getElementById('onlyMoravia').value = onlyMoravia;
 
     if (zstyleOutput == null) styleOutput = false;
     else styleOutput = (zstyleOutput == "true");
@@ -6426,4 +6440,151 @@ function similarityOfTwoWords(s1, s2) {
     if (s1.length>s2.length) len=s1.length; else s2.length;
 
     return 1-customLevenshtein(s1, s2)/len;
+}
+
+function BuildReference(str) {
+    // kniha|jmeno=František|příjmení=Bartoš|dilo=Diaktologie Moravská|strany=20
+    // online|jmeno=František|příjmení=Bartoš|dilo=Diaktologie Moravská|strany=20
+    // auto|type=sncj
+    
+    rawrules=str.split("|");
+    
+    // set up rules
+    let rules;
+    for (let rule in rawrules){
+        ruleParts=rule.split("|");
+        rules[ruleParts[0]]=ruleParts[1];
+    }
+
+    if (rawrules[0]=="kniha") {  
+        //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf
+        /*let vars_support = [
+            "autor", "primeni", "jmeno", "organizace", 
+            "nazev", "podnazev", "zastupny_nazev", 
+            "kapitola", 
+            "podkapitola", 
+            "vydani", 
+            "misto", "vydavatel", "rok_vydani", 
+            "edice", 
+            "issn", 
+            "poznamky", 
+            "odkaz"
+            "zpracovano"
+        ];
+        */
+        // autoř(i)
+        let pack=document.createElement("p");
+        if (rules["primeni"]!=undefined || rules["jmeno"]!=undefined) {
+            let names=document.createElement("span");
+            names.innerText=rules["primeni"].toUpperCase()+", "+rules["jmeno"];
+            pack.append(names);
+        } else if (rules["autor"]!=undefined){
+            let names=document.createElement("span");
+            names.innerText=rules["autor"];
+            pack.append(names);
+        }else if (rules["organizace"]!=undefined){
+            let names=document.createElement("span");
+            names.innerText="["+rules["organizace"].toUpperCase()+"]";
+            pack.append(names);
+        }
+
+        // nazev
+        if (rules["nazev"]!=undefined){
+            let nazev=document.createElement("span");
+            nazev.innerText=rules["nazev"];
+            nazev.style.fontStyle="italic";
+            pack.append(nazev);
+
+            if (rules["podnazev"]!=undefined) {
+                pack.append(document.createTextNode(": "));
+                let podnazev=document.createElement("span");
+                podnazev.innerText=rules["nazev"];
+                podnazev.style.fontStyle="italic";
+                podnazev.append(nazev);
+            }else{
+                pack.append(document.createTextNode("."));
+            }
+        }else if (rules["zastupny_nazev"]!=undefined) {
+            let zastupny_nazev=document.createElement("span");
+            zastupny_nazev.innerText="["+rules["zastupny_nazev"]+"]";
+            zastupny_nazev.style.fontStyle="italic";
+            pack.append(zastupny_nazev);
+        }
+
+        // kapitola
+        if (rules["kapitola"]!=undefined) {
+            let kapitola=document.createElement("span");
+            kapitola.innerText=rules["kapitola"];
+            pack.append(kapitola);
+        }
+        
+        // podkapitola
+        if (rules["podkapitola"]!=undefined) {
+            let podkapitola=document.createElement("span");
+            podkapitola.innerText=rules["podkapitola"];
+            pack.append(podkapitola);
+        }
+
+        // misto
+        if (rules["misto"]!=undefined) {
+            let misto=document.createElement("span");
+            misto.innerText=rules["misto"];
+            pack.append(misto);
+        }
+        
+        // vydavatel
+        if (rules["vydavatel"]!=undefined) {
+            if (rules["misto"]!=undefined) pack.append(document.createTextNode(": "));
+            let vydavatel=document.createElement("span");
+            vydavatel.innerText=rules["vydavatel"];
+            pack.append(vydavatel);
+        }
+        
+        // rok
+        if (rules["rok_vydani"]!=undefined) {
+            if (rules["vydavatel"]!=undefined) pack.append(document.createTextNode(", "));
+            let rok_vydani=document.createElement("span");
+            rok_vydani.innerText=rules["rok_vydani"];
+            pack.append(rok_vydani);
+        }
+        
+        // issn
+        if (rules["issn"]!=undefined) {
+            let issn=document.createElement("span");
+            issn.innerText="ISSN "+rules["issn"];
+            pack.append(issn);
+            pack.append(document.createTextNode(". "));
+        }
+        
+        // poznamky
+        if (rules["poznamky"]!=undefined) {
+            let poznamky=document.createElement("span");
+            poznamky.innerText=rules["poznamky"];
+            pack.append(poznamky);
+            pack.append(document.createTextNode(". "));
+        }
+
+        // link
+        if (rules["odkaz"]!=undefined){
+            let from=document.createElement("span");
+            from.innerText="Dostupné z: ";
+            pack.append(from);
+            
+            let url=document.createElement("a");
+            url.href=rules["odkaz"];
+            url.innerText=rules["odkaz"];
+            pack.append(url);
+        }
+
+        return pack;
+    }
+}
+
+function changeUrlParam(params) {
+    const url = new URL(window.location);
+
+    for (let param in params)
+        url.searchParams.set(param[0], param[1]);
+
+    window.history.replaceState({}, '', url);
 }
