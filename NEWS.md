@@ -2,6 +2,7 @@
 ### 2024 4.6. 
 - První překlady blízko za hranice Moravy
 - Lze nastavit filtrování - jenom Morava nebo Morava se Slezskem v ČR nebo všecko
+- Styl tlačítka zavřít v bočním menu
   
 ### 2024 30.5. 
 - url https://moravskyprekladac.pages.dev/?mapper&input=slovo
