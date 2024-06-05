@@ -4,14 +4,17 @@ aGG
 d25.10.2023 20:25:09
 idufčilko sem tu nevjeďél Žďár BK
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+u1
 g49.4214385,16.6965923
 q0
+oDrahansko
 -
 -
 -
 -
 -
 bouchni tu|1|čajsňi to|
+kostival lékařský|1|černé kuřéň|
 -
 -
 -
@@ -20,18 +23,24 @@ ou|ó
 -
 apatyKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 medicínA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kořen|3||e,u|i,u||i|i,u|em|y|ů|ům|y|y|ech|y
 -
 apatyKA|1|ka?|ke|ce?|ku?|ko?|ce?|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 meďicíNA|1|na?|ny?|ňe?|no|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+kořeN|3|ň|ne?,nu?|ňi?,nu?|n?|ňi?|ňi?,nu?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
 -
 apaty|apatyKA|0|hapati|apatyKA|
 medicín|medicínA|0|medecí|meďicíNA|
+kořen|kořen|0|kuřé|kořeN|
 -
 hloupÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+černÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 hlópÉ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|é|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
+čerNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|né|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 -
 hloup|hloupÝ|hlóp|hlópÉ|
+čern|černÝ|čer|čerNÝ|
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou

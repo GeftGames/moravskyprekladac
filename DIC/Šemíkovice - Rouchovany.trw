@@ -1,25 +1,39 @@
 TW v2
 tŠemíkovice
+aGG
 d17.07.2023 15:12:16
+ije jak smrt, nemá načisto žádnó barvo Rouchovany BM (Šemíkovice)
+c#Zdroje dat\n-snčj
+u1
 sRouchovany
 g49.0546725,16.1123502
 q0
+oMoravské Horácko>Dolsko
 -
 -
 -
 -
+je bledý jako smrt|1|je jak smrt|
 -
 neotravuj mě|1|nedožiré mňe|
 -
 -
 -
+ou|ó
 -
+vu|vo
 -
 vozíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
+smrt|1||i|i||i|i|í|i|í|ím|i|i|ích|mi
+barVA|1|va|vy|vě|vu|vo|vě|vou|vy|ev|vám|vy|vy|vách|vami
 -
 vozíK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?,kách?|ky?
+smrT|1|t|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|ťím?|ťi?|ťi?|ťích?|tmi?
+barVA|1|va?|vy?|vě?|vo|vo?|vě?|vou?|vy?|ev?|vám?|vy?|vy?|vách?|vami?
 -
 vozí|vozíK|0|vozí|vozíK|
+smrt|smrt|0|smr|smrT|
+bar|barVA|0|bar|barVA|
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
@@ -30,21 +44,29 @@ poškozený||dolámané||
 zničený||dolámané||
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+žádnÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 -
 JÁ|já?|mňe|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+žádNÝ|ný?|ného?|nému?|ného?|-|ném?|ným?|ňí?|ných?|ným?|né?|-|ných?|nými?|ný?|ného?|nému?|ný?|-|ném?|ným?|né?|ných?|ným?|né?|-|ných?|nými?|ná?|né?|né?|nó|-|né?|nou?|né?|ných?|ným?|né?|-|ných?|nými?|né?|ného?|nému?|né?|-|ném?|ným?|ná?|ných?|ným?|ná?|-|ných?|nými?
 -
 |JÁ||JÁ|
+žádn|žádnÝ|žád|žádNÝ|
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
 |BÝT||BÝT|
+m|mÍT|m|mÍT|
+nem|mÍT|nem|mÍT|
 -
 -
 -
+jak|jak|
 -
 -

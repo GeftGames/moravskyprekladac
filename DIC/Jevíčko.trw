@@ -4,8 +4,10 @@ aGG
 d05.09.2023 11:54:59
 iModletba pro\nstréčka\nMuj stréček Cyrda ze strane myho tate\nnéni puvodně Jevičák. Pocházi z nedaleké malé dědinke za jednim potokem, dvóma kopcama a jednim lesem.\nShodó všech vokolnosti jednoho dňa\nstréček svuj rodné dum navždecke vopostil. K rozlóčeni si pozval spoložáka\nMetuda Pálkovyho, vynikajiciho a šekovnyho mozekanta, abe mo z balkóna\nvod kocheně zahrál tolekrát vopakovanó\nskladbo Ave Maria. Zatimco se Metuduv\ntrombón pomalóčko rozezvočel, stréček\nnaposlede maširoval po zehradě meze\nstromama. Náhlo však dobře rozehrané\nhlas trombóna znenadáni homlkl, jako\nbe milyho kamaráda Metuda trefil rovnó\ndo hlave právě vestřelené votrávené šip...\nA tak se stréček vrátil zpátke dom, položel přenesenó halózko z jabloně na sedačko velkyho hošáka, kde naposlede -\nnež vodešil navžde - seděl jeho tata. Na\nmenši křeslo v roho pokoja, gde sedávala\njeho mama, položel maló třešňovó větvičko a vedle ni jeji voseřeló modlitebni\nknižko.\nZavřel velky vokno do seknice, zamkl\nvšecke dveře, nakonec ještě venkovni\nbránko a naposlede se vohlidl po svym\nrodnym domo a pomalo vodešil do svyho\nnovyho béváko 1+1 na nevelkym a jedinym panelákovym sidlišťo města královskyho, města Jevička.\nTož, žehné Tobě, stréčko, Ave Maria, Ave\nMaria.\nPavel Kyselák
 c#Zdroje dat\n-<a href="https://www.jevicko.cz/files/files/soubory/05_volny_cas/zpravodaj/2012/2012_brezen.pdf">Zpravodaj 2012 březen</a>; str.12\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/113/mode/2up">Dialektologie moravská</a> str. 113
+u1
 g49.6325549,16.7120473
 q0
+oMoravské Horácko>Malá Haná
 -
 -
 -
@@ -24,6 +26,7 @@ om|vom
 ou|ó
 í|i
 -
+ly|lê
 -
 okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 strýc|2||e|i,ovi|e|i,e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
@@ -40,6 +43,10 @@ světnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 sekeRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 palicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 prasE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+krÁVA|1|áva|ávy|ávě|ávu|ávo|ávě|ávou|ávy|av|avám,ávám|ávy|ávy|avách,ávách|avami,ávami
+telE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+kobylA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+hříbĚ|0|ě|ěte|ěti|ě|ě|ěti|ětem|ata|at|atům|ata|ata|atech|aty
 -
 okNO|0|no|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech?|ny?
 strýc|2|?|e?|i,ovi?|e?|i,e?|i,ovi?|em?|i,ové?|ů?|ům?|e?|i,ové?|ích?|i?
@@ -56,6 +63,10 @@ světnicE|1|e?|e|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 sekeRA|1|ra?|ry?|ře?|rô|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 palicE|1|e?|e|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 prasE|0|e|ete?|eťi?|e?|e?|eťi?|etem?|ata?|at?|atúm?|ata?|ata?|atech?|aty?
+krÁVA|1|áva?|ávy?|ávě?|ávu?|ávo?|ávě?|ávó|ávy?|av?|avám?,ávám?|ávy?|ávy?|avách?,ávách?|avami?,ávami?
+telE|0|e?|ete?|eťi?|e|e?|eťi?|etem?|ata?|at?|atúm?|ata?|ata?|atech?|aty?
+kobêlA|1|a?|ê|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+hřibJE|0|je?|jete?|jeťi?|je|je?|jeťi?|jetem?|ata?|at?|atúm?|ata?|ata?|atech?|aty?
 -
 ok|okNO|0|vok|okNO|
 strýc|strýc|0|stréč||
@@ -79,6 +90,11 @@ světnic|světnicE|0|sekňic|světnicE|
 seke|sekeRA|0|seke|sekeRA|
 palic|palicE|0|palêc|palicE|
 pras|prasE|0|pras|prasE|
+kr|krÁVA|0|kr|krÁVA|
+tel|telE|0|tel|telE|
+||0|béčka||
+kobyl|kobylA|0|kobêl|kobêlA|
+hříb|hříbĚ|0|hřib|hřibJE|
 -
 malÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hrubÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -117,6 +133,7 @@ otevřÍT|30|-1|ít|u|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|e
 pravIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 vZÍT|30|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata
 tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|učme,tlucme|učte,tlucte|oukl|oukl|oukla|ouklo|oukli|oukly|oukly|oukla|učen|učen|učena|učeno|učeni|učeny|učeny|učena
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 neBÝT|23|-1|ébýt?|éjsem?|éjsi?|éňi|éjsme?|éjste?|éjsou?|ébudu?|ébudeš?|ébude?|ébudeme?|ébudete?|ébudou?|ébuď?|ébuďme?|ébuďte?|ébyl?|ébyl?|ébyla?|ébylo?|ébyli?|ébyly?|ébyly?|ébyla?
 pocházET|7|-1|et?|ím?|íš?|i|íme?|íte?|í,pocházejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
@@ -124,6 +141,7 @@ otevŘÍT|30|-1|řít?|řu?|řeš?|ře?|řeme?|řete?|řou?|eř|řeme?|řete?|ř
 prAVIT|15|-1|avit?|avím?|avíš?|aví?|avíme?|avíte?|aví?|av?|avme?|avte?|ál|avil?|avila?|avilo?|avili?|avily?|avily?|avila?|aven?|aven?|avena?|aveno?|aveni?|aveny?|aveny?|avena?
 vZÍT|30|-1|zít?|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|ezmi?|ezměme?|ezměte?|zal|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zaťi?|zaty?|zaty?|zata?
 tlOUCT|15|-1|ouct?|uku?,tluču?|učeš?|uče?|učeme?|učete?|ukou?,tlučou?|uč?,tluc?|učme?,tlucme?|učte?,tlucte?|ókl|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeňi?|učeny?|učeny?|učena?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
 ne|neBÝT|n|neBÝT|
 pocház|pocházET|pocház|pocházET|
@@ -132,6 +150,7 @@ prav|pravIT|pr|prAVIT|
 v|vZÍT|v|vZÍT|
 tl|tlOUCT|kl|tlOUCT|
 omámit||vomámilo||
+m|mÍT|m|mÍT|
 -
 nakonec|nakonec|
 původně|puvodnňe|
@@ -147,6 +166,8 @@ z||z|
 za||za|
 od||vod|
 do||do|
+pod||pod|
+u||hô|
 -
 -
 -

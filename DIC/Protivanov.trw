@@ -3,28 +3,30 @@ tProtivanov
 aGG
 d18.10.2023 21:31:54
 i takê bêz muhl takovó nejakó tô harmárečkô hôďelat Protivanov PV
-c#Zdroje dat\n-sncj.ujc.cas.cz
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-<a href="https://www.protivanov.com/file.php?nid=3828&oid=1190888">Místní vesnické noviny</a> (data spíše Protivansko) (nepoužito)\n-https://www.protivanov.com/file.php?nid=3828&oid=9350677 (nevyčerpáno)
+u1
 g49.4829332,16.8351574
 q0
+oMoravské Horácko>Malá Haná
 -
 -
 -
 -
 -
-by jsi|1|bêz|
-starou almaru|1|harmařêskô|
-oproti té jejich|1|proťi té jehich|
-plechová nádoba|1|ciment|
-v ním|1|v ňem|
-zbylé kafe|1|zvostatí kafé|
-v té|1|f té|
-k nádraží|1|g nádražó|
-snědl hromadu vuřtu|1|sňedl kolek cergulatu|
-vyznačí obrys|1|cajchnôjó|
-kdyby jsi|1|dêbêz|
-ti udělali si z tebe apríl|1|ťe hôďelalê aprílem|
+by jsi|1
+starou almaru|1
+oproti té jejich|1
+plechová nádoba|1
+v ním|1
+zbylé kafe|1
+v té|1
+k nádraží|1
+snědl hromadu vuřtu|1
+vyznačí obrys|1
+kdyby jsi|1
+ti udělali si z tebe apríl|1
 -
-vyfotit|1|vêfotografirovat|
+vyfotit|1
 -
 nej|né
 ně|NE
@@ -46,6 +48,7 @@ dly|dlê
 ali|alê
 dí|ďi
 lemi|lema
+ky|kê
 -
 civilistA|2|a|y|ovi|u|o|ovi|ou|é,i|ů|ům|y|i|ech|y
 almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
@@ -70,6 +73,7 @@ apríl|3||u,a|u||e|u,e|em|y|ů|ům|y|y|ech|y
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
 vesnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 dědinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+ptáK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 -
 civilistA|2|a|y?|ovi?|u?|o?|ovi?|ou?|é,i?|ů?|ům?|y?|i?|ech?|y?
 almaRA|1|ra|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
@@ -94,6 +98,7 @@ apríl|3|?|u?,a?|u?|?|e?|u?,e?|em|y?|ú?|úm?|y?|y?|ech?|y?
 BRÝLE|1|-|-|-|-|-|-|-|brýle?|brýlí?|brýlím?|brýle?|brýle?|brýlích?|brílema
 vesňicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 ďeďiNA|1|na?|ny?|ňe?|nu?|no?|ňe|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+ftáK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|kê|ci?|cích?|ky?
 -
 alma|almaRA|0|harma|almaRA|
 almar|pohádKA|0|halmáreč|pohádKA|
@@ -120,6 +125,7 @@ apríl|apríl|0|apríl|apríl|žert v 1. nebo 30. dubnu
 ||0|Lojzikô!||
 |BRÝLE|0||BRÝLE|
 vesnic|vesnicE|0|ďeďi|ďeďiNA|
+ptá|ptáK|0|ftá|ftáK|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 sivÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -206,6 +212,7 @@ docházET|15|-1|et|ím|íš|í|íme|íte|í,docházejí|ej|ejme|ejte|el|el|ela|e
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 SPADNOUT|30|-1|spadnout|spadnu|spadneš|spadne|spadneme|spadnete|spadnou|spadni|spadněme|spadněte|spadl|spadl|spadla|spadlo|spadli|spadly|spadly|spadla|–|–|–|spadeno|–|–|–|–
 choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+číhAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 -
 mOCT|5|-1|oct?|ohu?,ůžu?|ůžeš?|ože|ůžeme?|ůžete?|ohou?,ůžou?|uhl|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 hôďelAT|30|-1|at|ám?|áš?|á?|áme?|áte?|ají?|é|ejme?|ejte?|al?|al?|ala?|alo?|alê|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
@@ -221,6 +228,7 @@ docházET|15|-1|et?|ím?|íš?|i|íme?|íte?|í?,docházejí?|ej?|ejme?|ejte?|el
 mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ňel|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 SPADNOUT|30|-1|spadnout?|spadnu?|spadneš?|spadne?|spadneme?|spadnete?|spadnou?|spadňi?|spadňeme?|spadňete?|spadl?|spadl?|spadla?|spadlo?|spadli?|spadly?|spadlê|spadla?|–?|–?|–?|spadeno?|–?|–?|–?|–?
 choĎIT|15|-1|ďit?|ďím?|ďíš?|ďi|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďili?|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
+čéhAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 -
 |VÉZT||VÉZT|
 |BÝT||BÝT|
@@ -241,6 +249,7 @@ vyznačí obrys||cajchnôjó||
 zůsta|zůstaT|zvosta|zvostaT|
 |SPADNOUT||SPADNOUT|
 cho|choDIT|cho|choĎIT|
+číh|číhAT|čéh|čéhAT|
 -
 také,taky|takê|
 moc|modz|
