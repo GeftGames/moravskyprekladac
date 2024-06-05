@@ -3,7 +3,7 @@ tHrubá Vrbka
 aGG
 d27.06.2023 14:32:25
 imoseli ti dobitki nakŕmit Hrubá Vrbka HO\ntaťíčeg róchli ďivokého kanca, toš si máte dójít pro hu̯avu a pajšl Hrubá Vrbka HO\n\nneznámé:\nróchli
-c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/narodni_pisne_moravske/page/21/mode/1up (nevyčerpáno)
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/narodni_pisne_moravske/page/21/mode/1up (nevyčerpáno)\n-https://www.academia.edu/42750460/SVADBA_AKO_TRADI%C4%8CN%C3%81_HERN%C3%81_PR%C3%8DLE%C5%BDITOS%C5%A4_%C4%BDUDOV%C3%9DCH_HUDIEB_NA_SLOVENSKO_MORAVSKOM_POMEDZ%C3%8D_V_OBLASTI_BIELYCH_KARP%C3%81T_Wedding_as_a_Traditional_Performing_Occasion_of_Folk_Music_Bands_in_Slovak_Moravian_Borderland_in_White_Carpathians_ (nevyčerpáno) str.133,134
 g48.8715214,17.4770349
 q0
 oSlovácko
@@ -148,6 +148,7 @@ vod|vodA|0|vo|voDA|
 svobod|svobodA|0|słobo|słoboDA|
 mlýn|mlýn|0|młín|młín|
 vín|vínO|0|vín|vínO|
+zlost||0|zṵosť||
 -
 divoKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
@@ -187,7 +188,7 @@ taKÝ|ký?|kého?|kému?|kého?|-|kém?|kým?|kí?|kých?|kým?|ké?|-|kých?|k�
 OŇI|oňi?|jich?,ňích,ňíh|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
 keRÝ|rí|rého|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
 MY|my?|nás|nám?|nás?|my?|nás?|námi?
-ON|on|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+ON|on|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,#ňím
 svÚJ|új?|ého?|ému?|ého?|új?|ém?|ým?|i?,í?|ých?|ým?|e?,é?|i?,í?|ých?|ými?|új?|ého|ému?|új?|új?|ém?|ým?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,á?|í?,é?|í?,é?|i?,ou?|e?,á?|í?,é?|í?,ou?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,é?|ého?|ému?|e?,é?|e?,é?|ém?|ým?|e?,á?|ých?|ým?|e?,á?|e?,á?|ých?|ými?
 -
 t|tEN||TEN|
@@ -264,6 +265,7 @@ zab|zabÍT|zab|zabÍT|
 |JÍT||JÍT|
 nap|napÍT_SE|nap|napÍT_SE|
 v|vZÍT|v|vZÍT|
+||trepaṵa||
 -
 ještě|ešce|
 dosud|dosavád|
@@ -271,6 +273,8 @@ tam|tam|
 málo|máło|
 včera|včéra|
 večer|večér|
+||
+pokud|pokád|
 -
 pro||pro|
 bez||bez|

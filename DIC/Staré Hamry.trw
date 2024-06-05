@@ -4,9 +4,11 @@ aGG
 d01.05.2023 14:28:04
 iTak se mě představila Ostrava za té prvé noci. Cestou přes Vítkovice cítil\njsem se velice ubohý při pohledu na to moře komínů a továren. Také pohled\nna šachty mocně na mne zapůsobil.… Začátky moje byly v Ostravě těžké. Jsa\nkluk, a tož ocitnuv se v takovém průmyslovém středisku. Byl jsem tamními\npoměry zmaten, a zkusil jsem hodně ústrků a posměšků za svoje horské nářečí\na prostotu duše. Také po stránce výdělku bylo to horší než v Místku. Protože\njsem ještě neměl 16 let, obdržel jsem na směnu 55 krejcarů – t. j. 1,10 K.\nZ toho jsem platil za oběd 28 krejcarů, snídaně 8 krejcarů a večeře 12–16\nkrejcarů mimo chleba, který jsem si musel kupovat sám. Čili celý výdělek jsem\nprojedl. Za byt a prádlo jsem dlužil. Peněz na ošacení jsem neměl.“ \n\n…Sedmého července večer přijdu z práce a byl jsem\nopravdovým tátu. Narodilo se nám děvče, Libuša se zove. Byly křtiny u Satiny a starosti nové. Dosud sem enem skokol kolem svoji Fanky, včil musím\ni kol Libuše, jak spusti varhanky. Ráno letím do roboty, gatě držím v ruce, bo\nuž na mě viso jako strašok na špagatě. Jak to dále se mnu pujdě to ví enem\nPán Bůh. Svobodní se mi posmívají. Však počkajtě, vy sakramenti, až vas to\njak chytně, ež se vy též oženitě, žaden z vas něpipně. \n\nDokolečka na tym, světě,\ndo kola to chodí.\nKaždu špetku te radosti,\nsmutek doprovodí.\nSotva zme s té smoly začli\ntrochu se rychtovať.\nNa vesno zme robě matku\nmuseli pochovať. \n\nZ vlastního pozorování mluvy zdejších obyvatel mohu přidat ještě další znak starohamerského nářečí. Místo obligátního příčestí minulého na -ła se užívá příčestí minulé typické pro neutra -ło (např. namísto „Máňa šła kajsi ku chalupě“ se užije „Máňa šło kajsi ku chalupě“.).\n\n\nneznámé: předza
 c#Zdroje\n-http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf\n-https://adoc.pub/lidova-slovesnost-na-starych-hamrech.html\n-https://www.e15.cz/magazin/vypravejte-nam-neco-tetusko-fanko-849535\n-Karlovické nářečí-Svěrák, František\n\n#popis nářečí\n- původní l, r\n- 1. os sponového slovesa sym
+u2
 g49.4728785,18.4449781
 x3
 q0
+oLašsko
 -
 -
 -
@@ -18,6 +20,7 @@ jako z prasete|1|jag z brava|
 do náruče|1|do naručo|
 k tobě|1|ku tebje|
 šla k řezníkovi|1|šła do řezňika|
+kolem něj|1|kole ňeho|
 -
 -
 žlu|žłu
@@ -73,6 +76,8 @@ vEJCE|0|ejce|ejce,v&#160;obecném jazyce) vejcete|ejci|ejce|ejce|ejci|ejcem|ejce
 polE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 chlapEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 řezníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+čarodějníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+stranA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 krEV|1|ev|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 brav|2|e?|a|eťi?|e?|e?|eťi?|etem?|ata?|at?|atúm?|ata?|ata?|atech?|aty?
@@ -116,6 +121,8 @@ vAJCO|0|ajco|ejce?,v&#160;obecném jazyce) vejcete?|ejci?|ejce?|ejce?|ejci?|ejce
 polE|0|e|e?|i?|e?|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
 chłapEC|2|ec|ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
 řezňiK|2|k?|ka|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+čarodeňiK|2|k?|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|cy|kú?|kúm?|ky?|ci?|cích?|ky?
+straNA|1|na?|ny?|ňe?|nu|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 -
 ||0|ďevucha||
 ||0|hrča||
@@ -166,6 +173,8 @@ v|vEJCE|0|v|vAJCO|
 pol|polE|0|pol|polE|
 chlap|chlapEC|0|chłap|chłapEC|
 řezní|řezníK|0|řezňi|řezňiK|
+čarodějní|čarodějníK|0|čarodeňi|čarodeňiK|
+stran|stranA|0|stra|straNA|
 -
 nejmenší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 zlÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -230,8 +239,11 @@ t|tY||TY|
 |SE||SE|
 |ONI||OŇI|
 -
+druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 -
+druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hu|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
+dru|druHÝ|dru|druHÝ|
 -
 vynášET|15|-1|et|ím|íš|í|íme|íte|í,vynášejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 krájET|15|-1|et|ím|íš|í|íme|íte|í,krájejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
@@ -283,6 +295,7 @@ tl|tlOUCT|tł|tłUCŤ|
 vylézt||vyliz,vylezła||
 mluv|mluvIT|młuv|młuvIT|
 |JÍT||JÍT|
+||||
 -
 jenom|enem|
 někde|kajsi|
@@ -296,6 +309,7 @@ do||do|
 mezi||medźi|
 k||ku|
 pod||pot|
+kolem||kole|
 -
 jak|jag|
 -

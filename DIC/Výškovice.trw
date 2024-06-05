@@ -1,0 +1,93 @@
+TW v2
+tVýškovice
+aGG
+d11.05.2024 10:43:38
+iDobrý deň … jak iděš? … běž henemší …\nči už je poledňo? Baj … něchuď boskem…\nči němáš co obuť? … roby, kaj stě tak dlúho\nutěkaj preč … zajeť pro futro na ščudlek …
+c#zdroje dat\n-https://www.obec-vyskovice.cz/charakteristika-obce-v-roce-1990
+u2
+g49.8082069,17.9886348
+x3
+q0
+oSlezsko>Opavsko
+-
+-
+-
+-
+-
+dobrý den|1|dobrý deň|
+|1|jak iděš|
+|1|běž henemší|
+nechoď pobosky|1|ňechuď boskem|
+-
+-
+ne|ňe
+-
+-
+jet|jeť
+-
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+polednE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ech|y
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+-
+dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
+poledNE|0|ňo|ne?|ňi?|ne?|ne?|ňi?|nem?|ne?|ňí?|ňím?|ne?|ne?|nech?|ny?
+robA|1|na?|ny?|ňe?|nu?|no?|ňe?|nou?|y|n?|nám?|ny?|ny?|nách?|nami?
+-
+d|dEN|0|d|dEN|
+poledn|polednE|0|poled|poledNE|
+žen|ženA|0|rob|robA|
+||0|futro ||
+||0|na ščudlek||
+-
+-
+-
+-
+CO|co|čeho|čemu|co,-č|-|čem|čím
+-
+CO|co?|čeho?|čemu?|co|-|čem?|čím?
+-
+|CO||CO|
+-
+-
+-
+-
+utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+zajeT|30|-1|t|du|deš|de|deme|dete|dou|ď|ďme|ďte|l|l|la|lo|li|ly|ly|la|t|t|ta|to|ti|ty|ty|ta
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+běž|0|-1|
+běžET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
+choDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+-
+uťekAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
+zajeT|30|-1|ť|du?|deš?|de?|deme?|dete?|dou?|ď?|ďme?|ďte?|l?|l?|la?|lo?|li?|ly?|ly?|la?|t?|t?|ta?|to?|ťi?|ty?|ty?|ta?
+BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|sťe|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+JÍT|31|-1|jít?|jdu?|iďeš|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
+bježET|7|-1|et?|ím?|íš?|í?|íme?|íte?|í?||me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+chOĎIT|15|-1|oďit?|oďím?|oďíš?|oďí?|oďíme?|oďíte?|oďí?|uď|oďme?|oďte?|oďil?|oďil?|oďila?|oďilo?|oďili?|oďily?|oďily?|oďila?|ozen?|ozen?|ozena?|ozeno?|ozeňi?|ozeny?|ozeny?|ozena?
+mÍT|7|-1|ít?|ám?|áš|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+-
+utík|utíkAT|uťek|uťekAT|
+zaje|zajeT|zaje|zajeT|
+|BÝT||BÝT|
+|JÍT||JÍT|
+běž|běžET|bjež|bježET|
+||||
+necho|choDIT|ňech|choĎIT|
+nem|mÍT|ňem|mÍT|
+||obuť||
+-
+pryč|preč|
+už|už|
+bosky|boskem|
+kde|kaj|
+dlouho|dlúho|
+-
+pro||pro|
+na||na|
+-
+či|či|
+||
+-
+-

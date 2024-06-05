@@ -5,6 +5,7 @@ aGG
 d23.04.2023 21:11:44
 idno se džela štferec, gdešto naše koše mače kulate dno Studénka NJ\n\nneznámé\ndžela ... držela?\nmače...?
 cZdroje:\n-České nářeční texty - Lamprecht, Arnošt; str. 307
+u2
 lLaština
 g49.7247536,18.0778765
 x3
@@ -34,9 +35,11 @@ je velmi černý|1|je černy jag bocaň|
 je snědý|1|je černy jak cygan|
 málo kvalitní|1|bidnavy|
 na okroj stodoly|1|na kraj stodoli|
+denně|1|džeň v džeň|
 -
 -
 při|přy
+vyří|vyřy
 -
 á|a
 bě|bje
@@ -72,6 +75,7 @@ měli|mjeli
 řela|řeła
 tala|tała
 ží|žy
+dili|džyli
 -
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 mlýn|3||a|u||e|u,ě|em|y|ů|ům|y|y|ech|y
@@ -117,6 +121,7 @@ ječmen|3||a,e|i,u||e|ě,i,u|em|y|ů|ům|y|y|ech|y
 žitO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 stodolA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 okraj|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 -
 hrad|3|?|a?|u?|?|e?|ě,u?|em?|y?|uf|ům?|y?|y?|ach|y?
 mlýn|3|?|a|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
@@ -162,6 +167,7 @@ ječmeN|3|n?|na?,ne?|ňi?,nu?|ň|ne?|ňe?,ňi?,nu?|nem?|ny?|nú?|núm?|ny?|ny?|n
 réž|-1||a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 stodolA|1|a?|i|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 kraj|3|?|e?|i?||i?|i?|em?|e?|ú?|úm?|e?|e?|ích?|i?
+dEN|0|žeň|ne?|ňi?,nu?|žeň|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 -
 ||0|||
 ||0|na dodafku ||
@@ -171,6 +177,7 @@ b|bOUDA|0|b|bOUDA|
 babič|babičKA|0|stařen|stařenKA|
 brusle||0|šlajfy?||
 cikán|cikán|0|cyga|cygaN|
+čáp|čáp|0|bocan|bocan|
 červ|červEN|0|červ|červEN|
 česne|česneK|0|česne|česneK|
 čtver|čtverEC|0|štfer|čtverEC|
@@ -182,15 +189,20 @@ herd|herdA|0|baštoňcuf|baštoňcuf|
 hospod|hospodA|0|hospo|hospoDA|
 chlév|chlév|0|chli|chliV|
 jabl|jablKO|0|ja|jablKO|
+ječmen|ječmen|0|ječme|ječmeN|
 kafé||0|kafe||
 kan|kanEC|0|kaň|kanEC|
 kil|kilO|0|kyl|kylO|
 klouzač|pohádKA|0|čundruf|pohádKA|
+kořen|kořen|0|koře|kořeN|
 koš|koš|0|koš|koš|
 kr|krEV|0|kr|krEV|
 mlýn|mlýn|0|młyn|mlýn|
 no|noHA|0|no|noHA|
 nos|nos|0|nos|nos|
+okraj|okraj|0|kraj|kraj|
+pekáč|pekáč|0|brutfa|brutfaNA|
+pekáč|pekáčEK|0|brutfan|brutfanKA|
 pr|prÁCE|0|robot|ženA|
 pytel|stroj|0|mjech|hrad|
 rán|městO|0|ran|městO|
@@ -198,6 +210,7 @@ rund|rundA|0|auvlag|auvlag|
 řeč|řeč|0|řeč|řeč|
 sedlá|sedláK|0|sedlá|sedláK|
 sotor?||0|brašna||
+stodol|stodolA|0|stodol|stodolA|
 strom|strom|0|strom|strom|
 strouž|stroužEK|0|struč|stručKO|
 škol|ženA|0|škoł|ženA|
@@ -206,14 +219,8 @@ tvaroh||0|sr||
 vagón|hrad|0|vagon|hrad|
 večer|večer|0|večer|večer|
 zim|ženA|0|žimj|žimA|
-kořen|kořen|0|koře|kořeN|
-čáp|čáp|0|bocan|bocan|
-pekáč|pekáč|0|brutfa|brutfaNA|
-pekáč|pekáčEK|0|brutfan|brutfanKA|
-ječmen|ječmen|0|ječme|ječmeN|
 žit|žitO|0|réž|réž|
-stodol|stodolA|0|stodol|stodolA|
-okraj|okraj|0|kraj|kraj|
+d|dEN|0|d|dEN|
 -
 dřevěnÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 kulatÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -240,7 +247,7 @@ JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 niC|c|čeho|čemu|c|c|čem|čím
 -
 vY|y?|ás?|am|ás?|y?|ás?|ámi?
-tEN|en?|eho|omu?|oho?|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|yh|ěm?|y?|-|yh|ěmi?|o|eho|omu?|o?|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?
+tEN|en?|eho|omu?|oho?|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|yh|ěm?|y?|-|yh|ěmi?|o|eho|omu?|o|-|om?|ím?|y?|yh|ěm?|y?|-|yh|ěmi?
 SE|-|sebe?|si?,sobě?|se|-|sobě?|sebou?
 nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 ON|on?|ho,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím*?
@@ -289,6 +296,7 @@ dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
 pomOCT|30|-1|oct|ohu,(hovorově) pomůžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) pomůžou|oz|ozme|ozte|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla|ožen|ožen|ožena|oženo|oženi|oženy|oženy|ožena
 dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+vyříDIT|30|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
 -
 BÝT|247|-1|být?|sem|jsi?|je|zmy,sme|jste?|su|budu?|budžež|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 choDIT|15|-1|dit?|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|džil?|džil?|džiła|ždilo?|ždili?|ždily?|ždily?|ždila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
@@ -307,6 +315,7 @@ umřÍT|22|-1|ít?|u?,(zastarale) umru?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|e
 dostaT|22|-1|t?|nu?|neš?|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|ł|l?|ła|lo?|li?|ly?|ly?|la?
 přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šeł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
 dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+vyříĎIT|30|-1|ďit?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|džyli|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
 -
 |BÝT||BÝT|
 |MÍT||MÍT|
@@ -330,6 +339,7 @@ umř|umřÍT|umř|umřÍT|
 dosta|dostaT|dosta|dostaT|
 při|přiJÍT|přy|přiJÍT|
 d|dÁT|d|dÁT|
+vyří|vyříDIT|vyřy|vyříĎIT|
 -
 tak|tag|
 ještě|ešče|
@@ -345,6 +355,7 @@ pozdě|ňeskoro|
 zase|zas|
 letos|letož|
 dozadu|dozatku|
+tajně|bokem|
 -
 do||do|
 po||po|

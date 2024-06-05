@@ -4,9 +4,10 @@ aGG
 d06.05.2023 18:04:45
 ibumbig z huby ňechcu Březová OP\nnašemu małemu najlepšy idu bombičky Březová OP\nmačyčka mjeli enem olmaryj Březová OP\n\n\npro koňa była štfrtka ofsa v žymje, v leče mušeło bydž vjec Březová OP
 c#Zdroje dat\n-ČJA, Dotatky, str. 388 (nevyčerpáno)\n-České nářeční texty - Lamprecht, Arnošt; str. 299\n-https://veslovech.cz/zvukovy-archiv/zivot-na-fronte/\n\n
+u2
 g49.7912257,17.8638987
-rSlezsko
 q0
+oSlezsko>Opavsko
 -
 -
 přesto chtěli mít <id=1,prid,rod=muz,pad=2,c=j> <id=2,pods,rod=muz,pad=2,c=j> na naší straně|ale oňi chťeli miť <id=1,prid,rod=muz,pad=2,c=j> tam <id=2,pods,rod=muz,pad=2,c=j> u nas
@@ -137,6 +138,7 @@ ohEŇ|3|eň|ně|ni|eň|ni|ni|něm|ně|ňů|ňům|ně|ně|ních|ni
 babičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 četníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 almaRA|1|ra?|ry?|ře?|ryj|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 autO|0|o?|a?|u?|o|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
@@ -177,6 +179,7 @@ ohEŇ|3|eň?|ňa|ňu|eň?|ňi?|ňi?|ňem?|ňe?|ňú?|ňúm?|ňe?|ňe?|ňích?|ň
 stařenKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 četňiK|2|k,g|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 voDA|1|da?|dy?|ďe?|du?|do?|dže|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
+mjestO|0|o?|a|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ach|y?
 -
 ||0|mačyčka ||
 ||2|Anka||
@@ -226,6 +229,7 @@ oh|ohEŇ|0|oh|ohEŇ|
 babič|babičKA|0|stařen|stařenKA|
 četní|četníK|0|četňi|četňiK|
 vod|vodA|0|vo|voDA|
+měst|městO|0|mjest|mjestO|
 -
 malÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
@@ -401,15 +405,20 @@ obr|obrÁTIT|obr|obrÁŤIT|
 -
 bůhvíjak|buhvijak|
 celkem|celkem|
+čertví|čertvi|
+dneska,dnes|ňeska|
 dohromady|dohromady|
 doma|doma|
 dopoledne|dopołedne|
+hned|hned||hnet|
 jaksi|jaksik|
 jednou|raz|
 jen,jenom|enem|
 ještě|ešče||ešťe|
+kde|kaj|
 moc|modz|
 nakonec|nakoňec|
+nějak|nejak|
 nejlíp,nejlépe|nejlepšy|
 nikdy|ňigdaj||ňigdy|
 odpoledne|popołedňu||otpoledne|
@@ -431,15 +440,11 @@ velice|velice|
 venku|venku|
 více,víc|vjec|
 vždy|dycky|
+vždy|dycki|
 zásadně|zasaďňe|
 zase|zase|
-čertví|čertvi|
-dneska,dnes|ňeska|
-vždy|dycki|
 zpátky|spatki|
-nějak|nejak|
-kde|kaj|
-hned|hned||hnet|
+domů|dom|
 -
 pro||pro|
 do||do||ku|

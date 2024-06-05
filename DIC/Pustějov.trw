@@ -1,43 +1,72 @@
-TW v0.1
+TW v2
 tPustějov
+aGG
 d30.05.2023 10:20:31
-c#Zdroje dat\n-<a href="http://eyetracking.upol.cz/naki_vystava_nareci/">eyetracking.upol.cz/naki_vystava_nareci</a>
+izool. rak bahenní (Astacus leptodactylus): bařynače sme tu mjeli, ale už ih ňeňi Pustějov NJ
+c#Zdroje dat\n-<a href="http://eyetracking.upol.cz/naki_vystava_nareci/">eyetracking.upol.cz/naki_vystava_nareci</a>\nčeské nářeční texty 306
+u2
 g49.7003981,18.0035178
 q0
+oKravařsko
 -
 -
 -
 -
 -
+raky bahenní|1|bařynače|
+|1||
 -
 -
 -
 ou|u
+mě|mje
 -
 lý|ly
 -
 kost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+raK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 kosť|1||i?|i?|?|i?|i|í?|i?|í?|em?|i?|i?|ech?|mi?
+bařynač|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|e?|kú?|kúm?|e|ci?|cích?|ky?
+mjestO|0|o|a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
-hrst|hršč|kost|kosť
+hrst|kost|0|hršč|kosť|
+ra|raK|0|bařynač|bařynač|
+měst|městO|0|mjest|mjestO|
 -
 -
 -
 -
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 -
+OŇI|oňi?|ih,ňich*?|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
 -
+|ONI||OŇI|
 -
 -
 -
 -
 snÍST|14|-1|íst|ěz|ězme|ězte|ědl|ědl|ědla|ědlo|ědli|ědly|ědly|ědla|ěden|ěden|ědena|ědeno|ědeni|ědeny|ědeny|ědena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
 -
 SNÍST|14|-1|íst?|ěz?|ězme?|ězte?|zňed|zňed|ědla?|ědlo?|ědli?|ědly?|ědly?|ědla?|ěden?|ěden?|ědena?|ědeno?|ědeni?|ědeny?|ědeny?|ědena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|jeli|ěly?|ěly?|ěla?
+neBÝT|23|-1|být?|jsem?|jsi?|ňi|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?
 -
-sn||snÍST|SNÍST
+sn|snÍST||SNÍST|
+|BÝT||BÝT|
+m|mÍT|m|mÍT|
+ne|neBÝT|ňe|neBÝT|
+-
+tady|tu|
+už|už|
+také|teš|
 -
 -
--
+ale|ale|
 -
 -

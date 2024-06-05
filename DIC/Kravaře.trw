@@ -2,6 +2,7 @@ TW v2
 tKravaře
 aGG
 d26.12.2023 18:24:23
+u2
 g49.9217936,17.9597264
 x3
 q0
@@ -36,6 +37,7 @@ pil|pił
 dla|dła
 dím|džym
 rý|ry
+žet|žeč
 -
 bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|ozi,ohové|ohů|ohům|ohy|ozi,ohové|ozích|ohy
 zdraví|0|||||||m|-|-|-|-|-|-|-
@@ -51,6 +53,8 @@ spaní|0|||||||m|||m|||ch|mi
 pekáčEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
+kÁMEN|3|ámen|amene,amenu|ameni,amenu|ámen|ameni|ameni,amenu,ameně|amenem|ameny|amenů|amenům|ameny|ameny|amenech|ameny
+vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 -
 bÚH|2|uh|oha?|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem?|ozi?,ohové?|ohú?|ohúm?|ohy?|ozi?,ohové?|ozích?|ohy?
 zdraví|0||?|?|?|?|?|m?|-|-|-|-|-|-|-
@@ -66,6 +70,8 @@ spaňi|0|?|?|?|?|?|?|m|?|?|m?|?|?|ch?|mi?
 brutvoňKA|3|ek?|ku?|ku?|ku|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 kobzol|1|?|u?|u?|?|e?|u?|em?|y?|i|úm?|y?|y?|ech?|y?
 baraN|3|n?|na?|nu?,novi?|na?|ne|nu?,novi?|nem?|ňi?|nú?|núm?|ny?|ňi?|nech?|ny?
+kÁMEN|3|ámen?|amene?,amenu?|ameňi?,amenu?|ameň|ameňi?|ameňi?,amenu?,ameňe?|amenem?|ameny?|amenú?|amenúm?|ameny?|ameny?|amenech?|ameny?
+voDA|1|da?|dy?|ďe?|du|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 -
 |ČLOVĚK|0||ČLOVĚK|
 b|bŮH|0|b|bÚH|
@@ -81,6 +87,8 @@ spaní|spaní|0|spaňi|spaňi|
 zdraví|zdraví|0|zdravi|zdraví|
 zelí|zelí|0|zel|zelÍ|
 beran|beran|0|bara|baraN|
+k|kÁMEN|0|k|kÁMEN|
+vod|vodA|0|vo|voDA|
 -
 čeSKÝ|-1|ské|ského|skému|ské|ské|ském|ským|-|-|ská|ských|ským|ská|ská|ských|skými|-|-|ská|ské|ské|skou|ská|ské|skou|-|-|ské|ských|ským|ské|ské|ských|skými|-|-|ský|ského|skému|ského|ský|ském|ským|-|-|ští|ských|ským|ské|ští|ských|skými|-|-|ský|ského|skému|ský|ský|ském|ským|-|-|ské|ských|ským|ské|ské|ských|skými|-|-
 dnešní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
@@ -126,6 +134,9 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
 snÍST|30|-1|íst|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ědl|ědl|ědla|ědlo|ědli|ědly|ědly|ědla|ěden|ěden|ědena|ědeno|ědeni|ědeny|ědeny|ědena
 prozraDIT|30|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+nechAT|30|-1|at|ám|áš|á|áme|áte|ají|,nechej|me,nechejme|te,nechejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+ležET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
+běžET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
 -
 dávAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ał|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 trvAT|7|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
@@ -134,6 +145,9 @@ BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|b
 kOUPIT|15|-1|oupit?|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|upił|oupil?|oupila?|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeňi?|oupeny?|oupeny?|oupena?
 ZJEST|30|-1|zjíst?|zjím?|zjíš?|zjí?|zjíme?|zjíte?|zjeďí?|zjez?|zjezme?|zjezte?|zjedl?|zjedl?|zjedła|zjedlo?|zjedli?|zjedly?|zjedly?|zjedla?|zjeden?|zjeden?|zjedena?|zjedeno?|zjedeňi?|zjedeny?|zjedeny?|zjedena?
 prozraĎIT|30|-1|ďit?|džym|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďili?|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
+nechAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?||me?,nechejme?|te?,nechejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+ležET|7|-1|edž|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+bježET|7|-1|eč|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 -
 dáv|dávAT|dáv|dávAT|
 trv|trvAT|trv|trvAT|
@@ -144,6 +158,10 @@ udusit|udusit|udušył|udusit|
 k|kOUPIT|k|kOUPIT|
 sn|snÍST||ZJEST|
 prozra|prozraDIT|prozra|prozraĎIT|
+nech|nechAT|nech|nechAT|
+lež|ležET|lež|ležET|
+||||
+běž|běžET|bjež|bježET|
 -
 jenom|enem|
 někdy|ňegdy|
@@ -159,6 +177,7 @@ za||za|
 před||přet|
 -
 že|že|
+a|a|
 -
 ať|aď|
 -
