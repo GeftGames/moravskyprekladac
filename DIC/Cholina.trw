@@ -5,6 +5,7 @@ d30.05.2023 10:27:56
 idé pozor na dvoře, je tam takové člpek Cholina OL\nmáte take̬ takovi hoďine̬ s kancem? Cholina OL\nzháňela kanečka na chof Cholina OL\n já sem tam viďél celé štverec jeteln Cholina\nnepodařené, nechutné jídlo: nejakó t čchtačk dcki muhla ďelat Cholina OL\n expr. líbat; mazlit se: leze po ňi, furd j cmle Cholina OL\n\nstakra??
 c#Zdroje dat\n-sncj.ujc.cas.cz
 g49.6571817,17.0521428
+rnář=Cholena
 q0
 oHaná
 -
@@ -28,9 +29,11 @@ mohli koupit čenek|1|muhlê kópit česňekô|
 po ní|0|po ňi|
 pořád se s ní mazlí|1|furd jô cômle|
 z patra|1|s patra|
+|1|Pôlcarova depôtátňice |
 -
 -
 nej|né
+vy|vê
 -
 bě|bje
 dě|ďe
@@ -144,13 +147,14 @@ strýč|strýčEK|0|stréč|stréčEK|
 švest|švestKA|0|kadlát|kadlátKA|
 ječmen|ječmen|0|ečme|ečmeN|
 pat|patRO|0|pat|patRO|
+||0|depôtátňice ||
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 obrácenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
 nejlepší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
-celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ó|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|é|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
+celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á|é?|é?|ó|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|é|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 obráceNÝ|-1|ni|ného?|nému?|né?|né?|nim|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 velKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|-|-|ká?|kých?|kým?|ká?|ká?|kých?|kými?|-|-|ká?|ké?|ké?|kou?|ká?|ké?|kou?|-|-|ki|kých?|kým?|ké?|ké?|kých?|kými?|-|-|ký?|kého?|kému?|kého?|ký?|kém?|kým?|-|-|cí?|kých?|kým?|ké?|cí?|kých?|kými?|-|-|ký?|kého?|kému?|ký?|ký?|kém?|kým?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kými?|-|-
 nélepči|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?||?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
@@ -162,6 +166,7 @@ vel|velKÝ|vel|velKÝ|
 masn|obrácenÝ|mas|obráceNÝ|
 bramborov|celÝ|japkov|celÝ|
 nejlepší|nejlepší|nélepči|nélepči|
+||rostřapa|obráceNÝ|
 -
 takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
@@ -222,6 +227,7 @@ vařIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en
 lÉZT|7|-1|ézt|ezu|ezeš|eze|ezeme|ezete|ezou|ez|ezme|ezte|ezl|ezl|ezla|ezlo|ezli|ezly|ezly|ezla
 číhAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 sypAT|15|-1|at|u,sypám|eš,sypáš|e,sypá|áme,sypáme|ete,sypáte|ou,sypají|,sypej|me,sypejme|te,sypejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+vyběhNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la
 -
 BÝT|247|-1|být?|sem,sô|jsi?|je|jsme?|jste?|só|budu?|bôdeš|bôde|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bêchme|bêste|bi
 čÍST|15|-1|ézd|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
@@ -243,14 +249,20 @@ vařIT|15|-1|êt|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?
 lÉZT|7|-1|ézt?|ezu?|ezeš?|eze|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ezl?|ezl?|ezla?|ezlo?|ezli?|ezly?|ezly?|ezla?
 číhAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|alê|aly?|aly?|ala?
 sêpAT|15|-1|at?|u?,sypám?|eš?,sypáš?|e?,sypá?|áme?,sypáme?|ete?,sypáte?|ou?,sypají?|?,sypej?|me?,sypejme?|te?,sypejte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+vêbjehNOUT|22|-1|nout?|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?|l?|la|lo?|li?|ly?|ly?|la?
 -
 |BÝT||BÝT|
 brousit||zabrôšovat||
 č|čÍST|č|čÍST|
+číh|číhAT|čih|číhAT|
 d|dÁT|d|dÁT|
+dosta|dostaT|dosta|dostaT|
 ch|chTÍT|ch|chŤÍT|
+k|kOUPIT|k|kOUPIT|
+l|lÉZT|l|lÉZT|
 m|mÍT|m|mÍT|
 m|mOCT|m|mOCT|
+muchlovat||côckaji||
 mus|musET|mos|mosET|
 ne|neBÝT|n|nEBÝT|
 nech|chTÍT|nech|chŤÍT|
@@ -258,16 +270,12 @@ p|pÍT|p|pÍT|
 shán|shánĚT|zháň|shánĚT|
 sl|slOUŽIT|sl|slOUŽIT|
 slyš|slyšET|slêš|slyšET|
-uděl|udělAT|ôďel|udělAT|
-vi|viDĚT|vi|viDĚT|
-dosta|dostaT|dosta|dostaT|
-uběhat||ôbjehal||
-k|kOUPIT|k|kOUPIT|
-vař|vařIT|vař|vařIT|
-muchlovat||côckaji||
-l|lÉZT|l|lÉZT|
-číh|číhAT|čih|číhAT|
 syp|sypAT|sep|sêpAT|
+uběhat||ôbjehal||
+uděl|udělAT|ôďel|udělAT|
+vař|vařIT|vař|vařIT|
+vi|viDĚT|vi|viDĚT|
+vyběh|vyběhNOUT|vêběh|vêbjehNOUT|
 -
 tam|tam|
 taky|takê||také|
@@ -282,6 +290,7 @@ dosud|dosaváď|
 pořád|furd|
 již|jôž|
 najednou|najednó|
+onehdá,onehdy,oněkdy|onehdá|
 -
 na||na|
 u||ô|

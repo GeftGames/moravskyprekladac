@@ -3,11 +3,12 @@ fSpisovná čeština
 tProstějov
 aGG
 d17.03.2023 7:39:00
-icokolvjek Prostějov PV\nto só boháči, majó velké obévág aji z akvárijem! Prostějov PV
+icokolvjek Prostějov PV\nto só boháči, majó velké obévág aji z akvárijem! Prostějov PV\nfták cvaká zobákem Prostějov PV
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Prost%C4%9Bjov+PV%22">sncj</a>\n-https://archive.org/details/dialektickslov00bartuoft/page/524/mode/1up#page=524\n-Nápis na zdi zámku v Prostějově\n-https://veslovech.cz/zvukovy-archiv/prostejovska-hladova-demonstrace/ (nevyčerpáno)\n-https://veslovech.cz/zvukovy-archiv/listkovy-system-a-domovni-kontroly/\n\n#Popis nářečí\n-Řeč města Prostějova má sice ráz podřečí okolního, ale již se značně „poměštila"; \n     a) hlásky v, «, y jsou čistý: budu, žito, hlina, ryby a t. d.; \n     b) ú mění se v ó, ý, ej v é jako v okolí: dobré stréc, dé; \n     c) í se krátí a mění se v é toliko v koncovce ík, po z, ž a š: vozék, nožék, košék.
 lHanáčtina
 g49.4723368,17.1101128
 x1
+rnář=Prostťijov
 q0
 oHaná>Prostějovsko
 -
@@ -15,33 +16,33 @@ oHaná>Prostějovsko
 tento <id=1,podst,pad=1,rod=muz> o štyři roky déle|tento staré zámek dyl o štere leta
 -
 -
-když mi ještě nebylo čtrnáct|1|nebelo mňe štrnást|
-kteří nějak byli|1|co jaksig bili|
+když mi ještě nebylo čtrnáct|1
+kteří nějak byli|1
 -
-nebo ne|1|nebo né|
-tanečník při muzice|1|zálečník|
-velice daleko|1|dalečansko|
-správce vinic|1|perkmajstr|
-plody lopuchu|1|vlky|
-troška tekuniny|1|crkánek|
-bez sebe|0|bes sebe|
-jako soudek|1|jag bečeca|
-do konce světa|1|do skonáňi svjeta|
-no a tak|0|no a toš|
-v tu|1|f tu|
-na přídělové lístky|1|na listki|
-|1|po Kralicich|
-|1|po Sťichovicich|
-snažili se získat u mlynářů|1|zháňeli po mlinářách|
-takhle mimo přídělových lístků|0|takle mimo listku|
-kolikrát byla|0|kolikrád bila|
-hlavně tam u nás|0|gór tam u nás|
-v té|0|f té|
-hodně Sokolů|0|hromadu Sokolú|
-bylo hodně|0|bilo hromadu|
-berany berany duc|1|duc barane duc|
+nebo ne|1
+tanečník při muzice|1
+velice daleko|1
+správce vinic|1
+plody lopuchu|1
+troška tekuniny|1
+bez sebe|0
+jako soudek|1
+do konce světa|1
+no a tak|0
+v tu|1
+na přídělové lístky|1
+|1
+|1
+snažili se získat u mlynářů|1
+takhle mimo přídělových lístků|0
+kolikrát byla|0
+hlavně tam u nás|0
+v té|0
+hodně Sokolů|0
+bylo hodně|0
+berany berany duc|1
 -
-prodlužuje|1|dlóži|
+prodlužuje|1
 -
 posbí|pozbi
 -
@@ -108,63 +109,81 @@ noc|1||i|i||i|i|í|i,řečně) noce|í|ím|i,řečně) noce|i,řečně) noce|íc
 sokol|3||a|ovi,u|a|e|ovi,u|em|ové,i|ů|ům|y|ové,i|ech|y
 hromadA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
+oplatKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+oplatEK|1|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|kama,ky
+čarodějníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+ptáK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+zobáK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 -
 abatyšA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 akváriUM|0|um?|a?|u?|um?|um?|u?|jem|a?|í?|ím?|a?|a?|ích?|i?
+baraN|3|n|na?|nu?,novi?|na?|ne|nu?,novi?|nem?|ňi?|nú?|núm?|ny?|ňi?|nech?|ny?
 bečecA|1|a|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 boháč|2|?|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i|ú?|úm?|e?|i?|ích?|i?
 cop|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 čajDA|1|da|hy?|ze?|hu?|ho?|ze?|hou?|-|-|-|-|-|-|-
 čajTA|1|ta|hy?|ze?|hu?|ho?|ze?|hou?|-|-|-|-|-|-|-
+čarodeňiK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|lidé?,(v&#160;obecném jazyce) liďi?|liďí?|lidem?|liďi|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
 ďecKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka|ek?|kám?,kúm?|ka?|ka?|kách?|ky?
 dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 ďÍŤE|0|íťe?|íťete?|íťeťi?|íťe?|íťe?|íťeťi?|íťetem?|eťi|eťí?|etem?|eťi?|eťi?|etech?|etmi?
 dNO|0|no?|na?|nu?|no?|no?|ňe|nem?|na?|en?|núm?|na?|na?|nech?|ny?
 hanáK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+hromaDA|1|da?|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 hřebíK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
+kontrolA|1|a?|y?|e?|u|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 lÉTO|0|éto?|éta?|étu?|éto?|éto?|étu?,éťe?|étem?|éta?|et?|étúm?,etúm?|eta|éta?|étech?,etech?|éty?,ety?
 masO|0|o?|a|u?|o?|o?|e?,u?|em?|a?|?|úm?|a?|a?|ech?|y?
 mliKO|0|ko?|ka?|ku?|ko|ko?|ku?,ce?|kem?|ka?|k?|kúm?|ka?|ka?|cích?,kách?|ky?
 mlinář|2|?|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i?|ú?|úm?|e?|i?|ách|i?
 móKA|1|ka?|ki|ce?|ku?|ko?|ce?|kou?|ky?|k?|kám?|ki?|ky?|kách?|kami?
+němEC|3|ec?|ce?|ci?,covi?|ce?|če?,ci?|ci?,covi?|cem?|ci|cú?|cúm?|ce?|ci?|cích?|ci?
+noc|1|?|i?|i?|?|i?|i|í?|i?,řečňe) noce?|í?|ím?|i?,řečňe) noce?|i?,řečňe) noce?|ích?|emi?
 noséčEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách?,cích?|ky?
 plaťáK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ki|ky?|cích?|ky?
 růžE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+skládanKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ke|ek?|kám?|ke?|ky?|kách?|kami?
+sokol|3|?|a?|ovi?,u?|a?|e?|ovi?,u?|em?|ové?,i?|ú|úm?|y?|ové?,i?|ech?|y?
 strom|3|?|u?|u?|?|e?|u?,ě?|em?|y?|ú|úm?|y?|y?|ech|y?
 svjeT|3|t?|ta|tu?|t?|te?|ťe?|tem?|ty?|tú?|túm?|ty?|ty?|tech?|ty?
+štvrT|1|t?|ťe?|ťi?|t?|ťi?|ťi|ťí?|ťe?|ťí?|ťím?|ťe?|ťe?|ťích?|ťemi?
 vajičKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka|ek?|kúm?|ka?|ka?|kách?,cích?|ky?
 válKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 zámEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 zedníK|2|k|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
-němEC|3|ec?|ce?|ci?,covi?|ce?|če?,ci?|ci?,covi?|cem?|ci|cú?|cúm?|ce?|ci?|cích?|ci?
-kontrolA|1|a?|y?|e?|u|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
-noc|1|?|i?|i?|?|i?|i|í?|i?,řečňe) noce?|í?|ím?|i?,řečňe) noce?|i?,řečňe) noce?|ích?|emi?
-štvrT|1|t?|ťe?|ťi?|t?|ťi?|ťi|ťí?|ťe?|ťí?|ťím?|ťe?|ťe?|ťích?|ťemi?
-sokol|3|?|a?|ovi?,u?|a?|e?|ovi?,u?|em?|ové?,i?|ú|úm?|y?|ové?,i?|ech?|y?
-hromaDA|1|da?|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
-baraN|3|n|na?|nu?,novi?|na?|ne|nu?,novi?|nem?|ňi?|nú?|núm?|ny?|ňi?|nech?|ny?
+ftáK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+zobáK|3|k?|ku?|ku?|k?|ku?|ku?|kem|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 -
 ||0|skonáňi||
 |ČLOVĚK|0||ČLOVĚK|
 abatyš|růžE|0|habatêš|abatyšA|
 akvári|akváriUM|0|akvári|akváriUM|
+beran|beran|0|bara|baraN|
 boháč|boháč|0|boháč|boháč|
 cop|cop|0|coplé|hřebíK|
 čaroděj|čaroděj|0|čarovňi|zedníK|
+čtvrt|čtvrt|0|štvr|štvrT|
 d|dEN|0|d|dEN|
 d|dNO|0|d|dNO|
 d|dÍTĚ|0|ďec|ďecKO||ď|ďÍŤE|
 děc|děcKO|0|ďec|ďecKO|
 haná|hanáK|0|haná|hanáK|
+hromad|hromadA|0|hroma|hromaDA|
+kontrol|kontrolA|0|kontrol|kontrolA|
 l|lÉTO|0|l|lÉTO|
 mas|masO|0|mas|masO|
 mlé|mléKO|0|mli|mliKO|
 mlynář|mlynář|0|mlinář|mlinář|
 mou|mouKA|0|mó|móKA|
+něm|němEC|0|něm|němEC|
 no|noHA|0|čaj|čajDA||čaj|čajTA|
+noc|noc|0|noc|noc|
 nosíč|nosíčEK|0|noséč|noséčEK|
 obývák||0|obévág ||
+oplat|oplatKA|0|skládan|skládanKA|
+oplat|oplatEK|0|skládan|skládanKA|
+sokol|sokol|0|sokol|sokol|
 soud|soudEK|0|bečec|bečecA|
 strom|strom|0|strom|strom|
 svět|svět|0|svje|svjeT|
@@ -172,13 +191,9 @@ vajíč|vajíčKO|0|vajič|vajičKO|
 vál|válKA|0|vál|válKA|
 valní|valníK|0|plaťá|plaťáK|
 zám|zámEK|0|zám|zámEK|
-něm|němEC|0|něm|němEC|
-kontrol|kontrolA|0|kontrol|kontrolA|
-noc|noc|0|noc|noc|
-čtvrt|čtvrt|0|štvr|štvrT|
-sokol|sokol|0|sokol|sokol|
-hromad|hromadA|0|hroma|hromaDA|
-beran|beran|0|bara|baraN|
+čarodějní|čarodějníK|0|čarodeňi|čarodeňiK|
+ptá|ptáK|0|ftá|ftáK|
+zobá|zobáK|0|zobá|zobáK|
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -306,6 +321,7 @@ my|mySLET|mi|miSLET|
 udáv|udávAT|udáv|udávAT|
 m|mOCT|m|mOCT|
 ||zalo||
+||cvaká ||
 -
 prodlužovat|dlóži|
 jen,jenom|jen|

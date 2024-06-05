@@ -7,6 +7,7 @@ c#Zdroje dat\n- Nářečí na Břeclavsku a v dolním Pomoraví, František Svě
 lSlováčtina
 g48.8555939,17.1198014
 x1
+rde=Göding,sk=Hodonín
 q0
 oSlovácko
 -
@@ -27,6 +28,7 @@ petržel|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
 pekáč|-1||e|i||i|i|em|e|ů|ům|e|e|ích|i
+čarodějníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 -
 vEJCE|0|ajce?|ejce?|ejci?|ejce?|ejce?|ejci?|ejcem?|ajce|ajec?|ejcím?|ejce?|ejce?|ejcích?|ejci?
 podmáslí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
@@ -34,6 +36,7 @@ petržel|1|?|e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 svaďBA|1|ba|by?|bje?|bu?|bo?|bje?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 BRÝLE|1|-|-|-|-|-|-|-|brídle|brýlí?|brýlím?|brýle?|brýle?|brýlích?|brýlemi?
 protvaN|-1|n|ne?|ni?|n?|ni?|ni?|nem?|ne?|nú?|núm?|ne?|ne?|ních?|ni?
+čarodeňíK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 -
 v|vEJCE|0|v|vEJCE|
 hajný||0|hajní||
@@ -42,6 +45,7 @@ petržel|petržel|0|petrželí|podmáslí|
 svat|svatBA|0|svaď|svaďBA|
 |BRÝLE|0||BRÝLE|
 pekáč|pekáč|0|protva|protvaN|
+čarodějní|čarodějníK|0|čarodeňí|čarodeňíK|
 -
 -
 -

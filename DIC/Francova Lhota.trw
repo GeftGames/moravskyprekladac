@@ -1,8 +1,9 @@
-TW v1.0
+TW v2
 tFrancova Lhota
+aGG
 d05.07.2023 11:45:58
 ichłapi sa zešli, cérky spívajte Franc. Lhot
-c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (vyčerpáno)
 g49.1994426,18.10577
 q0
 -
@@ -10,7 +11,7 @@ q0
 -
 -
 -
-holky zpívejte|cérky spívajte
+holky zpívejte|1|cérky spívajte|
 -
 -
 -
@@ -21,22 +22,27 @@ dceRA|1|ra|ry|ři|ru|ro|ři|rou|ry|r|rám|ry|ry|rách|rami
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 chlap|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
 muž|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+chlap|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+holKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky|ek?|kám?|ky?|ky?|kách?|kami?
-chlap|2|?|a?|ovi,u?|a?|e?|ovi,u?|em?|i|ů?|ům?|y?|i,ové?|ech?|y?
+chłap|2|?|a?|ovi,u?|a?|e?|ovi,u?|em?|i|ů?|ům?|y?|i,ové?|ech?|y?
 muž|2|?|e?|i,ovi?|e?|i?|i,ovi?|em?|i,ové?|ů?|ům?|e?|i,ové?|ích?|i?
 -
-dcr|dceRA|0|cér|pohádKA
-muž|muž|0|chłap|chlap
+dcer|dceRA|0|cér|pohádKA|
+muž|muž|0|chłap|chłap|
+chlap|chlap|0|chłap|chłap|
+hol||0|||
+hol|holKA|0|cér|pohádKA|
 -
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 -
-SE|SE
+|SE||SE|
 -
 -
 -
@@ -47,9 +53,10 @@ zpívAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|a
 zeJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jdi?|jděme?|jděte?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?
 spívAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ajte|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-se|ze|seJÍT|seJÍT
-zpív|spív|zpívAT|spívAT
+se|seJÍT|ze|zeJÍT|
+zpív|zpívAT|spív|spívAT|
 -
+večer|večér|
 -
 -
 -

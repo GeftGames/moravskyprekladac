@@ -1,16 +1,19 @@
-TW v1.0
+TW v2
 tKostelec
+aGG
 d05.07.2023 11:12:09
 iten syn přijéł s toho Zlína a maminko, poťte, já váz dovezu Kostelec u G...
-c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf\n-http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131 (nevyčerpáno)\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (nevyčerpáno)
 g49.2604589,17.7016606
+x3
 q0
+oValašsko
 -
 -
 -
 -
 -
-z toho|s toho
+z toho|1|s toho|
 -
 -
 -
@@ -25,24 +28,24 @@ syn|2||a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 zlín|3|?|a|u?|?|e?|u,ě?|em?|-|-|-|-|-|-|-
 pohádKA|1|ka?|ky?|ce?|ku?|ko|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-syn|syn|0|syn|syn
-zlín|zlín|2|zlín|zlín
-mamin|pohádKA|0|mamin|pohádKA
+syn|syn|0|syn|syn|
+zlín|zlín|2|zlín|zlín|
+mamin|pohádKA|0|mamin|pohádKA|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-vY|-1|y|ás|ám|ás|y|ás|ámi
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+vY|y|ás|ám|ás|y|ás|ámi
 -
-tEN|-1|en|oho|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en|oho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
-vY|-1|y?|ás?|ám?|áz|y?|ás?|ámi?
+tEN|en|oho|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en|oho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JÁ|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+vY|y?|ás?|ám?|áz|y?|ás?|ámi?
 -
-t|tEN|tEN
-JÁ|JÁ
-v|vY|vY
+t|tEN|t|tEN|
+|JÁ||JÁ|
+v|vY|v|vY|
 -
 -
 -
@@ -55,9 +58,9 @@ přijET|22|-1|t?|du?|deš?|de?|deme?|dete?|dou?|ď?|ďme?|ďte?|éł|l?|la?|lo?|
 JÍT|95|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|poťte|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|šed?|šedši?|šedše?
 dovÉZT|30|-1|ést?|ezu|ezeš?|eze?|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ezl?|ezl?|ezla?|ezlo?|ezli?|ezly?|ezly?|ezla?|ezen?|ezen?|ezena?|ezeno?|ezeni?|ezeny?|ezeny?|ezena?
 -
-přije|přijeT|přijET
-JÍT|JÍT
-dov|dovÉZT|dovÉZT
+přije|přijeT|přije|přijET|
+|JÍT||JÍT|
+dov|dovÉZT|dov|dovÉZT|
 -
 -
 -

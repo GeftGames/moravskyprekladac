@@ -1,11 +1,12 @@
-TW v1.0
+TW v2
 tKojetín
 aGG
 d16.07.2023 20:28:07
-imňel atestaci zaz z veznamenáňim Kojetín PR\nbot. ocún (Colchicum): bogdalec Prostějovsko, Kojetín PR\nlevá ruka: čajda Kojetín PR\njá ťe dám šeďid a cegáňet! Kojetín PR\n\nhttps://edu.ceskatelevize.cz/video/7063-hana-peprek-i-cecuvka???
+i# Ze snčj\nmňel atestaci zaz z veznamenáňim Kojetín PR\nbot. ocún (Colchicum): bogdalec Prostějovsko, Kojetín PR\nlevá ruka: čajda Kojetín PR\njá ťe dám šeďid a cegáňet! Kojetín PR\n\n\nhttps://edu.ceskatelevize.cz/video/7063-hana-peprek-i-cecuvka???\n\n# Poznámky\n-Kojetín je nářečně Kojaťin???
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
 g49.3524347,17.3024424
-xlokální mluva
+x3
+rnář=Kojaťin
 q0
 oHaná
 -
@@ -13,9 +14,9 @@ oHaná
 -
 -
 -
-školní vysvědčení|atestaci
-zase s|zaz z
-levá ruka|čajda
+školní vysvědčení|1|atestaci|
+zase s|1|zaz z|
+levá ruka|1|čajda|
 -
 -
 -
@@ -29,24 +30,24 @@ stavení|0|?|?|?|?|?|?|m|?|?|m?|?|?|ch?|mi?
 ocún|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 pulEC|2|ec|ce?|ci?|ce?|če?|ci?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 -
-vyznamenání|stavení|0|veznamenáňi|stavení
-bohdal|pulEC|0|bogdal|pulEC
-ocún|ocún|0|bogdal|pulEC
+vyznamenání|stavení|0|veznamenáňi|stavení|
+bohdal|pulEC|0|bogdal|pulEC|
+ocún|ocún|0|bogdal|pulEC|
 -
 -
 -
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-tY|-1|y|[1],ebe|i,obě|[1],ebe|y|obě|ebou
-tI|-1|i|ěch|ěm|y|-|ěch|ěmi
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tY|y|[1],ebe|i,obě|[1],ebe|y|obě|ebou
+tI|i|ěch|ěm|y|-|ěch|ěmi
 -
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
-tY|-1|ty?|t[1],tebe?|ťě|t[1],tebe?|ty?|tobě?|tebou?
-tI|-1|i?|ěch?|ěm?|y?|-|ěch?|ěmi?
+JÁ|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+tY|ty?|t[1],tebe?|ťě|t[1],tebe?|ty?|tobě?|tebou?
+tI|i?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-JÁ|JÁ
-t|tY|tY
-t|tI|tI
+|JÁ||JÁ|
+t|tY|t|tY|
+t|tI|t|tI|
 -
 -
 -
@@ -62,16 +63,16 @@ cegáŇET|15|-1|ňet|adu?|adeš?|ade?|ademe?|adete?|adou?|aď?|aďme?|aďte?|adl
 dÁT|94|-1|át?|ám|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 šeĎID|15|-1|ďid|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
 -
-MÍT|MÍT
-l|cegá|lHÁT|cegáŇET
-kr|cegá|krÁST|cegáŇET
-d|dÁT|dÁT
-ši|še|šiDIT|šeĎID
+|MÍT||MÍT|
+l|lHÁT|cegá|cegáŇET|
+kr|krÁST|cegá|cegáŇET|
+d|dÁT|d|dÁT|
+ši|šiDIT|še|šeĎID|
 -
-zase|zaz
+zase|zaz|
 -
-s|z|
+s||z|
 -
-a
+a|a|
 -
 -

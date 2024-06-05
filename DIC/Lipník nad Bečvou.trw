@@ -6,7 +6,9 @@ iObyvatelé Lipníka vyslovují veskrze l střední jako v obecné češtině, n
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n<a href="https://archive.org/details/dialektologiemor02bartuoft/">Dialektologie moravská, František Bartoš</a>\n\n#Popis nářečí\n-Řeč města Lipníka má ráz lašský nedostatkem dlouhých slabik a přízvukem polským: patek, mačka, sedľak, chľib, poľivka, krupy, muka, dobry pivo — dobryho atd.
 g49.5270776,17.585816
 x1
+rnář=Lipňik
 q0
+oZáhoří>Lipeňské Záhoří
 -
 -
 Tam kde je bývalý <id=0,pods,pad=1,rod=muz> |Jak je <id=0,pods,pad=1,rod=muz> byvalej
@@ -21,6 +23,7 @@ jak je|1|jag je|
 -
 á|a
 ý|y
+mě|mje
 -
 lý|lej
 nec|nedz
@@ -36,6 +39,7 @@ pivO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 knížKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 brÁNA|1|ána|ány|áně|ánu|áno|áně|ánou,anou|ány|an|ánám,anám|ány|ány|ánách,anách|ánami,anami
 cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 patEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 mačKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
@@ -48,6 +52,7 @@ pivO|0|o|a?|u?|o?|o?|u?,ě?|em?|a?|?|úm?|a?|a?|ech?|y?
 kňiŽKA|1|žka?|žky?|žce?|žku?|žko?|žce?|žkou?|žky?|žek?|žkám?|šky|žky?|žkách?|žkami?
 brÁNA|1|ana|ány?|áňe?|ánu?|áno?|áňe?|ánou?,anou?|ány?|an?|ánám?,anám?|ány?|ány?|ánách?,anách?|ánami?,anami?
 ťehLA|1|la|ly?|le?|lu?|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
+mjestO|0|o|a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
 pát|pátEK|0|pat|patEK|
 omáč|omáčKA|0|mač|mačKA|
@@ -61,6 +66,7 @@ kníž|knížKA|0|kňi|kňiŽKA|
 chudobinec||0|chudobinedz||
 br|brÁNA|0|br|brÁNA|
 cih|cihLA|0|ťeh|ťehLA|
+měst|městO|0|mjest|mjestO|
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 jarní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-

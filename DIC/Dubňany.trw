@@ -4,6 +4,7 @@ aGG
 d25.10.2023 20:14:37
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 186 (nevyčerpáno)\n\n#Popis nářečí\n-jména mláďat zakončená na -e (húsa - húse, tela - tele)
 g48.9170935,17.0935998
+rnář=Dubňany
 q0
 oSlovácko
 -
@@ -153,16 +154,22 @@ mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 padNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la
 neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 mÍT|7|-1|ít?|ám?|áš?|á?|áme|áte?|ajú|ěj?|ějme?|ějte?|ěl?|ěl?|ňeṵa|ělo?|ňeli|ěly?|ěly?|ěla?
 BÝT|247|-1|být?|sem|jsi?|je|sme|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|biṵa|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 padNOUT|22|-1|nout?|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|u|l?|la?|lo?|li?|ly?|ly?|la?
 nEBÝT|23|-1|ébýt?|éjsem?|éjsi?|éňi|éjsme?|éjste?|éjsou?|ébudu?|ébudeš?|ébude?|ébudeme?|ébudete?|ébudou?|ébuď?|ébuďme?|ébuďte?|ébyl?|ébyl?|ébyla?|ébylo?|ébyli?|ébyly?|ébyly?|ébyla?
+mosET|5|-1|et?|ím?|íž|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
+JÍT|31|-1|íd|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
 m|mÍT|m|mÍT|
 |BÝT||BÝT|
 pad|padNOUT|pad|padNOUT|
 ne|neBÝT|n|nEBÝT|
+mus|musET|mos|mosET|
+|JÍT||JÍT|
 -
 doposud|dofčilku|
 pěkně,hezky|pjekňe|
@@ -172,6 +179,7 @@ také|taki|
 dnes|dnes|
 téměř,skoro|skoro|
 hned|hneť|
+stranou|bokem|
 -
 o||o|
 na||na|

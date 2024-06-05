@@ -2,7 +2,7 @@ TW v2
 tOstrožská Nová Ves
 aGG
 d17.07.2023 16:22:15
-c#Zdroje dat\n-<a href="https://archive.org/details/diaktologiemorav00bartuoft/page/30/mode/1up">Diaktologie moravská</a>\n\n#Popis nářečí\n-ł vyslovuje se čistě toliko ve farních osadách Nové Vsi Ostrožské, v Ostroze, v Blatnici a v Miloticích.\n- ůj-ova-ovo : súsedúj, Klimšúj (v Bílovicích, Kunovicích, Ostroze, Ostrožské Nové Vsi, v Miloticích, Mistříně
+c#Zdroje dat\n-<a href="https://archive.org/details/diaktologiemorav00bartuoft/page/30/mode/1up">Diaktologie moravská</a>\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Ostro%C5%BEsk%C3%A1+Nov%C3%A1+Ves+UH%22">snčj</a>\n\n#Popis nářečí\n-ł vyslovuje se čistě toliko ve farních osadách Nové Vsi Ostrožské, v Ostroze, v Blatnici a v Miloticích.\n- ůj-ova-ovo : súsedúj, Klimšúj (v Bílovicích, Kunovicích, Ostroze, Ostrožské Nové Vsi, v Miloticích, Mistříně
 g49.006525,17.4365121
 q0
 oSlovácko
@@ -19,12 +19,22 @@ běžný pracovní den|1|ďelňí deň|
 -
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 oblečení|0|||||||m|||m|||ch|mi
+brÁNA|1|ána|ány|áně|ánu|áno|áně|ánou,anou|ány|an|ánám,anám|ány|ány|ánách,anách|ánami,anami
+čarodějníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 hábI|0|?|?|?|?|?|?|m?|i|?|m?|?|?|ch?|mi?
+brÁNA|1|ána|ány?|áňe?|ánu?|áno?|áňe?|ánou?,anou?|ány?|an?|ánám?,anám?|ány?|ány?|ánách?,anách?|ánami?,anami?
+čarodeňiK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+erteple|1|?|u?|u?|?|e?|u?|em?|y?|ú?|úm?|e|y?|ech?|y?
 -
 d|dEN|0|d|dEN|
 oblečení|oblečení|0|háb|hábI|
+br|brÁNA|0|br|brÁNA|
+čarodějní|čarodějníK|0|čarodeňi|čarodeňiK|
+brambor|brambor|0|ertepl|erteple|
+||0|pod brázdu||
 -
 sousedŮV|-1|ovo|ova|ovu|ovo|ovo|ově,sousedovu|ovým|-|-|ova|ových|ovým|ova|ova|ových|ovými|-|-|ova|ovy|ově|ovu|ova|ově|ovou|-|-|ovy|ových|ovým|ovy|ovy|ových|ovými|-|-|ův|ova|ovu|ova|ův|ově,sousedovu|ovým|-|-|ovi|ových|ovým|ovy|ovi|ových|ovými|-|-|ův|ova|ovu|ův|ův|ově,sousedovu|ovým|-|-|ovy|ových|ovým|ovy|ovy|ových|ovými|-|-
 -
@@ -39,13 +49,17 @@ soused|sousedŮV|súsed|súsedÚJ|
 -
 -
 otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+sázET|15|-1|et|ím|íš|í|íme|íte|í,sázejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
 dožírAT|15|-1|at|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+saďIT|15|-1|it|ím?|íš?|í?|íme?|íte?|í?,sázejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
 otrav|otravOVAT|dožír|dožírAT|
+sáz|sázET|saď|saďIT|
 -
 -
 na||na|
+pod||pod|
 -
 -
 -

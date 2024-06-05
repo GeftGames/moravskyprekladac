@@ -2,7 +2,7 @@ TW v2
 tLhota
 aGG
 d01.01.2024 14:17:42
-c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Kel%C4%8D+VS+(Lhota)%22&oq=site%3Asncj.ujc.cas.cz+%22Kel%C4%8D+VS+(Lhota)">SNČJ</a>
+c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Kel%C4%8D+VS+(Lhota)%22&oq=site%3Asncj.ujc.cas.cz+%22Kel%C4%8D+VS+(Lhota)">SNČJ</a>\n-české nářeční texty arnošt str. 262 (nevyčerpáno)
 sKelč
 g49.4586242,17.8045605
 x3
@@ -43,6 +43,7 @@ maminKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 GATĚ|1|-|-|-|-|-|-|-|gatě|gatí|gatím|gatě|gatě|gatích|gatěmi
 KALHOTY|1|-|-|-|-|-|-|-|kalhoty|kalhot|kalhotám|kalhoty|kalhoty|kalhotách|kalhotami
 ránO|0|o|a|u|o|o|u|em|a||ům|a|a|ech|y
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 strom|3|?|u|u?|?|e?|u?,ě?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 stařejčEG|2|eg|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
@@ -57,6 +58,7 @@ nevěsTA|1|ta?|ty?|ťe?|tu?|to?|ťe|tou?|ty?|t?|tám?|ty?|ty?|tách?|tami?
 mamjenKA|1|ka?|ky?|ce|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 GAŤE|1|-|-|-|-|-|-|-|gaťe?|gaťí?|gaťím?|gaťe|gaťe?|gaťích?|gaťemi?
 ránO|0|o|a?|u?|o?|o?|u?|em?|a?|?|úm?|a?|a?|ech?|y?
+mjestO|0|o?|a?|u?|o|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
 strom|strom|0|strom|strom|
 dědeč|dědečEK|0|stařejč|stařejčEG|
@@ -68,7 +70,7 @@ kabát|kabát|0|kabá|kabát|
 ptáč|ptáčEK|0|ptáč|ptáčEK|
 strom|strom|0|strom|strom|
 noc|noc|0|noc|noc|
-měst|městO|0|mjest|městO|
+měst|městO|0|mjest|mjestO|
 |ŠATY|0||ŠATY|
 nevěst|nevěstA|0|nevjes|nevěsTA|
 ||2|hanča||
@@ -76,6 +78,7 @@ mamin|maminKA|0|mamjen|mamjenKA|
 |GATĚ|0||GAŤE|
 |KALHOTY|0||GAŤE|
 rán|ránO|0|rán|ránO|
+měst|městO|0|mjest|mjestO|
 -
 -
 -

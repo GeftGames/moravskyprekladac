@@ -1,6 +1,8 @@
-TW v1.0
+TW v2
 tRáječko
+aGG
 d23.07.2023 16:59:12
+c#ZDroje dat\n-https://moravscina.wordpress.com/2011/12/09/vtaci-hlava-a-srce/ (nevyčerpáno)
 g49.3946065,16.648307
 q0
 oMoravské Horácko
@@ -9,29 +11,62 @@ oMoravské Horácko
 -
 -
 -
-ach jo|ach ja
+ach jo|1|ach ja|
 -
 -
 -
 -
+sují|sojó
+-
+kvelb|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+krám|1||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+badyán|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+baterKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+-
+kvelb|3|?|o|u?|?|e?|u?,je?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+padiján|3|?|u?|u?||e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+baterKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ke|ky?|kách?|kami?
+-
+kvelb|kvelb|0|kvelb|kvelb|
+krám|krám|0|kvelb|kvelb|
+badyán|badyán|0|padiján|padiján|
+bater|baterKA|0|bater|baterKA|
+-
+špatnÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
+-
+špatNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|ní|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
+-
+špatn|špatnÝ|špat|špatNÝ|
+-
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+-
+JÁ|já?|mě?,(kňižňe) mne[2]?|mňe,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|tehu|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+-
+|JÁ||JÁ|
+t|tEN||TEN|
 -
 -
 -
 -
+běžET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
+kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
+pasOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+-
+bježET|7|-1|et?|ím?|íš?|í?|íme?|íte?|í?||me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+kOUPIT|15|-1|oupit?|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|ópil|oupil?|oupila?|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeňi?|oupeny?|oupeny?|oupena?
+pasOVAT|15|-1|ovat?|uji?|uješ?|uje?|ujeme?|ujete?|ojíó|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováňi?|ovány?|ovány?|ována?
+-
+běž|běžET|bjež|bježET|
+k|kOUPIT|k|kOUPIT|
+pas|pasOVAT|pas|pasOVAT|
+nepas|pasOVAT|nepas|pasOVAT|
+-
+-
+do||du|
+pro||pru|
 -
 -
 -
--
--
--
--
--
--
--
--
--
--
--
--
--
-ach
+ach|ach|

@@ -11,6 +11,7 @@ oHorácko
 -
 -
 -
+Za dva roky dám oltář ozdobit.|1|Druhým rokem dám voltář štafirovat.|
 -
 -
 tlustý|1|jag ďelo|
@@ -19,20 +20,27 @@ ostružiny|1|černí malini|
 neodlehčená cihla,plná cihla|1|plná cihla|
 -
 -
+o|vo
 -
 -
 -
 bratranEC|2|ec|ce|covi,ci|ce|če|covi,ci|cem|ci|ců|cům|ce|ci|cích|ci
 česneK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
+roK|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích|ky
+oltář|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
 bratránEC|2|ek|ce?|covi?,ci?|ce?|če?|covi?,ci?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
 česneK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 cihLA|1|la|ly?|le?|lu?|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
+roK|3|k?|ku?,ka?|ku?|k?|ku?|ku?,ce?|kem|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+voltář|3|?|e?|i?||i?|i?|em?|e?|ú?|úm?|e?|e?|ích?|i?
 -
 bratran|bratranEC|0|bratrán|bratránEC|
 česne|česneK|0|česne|česneK|
 cih|cihLA|0|cih|cihLA|
+ro|roK|0|ro|roK|
+oltář|oltář|0|voltář|voltář|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
@@ -55,17 +63,24 @@ takov|takovÝ|tak|takÝ|
 ně|něCO|ňe|ňeCO|
 |JÁ||JÁ|
 -
+druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 -
+druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
+dru|druHÝ|dru|druHÝ|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 vnímAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 BÝT|247|-1|být?|jsem?|seš|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 čUT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ul|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+dÁT|30|-1|át?|ám|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |BÝT||BÝT|
 vním|vnímAT|ču|čUT|
+d|dÁT|d|dÁT|
+||štafirovat||
 -
 zítra|zejtra|
 už|už|

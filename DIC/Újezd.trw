@@ -3,15 +3,17 @@ tÚjezd
 aGG
 d27.06.2023 15:12:40
 ion dicki postavja sa u ňich, babičko, co děłáte? Újezd u Viz.;
-c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
+c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf\nhttp://folksong.eu/cs/song/1344 (vyčerpáno)\n-http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131 (nevyčerpáno)\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (nevyčerpáno)
 g49.1685169,17.9044631
-xlokální mluva
+x3
 q0
+oValašsko
 -
 -
 -
 -
 -
+pro tebe|1|pro tebe|
 -
 -
 -
@@ -21,15 +23,23 @@ hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 stromEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 čas|3||u|u||e|e,u|em|y|ů|ům|y|y|ech|y
+pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|ánům|ány|áni,ánové|ánech|ány
+bŮH|2|ůh|oha|ohu,ohovi|oha|ože|ohu,ohovi|ohem|-|-|-|-|-|-|-
 -
 hrad|3||u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 stromEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|kách,cích?|ky?
 pohádKA|1|ka?|ky?|ce?|ku?|ko|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 čas|3||u?|u?|?|e?|e?,u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+pÁN|2|án|ána?,áňe?|ánu?,ánovi?|ána?|ane?|ánu?,ánovi?|ánem?|áňi?,ánové?|ánú?|ánúm?|ány?|áňi?,ánové?|ánech?|ány?
+bÚH|2|úh|oha?|ohu?,ohovi?|oha?|ože?|ohu?,ohovi?|ohem?|-|-|-|-|-|-|-
 -
 brous|stromEK|0|bramor|hrad|
 babič|pohádKA|0|babič|pohádKA|
 čas|čas|0|čas|čas|
+||0|kosičky||
+||0|galanečka, galanečku  4p||
+p|pÁN|0|p|pÁN|
+b|bŮH|0|b|bÚH|
 -
 -
 -
@@ -38,16 +48,28 @@ ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (po
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 CO|co|čeho|čemu|co,-č|-|čem|čím
+mŮJ|ůj|ého|ému|ého|ůj|ém|ým|ji,í|ých|ým|je,é|ji,í|ých|ými|ůj|ého|ému|ůj|ůj|ém|ým|je,é|ých|ým|je,é|je,é|ých|ými|je,á|jí,é|jí,é|ji,ou|je,á|jí,é|jí,ou|je,é|ých|ým|je,é|je,é|ých|ými|je,é|ého|ému|je,é|je,é|ém|ým|je,á|ých|ým|je,á|je,á|ých|ými
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 -
 ON|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
 SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 ONI|oni?|jich?,#ňich|jim,nim*?|je,ně*?|-|nich*?|jimi,nimi*?
 CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+mÚJ|új?|ého?|ému?|ého?|új?|ém?|ým?|ji?,í?|ých?|ým?|je?,é?|ji?,í?|ých?|ými?|új?|ého?|ému?|új?|új?|ém?|ým?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|oja|jí?,é?|jí?,é?|ji?,ou?|je?,á?|jí?,é?|jí?,ou?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|je?,é?|ého?|ému?|je?,é?|je?,é?|ém?|ým?|je?,á?|ých?|ým?|je?,á?|je?,á?|ých?|ými?
+JÁ|já|mňa|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
+ONA|ona|jí?,ňí*?|jí?,ňí*?|ju,ňi*?|-|ňí*?|jí?,ňí*?
+TY|ty?|ťe[1]?,tebe?|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
 -
 |ON||ON|
 |SE||SE|
 |ONI||ONI|
 |CO||CO|
+m|mŮJ|m|mÚJ|
+|JÁ||JÁ|
+|ONA||ONA|
+t|tY||TY|
 -
 -
 -
@@ -55,19 +77,34 @@ CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
 postavIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 dělAT|79|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+vyJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla
+mySLET|15|-1|slet|slím|slíš|slí|slíme|slíte|slí,myslejí|sli|sleme|slete|slel|slel|slela|slelo|sleli|slely|slely|slela|šlen|šlen|šlena|šleno|šleni|šleny|šleny|šlena
+naJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 postavIT|30|-1|it?|ím?|íš?|ja|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
 ďełAT|79|-1|at?|ám?|áš?|á?|áme?|áte|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+vyJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jďi?|jďeme?|jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly|šla?
+mySLET|15|-1|slet?|slím?|slíš?|slí|slíme?|slíte?|slí?,myslejí?|sli?|sleme?|slete?|slel?|slel?|slela?|slelo?|sleli?|slely?|slely?|slela?|šlen?|šlen?|šlena?|šleno?|šleňi?|šleny?|šleny?|šlena?
+naJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jďi?|jďeme?|jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
 postav|postavIT|postav|postavIT|
 děl|dělAT|ďeł|ďełAT|
 |BÝT||BÝT|
+vy|vyJÍT|vy|vyJÍT|
+||ošidit Ošidí ||
+my|mySLET|my|mySLET|
+na|naJÍT|na|naJÍT|
 -
 vždy|dycky|
 kdy|gdy|
+včera|včera|
+odpoledne|odpoledňa|
+vysoko|vysoko|
 -
+pro||pro|
 -
 jak|jag|
+a|a|
 -
 -

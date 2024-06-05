@@ -3,7 +3,7 @@ tVelké Bílovice
 aGG
 d11.06.2023 19:38:49
 i#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 256
-c#Zdroje dat\n-Nářečí na Břeclavsku a v dolním Pomoraví; František Svěrák\n-https://sncj.ujc.cas.cz/\n\n#Popis nářečí\n-Někde za kv, sv, tv, chv se používá kf, sf, tf, chf \n-Některé slova mají protetické H (hudit)
+c#Zdroje dat\n-Nářečí na Břeclavsku a v dolním Pomoraví; František Svěrák\n-https://sncj.ujc.cas.cz/\n-<a href="https://www.velkebilovice.cz/assets/File.ashx?id_org=17867&id_dokumenty=1422#page=10">Zpravodaj města Bílovice, květen-červen 2019,  str. 10</a>(vyčerpáno)\n\n#Popis nářečí\n-Někde za kv, sv, tv, chv se používá kf, sf, tf, chf \n-Některé slova mají protetické H (hudit)
 g48.8499203,16.8905079
 q0
 oSlovácko>Hanácké Slovácko
@@ -31,12 +31,18 @@ bratR|2|r|ra|ru,rovi|ra|ře|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 dukát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
+krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
+slepicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 -
 almaRA|1|ra?|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 bratR|2|r?|ra?|ru?,rovi?|ra?|ře?|ru?,rovi?|rem?|ři|rú?|rúm?|ry?|ři?|rech?|ry?
 dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 dukát|3|?|u?|u?|?|e?|u?|em?|y?|ú|úm?|y?|y?|ech?|y?
 svadBA|1|ba|by?|bje?|bu?|bo?|bje?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
+krÍV|1|ív|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+mlíKO|0|ko|ka?|ku?|ko?|ko?|ku?,ce?|kem?|ka?|k?|kúm?|ka?|ka?|cích?,kách?|ky?
+slípKA|1|ka|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
 -
 hrdost||0|hrdosť||
 alma|almaRA|0|hal/r?rma|almaRA|
@@ -44,6 +50,9 @@ brat|bratR|0|brat|bratR|
 d|dEN|0|d|dEN|
 dukát|dukát|0|dukát|dukát|
 svat|svatBA|0|svad|svadBA|
+kr|krEV|0|kr|krÍV|
+mlé|mléKO|0|mlí|mlíKO|
+slepic|slepicE|0|slíp|slípKA|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 čeSKÝ|-1|ské|ského|skému|ské|ské|ském|ským|-|-|ská|ských|ským|ská|ská|ských|skými|-|-|ská|ské|ské|skou|ská|ské|skou|-|-|ské|ských|ským|ské|ské|ských|skými|-|-|ský|ského|skému|ského|ský|ském|ským|-|-|ští|ských|ským|ské|ští|ských|skými|-|-|ský|ského|skému|ský|ský|ském|ským|-|-|ské|ských|ským|ské|ské|ských|skými|-|-

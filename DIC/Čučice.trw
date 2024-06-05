@@ -2,7 +2,7 @@ TW v2
 tČučice
 aGG
 d14.04.2023 15:07:02
-c#Zdroje dat\n-ŠIMEČKOVÁ, Marta a kol., 2022–. Ve slovech [online]. Brno: Ústav pro jazyk český AV ČR [cit. RRRR-MM-DD]. Dostupné z: <a href="https://veslovech.cz/zvukovy-archiv/zastrelena-hlidka/">https://veslovech.cz/</a>
+c#Zdroje dat\n-ŠIMEČKOVÁ, Marta a kol., 2022–. Ve slovech [online]. Brno: Ústav pro jazyk český AV ČR [cit. RRRR-MM-DD]. Dostupné z: <a href="https://veslovech.cz/zvukovy-archiv/zastrelena-hlidka/">https://veslovech.cz/</a>\n-české nářeční texty ,arnošt str. 182 (nevyčerpáno)
 g49.1373169,16.2781696
 q0
 oPodhorácko
@@ -59,6 +59,7 @@ noc|1||i|i||i|i|í|i,řečně) noce|í|ím|i,řečně) noce|i,řečně) noce|íc
 hlídKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 radnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 otEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|cové|ců|cům|ce|cové|cích|ci
+měsíc|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
 směNA|1|na?|ny?|ňe?|nu?|no?|ňe|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 čtvrT|1|t?|ťe?|ťi?|t?|ťi?|ťi|ťí?|ťe?|ťí?|ťím?|ťe?|ťe?|ťích?|ťemi?
@@ -74,6 +75,7 @@ noc|1|?|i?|i?|?|i?|i|í?|i?,řečňe) noce?|í?|ím?|i?,řečňe) noce?|i?,řeč
 hliDKA|1|dka?|dky?|dce?|tko|dko?|dce?|dkou?|dky?|dek?|dkám?|dky?|dky?|dkách?|dkami?
 radňicE|1|e?|e?|i?|i?|e?|i|í?|e?|?|ím?|e?|e?|ích?|emi?
 otEC|2|ec|ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|cové?|cú?|cúm?|ce?|cové?|cích?|ci?
+mňesic|3|?|e?|i?|?|i?|i?|em?|e?|u|úm?|e?|e?|ích?|i?
 -
 směn|směnA|0|smňe|směNA|
 čtvrt|čtvrt|0|čtvr|čtvrT|
@@ -89,6 +91,7 @@ noc|noc|0|noc|noc|
 hlíd|hlídKA|0|hli|hliDKA|
 radnic|radnicE|0|radňic|radňicE|
 ot|otEC|0|ot|otEC|
+měsíc|měsíc|0|mňesic|mňesic|
 -
 odpolední|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 noční|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
@@ -169,6 +172,7 @@ tam|tam|
 celkem|celkem|
 tady|tade|
 právě|právje|
+měsíčně|mňesičňe|
 -
 na||na|
 o||vo|

@@ -1,39 +1,53 @@
-TW v1.0
+TW v2
 tZádveřice
 aGG
 d06.07.2023 16:01:22
 ihneď ho ptali (žádali), lesťi by ím nemohł ukázat cestu Zádveřice
-c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf
+c#Zdroje dat\n-https://digilib.phil.muni.cz/_flysystem/fedora/pdf/120567.pdf\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (nevyčerpáno)
 g49.215843,17.8026841
 q0
+oValašsko
 -
 -
 -
 -
 -
-hned ho žádali|hneď ho ptali
+hned ho žádali|1|hneď ho ptali|
 -
 -
 -
+bě|b́e
+ou|ú
 -
+ala|ała
+ou|ú
 -
 cestA|0|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+bětA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+brÁNA|1|ána|ány|áně|ánu|áno|áně|ánou,anou|ány|an|ánám,anám|ány|ány|ánách,anách|ánami,anami
 -
 cestA|0|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+bětKA|1|ka|ty?|ťe?|tu?|to?|ťe?|tou?|ty?|t?|tám?|ty?|ty?|tách?|tami?
+brÁNA|1|ána?|ány?|áňe?|ánu?|áno?|áňe?|ánú|ány?|an?|ánám?,anám?|ány?|ány?|ánách?,anách?|ánami?,anami?
 -
-cest|cestA|0|cest|cestA
+cest|cestA|0|cest|cestA|
+bět|bětA|2|b́et|bětKA|
+br|brÁNA|0|br|brÁNA|
 -
 -
 -
 -
-ONI|-1|oni|jich,#nich|jim,#nim|je,#ně|-|nich|jimi,#nimi
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+ONI|oni|jich,#nich|jim,#nim|je,#ně|-|nich|jimi,#nimi
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-ONI|-1|oni?|jich?,nich*?|ím,#nim?|je?,#ně?|-|#nich?|jimi?,nimi*?
-ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|něm**?|jím,ním*?
+ONI|oni?|jich?,nich*?|ím,#nim?|je?,#ně?|-|#nich?|jimi?,nimi*?
+ON|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|něm**?|jím,ním*?
+SE|-|sebe?|si?,sobje?|sa,sebe?|-|sobje?|sebou?
 -
-ONI|ONI
-ON|ON
+|ONI||ONI|
+|ON||ON|
+|SE||SE|
 -
 -
 -
@@ -42,21 +56,30 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
 ukÁZAT|30|-1|ázat|ážu|ážeš|áže|ážeme|ážete|ážou|až|ažme|ažte|ázal|ázal|ázala|ázalo|ázali|ázaly|ázaly|ázala|ázán|ázán|ázána|ázáno|ázáni|ázány|ázány|ázána
 ptÁT_SE|22|-1|át_se|ám se|áš se|á se|áme se|áte se|ají se|ej se|ejme se|ejte se|al se|al se|ala se|alo se|ali se|aly se|aly se|ala se
+dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by
 mOCT|5|-1|oct?|ohu,(hovorově) můžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou,(hovorově) můžou?|ohł|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 ukÁZAT|30|-1|ázat|ážu?|ážeš?|áže?|ážeme?|ážete?|ážou?|až?|ažme?|ažte?|ázal?|ázal?|ázala?|ázalo?|ázali?|ázaly?|ázaly?|ázala?|ázán?|ázán?|ázána?|ázáno?|ázáni?|ázány?|ázány?|ázána?
 ptÁT_SE|22|-1|át_se?|ám se?|áš se?|á se?|áme se?|áte se?|ají se?|ej se?|ejme se?|ejte se?|al se?|al se?|ala se?|alo se?|ali|aly se?|aly se?|ala se?
+dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ała|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+uťíkAT|7|-1|ad|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 -
-BÝT|BÝT
-m|mOCT|mOCT
-nem|mOCT|mOCT
-uk|ukÁZAT|ukÁZAT
-pt|ptÁT_SE|ptÁT_SE
+|BÝT||BÝT|
+m|mOCT|m|mOCT|
+nem|mOCT|nem|mOCT|
+uk|ukÁZAT|uk|ukÁZAT|
+pt|ptÁT_SE|pt|ptÁT_SE|
+d|dÁT|d|dÁT|
+utík|utíkAT|uťek|uťíkAT|
 -
-hned|hneď
+hned|hneď|
+tak|?||tož|
+dolů|dółu|
 -
 -
-jestli|lesťi
+jestli|lesťi|
+a|a|
 -
 -

@@ -1,17 +1,22 @@
-TW v0.1
+TW v2
 tKašava
 aGG
 d08.06.2023 21:05:02
-c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str.275
+išła dávno — šag uš połedňe! Kašava („soudím tak podle toho, že už je poledne“);\npřišéł partyzán, že kúpit kozu Kašava;
+c#Zdroje dat\n-Nástin české dialektologie-Bělič Jaromír; str.275\n-http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131 (vyčerpáno)\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (vyčerpáno)
 g49.2976203,17.7871369
 q0
+oValašsko>Podřevnicko
 -
 -
 -
-Jinak se nesvítilo.|Inačí sv'etła nebyło.
+Jinak se nesvítilo.|1|Inačí sv'etła nebyło.|
+Přišel partizán, že by si přál koupit kozu.|1|Přišéł partyzán, že kúpit kozu.|
+Soudím tak podle toho, že už je poledne.|1|Šła dávno — šag uš połedňe!|
 -
+vždyť už je poledne|1|šag uš połedňe|
 -
-dnešní časy|fčilej čase
+dnešní časy|1|fčilej čase|
 -
 -
 -
@@ -21,24 +26,31 @@ lal|láł
 -
 dŮM|3|ům|omu|omu|ům|ome|omu,omě|omem|omy|omů|omům|omy|omy|omech|omy
 vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+kozA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
+polednE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ech|y
 -
 dŮM|3|ům?|omu?|omu?|ům?|ome?|om'e|omem?|omy?|omů?|omům?|omy?|omy?|omech?|omy?
 vodA|1|a?|y?|ě?|u?|o?|ě?|ú|y?|?|ám?|y?|y?|ách?|ami?
+kozA|1|a?|y?|e?|u|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+poledNE|0|ňe|ne?|ňi?|ne?|ne?|ňi?|nem?|ne?|ňí?|ňím?|ne?|ne?|nech?|ny?
 -
-d|dŮM|dŮM
-nesnáze|nesnáza||
+d|dŮM|0|d|dŮM|
+nesnáze||0|nesnáza||
+||0|partyzán||
+koz|kozA|0|koz|kozA|
+poledn|polednE|0|połed|poledNE|
 -
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
-SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
-tEN|-1|en?|oho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+tEN|en?|oho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-SE|SE
-t|tEN|tEN
+|SE||SE|
+t|tEN|t|tEN|
 -
 -
 -
@@ -46,21 +58,34 @@ t|tEN|tEN
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 neBÝT|119|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
 musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
+kOUPIT|15|-1|oupit|oupím|oupíš|oupí|oupíme|oupíte|oupí|up|upme|upte|oupil|oupil|oupila|oupilo|oupili|oupily|oupily|oupila|oupen|oupen|oupena|oupeno|oupeni|oupeny|oupeny|oupena
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 nEBÝT|119|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|éjsú|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|ebyło|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
 musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí,musí?|éł|éł|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
+přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šéł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
+kOUPIT|15|-1|úpit|oupím?|oupíš?|oupí?|oupíme?|oupíte?|oupí?|up?|upme?|upte?|oupil?|oupil?|oupila?|oupilo?|oupili?|oupily?|oupily?|oupila?|oupen?|oupen?|oupena?|oupeno?|oupeňi?|oupeny?|oupeny?|oupena?
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šła|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
-BÝT|BÝT
-ne|n|neBÝT|nEBÝT
-musE|musET|musET
+|BÝT||BÝT|
+ne|neBÝT|n|nEBÝT|
+musE|musET|musE|musET|
+při|přiJÍT|při|přiJÍT|
+k|kOUPIT|k|kOUPIT|
+||||
+|JÍT||JÍT|
 -
-ještě|ešče
-nyní|fčíl
-jen,jenom|enom
+ještě|ešče|
+nyní|fčíl|
+jen,jenom|enom|
+|dávno|
+už|uš|
 -
-i|aj|
-u|
+i||aj|
+u||u|
 -
+že|že|
 -
 -
