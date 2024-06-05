@@ -1,19 +1,20 @@
-TW v0.1
+TW v2
 tStupešice
 d25.04.2023 19:10:44
 isymbol: ǝ
 g48.9868574,16.0756433
 q0
+oMoravské Horácko>Dolsko
 -
 -
 -
 -
 -
-když jsme|dejsme
+když jsme|1|dejsme|
 -
-se
-kdyby|debe
-tuhle|tudle
+se|1|se|
+kdyby|1|debe|
+tuhle|1|tudle|
 -
 um|hom
 -
@@ -30,35 +31,35 @@ pÁN|2|án|ána,áně|ánu,ánovi|ána|ane|ánu,ánovi|ánem|áni,ánové|ánů|
 -
 pÁN|2|an|ána,áně?|ánu,ánovi?|ána?|ane?|ánu,ánovi?|ánem?|áni,ánové?|ánů?|ánům?|ány?|áni,ánové?|ánech?|ány?
 -
-p|pÁN|pÁN
-primář||
-most||
-cukání|cokáňi||
-smrt||
+p|pÁN|0|p|pÁN|
+primář||0|primář||
+most||0|most||
+cukání||0|cokáňi||
+smrt||0|smrt||
 -
-zelenÝ|-1|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými|á|é|é|ou|á|é|ou|é|ých|ým|é|é|ých|ými|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
+zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
-zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?|á?|é?|é?|ou?|á?|é?|ou?|é?|ých?|ým?|é?|é?|ých?|ými?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|'|ých?|ým?|é?|'?|ých?|ými?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|é?|ých?|ým?|é?|é?|ých?|ými?
+zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||é?|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||'|ých?|ým?|é?|'?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
-převezen|převežen|zelenÝ|zelenÝ
+převezen|zelenÝ|převežen|zelenÝ|
 -
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
-vY|-1|y|ás|ám|ás|y|ás|ámi
-žádnÝ|-1|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
-tENHLE|-1|enhle|ohohle|omuhle|hohle (životný),enhle (neživotný)|-|omhle|ímhle
-tENTO|-1|ento|ohoto|omuto|ohoto|-|omto|ímto|||||||||||||||||||||||||||||||||||||||||||||||||
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+vY|y|ás|ám|ás|y|ás|ámi
+žádnÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
+tENHLE|enhle|ohohle|omuhle|hohle (životný),enhle (neživotný)|-|omhle|ímhle
+tENTO|ento|ohoto|omuto|ohoto|-|omto|ímto|||||||||||||||||||||||||||||||||||||||||||||||||
 -
-ON|-1|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|ňem|jím,ním*?
-vY|-1|y?|ás|ám?|ás?|y?|ás?|ámi?
-žádnÝ|-1|ý?|ého?|ému?|ého?|-|ém?|ým?|i|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
-tENHLE|-1|enhle?|ohohle?|omuhle?|hohle?|-|omhle?|ímhle?|i|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|enhle|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
-tENTO|-1|ento?|ohoto?|omuto?|ohoto?|-|omto?|ímto?|i|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|enhle|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+ON|on?|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho|-|ňem|jím,ním*?
+vY|y?|ás|ám?|ás?|y?|ás?|ámi?
+žádnÝ|ý?|ého?|ému?|ého?|-|ém?|ým?|i|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+tENHLE|enhle?|ohohle?|omuhle?|hohle?|-|omhle?|ímhle?|i|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|enhle|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
+tENTO|ento?|ohoto?|omuto?|ohoto?|-|omto?|ímto?|i|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|enhle|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
 -
-ON|ON
-vY|vY|vY
-žádn|žádnÝ|žádnÝ
-tE|tENHLE|tENHLE
-tE|tENTO|tENTO
+|ON||ON|
+vY|vY|vY|vY|
+žádn|žádnÝ|žádn|žádnÝ|
+tE|tENHLE|tE|tENHLE|
+tE|tENTO|tE|tENTO|
 -
 -
 -
@@ -81,29 +82,29 @@ stÁT|7|-1|át?|ojím?|ojíš?|ojí?|ojíme?|ojíte?|ojí?|ůj?|ůjme?|ůjte?|á
 bévAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 cukAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-ne|neBÝT|neBÝT
-vZ|vZÍT|vZÍT
-umřÍ|umřÍT|homřIT
-musE|musET|musET
-|BÝT|BÝT
-st|stÁT|stÁT
-bývA|bývAT|bývAT
+ne|neBÝT|ne|neBÝT|
+vZ|vZÍT|vZ|vZÍT|
+umřÍ|umřÍT|umřÍ|homřIT|
+musE|musET|musE|musET|
+|BÝT||BÝT|
+st|stÁT|st|stÁT|
+bývA|bývAT|bývA|bývAT|
 -
-už|uš
-domů|dom
-tady|tade
-ještě|ešče
-také,taky|take
-dál,dále|dál
-klidně|klidňe
+už|uš|
+domů|dom|
+tady|tade|
+ještě|ešče|
+také,taky|take|
+dál,dále|dál|
+klidně|klidňe|
 -
-na|
-za|
-po|
-při|pře|
+na||na|
+za||za|
+po||po|
+při||pře|
 -
-a
-když|deš
-jak
+a|a|
+když|deš|
+jak|jak|
 -
 -

@@ -12,6 +12,7 @@ oValašsko>Podřevnicko
 -
 -
 -
+celý celičký den|1|cełý bohovaný deň|
 -
 -
 -
@@ -21,11 +22,15 @@ chvÁLA|1|ála|ály|ále|álu|álo|ále|álou|ály|al|álám|ály|ály|álách|�
 stodolA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 chlap|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
+KAMNA|0|-|-|-|-|-|-|-|kamna|kamen|kamnům|kamna|kamna|kamnech|kamny
 -
 chvÁLA|1|áła|ály?|ále?|álu?|álo?|ále?|álou?|ály?|al?|álám?|ály?|ály?|álách?|álami?
 stodolA|1|a?|y?|e?|u?|o?|e?|ú|y?|?|ám?|y?|y?|ách?|ami?
 rúžA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 chlap|2|?|a?|ovi,u?|a?|e?|ovi,u?|em?|i,ové?|ú|ům?|y?|i,ové?|ech?|y?
+dEN|0|en?|ne?|ňi?,nu?|eň|ne?,ňi?|ňi?,nu?|nem?|ňi?,ny?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?|nech?|ny?
+KAMNA|0|-|-|-|-|-|-|-|kamna?|kamen|kamnúm?|kamna?|kamna?|kamnech?|kamny?
 -
 chv|chvÁLA|0|chv|chvÁLA|
 stodol|stodolA|0|stodoł|stodolA|
@@ -33,12 +38,18 @@ růž|růžE|0|rúž|rúžA|
 ||0|chóra||
 ||0|zbóňík||
 ||0|tróňík||
+d|dEN|0|d|dEN|
+|KAMNA|0||KAMNA|
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
+celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 dobRÝ|-1|ré?|rého|rému?|ré?|ré?|rém?|rým?|?|?|rá?|rých?|rým?|rá?|rá?|rých?|rými?|?|?|rá?|ré?|ré?|rou?|rá?|ré?|rou?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?|rý?|rého|rému?|rého?|rý?|rém?|rým?|?|?|ří?|rých?|rým?|ré?|ří?|rých?|rými?|?|?|rý?|rého|rému?|rý?|rý?|rém?|rým?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?
+ceŁÝ|-1|łé?|łého?|łému?|łé?|łé?|łém?|łým?|-|-|łá?|łých?|łým?|łá?|łá?|łých?|łými?|-|-|łá?|łé?|łé?|łou?|łá?|łé?|łou?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-|łý?|łého?|łému?|łého?|łý?|łém?|łým?|-|-|łí?|łých?|łým?|łé?|łí?|łých?|łými?|-|-|łý?|łého?|łému?|łý|łý?|łém?|łým?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-
 -
 dob|dobRÝ|dob|dobRÝ|
+cel|celÝ|ce|ceŁÝ|
+||bohovaný ||
 -
 nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
 -
@@ -52,19 +63,23 @@ n|nÁŠ|n|nÁŠ|
 běžET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
 zvoNIT|15|-1|nit|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|nil|nil|nila|nilo|nili|nily|nily|nila|něn|něn|něna|něno|něni|něny|něny|něna
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+seDĚT|15|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla|zen, seděn|zen, seděn|zena, seděna|zeno, seděno|zeni, seděni|zeny, seděny|zeny, seděny|zena, seděna
 -
 běžET|7|-1|et?|ím?|íš?|í|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 zvoNIT|15|-1|nit?|ním?|níš?|ní?|níme?|níte?|ní?|ň?|ňme?|ňte?|nil?|nil?|nila?|nilo?|nili?|nily?|nily?|nila?|něn?|něn?|něna?|něno?|něni?|něny?|něny?|něna?
 BÝT|247|-1|byt|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|były|były|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+seĎET|15|-1|ďet?|ďím?|ďíš?|ďí|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďel?|ďel?|ďela?|ďelo?|ďeli?|ďely?|ďely?|ďela?|zen?, seďen?|zen?, seďen?|zena?, seďena?|zeno?, seďeno?|zeňi?, seďeňi?|zeny?, seďeny?|zeny?, seďeny?|zena?, seďena?
 -
 běž|běžET|běž|běžET|
 ||róchat||
 zvo|zvoNIT|zvó|zvoNIT|
 |BÝT||BÝT|
+se|seDĚT|se|seĎET|
 -
 domů|dóm|
 loni|lóňi|
 -
+u||u|
 -
 -
 -

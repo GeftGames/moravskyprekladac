@@ -6,10 +6,12 @@ ibouda - cúz seskupení snopů, panák: len stavjali do panákú, konopje do b�
 c#Zdroje dat\n-snčj
 g49.0837599,18.0220855
 q0
+oValašsko
 -
 -
 -
 Zůstal mi dlužen.|1|Ostáł ňe dłužen.|
+Cit, sú tu aj bosky!|1|Klid, jsou tady nezletilí!|
 -
 -
 do sytosti|1|dosita|
@@ -112,7 +114,7 @@ zůstaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 zaplaTIT|30|-1|tit|tím|tíš|tí|tíme|títe|tí|ť|ťme|ťte|til|til|tila|tilo|tili|tily|tily|tila|cen|cen|cena|ceno|ceni|ceny|ceny|cena
 dlužIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sú|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by|bychom?|byste?|by?
 trvAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|ało|ali?|aly?|aly?|ala?
 musET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|eli|ela?,musila?
 žÍT|15|-1|ít?|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
@@ -138,6 +140,7 @@ zůsta|zůstaT|ost|zústaT|
 zapla|zaplaTIT|zapla|zaplaŤIT|
 nezapla|zaplaTIT|nezapła|zaplaŤIT|
 dluž|dlužIT|dłuž|dłužIT|
+||cit||
 -
 dlouho|dĺho||dłúho|
 déle|dłhéj|
@@ -147,11 +150,14 @@ teď,nyní|fčil|
 jen,jenom|enom||len|
 donedávna|donedávna|
 už|už|
+tady|tu|
+naboso,boso,bosky|bosky|
 -
 na||na|
 ve||ve|
 v||v||f|
 do||do|
+i||aj|
 -
 a|a|
 ale|ale|

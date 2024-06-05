@@ -5,6 +5,7 @@ d23.10.2023 20:05:25
 c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/dialektologiemor02bartuoft/page/140/mode/1up (nevyčerpáno)
 g49.8565676,16.902328
 q0
+oHaná>Horní Haná
 -
 -
 -
@@ -19,6 +20,7 @@ něco drobného|1|cvergle|
 velké jmění|1|baňkál|
 skoro s námi|1|pomalu s námi|
 je velmi zmrzlá|1|jak cén umrzlá|
+velmi zmrzlá|1|jak cén umrzlá|
 -
 -
 -
@@ -36,6 +38,7 @@ olomouc|1||e|i||i|i|í,ě) Olomoucem|e|í|ím|e|e|ích|emi
 hrnEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 koš|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 zemĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
+cín|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 bêmbel|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce?|ce?|cích?|ci?
 pokoj|3||e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
@@ -49,6 +52,7 @@ olomouc|1|?|e|i?|?|i?|i?|í,ě) Olomoucem?|e?|í?|ím?|e?|e?|ích?|emi?
 hrnEC|3|ec?|ce?|ci?|ec?|ci?|ci?|cem?|ce?|ců?|cům?|ce|ce?|cích?|ci?
 koš|3|?|e?|i?|?|i?|i|em?|e?|ů?|ům?|e?|e?|ích?|i?
 zemĚ|1||ě?|i?|i?|ě?|i?|í?|ě?|í?|ím?|ě?|ě?|ích?|ěmi?
+cén|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
 ran|ranEC|0|bêmbel|bêmbel|
 ušpiněnec||0|čuňák||
@@ -64,6 +68,7 @@ olomouc|olomouc|2|volomóc|olomouc|
 hrn|hrnEC|0|hrn|hrnEC|
 koš|koš|0|koš|koš|
 zem|zemĚ|0|zem|zemĚ|
+cín|cín|0|cén|cén|
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 novÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -73,6 +78,7 @@ novÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými
 -
 čistotn|zelenÝ|cód|zeleNÉ|
 nov|novÝ|nov|novÝ|
+zmrzlá||umrzlá||
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou

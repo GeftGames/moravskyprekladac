@@ -7,7 +7,7 @@ ibyli bysťe přyšli o desed minut, była bych spała Rybí NJ;\n\nčja 814 Ryb
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
 lKravařská nářečí
 g49.6006256,18.0753789
-xmístní mluva
+x0
 q0
 oKravařsko
 -
@@ -90,6 +90,7 @@ tetA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 svět|3||a|u||e|ě|em|y|ů|ům|y|y|ech|y
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
 hlavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+větEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 -
 tatA|2|a|y|ovi|u|o|ovi|em|ové|ů|ům|ǝ|ové|ech|ǝ
 strom|3||u|u||e|ě|em|ǝ|ů|ům|ǝ|ǝ|úch|ami
@@ -104,6 +105,7 @@ teTA|1|ta?|ty?|tě?|tu?|to?|tě?|tou?|ty?|t?|tám?|ty?|ty?|tách?|tami?
 svjeT|3|t?|ta|tu?|t?|te?|ťe?|tem?|ty?|tú?|túm?|ty?|ty?|tech?|ty?
 BRÝLE|1|-|-|-|-|-|-|-|brýle?|brýlí?|brýlím?|bryle|brýle?|brýlích?|brýlemi?
 hłavA|1|a|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+větEV|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 -
 ||0|||
 čihul|tátA|0|čihul|tatA|
@@ -116,7 +118,7 @@ strom|strom|0|strom|strom|
 svět|svět|0|svě|svjeT|
 tát|tátA|0|tat|tatA|
 vesnic|růžE|0|ďeďin|ženA|
-větv|kost|0|haluz|kosť|
+vět|větEV|0|haluz|kosť|
 vozk|tátA|0|vozk|tatA|
 žlábek|stromEK|0|rynku||
 |BRÝLE|0||BRÝLE|

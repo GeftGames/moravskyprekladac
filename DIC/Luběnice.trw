@@ -3,7 +3,7 @@ tLuběnice
 aGG
 d04.06.2023 17:39:32
 iZachyceno:\ndo ósťina (osťina?) - do ústína/nu\nmysleli->mesłéle   ł takové nenápadné L\n\n\n\nhttps://theses.cz/id/1tmdiz/15008735\nne vokno\nne a, ě kaše\nnaše, vaše\nk frantô, vidím frantô\nfrantův kabát->frantu kabát\nne ť
-c#Zdroj dat\n-Neznámý
+c#Zdroj dat\n-Neznámý - Anonymní přispěvatel(é)
 g49.575983,17.1214823
 x3
 q0
@@ -37,6 +37,10 @@ hrábĚ|1|-|-|-|-|-|-|-|ě|í|ím|ě|ě|ích|ěmi
 svátEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 slatinicE|3|e||ím|e|e|ích|emi|-|-|-|-|-|-|-
 tis|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+řetízEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+kropítKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
+lavičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 les|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
 lopatA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
@@ -45,6 +49,11 @@ hrÁBĚ|1|-|-|-|-|-|-|-|ábě?|ábí?|ábím?|ábě?|ábě?|ábích?|abjama
 svátEK|3|ek?|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|kê|ky?|cích?|ky?
 slaťeňicE|3|e?|?|um|e?|e?|ích?|emi?|-|-|-|-|-|-|-
 tis|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+řetázEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+kuřátKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka?|ek?|kúm?|ka?|ka?|kách?|ky?
+côcan|-1||ô|ô|ô|?|ô|em|ê|u|?|ê|?|ách|ama
+lavičKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 vesnice||0|dědina||
 prkno||0|deska||
@@ -59,6 +68,10 @@ slatinic|slatinicE|2|slaťeňic|slaťeňicE|
 brzdění||0|bržďeňi||
 ofina||0|afina||
 tis|tis|0|tis|tis|
+polňač|pohádKA|0|polňič|pohádKA|
+řetíz|řetízEK|0|řetáz|řetázEK|
+kropít|kropítKO|0|côcan|côcan|roztřikování konce konvy
+lavič|lavičKA|0|laveč|lavičKA|
 -
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -104,7 +117,7 @@ utěkAT|7|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|al
 pomUCT|30|-1|uct|ohu?,ůžu?|ůžeš?|ůže?|ůžeme?|ůžete?|ohou?,ůžou?|oz?|ozme?|ozte?|ohl?|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?|ožen?|ožen?|ožena?|oženo?|oženi?|oženy?|oženy?|ožena?
 zeptAT_SE|22|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 uĎELAT|30|-1|ďelat|dělám?|děláš?|dělá?|děláme?|děláte?|dělají?|ďelej?|ďelejme?|ďelejte?|ďelal?|ďelal?|ďelala?|ďelalo?|ďelali?|ďelaly?|ďelaly?|ďelala?|ďelán?|ďelán?|ďelána?|ďeláno?|ďeláňi?|ďelány?|ďelány?|ďelána?
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|bêzte|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|bêl|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|bêzte|by?
 JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|poď,póď,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
 dív|dívAT|div|dívAT|

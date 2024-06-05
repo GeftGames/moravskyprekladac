@@ -1,9 +1,11 @@
-TW v1.0
+TW v2
 tBohuslavice
+aGG
 d02.06.2023 9:24:24
-c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/
+c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n-Nářečí na Kyjovsku a Ždánsku-Kolaja, Maxmilian; str. 98
 g49.0519512,17.121557
 q0
+oSlovácko
 -
 -
 -
@@ -16,16 +18,31 @@ ou|ú
 -
 -
 slzA|1|a|y|e|u|o|e|ou|y|,astarale) slzí|ám|y|y|ách|ami
+fazolE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
+lampA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+albín|2||a|ovi,u|a|e|ovi,u|em|ové|ů|ům|y|ové|ech|y
+rýč|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
+lump|2||a|u|a|e|u|em|ové|ů|ům|y|y|ech|y
 -
-slzA|1|a?|y?|e?|u?|o?|e?|ou?|y?|,astarale) slzí?|ám?|y?|y?|ách?|ami?
+slzA|1|a|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+fazuLE|1|ła|le?|li?|li?|le?|li?|lí?|le?|lí?|lím?|le?|le?|lích?|lemi?
+łampA|1|a?|y?|je?|u?|o?|je?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+ałbín|2||a?|ovi?,u?|a?|e?|ovi?,u?|em?|ové?|ú?|úm?|y?|ové?|ech?|y?
+ríL|3|ł|če?|či?|č?|či?|či?|čem?|če?|čú?|čúm?|če?|če?|čích?|či?
+łump|2||a?|u?|a?|e?|u?|em?|ové?|ú?|úm?|y?|y?|ech?|y?
 -
-slz|slzA|0|sľz|slzA
+slz|slzA|0|sľz|slzA|
+fazol|fazolE|0|fazu|fazuLE|
+lamp|lampA|0|łamp|łampA|
+albín|albín|0|ałbín|ałbín|
+rýč|rýč|0|rí|ríL|
+lump|lump|0|łump|łump|
 -
 žlutÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 žlutÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-žlut|žlutÝ|žlutÝ
+žlut|žlutÝ|žlut|žlutÝ|
 -
 -
 -
@@ -36,7 +53,10 @@ slz|slzA|0|sľz|slzA
 -
 -
 -
+teď,nyní|fčíł|
 -
 -
+a|a|
 -
+ano|ano|
 -

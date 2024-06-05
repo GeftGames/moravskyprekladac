@@ -1,10 +1,11 @@
-TW v1.0
+TW v2
 tLesonice
 aGG
 d19.08.2023 12:04:57
-c#Zdroje dat\n-https://lesonicemk.cz/lesonak/lesonak2014.pdf
+c#Zdroje dat\n-https://lesonicemk.cz/lesonak/lesonak2014.pdf\n-Československá vlastivěda - 3. Jazyk - Masarykova akademie práce (str. 106)
 g49.1077118,15.7555639
 q0
+oMoravské Horácko>Horácko
 -
 -
 -
@@ -12,32 +13,74 @@ q0
 -
 -
 -
+ně|ne
 -
 ou|ó
 -
+ou|ó
+tu|to
+rý|ré
 -
 kalhoty|1|-|-|-|-|-|-|-|y||ám|y|y|ách|ami
+dÍTĚ|0|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
 -
 kalhoty|1|-|-|-|-|-|-|-|e|?|ám?|y?|y?|ách?|ami?
+ďECKO|0|íťe?|íťete?|íťeťi?|íťe?|íťe?|íťeťi?|íťetem?|ecka|eťí?|etem?|eťi?|eťi?|etech?|etmi?
 -
-hody|kalhoty|0|hode|kalhoty
-||0||
+hody|kalhoty|0|hode|kalhoty|
+||0|||
+||0|kapusto 4p||
+d|dÍTĚ|0|ď|ďECKO|
 -
+mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
+mokRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|ré|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 -
+sta|mokRÝ|sta|mokRÝ|
 -
+nějaKÝ|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
+MY|my|nás|nám|nás|my|nás|námi
+nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+nejaKÝ|ký?|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kó|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
+ON|von|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+MY|my?|nás?|nám?|nás?|my?|nás?|námi?
+nÁŠ|áš|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|toho?|tomu?|to|-|tom?|ťím?|te|ťech?|ťem?|ty?|-|ťech?|ťemi?
 -
+něja|nějaKÝ|neja|nejaKÝ|
+|ON||ON|
+|MY||MY|
+n|nÁŠ|n|nÁŠ|
+t|tEN||TEN|
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+uvařIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+chTÍT|15|-1|tít|ci,(nářečně) chcu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
+jÍST|15|-1|íst|ím|íš|í|íme|íte|edí|ez|ezme|ezte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|bodó|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|bele|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|bodó|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|bele|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bech|bys?|by?|bychom?|byste?|by?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ňela|ělo?|ěli?|ěly?|ěly?|ěla?
+uvařIT|30|-1|it|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+chŤÍT|15|-1|ťít?|ci?,(nářečňe) chcu?|ceš?|ce|ceme?|cete?|ťejí?,(zastarale) chťí?,(nářečňe) chcou?|ťej?|ťejme?|ťejte?|ťel?|ťel?|ťela?|ťelo?|ťeli?|ťely?|ťely?|ťela?|ťen?|ťen?|ťena?|ťeno?|ťeňi?|ťeny?|ťeny?|ťena?
+neBÝT|23|-1|být?|jsem?|jsi?|ňí?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budó|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?
+jÍST|15|-1|est|ím?|íš?|í?|íme?|íte?|eďí?|ez?|ezme?|ezte?|edl?|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeňi?|edeny?|edeny?|edena?
 -
-|BÝT|BÝT
+|BÝT||BÝT|
+m|mÍT|m|mÍT|
+uvař|uvařIT|uvař|uvařIT|
+ch|chTÍT|ch|chŤÍT|
+ne|neBÝT|ne|neBÝT|
+j|jÍST|j|jÍST|
 -
+stejně|stéňe|
 -
 -
 -

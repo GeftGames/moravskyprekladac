@@ -3,7 +3,7 @@ tŽďár nad Sázavou
 aGG
 d23.07.2023 16:38:21
 i\npráca de, jen tu břonká Žďár BK – rychle\npráca de, jen tu břonká Žďár BK – rychle
-c#Zdroje dat\n-\n#Zdroje dat\n-sncj.ujc.cas.cz\n#Zdroje dat\n-sncj.ujc.cas.cz
+c#Zdroje dat\n-sncj.ujc.cas.cz
 g49.5628064,15.9391619
 q0
 oHorácko
@@ -13,7 +13,7 @@ oHorácko
 -
 -
 rychle od ruky|1|jen tu břonká|
-rychle od ruky|1|jen tu břonká|
+|1|čápí kameň|druh vápence
 -
 -
 -
@@ -23,18 +23,24 @@ hřebíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 prÁCE|1|áce|áce,ářečně) práci,rácí[1]|áci|áci|áce|áci|ací|áce|ací|acím,ářečně,astarale) pracem[2]|áce|áce|acích,ářečně,astarale) pracech[2]|acemi
 beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
+kÁMEN|3|ámen|amene,amenu|ameni,amenu|ámen|ameni|ameni,amenu,ameně|amenem|ameny|amenů|amenům|ameny|ameny|amenech|ameny
 -
 hřebíK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 pohádKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 prÁCE|1|áca|áce,ářečně) práci,rácí[1]?|áci?|áci?|áce?|áci?|ací?|áce?|ací?|acím,ářečně,astarale) pracem[2]?|áce?|áce?|acích,ářečně,astarale) pracech[2]?|acemi?
 beraN|3|n|na?|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?|nú?|núm?|ny?|ňi?|nech?|ny?
+kÁMEN|3|ameň|amene?,amenu?|ameňi?,amenu?|ámen?|ameňi?|ameňi?,amenu?,ameňe?|amenem?|ameny?|amenú?|amenúm?|ameny?|ameny?|amenech?|ameny?
 -
 vánoč|pohádKA|0|ceplí|hřebíK|
 pr|prÁCE|0|pr|prÁCE|
 beran|beran|0|bera|beraN|
+k|kÁMEN|0|k|kÁMEN|
 -
+čapí|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
+čápí|-1|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-||ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
 -
+čapí|čapí|čápí|čápí|
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -

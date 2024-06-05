@@ -1,5 +1,6 @@
-TW v1.0
+TW v2
 tDobrochov
+aGG
 d17.07.2023 16:11:07
 idožiral ju, až dostal fack Dobrochov PV
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
@@ -12,6 +13,7 @@ q0
 -
 -
 -
+vy|vê
 -
 -
 -
@@ -19,28 +21,37 @@ pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 pohádKA|1|ka?|ky?|ce?|kô|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-fac|pohádKA|0|fac|pohádKA
+fac|pohádKA|0|fac|pohádKA|
 -
 -
 -
 -
-ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 -
-ONA|-1|ona?|jí,ní*?|jí,ní*?|ju,ni*?|-|ní*?|jí,ní*?
+ONA|ona?|jí,ní*?|jí,ní*?|ju,ni*?|-|ní*?|jí,ní*?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 -
-ONA|ONA
+|ONA||ONA|
+|SE||SE|
 -
 -
 -
 -
 otravOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+začÍT|30|-1|ít|nu|neš|ne|neme|nete|nou|ni|něme|něte|al|al|ala|alo|ali|aly|aly|ala|at|at|ata|ato|ati|aty|aty|ata
 -
 dožirAT|15|-1|at?|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|al|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováni?|ovány?|ovány?|ována?
+začÍT|30|-1|ít?|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?|at?|at?|ata?|ato?|aťi?|aty?|aty?|ata?
 -
-otrav|dožir|otravOVAT|dožirAT
-škádlit|dožir||dožirAT
+otrav|otravOVAT|dožir|dožirAT|
+škádlit||dožir|dožirAT|
+zač|začÍT|zač|začÍT|
+||brzďit ||
 -
-až
+až|až|
+pozdě|pozďe|
+tak|tak|
 -
 -
 -

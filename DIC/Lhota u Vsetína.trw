@@ -4,7 +4,9 @@ aGG
 d18.11.2023 10:08:09
 c#Zdroje dat\n-https://korpus.cz/mapka/#\n-https://sncj.ujc.cas.cz/
 g49.3046165,17.9577119
+x3
 q0
+oValašsko
 -
 -
 -
@@ -28,6 +30,9 @@ proudem různé intenzity|1|cycúrem|
 v té|0|f téj|
 ten mužský|1|to chłapsko|
 ze sudu|1|z bečky|
+v kamenolomu|1|v baňi|
+|1|na oséłky|
+|1|na Velikéj|
 -
 -
 ně|ne
@@ -43,6 +48,8 @@ vají|vajú
 kla|kła
 tal|táł
 děl|ďéł
+sím|sým
+mat|mať
 -
 mašlE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 nit|1||i,ě|i||i|i|í|i,ě|í|ím|i,ě|i,ě|ích|ěmi
@@ -65,6 +72,7 @@ ameriKA|0|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 zábavA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 bručoun|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
 zelí|0|||||||m|||m|||ch|mi
+kÁMEN|3|ámen|amene,amenu|ameni,amenu|ámen|ameni|ameni,amenu,ameně|amenem|ameny|amenů|amenům|ameny|ameny|amenech|ameny
 -
 mašlE|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 nit|1|?|i,ě?|i?|?|i?|i?|ú|i,ě?|í?|ím?|i,ě?|i,ě?|ích?|ěmi?
@@ -87,6 +95,7 @@ ameryKA|0|ka?|ky?|ce?|ku?|ko?|ce|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 zábavA|1|va?|vy?|vě?|vu?|vo?|v́e|vou?|vy?|v?|vám?|vy?|vy?|vách?|vami?
 borsuk|2||na?|novi?,nu?|na?|ne?|novi?,nu?|nem?|ňi?,nové?|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
 zelÍ|0|é|í?|í?|í?|í?|í?|ím?|í?|í?|ím?|í?|í?|ích?|ími?
+kÁMEN|3|amen?|amene?,amenu?|ameňi?,amenu?|ameň|ameňi?|ameňi?,amenu?,ameňe?|amenem?|ameny?|amenú?|amenúm?|ameny?|ameny?|amenech?|ameny?
 -
 mašl|mašlE|0|mašľ|mašlE|
 nit|nit|0|niť|nit|
@@ -114,6 +123,9 @@ bručoun|bručoun|0|borsuk|borsuk|
 mrzout||0|borsuk||
 zelí|zelí|0|zel|zelÍ|
 ||0|z bečky||
+k|kÁMEN|0|k|kÁMEN|
+||0|na oséłky||
+||0|||
 -
 levÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -217,7 +229,7 @@ dokončIT|30|-1|it?|ím?|íš?|ý|íme?|íte?|í?|i?|eme?|ete?|il?|il?|ila?|ilo?
 JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|idú|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?
 lÍT|15|-1|ít?|eji?,liji?|eješ?,liješ?|eje?,lije?|ejeme?,lijeme?|ejete?,lijete?|ejí?,lijí?|ej?,lij?|ejme?,lijme?|ejte?,lijte?|il?|il?|ila?|éło|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
 MÍT|7|-1|mít?|mám?|máš?|má|máme?|máte?|mají?|měj?|mějme?|mějte?|ḿel?|měl?|ḿela?|mělo?|ḿeli|měly?|měly?|měla?
-musET|5|-1|et?|ím?|íš?|í|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
+musET|5|-1|et?|ým|íš?|í|íme?|íte?|ejí,musí?|el,musil?|el,musil?|ela,musila?|elo,musilo?|eli,musili?|ely,musily?|ely,musily?|ela,musila?
 ostAT|22|-1|at?|anu?|aneš?|ane?|aneme?|anete?|anou?|aň?|aňme?|aňte?|áł|al?|ala?|alo?|ali?|aly?|aly?|ala?
 proSIT|15|-1|sit?|sým|síš?|sí?|síme?|síte?|sí?|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeňi?|šeny?|šeny?|šena?
 svÁZAT|30|-1|ázat?|ážu?|ážeš?|áže|ážeme?|ážete?|ážou?|až?|ažme?|ažte?|ázal?|ázal?|ázala?|ázalo?|ázali?|ázaly?|ázaly?|ázala?|ázán?|ázán?|ázána?|ázáno?|ázáni?|ázány?|ázány?|ázána?
@@ -251,28 +263,29 @@ zastav|zastavIT|zasta|zastavIT|
 zůsta|zůstaT|ost|zústaT|
 vi|viDĚT|vi|viĎET|
 pusinkovat||cycmali||
+||nałámať ||
 -
+až|až|
 dokola|dokola|
+dost|dosť|
 jen,jenom|enom|
 ještě|ešče|
 jinak|inák|
 kde|gde|
+kdy|gdy|
+letos|letos|
 nahorů|navŕch|
 napůl|napoły|
 pjekňe|pjekňe|
 pořád|pořáď|
+tak|tak|
 tam|tam|
 venku|venku|
-vloni|lóňí|
+vloni,loni|lóňí|
 však|šag|
 zase|zaséj||záz|
 zaz|záz||zaséj|
 zpět|spátky|
-až|až|
-letos|letos|
-kdy|gdy|
-dost|dosť|
-tak|tak|
 -
 mezi||mezi|
 po||po|

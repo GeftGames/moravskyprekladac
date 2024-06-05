@@ -1,20 +1,21 @@
-TW v0.1
+TW v2
 tPlaveč
 aGG
 d14.04.2023 15:19:23
 iSymbol Ǝ ǝ
-c#Zdroje\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str 36
+c#Zdroje\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str 36\n-http://www.banda.cz/webs/k/kom/usr_files/file/hanackyslovnik.pdf (nevyčerpáno)
 g48.9289383,16.0798294
 q0
+oMoravské Horácko>Dolsko
 -
 -
 -
-Byl půlláník.|Dál pulláňǝk
+Byl půlláník.|1|Dál pulláňǝk|
 -
 -
-po vesnici|po fsǝ
-byli ve škole|bél ve škól
-mu jej|mo jé
+po vesnici|1|po fsǝ|
+byli ve škole|1|bél ve škól|
+mu jej|1|mo jé|
 -
 -
 -
@@ -50,46 +51,46 @@ stavení|0|?|?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 sedláK|2|k|ka?|ku,kovi?|k|ku?|ku,kovi?|kem?|ci|ků?|kům?|ky?|ci?|cích?|ky?
 DÍTĚ|0|ítě?|ďiťete|ítěti?|ítě?|ítě?|ítěti?|ítětem?|ěti?|ětí?|ětem?|ěti?|ěti?|ětech?|ětmi?
 -
-čtvrt|štvrt|kost|kost
-vesnic|f|vesnicE|vES
-|deputát||
-pastýř|pastéř|muž|muž
-čtvrt|štvrt|kost|kost
-pšenic|pšenc|vesnicE|
-čoč|pohádKA|pohádKA
-žit|žǝt|městO|městO
-hrách|hrach|hrad|hrad
-učení|hočeň|stavení|
-holt||
-půl|polovič|pohádKA|pohádKA
-chalup|chalop|ženA|ženA
-sedlá|sedláK|sedláK
-půllání|pulláňǝ|sedláK|sedláK
-míst|mist|městO|městO
-d||dÍTĚ|DÍTĚ
-|šajn?/2.p-u||
+čtvrt|kost|0|štvrt|kost|
+vesnic|vesnicE|0|f|vES|
+||0|deputát||
+pastýř|muž|0|pastéř|muž|
+čtvrt|kost|0|štvrt|kost|
+pšenic|vesnicE|0|pšenc||
+čoč|pohádKA|0|čoč|pohádKA|
+žit|městO|0|žǝt|městO|
+hrách|hrad|0|hrach|hrad|
+učení|stavení|0|hočeň||
+holt||0|holt||
+půl|pohádKA|0|polovič|pohádKA|
+chalup|ženA|0|chalop|ženA|
+sedlá|sedláK|0|sedlá|sedláK|
+půllání|sedláK|0|pulláňǝ|sedláK|
+míst|městO|0|mist|městO|
+d|dÍTĚ|0||DÍTĚ|
+||0|šajn?/2.p-u||
 -
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-ON|-1|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
-CO|-1|co|čeho|čemu|co,-č|-|čem|čím
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním*
+CO|co|čeho|čemu|co,-č|-|čem|čím
 -
-SE|-1|-|sebe?|sǝ,sobě?|se?,sebe?|-|sobě?|sebou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-ON|-1|on?|ho*,jej,něj**jeho,něho**?|mo,němu**?|ho*,jé,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
-CO|-1|co|čeho?|čemu?|co,-č?|-|čem?|čím?
+SE|-|sebe?|sǝ,sobě?|se?,sebe?|-|sobě?|sebou?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+ON|on?|ho*,jej,něj**jeho,něho**?|mo,němu**?|ho*,jé,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
+CO|co|čeho?|čemu?|co,-č?|-|čem?|čím?
 -
-SE|SE
-t|tEN|tEN
-ON|ON
-CO|CO
+|SE||SE|
+t|tEN|t|tEN|
+|ON||ON|
+|CO||CO|
 -
 -
 -
-padesát||
+padesát||padesát||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 MÍT|71|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
@@ -107,30 +108,30 @@ vybírAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|
 dĚLAT|79|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ál|ál|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 dávAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ál|ál|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-BÝT|BÝT
-MÍT|MÍT
-ne|MÍT|MÍT
-mus|mos|musET|musET
-choD|choDIT|choDIT
-vybír|vebir|vybírAT|vybírAT
-dost||
-přebír|přebir|vybírAT|vybírAT
-děl|d|dělAT|dĚLAT
-dáv|dávAT|dávAT
-neplatit||
+|BÝT||BÝT|
+|MÍT||MÍT|
+ne|MÍT|ne|MÍT|
+mus|musET|mos|musET|
+choD|choDIT|choD|choDIT|
+vybír|vybírAT|vebir|vybírAT|
+dost||dost||
+přebír|vybírAT|přebir|vybírAT|
+děl|dělAT|d|dĚLAT|
+dáv|dávAT|dáv|dávAT|
+neplatit||neplatit||
 -
-tak|tak,tag
-nyní|ňčky
-poté,potom|potym
-však|šak
-taky,také|take
+tak|tak||tag|
+nyní|ňčky|
+poté,potom|potym|
+však|šak|
+taky,také|take|
 -
-po|
-z|s|
+po||po|
+z||s|
 -
-a
-jako
-totiž?|toliž
-ale
+a|a|
+jako|jako|
+totiž?|toliž|
+ale|ale|
 -
 -

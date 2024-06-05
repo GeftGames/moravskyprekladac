@@ -2,14 +2,17 @@ TW v2
 tKonice
 aGG
 d19.07.2023 12:54:43
+c#Zdroje dat\n-snčj\n\n#Popis nářečí \n- I, Y -> Ê (změna před 1374, Nejstarší hanakizovaný tvar jména obce Přemyslovice je v listině Sulika z Konice z r.1374 - PRZEMESLOWICZ)\n- \n- 
 g49.5903797,16.8891138
 q0
+oHaná
 -
 -
 -
 -
 -
 hlavní sekeru|0|hrôbó sekero|
+obnošená obuv|1|bagančata|
 -
 -
 |
@@ -20,20 +23,29 @@ ou|ó
 blatníK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 sekeRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 vodA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+blátO|0|o|a|u|o|o|ě|em|a||ům|a|a|ech|y
 -
 blatníK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 voDA|1|da?|dy?|ďe?|du?|do?|ďe?|dó|dy?|d?|dám?|dy?|dy?|dách?|dami?
+baTO|0|to?|ta|tu?|to?|to?|ťe?|tem?|ta?|t?|túm?|ta?|ta?|tech?|ty?
 -
 blatní|blatníK|0|blatňi|blatníK|
 vod|vodA|0|vo|voDA|
+blát|blátO|0|bla|baTO|
 -
+dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
+dobRÝ|-1|ri|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|rý?|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 -
+dob|dobRÝ|dob|dobRÝ|
 -
 ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|teho|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
+t|tEN||TEN|
 -
 -
 -
@@ -44,16 +56,19 @@ tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|uč
 vydržET|15|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 -
 vZÍT|30|-1|zít?|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|ezmi?|ezměme?|ezměte?|zal|zal?|zala?|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zaťi?|zaty?|zaty?|zata?
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 tlOUCT|15|-1|ouct?|uku?,tluču?|učeš?|uče?|učeme?|učete?|ukou?,tlučou?|uč?,tluc?|učme?,tlucme?|učte?,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeňi?|učeny?|učeny?|učena?
 vydržET|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
 vydrž|vydržET|vêdrž|vydržET|
+|BÝT||BÝT|
 -
 tak|tag|
 nejdéle|nédil|
+ještě|ješče|
 -
 pod||pod|
+do||do|
 -
 a|a|
 -

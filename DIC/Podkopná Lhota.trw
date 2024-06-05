@@ -1,15 +1,18 @@
-TW v1.0
+TW v2
 tPodkopná Lhota
+aGG
 d06.07.2023 15:11:15
 iříkáváł velebníček, že sa to zaříkało Podk. Lhota; \njá jářku, že hovno mi uďełá gdosi tamt\njá sem povídała, poďme, už nemłaďme! Podk. Lhota
+c#zdroje dat\n-http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131 (nevyčerpáno)
 g49.3061059,17.8304083
 q0
+oValašsko
 -
 -
 -
 -
 -
-já jsem říkala|já sem povídała
+já jsem říkala|1|já sem povídała|
 -
 -
 -
@@ -22,23 +25,23 @@ hovNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech,nách|ny
 -
 hovNO|0|no|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech,nách?|ny?
 -
-||0|velebňíček|
-hov|hovNO|0|hov|hovNO
+||0|velebňíček||
+hov|hovNO|0|hov|hovNO|
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+JÁ|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
 -
-t|tEN|tEN
-SE|SE
-JÁ|JÁ
+t|tEN|t|tEN|
+|SE||SE|
+|JÁ||JÁ|
 -
 -
 -
@@ -57,17 +60,17 @@ povídAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ała|
 JÍT|95|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|poďme|poďte,jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|šed?|šedši?|šedše?
 młaDNOUT|7|-1|nout??|nu??|neš??|ne??|neme??|nete??|nou??|ni??|ďme|něte??|l??|l??|la??|lo??|li??|ly??|ly??|la??
 -
-říkáv|říkávAT|říkávAT
-uděl|uďe|udělAT|uďeLAT
-|BÝT|BÝT
-JÍT|JÍT
-mlád|mła|mládNOUT|młaDNOUT
-nemlád|nemła|mládNOUT|młaDNOUT
+říkáv|říkávAT|říkáv|říkávAT|
+uděl|udělAT|uďe|uďeLAT|
+|BÝT||BÝT|
+|JÍT||JÍT|
+mlád|mládNOUT|mła|młaDNOUT|
+nemlád|mládNOUT|nemła|młaDNOUT|
 -
-už
--
--
-že
+už|už|
 -
 -
-jářku
+že|že|
+-
+-
+jářku|jářku|

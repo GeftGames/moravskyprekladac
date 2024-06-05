@@ -157,6 +157,8 @@ písEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 syn|2||a|u,synovi|a|u|u,synovi|em|ové|ů|ům|y|ové|ech|y
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+větEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+haluz|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 -
 tatA|2|a|y|ovi|u|o|ovi|em|ové|ů|ům|ǝ|ové|ech|ǝ
 strom|3||u|u||e|ě|em|ǝ|ů|ům|ǝ|ǝ|úch|ami
@@ -166,10 +168,12 @@ kosť|1||i|i||i|y|í|i|í|em|i|i|ech|mi
 ženA|1|a|y|ě|u|o|ě|ou|ǝ||ám|ǝ|ǝ|ách|ami
 syn|2||||||||||||||
 pohádKA|1|ka|||||||||||||
+větEV|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+haluz|1||e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 -
 tát|tátA|0|tat|tatA|
 strom|strom|0|strom|strom|
-větv|kost|0|haluz|kosť|
+vět|větEV|0|haluz|haluz|
 chalup||0|chałup||
 čihul|tátA|0|čihul|tatA|
 vozk|tátA|0|vozk|tatA|
