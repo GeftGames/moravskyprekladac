@@ -109,7 +109,7 @@ let translations = [
             "Lipeňské Záhoří",
         ],
 
-        "Drahany", [
+        "Drahansko", [
             /*	"Konicko",
             	"Protivansko",
             	"Blansko",
@@ -125,24 +125,31 @@ let translations = [
         "Kravařsko", [
             //	"Jíčinsko",
         ],
+        
+        "Jesenicko", [
+            //	"Spálovsko",
+        ],
 
         "Brněnsko",
     ],
 
     "Slezsko", [
-        "Těšínské Slezsko", [
+        "Těšínsko", [
             /*	"Goralsko",
             	"Karvinsko",
             	"Těšínsko",
             	"Bohumínsko",
             	"Havířovsko",*/
         ],
+        
+        "Goralsko", [
+        ],
 
         "Hlučínsko", [
             //	"Hlučínsko",
         ],
 
-        "Opavské Slezsko", [
+        "Opavsko", [
             //	"Opavsko",
         ]
     ],
