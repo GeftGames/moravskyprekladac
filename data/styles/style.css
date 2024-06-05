@@ -1862,3 +1862,6 @@ input::placeholder,
     /*background-color: var(--ConBack);
     box-shadow: var(--ksh);*/
 }
+.abcCh{
+    font-weight: bold;
+}
