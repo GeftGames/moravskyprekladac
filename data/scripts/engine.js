@@ -3563,13 +3563,23 @@ function insertAtCursor(myField, myValue) {
     myField.focus();
 }
 
-function MapperMode(mode) {
-    if (mode == "basic") {
-        expertModeMapper.style.display = "none";
-        basicModeMapper.style.display = "flex";
-    } else if (mode == "expert") {
-        expertModeMapper.style.display = "block";
+function mapper_edit() {
+	document.getElementById("mapperPreview").style.display="none";
+	document.getElementById("areaStartGenerate").style.display="flex";
+
+	mapperAdvanced=true;
+	if (mapperRenderOptions!=undefined)mapperRenderOptions.SetElements();
+
+	MapperMode('expert');
+}
+
+function MapperMode() {
+    if (mapperAdvanced) {
         basicModeMapper.style.display = "none";
+        expertModeMapper.style.display = "block";
+    } else {
+        basicModeMapper.style.display = "flex";
+        expertModeMapper.style.display = "none";
     }
 }
 
@@ -5097,7 +5107,7 @@ function ExtractMergedFiles(inputFile) {
 
 function navrhClick(text, customStyle) {
     mapperInput.value = text;
-    mapper_init(customStyle != undefined, customStyle);
+    mapper_init(customStyle);
 }
 
 let ownLang;
