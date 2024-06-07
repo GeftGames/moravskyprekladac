@@ -3857,9 +3857,10 @@ class ItemPatternVerb {
 
         //if (arrayOfShapes[0].includes('?')) item.Infinitive='?';
         //else 
-        if (arrayOfShapes[0].includes(",")){
-            item.Infinitive = arrayOfShapes[0].split(',');
-        } else item.Infinitive = arrayOfShapes[0];
+       // if (arrayOfShapes[0].includes(",")){
+        //console.log(arrayOfShapes);
+        item.Infinitive = arrayOfShapes[0];
+       // } else item.Infinitive = arrayOfShapes[0];
 
         let index = 1;
         //console.log(this);
@@ -4476,23 +4477,28 @@ class ItemVerb {
         // [[tvar, číslo, osoba], rod]
 
         {
-            let inf=[];
-            if (Array.isArray(this.PatternFrom.Infinitive)) inf=this.PatternFrom.Infinitive;
-            else inf.push(this.PatternFrom.Infinitive);
+           // let inf=[];
+           // if (Array.isArray(this.PatternFrom.Infinitive)) inf=this.PatternFrom.Infinitive;
+            //else inf.push(this.PatternFrom.Infinitive);
 
-            for (let infinitive in inf){
+            for (let infinitive of this.PatternFrom.Infinitive){
+                console.log(infinitive);
                 if (this.From + infinitive == str) {
                     if (Array.isArray(this.To)) {
                         for (let to of this.To) {
-                            if (to.Pattern.Infinitive != '?') {
-                                this.ret.push({ Text: to.Body + to.Pattern.Infinitive, Type: "verb", Form: "Infinitive" });
+                            for (let infinitive_to of to.Pattern.Infinitive) {
+                                if (infinitive_to != '?') {
+                                    this.ret.push({ Text: to.Body + infinitive_to, Type: "verb", Form: "Infinitive" });
+                                }
                             }
                         }
                     } else {
                         //console.log(this);
                         let to = this.To;
-                        if (to.Pattern.Infinitive != '?') {
-                            this.ret.push({ Text: to.Body + to.Pattern.Infinitive, Type: "verb", Form: "Infinitive" });
+                        for (let infinitive_to of to.Pattern.Infinitive) {
+                            if (infinitive_to != '?') {
+                                this.ret.push({ Text: to.Body + infinitive_to, Type: "verb", Form: "Infinitive" });
+                            }
                         }
                     }
                     break;
