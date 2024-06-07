@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 7.6. 
+- Úprava jazyku v mapě - rychlé vektorové jádro vykreslování hranic
+- Úprava rozšířené tvorny map - možnost zvlit tloušťky čas, velikost textu, síla hranic, síla pozadí, skrýt zkraty míst; odstraněn styl Manhattan (45°)
+
 ### 2024 4.6. 
 - První překlady blízko za hranice Moravy
 - Lze nastavit filtrování - jenom Morava nebo Morava se Slezskem v ČR nebo všecko
