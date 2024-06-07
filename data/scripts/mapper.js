@@ -971,28 +971,29 @@ class RenderMapperOptions{
 	Load(rawdata) {
 		let parts = rawdata.split("|");
 		if (parts[0]=="v1"){
-			//this.style=parts[1];
-			//this.scale=parts[2];
-			this.limit=parts[3];
-			this.text =parts[4];
-			this.rawBackColors=parts[5];
-			//this.advanced=parts[6]=="true";
+			this.text =parts[1];
+			this.limit=parts[2];
+			this.rawBordersStyle=parts[3];
+			this.fontSize=parts[4];
+			this.bordersAlpha=parts[5];
+			this.rawBackColors=parts[6];
 			this.inputText=parts[7];
 			this.backgroundRegionMapOpacity=parts[8];
-			this.ShowPlacesShorts=parts[8]=="true";
-			this.minQuality=[9];
+			this.ShowPlacesShorts=parts[9]=="true";
+			this.minQuality=[10];			
 			this.ComputeColors();
+			this.ComputeBorders();
 		}
 	}
 	
 	Save() {
 		let data="v1|";
-		//data+=this.style+"|";
-		//data+=this.scale+"|";
-		data+=this.limit+"|";
 		data+=this.text+"|";
+		data+=this.limit+"|";
+		data+=this.rawBordersStyle+"|";
+		data+=this.fontSize+"|";
+		data+=this.bordersAlpha+"|";
 		data+=this.rawBackColors+"|";
-		//data+=this.advanced+"|";
 		data+=this.inputText+"|";
 		data+=this.backgroundRegionMapOpacity+"|";
 		data+=this.ShowPlacesShorts+="|";
@@ -1243,6 +1244,7 @@ function CreateSavedList() {
 			let options=new RenderMapperOptions();
 			options.Load(rawOptions);
 			ret+="<div style='display: flex;align-items: center;'><div class='mapperNavrh' onclick='OpenAndSetAdvancedMapper("+id+");'>"+options.inputText+"</div> <div class='mapperSavedRemoveBtn' onclick='mapper_removeSaved("+id+",this)'>X</div></div>";
+			id++;
 		}
 	}
 	if (ret=="") ret="<span style='margin: 0px 0px 20px 10px;'>Nebyly nalezené žádné uložené mapy</span>";

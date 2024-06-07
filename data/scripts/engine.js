@@ -2011,9 +2011,7 @@ function SetSavedTranslations() {
                 if (!tr.fromTo) document.getElementById("selectorTo").selectedIndex = 1;
                 else document.getElementById("selectorTo").selectedIndex = 0;
                 document.getElementById("specialTextarea").value = tr.input;
-                //document.getElementById("specialTextarea").value = tr.input;
                 document.getElementById("outputtext").innerText = tr.output;
-                /*textAreaAdjust(document.getElementById("specialTextarea"));*/
             };
             p.appendChild(txt);
             txt.addEventListener('mouseover', function() {
