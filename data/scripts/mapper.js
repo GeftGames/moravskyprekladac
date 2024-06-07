@@ -8,6 +8,13 @@ let currentEditId=-1
 var mapper_borders;
 var mapper_points;
 
+function mapper_open(text){
+	TabSwitch('mapper');
+	mapperAdvanced=false;
+	document.getElementById("mapperInput").value=text;
+	mapper_init();
+}
+
 // vrátit se z mapy
 function mapper_next(){
 	document.getElementById("mapperPreview").style.display="none";
@@ -50,7 +57,7 @@ function mapper_init(customStyle) {
 	
 	// Žádné body
 	if (mapperRenderOptions.inputText=="") {
-		mapper_showError("text cannot be empty");
+		mapper_showError("Text v poli nemůže být prázný");
 		return;
 	}
 	
@@ -59,7 +66,7 @@ function mapper_init(customStyle) {
 
 	// Žádné body
 	if (mapper_points.length==0) {
-		mapper_showError("Not enough data to create map");
+		mapper_showError("Nenalezen žádný překlad, mapy by byla prázná");
 		return;
 	}
 
@@ -1247,8 +1254,14 @@ function CreateSavedList() {
 			id++;
 		}
 	}
-	if (ret=="") ret="<span style='margin: 0px 0px 20px 10px;'>Nebyly nalezené žádné uložené mapy</span>";
-	
+	if (ret=="") {
+		ret="<span style='margin: 0px 0px 20px 10px;'>Nebyly nalezené žádné uložené mapy</span>";
+		document.getElementById("mapperSaved").style.display="none";
+		document.getElementById("mapperSavedHeader").style.display="none";
+	}else{
+		document.getElementById("mapperSaved").style.display="block";
+		document.getElementById("mapperSavedHeader").style.display="block";
+	}
 	document.getElementById("mapperSaved").innerHTML=ret;
 }
 

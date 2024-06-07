@@ -506,10 +506,14 @@ class ItemNoun {
 
         // Create p snap
         let p = document.createElement("p");
-        let f = document.createElement("span");
+        let f = document.createElement("a");
         if (this.UppercaseType == 1) f.innerText = str_form.toUpperCase();
         else if (this.UppercaseType == 2) f.innerText = str_form[0].toUpperCase() + str_form.substring(1);
         else f.innerText = str_form;
+        f.classList="slink";
+        f.addEventListener("click", function(){//str_form
+            mapper_open("<{word="+str_form+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>");;
+        });
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -799,6 +803,11 @@ class ItemSimpleWord {
         if (Array.isArray(this.input)) {
             f.innerText = this.input.join(", ");
         } else f.innerText = this.input;
+        
+        f.classList="slink";
+        f.addEventListener("click", function(){
+            mapper_open(f.innerText);
+        });
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -911,13 +920,25 @@ class ItemAdverb {
     }
 
     GetDicForm(name) {
-        //	if (Array.isArray(this.output)) {
         let p = document.createElement("p");
-        let f = document.createElement("span");
-        if (Array.isArray(this.input)) {
-            f.innerText = this.input.join(", ");
-        } else f.innerText = this.input;
-        p.appendChild(f);
+       
+        let arr_inp=this.input;
+        if (!Array.isArray(this.input)) arr_inp=[this.input];
+
+        for (let i = 0; i < arr_inp.length; i++) {
+            let ri = arr_inp[i];
+            let f = document.createElement("a"); 
+            f.innerText=ri;
+            f.classList="slink";
+            f.addEventListener("click", function(){
+                mapper_open(f.innerText);
+            });
+            p.appendChild(f);
+
+            // Do not place comma
+            if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
+        }
+       
 
         let e = document.createElement("span");
         e.innerText = " → ";
@@ -1319,9 +1340,19 @@ class ItemPreposition {
 
     GetDicForm(name) {
         let p = document.createElement("p");
-        let f = document.createElement("span");
-        f.innerText = this.input.join(", ");
-        p.appendChild(f);
+        for (let ri of this.input){
+            let f = document.createElement("span");
+
+            f.innerText = ri;
+            
+            f.classList="slink";
+            f.addEventListener("click", function(){
+                mapper_open(ri);
+            });
+            p.appendChild(f);
+
+            if (ri!=this.input[this.input.length-1])p.appendChild(document.createTextNode(", "));
+        }
 
         let e = document.createElement("span");
         e.innerText = " → ";
@@ -2633,6 +2664,12 @@ class ItemPronoun {
         let p = document.createElement("p");
         let f = document.createElement("span");
         f.innerText = this.From + this.PatternFrom.Shapes[0];
+        
+        f.classList="slink";
+        f.addEventListener("click", function(){
+            mapper_open(f.innerText);
+        });
+
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -3184,6 +3221,10 @@ class ItemAdjective {
         let p = document.createElement("p");
         let f = document.createElement("span");
         f.innerText = from;
+        f.classList="slink";
+        f.addEventListener("click", function(){
+            mapper_open(f.innerText);
+        });
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -3701,6 +3742,10 @@ class ItemNumber {
         let p = document.createElement("p");
         let f = document.createElement("span");
         f.innerText = this.From + this.PatternFrom[0];
+        f.classList="slink";
+        f.addEventListener("click", function(){
+            mapper_open(f.innerText);
+        });
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -4742,6 +4787,10 @@ class ItemVerb {
                 let p = document.createElement("p");
                 let f = document.createElement("span");
                 f.innerText = form["from"].join(", ");
+                f.classList="slink";
+                f.addEventListener("click", function(){
+                    mapper_open(f.innerText);
+                });
                 p.appendChild(f);
 
                 let e = document.createElement("span");
