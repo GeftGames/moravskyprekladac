@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /DIC/
+Disallow: /info/
 Disallow: /OtherPrograms/
 Sitemap: https://moravskyprekladac.pages.dev/sitemap.xml
 Sitemap: https://geftgames.github.io/moravskyprekladac/sitemap_github.xml

@@ -66,10 +66,11 @@
     <!-- Links -->
     <link href="data/styles/style.css" rel="stylesheet" type="text/css">
     <script src="data/scripts/engine.js"></script>
-    <script src="translator/v1/inicialize.js"></script>
-    <script src="translator/v1/translate.js"></script>
+    <script src="data/scripts/inicialize.js"></script>
+    <script src="data/scripts/translate.js"></script>
     <script src="data/scripts/langs.js"></script>
-    <script src="translator/v1/mapper.js"></script>
+    <script src="data/scripts/mapper.js"></script>
+    <script src="data/scripts/rhill-voronoi-core.js"></script>
     <!--<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
 
     <!-- Title -->
@@ -353,7 +354,7 @@
                                 <option id="textDefaultText" value="default" style="font-weight: bold">Výchozí</option>
                                 <option id="textMorSl" value="mor+sl">Morava + Slezsko v ČR</option>
                                 <option id="textMor" value="mor">Morava</option>
-                                <option id="textMorE" value="mor+e">Morava + Enkl.</option>
+                                <option id="textMorE" value="mor+e">Morava + enkl.</option>
                                 <option id="textAll" value="all">Vše</option>
                             </select>
                         </div><!---->
@@ -675,9 +676,9 @@
                             <div id="mapperBasicInput">
                                 <p id="mapperSearchWord">Hledané slovo nebo fráze</p>
                                 <input type="text" placeholder="okno" id="mapperInput" value="" style="font-size: 5mm;">
-                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(false)" style="width: fit-content;margin-top: 5mm;align-self: end;">Vytvořit mapu</a>
+                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="width: fit-content;margin-top: 5mm;align-self: end;">Vytvořit mapu</a>
                                 <br>
-                                <span class="settingLink" id="mapperSearchWord" onclick="MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
+                                <span class="settingLink" id="mapperSearchWord" onclick="mapperAdvanced=true;MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
                             </div>
 
                             <p id="">Uložené</p>
@@ -863,24 +864,28 @@
                             </div>
                         </div>
                         <div id="expertModeMapper" style="display:none;width: 1000px;    max-width: -webkit-fill-available;">
-                            <div>
+                            <div class="settingMapperItem">
                                 <p id="mapperSearchWord">Hledaná fráze</p>
                                 <input type="text" id="mapperSearchPattern" placeholder="<{word=vesnice|typ=pods|cislo=j|pad=2}>" style="width: -webkit-fill-available;">
                                 <!--placeholder='To je <"dub"->"pods,č=j,pád=1">!; "buk"'-->
                             </div>
-                            <div>
+                            <div class="settingMapperItem">
                                 <p>Obarvení pozadí</p>
                                 <textarea id="mapperOptionColorBack" placeholder="->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red"></textarea>
                             </div>
-                            <div>
+                            <div class="settingMapperItem">
+                                <p>Tloušťka čar</p>
+                                <textarea id="mapperOptionBordersStyle" placeholder="dub-dôb=>1; dub->dob=>1.2; dôb->dob=>0.5"></textarea>
+                            </div>
+                            <div class="settingMapperItem">
                                 <p>Doprovodný text</p>
                                 <textarea id="mapperOptionText" placeholder="Přeložení slova dub, v česko-moravkých a východomoravských je tvar dub, ve střední části moravy je tvar dob, místy dôb."></textarea>
                             </div>
-                            <div>
+                            <div class="settingMapperItem">
                                 <p>Zkratky míst</p>
                                 <p><input type="checkbox" checked id="mapperOptionPlaceNames">Zobrazit zkratky míst</p>
                             </div>
-                            <div>
+                            <div class="settingMapperItem">
                                 <p>Minimální kvalita</p>
                                 <input type="range" id="mapperOptionMinimalQuality" value="50" min="0" max="100">
                             </div>
@@ -897,12 +902,12 @@
 									<p>Hranice míst</p>
 									<textarea id="mapperOptionColorText" placeholder='"dub"->"dôb" x "dub"->"dob" => dash; "dub"->"dub" x "dub"->"dob" => solid; "dub"->def => none'></textarea>
 								</div>
-								
-								<div>
+                            -->
+								<div class="settingMapperItem">
 									<p>Zobrazit v rohu podrobnosti o seřízení</p>
-									<p><input type="checkbox" checked id="mapperOptionInfoText">Poznámka vygenerované</p>
+									<p><input type="checkbox" checked id="mapperOptionShowNote">Poznámka vygenerované</p>
 								</div>
-								<div>
+								<!--<div>
 									<p>Popisky</p>
 									<select id="mapperOptionLabels">
 										<option>Seskupit popisky</option>
@@ -910,11 +915,19 @@
 										<option>Všechny popisky</option>
 									</select>
 								</div>-->
-                            <div>
-                                <p>Síla pozadí</p>
-                                <input id='mapperOptionBackgroundOpacity' type="range" min="0" max="1" step="0.1">
-                            </div>
-                            <div>
+                                <div class="settingMapperItem">
+                                    <p>Velikost textu</p>
+                                    <input id='mapperOptionFontSize' type="number" min="0" max="100" step="1" value="11">
+                                </div>
+                                <div class="settingMapperItem">
+                                    <p>Síla pozadí</p>
+                                    <input id='mapperOptionBackgroundOpacity' type="range" min="0" max="1" step="0.1">
+                                </div>
+                                <div class="settingMapperItem">
+                                    <p>Síla hranic</p>
+                                    <input id='mapperOptionBordersAlpha' type="range" min="0" max="1" step="0.1" value="1">
+                                </div>
+                            <!--<div>
                                 <p>Limit vzdálenosti</p>
                                 <select id="mapperOptionLimit">
 										<option value="0">Žádný</option>
@@ -922,8 +935,8 @@
 										<option value="10">Střední</option>
 										<option value="20">Krátký</option>
 									</select>
-                            </div>
-                            <div>
+                            </div>-->
+                            <!--<div>
                                 <p>Geometrie sestavení hranic</p>
                                 <select id="mapperOptionGeometry">
 										<option value="nearest">Nejbližší místo</option>
@@ -932,11 +945,11 @@
 										<option value="45max">Po 45° pootočeně</option>
 										<option value="none">Žádné hranice</option>
 									</select>
-                            </div>
-                            <div>
-                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init(true)" style="margin-top: 5mm;">Vytvořit mapu</a>
+                            </div>-->
+                            <div class="settingMapperItem">
+                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="margin-top: 5mm;">Vytvořit mapu</a>
                                 <br>
-                                <span id="mapperSearchWord" class="settingLink" onclick="MapperMode('basic')">Zjednodušená tvorba map</span>
+                                <span id="mapperSearchWord" class="settingLink" onclick="mapperAdvanced=false;MapperMode('basic')">Zjednodušená tvorba map</span>
                             </div>
                         </div>
                     </div>
@@ -944,7 +957,7 @@
 
                     <div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
                         <div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;">
-                            <a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Vytvořit další mapu</a>
+                            <a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Zpátky - Vytvořit další mapu</a>
                         </div>
                         <div style="display:flex;flex-wrap: wrap;flex-direction: column;">
                             <div class="listButtons" id="mapperButtons" style="flex-direction: row;">
@@ -1162,7 +1175,7 @@
                     <p style="display:inline;" id="closeSelector">Zavřít</p>
                 </div>
                 <div>
-                    <p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě; obecná nářečí a hantec nejsou v mapě, jenom v menu)</p>
+                    <p class="mapPageHeader" id="mapPlace">Výběr místa (klikněte na puntík v mapě; obecná nářečí a hantec nejsou v mapě, jenom v rozbalovacím menu)</p>
                 </div>
                 <div>
                     <div id="mapSelector" style="position: fixed; width: 100%; overflow: hidden;left: 0px;height: 100%;">
