@@ -1499,6 +1499,19 @@ circle {
     color: var(--ColorThemeForward);
 }
 
+.slink {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--ColorThemeForward);
+    user-select: none;
+    transition: color .3s;
+}
+
+.slink:hover {
+    color: var(--ColorOrig);
+    text-decoration: underline;
+}
+
 #mapperCanvas {
     width: 100%;
     filter: drop-shadow(2px 2px 2px #00000015);
