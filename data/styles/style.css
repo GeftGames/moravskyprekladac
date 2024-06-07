@@ -17,6 +17,7 @@
     --dsh: -.3px -.3px 4px rgba(var(--RawColorBack), .25);
     --ish: inset 0 0 2px rgba(var(--RawColorBack), .15);
     --ksh: 0px 0px 3px rgba(var(--RawColorBack), .3);
+    --ksh_hover: 0px 0px 3px var(--ColorOrig);
     --bsh: 6px 6px 16px rgba(var(--RawColorBack), .25);
     /*RawColorForw*/
     --tsh: .5px .5px 2px rgba(var(--RawColorBack), .15);
@@ -210,8 +211,7 @@ html {
 }
 
 .butIc:hover {
-    background-color: rgba(var(--ColorThemeAccent), .4)/* #66ccff55*/
-    ;
+    background-color: rgba(var(--ColorThemeAccent), .4)/* #66ccff55*/;
 }
 
 .butIc:hover .ib {
@@ -593,6 +593,7 @@ a:hover {
 
 input::placeholder,
 .placeholder,
+textarea::placeholder
 #specialTextarea::placeholder,
 #searchInputText::placeholder {
     color: rgba(150, 150, 150);
@@ -603,19 +604,28 @@ input::placeholder,
 
 #lte:focus-within,
 #dicLte:focus-within {
-    box-shadow: 0px 0px 3px var(--ColorOrig);
+    border: 1px solid var(--ColorTheme);
 }
 
 #lte:focus-visible,
 #dicLte:focus-visible {
-    box-shadow: 0px 0px 3px var(--ColorOrig);
+    box-shadow: var(--kshH);
     outline: var(--tDash);
     outline-offset: 5px;
 }
+textarea:focus-within {
+    box-shadow: var(--ksh_hover);
+    border: 1px solid var(--ColorTheme);
+}
 
 input[type="text"]:focus-within {
-    box-shadow: 0px 0px 3px var(--ColorOrig);
-    border: 0;
+    box-shadow: var(--ksh_hover);
+    border: 1px solid var(--ColorTheme);
+}
+
+input[type="number"]:focus-within {
+    box-shadow: var(--ksh_hover);
+    border: 1px solid var(--ColorTheme);
 }
 
 .switch {
@@ -1263,12 +1273,7 @@ optgroup {
         text-shadow: var(--tsh);
         font-size: 5mm;
     }
-    a,
-    span,
-    select,
-    .button,
-    textarea::placeholder,
-    #specialTextarea {
+    a, span, select, .button, textarea::placeholder, #specialTextarea {
         font-size: 5mm;
     }
     #nav {
@@ -1499,8 +1504,7 @@ circle {
     filter: drop-shadow(2px 2px 2px #00000015);
 }
 
-input[type="text"],
-textarea {
+input[type="text"],input[type="number"], textarea {
     color: var(--ColorText);
     background-color: var(--ConBack);
     border: 1px solid #88888863;
@@ -1511,6 +1515,7 @@ textarea {
     font: medium -moz-fixed;
     font-family: var(--f);
     box-shadow: var(--ksh);
+    transition: box-shadow .3s;
 }
 
 #mapperOuter {
@@ -1864,4 +1869,7 @@ input::placeholder,
 }
 .abcCh{
     font-weight: bold;
+}
+.settingMapperItem{
+    margin-bottom: 5mm;
 }
