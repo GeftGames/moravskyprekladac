@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 8.6. 
+- Drobná úprava grafiky rozbalovacího menu
+- Měnění názvu v záhlaví počas procházení stránky (jak url, tak title)
+  
 ### 2024 7.6. 
 - Úprava jazyku v mapě - rychlé vektorové jádro vykreslování hranic
 - Úprava rozšířené tvorny map - možnost zvlit tloušťky čas, velikost textu, síla hranic, síla pozadí, skrýt zkraty míst; odstraněn styl Manhattan (45°)
