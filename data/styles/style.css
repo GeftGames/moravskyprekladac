@@ -98,13 +98,12 @@ textarea {
     -moz-appearance: textfield-multiline;
     -webkit-appearance: textarea;
     white-space: pre-line;
-    border: 1px solid gray;
     font: medium -moz-fixed;
     font: -webkit-small-control;
     overflow: auto;
     padding: 2px;
     resize: both;
-    border: none;
+    border: 1px solid transparent;
     padding: 5px;
     font-size: var(--fontSize);
     width: 100%;
@@ -223,7 +222,7 @@ html {
     text-shadow: 0.5px 0.5px 2px #00000030;
     transition: background-color var(--transitionSlow), box-shadow var(--transitionSlow), outline var(--transitionRFast), outline-offset var(--transitionRFast);
     border-radius: 3px;
-    border: none;
+    border: 1px solid transparent;
     border-color: transparent;
     font-family: var(--f);
     text-shadow: var(--tsh);
@@ -253,14 +252,13 @@ html {
 
 #lte,
 #rte,
-#dicRte,
-#dicLte {
+#dicRte{
     max-height: 70vh;
     text-shadow: 0.5px 0.5px 2px #00000030;
     transition: background-color var(--transitionSlow), box-shadow var(--transitionSlow), outline var(--transitionRFast), outline-offset var(--transitionRFast);
     border-radius: 3px;
-    border: none;
-    border-color: transparent;
+    border: 1px solid transparent;
+    /*border-color: transparent;*/
     font-family: var(--f);
     text-shadow: var(--tsh);
     max-height: 300px;
@@ -270,6 +268,9 @@ html {
     transition: outline var(--transitionRFast), outline-offset var(--transitionRFast), box-shadow var(--transitionSlow);
     font-size: var(--fontSize);
     max-height: 75vh;
+    max-width: 50vw;
+}
+#dicLte {
     max-width: 50vw;
 }
 
@@ -441,13 +442,13 @@ th {
 select {
     color: var(--ColorText);
     background-color: var(--ConBack);
-    transition: box-shadow var(--transitionSlow), outline 80ms, background-color var(--transitionSlow), color var(--transitionSlow);
+    transition: box-shadow var(--transitionSlow);
     border: 0px;
     border-radius: 4px;
     text-shadow: var(--tsh);
     margin-top: 5px;
     font-size: var(--fontSize);
-    box-shadow: var(--ksh);
+    box-shadow: var(--ksh), 0px -2px 8px rgba(var(--RawColorBack), .02) inset;
     padding: 4px;
     font-family: var(--f);
     outline: 2px transparent dashed;
@@ -602,13 +603,13 @@ textarea::placeholder
     transition: color 0.3s;
 }
 
-#lte:focus-within,
-#dicLte:focus-within {
+#lte:focus-within/*,
+#dicLte:focus-within*/ {
     border: 1px solid var(--ColorTheme);
 }
 
-#lte:focus-visible,
-#dicLte:focus-visible {
+#lte:focus-visible/*,
+#dicLte:focus-visible*/ {
     box-shadow: var(--kshH);
     outline: var(--tDash);
     outline-offset: 5px;
@@ -1522,13 +1523,13 @@ input[type="text"],input[type="number"], textarea {
     background-color: var(--ConBack);
     border: 1px solid #88888863;
     padding: 5px;
-    font-size: 5mm;
     text-shadow: var(--tsh);
     border-radius: 4px;
-    font: medium -moz-fixed;
-    font-family: var(--f);
     box-shadow: var(--ksh);
     transition: box-shadow .3s;
+    font: medium -moz-fixed;
+    font-family: var(--f);
+    font-size: 4.5mm;
 }
 
 #mapperOuter {
@@ -1808,11 +1809,11 @@ caption {
 }
 
 #dicInput {
-    border: none;
+   /* border: 1px solid gray;
     padding: 9px;
     border-radius: 5px;
     height: auto;
-    font-size: inherit;
+    font-size: inherit;*/
 }
 
 input:focus {
@@ -1823,7 +1824,8 @@ input:focus {
 #lte:focus-within>#specialTextarea::placeholder,
 #searchIn:focus-within>#searchInputText::placeholder,
 textarea:focus::placeholder,
-input:focus::placeholder {
+input:focus::placeholder,
+.placeholder {
     color: rgba(200, 200, 200);
 }
 
@@ -1839,6 +1841,7 @@ input::placeholder,
 #specialTextarea::placeholder,
 #searchInputText::placeholder {
     filter: blur(.3px);
+    transition: color .1s;
 }
 
 
