@@ -1,4 +1,6 @@
 ﻿const serverName = "https://moravskyprekladac.pages.dev/";
+var webSearchParams=[]; //{showName: page, name: "page", value: "subs"}
+
 var input_lang="";
 var imgMap;
 var imgMap_bounds;
@@ -454,7 +456,8 @@ function ChangeDic() {
     if (selTo.value != "*own*")
     // localStorage.setItem('trFrom', selFrom.value);
         localStorage.setItem('trTo', selTo.value);
-    location.hash.to = selTo.value;
+    //location.hash.to = selTo.value;
+    urlParamChange("dic_to", selTo.value, true);
     //let n;
     //let headername = document.getElementById('headername');
 
@@ -827,7 +830,7 @@ function CloseMapPage(){
 	}, 300);
 }
 */
-let langFile;
+var langFile;
 
 function SetLanguage() {
     let tmpLang;
@@ -968,25 +971,29 @@ function SetLanguage() {
 
 function TabSelect(enableElement, tab) {
     if (tab == tabText) {
-        location.hash = "text";
+        //location.hash = "text";
+        urlParamChange("page","text", false);
         tabText.classList.add("tabSelected");
         tabSubs.classList.remove("tabSelected");
         tabDic.classList.remove("tabSelected");
         tabTxtFiles.classList.remove("tabSelected");
     } else if (tab == tabSubs) {
-        location.hash = "subs";
+        //location.hash = "subs";
+        urlParamChange("page","subs", false);
         tabText.classList.remove("tabSelected");
         tabSubs.classList.add("tabSelected");
         tabDic.classList.remove("tabSelected");
         tabTxtFiles.classList.remove("tabSelected");
     } else if (tab == tabTxtFiles) {
-        location.hash = "files";
+        //location.hash = "files";
+        urlParamChange("page","files", false);
         tabText.classList.remove("tabSelected");
         tabDic.classList.remove("tabSelected");
         tabSubs.classList.remove("tabSelected");
         tabTxtFiles.classList.add("tabSelected");
     } else if (tab == tabDic) {
-        location.hash = "dic";
+       // location.hash = "dic";
+        urlParamChange("page","dic", false);
         tabText.classList.remove("tabSelected");
         tabTxtFiles.classList.remove("tabSelected");
         tabSubs.classList.remove("tabSelected");
@@ -1176,12 +1183,16 @@ function Load() {
     let hashes=[];    
     if (location.search.startsWith("?")) {
         hashes=location.search.substring(1).split("&");
-    } else if (location.hash.startsWith("#")) hashes=location.hash.split("#");
-
+    } else if (location.hash.startsWith("#")) {
+        hashes=location.hash.split("#");
+        //location.hash=undefined;
+        history.replaceState({}, document.title, window.location.href.split('#')[0]);
+    }
     //console.log(location.hash);
     if (hashes.includes("about")) {
         //ShowAboutPage()
         PopPageShow("about");
+        urlParamChange("page", "about", false);
     } else if (hashes.includes("mapper")) {
         appSelected = "mapper";
         let input_text_var="input=";
@@ -1198,12 +1209,15 @@ function Load() {
                 }
             }     
         }
-    } else if (hashes.includes("#search")) {
+        urlParamChange("page", "mapper", false);
+    } else if (hashes.includes("search")) {
         appSelected = "search";
+        urlParamChange("page", "search", false);
+
     } else if (hashes.includes("translate")) {
         appSelected = "translate";
+        urlParamChange("page", "translate", false);
 
-        //#translate#input=Hello%20world
         var input_text="";
        
         let input_text_var="input=", input_lang_var="lang=";
@@ -1212,7 +1226,7 @@ function Load() {
             if (l.startsWith(input_text_var)) {
                 let s=input_text_var.length;
                 input_text=decodeURI(l.substring(s));
-                
+                urlParamChange("input", input_text, true);
                 if (input_text!="") {
                     document.getElementById("specialTextarea").value=input_text;
                 }
@@ -1221,7 +1235,7 @@ function Load() {
             if (l.startsWith(input_lang_var)) {
                 let s=input_lang_var.length;
                 input_lang=decodeURI(l.substring(s));
-                
+                urlParamChange("lang", input_lang, true);
                 if (input_lang!="") {
                     document.getElementById("selectorTo").value=input_lang;
                 }
@@ -1230,12 +1244,37 @@ function Load() {
        
     } else if (hashes.includes("dic")) {
         TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
+        var input_text="";
+       
+        let input_text_var="input=", input_lang_var="lang=";
+
+        for (let l of hashes) {            
+            if (l.startsWith(input_text_var)) {
+                let s=input_text_var.length;
+                input_text=decodeURI(l.substring(s));
+                urlParamChange("input", input_text, true);
+                if (input_text!="") {
+                    document.getElementById("dicInput").value=input_text;
+                }
+            }            
+            
+            if (l.startsWith(input_lang_var)) {
+                let s=input_lang_var.length;
+                input_lang=decodeURI(l.substring(s));
+                urlParamChange("lang", input_lang, true);
+                if (input_lang!="") {
+                    document.getElementById("selectorTo").value=input_lang;
+                }
+            }
+        }
     } else if (hashes.includes("files")) {
         TabSelect(document.getElementById('translateFiles'), document.getElementById('tabTxtFiles'));
     } else if (hashes.includes("subs")) {
         TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
     } else if (hashes.includes("text")) {
         TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
+    }else{
+        urlParamChange("page", "translate", false);
     }
   
 
@@ -3593,7 +3632,7 @@ function Copy(elementId) {
 function CopyLink() {
     HidePopUps();
     //encodeURIComponent(document.getElementById('specialTextarea').value)
-    let copyText = serverName + "#translate#input=" + encodeURIComponent(document.getElementById('specialTextarea').value) + "#lang=" + encodeURIComponent(document.getElementById('selectorTo').value);
+    let copyText = serverName + "?translate&input=" + encodeURIComponent(document.getElementById('specialTextarea').value) + "&lang=" + encodeURIComponent(document.getElementById('selectorTo').value);
 
     navigator.clipboard.writeText(copyText).then(function() {
         if (dev) console.log('Copying to clipboard was successful!');
@@ -5151,7 +5190,7 @@ function loadLang() {
         } else alert("Načti soubor přes horní tlačítko - Vybrat soubor");
     }
 }
-
+/*
 function HashSet(varibleName, value) {
     if (typeof value == "undefined") {
         HashDelete(varibleName);
@@ -5245,7 +5284,7 @@ function HashGet(varibleName) {
     }
     return;
 }
-
+*/
 function TabSwitch(newAppName) {
     let selectedClassName = "selectedApp";
     let tabs = document.getElementsByClassName("btnApp");
@@ -5342,7 +5381,8 @@ function ShowAppPage(name) {
     }, 10);
 
     appSelected = name;
-    location.hash = name;
+    urlParamChange("page", name, false);
+   // location.hash = name;
 
     // Remove animation
     setTimeout(() => {
@@ -6588,11 +6628,96 @@ function BuildReference(str) {
     }
 }
 
-function changeUrlParam(params) {
+function titleUpdate() {  
+    // before loading
+    if (langFile==undefined) return;
+
+    // get pagename
+    let pageName;
+    for (let param of webSearchParams){
+        if (param.name=="page") {
+            pageName=param.value;
+            break;
+        }
+    }
+    
+    // set title
+    switch (pageName){
+        case "mapper": 
+            document.title=langFile.TranslatorCM+" - "+langFile.AppTabMapperShort;
+            return;
+
+        case "search": 
+            document.title=langFile.TranslatorCM+" - "+langFile.AppTabSearchShort;
+            return;
+
+        case "text": 
+            document.title=langFile.TranslatorCM+" - "+langFile.AppTabTranslateShort;
+            return;
+
+        case "dic": 
+            document.title=langFile.TranslatorCM+" - "+langFile.Dic;
+            return;
+
+        case "subs": 
+            document.title=langFile.TranslatorCM+" - "+langFile.SubtitlesFilesShort;
+            return;
+
+        case "files": 
+            document.title=langFile.TranslatorCM+" - "+langFile.TextFilesShort;
+            return;
+
+        default:
+            document.title=langFile.TranslatorCM;
+            return;
+    }
+}
+
+// redraw url
+function urlParamUpdate() {
     const url = new URL(window.location);
 
-    for (let param in params)
-        url.searchParams.set(param[0], param[1]);
+    // clear
+    url.search="";
+
+    // set up
+    for (let param of webSearchParams){
+        if (param.showName || param.showName==undefined) {
+            if (url.search=="") url.search+=param.name+"="+param.value;
+            else url.search+="&"+param.name+"="+param.value;
+        // hidden
+        }else if (!param.showName) {
+            if (url.search=="") url.search+=param.value;
+            else url.search+="&"+param.value;
+        }
+    }
 
     window.history.replaceState({}, '', url);
+}
+
+function urlParamChange(name, value, showName){
+    for (let param of webSearchParams) {
+        if (param.name==name){
+            param.value=value;
+            param.showName=showName;
+            urlParamUpdate();
+            if (name=="page") titleUpdate();
+            return;
+        }
+    }
+    webSearchParams.push({showName: showName, name: name, value: value});
+    urlParamUpdate();
+    if (name=="page") titleUpdate();
+}
+
+// clear except page
+function urlParamClearB(){
+    for (let param of webSearchParams) {
+        if (param.name!="page"){
+            webSearchParams.pop(param);
+            break;;
+        }
+    }
+    
+    urlParamUpdate();
 }

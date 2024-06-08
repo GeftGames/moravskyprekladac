@@ -53,7 +53,9 @@ function mapper_init(customStyle) {
 		mapperRenderOptions.LoadCurrentSettins();
 	// načíst výchozí
 	} else mapperRenderOptions.LoadDefault();
-	
+
+	urlParamClearB();
+	urlParamChange("input", mapperRenderOptions.inputText, true);
 	
 	// Žádné body
 	if (mapperRenderOptions.inputText=="") {

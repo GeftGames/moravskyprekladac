@@ -235,14 +235,15 @@ function GetTranslations() {
         if (mapper_starting_input!=undefined){
             //console.log(mapper_starting_input);
             document.getElementById("mapperInput").value=mapper_starting_input;
-            mapper_init()
+            mapper_init();
             mapper_starting_input=undefined;
         }
+
+        titleUpdate();
         
         setTimeout(function() {
             document.getElementById("appPage_" + appSelected).style.opacity = "100%";
             document.getElementById("loadingPage").style.display = "none";
-            
         }, 100)
 
        
@@ -595,6 +596,9 @@ function Translate() {
     if (input == "") document.getElementById("ClearTextbox").style.display = "none";
     else document.getElementById("ClearTextbox").style.display = "block";
 
+    urlParamChange("input", input, true);
+    urlParamChange("lang", currentLang.Name, true);
+
     if (currentLang !== null) {
         let outputParernt = document.getElementById("outputtext");
         outputParernt.innerHTML = "";
@@ -620,6 +624,9 @@ function TranslateSimpleText(input) {
 function GetDic() {
     currentLang = GetCurrentLanguage();
     let input = dicInput.value;
+
+    urlParamChange("input", input, true);
+    urlParamChange("lang", currentLang.Name, true);
 
     if (currentLang.Quality < 2) document.getElementById("nodeTranslateTextLowQuality").style.display = "block";
     else document.getElementById("nodeTranslateTextLowQuality").style.display = "none";
