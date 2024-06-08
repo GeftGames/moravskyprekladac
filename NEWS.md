@@ -2,6 +2,7 @@
 ### 2024 8.6. 
 - Drobná úprava grafiky rozbalovacího menu
 - Měnění názvu v záhlaví počas procházení stránky (jak url, tak title)
+- Odkaz ze slovníku do mapy
   
 ### 2024 7.6. 
 - Úprava jazyku v mapě - rychlé vektorové jádro vykreslování hranic
