@@ -494,7 +494,7 @@ class ItemNoun {
             if (str_form != undefined && str_to != undefined) break;
         }
         if (str_form == undefined || str_to == undefined) return null;
-        if (str_to == "") console.log(str_form);
+        //if (str_to == "") console.log(str_form);
         /*
         if (pattern.Shapes[0]!="?") {
         	str_form=this.PatternFrom.GetShape(this.From,0);
@@ -506,14 +506,14 @@ class ItemNoun {
 
         // Create p snap
         let p = document.createElement("p");
-        let f = document.createElement("a");
+        let f = document.createElement("span");
         if (this.UppercaseType == 1) f.innerText = str_form.toUpperCase();
         else if (this.UppercaseType == 2) f.innerText = str_form[0].toUpperCase() + str_form.substring(1);
         else f.innerText = str_form;
-        f.classList="slink";
+        /*f.classList="slink";
         f.addEventListener("click", function(){//str_form
-            mapper_open("<{word="+str_form+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>");;
-        });
+            mapper_open("<{word="+str_form+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to);
+        });*/
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -556,6 +556,9 @@ class ItemNoun {
         r.innerText = info + ")";
         r.className = "dicMoreInfo";
         p.appendChild(r);
+        
+        
+        p.appendChild(mapper_link("<{word="+str_form+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to));
 
         return { from: str_form, to: str_to, name: "", element: p };
     }
@@ -804,10 +807,8 @@ class ItemSimpleWord {
             f.innerText = this.input.join(", ");
         } else f.innerText = this.input;
         
-        f.classList="slink";
-        f.addEventListener("click", function(){
-            mapper_open(f.innerText);
-        });
+       // f.classList="slink";
+       
         p.appendChild(f);
 
         let e = document.createElement("span");
@@ -841,7 +842,10 @@ class ItemSimpleWord {
                 let space = document.createTextNode(", ");
                 p.appendChild(space);
             }
-        }
+        } 
+        /*f.addEventListener("click", function(){
+            mapper_open(f.innerText, out);
+        });*/
         /*	} else {
 			let o=this.output;
 			out = o.Text;
@@ -862,6 +866,8 @@ class ItemSimpleWord {
             r.className = "dicMoreInfo";
             p.appendChild(r);
         }
+
+        p.appendChild(mapper_link(f.innerText, out));
 
         return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p };
     }
@@ -927,12 +933,10 @@ class ItemAdverb {
 
         for (let i = 0; i < arr_inp.length; i++) {
             let ri = arr_inp[i];
-            let f = document.createElement("a"); 
+            let f = document.createElement("span"); 
             f.innerText=ri;
-            f.classList="slink";
-            f.addEventListener("click", function(){
-                mapper_open(f.innerText);
-            });
+          //  f.classList="slink";
+      
             p.appendChild(f);
 
             // Do not place comma
@@ -945,13 +949,13 @@ class ItemAdverb {
         p.appendChild(e);
 
         //console.log(this);
-        let out = "";
+        let out = [];
         //if (Array.isArray(this.output)) {
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
             let o = ApplyPostRules(to.Text);
 
-            out += o + ", ";
+            out.push(o);
             if (o == "") return null;
 
             let t = document.createElement("span");
@@ -971,7 +975,9 @@ class ItemAdverb {
                 let space = document.createTextNode(", ");
                 p.appendChild(space);
             }
-        }
+        }      
+
+        
         /*	} else {
 			let o=this.output;
 			out = o.Text;
@@ -981,8 +987,7 @@ class ItemAdverb {
 			t.innerText=o.Text;
 			p.appendChild(t);		
 		}			
-		
-		
+			
 		
 		p.appendChild(document.createTextNode(" "));
 */
@@ -992,7 +997,9 @@ class ItemAdverb {
             r.className = "dicMoreInfo";
             p.appendChild(r);
         }
-        return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out, name: "", element: p };
+        p.appendChild(mapper_link(arr_inp[0], out));
+
+        return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p };
     }
 }
 
@@ -1347,7 +1354,7 @@ class ItemPreposition {
             
             f.classList="slink";
             f.addEventListener("click", function(){
-                mapper_open(ri);
+                mapper_open(ri,this.output);
             });
             p.appendChild(f);
 
@@ -2665,10 +2672,8 @@ class ItemPronoun {
         let f = document.createElement("span");
         f.innerText = this.From + this.PatternFrom.Shapes[0];
         
-        f.classList="slink";
-        f.addEventListener("click", function(){
-            mapper_open(f.innerText);
-        });
+       // f.classList="slink";
+       
 
         p.appendChild(f);
 
@@ -2676,12 +2681,16 @@ class ItemPronoun {
         e.innerText = " → ";
         p.appendChild(e);
 
+        let to_out=[];
         for (let to of this.To) {
 
             //			console.log(to);
             let t = document.createElement("span");
-            if (to.Pattern.Shapes[0] != "?" && to.Pattern.Shapes[0] != "-") t.innerText += ApplyPostRules(to.Body + to.Pattern.Shapes[0]);
-            else return null;
+            if (to.Pattern.Shapes[0] != "?" && to.Pattern.Shapes[0] != "-") {
+                let to_text=ApplyPostRules(to.Body + to.Pattern.Shapes[0]);
+                to_out.push(to_text);
+                t.innerText += to_text;
+            }else return null;
             p.appendChild(t);
 
             if (to.Pattern.Shapes.lenght > 1) {
@@ -2690,12 +2699,17 @@ class ItemPronoun {
                 });
                 t.class = "dicCustom";
             }
-        }
+        } 
+       /* f.addEventListener("click", function(){
+            mapper_open(f.innerText,to_out);
+        });*/
 
         let r = document.createElement("span");
         r.innerText = " (zájm.)";
         r.className = "dicMoreInfo";
         p.appendChild(r);
+
+        p.appendChild(mapper_link(f.innerText,to_out));
 
         return { from: this.From + this.PatternFrom.Shapes[0], /*this.To+this.PatternTo.Shapes[0]*/ to: "", name: name, element: p };
     }
@@ -3221,11 +3235,11 @@ class ItemAdjective {
         let p = document.createElement("p");
         let f = document.createElement("span");
         f.innerText = from;
-        f.classList="slink";
+        /*f.classList="slink";
         f.addEventListener("click", function(){
-            mapper_open(f.innerText);
+            mapper_open(f.innerText,to);
         });
-        p.appendChild(f);
+        p.appendChild(f);*/
 
         let e = document.createElement("span");
         e.innerText = " → ";
@@ -3244,6 +3258,8 @@ class ItemAdjective {
         r.innerText = " (příd.)";
         r.className = "dicMoreInfo";
         p.appendChild(r);
+
+        p.appendChild(mapper_link(from, to));
 
         return { from: from, to: to, name: name, element: p };
     }
@@ -3742,11 +3758,11 @@ class ItemNumber {
         let p = document.createElement("p");
         let f = document.createElement("span");
         f.innerText = this.From + this.PatternFrom[0];
-        f.classList="slink";
+       /* f.classList="slink";
         f.addEventListener("click", function(){
-            mapper_open(f.innerText);
+            mapper_open(f.innerText,this.To + this.PatternTo[0]);
         });
-        p.appendChild(f);
+        p.appendChild(f);*/
 
         let e = document.createElement("span");
         e.innerText = " → ";
@@ -3767,6 +3783,8 @@ class ItemNumber {
         r.innerText = " (čísl.)";
         r.className = "dicMoreInfo";
         p.appendChild(r);
+
+        p.appendChild(mapper_link(this.From + this.PatternFrom[0], this.To + this.PatternTo[0]));
 
         return { from: this.From + this.PatternFrom[0], to: this.To + this.PatternTo[0], name: name, element: p };
     }
@@ -4472,6 +4490,9 @@ class ItemVerb {
 
         this.ForeachArr("Auxiliary", 0, 3, 1, "Auxiliary", str);
         this.ForeachArr("Auxiliary", 3, 6, 2, "Auxiliary", str);
+        
+        this.ForeachArr("Imperative", 0, 1, 1, "Imperative", str);
+        this.ForeachArr("Imperative", 1, 2, 2, "Imperative", str);
 
         // Return all possible falls with numbers
         // [[tvar, číslo, osoba], rod]
@@ -4482,7 +4503,7 @@ class ItemVerb {
             //else inf.push(this.PatternFrom.Infinitive);
 
             for (let infinitive of this.PatternFrom.Infinitive){
-                console.log(infinitive);
+              //  console.log(infinitive);
                 if (this.From + infinitive == str) {
                     if (Array.isArray(this.To)) {
                         for (let to of this.To) {
@@ -4788,15 +4809,15 @@ class ItemVerb {
             }else{
                 form=this.TryDicForm(try_form["varible"], try_form["index"]);
             }
-            console.log(form);
+            //console.log(form);
             if (form!=null) {//console.log(form);   
                 let p = document.createElement("p");
                 let f = document.createElement("span");
                 f.innerText = form["from"].join(", ");
-                f.classList="slink";
+               /* f.classList="slink";
                 f.addEventListener("click", function(){
-                    mapper_open(f.innerText);
-                });
+                    mapper_open(f.innerText, form["to"]);
+                });*/
                 p.appendChild(f);
 
                 let e = document.createElement("span");
@@ -4825,6 +4846,8 @@ class ItemVerb {
                 r.innerText = " (slov.)";
                 r.className = "dicMoreInfo";
                 p.appendChild(r);
+
+                p.appendChild(mapper_link(form.from[0], form.to));
 
                 return { from: form.from.join(", "), to: form.to.join(", "), name: name, element: p };
             }
@@ -5827,7 +5850,7 @@ class LanguageTr {
                 {
                     let cw = this.CustomWord(word);
                     if (cw != null) {
-                        console.log(cw);
+                        if (dev) console.log(cw);
                         BuildingSentence.push(cw);
                         continue;
                     }
@@ -7682,4 +7705,19 @@ function LoadArr(rawArr, len, start) {
     }
     //console.log(arr);
     return arr;
+}
+
+function mapper_link(input, filter){
+    let img = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    img.classList="mapperBtn";
+    img.addEventListener("click", function(){
+        mapper_open(input, filter);
+    });
+    img.setAttribute("viewBox","0 0 60 60");
+
+    let path=document.createElementNS("http://www.w3.org/2000/svg", 'path');
+    path.setAttribute("d", "M15.8.6C10 .5 3.9 3.7 1.7 9.3c-1.1 2.4-.6 5.2-.8 7.8l-.1 32.4a40.3 40.3 0 0124.5-13C22 31 20 24.8 17.9 18.8 13.7 5.2 19 2.7 19.2 1a10 10 0 00-3.4-.4Zm45.6 1a30.5 30.5 0 01-16 6.4 45 45 0 01-21-4.9c-2.3 1-3.4 6.8-3.3 8.7 4.6 1.5 18.3 4.3 40.4 13V1.6ZM22 16.2a56 56 0 0010.8 23.2c2.6 2.6 5.5 5.5 9.3 6.3 3 .3 5.6-1.2 8.1-2.5 4.1-2.2 7.8-5.1 11.3-8.1v-5.7C48.4 25.8 35.2 19.7 22 16.2Zm6 24.2c-4.9 1-9.8 1.8-14.2 4-4.5 2.8-10.7 8-13 10.7l.1 3.8c8-3.3 16.9-5 25.4-3.1 7.6 1.4 15 4.6 23 3.4 5.3-.9 10.8-4.5 12.3-10 .3-2.8 0-6.5 0-9.3-5 4.1-12 8.5-18.6 9-7.2-.3-13.5-8-14.9-9.7z");
+    img.appendChild(path);
+
+    return img;
 }

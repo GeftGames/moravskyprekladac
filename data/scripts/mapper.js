@@ -8,11 +8,21 @@ let currentEditId=-1
 var mapper_borders;
 var mapper_points;
 
-function mapper_open(text){
+function mapper_open(text_input, filter) {
 	TabSwitch('mapper');
 	mapperAdvanced=false;
-	document.getElementById("mapperInput").value=text;
-	mapper_init();
+	document.getElementById("mapperInput").value=text_input;
+
+	let customStyle=new RenderMapperOptions();
+	customStyle.LoadDefault();
+	if (Array.isArray(filter)){
+		for (let f of filter){
+			customStyle.rawBackColors+="->"+f+"=>gray;";
+		}
+	}else customStyle.rawBackColors="->"+filter+"=>gray";
+	customStyle.ComputeColors();
+
+	mapper_init(customStyle);
 }
 
 // vrátit se z mapy
@@ -42,17 +52,25 @@ function mapper_init(customStyle) {
 	document.getElementById("areaStartGenerate").style.display="none";
 
 	// nastavení mapy
-	//mapperAdvanced=advanced;
-	mapperRenderOptions=new RenderMapperOptions();
-	
+
 	// načíst přímo nastavení
-	if (customStyle!=undefined){
+	if (typeof customStyle === "string"){
+		mapperRenderOptions=new RenderMapperOptions();
 		mapperRenderOptions.Load(customStyle);	
+
+	} else if (customStyle instanceof RenderMapperOptions){
+		mapperRenderOptions=customStyle;
+		
 	// načíst pro rozšířené uživatelské nastavení
 	} else if (mapperAdvanced) {
+		mapperRenderOptions=new RenderMapperOptions();
 		mapperRenderOptions.LoadCurrentSettins();
+
 	// načíst výchozí
-	} else mapperRenderOptions.LoadDefault();
+	} else {
+		mapperRenderOptions=new RenderMapperOptions();
+		mapperRenderOptions.LoadDefault();
+	}
 
 	urlParamClearB();
 	urlParamChange("input", mapperRenderOptions.inputText, true);
@@ -62,6 +80,7 @@ function mapper_init(customStyle) {
 		mapper_showError("Text v poli nemůže být prázný");
 		return;
 	}
+	
 	
 	// přeložit body
 	mapper_points=mapper_GetPointsTranslated(languagesListAll, mapperRenderOptions.inputText);
