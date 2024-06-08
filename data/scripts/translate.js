@@ -1352,10 +1352,10 @@ class ItemPreposition {
 
             f.innerText = ri;
             
-            f.classList="slink";
+            /*f.classList="slink";
             f.addEventListener("click", function(){
                 mapper_open(ri,this.output);
-            });
+            });*/
             p.appendChild(f);
 
             if (ri!=this.input[this.input.length-1])p.appendChild(document.createTextNode(", "));
@@ -1366,10 +1366,14 @@ class ItemPreposition {
         p.appendChild(e);
 
         //for (const to of this.output) {
+        let out=[];
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
             let t = document.createElement("span");
-            t.innerText = ApplyPostRules(to.Text);
+
+            let text_to=ApplyPostRules(to.Text);
+            t.innerText = text_to;
+            out.push(text_to)
             p.appendChild(t);
 
             if (to.Comment != undefined) {
@@ -1392,7 +1396,9 @@ class ItemPreposition {
         r.className = "dicMoreInfo";
         p.appendChild(r);
 
-        if (this.fall.length > 0) return { from: this.input.join(", "), to: this.output.join(', '), name: langFile.Fall + ": " + this.fall.join(', '), element: p };
+        p.appendChild(mapper_link(this.input[0], out));
+
+        if (this.fall.length > 0) return { from: this.input.join(", "), to: out.join(', '), name: langFile.Fall + ": " + this.fall.join(', '), element: p };
         else return { from: this.input.join(", "), to: this.output.join(', '), name: name, element: p };
     }
 }
