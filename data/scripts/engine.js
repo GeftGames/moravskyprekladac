@@ -1461,7 +1461,8 @@ function Load() {
         myVocabCS.push('');
     } else myVocabCS = zmyvocabCS;
 
-    dicAbc = zDicAbc;
+    if (zDicAbc===null) dicAbc = true;
+    else dicAbc = zDicAbc;
 
     if (zmyvocabHA === null) {
         myVocabHA = new Array();
