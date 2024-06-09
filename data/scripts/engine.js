@@ -1399,7 +1399,7 @@ function Load() {
     let zmyvocabCS;
     let trTo = "mo";
     let trFrom = "cs";
-    let zDicAbc = false;
+    let zDicAbc = true;
     let zTestingFunc;
     let zTranscription;
     try {
@@ -5563,6 +5563,10 @@ function SetCurrentTranscription(transCode) {
         { from: "mě", to: "mie" },
         { from: "dźe", to: "dzie" },
         { from: "ňa", to: "nia" },
+        
+        { from: "tě", to: "tie" },
+        { from: "ťe", to: "tie" },
+        
         { from: "ňe", to: "nie" },
         { from: "ně", to: "nie" },
         { from: "ńe", to: "nie" },
@@ -5594,6 +5598,10 @@ function SetCurrentTranscription(transCode) {
         { from: "ďí", to: "dí" },
         { from: "ťí", to: "tí" },
 
+        { from: "ňi", to: "ni" },
+        { from: "ďi", to: "di" },
+        { from: "ťi", to: "ti" },
+
         { from: "č", to: "cz" },
         { from: "š", to: "sz" },
         { from: "ř", to: "rz" },
@@ -5605,6 +5613,8 @@ function SetCurrentTranscription(transCode) {
         { from: "Ř", to: "Rz" },
         { from: "Ž", to: "Ż" },
         { from: "V", to: "W" },
+
+        { from: "ů", to: "ō" },
 
         { from: "ṵ", to: "ł" },
         { from: "ẹ", to: "e" },
