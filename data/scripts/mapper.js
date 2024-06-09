@@ -1305,3 +1305,18 @@ function dic_save_csv() {
 		}
 	}	
 }
+
+function mapper_options_noBorder(){
+	let options=new RenderMapperOptions();
+	options.LoadDefault();
+	options.bordersAlpha=0;
+	return options;
+}
+
+function mapper_options_filter(filter){
+	let options=new RenderMapperOptions();
+	options.LoadDefault();
+	options.rawBackColors="->"+filter+"=>gray";
+	options.ComputeColors();
+	return options;
+}

@@ -7335,8 +7335,8 @@ class LanguageTr {
                 let ch = rules["exists"];
                 if (this.Stats() > 0) {
                     let words = this.searchExists(ch);
-                    if (words != null) return { Type: "Check", To: "A", From: ch };
-                    else return { Type: "Check", To: "N", From: ch };
+                    if (words != null) return { Type: "Check", To: "1", From: ch };
+                    else return { Type: "Check", To: "0", From: ch };
                 } else return { Type: "Unknown", To: "?", From: ch };
             }else if (rules["quality"] != undefined) {
                 let q=this.Stats();

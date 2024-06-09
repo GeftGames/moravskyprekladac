@@ -1,14 +1,14 @@
-var version="2.0";
+var version="2.1";
 var cacheName = 'moravskyprekladac-ver-'+version;
 var filesToCache = [
     "index.php",
 
     "data/scripts/engine.js",
-    "data/scripts/langs.js",
-	
-    "translator/v1/inicialize.js",
-    "translator/v1/mapper.js",
-    "translator/v1/translate.js",
+    "data/scripts/langs.js",	
+    "data/scripts/inicialize.js",
+    "data/scripts/mapper.js",
+    "data/scripts/translate.js",
+    "data/scripts/rhill-voronoi-core.js",
 	
     "data/styles/style.css",
     "data/styles/themes/dark.css",
@@ -44,8 +44,7 @@ self.addEventListener('install', function (e) {
         })
     );
 });
-self.addEventListener('fetch', function (event) {
-    
+self.addEventListener('fetch', function (event) {    
    self.caches.open(cacheName).then(function (cache) {
         self.caches.match(event.request).then(function (cacheResponse) {
             /* var fetchPromise = */self.fetch(event.request).then(function (fetchResponse) {

@@ -5144,6 +5144,7 @@ function ExtractMergedFiles(inputFile) {
 
 function navrhClick(text, customStyle) {
     mapperInput.value = text;
+    if (customStyle!=undefined) customStyle.inputText=text;
     mapper_init(customStyle);
 }
 
@@ -5564,6 +5565,9 @@ function SetCurrentTranscription(transCode) {
         { from: "ňa", to: "nia" },
         { from: "ňe", to: "nie" },
         { from: "ně", to: "nie" },
+        { from: "ńe", to: "nie" },
+
+        { from: "ṕi", to: "pi" },
 
         { from: "ća", to: "cia" },
         { from: "će", to: "cie" },
@@ -5585,6 +5589,10 @@ function SetCurrentTranscription(transCode) {
         { from: "źo", to: "zio" },
         { from: "źu", to: "ziu" },
         { from: "źy", to: "ziy" },
+
+        { from: "ňí", to: "ní" },
+        { from: "ďí", to: "dí" },
+        { from: "ťí", to: "tí" },
 
         { from: "č", to: "cz" },
         { from: "š", to: "sz" },
