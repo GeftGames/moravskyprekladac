@@ -1,4 +1,7 @@
 # Poslední změny
+### 2024 9.6. 
+- Návrhy map mají - detekční vybranou grafiku šedě pro dotaz exists, bez hranic jsou názvy sídel
+
 ### 2024 8.6. 
 - Drobná úprava grafiky rozbalovacího menu
 - Měnění názvu v záhlaví počas procházení stránky (jak url, tak title)
