@@ -592,6 +592,7 @@ function ClearTextbox(textbox) {
 
 function Translate() {
     currentLang = GetCurrentLanguage();
+    if (currentLang==null) return;
     let input = document.getElementById("specialTextarea").value;
     if (input == "") document.getElementById("ClearTextbox").style.display = "none";
     else document.getElementById("ClearTextbox").style.display = "block";
