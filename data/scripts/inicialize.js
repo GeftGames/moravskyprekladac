@@ -1524,7 +1524,10 @@ function SearchInMoravian() {
             mea.classList="link";
             mea.addEventListener("click", (event) => {
                 TabSwitch('mapper');
-                navrhClick(sw.Meaning);
+                //navrhClick(sw.Meaning);
+
+                mapper_open(sw.Meaning, inputText);
+                lastAppMapper="search";
             });
             
             record.appendChild(mea);

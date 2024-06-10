@@ -30,6 +30,13 @@ function mapper_next(){
 	document.getElementById("mapperPreview").style.display="none";
 	document.getElementById("areaStartGenerate").style.display="flex";
 
+	// go back
+	if (lastAppMapper=="translate" || lastAppMapper=="dic"){
+		TabSwitch("translate");
+	}else if (lastAppMapper=="search"){
+		TabSwitch("search");
+	}
+
 	CreateSavedList();
 }
 

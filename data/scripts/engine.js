@@ -5146,6 +5146,7 @@ function ExtractMergedFiles(inputFile) {
 function navrhClick(text, customStyle) {
     mapperInput.value = text;
     if (customStyle!=undefined) customStyle.inputText=text;
+    lastAppMapper="mapper";
     mapper_init(customStyle);
 }
 
