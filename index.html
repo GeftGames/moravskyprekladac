@@ -676,7 +676,7 @@
                             <div id="mapperBasicInput">
                                 <p id="mapperSearchWord">Hledané slovo nebo fráze</p>
                                 <input type="text" placeholder="okno" id="mapperInput" value="" style="font-size: 5mm;">
-                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="width: fit-content;margin-top: 5mm;align-self: end;">Vytvořit mapu</a>
+                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="lastAppMapper='mapper';mapper_init()" style="width: fit-content;margin-top: 5mm;align-self: end;">Vytvořit mapu</a>
                                 <br>
                                 <span class="settingLink" id="mapperSearchWord" onclick="mapperAdvanced=true;MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
                             </div>
@@ -957,7 +957,7 @@
 									</select>
                             </div>-->
                             <div class="settingMapperItem">
-                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="mapper_init()" style="margin-top: 5mm;">Vytvořit mapu</a>
+                                <a rel="nofollow" class="button" id="btnMakeMap" onclick="lastAppMapper='mapper';mapper_init()" style="margin-top: 5mm;">Vytvořit mapu</a>
                                 <br>
                                 <span id="mapperSearchWord" class="settingLink" onclick="mapperAdvanced=false;MapperMode('basic')">Zjednodušená tvorba map</span>
                             </div>
