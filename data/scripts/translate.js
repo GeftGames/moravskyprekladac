@@ -19,7 +19,7 @@ class ItemSentence {
     }
 
     static Load(data) {
-        if (loadedVersionNumber < 2) {
+       /* if (loadedVersionNumber < 2) {
             let item = new ItemSentence();
             let raw = data.split('|');
             item.input = raw[0];
@@ -33,7 +33,15 @@ class ItemSentence {
             item.output = FastLoadTranslateTo(raw, 2);
             if (item.output == null) return null;
             return item;
-        }
+        }else if (loadedVersionNumber == 3) {*/
+            let raw = data.split('|');
+            if (raw[0] == '') return null;
+            let item = new ItemSentence();
+            item.input = raw[0];
+            item.output = FastLoadTranslateTo(raw, 2);
+            if (item.output == null) return null;
+            return item;
+       // }
     }
 
     GetDicForm(name) {
@@ -71,13 +79,13 @@ class ItemSentencePart {
     }
 
     static Load(data) {
-        if (loadedVersionNumber < 2) {
+       /* if (loadedVersionNumber < 2) {
             let item = new ItemSentencePart();
             let raw = data.split('|');
             item.input = raw[0];
             item.output = [{ Text: raw[1] }];
             return item;
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             let raw = data.split('|');
             let item = new ItemSentencePart();
 
@@ -87,7 +95,7 @@ class ItemSentencePart {
             item.show = raw[1] == "1";
             item.output = FastLoadTranslateTo(raw, 2);
             if (item.output!=null) return item;
-        }
+      //  }
     }
 
     GetDicForm(name) {
@@ -313,7 +321,7 @@ class ItemNoun {
     }
 
     static Load(data) {
-        if (loadedversion == "TW v0.1") {
+      /*  if (loadedversion == "TW v0.1") {
             if (data.includes('?')) return null;
             let raw = data.split('|');
 
@@ -384,7 +392,7 @@ class ItemNoun {
             }
             if (item.To.length > 0) return item;
             return null;
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             let raw = data.split('|');
 
             let item = new ItemNoun();
@@ -406,7 +414,7 @@ class ItemNoun {
             item.To = to;
 
             return item;
-        }
+      //  }
     }
 
     static GetPatternByNameFrom(name) {
@@ -754,7 +762,7 @@ class ItemSimpleWord {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+       /* if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw[0] == '') return null;
             if (raw.length == 1) {
                 if (raw[0] == '') return null;
@@ -781,7 +789,7 @@ class ItemSimpleWord {
                 else item.output = [{ Text: raw[1] }];
                 return item;
             }
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             if (raw[0] == '') return null;
             let item = new ItemSimpleWord();
 
@@ -795,8 +803,8 @@ class ItemSimpleWord {
             item.output = FastLoadTranslateTo(raw, 2);
             if (item.output == null) return null;
             return item;
-        }
-        return null;
+        //}
+        //return null;
     }
 
     GetDicForm(name) {
@@ -880,7 +888,7 @@ class ItemAdverb {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw[0] == '') return null;
             if (raw.length == 1) {
                 if (raw[0] == '') return null;
@@ -907,7 +915,7 @@ class ItemAdverb {
                 else item.output = [{ Text: raw[1] }];
                 return item;
             }
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             if (raw[0] == '') return null;
             let item = new ItemAdverb();
 
@@ -921,8 +929,8 @@ class ItemAdverb {
             item.output = FastLoadTranslateTo(raw, 1);
             if (item.output == null) return null;
             return item;
-        }
-        return null;
+        //}
+        //return null;
     }
 
     GetDicForm(name) {
@@ -1011,7 +1019,7 @@ class ItemPhrase {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw[0] == '') return null;
             if (raw.length == 1) {
                 let item = new ItemPhrase();
@@ -1040,7 +1048,7 @@ class ItemPhrase {
                 item.Comment = raw[2];
                 return item;
             }
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             if (raw[0] == '') return null;
             let item = new ItemPhrase();
             item.input = this.DoubleSplitInp(raw[0]);
@@ -1048,9 +1056,9 @@ class ItemPhrase {
             item.output = this.FastLoadTranslateTo(raw, 2);
             if (item.output == null) return null;
             return item;
-        }
+        //}
 
-        return null;
+        //return null;
     }
 
     static DoubleSplit(str) {
@@ -1283,8 +1291,8 @@ class ItemPreposition {
     }
 
     static Load(data) {
-        let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+        //let raw = data.split('|');
+        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw.length == 2) {
                 if (raw[0].includes('?')) return null;
                 let item = new ItemPreposition();
@@ -1318,7 +1326,7 @@ class ItemPreposition {
                 item.Comment = raw[3];
                 return item;
             }
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             let raw = data.split('|');
             let item = new ItemPreposition();
 
@@ -1334,8 +1342,8 @@ class ItemPreposition {
             item.output = FastLoadTranslateTo(raw, 2);
             if (item.output == null) return null;
             return item;
-        }
-        return null;
+        //}
+        //return null;
     }
 
     IsStringThisWord(str) {
@@ -1959,7 +1967,7 @@ class ItemPatternPronoun {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+      /*  if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw.length == 14 + 2) {
                 let item = new ItemPatternPronoun();
                 item.Name = raw[0];
@@ -2006,22 +2014,13 @@ class ItemPatternPronoun {
                 return item;
             }
             if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber == 2) {*/
             let shapesAll = LoadArr(raw, 14 * 4, 1)
 
             if (shapesAll.length == 14) {
                 let item = new ItemPatternPronoun();
                 item.Name = raw[0];
                 item.Type = 1;
-                /*	item.Shapes=[14];
-                	for (let i=0; i<14; i++) {
-                		let shapes=raw[1+i].split(',');
-                		item.Shapes[i]=[];
-                		for (let s of shapes) {
-                			if (!s.includes('?')) item.Shapes[i].push(s);
-                		}
-                		if (item.Shapes[i].length==0)item.Shapes[i]="?";
-                	}*/
                 item.Shapes = shapesAll;
                 return item;
             }
@@ -2029,14 +2028,6 @@ class ItemPatternPronoun {
                 let item = new ItemPatternPronoun();
                 item.Name = raw[0];
                 item.Type = 2;
-                /*item.Shapes=[7];
-                for (let i=0; i<7; i++){
-                	let shapes=raw[1+i].split(',');
-                	item.Shapes[i]=[];
-                	for (let s of shapes) {
-                		if (!s.includes('?')) item.Shapes[i].push(s);
-                	}
-                }*/
                 item.Shapes = shapesAll;
                 return item;
             }
@@ -2044,8 +2035,6 @@ class ItemPatternPronoun {
                 let item = new ItemPatternPronoun();
                 item.Name = raw[0];
                 item.Type = 3;
-                //	if (raw[1].includes('?')) item.Shapes=['?'];
-                //else item.Shapes=raw[1].split(',');
                 item.Shapes = shapesAll;
                 return item;
             }
@@ -2055,17 +2044,10 @@ class ItemPatternPronoun {
                 item.Type = 4;
                 item.Shapes = [14 * 4];
                 item.Shapes = shapesAll;
-                //	for (let i=0; i<14*4; i++) {
-                /*let shapes=raw[1+i].split(',');
-                item.Shapes[i]=[];
-                for (let s of shapes) {
-                	if (!s.includes('?')) item.Shapes[i].push(s);
-                }*/
-                //}
                 return item;
             }
             if (dev) console.log("⚠️ PatternPronoun - Chybná délka (" + raw.length + ")");
-        }
+       // }
         return null;
     }
 
@@ -2178,7 +2160,7 @@ class ItemPronoun {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw.length == 4) {
                 let item = new ItemPronoun();
                 item.From = raw[0];
@@ -2227,7 +2209,7 @@ class ItemPronoun {
                 return item;
             }
             return null;
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber >= 2) {*/
             let item = new ItemPronoun();
             item.From = raw[0];
 
@@ -2245,7 +2227,7 @@ class ItemPronoun {
             item.To = to;
 
             return item;
-        }
+       // }
     }
 
     static GetPatternByNameFrom(name) {
@@ -2875,7 +2857,7 @@ class ItemAdjective {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+       /* if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw.length == 4) {
                 let paternFrom = this.GetPatternByNameFrom(raw[2]);
                 if (paternFrom == null) {
@@ -2917,7 +2899,7 @@ class ItemAdjective {
             }
             if (dev) console.log("Cannot load pattern, wrong len");
             return null;
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber >= 2) {*/
             let item = new ItemAdjective();
             item.From = raw[0];
 
@@ -2932,7 +2914,7 @@ class ItemAdjective {
             if (item.To == null) return null;
 
             return item;
-        }
+       // }
     }
 
     IsStringThisWord(str) {
@@ -3378,7 +3360,7 @@ class ItemNumber {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+      /*  if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw.length == 4) {
                 let item = new ItemNumber();
                 item.From = raw[0];
@@ -3395,7 +3377,7 @@ class ItemNumber {
 
                 return item;
             }
-        } else if (loadedVersionNumber == 2) {
+        } else if (loadedVersionNumber >= 2) {*/
             let item = new ItemNumber();
             item.From = raw[0];
 
@@ -3412,8 +3394,8 @@ class ItemNumber {
                 return null;
             }
             return item;
-        }
-        return null;
+       // }
+        //return null;
     }
 
     static GetPatternByNameFrom(name) {
@@ -4259,7 +4241,7 @@ class ItemVerb {
 
     static Load(data) {
         let raw = data.split('|');
-        if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
+        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
             if (raw.length == 4) {
                 let paternFrom = this.GetPatternByNameFrom(raw[2]);
                 if (paternFrom == null) {
@@ -4321,70 +4303,8 @@ class ItemVerb {
             }
             return null;
         }
-        /*else if (loadedversion=="TW v2") {
-			if (raw.length==5) { 
-				let paternFrom = this.GetPatternByNameFrom(raw[2]);
-				if (paternFrom == null) {
-					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
-					return null;
-				}
-		
-				let paternTo = this.GetPatternByNameTo(raw[3]);
-				if (paternTo == null) {
-					if (dev) console.log("Cannot load pattern '"+raw[3]+"'");
-					return null;
-				}
-				let item =new ItemVerb();
-				item.From=raw[0];
-				item.To=raw[1];
-				item.PatternFrom=paternFrom;
-				item.PatternTo=paternTo;
-				item.Comment=raw[4];
-				return item;
-			}
-			if (raw.length==4) { 
-				let paternFrom = this.GetPatternByNameFrom(raw[1]);
-				if (paternFrom == null) {
-					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
-					return null;
-				}
-		
-				let paternTo = this.GetPatternByNameTo(raw[2]);
-				if (paternTo == null) {
-					if (dev) console.log("Cannot load pattern '"+raw[2]+"'");
-					return null;
-				}
-				let item =new ItemVerb();
-				item.From=raw[0];
-				item.To=raw[0];
-				item.Comment=raw[3];
-				item.PatternFrom=paternFrom;
-				item.PatternTo=paternTo;
-				return item;
-			}
-			if (raw.length==3) { 
-				let paternFrom = this.GetPatternByNameFrom(raw[0]);
-				if (paternFrom == null) {
-					if (dev) console.log("Cannot load pattern '"+raw[0]+"'");
-					return null;
-				}
-		
-				let paternTo = this.GetPatternByNameTo(raw[1]);
-				if (paternTo == null) {
-					if (dev) console.log("Cannot load pattern '"+raw[1]+"'");
-					return null;
-				}
-				let item =new ItemVerb();
-				item.From="";
-				item.To="";
-				item.raw[2];
-				item.PatternFrom=paternFrom;
-				item.PatternTo=paternTo;
-				return item;
-			}
-			return null;		
-		}*/
-        else if (loadedVersionNumber == 2) {
+       
+        else if (loadedVersionNumber >= 2) {*/
             let item = new ItemVerb();
             item.From = raw[0];
 
@@ -4402,7 +4322,7 @@ class ItemVerb {
             item.To = to;
 
             return item;
-        }
+       // }
     }
 
     ForeachArr(pattenShapesName, fromIndex, toIndex, num, name, match) {
@@ -5084,6 +5004,10 @@ class LanguageTr {
                 // Comment info
                 case "i":
                     this.Info = line.substring(1).replaceAll(/\\r?\\n/, "<br>");
+                    break;
+                    
+                case "b":
+                    this.Cite = line.substring(1);
                     break;
 
                     //case "a":
@@ -7571,22 +7495,40 @@ function ApplyPostRules(text) {
 
 function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
     let ret = [];
-    //console.log(rawData.length);
-    for (let i = indexStart; i < rawData.length; i += 3) {
-        //	console.log(i);
-        let rawBody = rawData[i],
-            rawPattern = rawData[i + 1];
+    
+    /*if (loadedVersionNumber <=2) {
+        for (let i = indexStart; i < rawData.length; i += 3) {
+            let rawBody = rawData[i],
+                rawPattern = rawData[i + 1];
 
-        if (rawBody.includes('?')) continue;
-        if (rawPattern.includes('?')) continue;
+            if (rawBody.includes('?')) continue;
+            if (rawPattern.includes('?')) continue;
 
-        let patern = t.GetPatternByNameTo(rawPattern);
-        if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
+            let patern = t.GetPatternByNameTo(rawPattern);
+            if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
 
-        let comment = rawData[i + 2];
-        if (comment == "") ret.push({ Body: rawData[i], Pattern: patern });
-        else ret.push({ Body: rawData[i], Pattern: patern, Comment: comment });
-    }
+            let comment = rawData[i + 2];
+            if (comment == "") ret.push({ Body: rawData[i], Pattern: patern });
+            else ret.push({ Body: rawData[i], Pattern: patern, Comment: comment });
+        }
+    } else if (loadedVersionNumber == 3) {*/
+        for (let i = indexStart; i < rawData.length; i += 4) {
+            let rawBody = rawData[i],
+                rawPattern = rawData[i + 1];
+
+            //console.log(rawData,i)
+
+            if (rawBody.includes('?')) continue;
+            if (rawPattern.includes('?')) continue;
+
+            let patern = t.GetPatternByNameTo(rawPattern);
+            if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
+
+            let comment = rawData[i + 2];
+            if (comment == "") ret.push({ Body: rawData[i], Pattern: patern });
+            else ret.push({ Body: rawData[i], Pattern: patern, Comment: comment, Source: rawData[i + 3] });
+        }
+    //}
 
     if (ret.length == 0) {
         if (dev) console.log("Cannot load pattern '" + rawData + "'");
@@ -7598,16 +7540,27 @@ function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
 
 function FastLoadTranslateTo(rawData, indexStart) {
     let ret = [];
-    //console.log(rawData.length);
-    for (let i = indexStart; i < rawData.length; i += 2) {
-        //	console.log(i);
-        let rawText = rawData[i];
+    /*if (loadedVersionNumber <=2) {
+        for (let i = indexStart; i < rawData.length; i += 2) {
+            //	console.log(i);
+            let rawText = rawData[i];
 
-        if (rawText == '') continue;
-        if (rawText.includes('?')) continue;
+            if (rawText == '') continue;
+            if (rawText.includes('?')) continue;
 
-        ret.push({ Text: rawText, Comment: rawData[i + 1] });
-    }
+            ret.push({ Text: rawText, Comment: rawData[i + 1] });
+        }
+    }else if (loadedVersionNumber == 3) {*/
+        for (let i = indexStart; i < rawData.length; i += 3) {
+            //	console.log(i);
+            let rawText = rawData[i];
+
+            if (rawText == '') continue;
+            if (rawText.includes('?')) continue;
+
+            ret.push({ Text: rawText, Comment: rawData[i + 1], Source: rawData[i + 2] });
+        }
+  // }
 
     if (ret.length == 0) {
         if (dev) console.log("Cannot load pattern '" + rawData + "'");

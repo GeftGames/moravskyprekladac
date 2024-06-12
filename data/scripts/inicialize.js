@@ -4,9 +4,9 @@
 // 3-  good
 // 4 - advanced
 // 5 - really good
-const languagesPackage = "v2.trw_a"; //"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
-let loadedversion = "TW 2"; //-1;
-var loadedVersionNumber = 2;
+const languagesPackage = "v3.trw_a"; //"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
+let loadedversion = "TW 3"; //-1;
+//var loadedVersionNumber = 3;
 let translations = [
     "Morava", [
         "Slovácko", [
@@ -23,20 +23,21 @@ let translations = [
             	//Klobouvsko
             	"Klobukovsko",
                 */
-            	// nekdy k Valachách
-            	"Luhačovické Zálesí",
+                "Moravské Kopanice",
+               
+                // nekdy k Valachách
+                "Luhačovické Zálesí",
 
-            	"Moravské Kopanice"
         ],
 
         "Valašsko", [
             /*"Uherskohradišťské Závrší",
             "Podřevnicko",
-            "Rožnovsko",
+            "Vsacko",
             "Meziříčsko",
             "Klouboukovsko",
             "Vsetínsko",
-            "Visovicko",
+            "Vizovicko",
             "Frenštátsko",*/
         ],
 
@@ -80,13 +81,14 @@ let translations = [
         ],
 
         "Haná", [
-            "Horní haná",
+            "Zábečví",
+            "Jižní Haná",
+            "Vyškovsko",
+            "Střední Haná",
             "Čuhácko",
             "Blaťácko",
-            "Zábečví",
-            "Vyškovsko",
-            "Jižní Haná",
             "Litovelsko",
+            "Horní Haná",
             /*	"Zábřežsko",
             	"Litovelsko",
             	"Olomoucko",
@@ -103,7 +105,6 @@ let translations = [
         "Šumpersko",
 
         "Záhoří", [
-            //"Pobečví",
             "Kelečsko",
             "Hostýnské Záhoří",
             "Lipeňské Záhoří",
