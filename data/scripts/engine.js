@@ -1614,8 +1614,8 @@ function Load() {
     imgMap_bounds = new Image();
     imgMap_bounds.src = "data/images/map_bounds.svg";
 
-    imgMap_hory = new Image();
-    imgMap_hory.src = "data/images/morava_hory.png";
+    //imgMap_hory = new Image();
+    //imgMap_hory.src = "data/images/morava_hory.png";
     SetSavedTranslations();
     customTheme();
 
