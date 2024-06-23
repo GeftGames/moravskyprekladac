@@ -22,10 +22,8 @@
 - Zlepšení překladů a jejich doplňování (na úroveň každá dědina)
 - Přeložení dokumentů *.docx, ...
 - Export *Generátora map* do shapefile formátu
-- Možná se budou dělat i nářečí v okolí Moravy - při hranicemi se Slovenskem, se Slezskem v Polsku, s Čechy a s Rakousem (najdou se-li data, Cáhnov?...)
 - Detekce odkud nářečí pochází
 - Detekce rozdílnosti nářečí
-- Možnost OpenLayers
   
 ### Poznámky
 - [Poslední změny](NEWS.md)
