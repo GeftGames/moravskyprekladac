@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 24.6. 
+- Plánuje se u každého (nového) hesla odkaz odkud pochází, mimo anonymního přispívání
+- komprimace balíčku - názvů paternů
+
 ### 2024 9.6. 
 - Návrhy map mají - detekční vybranou grafiku šedě pro dotaz exists, bez hranic jsou názvy sídel
 
