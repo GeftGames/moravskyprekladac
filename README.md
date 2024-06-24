@@ -20,6 +20,7 @@
  
 ## Co se plánuje
 - Zlepšení překladů a jejich doplňování (na úroveň každá dědina)
+- Plánuje se u každého (nového) hesla odkaz odkud pochází, mimo anonymního přispívání
 - Přeložení dokumentů *.docx, ...
 - Export *Generátora map* do shapefile formátu
 - Detekce odkud nářečí pochází
