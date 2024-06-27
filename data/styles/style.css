@@ -127,7 +127,12 @@ textarea {
     text-align: left;
 }
 
-
+#textTranscription{
+    max-width: 50%;
+}
+#onlyMoravia{
+    max-width: 50%;
+}
 /*
 #specialTextarea[data-placeholder]:empty:before {
 	content: attr(data-placeholder);
@@ -1230,7 +1235,7 @@ optgroup {
     #rte,
     #dicRte {
         margin-right: 0px;
-        margin-left: 0px;
+        /*margin-left: 0px;*/
         /*	margin-top: 15px;*/
         width: auto;
         max-height: 40vh;
