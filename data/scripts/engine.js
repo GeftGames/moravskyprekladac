@@ -955,7 +955,11 @@ function SetLanguage() {
     document.getElementById("textMode").innerText = langFile.Mode;
     document.getElementById("textPower").innerText = langFile.Power;
     document.getElementById("textThemeColor").innerText = langFile.Color;
-
+    document.getElementById("trBitSlz").innerText = langFile.BitSlz;
+    document.getElementById("navSideClose").innerText = langFile.Close;
+    document.getElementById("textOnlyMoravia").innerText = langFile.Region;
+    document.getElementById("textOnlyMoraviaMore").innerText = langFile.RegionWithTr;
+    document.getElementById("textTranscription").innerText = langFile.Transcription;
 
     document.getElementById("notePhonetics").innerHTML = langFile.UsePhonetics.substring(0, langFile.UsePhonetics.indexOf("%")) + `<a class="link" onclick="PopPageShow('phonetics')">` + langFile.UsePhonetics.substring(langFile.UsePhonetics.indexOf("%") + 1, langFile.UsePhonetics.lastIndexOf("%")) + "</a>" + langFile.UsePhonetics.substring(langFile.UsePhonetics.lastIndexOf("%") + 1);
 
@@ -5519,6 +5523,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "e" },
         { from: "ó́", to: "ó" },
+        { from: "ṵ", to: "u̯" },
     ];
 
     if (transCode == "moravian") return [

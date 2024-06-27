@@ -2,9 +2,12 @@ var langs = [];
 langs["cs"] = {
     LangName: "Spisovná čeština",
     Code: "cs",
+    Transcription: "Transkripce",
 
     // Zpráva
     noteStillInDev: "Překladač je pořád ve vývoji, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
+    Region: "Oblast",
+    BitSlz: "a částečně slezský",
 
     AppTabTranslate: "Překlad do jazyka moravského",
     AppTabSearch: "Hledání v jazyce moravském",
@@ -21,6 +24,7 @@ langs["cs"] = {
     Mode: "Režim",
     Power: "Optimalizace",
     Color: "Barva",
+    RegionWithTr: "Země s překlady",
 
 
     // Překládání
@@ -248,7 +252,11 @@ langs["cs"] = {
 langs["slz"] = {
     LangName: "Čeština (Slezsko)",
     Code: "slz",
-
+    BitSlz: "a částečně slezský",
+    Region: "Oblast",
+    Transcription: "Transkripce",
+    
+    RegionWithTr: "Země s překlady",
     // Zpráva
     noteStillInDev: "Překladač je furt ve vývoju, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
 
@@ -473,7 +481,10 @@ langs["slz"] = {
 langs["en"] = {
     LangName: "English",
     Code: "en",
-
+    BitSlz: "and a bit Silesian",
+    Region: "Region",
+    RegionWithTr: "Areas with translations",
+    Transcription: "Transcription",
     // Zpráva
     noteStillInDev: "Translator is still in developing process, unfinished languages you can switch on in settings located via top left button",
 
@@ -701,6 +712,11 @@ langs["jp"] = {
     Code: "JP",
     // Zpráva
     noteStillInDev: "トランスレータはまだ開発中です",
+    Region: "地域",
+    BitSlz: "少しシレジア語",
+    RegionWithTr: "翻訳のある地域",
+    
+    Transcription: "転写",
 
     AppTabTranslate: "モラヴィア語への翻訳",
     AppTabSearch: "モラヴィア語で検索する",
@@ -924,7 +940,11 @@ langs["jp"] = {
 langs["mor"] = {
     LangName: "Čeština (Morava)",
     Code: "cs",
+    Region: "Oblast",
+    BitSlz: "a trošku slezský",
+    RegionWithTr: "Země s překlady",
 
+    Transcription: "Transkripce",
     // Zpráva
     noteStillInDev: "Překladač je furt ve vývoju, nedodělané jazyky zapnete v nastavení v horním levém rohu",
 
@@ -1147,21 +1167,25 @@ langs["mor"] = {
 langs["pl"] = {
     LangName: "Polski",
     Code: "pl",
+    Region: "Region",
+    BitSlz: "i trochę śląsko",
+    RegionWithTr: "Regiony z tłumaczeniami",
 
+    Transcription: "Transkrypcja",
     // Zpráva
     noteStillInDev: "Tłumacz jest wciąż w fazie rozwoju",
 
     AppTabTranslate: "Tłumaczenie na język morawski",
     AppTabSearch: "Szukaj w języku morawskim",
     AppTabMapper: "Język morawski na mapie",
-    AppTabTranslateShort: "Překlad",
-    AppTabSearchShort: "Hlenání",
-    AppTabMapperShort: "V mapách",
+    AppTabTranslateShort: "Tłumaczenie",
+    AppTabSearchShort: "Szukanie",
+    AppTabMapperShort: "W mapach",
 
     SearchInputCaption: "Szukam co to znaczy...",
-    SearchButton: "Vyhledat",
+    SearchButton: "Szukaj",
     MapperInputLabel: "Wyszukaj słowo lub frazę",
-    MapperMakeMap: "Vytvořit mapu",
+    MapperMakeMap: "Utwórz mapę",
     UsePhonetics: "Stosuj %zapis fonetyczny%.",
     Mode: "Tryb",
     Power: "Wydajność",
@@ -1331,7 +1355,7 @@ langs["pl"] = {
     Moravština: "Moravština C, převaha",
 
     // Header
-    TranslatorCM: "Moravský překladač",
+    TranslatorCM: "Tłumacz morawski",
     TranslatorMC: "Překladač Moravsko-Český",
 
     // About
@@ -1372,7 +1396,11 @@ langs["pl"] = {
 langs["sk"] = {
     LangName: "Slovenčina",
     Code: "sk",
+    Region: "Oblasť",
+    BitSlz: "a trochu sliezsky",
+    RegionWithTr: "Oblasti s prekladmi",
 
+    Transcription: "Prepis",
     // Zpráva
     noteStillInDev: "Prekladač je stále vo vývoji",
 
@@ -1597,21 +1625,25 @@ langs["sk"] = {
 langs["de"] = {
     LangName: "Deutsch",
     Code: "de",
+    Region: "Region",
+    BitSlz: "und ein bisschen Schlesisch",
+    RegionWithTr: "Bereiche mit Übersetzungen",
 
+    Transcription: "Transkription",
     // Zpráva
     noteStillInDev: "Der Übersetzer befindet sich noch in der Entwicklung",
 
     AppTabTranslate: "Übersetzung in die mährische Sprache",
     AppTabSearch: "Suche in der mährischen Sprache",
     AppTabMapper: "Mährische Sprache auf der Karte",
-    AppTabTranslateShort: "Překlad",
-    AppTabSearchShort: "Hlenání",
-    AppTabMapperShort: "V mapách",
+    AppTabTranslateShort: "Übersetzung",
+    AppTabSearchShort: "Suchen",
+    AppTabMapperShort: "In den Karten",
 
     SearchInputCaption: "Ich suche nach dem, was es bedeutet...",
-    SearchButton: "Vyhledat",
-    MapperInputLabel: "Hledané slovo nebo fráze",
-    MapperMakeMap: "Vytvořit mapu",
+    SearchButton: "Suchen",
+    MapperInputLabel: "Suchwort oder Phrase",
+    MapperMakeMap: "Erstellen Sie eine Karte",
     UsePhonetics: "Verwenden Sie die %phonetische Notation%.",
     Mode: "Modus",
     Power: "Performance",
@@ -1781,7 +1813,7 @@ langs["de"] = {
     Moravština: "Moravština C, převaha",
 
     // Header
-    TranslatorCM: "Mährische Übersetzerin",
+    TranslatorCM: "Mährische Übersetzer",
     TranslatorMC: "Übersetzer Mährisch-Tschechisch",
 
     // About
@@ -1822,7 +1854,11 @@ langs["de"] = {
 langs["hanak"] = {
     LangName: "Hanáčtěna",
     code: "cs",
+    Region: "Oblast",
+    BitSlz: "a troškô slezské",
+    RegionWithTr: "Oblasťe z překladama",
 
+    Transcription: "Přepsaňi",
     // Zpráva
     noteStillInDev: "Překladač je furt rozfifňané",
 
@@ -2047,10 +2083,13 @@ langs["hanak"] = {
 langs["valach"] = {
     LangName: "Valaština",
     code: "cs",
-
+    Region: "Oblast",
+    BitSlz: "a trošku slezský",
+    RegionWithTr: "Země s překladami",
     // Zpráva
     noteStillInDev: "Překladač je v jedném kusi nedoďełaný. Esli chcete zapnúť velmi rané překlady, tak kliknite v levým, vŕchným rohu na tři čáry.",
 
+    Transcription: "Přepis",
     AppTabTranslate: "Překlad do jazyka moravského",
     AppTabSearch: "Hledání v jazyce moravském",
     AppTabMapper: "Jazyk moravský v mapách",
@@ -2272,7 +2311,11 @@ langs["valach"] = {
 langs["slova"] = {
     LangName: "Slováčtina",
     code: "cs",
+    Region: "Oblast",
+    BitSlz: "a trošku slezský",
+    RegionWithTr: "Země s překladama",
 
+    Transcription: "Přepis",
     // Zpráva
     noteStillInDev: "Překladač je v jedném kusi nedoďelaný. Esi scete zapnút velmi rané překlady, tož kliknite v levým, vrchním rohu na tři čáry.",
 
@@ -2495,10 +2538,13 @@ langs["slova"] = {
 langs["mor_radikalni"] = {
     LangName: "Moravština",
     Code: "cs",
-
+    Region: "Oblast",
+    BitSlz: "a trošku slezský",
+    RegionWithTr: "Země s překladami",
     // Zpráva
     noteStillInDev: "Překladač je furt ve vývoju, ešli cete rozfifňané jazyky zapnite v nastavení ve vrchním levém rožku",
 
+    Transcription: "Transkripca",
     AppTabTranslate: "Překlad do jazyka moravského",
     AppTabSearch: "Hledání v jazyce moravském",
     AppTabMapper: "Jazyk moravský v mapě",
@@ -2717,10 +2763,13 @@ langs["mor_radikalni"] = {
 langs["ces"] = {
     LangName: "Čeština (Čechy)",
     Code: "cs",
-
+    Region: "Oblast",
+    BitSlz: "a trochu slezský",
+    RegionWithTr: "Země s překlady",
     // Zpráva
     noteStillInDev: "Překladač je pořád ve vývoji, velmi rané překlady je možné zapnout v nastavení, levém horním menu.",
 
+    Transcription: "Transkripce",
     AppTabTranslate: "Překlad do jazyka moravského",
     AppTabSearch: "Hledání v jazyce moravském",
     AppTabMapper: "Jazyk moravský v mapě",
