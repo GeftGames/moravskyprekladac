@@ -258,6 +258,7 @@ function GetTranslations() {
         if (e.lengthComputable) {
             if (dev) console.log(((e.loaded / e.total) * 100) + "%");
             document.getElementById("progness").style.width = ((e.loaded / e.total) * 100) + "%";
+            document.getElementById("textDownloadingProgressInfo").innerText=(e.loaded/1024/1024).toString("0,0")+"MB / "+(e.total/1024/1024).toString("0,0")+"MB";
         }
     }
 
@@ -324,7 +325,10 @@ function GetTranslations() {
             return select2;
         }
 
-        languagesListAll.push(lang);
+        // map=all
+        if (FilterCountry(lang.Country)) languagesListAll.push(lang);
+
+        // pick & up = better
         if (lang.Name != "") {
             let stats=lang.Stats();
             
