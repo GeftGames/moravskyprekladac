@@ -5004,6 +5004,7 @@ class ItemVerb {
         if (to.Pattern==undefined) return null;
 
         // To
+        if (to.Pattern[varible]==undefined) return null;
         let str_to=[];
         let found=false;        
         let pattern_to;        
