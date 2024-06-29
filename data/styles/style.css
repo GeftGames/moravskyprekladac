@@ -1911,3 +1911,25 @@ input::placeholder,
     fill: var(--ColorOrig);
     opacity: .7;
 }
+
+.cite{
+    transition: .5s background-color;
+    padding: 2px 0px 2px 2px;
+    margin: 2px 0px 2px 0px;
+    border-radius: 4px;
+}
+.cite.focus{
+    background-color: var(--ColorTheme);
+}
+
+.reference{    
+    cursor: pointer;
+    color: var(--ColorOrig);
+    user-select: none;
+    transition: color .3s;
+    opacity: .6;
+}
+.reference:hover {
+    color: var(--ColorThemeForward);
+    opacity: .8;
+}
