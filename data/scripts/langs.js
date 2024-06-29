@@ -1,4 +1,5 @@
 var langs = [];
+// Jazyky
 langs["cs"] = {
     LangName: "Spisovná čeština",
     Code: "cs",
@@ -100,6 +101,8 @@ langs["cs"] = {
     Future: "Budoucí",
     Imperative: "Rozkazovací",
     Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
     Gender: "Rod",
 
     "Moravské oblasti": "Moravské oblasti",
@@ -249,235 +252,6 @@ langs["cs"] = {
     WeFree: "Měl by jít web stáhnout jako aplikace PWA. Web hostujeme na free web stránkách, včetně domény.",
 };
 
-langs["slz"] = {
-    LangName: "Čeština (Slezsko)",
-    Code: "slz",
-    BitSlz: "a částečně slezský",
-    Region: "Oblast",
-    Transcription: "Transkripce",
-    
-    RegionWithTr: "Země s překlady",
-    // Zpráva
-    noteStillInDev: "Překladač je furt ve vývoju, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
-
-    AppTabTranslate: "Překlad do jazyka moravského",
-    AppTabSearch: "Hledání v jazyce moravském",
-    AppTabMapper: "Jazyk moravský v mapě",
-    AppTabTranslateShort: "Překlad",
-    AppTabSearchShort: "Hlenání",
-    AppTabMapperShort: "V mapách",
-
-    SearchInputCaption: "Hledám co znamená...",
-    SearchButton: "Vyhledat",
-    MapperInputLabel: "Hledané slovo nebo fráze",
-    MapperMakeMap: "Vytvořit mapu",
-    UsePhonetics: "Použijte %fonetický zápis%.",
-    Mode: "Režim",
-    Power: "Optimalizace",
-    Color: "Barva",
-
-    // Překládání
-    From: "Z",
-    To: "do",
-    HereShow: "Zde se objeví překlad",
-    WriteSomething: "Tady něco napište",
-
-    // Nastavení
-    Translator: "Překladač",
-    About: "O překladaču",
-    News: "Zprávičky",
-
-    Settings: "Nastavení",
-    WebLanguage: "Jazyk webu",
-
-    Theme: "Motiv",
-    Default: "Dle systému",
-    Light: "Světlý",
-    Dark: "Tmavý",
-    NightDark: "Tmavý noční",
-    Blue: "Modrý",
-
-    MoreInfo: "Rozšířené informace",
-    MoreInfoDev: "Pro vývojáře",
-
-    UnfinishedTranslate: "Všechny překlady",
-    MoreInfoBetaTranslate: "Nehotové překlady, ...",
-    DownloadingDic: "Stahování slovníku všech slov...",
-
-    TranslateOptions: "Nastavení překladu",
-    AutoTranslate: "Automatický překlad",
-    MarkTranslate: "Zvýraznění překladu",
-    SavedTrans: "Uložené překlady",
-    Remove: "Vymazat",
-
-    SavingToPC: "Ukládání do počítače",
-    CookiesMessage: "Tento web neužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.",
-
-    // Saved translaion
-    SavedTranslations: "Uložené překlady",
-
-
-    // Messages
-    ConClear: "Opravdu chcete vymazat uložené překlady?",
-    AddChar: "Vložit znak",
-    CopyThisTrans: "Kopírovat odkaz na překlad",
-    SaveTranslation: "Uložit tento překlad",
-
-    // Buttons alt text
-    Copy: "Kopírovat",
-    Download: "Download",
-
-    // Jazyky
-    Czech: "Češtiny",
-    Dic: "Slovník",
-
-    "Moravské oblasti": "Moravské oblasti",
-    Slovácko: "Slovácko",
-    Poluží: "Poluží",
-    Horňácko: "Horňácko",
-    "Moravské Kopanice": "Moravské Kopanice",
-    "Hanácké Slovácko": "Hanácké Slovácko",
-    "Kyjovsko": "Kyjovsko",
-    "Uherskohradišstko severní": "Uherskohradišstko severní",
-    "Uherskohradišstko jižní": "Uherskohradišstko jižní",
-    "Strážnicko Severozápadní": "Strážnicko Severozápadní",
-    "Strážnicko Jihovýchodní": "Strážnicko Jihovýchodní",
-    "Severní Klobukovsko": "Severní Klobukovsko",
-    "Jižní Klobukovsko": "Jižní Klobukovsko",
-    "Luhačovické Zálesí": "Luhačovické Zálesí",
-
-    Valašsko: "Valašsko",
-    "Uherskohradišťské Závrší": "Uherskohradišťské Závrší",
-    Podřevnicko: "Podřevnicko",
-    Rožnovsko: "Rožnovsko",
-    Klouboukovsko: "Klouboukovsko",
-    Vsetínsko: "Vsetínsko",
-    Visovicko: "Visovicko",
-    Kelečsko: "Kelečsko",
-
-    "Moravské Horácko": "Moravské Horácko",
-    Horácko: "Horácko",
-    Žďársko: "Žďársko",
-    Kunštátsko: "Kunštátsko",
-    Jihlavsko: "Jihlavsko",
-    Želetavsko: "Želetavsko",
-    Telč: "Telč",
-    Dačice: "Dačice",
-    Jemnicko: "Jemnicko",
-
-    Podhorácko: "Podhorácko",
-    Tišnovsko: "Tišnovsko",
-    Nedvědicko: "Nedvědicko",
-    Velkomeziříčsko: "Velkomeziříčsko",
-    Náměšťsko: "Náměšťsko",
-    Velkobítešsko: "Velkobítešsko",
-    Třebíčsko: "Třebíčsko",
-    Oslovansko: "Oslovansko",
-    Hrotovicko: "Hrotovicko",
-    Moravskobudějovicko: "Moravskobudějovicko",
-    Židlochovicko: "Židlochovicko",
-
-    "Malá haná": "Malá haná",
-    Boskovicko: "Boskovicko",
-    Jevíčko: "Jevíčko",
-    Trnávka: "Trnávka",
-
-    "Horácké Dolsko": "Horácké Dolsko",
-    Znojemsko: "Znojemsko",
-
-    Haná: "Haná",
-    "Zábřežsko SZ": "Zábřežsko SZ",
-    Zábřežsko: "Zábřežsko",
-    Litovelsko: "Litovelsko",
-    Olomoucko: "Olomoucko",
-    Čuhácko: "Čuhácko",
-    "Prostějovsko Severní": "Prostějovsko Severní",
-    "Prostějovsko Jižní": "Prostějovsko Jižní",
-    Přerovsko: "Přerovsko",
-    Kroměřížsko: "Kroměřížsko",
-    Vyškovsko: "Vyškovsko",
-    "Slavkovsko-Bučovicko": "Slavkovsko-Bučovicko",
-
-    "Pobečví, Záhoří": "Pobečví, Záhoří",
-    Hranicko: "Hranicko",
-    "Hostýnské závrší": "Hostýnské závrší",
-
-    "Drahansko, Blansko, Hřebečsko": "Drahansko, Blansko, Hřebečsko",
-    Konicko: "Konicko",
-    Protivansko: "Protivansko",
-    Blansko: "Blansko",
-    Jedovnicko: "Jedovnicko",
-
-    "Lašsko, Kravařsko": "Lašsko, Kravařsko",
-    "Jižní Frýdecko-Mýstecko": "Jižní Frýdecko-Mýstecko",
-    Ostravsko: "Ostravsko",
-    Frendštátsko: "Frendštátsko",
-    Novojíčinsko: "Novojíčinsko",
-
-    Brněnsko: "Brněnsko",
-    "Brněnský hantec": "Brněnský hantec",
-
-    "Slezské oblasti": "Slezské oblasti",
-    "Těšínské Slezsko": "Těšínské Slezsko",
-    Goralsko: "Goralsko",
-    Karvinsko: "Karvinsko",
-    Těšínsko: "Těšínsko|CS_SZ-Tesin|1",
-    Bohumínsko: "Bohumínsko",
-    Havířovsko: "Havířovsko",
-
-
-    Hlučínsko: "Hlučínsko",
-    "Hlučínsko": "Hlučínsko",
-
-    "Opavské Slezsko": "Opavské Slezsko",
-    "Opavsko": "Opavsko",
-
-
-    Moravština: "Moravský jazyk",
-    MoravštinaA: "Moravština A, nenápadná",
-    MoravštinaB: "Moravština B, tradice",
-    MoravštinaC: "Moravština C, převaha",
-
-    // Header
-    TranslatorCM: "Moravský překladač",
-    TranslatorMC: "Překladač Moravsko-Český",
-
-    // About
-    Close: "Zavřít",
-    //Privacy	: 	"Soukromí",
-    Comment: "Poznámka",
-    Contact: "Kontakt",
-    CommentForDev: "Komentář počítačově zkušenějším",
-
-    // Dev
-    TextRefreshTooltip: "Vymazat mezipaměť a obnovit stránku",
-
-    // Files
-    FileSupport: "Podporujeme soubory .TXT a .JSON",
-    Translate: "Přeložit",
-    Text: "Text",
-    TextFiles: "Textové soubory",
-    TextFilesShort: "Soubory",
-    SubtitlesFiles: "Titulky k filmu",
-    SubtitlesFilesShort: "Titulky",
-
-    VideoNote: "Pokavaď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtite.",
-
-    AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
-    ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.",
-    NoMoney: "Projekt není finacován. Reklamy tu umístěné nemáme, vytvořili jsme je v našym omezeném volném času. Slovník zpřístupněný od 2023, doufáme, že jeho vývoj bude pokračovat.",
-    //ItsPrivate: "Snažili jsme se zajistit Vám co největší soukromí. Tento překladač neodesílá třetím stranám žádné data. Ani žádná uživatelská data našemu serveru, výjmkou bude pouze oprava překladu, kde získáme od Vás pouze Text překladu.",
-    WhatIsQ: "Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
-    StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači robime, ještě není úplně hotový.",
-    WhatWeUse: "Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.",
-    HowWeTranslate: "Bohužel v našym případě nešlo použít k překládání umělou inteligenci, bo jsme neměli dostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozeberem," +
-        "detekujeme, co je kažné slovo za slovní druh. Poté se podíváme do databáze vět a jestli věta má větný vzorec tak jej aplikujem." +
-        "Jestli ne, tak přeložíme slova zvlášť. jesli ani dané slovo nedokážeme přeložit, tak zkusíme nahrazovat části slov. " +
-        "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. " +
-        "No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.",
-    WeFree: "Web by měl jit stáhnout jako aplikace PWA. Běžíme na free web stránkách, včetně domény.",
-};
-
 langs["en"] = {
     LangName: "English",
     Code: "en",
@@ -558,6 +332,29 @@ langs["en"] = {
     // Jazyky
     Czech: "Czech",
     Dic: "Dictionary",
+
+    
+    Noun: "Noun",
+    Adjective: "Adjective",
+    Pronoun: "Pronoun",
+    Number: "Number",
+    Verb: "Verb",
+    Adverb: "Adverb",
+    Preposition: "Preposition",
+    Conjustion: "Conjustion",
+    Particle: "Particle",
+    Interjection: "Interjection",
+    Fall: "Fall",
+    Single: "Singular",
+    Multiple: "Plural",
+    Person: "Person",
+    Continous: "Continous",
+    Future: "Future",
+    Imperative: "Imperative",
+    Infinitive: "Infinitive",
+    PastPassive: "Past passive",
+    PastActive: "Past active",
+    Gender: "Gender",
 
     "Moravské oblasti": "Moravské oblasti",
     Slovácko: "Slovácko",
@@ -790,6 +587,29 @@ langs["jp"] = {
     Czech: "チェック",
     Dic: "辞書",
 
+    
+    Noun: "名詞",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "動詞",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "単数",
+    Multiple: "複数",
+    Person: "Osoba",
+    Continuous: "現在形",
+    Future: "未来形",
+    Imperative: "命令形",
+    Infinitive: "不定詞",
+    PastPassive: "過去受動態",
+    PastActive: "過去にアクティブ",
+    Gender: "性別",
+
 
     "Moravské oblasti": "Moravské oblasti",
     Slovácko: "Slovácko",
@@ -937,233 +757,6 @@ langs["jp"] = {
     WeFree: "Měli by jít web stáhnout jako aplikace PWA. Běžíme na free web stránkách, včetně domény.",
 };
 
-langs["mor"] = {
-    LangName: "Čeština (Morava)",
-    Code: "cs",
-    Region: "Oblast",
-    BitSlz: "a trošku slezský",
-    RegionWithTr: "Země s překlady",
-
-    Transcription: "Transkripce",
-    // Zpráva
-    noteStillInDev: "Překladač je furt ve vývoju, nedodělané jazyky zapnete v nastavení v horním levém rohu",
-
-    AppTabTranslate: "Překlad do jazyka moravského",
-    AppTabSearch: "Hledání v jazyce moravském",
-    AppTabMapper: "Jazyk moravský v mapě",
-    AppTabTranslateShort: "Překlad",
-    AppTabSearchShort: "Hlenání",
-    AppTabMapperShort: "V mapách",
-
-    SearchInputCaption: "Hledám co znamená...",
-    SearchButton: "Vyhledat",
-    MapperInputLabel: "Hledané slovo nebo fráze",
-    MapperMakeMap: "Vytvořit mapu",
-    UsePhonetics: "Použijte %fonetický zápis%.",
-    Mode: "Režim",
-    Power: "Optimalizace",
-    Color: "Barva",
-
-    // Překládání
-    From: "Z",
-    To: "do",
-    HereShow: "Toť se objeví překlad",
-    WriteSomething: "Tu něco napište",
-
-    // Nastavení
-    Translator: "Překladač",
-    About: "O překladaču",
-    News: "Zprávičky",
-
-    Settings: "Nastavení",
-    WebLanguage: "Jazyk webu",
-
-    Theme: "Motiv",
-    Default: "Podli systému",
-    Light: "Svjetlý",
-    Dark: "Tmavý",
-    NightDark: "Tmavý noční",
-    Blue: "Modrý",
-
-    MoreInfo: "Rozšírené informace",
-    MoreInfoDev: "Pro vývojáře",
-
-    UnfinishedTranslate: "Fšecky funkce",
-    MoreInfoBetaTranslate: "Nehotové překlady, ...",
-    DownloadingDic: "Stahování slovníku fšeckých slov...",
-
-    TranslateOptions: "Nastavení překladu",
-    AutoTranslate: "Automatický překlad",
-    MarkTranslate: "Zvýraznení překladú",
-    SavedTrans: "Uložené překlady",
-    Remove: "Vymazat",
-
-    SavingToPC: "Ukládání do počítača",
-    CookiesMessage: "Tento web nepoužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.",
-
-    // Saved translaion
-    SavedTranslations: "Uložené preklady",
-
-
-    // Messages
-    ConClear: "Opravdu chcete vymazat uložené překlady?",
-    AddChar: "Vložit znak",
-    CopyThisTrans: "Kopírovat odkaz na preklad",
-    SaveTranslation: "Uložit tento preklad",
-
-    // Buttons alt text
-    Copy: "Kopírovat",
-    Download: "Stáhnout",
-
-    // Jazyky
-    Czech: "Češtiny",
-    Dic: "Slovník",
-
-
-    "Moravské oblasti": "Moravské oblasti",
-    Slovácko: "Slovácko",
-    Poluží: "Poluží",
-    Horňácko: "Horňácko",
-    "Moravské Kopanice": "Moravské Kopanice",
-    "Hanácké Slovácko": "Hanácké Slovácko",
-    "Kyjovsko": "Kyjovsko",
-    "Uherskohradišstko severní": "Uherskohradišstko severní",
-    "Uherskohradišstko jižní": "Uherskohradišstko jižní",
-    "Strážnicko Severozápadní": "Strážnicko Severozápadní",
-    "Strážnicko Jihovýchodní": "Strážnicko Jihovýchodní",
-    "Severní Klobukovsko": "Severní Klobukovsko",
-    "Jižní Klobukovsko": "Jižní Klobukovsko",
-    "Luhačovické Zálesí": "Luhačovické Zálesí",
-
-    Valašsko: "Valachy",
-    "Uherskohradišťské Závrší": "Uherskohradišťské Závrší",
-    Podřevnicko: "Podrevnicko",
-    Rožnovsko: "Rožnovsko",
-    Klouboukovsko: "Klouboukovsko",
-    Vsetínsko: "Vsetínsko",
-    Visovicko: "Visovicko",
-    Kelečsko: "Kelečsko",
-
-    "Moravské Horácko": "Moravské Horácko",
-    Horácko: "Horácko",
-    Žďársko: "Žďársko",
-    Kunštátsko: "Kunštátsko",
-    Jihlavsko: "Jihlavsko",
-    Želetavsko: "Želetavsko",
-    Telč: "Telč",
-    Dačice: "Dačice",
-    Jemnicko: "Jemnicko",
-
-    Podhorácko: "Podhorácko",
-    Tišnovsko: "Tišnovsko",
-    Nedvědicko: "Nedvědicko",
-    Velkomeziříčsko: "Velkomeziříčsko",
-    Náměšťsko: "Námešťsko",
-    Velkobítešsko: "Velkobítešsko",
-    Třebíčsko: "Třebíčsko",
-    Oslovansko: "Oslovansko",
-    Hrotovicko: "Hrotovicko",
-    Moravskobudějovicko: "Moravskobudějovicko",
-    Židlochovicko: "Židlochovicko",
-
-    "Malá haná": "Malá haná",
-    Boskovicko: "Boskovicko",
-    Jevíčko: "Jevíčko",
-    Trnávka: "Trnávka",
-
-    "Horácké Dolsko": "Horácké Dolsko",
-    Znojemsko: "Znojemsko",
-
-    Haná: "Haná",
-    "Zábřežsko SZ": "Zábřežsko SZ",
-    Zábřežsko: "Zábřežsko",
-    Litovelsko: "Litovelsko",
-    Olomoucko: "Olomoucko",
-    Čuhácko: "Čuhácko",
-    "Prostějovsko Severní": "Prostějovsko Severní",
-    "Prostějovsko Jižní": "Prostějovsko Jižní",
-    Přerovsko: "Přerovsko",
-    Kroměřížsko: "Kroměřížsko",
-    Vyškovsko: "Vyškovsko",
-    "Slavkovsko-Bučovicko": "Slavkovsko-Bučovicko",
-
-    "Pobečví, Záhoří": "Pobečví, Záhoří",
-    Hranicko: "Hranicko",
-    "Hostýnské závrší": "Hostýnské závrší",
-
-    "Drahansko, Blansko, Hřebečsko": "Drahansko, Blansko, Hřebečsko",
-    Konicko: "Konicko",
-    Protivansko: "Protivansko",
-    Blansko: "Blansko",
-    Jedovnicko: "Jedovnicko",
-
-    "Lašsko, Kravařsko": "Lašsko, Kravařsko",
-    "Jižní Frýdecko-Mýstecko": "Jižní Frýdecko-Mýstecko",
-    Ostravsko: "Ostravsko",
-    Frendštátsko: "Frendštátsko",
-    Novojíčinsko: "Novojíčinsko",
-
-    Brněnsko: "Brněnsko",
-    "Brněnský hantec": "Brněnský hantec",
-
-    "Slezské oblasti": "Slezské oblasti",
-    "Těšínské Slezsko": "Těšínské Slezsko",
-    Goralsko: "Goralsko",
-    Karvinsko: "Karvinsko",
-    Těšínsko: "Těšínsko|CS_SZ-Tesin|1",
-    Bohumínsko: "Bohumínsko",
-    Havířovsko: "Havířovsko",
-
-    Hlučínsko: "Hlučínsko",
-    "Hlučínsko": "Hlučínsko",
-
-    "Opavské Slezsko": "Opavské Slezsko",
-    "Opavsko": "Opavsko",
-
-    Moravština: "Moravský jazyk",
-    Moravština: "Moravšina A, nenápadná",
-    Moravština: "Moravšina B, tradice",
-    Moravština: "Moravšina C, převaha",
-
-    // Header
-    TranslatorCM: "Moravský překladač",
-    TranslatorMC: "Překladač Moravsko-český",
-
-    // About
-    Close: "Zavřít",
-    //Privacy	: 	"Soukromí",
-    Comment: "Poznámka",
-    Contact: "Kontakt",
-    CommentForDev: "Komentář počítačově skušenějším",
-
-    // Dev
-    textRefreshTooltip: "Vymazat vyrovnávací paměť a obnovit stránku",
-    Text: "Text",
-    TextFiles: "Textové soubory",
-    TextFilesShort: "Soubory",
-    SubtitlesFiles: "Titulky k filmám",
-    SubtitlesFilesShort: "Titulky",
-
-    // Files
-    FileSupport: "Podporujem soubory .TXT a .JSON",
-    Translate: "Přeložit",
-    VideoNote: "Jesli máte video ve formátě mp4, mkv, avi a pod, extrahujte titulky a ty tu načtěte.",
-
-    aboutTranslatorText: "Moravský překladač byl primárně navržený k překladům do moravských dijalektů. Slezská čásť néni řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
-    ItsNotBest: "Víme, že strojová kvalita překladů néni dokonalá, zvlášť u kterých je palec dule. U tech co majou palec navrch 👍, tak jsou trošku zdařilejší jak ostatní aji tak nejsou dokonalé.",
-    NoMoney: "Projekt néni finacováný. Reklamy tu umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněný od 2023, doufáme, že jeho vývoj bude pokračovat.",
-    //ItsPrivate: "Snažili jsme se zajistit Vám co největší soukromí. Tento překladač neodesílá třetím stranám žádné data. Ani žádná uživatelská data našemu serveru, výjmkou je pouze oprava překladu, kde získáme od Vás pouze Text překladu.",
-    WhatIsQ: "Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všeckých. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
-    StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budem rádi, ale berte v ohled, že stále na překladači pracujem, ešče néni úplně dodělaný.",
-    WhatWeUse: "Cookie nepoužíváme, dala jsou uskladněné v localStorage. Stránky jsou statické HTML.",
-    HowWeTranslate: "Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozeberem," +
-        "detekujem, co je kažné slovo za slovní druh. Potom se podíváme do databáze vět a esli věta má větný vzorec tak ho aplikujem." +
-        "jesli ne, tak přeložíme slova zvlášť. A esli ani dané slovo nedokážeme přeložit, tag zkusíme nahrazovat částečky slov. " +
-        "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, gde došlo k nahrazení ou na ú. " +
-        "No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň vzhled textu.",
-    WeFree: "Měl by jít web stáhnout jako aplikace PWA. Web je na stránkách zadara aji doména je zadara.",
-};
-
 langs["pl"] = {
     LangName: "Polski",
     Code: "pl",
@@ -1246,6 +839,28 @@ langs["pl"] = {
     Czech: "Czeski",
     Dic: "Słownik",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     "Moravské oblasti": "Regiony Morawski",
     Slovácko: "Slovácko",
@@ -1475,6 +1090,28 @@ langs["sk"] = {
     Czech: "Češtiny",
     Dic: "Slovník",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     "Moravské oblasti": "Moravské oblasti",
     Slovácko: "Slovácko",
@@ -1704,6 +1341,28 @@ langs["de"] = {
     Czech: "Tschechisch",
     Dic: "Wörterbuch",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     "Moravské oblasti": "Mährische Länder",
     Slovácko: "Slovácko",
@@ -1851,6 +1510,7 @@ langs["de"] = {
     WeFree: "Die Website sollte als PWA-Anwendung heruntergeladen werden können. Wir betreiben eine kostenlose Website, einschließlich der Domain.",
 };
 
+// Obecná nářečí
 langs["hanak"] = {
     LangName: "Hanáčtěna",
     code: "cs",
@@ -1932,6 +1592,29 @@ langs["hanak"] = {
     // Jazyky
     Czech: "Češtinê",
     Dic: "Slovňik",
+    
+
+    Noun: "Podstatny mino",
+    Adjective: "Přédavny mino",
+    Pronoun: "Zájmena",
+    Number: "Čéslovke",
+    Verb: "Slovesa",
+    Adverb: "Přéslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojke",
+    Particle: "Částice",
+    Interjection: "Cêtoslovce",
+    Fall: "Pád",
+    Single: "Jednotny",
+    Multiple: "Množny",
+    Person: "Osoba",
+    Continuous: "Přuběhové",
+    Future: "Bôdóci",
+    Imperative: "Rozkazovaci",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulé trpné",
+    PastActive: "Minulé činné",
+    Gender: "Rod",
 
 
     "Moravské oblasti": "Moravsky oblasti",
@@ -2161,6 +1844,28 @@ langs["valach"] = {
     Czech: "Češtiny",
     Dic: "Slovník",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     "Moravské oblasti": "Moravské oblasti",
     Slovácko: "Slovácko",
@@ -2375,6 +2080,28 @@ langs["slova"] = {
     // Saved translaion
     SavedTranslations: "Uložené překlady",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     // Messages
     ConClear: "Opravdu chcete vymazat uložené překlady?",
@@ -2601,6 +2328,28 @@ langs["mor_radikalni"] = {
     // Saved translaion
     SavedTranslations: "Uložené prřeklady",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     // Messages
     ConClear: "Opravdu cete vymazať uložené překlady?",
@@ -2760,7 +2509,8 @@ langs["mor_radikalni"] = {
     WeFree: "Měl by íť web stáhnút jako aplikace PWA. Licem na stránkách zadara, aji doména je zadara.",
 };
 
-langs["ces"] = {
+// špisovná čeština s nepotřehnutelnými změnami
+langs["ce_cechy"] = {
     LangName: "Čeština (Čechy)",
     Code: "cs",
     Region: "Oblast",
@@ -2826,6 +2576,28 @@ langs["ces"] = {
     // Saved translaion
     SavedTranslations: "Uložené překlady",
 
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
 
     // Messages
     ConClear: "Opravdu chcete vymazat uložené překlady?",
@@ -2986,4 +2758,506 @@ langs["ces"] = {
         "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. " +
         "No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.",
     WeFree: "Web by měl by jít stáhnout jako aplikace PWA. Web hostujeme na free web stránkách, včetně domény.",
+};
+
+langs["cs_slz"] = {
+    LangName: "Čeština (Slezsko)",
+    Code: "slz",
+    BitSlz: "a částečně slezský",
+    Region: "Oblast",
+    Transcription: "Transkripce",
+    
+    RegionWithTr: "Země s překlady",
+    // Zpráva
+    noteStillInDev: "Překladač je furt ve vývoju, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
+
+    AppTabTranslate: "Překlad do jazyka moravského",
+    AppTabSearch: "Hledání v jazyce moravském",
+    AppTabMapper: "Jazyk moravský v mapě",
+    AppTabTranslateShort: "Překlad",
+    AppTabSearchShort: "Hlenání",
+    AppTabMapperShort: "V mapách",
+
+    SearchInputCaption: "Hledám co znamená...",
+    SearchButton: "Vyhledat",
+    MapperInputLabel: "Hledané slovo nebo fráze",
+    MapperMakeMap: "Vytvořit mapu",
+    UsePhonetics: "Použijte %fonetický zápis%.",
+    Mode: "Režim",
+    Power: "Optimalizace",
+    Color: "Barva",
+
+    // Překládání
+    From: "Z",
+    To: "do",
+    HereShow: "Zde se objeví překlad",
+    WriteSomething: "Tady něco napište",
+
+    // Nastavení
+    Translator: "Překladač",
+    About: "O překladaču",
+    News: "Zprávičky",
+
+    Settings: "Nastavení",
+    WebLanguage: "Jazyk webu",
+
+    Theme: "Motiv",
+    Default: "Dle systému",
+    Light: "Světlý",
+    Dark: "Tmavý",
+    NightDark: "Tmavý noční",
+    Blue: "Modrý",
+
+    MoreInfo: "Rozšířené informace",
+    MoreInfoDev: "Pro vývojáře",
+
+    UnfinishedTranslate: "Všechny překlady",
+    MoreInfoBetaTranslate: "Nehotové překlady, ...",
+    DownloadingDic: "Stahování slovníku všech slov...",
+
+    TranslateOptions: "Nastavení překladu",
+    AutoTranslate: "Automatický překlad",
+    MarkTranslate: "Zvýraznění překladu",
+    SavedTrans: "Uložené překlady",
+    Remove: "Vymazat",
+
+    SavingToPC: "Ukládání do počítače",
+    CookiesMessage: "Tento web neužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.",
+
+    // Saved translaion
+    SavedTranslations: "Uložené překlady",
+
+
+    // Messages
+    ConClear: "Opravdu chcete vymazat uložené překlady?",
+    AddChar: "Vložit znak",
+    CopyThisTrans: "Kopírovat odkaz na překlad",
+    SaveTranslation: "Uložit tento překlad",
+
+    // Buttons alt text
+    Copy: "Kopírovat",
+    Download: "Download",
+
+    // Jazyky
+    Czech: "Češtiny",
+    Dic: "Slovník",
+
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
+
+    "Moravské oblasti": "Moravské oblasti",
+    Slovácko: "Slovácko",
+    Poluží: "Poluží",
+    Horňácko: "Horňácko",
+    "Moravské Kopanice": "Moravské Kopanice",
+    "Hanácké Slovácko": "Hanácké Slovácko",
+    "Kyjovsko": "Kyjovsko",
+    "Uherskohradišstko severní": "Uherskohradišstko severní",
+    "Uherskohradišstko jižní": "Uherskohradišstko jižní",
+    "Strážnicko Severozápadní": "Strážnicko Severozápadní",
+    "Strážnicko Jihovýchodní": "Strážnicko Jihovýchodní",
+    "Severní Klobukovsko": "Severní Klobukovsko",
+    "Jižní Klobukovsko": "Jižní Klobukovsko",
+    "Luhačovické Zálesí": "Luhačovické Zálesí",
+
+    Valašsko: "Valašsko",
+    "Uherskohradišťské Závrší": "Uherskohradišťské Závrší",
+    Podřevnicko: "Podřevnicko",
+    Rožnovsko: "Rožnovsko",
+    Klouboukovsko: "Klouboukovsko",
+    Vsetínsko: "Vsetínsko",
+    Visovicko: "Visovicko",
+    Kelečsko: "Kelečsko",
+
+    "Moravské Horácko": "Moravské Horácko",
+    Horácko: "Horácko",
+    Žďársko: "Žďársko",
+    Kunštátsko: "Kunštátsko",
+    Jihlavsko: "Jihlavsko",
+    Želetavsko: "Želetavsko",
+    Telč: "Telč",
+    Dačice: "Dačice",
+    Jemnicko: "Jemnicko",
+
+    Podhorácko: "Podhorácko",
+    Tišnovsko: "Tišnovsko",
+    Nedvědicko: "Nedvědicko",
+    Velkomeziříčsko: "Velkomeziříčsko",
+    Náměšťsko: "Náměšťsko",
+    Velkobítešsko: "Velkobítešsko",
+    Třebíčsko: "Třebíčsko",
+    Oslovansko: "Oslovansko",
+    Hrotovicko: "Hrotovicko",
+    Moravskobudějovicko: "Moravskobudějovicko",
+    Židlochovicko: "Židlochovicko",
+
+    "Malá haná": "Malá haná",
+    Boskovicko: "Boskovicko",
+    Jevíčko: "Jevíčko",
+    Trnávka: "Trnávka",
+
+    "Horácké Dolsko": "Horácké Dolsko",
+    Znojemsko: "Znojemsko",
+
+    Haná: "Haná",
+    "Zábřežsko SZ": "Zábřežsko SZ",
+    Zábřežsko: "Zábřežsko",
+    Litovelsko: "Litovelsko",
+    Olomoucko: "Olomoucko",
+    Čuhácko: "Čuhácko",
+    "Prostějovsko Severní": "Prostějovsko Severní",
+    "Prostějovsko Jižní": "Prostějovsko Jižní",
+    Přerovsko: "Přerovsko",
+    Kroměřížsko: "Kroměřížsko",
+    Vyškovsko: "Vyškovsko",
+    "Slavkovsko-Bučovicko": "Slavkovsko-Bučovicko",
+
+    "Pobečví, Záhoří": "Pobečví, Záhoří",
+    Hranicko: "Hranicko",
+    "Hostýnské závrší": "Hostýnské závrší",
+
+    "Drahansko, Blansko, Hřebečsko": "Drahansko, Blansko, Hřebečsko",
+    Konicko: "Konicko",
+    Protivansko: "Protivansko",
+    Blansko: "Blansko",
+    Jedovnicko: "Jedovnicko",
+
+    "Lašsko, Kravařsko": "Lašsko, Kravařsko",
+    "Jižní Frýdecko-Mýstecko": "Jižní Frýdecko-Mýstecko",
+    Ostravsko: "Ostravsko",
+    Frendštátsko: "Frendštátsko",
+    Novojíčinsko: "Novojíčinsko",
+
+    Brněnsko: "Brněnsko",
+    "Brněnský hantec": "Brněnský hantec",
+
+    "Slezské oblasti": "Slezské oblasti",
+    "Těšínské Slezsko": "Těšínské Slezsko",
+    Goralsko: "Goralsko",
+    Karvinsko: "Karvinsko",
+    Těšínsko: "Těšínsko|CS_SZ-Tesin|1",
+    Bohumínsko: "Bohumínsko",
+    Havířovsko: "Havířovsko",
+
+
+    Hlučínsko: "Hlučínsko",
+    "Hlučínsko": "Hlučínsko",
+
+    "Opavské Slezsko": "Opavské Slezsko",
+    "Opavsko": "Opavsko",
+
+
+    Moravština: "Moravský jazyk",
+    MoravštinaA: "Moravština A, nenápadná",
+    MoravštinaB: "Moravština B, tradice",
+    MoravštinaC: "Moravština C, převaha",
+
+    // Header
+    TranslatorCM: "Moravský překladač",
+    TranslatorMC: "Překladač Moravsko-Český",
+
+    // About
+    Close: "Zavřít",
+    //Privacy	: 	"Soukromí",
+    Comment: "Poznámka",
+    Contact: "Kontakt",
+    CommentForDev: "Komentář počítačově zkušenějším",
+
+    // Dev
+    TextRefreshTooltip: "Vymazat mezipaměť a obnovit stránku",
+
+    // Files
+    FileSupport: "Podporujeme soubory .TXT a .JSON",
+    Translate: "Přeložit",
+    Text: "Text",
+    TextFiles: "Textové soubory",
+    TextFilesShort: "Soubory",
+    SubtitlesFiles: "Titulky k filmu",
+    SubtitlesFilesShort: "Titulky",
+
+    VideoNote: "Pokavaď máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtite.",
+
+    AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
+    ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.",
+    NoMoney: "Projekt není finacován. Reklamy tu umístěné nemáme, vytvořili jsme je v našym omezeném volném času. Slovník zpřístupněný od 2023, doufáme, že jeho vývoj bude pokračovat.",
+    //ItsPrivate: "Snažili jsme se zajistit Vám co největší soukromí. Tento překladač neodesílá třetím stranám žádné data. Ani žádná uživatelská data našemu serveru, výjmkou bude pouze oprava překladu, kde získáme od Vás pouze Text překladu.",
+    WhatIsQ: "Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
+    StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači robime, ještě není úplně hotový.",
+    WhatWeUse: "Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.",
+    HowWeTranslate: "Bohužel v našym případě nešlo použít k překládání umělou inteligenci, bo jsme neměli dostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozeberem," +
+        "detekujeme, co je kažné slovo za slovní druh. Poté se podíváme do databáze vět a jestli věta má větný vzorec tak jej aplikujem." +
+        "Jestli ne, tak přeložíme slova zvlášť. jesli ani dané slovo nedokážeme přeložit, tak zkusíme nahrazovat části slov. " +
+        "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. " +
+        "No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.",
+    WeFree: "Web by měl jit stáhnout jako aplikace PWA. Běžíme na free web stránkách, včetně domény.",
+};
+
+langs["cs_mor"] = {
+    LangName: "Čeština (Morava)",
+    Code: "cs",
+    Region: "Oblast",
+    BitSlz: "a trošku slezský",
+    RegionWithTr: "Země s překlady",
+
+    Transcription: "Transkripce",
+    // Zpráva
+    noteStillInDev: "Překladač je furt ve vývoju, nedodělané jazyky zapnete v nastavení v horním levém rohu",
+
+    AppTabTranslate: "Překlad do jazyka moravského",
+    AppTabSearch: "Hledání v jazyce moravském",
+    AppTabMapper: "Jazyk moravský v mapě",
+    AppTabTranslateShort: "Překlad",
+    AppTabSearchShort: "Hlenání",
+    AppTabMapperShort: "V mapách",
+
+    SearchInputCaption: "Hledám co znamená...",
+    SearchButton: "Vyhledat",
+    MapperInputLabel: "Hledané slovo nebo fráze",
+    MapperMakeMap: "Vytvořit mapu",
+    UsePhonetics: "Použijte %fonetický zápis%.",
+    Mode: "Režim",
+    Power: "Optimalizace",
+    Color: "Barva",
+
+    // Překládání
+    From: "Z",
+    To: "do",
+    HereShow: "Toť se objeví překlad",
+    WriteSomething: "Tu něco napište",
+
+    // Nastavení
+    Translator: "Překladač",
+    About: "O překladaču",
+    News: "Zprávičky",
+
+    Settings: "Nastavení",
+    WebLanguage: "Jazyk webu",
+
+    Theme: "Motiv",
+    Default: "Podli systému",
+    Light: "Svjetlý",
+    Dark: "Tmavý",
+    NightDark: "Tmavý noční",
+    Blue: "Modrý",
+
+    MoreInfo: "Rozšírené informace",
+    MoreInfoDev: "Pro vývojáře",
+
+    UnfinishedTranslate: "Fšecky funkce",
+    MoreInfoBetaTranslate: "Nehotové překlady, ...",
+    DownloadingDic: "Stahování slovníku fšeckých slov...",
+
+    TranslateOptions: "Nastavení překladu",
+    AutoTranslate: "Automatický překlad",
+    MarkTranslate: "Zvýraznení překladú",
+    SavedTrans: "Uložené překlady",
+    Remove: "Vymazat",
+
+    SavingToPC: "Ukládání do počítača",
+    CookiesMessage: "Tento web nepoužívá cookies. K ukládání nastavení do počítače je pomocí localStorage.",
+
+    // Saved translaion
+    SavedTranslations: "Uložené preklady",
+
+
+    // Messages
+    ConClear: "Opravdu chcete vymazat uložené překlady?",
+    AddChar: "Vložit znak",
+    CopyThisTrans: "Kopírovat odkaz na preklad",
+    SaveTranslation: "Uložit tento preklad",
+
+    // Buttons alt text
+    Copy: "Kopírovat",
+    Download: "Stáhnout",
+
+    // Jazyky
+    Czech: "Češtiny",
+    Dic: "Slovník",
+
+
+    
+    Noun: "Podstatné jméno",
+    Adjective: "Přídavné jméno",
+    Pronoun: "Zájmena",
+    Number: "Číslovky",
+    Verb: "Slovesa",
+    Adverb: "Příslovce",
+    Preposition: "Předložka",
+    Conjustion: "Spojky",
+    Particle: "Částice",
+    Interjection: "Citoslovce",
+    Fall: "Pád",
+    Single: "Jednotné",
+    Multiple: "Množné",
+    Person: "Osoba",
+    Continuous: "Přůběhový",
+    Future: "Budoucí",
+    Imperative: "Rozkazovací",
+    Infinitive: "Infinitiv",
+    PastPassive: "Minulý trpný",
+    PastActive: "Minulý činný",
+    Gender: "Rod",
+
+    "Moravské oblasti": "Moravské oblasti",
+    Slovácko: "Slovácko",
+    Poluží: "Poluží",
+    Horňácko: "Horňácko",
+    "Moravské Kopanice": "Moravské Kopanice",
+    "Hanácké Slovácko": "Hanácké Slovácko",
+    "Kyjovsko": "Kyjovsko",
+    "Uherskohradišstko severní": "Uherskohradišstko severní",
+    "Uherskohradišstko jižní": "Uherskohradišstko jižní",
+    "Strážnicko Severozápadní": "Strážnicko Severozápadní",
+    "Strážnicko Jihovýchodní": "Strážnicko Jihovýchodní",
+    "Severní Klobukovsko": "Severní Klobukovsko",
+    "Jižní Klobukovsko": "Jižní Klobukovsko",
+    "Luhačovické Zálesí": "Luhačovické Zálesí",
+
+    Valašsko: "Valachy",
+    "Uherskohradišťské Závrší": "Uherskohradišťské Závrší",
+    Podřevnicko: "Podrevnicko",
+    Rožnovsko: "Rožnovsko",
+    Klouboukovsko: "Klouboukovsko",
+    Vsetínsko: "Vsetínsko",
+    Visovicko: "Visovicko",
+    Kelečsko: "Kelečsko",
+
+    "Moravské Horácko": "Moravské Horácko",
+    Horácko: "Horácko",
+    Žďársko: "Žďársko",
+    Kunštátsko: "Kunštátsko",
+    Jihlavsko: "Jihlavsko",
+    Želetavsko: "Želetavsko",
+    Telč: "Telč",
+    Dačice: "Dačice",
+    Jemnicko: "Jemnicko",
+
+    Podhorácko: "Podhorácko",
+    Tišnovsko: "Tišnovsko",
+    Nedvědicko: "Nedvědicko",
+    Velkomeziříčsko: "Velkomeziříčsko",
+    Náměšťsko: "Námešťsko",
+    Velkobítešsko: "Velkobítešsko",
+    Třebíčsko: "Třebíčsko",
+    Oslovansko: "Oslovansko",
+    Hrotovicko: "Hrotovicko",
+    Moravskobudějovicko: "Moravskobudějovicko",
+    Židlochovicko: "Židlochovicko",
+
+    "Malá haná": "Malá haná",
+    Boskovicko: "Boskovicko",
+    Jevíčko: "Jevíčko",
+    Trnávka: "Trnávka",
+
+    "Horácké Dolsko": "Horácké Dolsko",
+    Znojemsko: "Znojemsko",
+
+    Haná: "Haná",
+    "Zábřežsko SZ": "Zábřežsko SZ",
+    Zábřežsko: "Zábřežsko",
+    Litovelsko: "Litovelsko",
+    Olomoucko: "Olomoucko",
+    Čuhácko: "Čuhácko",
+    "Prostějovsko Severní": "Prostějovsko Severní",
+    "Prostějovsko Jižní": "Prostějovsko Jižní",
+    Přerovsko: "Přerovsko",
+    Kroměřížsko: "Kroměřížsko",
+    Vyškovsko: "Vyškovsko",
+    "Slavkovsko-Bučovicko": "Slavkovsko-Bučovicko",
+
+    "Pobečví, Záhoří": "Pobečví, Záhoří",
+    Hranicko: "Hranicko",
+    "Hostýnské závrší": "Hostýnské závrší",
+
+    "Drahansko, Blansko, Hřebečsko": "Drahansko, Blansko, Hřebečsko",
+    Konicko: "Konicko",
+    Protivansko: "Protivansko",
+    Blansko: "Blansko",
+    Jedovnicko: "Jedovnicko",
+
+    "Lašsko, Kravařsko": "Lašsko, Kravařsko",
+    "Jižní Frýdecko-Mýstecko": "Jižní Frýdecko-Mýstecko",
+    Ostravsko: "Ostravsko",
+    Frendštátsko: "Frendštátsko",
+    Novojíčinsko: "Novojíčinsko",
+
+    Brněnsko: "Brněnsko",
+    "Brněnský hantec": "Brněnský hantec",
+
+    "Slezské oblasti": "Slezské oblasti",
+    "Těšínské Slezsko": "Těšínské Slezsko",
+    Goralsko: "Goralsko",
+    Karvinsko: "Karvinsko",
+    Těšínsko: "Těšínsko|CS_SZ-Tesin|1",
+    Bohumínsko: "Bohumínsko",
+    Havířovsko: "Havířovsko",
+
+    Hlučínsko: "Hlučínsko",
+    "Hlučínsko": "Hlučínsko",
+
+    "Opavské Slezsko": "Opavské Slezsko",
+    "Opavsko": "Opavsko",
+
+    Moravština: "Moravský jazyk",
+    Moravština: "Moravšina A, nenápadná",
+    Moravština: "Moravšina B, tradice",
+    Moravština: "Moravšina C, převaha",
+
+    // Header
+    TranslatorCM: "Moravský překladač",
+    TranslatorMC: "Překladač Moravsko-český",
+
+    // About
+    Close: "Zavřít",
+    //Privacy	: 	"Soukromí",
+    Comment: "Poznámka",
+    Contact: "Kontakt",
+    CommentForDev: "Komentář počítačově skušenějším",
+
+    // Dev
+    textRefreshTooltip: "Vymazat vyrovnávací paměť a obnovit stránku",
+    Text: "Text",
+    TextFiles: "Textové soubory",
+    TextFilesShort: "Soubory",
+    SubtitlesFiles: "Titulky k filmám",
+    SubtitlesFilesShort: "Titulky",
+
+    // Files
+    FileSupport: "Podporujem soubory .TXT a .JSON",
+    Translate: "Přeložit",
+    VideoNote: "Jesli máte video ve formátě mp4, mkv, avi a pod, extrahujte titulky a ty tu načtěte.",
+
+    aboutTranslatorText: "Moravský překladač byl primárně navržený k překladům do moravských dijalektů. Slezská čásť néni řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
+    ItsNotBest: "Víme, že strojová kvalita překladů néni dokonalá, zvlášť u kterých je palec dule. U tech co majou palec navrch 👍, tak jsou trošku zdařilejší jak ostatní aji tak nejsou dokonalé.",
+    NoMoney: "Projekt néni finacováný. Reklamy tu umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněný od 2023, doufáme, že jeho vývoj bude pokračovat.",
+    //ItsPrivate: "Snažili jsme se zajistit Vám co největší soukromí. Tento překladač neodesílá třetím stranám žádné data. Ani žádná uživatelská data našemu serveru, výjmkou je pouze oprava překladu, kde získáme od Vás pouze Text překladu.",
+    WhatIsQ: "Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všeckých. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
+    StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budem rádi, ale berte v ohled, že stále na překladači pracujem, ešče néni úplně dodělaný.",
+    WhatWeUse: "Cookie nepoužíváme, dala jsou uskladněné v localStorage. Stránky jsou statické HTML.",
+    HowWeTranslate: "Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat. Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozeberem," +
+        "detekujem, co je kažné slovo za slovní druh. Potom se podíváme do databáze vět a esli věta má větný vzorec tak ho aplikujem." +
+        "jesli ne, tak přeložíme slova zvlášť. A esli ani dané slovo nedokážeme přeložit, tag zkusíme nahrazovat částečky slov. " +
+        "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, gde došlo k nahrazení ou na ú. " +
+        "No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň vzhled textu.",
+    WeFree: "Měl by jít web stáhnout jako aplikace PWA. Web je na stránkách zadara aji doména je zadara.",
 };

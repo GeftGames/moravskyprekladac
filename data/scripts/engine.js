@@ -124,7 +124,7 @@ const HSLToRGB = (h, s, l) => {
 };
 
 function customText() {
-    TranscriptionText = document.getElementById("textTranscription").value;
+    TranscriptionText = document.getElementById("sTranscription").value;
     localStorage.setItem('Transcription', TranscriptionText);
 
     transcription = SetCurrentTranscription(TranscriptionText);
@@ -652,14 +652,20 @@ function PopPageShow(name) {
         let lang = GetCurrentLanguage();
       
         // Vytvořit blok textu s citacemi
-        if (lang.Cite==undefined || lang.Cite==""){
+        if (lang.Cites==undefined || lang.Cites.length==0){
             document.getElementById("infoLangText").innerHTML = lang.Comment;
         }else{
-            let cite=GenerateCites(lang.Cite);
-            console.log(cite);
-            if (cite.innerHTML.length>0){
+            let citeArr=document.createElement("ul");
+            for (let cite of lang.Cites){
+//                console.log(lang.Cites,cite);
+                citeArr.appendChild(cite.genEl);
+            }
+   
+           // GenerateCites(lang.Cite);
+            console.log(citeArr);
+            if (citeArr.innerHTML.length>0){
                 document.getElementById("infoLangText").innerHTML="<p class='settingHeader' style='display: inline'>Zdroje dat</p>";
-                document.getElementById("infoLangText").appendChild(cite);
+                document.getElementById("infoLangText").appendChild(citeArr);
                 document.getElementById("infoLangText").innerHTML += lang.Comment;
             }else document.getElementById("infoLangText").innerHTML = lang.Comment;
         }
@@ -1493,7 +1499,7 @@ function Load() {
     if (zTranscription === null) {
         TranscriptionText = "default";
     } else TranscriptionText = zTranscription;
-    if (document.getElementById("textTranscription") !== null) document.getElementById("textTranscription").value = TranscriptionText;
+    if (document.getElementById("sTranscription") !== null) document.getElementById("sTranscription").value = TranscriptionText;
 
     transcription = SetCurrentTranscription(TranscriptionText);
 
@@ -6532,176 +6538,6 @@ function similarityOfTwoWords(s1, s2) {
     return 1-customLevenshtein(s1, s2)/len;
 }
 
-function GenerateCites(rawDataCites) {
-    let arr=document.createElement("ul");
-    for (let line of rawDataCites.split("\\n")){
-        console.log(line);
-        let p=BuildReference(line);
-        if (p!=null) arr.appendChild(p);
-    }
-    return arr;
-}
-
-
-function BuildReference(str) {//shortcut pro zdroje ke slovům
-    // kniha|jmeno=František|příjmení=Bartoš|dilo=Diaktologie Moravská|strany=20|shortcut=dmfb 
-    // online|jmeno=František|příjmení=Bartoš|dilo=Diaktologie Moravská|strany=20|shortcut=dmfb
-    // auto|type=sncj
-    
-    rawrules=str.split("|");
-    
-    // set up rules
-    let rules={};
-    for (let rule of rawrules){
-        ruleParts=rule.split("=");
-        rules[ruleParts[0]]=rule.substring(rule.indexOf("=")+1);
-    }
-
-    //console.log(rawrules[0]);
-    if (rawrules[0]=="kniha") {  
-        //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf
-        /*let vars_support = [
-            "autor", "primeni", "jmeno", "organizace", 
-            "nazev", "podnazev", "zastupny_nazev", 
-            "kapitola", 
-            "podkapitola", 
-            "vydani", 
-            "misto", "vydavatel", "rok_vydani", 
-            "edice", 
-            "issn", 
-            "poznamky", 
-            "odkaz"
-            "zpracovano"
-        ];
-        */
-        // autoř(i)
-        let pack=document.createElement("li");
-        if ((rules["primeni"]!=undefined && rules["primeni"]!="") || (rules["jmeno"]!=undefined && rules["jmeno"]!="")) {
-            let names=document.createElement("span");
-            names.innerText=rules["primeni"].toUpperCase()+", "+rules["jmeno"]+". ";
-            pack.append(names);
-        } else if (rules["autor"]!=undefined && rules["autor"]!=""){
-            let names=document.createElement("span");
-            names.innerText=rules["autor"];
-            pack.append(names);
-        }else if (rules["organizace"]!=undefined && rules["organizace"]!=""){
-            let names=document.createElement("span");
-            names.innerText="["+rules["organizace"].toUpperCase()+"]";
-            pack.append(names);
-        }
-
-        // nazev
-        if (rules["nazev"]!=undefined && rules["nazev"]!=""){
-            let nazev=document.createElement("span");
-            nazev.innerText=rules["nazev"];
-            nazev.style.fontStyle="italic";
-            pack.append(nazev);
-
-            if (rules["podnazev"]!=undefined && rules["podnazev"]!="") {
-                pack.append(document.createTextNode(": "));
-                let podnazev=document.createElement("span");
-                podnazev.innerText=rules["nazev"];
-                podnazev.style.fontStyle="italic";
-                podnazev.append(nazev);
-            }else{
-                pack.append(document.createTextNode(". "));
-            }
-        }else if (rules["zastupny_nazev"]!=undefined && rules["zastupny_nazev"]!="") {
-            let zastupny_nazev=document.createElement("span");
-            zastupny_nazev.innerText="["+rules["zastupny_nazev"]+"]";
-            zastupny_nazev.style.fontStyle="italic";
-            pack.append(zastupny_nazev);
-        }
-
-        // kapitola
-        if (rules["kapitola"]!=undefined && rules["kapitola"]!="") {
-            let kapitola=document.createElement("span");
-            kapitola.innerText=rules["kapitola"];
-            pack.append(kapitola);
-        }
-        
-        // podkapitola
-        if (rules["podkapitola"]!=undefined && rules["podkapitola"]!="") {
-            let podkapitola=document.createElement("span");
-            podkapitola.innerText=rules["podkapitola"];
-            pack.append(podkapitola);
-        }
-
-        // misto
-        if (rules["misto"]!=undefined && rules["misto"]!="") {
-            let misto=document.createElement("span");
-            misto.innerText=rules["misto"];
-            pack.append(misto);
-        }
-        
-        // vydavatel
-        if (rules["vydavatel"]!=undefined && rules["vydavatel"]!="") {
-            if (rules["misto"]!=undefined) pack.append(document.createTextNode(": "));
-            let vydavatel=document.createElement("span");
-            vydavatel.innerText=rules["vydavatel"];
-            pack.append(vydavatel);
-            pack.append(document.createTextNode(". "));
-        }
-        
-        // rok
-        if (rules["rok_vydani"]!=undefined && rules["rok_vydani"]!="") {
-            if (rules["vydavatel"]!=undefined) pack.append(document.createTextNode(", "));
-            let rok_vydani=document.createElement("span");
-            rok_vydani.innerText=rules["rok_vydani"];
-            pack.append(rok_vydani);            
-            //pack.append(document.createTextNode(". "));
-        }
-        
-        // rok
-        if (rules["strany"]!=undefined && rules["strany"]!="") {
-            if (rules["rok_vydani"]!=undefined) pack.append(document.createTextNode(", "));
-            let rok_vydani=document.createElement("span");
-            rok_vydani.innerText="s. "+rules["strany"];
-            pack.append(rok_vydani);            
-            pack.append(document.createTextNode(". "));
-        }
-        
-        // issn
-        if (rules["issn"]!=undefined && rules["issn"]!="") {
-            let issn=document.createElement("span");
-            issn.innerText="ISSN "+rules["issn"];
-            pack.append(issn);
-            pack.append(document.createTextNode(". "));
-        }
-        
-        // poznamky
-        if (rules["poznamky"]!=undefined && rules["poznamky"]!="") {
-            let poznamky=document.createElement("span");
-            poznamky.innerText=rules["poznamky"];
-            pack.append(poznamky);
-            pack.append(document.createTextNode(". "));
-        }
-
-        // link
-        if (rules["odkaz"]!=undefined && rules["odkaz"]!=""){
-            let from=document.createElement("span");
-            from.innerText="Dostupné z: ";
-            pack.append(from);
-            
-            let links=rules["odkaz"].split("\\");
-            for (let i=0; i<links.length; i++) {
-                let link = links[i];
-                console.log(rules["odkaz"],links, i, link);
-                let url=document.createElement("a");
-                url.href=link;
-                if (link.includes("#")){
-                    url.innerText=link.substring(0,link.indexOf("#"));
-                }else url.innerText=link;
-                pack.append(url);
-                if (i<links.length-1)pack.append(document.createTextNode(", "));
-            }            
-        }
-
-        //rules.append(pack);
-        return pack;
-    }
-}
-
 function titleUpdate() {  
     // before loading
     if (langFile==undefined) return;
@@ -6794,4 +6630,32 @@ function urlParamClearB(){
     }
     
     urlParamUpdate();
+}
+
+// zobrazit citaci
+function ShowCite(shortcut) {
+    // existuje citace?
+    let cite_found=false;
+    let lang = GetCurrentLanguage();
+    if (lang!=null) {
+        for (let cite of lang.Cites) {
+            if (shortcut==cite.Shortcut) {
+                cite_found=true;
+                break;
+            }
+        }
+    }
+    
+    if (cite_found){
+        PopPageShow('pageInfoLang');
+        let citeEl=document.getElementById("sc_"+shortcut);
+        if (citeEl!=null) {
+
+            citeEl.classList.add("focus");
+
+            setTimeout(()=>{            
+                citeEl.classList.remove("focus");
+            }, 5000);
+        }
+    }
 }
