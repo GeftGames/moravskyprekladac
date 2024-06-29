@@ -529,6 +529,19 @@ class ItemPatternNoun {
         return out;
     }
 
+    GetShapeFirst(starting, fall) {
+        let shapes = this.Shapes[fall];
+        if (!Array.isArray(shapes)) shapes = [shapes];
+
+        for (let i = 0; i < shapes.length; i++) {
+            let shape = shapes[i];
+            if (shape != "?" && shape != "-") {
+                return starting + shape;
+            }
+        }
+        return undefined;
+    }
+
     GetTable(starting) {
         let combineWord = function(arr) {
             if (!Array.isArray(arr))arr=[arr];
@@ -810,7 +823,7 @@ class ItemNoun {
         let e = document.createElement("span");
         e.innerText = " → ";
         p.appendChild(e);
-
+        let mapper_from;
         // to
         let listTo=[];
         for (let to of this.To) { 
@@ -824,7 +837,7 @@ class ItemNoun {
 
             for (let i = 0; i < try_shapes.length; i++) {
                 str_to = pattern.GetShapeTr(body, used_fall = try_shapes[i]);
-                
+                mapper_from=this.PatternFrom.GetShapeFirst(this.From, try_shapes[i]);
                 // Uppercase
                 if (str_to!=undefined){                
                     if (this.UppercaseType == 1) str_to = str_to.toUpperCase();
@@ -878,7 +891,7 @@ class ItemNoun {
             r.className = "dicMoreInfo";
             p.appendChild(r);
                 
-            p.appendChild(mapper_link("<{word="+str_form+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to));
+           if (mapper_from!=undefined)p.appendChild(mapper_link("<{word="+mapper_from+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to));
         }
 
         return { from: str_form, to: listTo, name: "", element: p };
