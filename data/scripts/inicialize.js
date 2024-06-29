@@ -258,7 +258,7 @@ function GetTranslations() {
         if (e.lengthComputable) {
             if (dev) console.log(((e.loaded / e.total) * 100) + "%");
             document.getElementById("progness").style.width = ((e.loaded / e.total) * 100) + "%";
-            document.getElementById("textDownloadingProgressInfo").innerText=(e.loaded/1024/1024).toString("0,0")+"MB / "+(e.total/1024/1024).toString("0,0")+"MB";
+            document.getElementById("textDownloadingProgressInfo").innerText=(e.loaded/1024/1024).toFixed(1).toString()+"MB / "+(e.total/1024/1024).toFixed(1).toString()+"MB";
         }
     }
 
