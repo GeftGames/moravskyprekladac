@@ -1,4 +1,8 @@
 # Poslední změny
+### 2024 29.6
+- Nově přibudou zdroje u slov a jejich odkazování ze slovníku
+- Rozklik sloves ve slovníku
+
 ### 2024 24.6. 
 - Plánuje se u každého (nového) hesla odkaz odkud pochází, mimo anonymního přispívání
 - komprimace balíčku - názvů paternů
