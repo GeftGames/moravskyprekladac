@@ -820,12 +820,15 @@ class ItemNoun {
         else f.innerText = str_form;
         p.appendChild(f);
 
+        // arrow
         let e = document.createElement("span");
         e.innerText = " → ";
         p.appendChild(e);
         let mapper_from;
+
         // to
         let listTo=[];
+        if (this.To.length==0) return null;
         for (let to of this.To) { 
             let body = to.Body,
                 pattern = to.Pattern,
@@ -847,7 +850,7 @@ class ItemNoun {
 
                 if (str_to != undefined) break;
             }            
-            if (str_to == undefined) continue; 
+            if (str_to == undefined) continue;
 
             // text
             let t = document.createElement("span");
@@ -6127,10 +6130,11 @@ class LanguageTr {
         return display;
     }
 
-    Translate(input, html) {
+    Translate(input, htmlFancyOut) {
         this.qualityTrTotalTranslatedWell = 0;
         this.qualityTrTotalTranslated = 0;
-        this.html = html;
+        this.html = htmlFancyOut;
+        this.htmlCodeTranslate=true;
 
         PrepareReplaceRules();
 
@@ -6139,12 +6143,21 @@ class LanguageTr {
         let output = document.createElement("div");
         let stringOutput = "";
 
-        let sentences = this.SplitSentences(input, ".!?");
+        let sentences = this.SplitStringTags(input,".!?", true);//this.SplitSentences(input, ".!?");
 
         for (let i = 0; i < sentences.length; i++) {
             let currentSentenceS = sentences[i];
-            let currentSentence = currentSentenceS /*[1]*/ ;
+
+            let isTag=currentSentenceS.Tag;
+
+            let currentSentence = currentSentenceS.String;//currentSentenceS /*[1]*/ ;
             if (dev) console.log("📘 \x1b[1m\x1b[34mCurrent Sentence: ", currentSentence);
+
+            if (isTag) {
+                this.AddText(currentSentence, output, "tag");
+                continue;
+            }/**/
+
             // Add . ? !
             //	if (!currentSentenceS[0]) {
             //		this.AddText(currentSentence, output, "symbol");
@@ -6153,6 +6166,7 @@ class LanguageTr {
 
             // In cases like ... or !!! or !?
             if (currentSentence == "") continue;
+
 
             // Simple replece full sentences
             let m = this.matchSentence(currentSentence);
@@ -6213,7 +6227,6 @@ class LanguageTr {
                 let phr = this.ApplyPhrases(words, w);
                 if (phr != null) {
                     BuildingSentence.push(phr);
-                    //					console.log(phr);
                     continue;
                 }
 
@@ -6441,7 +6454,7 @@ class LanguageTr {
             else if (quality == "NaN") quality = "?";
             document.getElementById("translateWellLevel").innerText = "Q" + quality;
         }
-        if (html) return output;
+        if (this.html) return output;
         else return stringOutput;
     }
 
@@ -6472,10 +6485,6 @@ class LanguageTr {
 
         // ještě vyřešit aby to nebylo závislé podle velikosti slovníku
         return (same+maybe*0.7)/total;
-    }
-
-    sentenceIncludesWord(sentence, word) {
-
     }
 
     normalizeSymbols(symbol) {
@@ -6964,10 +6973,6 @@ class LanguageTr {
         throw Exception("Prameter 'string' in MakeFirstLetterBig(string) has unknown typeof");
     }
 
-    TranslateWord() {
-
-    }
-
     SearchInputNounWord(stringNoun, number, fall) {
         for (let i = 0; i < Nouns.length; i++) {
             let noun = Nouns[i];
@@ -7190,7 +7195,6 @@ class LanguageTr {
 
         for (const ch of string) {
             isSeparator = false;
-            //let separator;
 
             // Is current char separator
             for (const s of separators) {
@@ -7248,6 +7252,61 @@ class LanguageTr {
         }
         //console.log(arr);
         // for example [["true", "He"], [false, " "], [true, "is"], [false, " "], [true, "guy"], [false, "!"]]
+        return arr;
+    }
+
+    SplitStringTags(string, separators, ignoreTags) {
+        const tagStart= "<", tagEnd=">";
+        let arr=[];
+        let workingString=string;
+
+        while (workingString.length>0) {
+            // Closes separator to start
+            let sMin=-1;
+            for (let s of separators) {
+                let sPos=workingString.indexOf(s);
+                if (sPos<sMin && sPos>=0) {
+                    sMin=sPos;
+                }
+            }
+
+            // tag
+            if (ignoreTags) {
+                let tagStartPos=workingString.indexOf(tagStart);
+                console.log(tagStartPos);
+                if (tagStartPos<=sMin || sMin<0) {
+                    let toEnd=workingString.substring(tagStartPos);
+                    let endTagPos=toEnd.indexOf(tagEnd);
+                    if (endTagPos>0) {
+                        let beforeStr=workingString.substring(0, tagStartPos);
+                        // before tag
+                        if (beforeStr!="") arr.push({String: beforeStr, Tag: false});
+
+                        // tag
+                        arr.push({String: toEnd.substring(0, endTagPos+1), Tag: true});
+                        workingString=workingString.substring(tagStartPos+endTagPos+1);
+                        continue;
+                    }       
+                }
+            }
+
+            // part
+            if (sMin>=0) {
+                let partPos=toEnd.indexOf(sMin);
+                console.log(partPos);
+                if (partPos>=0) {
+                    arr.push({String: workingString.substring(0, partPos), Tag: false});
+                    workingString=workingString.substring(partPos);
+                    continue;
+                }
+
+            // Finishing...
+            } else {
+                arr.push({String: workingString, Tag: false});
+                break;
+            }
+        }
+        console.log(arr);
         return arr;
     }
 
