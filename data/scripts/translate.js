@@ -492,7 +492,7 @@ class ItemPatternNoun {
         		} else item.Shapes.push(add);*/
         //	}
         if (item.Shapes.length != 14) {
-            if (dev) console.log("PatternNoun - Chybná délka", item.Shapes);
+            if (dev) console.warn("PatternNoun - Chybná délka", item.Shapes);
             return null;
         }
         //	item.Shapes = [raw[2].split(','), raw[3].split(','), raw[4].split(','), raw[5].split(','), raw[6].split(','), raw[7].split(','), raw[8].split(','), raw[9].split(','), raw[10].split(','), raw[11].split(','), raw[12].split(','), raw[13].split(','), raw[14].split(','), raw[15].split(',')];
@@ -700,7 +700,7 @@ class ItemNoun {
 
             let paternFrom = this.GetPatternByNameFrom(raw[1]);
             if (paternFrom == null) {
-                if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
+                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
                 return null;
             }
             item.PatternFrom = paternFrom;
@@ -708,7 +708,7 @@ class ItemNoun {
 
             let to = FastLoadTranslateToWithPattern(raw, 3, this);
             if (to == null) {
-                if (dev) console.log("Cannot load to '" + data + "'");
+                if (dev) console.warn("Cannot load to '" + data + "'");
                 return null;
             }
             item.To = to;
@@ -752,7 +752,7 @@ class ItemNoun {
         }
 
 
-        if (dev) console.log("⚠️ function 'GetWordTo' has unknown parameter 'number' with value '" + number + "'");
+        if (dev) console.warn("function 'GetWordTo' has unknown parameter 'number' with value '" + number + "'");
         return [this.To + this.PaternTo.Shapes[fall - 1], this.PaternTo.Gender];
     }
 
@@ -766,7 +766,7 @@ class ItemNoun {
             return [this.From + this.PatternFrom.Shapes[fall + 6], this.PatternFrom.Gender];
         }
 
-        if (dev) console.log("⚠️ function 'GetWordTo' has unknown parameter 'number' with value '" + number + "'");
+        if (dev) console.warn("function 'GetWordTo' has unknown parameter 'number' with value '" + number + "'");
         return [this.From + this.PatternFrom.Shapes[fall - 1], this.PatternFrom.Gender];
     }
 
@@ -1532,7 +1532,7 @@ class ItemPhrase {
         }
 
         if (ret.length == 0) {
-            if (dev) console.log("Cannot load pattern '" + rawData + "'");
+            if (dev) console.warn("Cannot load pattern '" + rawData + "'");
             return null;
         }
 
@@ -1977,7 +1977,7 @@ class ItemSentencePattern {
                     }
                 }
             }
-            if (dev) console.log("⚠️ Unknows rule in pattern '", rawRule, "' all rules:", rawRules);
+            if (dev) console.warn("Unknows rule in pattern '", rawRule, "' all rules:", rawRules);
             return null;
         }
         return pattern;
@@ -2246,7 +2246,7 @@ class ItemSentencePatternPart {
                     }
                 }
             }
-            if (dev) console.log("⚠️ Unknown rule in pattern '", rawRule, "' all rules:", rawRules);
+            if (dev) console.warn("Unknown rule in pattern '", rawRule, "' all rules:", rawRules);
             return null;
         }
         return pattern;
@@ -2383,7 +2383,7 @@ class ItemPatternPronoun {
                 item.Shapes = shapesAll;
                 return item;
             }
-            if (dev) console.log("⚠️ PatternPronoun - Chybná délka (" + raw.length + ")");
+            if (dev) console.warn("PatternPronoun - Chybná délka (" + raw.length + ")");
        // }
         return null;
     }
@@ -2552,7 +2552,7 @@ class ItemPronoun {
 
             let paternFrom = this.GetPatternByNameFrom(raw[1]);
             if (paternFrom == null) {
-                if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
+                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
                 return null;
             }
             item.PatternFrom = paternFrom;
@@ -3057,7 +3057,7 @@ class ItemPatternAdjective {
         if (loadedversion == "TW v0.1") {
             let raw = data.split('|');
             if (raw.length != 14 * 4 + 2) {
-                if (dev) console.log("PatternPronoun - Chybná délka");
+                if (dev) console.warn("PatternPronoun - Chybná délka");
                 return null;
             }
             let item = new ItemPatternAdjective();
@@ -3087,7 +3087,7 @@ class ItemPatternAdjective {
             item.MasculineInanimate = GetArray();
 
             if (rawArr.length != 18 * 4) {
-                if (dev) console.log("PatternPronoun - Chybná délka", rawArr);
+                if (dev) console.warn("PatternPronoun - Chybná délka", rawArr);
                 return null;
             }
             return item;
@@ -3240,7 +3240,7 @@ class ItemAdjective {
 
             let paternFrom = this.GetPatternByNameFrom(raw[1]);
             if (paternFrom == null) {
-                if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
+                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
                 return null;
             }
             item.PatternFrom = paternFrom;
@@ -3721,14 +3721,14 @@ class ItemNumber {
 
             let paternFrom = this.GetPatternByNameFrom(raw[1]);
             if (paternFrom == null) {
-                if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
+                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
                 return null;
             }
             item.PatternFrom = paternFrom;
 
             item.To = FastLoadTranslateToWithPattern(raw, 2, this);
             if (item.To == null) {
-                if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
+                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
                 return null;
             }
             return item;
@@ -5557,7 +5557,7 @@ class LanguageTr {
 
             let item = ItemSentencePattern.Load(line);
             if (item !== null && item !== undefined) this.SentencePatterns.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'SentencePattern' item at line " + i + ". ", line);
+            else if (dev) console.warn("Cannot load 'SentencePattern' item at line " + i + ". ", line);
         }
         if (fullDev) console.log("🔣 Loaded SentencePatterns", this.SentencePatterns);
 
@@ -5568,7 +5568,7 @@ class LanguageTr {
 
             let item = ItemSentencePatternPart.Load(line);
             if (item !== null && item !== undefined) this.SentencePatternParts.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'SentencePartPattern' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'SentencePartPattern' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded SentencePartPatterns", this.SentencePartPatterns);
 
@@ -5580,7 +5580,7 @@ class LanguageTr {
 
             let item = ItemSentence.Load(line);
             if (item !== null && item !== undefined) this.Sentences.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Sentence' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Sentence' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Sentences", this.Sentences);
 
@@ -5591,7 +5591,7 @@ class LanguageTr {
 
             let item = ItemSentencePart.Load(line);
             if (item !== null && item !== undefined) this.SentenceParts.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'SentencePart' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'SentencePart' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded SentenceParts", this.SentenceParts);
 
@@ -5603,7 +5603,7 @@ class LanguageTr {
 
             let item = ItemPhrase.Load(line);
             if (item !== null && item !== undefined) this.Phrases.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Phrase' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Phrase' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Phrases", this.Phrases);
 
@@ -5614,7 +5614,7 @@ class LanguageTr {
 
             let item = ItemSimpleWord.Load(line);
             if (item !== null && item !== undefined) this.SimpleWords.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'SimpleWord' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'SimpleWord' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded SimpleWords", this.SimpleWords);
 
@@ -5626,7 +5626,7 @@ class LanguageTr {
 
             let item = ItemReplaceS.Load(line);
             if (item !== null && item !== undefined) this.ReplaceS.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'ReplaceS' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'ReplaceS' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded ReplaceSs", this.ReplaceS);
         this.ReplaceS.sort((a, b) => (a.input.length < b.input.length) ? 1 : -1);
@@ -5638,7 +5638,7 @@ class LanguageTr {
 
             let item = ItemReplaceG.Load(line);
             if (item !== null && item !== undefined) this.ReplaceG.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'ReplaceG' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'ReplaceG' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded ReplaceGs", this.ReplaceG);
         this.ReplaceG.sort((a, b) => (a.input.length < b.input.length) ? 1 : -1);
@@ -5650,7 +5650,7 @@ class LanguageTr {
 
             let item = ItemReplaceE.Load(line);
             if (item !== null && item !== undefined) this.ReplaceE.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'ReplaceE' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'ReplaceE' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded ReplaceEs", this.ReplaceE);
 
@@ -5662,7 +5662,7 @@ class LanguageTr {
 
             let item = ItemPatternNoun.Load(line);
             if (item !== null && item !== undefined) this.PatternNounsFrom.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternNoun' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternNoun' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternNounsFrom", this.PatternNounsFrom);
 
@@ -5673,7 +5673,7 @@ class LanguageTr {
 
             let item = ItemPatternNoun.Load(line);
             if (item !== null && item !== undefined) this.PatternNounsTo.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternNoun' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternNoun' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternNounsTo", this.PatternNounsTo);
 
@@ -5686,7 +5686,7 @@ class LanguageTr {
 
             let item = ItemNoun.Load(line);
             if (item !== null && item !== undefined) this.Nouns.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Noun' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Noun' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Nouns", this.Nouns);
 
@@ -5697,7 +5697,7 @@ class LanguageTr {
 
             let item = ItemPatternAdjective.Load(line);
             if (item !== null && item !== undefined) this.PatternAdjectivesFrom.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternAdjective' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternAdjective' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternAdjectivesFrom", this.PatternAdjectivesFrom);
 
@@ -5708,7 +5708,7 @@ class LanguageTr {
 
             let item = ItemPatternAdjective.Load(line);
             if (item !== null && item !== undefined) this.PatternAdjectivesTo.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternAdjective' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternAdjective' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternAdjectivesTo", this.PatternAdjectivesTo);
 
@@ -5721,7 +5721,7 @@ class LanguageTr {
 
             let item = ItemAdjective.Load(line);
             if (item !== null && item !== undefined) this.Adjectives.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Adjective' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Adjective' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Adjectives", this.Adjectives);
 
@@ -5732,7 +5732,7 @@ class LanguageTr {
 
             let item = ItemPatternPronoun.Load(line);
             if (item !== null && item !== undefined) this.PatternPronounsFrom.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternPronoun' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternPronoun' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternPronounsFrom", this.PatternPronounsFrom);
 
@@ -5743,7 +5743,7 @@ class LanguageTr {
 
             let item = ItemPatternPronoun.Load(line);
             if (item !== null && item !== undefined) this.PatternPronounsTo.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternPronoun' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternPronoun' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternPronounsTo", this.PatternPronounsTo);
 
@@ -5756,7 +5756,7 @@ class LanguageTr {
 
             let item = ItemPronoun.Load(line);
             if (item !== null && item !== undefined) this.Pronouns.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Pronoun' item at line " + i + ". Data: ", line);
+            else if (dev) console.warn("Cannot load 'Pronoun' item at line " + i + ". Data: ", line);
         }
         if (fullDev) console.log("🔣 Loaded Pronouns", this.Pronouns);
 
@@ -5767,7 +5767,7 @@ class LanguageTr {
 
             let item = ItemPatternNumber.Load(line);
             if (item !== null && item !== undefined) this.PatternNumbersFrom.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternNumber' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternNumber' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternNumbersFrom", this.PatternNumbersFrom);
 
@@ -5778,7 +5778,7 @@ class LanguageTr {
 
             let item = ItemPatternNumber.Load(line);
             if (item !== null && item !== undefined) this.PatternNumbersTo.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternNumber' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternNumber' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternNumbersTo", this.PatternNumbersTo);
 
@@ -5791,7 +5791,7 @@ class LanguageTr {
 
             let item = ItemNumber.Load(line);
             if (item !== null && item !== undefined) this.Numbers.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Number' item at line " + i + ", data: ", line);
+            else if (dev) console.warn("Cannot load 'Number' item at line " + i + ", data: ", line);
         }
         if (fullDev) console.log("🔣 Loaded Numbers", this.Numbers);
 
@@ -5802,7 +5802,7 @@ class LanguageTr {
 
             let item = ItemPatternVerb.Load(line);
             if (item !== null && item !== undefined) this.PatternVerbsFrom.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternVerb' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternVerb' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternVerbsFrom", this.PatternVerbsFrom);
 
@@ -5813,7 +5813,7 @@ class LanguageTr {
 
             let item = ItemPatternVerb.Load(line);
             if (item !== null && item !== undefined) this.PatternVerbsTo.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'PatternVerb' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'PatternVerb' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded PatternVerbsTo", this.PatternVerbsTo);
 
@@ -5826,7 +5826,7 @@ class LanguageTr {
 
             let item = ItemVerb.Load(line);
             if (item !== null && item !== undefined) this.Verbs.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Verb' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Verb' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Verbs", this.Verbs);
 
@@ -5837,7 +5837,7 @@ class LanguageTr {
 
             let item = ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Adverbs.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Adverb' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Adverb' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Adverbs", this.Adverbs);
 
@@ -5848,7 +5848,7 @@ class LanguageTr {
 
             let item = ItemPreposition.Load(line);
             if (item !== null && item !== undefined) this.Prepositions.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Preposition' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Preposition' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Prepositionss", this.Prepositions);
 
@@ -5859,7 +5859,7 @@ class LanguageTr {
 
             let item = ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Conjunctions.push(item);
-            else if (dev) console.log("⚠️ annot load 'Conjunction' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Conjunction' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Conjunctions", this.Conjunctions);
 
@@ -5870,7 +5870,7 @@ class LanguageTr {
 
             let item = ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Particles.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Particle' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Particle' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Particles", this.Particles);
 
@@ -5881,7 +5881,7 @@ class LanguageTr {
 
             let item = ItemAdverb.Load(line);
             if (item !== null && item !== undefined) this.Interjections.push(item);
-            else if (dev) console.log("⚠️ Cannot load 'Interjection' item at line " + i, line);
+            else if (dev) console.warn("Cannot load 'Interjection' item at line " + i, line);
         }
         if (fullDev) console.log("🔣 Loaded Interjections", this.Interjections);
 
@@ -6134,7 +6134,7 @@ class LanguageTr {
         this.qualityTrTotalTranslatedWell = 0;
         this.qualityTrTotalTranslated = 0;
         this.html = htmlFancyOut;
-        this.htmlCodeTranslate=true;
+        this.htmlCodeTranslate=false;
 
         PrepareReplaceRules();
 
@@ -6186,7 +6186,7 @@ class LanguageTr {
                 continue;
             }
 
-            if (dev) console.log("Sentence pattern not found", currentSentence);
+            if (dev) console.warn("Sentence pattern not found", currentSentence);
 
             // Words
             let unknownPattern;
@@ -6394,7 +6394,7 @@ class LanguageTr {
                 else if (type == "Check") printableString = string;
                 else if (type == "Special") printableString = string;
                 else {
-                    if (dev) console.log("⚠️ Unknown type", string);
+                    if (dev) console.warn("Unknown type", string);
                     printableString = string.To;
                 }
 
