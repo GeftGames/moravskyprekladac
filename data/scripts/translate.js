@@ -6134,7 +6134,7 @@ class LanguageTr {
         this.qualityTrTotalTranslatedWell = 0;
         this.qualityTrTotalTranslated = 0;
         this.html = htmlFancyOut;
-        this.htmlCodeTranslate=false;
+        this.htmlCodeTranslate=true;
 
         PrepareReplaceRules();
 
@@ -6143,7 +6143,7 @@ class LanguageTr {
         let output = document.createElement("div");
         let stringOutput = "";
 
-        let sentences = this.SplitStringTags(input,".!?", true);//this.SplitSentences(input, ".!?");
+        let sentences = this.SplitStringTags(input,".!?", false);//this.SplitSentences(input, ".!?");
 
         for (let i = 0; i < sentences.length; i++) {
             let currentSentenceS = sentences[i];
@@ -7273,7 +7273,7 @@ class LanguageTr {
             // tag
             if (ignoreTags) {
                 let tagStartPos=workingString.indexOf(tagStart);
-                console.log(tagStartPos);
+              //  console.log(tagStartPos);
                 if (tagStartPos<=sMin || sMin<0) {
                     let toEnd=workingString.substring(tagStartPos);
                     let endTagPos=toEnd.indexOf(tagEnd);
@@ -7293,7 +7293,7 @@ class LanguageTr {
             // part
             if (sMin>=0) {
                 let partPos=toEnd.indexOf(sMin);
-                console.log(partPos);
+             //  console.log(partPos);
                 if (partPos>=0) {
                     arr.push({String: workingString.substring(0, partPos), Tag: false});
                     workingString=workingString.substring(partPos);
@@ -7306,7 +7306,7 @@ class LanguageTr {
                 break;
             }
         }
-        console.log(arr);
+       // console.log(arr);
         return arr;
     }
 
