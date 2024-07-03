@@ -20,4 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-(Nevztahuje se na následujcí části: Písma - [NotoSans](https://fonts.google.com/noto/specimen/Noto+Sans/about))
+### Nevztahuje se na následujcí části, jiné licence: 
+- Písma - [NotoSans](https://fonts.google.com/noto/specimen/Noto+Sans/about))
+- [rhill-voronoi-core.js](https://github.com/GeftGames/moravskyprekladac/blob/main/data/scripts/rhill-voronoi-core.js)
+- Některé součásti databáze překladů (soubory *.trw_a)
