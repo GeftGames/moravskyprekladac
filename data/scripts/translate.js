@@ -829,6 +829,8 @@ class ItemNoun {
         // to
         let listTo=[];
         if (this.To.length==0) return null;
+        if (listTo.length==0) return null;
+
         for (let to of this.To) { 
             let body = to.Body,
                 pattern = to.Pattern,
