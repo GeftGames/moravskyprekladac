@@ -437,65 +437,28 @@ class ItemSentencePart {
 
 class ItemPatternNoun {
     constructor() {
-        this.Name = "";
-        this.Gender = "";
+        this.Name;
+        this.Gender; // enum: 0=n, 1=f, 2=muž, 3=mun
         this.Shapes = [];
     }
 
     static Load(data) {
         let raw = data.split('|');
-        //	if (raw.length != 14 + 2) {
-        //if (dev)console.log("PatternNoun - Chybná délka");
-        //	return null;
-        //}
+
         let item = new ItemPatternNoun();
         item.Name = raw[0];
-        if (raw[1] == "0") item.Gender = "n";
-        if (raw[1] == "1") item.Gender = "f";
-        if (raw[1] == "2") item.Gender = "ma";
-        if (raw[1] == "3") item.Gender = "mi";
+
+        if (raw[1] == "0") item.Gender = 0;
+        if (raw[1] == "1") item.Gender = 1;
+        if (raw[1] == "2") item.Gender = 2;
+        if (raw[1] == "3") item.Gender = 3;
 
         item.Shapes = LoadArr(raw, 14, 2);
 
-
-        /*	for (let i=2; i<=15 && i<raw.length; i++) {
-        		let rawShapes=raw[i];
-        		if (!rawShapes.includes(",")) {
-        			if (rawShapes.startsWith("?×")){
-        				let cntRaw=rawShapes.substring(2);
-        				let cnt=parseInt(cntRaw);
-        				for (let j=0; j<cnt; j++) item.Shapes.push("?");
-        				i+=cnt;
-        				continue;
-        			} else if (rawShapes.startsWith("-×")){
-        				let cntRaw=rawShapes.substring(2);
-        				let cnt=parseInt(cntRaw);
-        				for (let j=0; j<cnt; j++) item.Shapes.push("-");
-        				i+=cnt;
-        				continue;
-        			}
-        		}
-
-        	//	for (let r of raw[i].split(',')) {				
-        	//		add.push(r);
-        		//}
-        		item.Shapes.push(rawShapes.split(','));
-
-        		/*for (let r of raw[i].split(',')) {
-        			if (r.includes("?")) unknown=true;
-        			else add.push(r);
-        		}
-
-        		if (unknown) {
-        			 if (add.length>0) item.Shapes.push(add); // např jeden neznámý + jeden známý
-        			 else item.Shapes.push("?");
-        		} else item.Shapes.push(add);*/
-        //	}
         if (item.Shapes.length != 14) {
             if (dev) console.warn("PatternNoun - Chybná délka", item.Shapes);
             return null;
         }
-        //	item.Shapes = [raw[2].split(','), raw[3].split(','), raw[4].split(','), raw[5].split(','), raw[6].split(','), raw[7].split(','), raw[8].split(','), raw[9].split(','), raw[10].split(','), raw[11].split(','), raw[12].split(','), raw[13].split(','), raw[14].split(','), raw[15].split(',')];
         return item;
     }
 
@@ -829,7 +792,7 @@ class ItemNoun {
         // to
         let listTo=[];
         if (this.To.length==0) return null;
-        if (listTo.length==0) return null;
+       
 
         for (let to of this.To) { 
             let body = to.Body,
@@ -853,7 +816,7 @@ class ItemNoun {
                 if (str_to != undefined) break;
             }            
             if (str_to == undefined) continue;
-
+            listTo.push(str_to);
             // text
             let t = document.createElement("span");
             t.innerText = ApplyPostRules(str_to);
@@ -882,10 +845,10 @@ class ItemNoun {
        
             let r = document.createElement("span");
             let info = " (podst.";
-            if (pattern.Gender == "zen") info += ", rod žen.";
-            else if (pattern.Gender == "str") info += ", rod stř.";
-            else if (pattern.Gender == "muz ziv") info += ", rod muž. ž.";
-            else if (pattern.Gender == "muz neziv") info += ", rod muž. n.";
+            if (pattern.Gender == 1) info += ", rod žen.";
+            else if (pattern.Gender == 0) info += ", rod stř.";
+            else if (pattern.Gender == 2) info += ", rod muž. ž.";
+            else if (pattern.Gender == 3) info += ", rod muž. n.";
 
             if (used_fall != 0) {
                 if (used_fall < 7) info += ", č. j., pád " + (used_fall + 1) + ".";
@@ -898,7 +861,9 @@ class ItemNoun {
                 
            if (mapper_from!=undefined)p.appendChild(mapper_link("<{word="+mapper_from+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to));
         }
-
+        
+        if (listTo.length==0) return null;
+        
         return { from: str_form, to: listTo, name: "", element: p };
     }
 
@@ -2299,94 +2264,44 @@ class ItemSentencePatternPart {
 class ItemPatternPronoun {
     constructor() {
         this.Name;
-        //this.Gender;
         this.Type;
         this.Shapes;
     }
 
     static Load(data) {
         let raw = data.split('|');
-      /*  if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
-            if (raw.length == 14 + 2) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 1;
-                item.Gender = parseInt(raw[1]);
-                item.Shapes = [14];
-                for (let i = 0; i < 14; i++) {
-                    if (raw[2 + i].includes('?')) item.Shapes[i] = '?';
-                    else item.Shapes[i] = raw[2 + i].split(',');
-                }
-                return item;
-            }
-            if (raw.length == 7 + 2) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 2;
-                item.Gender = parseInt(raw[1]);
-                item.Shapes = [7];
-                for (let i = 0; i < 7; i++) {
-                    if (raw[2 + i].includes('?')) item.Shapes[i] = '?';
-                    else item.Shapes[i] = raw[2 + i].split(',');
-                }
-                return item;
-            }
-            if (raw.length == 1 + 2) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 3;
-                item.Gender = parseInt(raw[1]);
-                item.Shapes = raw[2].split(',');
-                if (raw[2].includes('?')) item.Shapes[0] = '?';
-                return item;
-            }
-            if (raw.length == 14 * 4 + 2) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 4;
-                item.Gender = parseInt(raw[1]);
-                item.Shapes = [14 * 4];
-                for (let i = 0; i < 14 * 4; i++) {
-                    if (raw[2 + i].includes('?')) item.Shapes[i] = '?';
-                    else item.Shapes[i] = raw[2 + i].split(',');
-                }
-                return item;
-            }
-            if (dev) console.log("⚠️ PatternPronoun - Chybná délka");
-        } else if (loadedVersionNumber == 2) {*/
-            let shapesAll = LoadArr(raw, 14 * 4, 1)
+        let shapesAll = LoadArr(raw, 14*4, 1)
 
-            if (shapesAll.length == 14) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 1;
-                item.Shapes = shapesAll;
-                return item;
-            }
-            if (shapesAll.length == 7) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 2;
-                item.Shapes = shapesAll;
-                return item;
-            }
-            if (shapesAll.length == 1) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 3;
-                item.Shapes = shapesAll;
-                return item;
-            }
-            if (shapesAll.length == 14 * 4) {
-                let item = new ItemPatternPronoun();
-                item.Name = raw[0];
-                item.Type = 4;
-                item.Shapes = [14 * 4];
-                item.Shapes = shapesAll;
-                return item;
-            }
-            if (dev) console.warn("PatternPronoun - Chybná délka (" + raw.length + ")");
-       // }
+        if (shapesAll.length == 14) {
+            let item = new ItemPatternPronoun();
+            item.Name = raw[0];
+            item.Type = 1;
+            item.Shapes = shapesAll;
+            return item;
+        }
+        if (shapesAll.length == 7) {
+            let item = new ItemPatternPronoun();
+            item.Name = raw[0];
+            item.Type = 2;
+            item.Shapes = shapesAll;
+            return item;
+        }
+        if (shapesAll.length == 1) {
+            let item = new ItemPatternPronoun();
+            item.Name = raw[0];
+            item.Type = 3;
+            item.Shapes = shapesAll;
+            return item;
+        }
+        if (shapesAll.length == 14 * 4) {
+            let item = new ItemPatternPronoun();
+            item.Name = raw[0];
+            item.Type = 4;
+            item.Shapes = [14 * 4];
+            item.Shapes = shapesAll;
+            return item;
+        }
+        if (dev) console.warn("PatternPronoun - Chybná délka (" + raw.length + ")");
         return null;
     }
 
@@ -3634,33 +3549,8 @@ class ItemPatternNumber {
 
         let item = new ItemPatternNumber();
         item.Name = raw[0];
-        //item.Gender=parseInt(raw[1]);
 
         item.Shapes = LoadArr(raw, 14 * 4, 2);
-
-        /*if (item.Shapes.length==14+2) {
-        	//for (let i=0; i<14; i++) { 
-        	//	if (raw[2+i].includes('?')) item.Shapes.push('?'); 
-        	//	else item.Shapes.push(raw[2+i].split(',')); 
-        	//}
-        	item.Shapes=LoadArr(raw, 14, 2);
-        } else if (item.Shapes.length==7+2) {
-        	//for (let i=0; i<7; i++) { 
-        	//	if (raw[2+i].includes('?')) item.Shapes.push('?'); 
-        	//	else item.Shapes.push(raw[2+i].split(',')); 
-        	//}
-        	item.Shapes=LoadArr(raw, 7, 2);
-        } else if (raw.length==1+2) {
-        	//if (raw[2].includes('?')) item.Shapes.push('?'); 
-        	//else item.Shapes =[raw[2].split(',')];			
-        	item.Shapes=LoadArr(raw, 1, 2);
-        } else if (raw.length==14*4+2) {
-        	//for (let i=0; i<14*4; i++) { 
-        	//	if (raw[2+i].includes('?')) item.Shapes.push('?'); 
-        	//	else item.Shapes.push(raw[2+i].split(',')); 
-        	//}
-        	item.Shapes=LoadArr(raw, 14*4, 2);
-        } else return null;*/
 
         return item;
     }
@@ -5051,7 +4941,7 @@ class ItemVerb {
         if (typeof this.PatternFrom == undefined) return null;
         if (typeof this.To == undefined) return null;
 
-        // get all forms
+        // use only this forms in dic
         let try_form_arr=[
             {"varible": "Infinitive","index": undefined},
             {"varible": "PastActive", "index": 0},
@@ -5832,6 +5722,8 @@ class LanguageTr {
         }
         if (fullDev) console.log("🔣 Loaded Verbs", this.Verbs);
 
+        this.OptimizeAfterLoad();
+
         // Adverb
         for (i++; i < lines.length; i++) {
             let line = lines[i];
@@ -5891,6 +5783,44 @@ class LanguageTr {
         this.ReplaceE.sort((a, b) => (a.input.length < b.input.length) ? 1 : -1);
 
         this.state = "loaded";
+    }
+    
+    // Optimize memory
+    OptimizeAfterLoad() {
+        for (let pattern of this.PatternNounsFrom) {
+            pattern.Name = undefined;
+        }
+        for (let pattern of this.PatternNounsTo) {
+            pattern.Name = undefined;
+        }
+
+        for (let pattern of this.PatternAdjectivesFrom) {
+            pattern.Name = undefined;
+        }
+        for (let pattern of this.PatternAdjectivesTo) {
+            pattern.Name = undefined;
+        }
+
+        for (let pattern of this.PatternPronounsFrom) {
+            pattern.Name = undefined;
+        }
+        for (let pattern of this.PatternPronounsTo) {
+            pattern.Name = undefined;
+        }
+
+        for (let pattern of this.PatternNumbersFrom) {
+            pattern.Name = undefined;
+        }
+        for (let pattern of this.PatternNumbersTo) {
+            pattern.Name = undefined;
+        }
+
+        for (let pattern of this.PatternVerbsFrom) {
+            pattern.Name = undefined;
+        }
+        for (let pattern of this.PatternVerbsTo) {
+            pattern.Name = undefined;
+        }
     }
 
     GetDic(input) {
