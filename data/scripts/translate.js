@@ -4795,7 +4795,7 @@ class ItemVerb {
         this.ForeachArr("Auxiliary", 3, 6, 2, "Auxiliary", str);
         
         this.ForeachArr("Imperative", 0, 1, 1, "Imperative", str);
-        this.ForeachArr("Imperative", 1, 2, 2, "Imperative", str);
+        this.ForeachArr("Imperative", 1, 3, 2, "Imperative", str);
 
         // Return all possible falls with numbers
         // [[tvar, číslo, osoba], rod]
