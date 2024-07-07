@@ -1270,6 +1270,8 @@ class ItemAdverb {
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
 
+            p.appendChild(document.createTextNode(" "));
+
             if (to.Comment != undefined) {
                 if (to.Comment != "") {
                     let c = document.createElement("span");
