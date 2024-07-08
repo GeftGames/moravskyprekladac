@@ -6593,11 +6593,11 @@ function urlParamUpdate() {
 
     // set up
     for (let param of webSearchParams){
-        if (param.showName || param.showName==undefined) {
+        if (param.showName) {
             if (url.search=="") url.search+=param.name+"="+param.value;
             else url.search+="&"+param.name+"="+param.value;
         // hidden
-        }else if (!param.showName) {
+        }else /*if (!param.showName)*/ {
             if (url.search=="") url.search+=param.value;
             else url.search+="&"+param.value;
         }
