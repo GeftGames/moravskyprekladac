@@ -1216,12 +1216,12 @@ function Load() {
         //location.hash=undefined;
         history.replaceState({}, document.title, window.location.href.split('#')[0]);
     }
-    console.log("hashes",hashes);
-    if (hashes.includes("about")) {
+    
+    if (hashes.includes("about") || hashes.includes("about=")) {
         //ShowAboutPage()
         PopPageShow("about");
         urlParamChange("page", "about", false);
-    } else if (hashes.includes("mapper")) {
+    } else if (hashes.includes("mapper") || hashes.includes("mapper=")) {
         appSelected = "mapper";
         let input_text_var="input=";
         for (let l of hashes) {  
@@ -1238,11 +1238,11 @@ function Load() {
             }     
         }
         urlParamChange("page", "mapper", false);
-    } else if (hashes.includes("search")) {
+    } else if (hashes.includes("search") || hashes.includes("search=")) {
         appSelected = "search";
         urlParamChange("page", "search", false);
 
-    } else if (hashes.includes("translate")) {
+    } else if (hashes.includes("translate") || hashes.includes("translate=")) {
         appSelected = "translate";
         urlParamChange("page", "translate", false);
 
@@ -1270,7 +1270,7 @@ function Load() {
             }
         }
        
-    } else if (hashes.includes("dic")) {
+    } else if (hashes.includes("dic") || hashes.includes("dic=")) {
         TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
         var input_text="";
        
@@ -1295,11 +1295,11 @@ function Load() {
                 }
             }
         }
-    } else if (hashes.includes("files")) {
+    } else if (hashes.includes("files") || hashes.includes("files=")) {
         TabSelect(document.getElementById('translateFiles'), document.getElementById('tabTxtFiles'));
-    } else if (hashes.includes("subs")) {
+    } else if (hashes.includes("subs") || hashes.includes("subs=")) {
         TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
-    } else if (hashes.includes("text")) {
+    } else if (hashes.includes("text") || hashes.includes("text=")) {
         TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
     }else{
         urlParamChange("page", "translate", false);
