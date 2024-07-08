@@ -33,7 +33,9 @@ class Cite{
             rules[ruleParts[0]]=rule.substring(rule.indexOf("=")+1);
         }
     
-        //console.log(rawrules[0]);
+        this.Shortcut=rules["sid"];
+        console.log(this.Shortcut);
+
         if (rawrules[0]=="kniha") {  
             //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf
             /*let vars_support = [
@@ -49,9 +51,20 @@ class Cite{
                 "odkaz"
                 "zpracovano"
             ];*/
-
+        
+            
             // autoř(i)
             let pack=document.createElement("li");
+            if (rules["zpracovano"]=="1") {
+                let names=document.createElement("span");
+                names.innerText="✔️";
+                pack.append(names);
+            } else {
+                let names=document.createElement("span");
+                names.innerText="⌛️";
+                pack.append(names);
+            } 
+
             if ((rules["prijmeni"]!=undefined && rules["prijmeni"]!="") && (rules["jmeno"]!=undefined && rules["jmeno"]!="")) {
                 let names=document.createElement("span");
                 names.innerText=rules["prijmeni"].toUpperCase()+", "+rules["jmeno"]+". ";
@@ -145,6 +158,14 @@ class Cite{
                 pack.append(document.createTextNode(". "));
             }
             
+            // isbn
+            if (rules["isbn"]!=undefined && rules["isbn"]!="") {
+                let issn=document.createElement("span");
+                issn.innerText="ISBN "+rules["isbn"];
+                pack.append(issn);
+                pack.append(document.createTextNode(". "));
+            }
+            
             // poznamky
             if (rules["poznamky"]!=undefined && rules["poznamky"]!="") {
                 let poznamky=document.createElement("span");
@@ -171,9 +192,23 @@ class Cite{
                     pack.append(url);
                     if (i<links.length-1)pack.append(document.createTextNode(", "));
                 }            
+            }  
+
+            
+            // specified loc
+            if (rules["isbn"]!=undefined && rules["isbn"]!="") {
+                pack.innerHTML+=` <a class="link" href='https://www.google.com/search?q=%22${rules["nazev"]}%22+${rules["isbn"]}'>Google</a>`;
+                pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["isbn"]}'>WorlCat</a>`;
+                //https://vufind.mzk.cz/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=978-80-270-0125-5&type0%5B%5D=ISN&bool0%5B%5D=OR&illustration=-1&limit=10&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=#back
+                pack.innerHTML+=` <a class="link" href='https://vufind.mzk.cz/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=${rules["isbn"]}&type0%5B%5D=ISN&bool0%5B%5D=OR&illustration=-1&limit=10&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=#back'>Moravská Zemská Knihovna</a>`;
+            }else{
+                if (rules["odkaz"]==undefined || rules["odkaz"]=="") {
+                    pack.innerHTML+=` <a class="link" href='https://www.google.com/search?q=${rules["nazev"]}'>Google</a>`;
+                    pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["nazev"]}'>WorlCat</a>`;
+                }
             }
     
-            if (rules["shortcut"]!=undefined) this.Shortcut=rules["shortcut"];
+           // if (rules["sid"]!=undefined) this.Shortcut=rules["sid"];
 
             if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
             pack.className="cite";
@@ -182,7 +217,7 @@ class Cite{
             //rules.append(pack);
            // return pack;
            return true;
-        }else if (rawrules[0]=="web") {  
+        } else if (rawrules[0]=="web") {  
             //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf
             /*let vars_support = [
                 "autor", "prijmeni", "jmeno",
@@ -196,9 +231,18 @@ class Cite{
                 "odkaz"
                 "zpracovano"
             ];*/
-
+            
             // autoř(i)
             let pack=document.createElement("li");
+            if (rules["zpracovano"]=="1") {
+                let names=document.createElement("span");
+                names.innerText="✔️";
+                pack.append(names);
+            }else {
+                let names=document.createElement("span");
+                names.innerText="⌛️";
+                pack.append(names);
+            }
             if ((rules["prijmeni"]!=undefined && rules["prijmeni"]!="") || (rules["jmeno"]!=undefined && rules["jmeno"]!="")) {
                 let names=document.createElement("span");
                 names.innerText=rules["prijmeni"].toUpperCase()+", "+rules["jmeno"]+". ";
@@ -304,12 +348,29 @@ class Cite{
                 }            
             }
     
-            if (rules["shortcut"]!=undefined) this.Shortcut=rules["shortcut"];
+           // if (rules["shortcut"]!=undefined) this.Shortcut=rules["shortcut"];
 
-            if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
+           if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
             pack.className="cite";
             this.genEl=pack;
             //rules.append(pack);
+            return true;
+        } else if (rawrules[0]=="sncj") {
+
+            let pack=document.createElement("li");
+            pack.className="cite";
+
+            let now=new Date();
+            pack.innerHTML=`<i>Slovník nářečí českého jazyka</i> [online]. Brno: dialektologické oddělení Ústavu pro jazyk český AV ČR, v. v. i. ©&nbsp;2016– [cit. ${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}]. Dostupné z:&nbsp;<a href='https://sncj.ujc.cas.cz'>https://sncj.ujc.cas.cz</a>`;
+            
+            // specified loc
+            if (rules["i"]!=undefined && rules["i"]!="") {
+                pack.innerHTML+=` <a class="link" href='https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22${rules["i"]}%22'>Google</a>`;
+                pack.innerHTML+=` <a class="link" href='https://search.seznam.cz/?q=site%3Asncj.ujc.cas.cz+%22${rules["i"]}%22'>Seznam.cz</a>`;
+                pack.innerHTML+=` <a class="link" href='https://www.bing.com/search?q=site%3Asncj.ujc.cas.cz+%22${rules["i"]}%22'>Bing</a>`;
+            }
+            if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
+            this.genEl=pack;
             return true;
         }
         return false;
@@ -3764,7 +3825,7 @@ class ItemNumber {
                         for (let to of this.To) {
                             if (to.Body != "?") {
                                 for (let shapeTo of to.Pattern.Shapes[0]) {
-                                    if (shapeTo != "?") arr.push({ Text: to.Body + shapeTo });
+                                    if (shapeTo != "?") ret.push({ Text: to.Body + shapeTo });
                                 }
                             }
                         }
@@ -3776,7 +3837,7 @@ class ItemNumber {
                     for (let to of this.To) {
                         if (to.Body != "?") {
                             for (let shapeTo of to.Pattern.Shapes[0]) {
-                                if (shapeTo != "?") arr.push({ Text: to + shapeTo });
+                                if (shapeTo != "?") ret.push({ Text: to + shapeTo });
                             }
                         }
                     }

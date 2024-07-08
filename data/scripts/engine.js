@@ -656,18 +656,19 @@ function PopPageShow(name) {
             document.getElementById("infoLangText").innerHTML = lang.Comment;
         }else{
             let citeArr=document.createElement("ul");
+            citeArr.style="margin-left: 24px;";
             for (let cite of lang.Cites){
 //                console.log(lang.Cites,cite);
                 citeArr.appendChild(cite.genEl);
             }
    
            // GenerateCites(lang.Cite);
-            console.log(citeArr);
-            if (citeArr.innerHTML.length>0){
+            //console.log(citeArr);
+            if (citeArr.innerHTML.length>0) {
                 document.getElementById("infoLangText").innerHTML="<p class='settingHeader' style='display: inline'>Zdroje dat</p>";
                 document.getElementById("infoLangText").appendChild(citeArr);
                 document.getElementById("infoLangText").innerHTML += lang.Comment;
-            }else document.getElementById("infoLangText").innerHTML = lang.Comment;
+            } else document.getElementById("infoLangText").innerHTML = lang.Comment;
         }
         
         // Vývojářské info
