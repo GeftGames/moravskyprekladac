@@ -6585,24 +6585,25 @@ function titleUpdate() {
 }
 
 // redraw url
-function urlParamUpdate() {
-    const url = new URL(window.location);
-
-    // clear
-    url.search="";
-
+function urlParamUpdate() {    
+    let str_url="";
     // set up
     for (let param of webSearchParams){
         if (param.showName) {
-            if (url.search=="") url.search+=param.name+"="+param.value;
-            else url.search+="&"+param.name+"="+param.value;
-        // hidden
+            if (str_url=="") str_url+=param.name+"="+param.value;
+            else str_url+="&"+param.name+"="+param.value;
+            // hidden
         }else /*if (!param.showName)*/ {
-            if (url.search=="") url.search+=param.value;
-            else url.search+="&"+param.value;
+            if (str_url=="") str_url+=param.value;
+            else str_url+="&"+param.value;
         }
+        console.log(param, url.search);
     }
-
+    
+    // clear
+    const url = new URL(window.location);
+    url.search=str_url;
+    
     window.history.replaceState({}, '', url);
 }
 
