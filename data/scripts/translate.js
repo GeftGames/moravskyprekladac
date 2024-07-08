@@ -34,7 +34,7 @@ class Cite{
         }
     
         this.Shortcut=rules["sid"];
-        console.log(this.Shortcut);
+       // console.log(this.Shortcut);
 
         if (rawrules[0]=="kniha") {  
             //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf

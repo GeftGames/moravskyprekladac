@@ -1216,7 +1216,7 @@ function Load() {
         //location.hash=undefined;
         history.replaceState({}, document.title, window.location.href.split('#')[0]);
     }
-    //console.log(location.hash);
+    console.log("hashes",hashes);
     if (hashes.includes("about")) {
         //ShowAboutPage()
         PopPageShow("about");
