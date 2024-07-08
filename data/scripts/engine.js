@@ -6597,7 +6597,7 @@ function urlParamUpdate() {
             if (str_url=="") str_url+=param.value;
             else str_url+="&"+param.value;
         }
-        console.log(param, url.search);
+        //console.log(param, url.search);
     }
     
     // clear
