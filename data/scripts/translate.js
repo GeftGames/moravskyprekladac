@@ -22,7 +22,7 @@ class Cite{
     BuildReference(str) {//shortcut pro zdroje ke slovům
         this.rawCite=str;
         // kniha|jmeno=František|příjmení=Bartoš|dilo=Diaktologie Moravská|strany=20|shortcut=dmfb 
-        // online|jmeno=František|příjmení=Bartoš|dilo=Diaktologie Moravská|strany=20|shortcut=dmfb
+        // online|jmeno=František|příjmeníǵ=Bartoš|dilo=Diaktologie Moravská|strany=20|shortcut=dmfb
         // auto|type=sncj
         let rawrules=this.rawCite.split("|");
         
@@ -1693,7 +1693,10 @@ class ItemPreposition {
             let raw = data.split('|');//console.log(raw);
             let item = new ItemPreposition();
 
+            console.log(raw);
+
             if (raw[0] == '') return null;
+            if (raw.length == 1) return null;
             item.input = raw[0].split(',');
 
             if (raw[1] != "") {
