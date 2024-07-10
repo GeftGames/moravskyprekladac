@@ -1693,7 +1693,7 @@ class ItemPreposition {
             let raw = data.split('|');//console.log(raw);
             let item = new ItemPreposition();
 
-            console.log(raw);
+          //  console.log(raw);
 
             if (raw[0] == '') return null;
             if (raw.length == 1) return null;
