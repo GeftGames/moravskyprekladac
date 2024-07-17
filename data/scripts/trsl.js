@@ -1,5 +1,5 @@
 var loadedTranslateFile="načteny!!!";
-console.log("nacteny p");
+console.log("test1", "nacteny p");
 
 var idPops = 0;
 let SimplyfiedReplacedRules = [];
@@ -379,6 +379,8 @@ class Cite{
         return false;
     }
 }
+console.log("test2", new Cite());
+
 
 class ItemSentence {
     constructor() {
@@ -8183,3 +8185,5 @@ function GenerateSupCite(source) {
     }
     return sp;   
 }
+
+console.log("test3", new LanguageTr());
