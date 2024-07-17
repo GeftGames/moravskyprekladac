@@ -224,10 +224,10 @@ function GetTranslations() {
 
         // Po souborech
         for (let i = 0; i < fileContents.length; i += 2) {
-            let fileName = fileContents[i],
+            let //fileName = fileContents[i],
                 fileText = fileContents[i + 1];
 
-            if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, fileName);
+            if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, i/2);
         }        
 
         document.getElementById("totalstats").innerText = CalculateTotalStats();
@@ -295,7 +295,7 @@ function GetTranslations() {
     	xhttp2.send();
     }*/
 
-    function RegisterLang(content, fileName) {
+    function RegisterLang(content, id) {
         let lines = content.split(/\r?\n/);
 
         if (lines.length < 5) {
@@ -304,7 +304,8 @@ function GetTranslations() {
         }
 
         let tr = new LanguageTr();
-        tr.fileName = fileName;
+        //tr.fileName = fileName;
+        tr.Id = id;
         //	loadedversion=lines[0];
         //	loadedVersionNumber=parseFloat(loadedversion.substring(4));
         //	if (loadedversion=="TW v1.0" || loadedversion=="TW v0.1" || loadedVersionNumber==2) {
@@ -387,13 +388,13 @@ function GetTranslations() {
 
                 let nodeLang = document.createElement('option');
                 lang.option = nodeLang;
-                nodeLang.value = lang.Name;
+                nodeLang.value = lang.Id;
                 nodeLang.innerText = name;
                 category.appendChild(nodeLang);
             } //else if (lang.quality>2) lang.Name+=" ✅";
 
         } else {
-            if (dev) console.log("This lang has problems: ", lang.fileName);
+            if (dev) console.log("This lang has problems: ", lang);
         }
     }
 }
@@ -437,12 +438,12 @@ function mapRedraw() {
 
     // generate dots
     for (let p of languagesList) {
-        if (p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name)) continue;
+        if (p.Quality == 0 && map_Zoom < 1.5 && !(p.Id == currentLang.Id)) continue;
 
         //out of map
         if (入っちゃった(map_LocX + p.locationX * map_Zoom + circleRadius * 2, map_LocY + p.locationY * map_Zoom + circleRadius * 2, 0, 0, map_DisplayWidth + circleRadius * 4, map_DisplayHeight + circleRadius * 4)) {
 
-            if (p.Name == currentLang.Name) ctx.fillStyle = "Black";
+            if (p.Id == currentLang.Id) ctx.fillStyle = "Black";
             else ctx.fillStyle = p.ColorFillStyle;
 
             ctx.beginPath();
@@ -462,7 +463,7 @@ function mapRedraw() {
     // generate texts
     let z = dev ? 3.5 : 2.5;
     for (let p of languagesList) {
-        if ((map_Zoom > z && p.Quality < 2) || p.Quality >= 2 || p.Name == currentLang.Name) {
+        if ((map_Zoom > z && p.Quality < 2) || p.Quality >= 2 || p.Id == currentLang.Id) {
 
             //out of map
             if (入っちゃった(map_LocX + p.locationX * map_Zoom + circleRadius * 2, map_LocY + p.locationY * map_Zoom + circleRadius * 2, 0, 0, map_DisplayWidth + circleRadius * 4, map_DisplayHeight + circleRadius * 4)) {
@@ -610,7 +611,7 @@ function Translate() {
     else document.getElementById("ClearTextbox").style.display = "block";
 
     urlParamChange("input", input, true);
-    urlParamChange("lang", currentLang.Name, true);
+    urlParamChange("lang", currentLang.Id, true);
 
     if (currentLang !== null) {
         let outputParernt = document.getElementById("outputtext");
@@ -654,11 +655,12 @@ function GetDic() {
 // Získat zvolený překlad
 function GetCurrentLanguage() {
     let ele2 = document.getElementById("selectorTo").value;
+
     if (ele2 == "*own*" && loadedOwnLang) {
         return ownLang;
     }
     for (let e of languagesList) {
-        if (e.Name == ele2) {
+        if (e.Id == ele2) {
             return e;
         }
     }

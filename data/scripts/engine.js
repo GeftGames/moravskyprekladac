@@ -1264,7 +1264,7 @@ function Load() {
                 let s=input_lang_var.length;
                 input_lang=decodeURI(l.substring(s));
                 urlParamChange("lang", input_lang, true);
-                if (input_lang!="") {
+                if (input_lang!="") {                    
                     document.getElementById("selectorTo").value=input_lang;
                 }
             }
@@ -5485,7 +5485,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ô", to: "o" },
         { from: "ê", to: "e" },
         { from: "ạ́", to: "ó" },
-        { from: "ạ́", to: "ó" },
+        { from: "̥á", to: "ó" },
         { from: "ə", to: "e" },
         { from: "ṵ", to: "u" },
         { from: "ł", to: "l" },
@@ -5517,12 +5517,19 @@ function SetCurrentTranscription(transCode) {
         { from: "bjející", to: "bějící", type: "end" },
     ];
 
+    // czech phonetics
     if (transCode == "czech") return [
         { from: "dz", to: "ʒ" },
         { from: "dž", to: "ʒ̆" },
         { from: "vě", to: "vje" },
         { from: "bě", to: "bje" },
         { from: "pě", to: "pje" },
+        { from: "fě", to: "fje" },
+
+        { from: "Vě", to: "Vje" },
+        { from: "Bě", to: "Bje" },
+        { from: "Pě", to: "Pje" },
+        { from: "Fě", to: "Fje" },
 
         { from: "au", to: "au̯" },
         { from: "eu", to: "eu̯" },
@@ -5531,6 +5538,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ọ", to: "e" },
         { from: "ó́", to: "ó" },
         { from: "ṵ", to: "u̯" },
+        { from: "ạ́", to: "̥á" },
     ];
 
     if (transCode == "moravian") return [
