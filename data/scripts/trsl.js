@@ -10,10 +10,14 @@ var ItemPronoun_pattensFrom, ItemPronoun_pattensTo;
 var ItemNumber_pattensFrom, ItemNumber_pattensTo;
 var ItemVerb_pattensFrom, ItemVerb_pattensTo;
 var lastAppMapper;
+
+console.log("test1.1", "ok");
+
 String.prototype.replaceAll = function(find, replace) {
     var str = this;
     return str.replace(new RegExp(find, 'g'), replace);
 };
+console.log("test1.2", "ok");
 
 class Cite{ 
     constructor(){
@@ -1653,69 +1657,29 @@ class ItemReplaceE {
 
 class ItemPreposition {
     constructor() {
-        this.input = "";
+        this.input = null;
         this.output = [];
         this.fall = [];
     }
 
     static Load(data) {
-        //let raw = data.split('|');
-        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
-            if (raw.length == 2) {
-                if (raw[0].includes('?')) return null;
-                let item = new ItemPreposition();
-                item.input = raw[0];
-                item.output.push({ Text: raw[0] });
+        let raw = data.split('|');
+        let item = new ItemPreposition();
 
-                if (raw[1] != "") {
-                    for (const f of raw[1].split(',')) {
-                        let num = parseInt(f);
-                        if (!isNaN(num)) item.fall.push(num);
-                    }
-                }
-                return item;
+        if (raw[0] == '') return null;
+        if (raw.length == 1) return null;
+        item.input = raw[0].split(',');
+
+        if (raw[1] != "") {
+            for (const f of raw[1].split(',')) {
+                let num = parseInt(f);
+                if (!isNaN(num)) item.fall.push(num);
             }
-            if (raw.length == 3) {
-                if (raw[0].includes('?')) return null;
-                if (raw[1].includes('?')) return null;
-
-                let item = new ItemPreposition();
-                item.input = raw[0];
-                item.output = [];
-                for (let to of raw[1].split(',')) {
-                    item.output.push({ Text: to });
-                }
-                if (raw[2] != "") {
-                    for (const f of raw[2].split(',')) {
-                        let num = parseInt(f);
-                        if (!isNaN(num)) item.fall.push(num);
-                    }
-                }
-                item.Comment = raw[3];
-                return item;
-            }
-        } else if (loadedVersionNumber == 2) {*/
-            let raw = data.split('|');//console.log(raw);
-            let item = new ItemPreposition();
-
-          //  console.log(raw);
-
-            if (raw[0] == '') return null;
-            if (raw.length == 1) return null;
-            item.input = raw[0].split(',');
-
-            if (raw[1] != "") {
-                for (const f of raw[1].split(',')) {
-                    let num = parseInt(f);
-                    if (!isNaN(num)) item.fall.push(num);
-                }
-            }
-            item.output = FastLoadTranslateTo(raw, 2);
-            if (item.output == null) return null;
-            return item;
-        //}
-        //return null;
-    }
+        }
+        item.output = FastLoadTranslateTo(raw, 2);
+        if (item.output == null) return null;
+        return item;
+}
 
     IsStringThisWord(str) {
         if (this.input == str) {
@@ -7769,8 +7733,8 @@ class Selector {
         this.Replaces = [];
     }
 }
-// By custom defined in lang from select
 
+// By custom defined in lang from select
 function PrepareReplaceRules() {
     SimplyfiedReplacedRules = [];
 
@@ -7804,119 +7768,9 @@ function CustomChoosenReplacesCreate() {
         }
         area.appendChild(select);
     }
-
 }
 
 preparedLocalRules = [];
-/*
-function PrepareRulesLocal(){
-	if (TextStyle=="textObv") {
-		if (lang.Name=="Slezština") {
-			// Podle http://www.blaf.cz/index.php?body=slovnik
-			preparedLocalRules=[
-				["š", "sz"],  
-				["č", "cz"],
-				["ř", "rz"],
-				["ž", "ż"],
-				
-				["v", "w"],
-			];
-			return;
-		} else if (lang.Name=="Hanáčtina") {
-			// Dle furtovniku
-			preparedLocalRules=[
-				["viho", "vyho"],  
-				["biho", "biho"],
-				["kiho", "kyho"],
-				["niho", "nyho"],
-				["riho", "ryho"],
-
-				["ďe", "dě"],  
-				["ňe", "ně"],
-				["ťe", "tě"],
-
-				["ti", "ty"],
-				["tí", "tý"],
-				["ťi", "ti"],
-				["tí", "tí"],
-
-				["ni", "ny"],
-				["ní", "ný"],
-				["ňi", "ni"],
-				["ňí", "ní"],
-
-				["di", "dy"],
-				["dí", "dý"],
-				["ďi", "di"],
-				["ďí", "dí"],
-
-				["ri", "ry"],
-				["ki", "ky"],
-				["chi", "chy"],
-				["hi", "hy"],
-
-			];
-			return;
-		} else if (lang.Name=="Laština") {
-			preparedLocalRules=[
-				["v", "w"], 
-			];
-			return;
-		} else if (lang.Name=="Slováčtina") {
-			preparedLocalRules=[
-				["ṵ", "u"], 
-			];
-			return;
-		} else if (lang.Name=="Moravština") {
-			preparedLocalRules=[
-					["ch", "x"],
-					["x", "ch"],
-
-					["ďe", "dje"],  
-					["ňe", "nje"],
-					["ťe", "tje"],
-			];
-			return;
-		}
-	}else{ 
-		switch (style) {
-			case 'cfo': preparedLocalRules=[]; return;
-
-			case 'ces': 
-				preparedLocalRules=[ 
-					["mňe", "mě"],
-					["bje", "bě"],
-					["vje", "vě"],
-					["pje", "pě"],
-
-					["ďe", "dě"],  
-					["ňe", "ně"],
-					["ťe", "tě"],
-
-					["ti", "ty"],
-					["tí", "tý"],
-					["ťi", "ti"],
-					["tí", "tí"],
-
-					["ni", "ny"],
-					["ní", "ný"],
-					["ňi", "ni"],
-					["ňí", "ní"],
-
-					["di", "dy"],
-					["dí", "dý"],
-					["ďi", "di"],
-					["ďí", "dí"],
-				];
-			
-			case 'mor': 
-				preparedLocalRules=[ 
-					["ch", "x"],
-					["x", "ch"],
-				];
-		}
-	}
-}*/
 
 function ApplyPostRules(text) {
     //	let ret=text;
@@ -7973,41 +7827,20 @@ function ApplyPostRules(text) {
 
 function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
     let ret = [];
-    
-    /*if (loadedVersionNumber <=2) {
-        for (let i = indexStart; i < rawData.length; i += 3) {
-            let rawBody = rawData[i],
-                rawPattern = rawData[i + 1];
 
-            if (rawBody.includes('?')) continue;
-            if (rawPattern.includes('?')) continue;
+    for (let i = indexStart; i < rawData.length; i += 4) {
+        let rawBody = rawData[i],
+            rawPattern = rawData[i + 1];
 
-            let patern = t.GetPatternByNameTo(rawPattern);
-            if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
+        if (rawBody.includes('?')) continue;
+        if (rawPattern.includes('?')) continue;
 
-            let comment = rawData[i + 2];
-            if (comment == "") ret.push({ Body: rawData[i], Pattern: patern });
-            else ret.push({ Body: rawData[i], Pattern: patern, Comment: comment });
-        }
-    } else if (loadedVersionNumber == 3) {*/
-        for (let i = indexStart; i < rawData.length; i += 4) {
-            let rawBody = rawData[i],
-                rawPattern = rawData[i + 1];
+        let patern = t.GetPatternByNameTo(rawPattern);
+        if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
 
-            //console.log(rawData,i)
-
-            if (rawBody.includes('?')) continue;
-            if (rawPattern.includes('?')) continue;
-
-            let patern = t.GetPatternByNameTo(rawPattern);
-            if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
-
-            let comment = rawData[i + 2];
-            //if (comment == "") ret.push({ Body: rawData[i], Pattern: patern });
-            //else 
-            ret.push({ Body: rawData[i], Pattern: patern, Comment: comment, Source: rawData[i + 3] });
-        }
-    //}
+        let comment = rawData[i + 2];
+        ret.push({ Body: rawData[i], Pattern: patern, Comment: comment, Source: rawData[i + 3] });
+    }
 
     if (ret.length == 0) {
         if (dev) console.log("Cannot load pattern '" + rawData + "'");
@@ -8019,27 +7852,14 @@ function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
 
 function FastLoadTranslateTo(rawData, indexStart) {
     let ret = [];
-    /*if (loadedVersionNumber <=2) {
-        for (let i = indexStart; i < rawData.length; i += 2) {
-            //	console.log(i);
-            let rawText = rawData[i];
+    for (let i = indexStart; i < rawData.length; i += 3) {
+        let rawText = rawData[i];
 
-            if (rawText == '') continue;
-            if (rawText.includes('?')) continue;
+        if (rawText == '') continue;
+        if (rawText.includes('?')) continue;
 
-            ret.push({ Text: rawText, Comment: rawData[i + 1] });
-        }
-    }else if (loadedVersionNumber == 3) {*/
-        for (let i = indexStart; i < rawData.length; i += 3) {
-            //	console.log(i);
-            let rawText = rawData[i];
-
-            if (rawText == '') continue;
-            if (rawText.includes('?')) continue;
-
-            ret.push({ Text: rawText, Comment: rawData[i + 1], Source: rawData[i + 2] });
-        }
-  // }
+        ret.push({ Text: rawText, Comment: rawData[i + 1], Source: rawData[i + 2] });
+    }
 
     if (ret.length == 0) {
         if (dev) console.log("Cannot load pattern '" + rawData + "'");

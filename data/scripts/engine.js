@@ -626,6 +626,7 @@ function PopPageShow(name) {
 
     //open
     let element = document.getElementById("pagePop_" + name);
+    if (element==undefined) console.error("'pagePop_" + name+"' not found");
 
     element.style.display = "block";
     element.style.opacity = "1";
@@ -684,6 +685,8 @@ function PopPageShow(name) {
             // category
             document.getElementById("infoLangText").innerHTML += devInfoText;
         }
+    }else if (name == "pageStats") {
+        GetTopLangs();
     }
 }
 
@@ -6656,7 +6659,7 @@ function ShowCite(shortcut) {
         }
     }
     
-    if (cite_found){
+    if (cite_found) {
         PopPageShow('pageInfoLang');
         let citeEl=document.getElementById("sc_"+shortcut);
         if (citeEl!=null) {
@@ -6668,4 +6671,209 @@ function ShowCite(shortcut) {
             }, 5000);
         }
     }
+}
+
+function GetTopLangs() {
+    const maxLen=25;
+
+    // Top langs
+    {
+        let newList=languagesList;
+
+        // Choose top
+        newList.sort(function(a, b){
+            return b.Stats()-a.Stats();
+        });
+        newList=newList.slice(0, maxLen);
+
+        document.getElementById("topLangs").innerHTML="";
+        
+        for (let lang of newList){
+            let o=document.createElement("tr");
+
+            let l=document.createElement("td");
+            l.innerText=lang.Name;
+            o.appendChild(l);
+
+            let ls=document.createElement("td");
+            ls.innerText=lang.Stats();
+            o.appendChild(ls);
+
+            document.getElementById("topLangs").appendChild(o);
+        }
+    }
+
+    // Top nouns
+    {
+        let nounsList=[];    
+        addToNounList = function(noun){
+            for (let item of nounsList) {
+                if (item[0].From==noun.From) {
+                    if (Array.isArray(item[0].PatternFrom.Shapes[0])){
+                        if (item[0].PatternFrom.Shapes[0][0]==noun.PatternFrom.Shapes[0][0]) {
+                            item[1]=item[1]+1;
+                            return;
+                        }
+                    }else{
+                        if (item[0].PatternFrom.Shapes[0]==noun.PatternFrom.Shapes[0]) {
+                            item[1]=item[1]+1;
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Add new
+            nounsList.push([noun, 1]);
+        }
+
+        for (let lang of languagesList) {
+            for (let noun of lang.Nouns){
+                addToNounList(noun);
+            }
+        }
+
+        // Choose top
+        nounsList.sort(function(a, b) {
+            return b[1]-a[1];
+        });    
+        nounsList=nounsList.slice(0,maxLen);
+
+        document.getElementById("topNouns").innerHTML="";
+        
+        for (let noun of nounsList){
+            let o=document.createElement("tr");
+
+            let l=document.createElement("td");
+            l.innerText=noun[0].From+noun[0].PatternFrom.Shapes[0];
+            o.appendChild(l);
+
+            let ls=document.createElement("td");
+            ls.innerText=noun[1];
+            o.appendChild(ls);
+
+            document.getElementById("topNouns").appendChild(o);
+        }
+    }
+
+    // Top verbs
+    {
+        let verbsList=[];    
+        addToNounList = function(verb) {
+            for (const item of verbsList) {
+                if (item[0].From==verb.From) {
+                    if (Array.isArray(verb.PatternFrom.Infinitive)) {
+                        if (item[0].PatternFrom.Infinitive[0]==verb.PatternFrom.Infinitive[0]) {
+                            item[1]=item[1]+1;
+                            return;
+                        }
+                    } else {
+                        if (item[0].PatternFrom.Infinitive==verb.PatternFrom.Infinitive) {
+                            item[1]=item[1]+1;
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Add new
+            verbsList.push([verb, 1]);
+        }
+
+        for (let lang of languagesList) {
+            for (const verb of lang.Verbs){
+                addToNounList(verb);
+            }
+        }
+
+        // Choose top
+        verbsList.sort(function(a, b) {
+            return b[1]-a[1];
+        });    
+        verbsList=verbsList.slice(0, maxLen);
+
+        document.getElementById("topVerbs").innerHTML="";
+        
+        for (let verb of verbsList){
+            let o=document.createElement("tr");
+
+            let l=document.createElement("td");
+            l.innerText=verb[0].From+verb[0].PatternFrom.Infinitive;
+            o.appendChild(l);
+
+            let ls=document.createElement("td");
+            ls.innerText=verb[1];
+            o.appendChild(ls);
+
+            document.getElementById("topVerbs").appendChild(o);
+        }
+    }    
+    
+    // Top adverbs
+
+    generateTopListSipleWorldLike = function(type){
+        let list=[];    
+        addToNounList = function(word) {            
+            if (Array.isArray(word.input)) {
+                for (const a of word.input){
+                    for (const item of list) {
+                        if (item[0]==a) {                       
+                            item[1]=item[1]+1;
+                            break;
+                        }
+                    }            
+                
+                    // Add new
+                    list.push([a, 1]);
+                }
+            } else {
+                for (const item of list) {
+                    if (item[0]==word.input) {                       
+                        item[1]=item[1]+1;
+                        return;
+                    }
+                }            
+            
+                // Add new
+                list.push([word.input, 1]);
+            }
+        }
+
+        for (const lang of languagesList) {
+            if (lang[type]==undefined)console.error("Check varible 'TranslateTr."+type+"'");
+            for (const word of lang[type]) {
+                addToNounList(word);
+            }
+        }
+
+        // Choose top
+        list.sort(function(a, b) {
+            return b[1]-a[1];
+        });    
+        list=list.slice(0, maxLen);
+
+        if (document.getElementById("top"+type)==undefined) console.error("Element not found "+"'top"+type+"'");
+        document.getElementById("top"+type).innerHTML="";
+        
+        for (const word of list){
+            let o=document.createElement("tr");
+
+            let l=document.createElement("td");
+            l.innerText=word[0];
+            o.appendChild(l);
+
+            let ls=document.createElement("td");
+            ls.innerText=word[1];
+            o.appendChild(ls);
+
+            document.getElementById("top"+type).appendChild(o);
+        }
+    }
+
+    generateTopListSipleWorldLike("Adverbs");
+    generateTopListSipleWorldLike("Conjunctions");
+    generateTopListSipleWorldLike("Prepositions");
+    generateTopListSipleWorldLike("Particles");
+    generateTopListSipleWorldLike("Interjections");
+    generateTopListSipleWorldLike("SimpleWords");
 }
