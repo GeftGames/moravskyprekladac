@@ -1077,7 +1077,7 @@
                     <p class="aboutPageHeader" id="stats">Statistika</p>
                 </div>
                 <p>Aktuální počet slov (nezapočitáno skloňování, časování, nahrazování překladače): <span id="totalstats"></span></p>
-
+                <p onclick="PopPageShow('pageStats')" class="link">Statistika databáze</p>
                 <div>
                     <p class="aboutPageHeader" id="news">Aktuality</p>
                 </div>
@@ -1313,7 +1313,69 @@
                 <br>
             </div>
         </div>
+
+        <div id="pagePop_pageStats" class="pagePop" style="display: none; top:500px; z-index: 9; height: inherit; min-height: -webkit-fill-available;">
+            <div class="pageInside" id="pageStats" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('pageStats')" class="pageFromDownClose" id="closeLangD">
+                    <div rel="nofollow">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                        </svg>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Statistika</span></p>
+                </div>
+                <div id="pageStats">
+                    <table>
+                        <caption>Největší překlady</caption>
+                        <tbody id="topLangs"></tbody>
+                    </table>
+                    
+                    <table>
+                        <caption>Nejčastější podstatné jména</caption>
+                        <tbody id="topNouns"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější slovesa</caption>
+                        <tbody id="topVerbs"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější příslovce</caption>
+                        <tbody id="topAdverbs"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější předložky</caption>
+                        <tbody id="topPrepositions"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější spojky</caption>
+                        <tbody id="topConjunctions"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější částice</caption>
+                        <tbody id="topParticles"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější citoslovce</caption>
+                        <tbody id="topInterjections"></tbody>
+                    </table>
+
+                    <table>
+                        <caption>Nejčastější nezařazená slova</caption>
+                        <tbody id="topSimpleWords"></tbody>
+                    </table>
+                </div>
+                <br>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
