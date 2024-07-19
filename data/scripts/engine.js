@@ -6162,7 +6162,7 @@ function titleUpdate() {
 // redraw url
 function urlParamUpdate() { 
     // Wayback Machine may have problems
-    if (![serverName, serverNameGithub].includes(urlParamUpdate)) return;
+    if (![serverName, serverNameGithub].includes(window.location.origin+window.location.pathname)) return;
 
     let str_url="";
     // set up
