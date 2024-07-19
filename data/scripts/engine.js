@@ -1203,6 +1203,7 @@ function hideNav() {
 
 var Load = function () {
     initLoadingLangData();
+    initLookUpMap();
     //geolocation();
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cacheTabSelect */
