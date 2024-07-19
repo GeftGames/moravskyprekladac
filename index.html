@@ -61,14 +61,25 @@
             }
         }
     </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQR1MX6Y22"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VQR1MX6Y22');
+    </script>
 
     <!-- Links -->
     <link href="data/styles/style.css" rel="stylesheet" type="text/css">
     <script src="data/scripts/engine.js"></script>
-    <script src="data/scripts/inicialize.js"></script>
-    <script src="data/scripts/trsl.js"></script>
-    <script src="data/scripts/langs.js"></script>
+    <script src="data/scripts/translator-control.js"></script>
+    <script src="data/scripts/translator-struct.js"></script>
+    <script src="data/scripts/map-lookup.js"></script>
     <script src="data/scripts/mapper.js"></script>
+    <script src="data/scripts/langs.js"></script>
     <script src="data/scripts/rhill-voronoi-core.js"></script>
     <!--<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
 
@@ -133,6 +144,7 @@
                 });
             }
         }
+        window.addEventListener('load', window.Load);
     </script>
 
     <!--<link rel="preconnect" href="https://api.github.com/" />-->
@@ -140,7 +152,7 @@
     <link rel="alternate" type="text/html" href="https://geftgames.github.io/moravskyprekladac/">
 </head>
 
-<body onload="Load();init();" style="min-height: 100%;">
+<body onload="/*Load();init();*/" style="min-height: 100%;">
     <div id="body" style="min-height: 100vh; /*display: none*/">
         <div style="padding: 0px; /*height: -webkit-fill-available;*/z-index: 10; ">
 
