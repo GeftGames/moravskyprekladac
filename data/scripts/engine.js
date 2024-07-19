@@ -1,4 +1,5 @@
 ﻿const serverName = "https://moravskyprekladac.pages.dev/";
+const serverNameGithub = "https://geftgames.github.io/moravskyprekladac/";
 var webSearchParams=[]; //{showName: page, name: "page", value: "subs"}
 
 //import { mapRedraw } from "./map-lookup.js";
@@ -1479,15 +1480,15 @@ var Load = function () {
             if (saveType == "Boolean") return val=="true";
             else if (saveType == "String") return val;
             else if (saveType == "Json") return JSON.parse(val);
-            else console.error("unknown savetype '"+saveType+"'");
+            else console.error("unknown savetype '"+saveType+"' of '"+savedName+"'");
         }
     }
 
     // slovník abc
-    dicAbc = loadSetting(true, 'setting-dic-abc');
+    dicAbc = loadSetting(true, 'setting-dic-abc', "Boolean");
     
     // Transkripce
-    TranscriptionText = loadSetting("default", 'sTranscription');
+    TranscriptionText = loadSetting("default", 'sTranscription',  "String");
     if (document.getElementById("sTranscription") !== null) document.getElementById("sTranscription").value = TranscriptionText;
     transcription = SetCurrentTranscription(TranscriptionText);
 
@@ -6159,7 +6160,10 @@ function titleUpdate() {
 }
 
 // redraw url
-function urlParamUpdate() {    
+function urlParamUpdate() { 
+    // Wayback Machine may have problems
+    if (![serverName, serverNameGithub].includes(urlParamUpdate)) return;
+
     let str_url="";
     // set up
     for (let param of webSearchParams){
