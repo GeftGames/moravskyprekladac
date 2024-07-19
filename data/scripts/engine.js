@@ -1,32 +1,39 @@
 ﻿const serverName = "https://moravskyprekladac.pages.dev/";
 var webSearchParams=[]; //{showName: page, name: "page", value: "subs"}
 
-var input_lang="";
-var imgMap;
-var imgMap_bounds;
-var appSelected = "translate";
-var transcription = null;
-var onlyMoravia;
-var dicAbc=true;
-class savedTraslation {
-    constructor() {
-        this.language = -1;
-        this.input = "";
-        this.output = "";
-    }
-}
-var mapper_starting_input;
-var usingTheme;
+//import { mapRedraw } from "./map-lookup.js";
+//import { initLoadingLangData } from "./translator-control.js";
+
+// Settings
 var error = false;
+var transcription = null;
 var errorText;
 var enabletranslate = true;
 var forceTranslate = false;
-var language, autoTranslate, styleOutput, dev;
+var onlyMoravia;
+var dicAbc=true;
+var language, autoTranslate, styleOutput, dev, betaFunctions;
 var saved = [];
 var loaded = false;
 var TranscriptionText;
-var chngtxt;
+var ThemeLight, ThemeDay, Power;
+var usingTheme;
 
+// mapping
+var mapper_starting_input;
+var imgMap_bounds;
+var imgMap;
+
+// app
+var input_lang="";
+var appSelected = "translate";
+//var chngtxt;
+
+var lastInputText = [];
+//var textNote;
+
+// texts
+/*
 var textRefreshTooltip;
 var textCHTranslator, textHCTranslator;
 var textNightDark;
@@ -48,14 +55,11 @@ var textCopy,
     textMoreInfo,
     textMoreInfoDev,
     textSaved,
-    //	textDeveloper,
     textPCSaving,
     textCookies,
     textInfo,
     textRemove,
     text2CSje,
-    //textCH,
-    //textHC,
     text2CS,
     text2HA,
     text2VA,
@@ -72,10 +76,15 @@ var textSaveTrans;
 var textTheme,
     textDefault2,
     textLight,
-    textDark;
-var ThemeLight, ThemeDay, Power;
-var lastInputText = [];
-var textNote;
+    textDark;*/
+
+class savedTraslation {
+    constructor() {
+        this.language = -1;
+        this.input = "";
+        this.output = "";
+    }
+}
 
 function PushError(str) {
     let parrentElement = document.getElementById("pageErrors");
@@ -1192,7 +1201,8 @@ function hideNav() {
     }
 }
 
-function Load() {
+var Load = function () {
+    initLoadingLangData();
     //geolocation();
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cacheTabSelect */
@@ -1421,107 +1431,94 @@ function Load() {
 
     RegisterSpecialTextarea();
 
-    let zlanguage = "default";
-    let zautoTranslate;
-    let zstyleOutput;
-    let zdev;
-    let savedget;
-    let zmyvocabHA;
-    let zmyvocabCS;
-    let trTo = "mo";
-    let trFrom = "cs";
-    let zDicAbc = true;
-    let zTestingFunc;
-    let zTranscription;
+   // let zlanguage = "default";
+ //   let zautoTranslate;
+//    let zstyleOutput;
+    //let zdev;
+   // let savedget;
+   // let zmyvocabHA;
+    //let zmyvocabCS;
+  //  let trTo = "mo";
+  //  let trFrom = "cs";
+    
+  //  let zTestingFunc;
+  //  let zTranscription;
+  //  let zbetaFunctions;
+   // let zOnlyMoravia;
+   // let zTextStyle;
     try {
-        zlanguage = localStorage.getItem('setting-language');
-        zautoTranslate = localStorage.getItem('setting-autoTranslate');
-        zstyleOutput = localStorage.getItem('setting-styleOutput');
-        zTestingFunc = localStorage.getItem('setting-testingFunc');
-        zdev = localStorage.getItem('setting-dev');
-        zbetaFunctions = localStorage.getItem('setting-betaFunctions');
-        zOnlyMoravia = localStorage.getItem('setting-Country');
-        zTranscription = localStorage.getItem('Transcription');
-        zDicAbc = localStorage.getItem('setting-dic-abc');
+       // zlanguage = localStorage.getItem('setting-language');
+      //  zautoTranslate = localStorage.getItem('setting-autoTranslate');
+       // zstyleOutput = localStorage.getItem('setting-styleOutput');
+      //  zTestingFunc = localStorage.getItem('setting-testingFunc');
+       // zdev = localStorage.getItem('setting-dev');
+       // zbetaFunctions = localStorage.getItem('setting-betaFunctions');
+      //  zOnlyMoravia = localStorage.getItem('setting-Country');
+      //  zTranscription = localStorage.getItem('Transcription');
+      //  zDicAbc = localStorage.getItem('setting-dic-abc');
 
-        savedget = localStorage.getItem('saved');
-        zmyvocabHA = localStorage.getItem('vocab-ha');
-        zmyvocabCS = localStorage.getItem('vocab-cs');
+      //  savedget = localStorage.getItem('saved');
+      //  zmyvocabHA = localStorage.getItem('vocab-ha');
+     //   zmyvocabCS = localStorage.getItem('vocab-cs');
         trTo = localStorage.getItem('trTo');
         trFrom = localStorage.getItem('trFrom');
 
-        zTextStyle = localStorage.getItem('TextStyle');
+      //  zTextStyle = localStorage.getItem('TextStyle');
     } catch (error) {}
+    
+    let loadSetting = function(defaultValue, savedName, saveType) {
+        let val;
+        try {
+            val = localStorage.getItem(savedName);
+        } catch (error) {}
 
-    /*  if (trFrom === null) {
-          if (trFrom == "cs") document.getElementById("selRevFcs").selected = true;
-      } else {
-          if (trFrom == "cs") document.getElementById("selRevFcs").selected = true;
-          if (trFrom == "ha") document.getElementById("selRevFha").selected = true;
-          if (trFrom == "va") document.getElementById("selRevFva").selected = true;
-          if (trFrom == "so") document.getElementById("selRevFso").selected = true;
-          if (trFrom == "sk") document.getElementById("selRevFsk").selected = true;
-          if (trFrom == "mo") document.getElementById("selRevFmo").selected = true;
-          if (trFrom == "la") document.getElementById("selRevFla").selected = true;
-          if (trFrom == "ceskytesin") document.getElementById("selRevFceskytesin").selected = true;
-          if (trFrom == "slez") document.getElementById("selRevFslez").selected = true;
-      }
+        // if not loaded
+        if (val==undefined || val==null) return defaultValue;
+        else {
+            if (saveType == "Boolean") return val=="true";
+            else if (saveType == "String") return val;
+            else if (saveType == "Json") return JSON.parse(val);
+            else console.error("unknown savetype '"+saveType+"'");
+        }
+    }
 
-
-      if (trTo === null) {
-          if (trTo == "mo") document.getElementById("selRevTmo").selected = true;
-      } else {
-          if (trTo == "cs") document.getElementById("selRevTcs").selected = true;
-          if (trTo == "ha") document.getElementById("selRevTha").selected = true;
-          if (trTo == "va") document.getElementById("selRevTva").selected = true;
-          if (trTo == "so") document.getElementById("selRevTso").selected = true;
-          if (trTo == "mo") document.getElementById("selRevTmo").selected = true;
-          if (trTo == "sk") document.getElementById("selRevTsk").selected = true;
-          if (trTo == "la") document.getElementById("selRevTla").selected = true;
-          if (trTo == "ceskytesin") document.getElementById("selRevTceskytesin").selected = true;
-          if (trTo == "slez") document.getElementById("selRevTslez").selected = true;
-      }*/
-
-    if (zTextStyle === null) {
-        TextStyle = "";
-    } else TextStyle = zTextStyle;
-    //	document.getElementById("textStyle").value=TextStyle;
-
-    if (zmyvocabCS === null) {
-        myVocabCS = new Array();
-        myVocabCS.push('');
-    } else myVocabCS = zmyvocabCS;
-
-    if (zDicAbc == null) dicAbc = true;
-    else dicAbc = zDicAbc;
-
-    if (zmyvocabHA === null) {
-        myVocabHA = new Array();
-        myVocabHA.push('');
-    } else myVocabHA = zmyvocabHA;
-
-    if (zTranscription === null) {
-        TranscriptionText = "default";
-    } else TranscriptionText = zTranscription;
+    // slovník abc
+    dicAbc = loadSetting(true, 'setting-dic-abc');
+    
+    // Transkripce
+    TranscriptionText = loadSetting("default", 'sTranscription');
     if (document.getElementById("sTranscription") !== null) document.getElementById("sTranscription").value = TranscriptionText;
-
     transcription = SetCurrentTranscription(TranscriptionText);
 
-    if (savedget === null) saved = new Array();
-    else saved = JSON.parse(savedget);
-    /*	<? php if (!isset($_GET['t'])):?>
-    	let ft = localStorage.getItem('trFromTo');
-    if (ft == 0) document.getElementById('selRev').selected = true;
-    if (ft == 1) document.getElementById('selRev2').selected = true;
-    	<? php endif ?>*/
+    // nedokončené funkce
+    betaFunctions = loadSetting(false, 'betaFunctions', "Boolean");
 
-    if (zlanguage != null) {
-        //	
+    // region
+    onlyMoravia = loadSetting("default", 'onlyMoravia', "String");
 
-        language = zlanguage;
+    // Automaciký překlad
+    autoTranslate = loadSetting(true, 'setting-autoTranslate', "Boolean");
+     
+    // Dev tools
+    dev = loadSetting(false, 'setting-dev', "Boolean");
+    if (dev) {
+        document.getElementById('whiteabout').style.display = 'block';
+        document.getElementById('refresh').style.display = 'block';
+        document.getElementById('uploadown').style.display = 'block';
+    } else {
+        document.getElementById('whiteabout').style.display = 'none';
+        document.getElementById('refresh').style.display = 'none';
+        document.getElementById('uploadown').style.display = 'none';
+    }
+
+    // Dev tools
+    styleOutput = loadSetting(true, 'setting-styleOutput', "Boolean");
+      
+    // Language
+    language = loadSetting(null, 'setting-language', "String");
+    if (language != null) {
         if (document.getElementById("manifest") !== null) document.getElementById("manifest").href = "data/manifests/manifest" + zlanguage.toUpperCase() + ".json";
     } else {
-
         var userLang = navigator.language || navigator.userLanguage;
         language = "default";
         let l = "";
@@ -1542,45 +1539,20 @@ function Load() {
             document.head.appendChild(manifest);
         } else el.href = "data/manifests/manifest" + l.toUpperCase() + ".json";
     }
+
+    // saved
+    saved = loadSetting(new Array(), 'saved', "Json");
+    
+   
     DetectLoacation();
-    if (zdev == null) dev = false;
-    else dev = (zdev == "true");
-    if (dev) {
-        document.getElementById('whiteabout').style.display = 'block';
-        document.getElementById('refresh').style.display = 'block';
-        document.getElementById('uploadown').style.display = 'block';
-    } else {
-        document.getElementById('whiteabout').style.display = 'none';
-        document.getElementById('refresh').style.display = 'none';
-        document.getElementById('uploadown').style.display = 'none';
-    }
+  
 
-    if (zbetaFunctions == null) betaFunctions = false;
-    else betaFunctions = (zbetaFunctions == "true");
-    document.getElementById('betaFunctions').checked = betaFunctions;
-
-    if (zOnlyMoravia == null) onlyMoravia = "default";
-    else onlyMoravia = zOnlyMoravia;
-    document.getElementById('onlyMoravia').value = onlyMoravia;
-
-    if (zstyleOutput == null) styleOutput = false;
-    else styleOutput = (zstyleOutput == "true");
-    if (zautoTranslate == null) {
-        autoTranslate = true;
-    } else autoTranslate = (zautoTranslate == "true");
-
-    if (zTestingFunc == null) {
-        testingFunc = false;
-    } else {
-        testingFunc = (zTestingFunc == "true");
-    }
-
-    if (!testingFunc) // document.querySelectorAll('.devlang').forEach(e => e.style.display='initial');
-    //else
-    { //document.getElementsByClassName('devFunction').forEach(e => e.style.display='none');
-        document.querySelectorAll('.devFunction').forEach(e => /*e.classList.toggle("hidden")console.log(*/ e.style.display = 'none');
-        //	console.log("!!!");
-    }
+  //  if (!testingFunc) // document.querySelectorAll('.devlang').forEach(e => e.style.display='initial');
+  //  //else
+  //  { //document.getElementsByClassName('devFunction').forEach(e => e.style.display='none');
+   //     document.querySelectorAll('.devFunction').forEach(e => /*e.classList.toggle("hidden")console.log(*/ e.style.display = 'none');
+   //     //	console.log("!!!");
+  //  }
     SetLanguage();
 
     //let sel = document.getElementById('selectorTo');
@@ -1632,435 +1604,25 @@ function Load() {
     //imgMap_hory.src = "data/images/morava_hory.png";
     SetSavedTranslations();
     customTheme();
-
-    //GetVocabulary();
-    /*
-	langHA_CS = new LanguageTr("HA_CS");
-	langCS_HA = new LanguageTr("CS_HA");
-	langHA = new LanguageTr("HA");
-	langVA = new LanguageTr("VA");
-	langMO = new LanguageTr("MO");
-	langSL = new LanguageTr("SL");
-	langSK = new LanguageTr("SK");
-	langSLEZ = new LanguageTr("SLEZ");
-	langLA = new LanguageTr("LA");
-	langCT = new LanguageTr("Tesin");
-	langHA_zabr = new LanguageTr("HA_ZABR");
-	langBR = new LanguageTr("BR");
-	langCS_je = new LanguageTr("CS_JE");
-
-	langHA_CS.GetVocabulary(dev);
-	langCS_HA.GetVocabulary(dev);
-	langHA.GetVocabulary(dev);
-	langVA.GetVocabulary(dev);
-	langMO.GetVocabulary(dev);
-	langSL.GetVocabulary(dev);
-	langSK.GetVocabulary(dev);
-	langSLEZ.GetVocabulary(dev);
-	langLA.GetVocabulary(dev);
-	langBR.GetVocabulary(dev);
-	langCS_je.GetVocabulary(dev);
-	langHA_zabr.GetVocabulary(dev);
-	langCT.GetVocabulary(dev);
-*/
-    // Set transition
-    /*if (theme=="theme")*/
-    /*document.body.style.transition="background-color .3s";
-    document.style.transition="background-color .3s";
-    document.getElementById("nav").style.transition="background-color .3s";
-    document.getElementById("lte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
-    document.getElementById("rte").style.transition="background-color .3s, box-shadow .3s, outline 50ms, outline-offset 50ms";
-    document.getElementById("header").style.transition="background-color .3s, color .3s;";*/
-    window.addEventListener("resize", (event) => {
-        window.requestAnimationFrame(mapRedraw);
-    });
-
-    mapSelectLang.addEventListener("wheel", function(e) {
-        e.preventDefault();
-        let prevZoom = map_Zoom;
-        let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
-
-        if (delta > 0) map_Zoom *= 1.2;
-        else map_Zoom /= 1.2;
-        if (map_Zoom <= 0.2) map_Zoom = 0.2;
-        if (map_Zoom > 12) map_Zoom = 12;
-
-        const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-        const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-        const mouseY = e.clientY - rect.top;
-
-        const imgMX = mouseX - map_LocX,
-            imgMY = mouseY - map_LocY;
-
-        const imgPMX = imgMX / (imgMap.width * prevZoom),
-            imgPMY = imgMY / (imgMap.height * prevZoom);
-
-        map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX;
-        map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY;
-
-        window.requestAnimationFrame(mapRedraw);
-    });
-
-    // Počet prstů na obrazovce
-    mapSelectLang.addEventListener('mousedown', (e) => {
-        e.preventDefault();
-        moved = true;
-        map_LocTmpX = e.clientX - map_LocX;
-        map_LocTmpY = e.clientY - map_LocY;
-
-        window.requestAnimationFrame(mapRedraw);
-    });
-
-    mapSelectLang.addEventListener('mouseup', (e) => {
-        moved = false;
-        window.requestAnimationFrame(mapRedraw);
-    });
-
-    mapSelectLang.addEventListener('click', (e) => {
-        const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-        const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-        const mouseY = e.clientY - rect.top /*-*/ ;
-        mapClick(mouseX, mouseY);
-        window.requestAnimationFrame(mapRedraw);
-    });
-
-    mapSelectLang.addEventListener('mousemove', (e) => {
-        e.preventDefault();
-        if (moved) {
-            //	console.log('moved');
-            map_LocX = e.clientX - map_LocTmpX;
-            map_LocY = e.clientY - map_LocTmpY;
-
-            //		const rect = document.getElementById("mapSelectLang"); // Get canvas position relative to viewport
-
-            //		if (map_LocX>rect.clientWidth)map_LocX=rect.clientWidth;
-            //		else if (map_LocX<-rect.clientWidth)map_LocX=-rect.clientWidth;
-
-            //		if (map_LocY>rect.clientHeight)map_LocY=rect.clientHeight;
-            //	else if (map_LocY<-rect.clientHeight)map_LocY=-rect.clientHeight;
-
-            //	console.log(map_LocX,rect.clientWidth);
-            //path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
-            //setTransform();	
-            //mapRedraw();
-            window.requestAnimationFrame(mapRedraw);
-            //mapZoom.style.top=positionY+"px";
-            //mapZoom.style.left=positionX+"px";
-        } else {
-            const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-            const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-            const mouseY = e.clientY - rect.top;
-            //console.log('not moved')
-            mapMove(mouseX, mouseY);
-        }
-    });
-
-    var map_Touches = -1;
-    var map_TouchStartX, map_TouchStartY;
-    var map_MoveTime;
-    mapSelectLang.addEventListener('touchstart', (e) => {
-        //start move
-        const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
-        var touch1 = e.touches[0] || e.changedTouches[0];
-        let mx = touch1.pageX,
-            my = touch1.pageY - rect.top;
-
-        if (e.touches.length == 1) {
-            console.log("touchstart move");
-            e.preventDefault();
-            moved = true;
-
-            map_LocTmpX = mx - map_LocX;
-            map_LocTmpY = my - map_LocY;
-
-            map_TouchStartX = mx;
-            map_TouchStartY = my;
-            map_MoveTime = Date.now();
-            map_Touches = 1;
-            window.requestAnimationFrame(mapRedraw);
-        } else {
-            console.log("touchstart zoom");
-            var touch2 = e.touches[1] || e.changedTouches[1];
-            let m2x = touch2.pageX,
-                m2y = touch2.pageY - rect.top;
-            map_Touches = 2;
-            e.preventDefault();
-
-            // nastav hodnoty začáteční pozice
-            map_LocTmpX = mx - map_LocX;
-            map_LocTmpY = my - map_LocY;
-            map_LocTmp2X = m2x - map_LocX;
-            map_LocTmp2Y = m2y - map_LocY;
-            map_ZoomInit = map_Zoom;
-        }
-    });
-
-    mapSelectLang.addEventListener('touchend', (e) => {
-        console.log("touchend");
-        var touch = e.touches[0] || e.changedTouches[0];
-        const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
-
-        // Jeden prst
-        if (map_Touches == 1) {
-            let mx = touch.pageX;
-            let my = touch.pageY - rect.top;
-
-            if (map_Touches == 2) {
-                map_LocX -= map_LocTmpX;
-                map_LocY -= map_LocTmpY;
-
-                map_LocTmpX = 0;
-                map_LocTmpY = 0;
-                map_Touches = 1;
-            }
-
-            // <300ms kliknutí
-            if ((Date.now() - map_MoveTime) < 300) {
-                // <10px vzdálenost od začátku 
-                let dX = mx - map_TouchStartX,
-                    dY = my - map_TouchStartY;
-                let d = Math.sqrt(dX * dX + dY * dY);
-                if (d < 10) {
-                    console.log("click!");
-                    mapClick(mx, my);
-                    return;
-                }
-            }
-            map_Touches = 1;
-        }
-
-        window.requestAnimationFrame(mapRedraw);
-    });
-    let map_ZoomInit;
-    mapSelectLang.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-        const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
-
-
-        if (e.touches.length == 1) {
-            console.log("mousemove move");
-            var touch = e.touches[0] || e.changedTouches[0];
-            let mx = touch.pageX,
-                my = touch.pageY - rect.top;
-            /*	if (map_Touches==2){
-            		map_LocX-=map_LocTmpX;
-            		map_LocY-=map_LocTmpY;
-
-            		map_LocTmpX=0;
-            		map_LocTmpY=0;
-            		map_Touches=1;
-            	}*/
-            //console.log(touch.pageX,touch.pageY);
-
-            if (moved) {
-                map_LocX = mx - map_LocTmpX;
-                map_LocY = my - map_LocTmpY;
-
-                window.requestAnimationFrame(mapRedraw);
-            } else {
-                mapMove(touch.pageX, touch.pageY);
-            }
-            map_Touches = 1;
-        } else if (e.touches.length == 2) {
-            console.log("mousemove zoom");
-            var touch1 = e.touches[0] || e.changedTouches[0];
-            let m1x = touch1.pageX,
-                m1y = touch1.pageY - rect.top;
-
-            var touch2 = e.touches[1] || e.changedTouches[1];
-            let m2x = touch2.pageX,
-                m2y = touch2.pageY - rect.top;
-
-            // start
-            if (map_Touches != 2) {
-                map_LocTmpX = m1x - map_LocX;
-                map_LocTmpY = m1y - map_LocY;
-                map_LocTmp2X = m2x - map_LocX;
-                map_LocTmp2Y = m2y - map_LocY;
-                map_ZoomInit = map_Zoom;
-                map_Touches = 2;
-            } else {
-                // start distance
-                let dx = map_LocTmpX - map_LocTmp2X,
-                    dy = map_LocTmpY - map_LocTmp2Y;
-
-                let start = Math.sqrt(dx * dx + dy * dy);
-
-                // now distance
-                dx = (m1x - map_LocX) - (m2x - map_LocX), dy = (m1y - map_LocY) - (m2y - map_LocY);
-                console.log(map_LocTmpX, m1x - map_LocX);
-                console.log(map_LocTmpY, m1y - map_LocY);
-                console.log(map_LocTmp2Y, m2y - map_LocY);
-                console.log(map_LocTmp2Y, m2y - map_LocY);
-                let now = Math.sqrt(dx * dx + dy * dy);
-                let prevZoom = map_Zoom;
-                map_Zoom = map_ZoomInit / (start / now);
-
-                // corect center of zoom
-                const imgMX = (m1x + m2x) / 2 - map_LocX,
-                    imgMY = (m1y + m2y) / 2 - map_LocY;
-
-                const imgPMX = imgMX / (imgMap.width * prevZoom),
-                    imgPMY = imgMY / (imgMap.height * prevZoom);
-
-                map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX;
-                map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY;
-
-                window.requestAnimationFrame(mapRedraw);
-            }
-        }
-    });
-
-    /*	mapSelectLang.addEventListener('gesturechange', (e) => {
-    		var touch = e.touches[0] || e.changedTouches[0];
-    		//e.scale
-    		//mapRedraw();
-    	});
-    	
-    	mapSelectLang.addEventListener('gestureend', (e) => {
-    		var touch = e.touches[0] || e.changedTouches[0];
-    		
-    		//mapRedraw();
-    	});
-    	
-    	mapSelectLang.addEventListener('gesturestart', (e) => {
-    		var touch = e.touches[0] || e.changedTouches[0];
-    	//	e.scale
-    		//mapRedraw();
-    	});*/
-
-
-    //	let el=document.getElementById("mapSelector");
-    //	var zoom=1;
-    //	let ZOOM_SPEED=1.2;
-    //	var positionX=0;
-    //var positionY=0;
-    //let mapZoom=document.getElementById("map");
-    let moved;
-    //	let dPosX=0,dPosY=0;
-    /*el.addEventListener("wheel", function(e) {
-		//positionX=e.pageX-dPosX;
-		//positionY=e.pageY-dPosY;
-		e.preventDefault();
-		//let scale=zoom;
-		//if (scale>1.3) scale=1.3;
-		//else if (scale<0.3) scale=0.7;
-		//console.log(positionX);
-	//	mapZoom.style.transformOrigin = positionX + "px, " + positionY + "px";
-		
-		
-	//console.log("x",e.clientX);
-	//console.log("y",e.clientY);
-	//console.log("xx",positionX);
-	//console.log("yy",positionY);
-		let dX=-(positionX-e.clientX+e.currentTarget.offsetLeft)/zoom;
-		let dY=-(positionY-e.clientY+e.currentTarget.offsetTop)/zoom;
-		
-		let delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
-
-		if (delta > 0) zoom *= 1.2; else  zoom /= 1.2;
-if (zoom<=0.1)zoom=0.1;
-if (zoom>10)zoom=10;
-		//if (e.deltaY > 0) {   
-		//	zoom *= ZOOM_SPEED;
-			//mapZoom.style.transform = `scale(${zoom})`; 
-			//positionX*=ZOOM_SPEED;
-			//positionY*=ZOOM_SPEED; 
-		//}else{    
-		//	if (zoom<=0.1) return;
-	//		zoom /= ZOOM_SPEED;
-		//	mapZoom.style.transform = `scale(${zoom})`; 
-			//positionX/=ZOOM_SPEED;
-			//positionY/=ZOOM_SPEED;
-	//	}		
-
-
-	//	let dX2=(positionX-e.pageX)/zoom;
-	//	let dY2=(positionY-e.pageY)/zoom;
-	
-		positionX=e.clientX-e.currentTarget.offsetLeft-dX*zoom;
-		positionY=e.clientY-e.currentTarget.offsetTop-dY*zoom;
-
-		//mapZoom.style.transform = `scale(${zoom})`; 
-		setTransform();
-	//	mapZoom.style.top=positionY+"px";
-	//	mapZoom.style.left=positionX+"px";
-//	mapRedraw();
-	});
-
-	el.addEventListener('mousedown', (e) => {
-		e.preventDefault();
-		moved = true;
-		dPosX=e.clientX-positionX;
-		dPosY=e.clientY-positionY;	mapRedraw();
-	});
-	
-	el.addEventListener('mouseup', (e) => {
-		moved = false;	mapRedraw();
-	});
-
-	el.addEventListener('mousemove', (e) => {
-		e.preventDefault();
-		if (moved) {
-			
-		//	console.log('moved');
-			positionX=e.clientX-dPosX;
-			positionY=e.clientY-dPosY;
-			//path1602.style.transform = "translate(" + (e.pageX-79.819305) + "px, " + (e.pageY-105.69204) + "px)";
-			setTransform();	mapRedraw();
-			//mapZoom.style.top=positionY+"px";
-			//mapZoom.style.left=positionX+"px";
-		} else {
-			//console.log('not moved')
-		}
-	});
-	el.addEventListener('mouseup', () => {
-		moved = false;mapRedraw();
-	});
-
-	function setTransform() {
-        mapZoom.style.transform = "translate(" + positionX + "px, " + positionY + "px) scale(" + zoom + ")";
-
-		let elements=document.getElementById("layer2").childNodes;
-		for (let ele of elements) {
-			if (ele.nodeName=="circle"){
-				if (4/zoom>4)ele.setAttribute("r", 4);
-				else ele.setAttribute("r", 4/zoom);
-			}
-			//console.log(ele.r);
-		}
-
-		
-		for (let ele of document.getElementById("mapZoom").childNodes) {
-			if (ele.nodeName=="SPAN"){
-				//ele.style.fontSize=(1/zoom*100)+"%";
-				//ele.style.fontSize=(1/zoom*10)+"px";
-				ele.style.scale=(1/zoom);
-					ele.style.marginTop=(8/zoom)+"mm";
-				//ele.style.height=(1/zoom*100)+"%";
-			}
-			//console.log(ele.r);
-		}
-	 //mapZoom.style.width=(100*zoom) + "%";
-	 //mapZoom.style.height=(100*zoom) + "%";
-	 //mapZoom.style.top=positionY + "px";
-	 //mapZoom.style.left=positionX + "px";
-      }*/
 }
 
+//window.addEventListener('load', Load);
+//window.Load = Load;
+/*
 function AddToVocabHA(str) {
     myVocabHA.push(str);
     localStorage.setItem('vocab-ha', JSON.stringify(myVocabHA));
     //SpellingJob();
-}
-
+}*/
+/*
 function AddToVocabCS(str) {
     myVocabCS.push(str);
     localStorage.setItem('vocab-cs', JSON.stringify(myVocabCS));
     //SpellingJob();
-}
+}*/
 
 function SetSavedTranslations() {
+    if (saved==undefined) console.error("saved is undefined");
     if (saved.length > 0) {
         document.getElementById("savedDiv").style.display = "block";
 
@@ -4561,7 +4123,7 @@ function AddWord(parentToAdd, w) {
                         tagcan.innerText = "Přidat do slovníku";
 
                         tagcan.addEventListener('click', function() {
-                            AddToVocabHA(w.toLowerCase());
+                          //  AddToVocabHA(w.toLowerCase());
                             if (pack.contains(box)) box.outerHTML = "";
                         });
 
@@ -4685,7 +4247,7 @@ function AddWord(parentToAdd, w) {
                             tagcan.innerText = "Přidat do slovníku";
 
                             tagcan.addEventListener('click', function() {
-                                AddToVocabHA(w.toLowerCase());
+                            //    AddToVocabHA(w.toLowerCase());
                                 if (pack.contains(box)) box.outerHTML = "";
                             });
 
