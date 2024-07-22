@@ -1,10 +1,10 @@
-TW v2
+TW v3
 fSpisovná čeština
 tHeraltice
 aGG
 d10.03.2023 20:47:16
 iBosáky - Venó se syrovi japka (brambory), nastróhaji se, pak se to pjekňe zmačká a ta voda se s teho\nvymačká a uďeláse s toho knedla. A to je fšecko, aňi jedna móka tam nepříde. A tak se to dá vařit.-Dyj só\nvařeny, tak só modry a jednomu je darebňe, dyj se na ňe podivá. De s toho aj tima. Koblihy - Ále gde - ty se\nnesmažijó - co jich napadá! No holt muské! - To só takovy dolky z véraškovi móky a dává se do nich povidli,\nale nélepši hruškovi. A dyj se peče chleba, tak se to dá do pekárně. \n- z Heraltic u Okříšek.\n\nJežišku zlaté, ste to vy? Vy vypadáte! Voči fpadli, bradu špičató - Vás uš pámbu dloho trápid nenechá. Eno, musime tam fšici.\nKaždé holt má náturu inó. Negdo stune v jednom kusi a furd nařiká. Negdo nesmi ovoce a ňic kyseliho, hnej se mu uscává chlista (pálí ho žáha). Někdo má kačeňi žalódek, zežere třebas tento a zmichá fšecko dohromady. Já sem skusila ze žalótkem dost.\n\nZ Heraltic. Jak v Heralticích těšívají nemocné: Ježišku zlaté, ste to vy? Vy vypadáte! Voči fpadli, bradu špičató – Vás uš pámbu dloho trápid nenechá. Eno, musime tam fšici.
-c#Zdroje dat\n-http://www.banda.cz/webs/k/kom/usr_files/file/hanackyslovnik.pdf (nevyčerpáno)\n-http://www.priseka.unas.cz/historie/mluva_na_Horacku.htm (nevyčerpáno)\n-https://web.archive.org/web/20080612203228/http://sweb.cz/xkrcal5/_08_vlad_sova_lidova_mluva_na_trebicsku.html (nevyčerpáno)
+bkniha|prijmeni=Trávníček|jmeno=František|nazev=O českém jazyce|misto=|vydavatel=|rok_vydani=1924|strany=40|issn=|odkaz=https://www.digitalniknihovna.cz/mzk/view/uuid:c12290c0-bfe9-11e3-b110-005056827e51?page=uuid%3Afc8fecb0-fcf3-11e3-99ee-001018b5eb5c|zpracovano=0|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://web.archive.org/web/20080612203228/http://sweb.cz/xkrcal5/_08_vlad_sova_lidova_mluva_na_trebicsku.html|zpracovano=0|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=http://www.priseka.unas.cz/historie/mluva_na_Horacku.htm|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=http://www.banda.cz/webs/k/kom/usr_files/file/hanackyslovnik.pdf|zpracovano=0|shortcut=
 u1
 g49.2314365,15.7285237
 x0
@@ -15,9 +15,9 @@ oMoravské Horácko>Horácko
 -
 -
 -
-|1|pámbu|
+|1|pámbu||
 -
-se|1|se|
+se|1|se||
 -
 nej|né
 o|vo
@@ -41,24 +41,24 @@ ježišEK|2|ek?|ka?|ku?,kovi?|ka?|ku|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích
 oKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|či|čí?|čím?|či?|či?|čích?|čima*?
 braDA|1|da?|dy?|ďe?|du|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 -
-brambory||0|japka||
-knedlík||0|knedla||
-mouka||0|móka||
-vdolky||0|dolky||
-povidla||0|povidli||
-||0|v Heralticích ||
-ježíš|ježíšEK|0|ježiš|ježišEK|
-o|oKO|0|o|oKO|
-brad|bradA|0|bra|braDA|
+brambory||0|japka|||
+knedlík||0|knedla|||
+mouka||0|móka|||
+vdolky||0|dolky|||
+povidla||0|povidli|||
+||0|v Heralticích |||
+ježíš|ježíšEK|0|ježiš|ježišEK||
+o|oKO|0|o|oKO||
+brad|bradA|0|bra|braDA||
 -
 zlatÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 zlaTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|-|-|tá?|tých?|tým?|tá?|tá?|tých?|tými?|-|-|tá?|té?|té?|tó|tá?|té?|tou?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-|tý?|tého?|tému?|tého?|té|tém?|tým?|-|-|ťí?|tých?|tým?|té?|ťí?|tých?|tými?|-|-|tý?|tého?|tému?|tý?|tý?|tém?|tým?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-
 -
-syrové||syrovi||
-hezky||pjekňe||
-zlat|zlatÝ|zla|zlaTÝ|
-špiča|zlatÝ|špiča|zlaTÝ|
+syrové||syrovi|||
+hezky||pjekňe|||
+zlat|zlatÝ|zla|zlaTÝ||
+špiča|zlatÝ|špiča|zlaTÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 vY|y|ás|ám|ás|y|ás|ámi
@@ -68,17 +68,17 @@ TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|
 vY|y|ás|ám?|ás?|y?|ás?|ámi?
 fšECHEN|echen?|eho?|emu?|eho?|echen?|em?|ím?|ici|ech?|em?|echny?|ichňi?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echno?|eho?|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
 -
-t|tEN||TEN|
-v|vY|v|vY|
-vš|všECHEN|fš|fšECHEN|
+t|tEN||TEN||
+v|vY|v|vY||
+vš|všECHEN|fš|fšECHEN||
 -
 třI|4|i|í,třech[1]|em|i|i|ech|emi|||||||||||||||||||||||||||||||||||||||||||||||||
 čtyřI|4|i|,(hovorově) čtyřech[1]|em|i|i|ech|mi,čtyřma[2]|||||||||||||||||||||||||||||||||||||||||||||||||
 pět|4||i|i|||i|i|||||||||||||||||||||||||||||||||||||||||||||||||
 -
 -
-jedna||jedna||
-dva||dvě||
+jedna||jedna|||
+dva||dvě|||
 -
 vZÍT|94|-1|zít|ezmu|ezmeš|esme|ezmeme|ezměte|ezmou,zají|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata|zav|zavši|zavše
 přidAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
@@ -101,28 +101,28 @@ trÁPIT|15|-1|ápid|ápím?|ápíš?|ápí?|ápíme?|ápíte?|ápí?|ap?|apme?|a
 nechAT|30|-1|at?|ám?|áš?|á|áme?|áte?|ají?|?,nechej?|me?,nechejme?|te?,nechejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 musET|5|-1|et?|ím?|íš?|í?|ime|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
 -
-|BÝT||BÝT|
-vypad|vypadAT|vypad|vypadAT|
-|SPADNOUT||SPADNOUT|
-tr|trÁPIT|tr|trÁPIT|
-nech|nechAT|nech|nechAT|
-nenech|nechAT|nenech|nechAT|
-mus|musET|mus|musET|
+|BÝT||BÝT||
+vypad|vypadAT|vypad|vypadAT||
+|SPADNOUT||SPADNOUT||
+tr|trÁPIT|tr|trÁPIT||
+nech|nechAT|nech|nechAT||
+nenech|nechAT|nenech|nechAT||
+mus|musET|mus|musET||
 -
-tak|tak|
-kde|gde|
-vždyť|dyj|
-už|oš||uš|
-tam|tam|
-dlouho|dloho|
+tak|tak||
+kde|gde||
+vždyť|dyj||
+už|oš|||uš||
+tam|tam||
+dlouho|dloho||
 -
-i||aj|
-o||vo|
-v||v|
+i||aj||
+o||vo||
+v||v||
 -
-jak|jak|
+jak|jak||
 -
-prý|pré|
-inu|ino|
+prý|pré||
+inu|ino||
 -
-ale|ále|
+ale|ále||

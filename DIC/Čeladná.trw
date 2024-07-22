@@ -1,16 +1,18 @@
-TW v2
+TW v3
 tČeladná
 aGG
 d14.01.2024 10:03:36
 c#Zdroje dat\n-snčj
 g49.5471609,18.3363199
 q0
+oLašsko
 -
 -
 -
 -
 -
-tak se peklo častěji|1|tak se pekło časťejši|
+tak se peklo častěji|1|tak se pekło časťejši||
+černá káva|1|černy kafej||
 -
 -
 -
@@ -21,24 +23,31 @@ ubožáK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 bÍDA|1|ída|ídy|ídě|ídu|ído|ídě|ídou|ídy|ěd|ídám|ídy|ídy|ídách|ídami
 věc|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
+kafÉ|-1|é|é|é|é|é|é|é|é|é|é|é|é|é|é
+čmeláK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 -
 boraG|2|g|ka?|kovi|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 bÍDA|1|ida|ídy?|íďe?|ídu?|ído?|íďe?|ídou?|ídy?|jed?|ídám?|ídy?|ídy?|ídách?|ídami?
 vjec|1||i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 ČLOVĚK|2|člověk?|čłovjeka|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|lidé?,(v&#160;obecném jazyce) liďi?|liďi|lidem?|liďi?|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
+kafÉ|-1|ej|é?|é?|é?|é?|é?|é?|é?|é?|é?|é?|é?|é?|é?
+čmelaK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 -
-ubožá|ubožáK|0|bora|boraG|
-b|bÍDA|0|b|bÍDA|
-věc|věc|0|vjec|vjec|
-|ČLOVĚK|0||ČLOVĚK|
-||0|chachara||
-||0|barabu||
+ubožá|ubožáK|0|bora|boraG||
+b|bÍDA|0|b|bÍDA||
+věc|věc|0|vjec|vjec||
+|ČLOVĚK|0||ČLOVĚK||
+||0|chachara|||
+||0|barabu|||
+kaf|kafÉ|0|kaf|kafÉ||
+čmelá|čmeláK|0|čmela|čmelaK||sncj
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
-zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|na|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
+zeleNÝ|-1|ny|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|na|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 -
-strašn|zelenÝ|straš|zeleNÝ|
+strašn|zelenÝ|straš|zeleNÝ||
+čern|zelenÝ|čer|zeleNÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -46,8 +55,8 @@ SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 -
-t|tEN||TEN|
-|SE||SE|
+t|tEN||TEN||
+|SE||SE||
 -
 -
 -
@@ -62,23 +71,23 @@ BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|bu
 zrobIT|30|-1|at?|ám?|áš?|i|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 pÉCT|15|-1|éct?|eču?,(zastarale) peku?|ečeš?|eče?|ečeme?|ečete?|ečou?,(zastarale) pekou?|eč?,(zastarale) pec?|ečme?,(zastarale) pecme?|ečte?,(zastarale) pecte?|ekl?|ekl?|ekla?|ekło|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeňi?|ečeny?|ečeny?|ečena?
 -
-pom|pomOCT|pom|pomOCT|
-|BÝT||BÝT|
-uděl|udělAT|zrob|zrobIT|
-p|pÉCT|p|pÉCT|
+pom|pomOCT|pom|pomOCT||
+|BÝT||BÝT||
+uděl|udělAT|zrob|zrobIT||
+p|pÉCT|p|pÉCT||
 -
-ještě|ešče|
-někdy|ňegdy|
-tak|tak|
-hodně|hodňe|
-častěji|časťejši|
+ještě|ešče||
+někdy|ňegdy||
+tak|tak||
+hodně|hodňe||
+častěji|časťejši||
 -
-ani||aňi|
-z||s|
+ani||aňi||
+z||s||
 -
-protože|bo|
-neboť|bo|
-když|dyž|
+protože|bo||
+neboť|bo||
+když|dyž||
 -
-ne|ňi|
+ne|ňi||
 -

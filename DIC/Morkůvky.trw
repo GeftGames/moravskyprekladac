@@ -1,8 +1,10 @@
-TW v1.0
+TW v3
 tMorkůvky
 aGG
 d25.10.2023 15:04:57
 c#Zdroje dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n\n#Popis\nV Němčičkách, Morkůvkách a Štarovičkách jest i přídech v: voko, vokno, voves.\n
+bkniha|prijmeni=|jmeno=|nazev=Hustopečsko|misto=|vydavatel=|rok_vydani=|strany=132|issn=|odkaz=https://archive.org/details/hustopecsko/page/132/mode/1up|zpracovano=0|shortcut=hust
+u1
 g48.9661108,16.8619563
 q0
 -
@@ -10,6 +12,8 @@ q0
 -
 -
 -
+v kapse|1|v kapci||hust
+na ramenu|1|na rameňe||hust
 -
 -
 -
@@ -18,28 +22,48 @@ q0
 okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 oKO|0|ko|ka|ku|ko|ko|ku|kem|či[1]|čí|čím|či|či|čích|čima*
 ovES|1|es|sa|su|es|se|su,se|sem|sy|sů|sům|sy|sy|sech|sy
+kapSA|1|sa|sy|se|su|so|se|sou|sy|es|sám|sy|sy|sách|sami
+ramenO|0|o|a,e|u,i|o|o|u,i,ě|em|a|,ou,ečně,60;Čechách) ramenouch*|ům|a|a|ech,ou,ečně,60;Čechách) ramenouch*|y
+hŮL|1|ůl|ole|oli|ůl|oli|oli|olí|ole|olí|olím|ole|ole|olích|olemi
+hůlKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 okNO|0|no?|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech?|ny?
 oKO|0|ko|ka?|ku?|ko?|ko?|ku?|kem?|či[1]?|čí?|čím?|či?|či?|čích?|čima*?
 ovES|1|es|sa?|su?|es?|se?|su,se?|sem?|sy?|sů?|sům?|sy?|sy?|sech?|sy?
+kapSA|1|sa?|sy?|se?|su?|so?|ci|sou?|sy?|es?|sám?|sy?|sy?|sách?|sami?
+rameNO|0|no?|na?,ne?|nu?,ni?|no?|no?|ňe|nem?|na?|n?,nou?,nečňe?,n60;Čechách) ramenouch*?|núm?|na?|na?|nech?,nou?,nečňe?,n60;Čechách) ramenouch*?|ny?
+húlKA|1|ka?|ky?|ce?|ku|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-ok|okNO|0|ok|okNO
-o|oKO|0|vo|oKO
-ov|ovES|0|vov|ovES
--
--
--
--
--
--
--
--
--
--
--
--
+ok|okNO|0|ok|okNO||
+o|oKO|0|vo|oKO||
+ov|ovES|0|vov|ovES||
+||0|fifidýlko|||hust
+kap|kapSA|0|kap|kapSA||hust
+||0|zrcadýlko|||hust
+ramen|ramenO|0|rame|rameNO||hust
+h|hŮL|0|húl|húlKA||hust
+||0|klebety|||hust
+||0|sotúrku 6p|||hust
 -
 -
+-
+||bolehradský|||hust
+-
+-
+-
+-
+-
+-
+-
+noSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
+-
+noSIT|15|-1|sit?|sím?|síš?|sí|síme?|síte?|sí?|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeňi?|šeny?|šeny?|šena?
+-
+no|noSIT|no|noSIT||hust
+-
+-
+v||v||hust
+na||na||hust
 -
 -
 -

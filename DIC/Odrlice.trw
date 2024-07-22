@@ -1,56 +1,77 @@
-TW v1.0
+TW v3
 fSpisovná čeština
 tOdrlice
 aGG
 d24.03.2023 7:38:36
-idal m jedn po čňák Senice na Hané OL (Odrlice) https://sncj.ujc.cas.cz/entry/9468\nptal se ji, ešl pré nemá bák Senice na Hané OL (Odrlice);https://sncj.ujc.cas.cz/entry/5323\nto ale béval negd barch chmel Senice na Hané OL (Odrlice) https://sncj.ujc.cas.cz/entry/13324\ntag mňe začala rka brňet Senice na Hané OL (Odrlice)
+idal m jedn po čňák Senice na Hané OL (Odrlice) https://sncj.ujc.cas.cz/entry/9468\nptal se ji, ešl pré nemá bák Senice na Hané OL (Odrlice);https://sncj.ujc.cas.cz/entry/5323\nto ale béval negd barch chmel Senice na Hané OL (Odrlice) https://sncj.ujc.cas.cz/entry/13324\ntag mňe začala rka brňet Senice na Hané OL (Odrlice)\nexpr. pomlouvat: to si nenechám lébit, ab se negdo furt po mňe brósl Senice na Hané OL (Odrlice)\ntag mňe začala rôka brňet Senice na Hané OL (Odrlice)
+bsncj|i=Senice na Hané OL (Odrlice)|zpracovano=
+u1
 lHanáčtina
 g49.6424977,17.0609996
-xlokální mluva
+x3
 q0
 oHaná
 -
 -
 -
 -
+aby mě každý pomlouval|1|abê se negdo furt po mňe brósêl||
 -
-chmelová hlávka,chmelová šištice|barôcha chmelô
-vlepil mu jednu|dal mô jednô po čôňákô
+chmelová hlávka,chmelová šištice|1|barôcha chmelô||
+vlepil mu jednu|1|dal mô jednô po čôňákô||
+tak mi|1|tag mňe||sncj
 -
 -
 -
+u|ô
 -
 lu|lô
 u|ô
 -
-ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
-hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 vEŠ|1|eš|ši|ši|eš|ši|ši|ší|ši|ší|ším|ši|ši|ších|ešmi
+chmel|3||e,u|i,u||i,e|i,u|em|e,y|ů|ům|e,y|e,y|ích,ech|i,y
+šišKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+ruKA|1|ka|ky|ce|ku|ko|ce|kou|ce|kou|kám|ce|ce|kou,kách|kama
+sušárNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
+dížE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 -
-ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
-hrad|3|?|ô|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
+chmel|3||e?,u?|i?,u?|?|i?,e?|i?,u?|em?|e?,y?|ú?|úm?|e?,y?|e?,y?|ích?,ech?|i?,y?
+barôchA|1|a|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+bákÊ|-1|?|?|?|?|?|?|?|ê|?|?|?|?|?|?
+rôKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ce?|kou?|kám?|ce?|ce?|kou?,kách?|kama?
+sôšKA|1|ka|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
+ďižE|1|e|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 -
-v|vEŠ|0|bákê|
-šiška||0|barôcha|
-chmel||0|chmel|
+v|vEŠ|0|bák|bákÊ||
+chmel|chmel|0|chmel|chmel||
+šiš|šišKA|0|barôch|barôchA||
+ru|ruKA|0|rô|rôKA||
+sušár|sušárNA|0|sôš|sôšKA||
+díž|dížE|0|ďiž|ďižE||
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-on|-1|on|ho*, jej, něj**jeho, něho**|mu*, jemu, němu**|ho*, jej, něj**jeho, něho** (pouze životný)|—|něm**|jím, ním*
-já|-1|já|mě|mně,mi|mě|já|mně|mnou
-ONA|-1|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+on|on|ho*, jej, něj**jeho, něho**|mu*, jemu, němu**|ho*, jej, něj**jeho, něho** (pouze životný)|—|něm**|jím, ním*
+já|já|mě|mně,mi|mě|já|mně|mnou
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+někDO|do|oho|omu|oho|-|om|ým
 -
-tEN|-1|en?|oho?|omu?|oho?|-?|om?|ím?|y?|ěch?|ěm?|y?|-?|ěch?|ěmi?|en?|oho?|omu?|en?|-?|om?|ím?|y?|ěch?|ěm?|y?|-?|ěch?|ěmi?|a?|é?|é?|u?|-?|é?|ou?|y?|ěch?|ěm?|y?|-?|ěch?|ěmi?|o|oho?|omu?|o?|-?|om?|ím?|y?|ěch?|ěm?|y?|-?|ěch?|ěmi?
-on|-1|on?|ho,jej,něj,jeho,něho?|mô,němu|ho,jej,něj,jeho,něho?|-|něm?|jím,#ním?
-já|-1|já?|mě?|mňe|mě?|já?|mně?|mnou?
-ONA|-1|ona?|ji,ní*?|jí?,ní*?|ji?,ni*?|-|ní*?|jí?,ní*?
+TEN|ten?|toho?|tomu?|toho?|t-?|tom?|tím?|ty?|těch?|těm?|ty?|t-?|těch?|těmi?|ten?|toho?|tomu?|ten?|t-?|tom?|tím?|ty?|těch?|těm?|ty?|t-?|těch?|těmi?|ta?|té?|té?|tu?|t-?|té?|tou?|ty?|těch?|těm?|ty?|t-?|těch?|těmi?|to|toho?|tomu?|to?|t-?|tom?|tím?|ty?|těch?|těm?|ty?|t-?|těch?|těmi?
+on|on?|ho,jej,něj,jeho,něho?|mô,němu|ho,jej,něj,jeho,něho?|-|něm?|jím,#ním?
+já|já?|mě?|mňe|mě?|já?|mně?|mnou?
+ONA|ona?|ji,ní*?|jí?,ní*?|ji?,ni*?|-|ní*?|jí?,ní*?
+SE|-|sebe?|si,sobje?|se,sebe?|-|sobje?|sebou?
+neKDO|gdo|koho?|komu?|koho?|-|kom?|kým?
 -
-t|tEN|tEN
-on|on
-já|já
-ONA|ONA
+t|tEN||TEN||
+|on||on||
+|já||já||sncj
+|ONA||ONA||
+|SE||SE||
+něk|někDO|ne|neKDO||
 -
 -
 -
@@ -59,25 +80,38 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 |0|-1|
 dÁT|94|-1|át|ám|áš|á|áme|áte|ájí|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 nemÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
-ptÁT_SE|22|-1|át_se|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+ptÁT_SE|22|2|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+nechAT|30|-1|at|ám|áš|á|áme|áte|ají|,nechej|me,nechejme|te,nechejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+lÍBIT_SE|7|2|íbit|íbím|íbíš|íbí|íbíme|íbíte|íbí|ib|ibme|ibte|íbil|íbil|íbila|íbilo|íbili|íbily|íbily|íbila
+začÍT|30|-1|ít|nu|neš|ne|neme|nete|nou|ni|něme|něte|al|al|ala|alo|ali|aly|aly|ala|at|at|ata|ato|ati|aty|aty|ata
 -
 BÝT|247|-1|být|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|bévalê|byly?|byla?|jsa|jsouc|jsouce|byv|byvši|byvše|bych?|bys?|by?|bychom?|byste?|by?
 dÁT|94|-1|át|ám?|áš?|á?|áme?|áte?|ájí?|ej?|ejme?|ejte?|al|al|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av|avši|avše
 nemÍT|7|-1|ít|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
-ptÁT_SE|22|-1|át_se?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?
+ptÁT_SE|22|2|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?
+nechAT|30|-1|at?|ám|áš?|á?|áme?|áte?|ají?|?,nechej?|me?,nechejme?|te?,nechejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+lÍBIT_SE|7|2|ébit|íbím?|íbíš?|íbí?|íbíme?|íbíte?|íbí?|ib?|ibme?|ibte?|íbil?|íbil?|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?
+začÍT|30|-1|ít?|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?|at?|at?|ata?|ato?|aťi?|aty?|aty?|ata?
 -
-BÝT|BÝT
-d|dÁT|dÁT
-nem|nemÍT|nemÍT
-m|nemÍT|nemÍT
-pt|ptÁT_SE|ptÁT_SE
+|BÝT||BÝT||
+d|dÁT|d|dÁT||
+nem|nemÍT|nem|nemÍT||
+m|nemÍT|m|nemÍT||
+pt|ptÁT_SE|pt|ptÁT_SE||
+nech|nechAT|nech|nechAT||
+nenech|nechAT|nenech|nechAT||
+l|lÍBIT_SE|l|lÍBIT_SE||
+zač|začÍT|zač|začÍT||sncj
+brnit||brňet|||sncj
 -
-jestli|ešlê
-tak|tag
+jestli|ešlê||
+tak|tag||sncj
+pořád|furt||
 -
-po|
+po||po||
 -
-ale
+ale|ale||
+aby|abê||
 -
-prý|pré
+prý|pré||
 -

@@ -1,9 +1,10 @@
-TW v2
+TW v3
 tŽďár
 aGG
 d25.10.2023 20:25:09
 idufčilko sem tu nevjeďél Žďár BK
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+bsncj|i=Žďár BK|zpracovano=
 u1
 g49.4214385,16.6965923
 q0
@@ -13,8 +14,10 @@ oDrahansko
 -
 -
 -
-bouchni tu|1|čajsňi to|
-kostival lékařský|1|černé kuřéň|
+bouchni tu|1|čajsňi to||
+kostival lékařský|1|černé kuřéň||
+nereptej pořád|1|nebrň pořát!||sncj
+neustále mluví|1|brňí jako chróst na ňiťi||
 -
 -
 -
@@ -24,14 +27,21 @@ ou|ó
 apatyKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 medicínA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 kořen|3||e,u|i,u||i|i,u|em|y|ů|ům|y|y|ech|y
+nit|1||i,ě|i||i|i|í|i,ě|í|ím|i,ě|i,ě|ích|ěmi
+čmeláK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 -
 apatyKA|1|ka?|ke|ce?|ku?|ko?|ce?|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 meďicíNA|1|na?|ny?|ňe?|no|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 kořeN|3|ň|ne?,nu?|ňi?,nu?|n?|ňi?|ňi?,nu?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
+ňiT|1|t?|ťi?,ťe?|ťi?|t?|ťi?|ťi|ťí?|ťi?,ťe?|ťí?|ťím?|ťi?,ťe?|ťi?,ťe?|ťích?|ťemi?
+čmeduláK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 -
-apaty|apatyKA|0|hapati|apatyKA|
-medicín|medicínA|0|medecí|meďicíNA|
-kořen|kořen|0|kuřé|kořeN|
+apaty|apatyKA|0|hapati|apatyKA||
+medicín|medicínA|0|medecí|meďicíNA||
+kořen|kořen|0|kuřé|kořeN||
+||0|chróst|||sncj
+nit|nit|0|ňi|ňiT||sncj
+čmelá|čmeláK|0|čmedulá|čmeduláK||
 -
 hloupÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 černÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -39,8 +49,8 @@ hloupÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|
 hlópÉ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|é|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 čerNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|né|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 -
-hloup|hloupÝ|hlóp|hlópÉ|
-čern|černÝ|čer|čerNÝ|
+hloup|hloupÝ|hlóp|hlópÉ||
+čern|černÝ|čer|čerNÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
@@ -48,8 +58,8 @@ tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|tu|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 TY|te|ťe[1]?,tebe?|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
 -
-t|tEN||TEN|
-t|tY||TY|
+t|tEN||TEN||
+t|tY||TY||
 -
 -
 -
@@ -57,21 +67,28 @@ t|tY||TY|
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 skočIT|22|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila
+brNĚT|7|-1|nět|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|něl|něl|něla|nělo|něli|něly|něly|něla
 -
 BÝT|247|-1|být?|sem|sež|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 vĚDĚT|7|-1|ědět?|ím?|íš?|í?|íme?|íte?|ědí?|ěz?|ězme?|ězte?|jeďél|ěděl?|ěděla?|ědělo?|ěděli?|ěděly?|ěděly?|ěděla?
 skoČIT|22|-1|čit?|čím?|číš?|čí?|číme?|číte?|čí?|dž|čme?|čte?|čil?|čil?|čila?|čilo?|čili?|čily?|čily?|čila?
+brňET|7|-1|et?|ím?|íš?|í|íme?|íte?|í?||me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 -
-|BÝT||BÝT|
-v|vĚDĚT|v|vĚDĚT|
-nev|vĚDĚT|nev|vĚDĚT|
-skoč|skočIT|sku|skočIT|
+|BÝT||BÝT||
+v|vĚDĚT|v|vĚDĚT||
+nev|vĚDĚT|nev|vĚDĚT||
+skoč|skočIT|sku|skočIT||
+br|brNĚT|brň|brňET||
+nebr|brNĚT|nebrň|brňET||sncj
 -
-doposud|dufčilko|
-dávno|dávnu|
+doposud|dufčilko||
+dávno|dávnu||
+pořád|pořát||sncj
 -
-do||du|
-pro||pru|
+do||du||
+pro||pru||
+na||na||sncj
 -
+jako|jako||sncj
 -
 -

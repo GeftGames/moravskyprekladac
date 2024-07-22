@@ -1,9 +1,10 @@
-TW v2
+TW v3
 tValašská Polanka
 aGG
 d17.07.2023 15:55:24
 inedožýraj, nebo ťi vysmýču Valašská Polanka VS
-c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (vyčerpáno)
+bsncj|i=Valašská Polanka VS|zpracovano=\n\nweb|nazev=|nazev_webu=|odkaz=http://nase-rec.ujc.cas.cz/archiv.php?art=4715|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=0|shortcut=
+u1
 g49.2620419,17.9965049
 x3
 q0
@@ -13,17 +14,21 @@ oValašsko
 -
 -
 -
-ti dám na zadek|1|ťi vysmýču|
-klepe na okno|1|búřý na okno|
+ti dám na zadek|1|ťi vysmýču||
+klepe na okno|1|búřý na okno||
+ten silný vítr|1|to v’etřysko||sncj
+fouká silný vítr|1|duje to v’etřysko||sncj
 -
-šplouchal|1|čápał|
+šplouchal|1|čápał||
 -
 -
+vě|v’e
 -
 žírej|žýraj
 rej|raj
 al|ał
 hla|hła
+třisko|třysko
 -
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
@@ -33,15 +38,15 @@ dEN|0|en?|ne?|ňi?,nu?|eň|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,k�
 okNO|0|no?|na?|nu?|no|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
 podłaHA|1|ha?|hy?|ze?|hu|ho?|ze?|hou?|hy?|h?|hám?|hy?|hy?|hách?|hami?
 -
-d|dEN|0|d|dEN|
-ok|okNO|0|ok|okNO|
-podla|podlaHA|0|podła|podłaHA|
+d|dEN|0|d|dEN||
+ok|okNO|0|ok|okNO||
+podla|podlaHA|0|podła|podłaHA||
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 celÝ|-1|łé?|łého?|łému?|łé?|łé?|łém?|łým?|-|-|łá?|łých?|łým?|łá?|łá?|łých?|łými?|-|-|łá?|łé?|łé?|łou?|łá?|łé?|łou?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-|łý?|łého?|łému?|łého?|łý?|łém?|łým?|-|-|łí?|łých?|łým?|łé?|łí?|łých?|łými?|-|-|łý|łého?|łému?|łý?|łý?|łém?|łým?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-
 -
-cel|celÝ|ce|celÝ|
+cel|celÝ|ce|celÝ||
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 kDOSI|dosi|ohosi|omusi|ohosi|dosi|omsi|ýmsi
@@ -52,14 +57,14 @@ ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 SE|-|sebe?|si,sobje?|sa,sebe?|-|sobje?|sebou?
 KDOSI|gdosy|kohosi?|komusi?|kohosi?|kdosi?|komsi?|kýmsi?
 MY|my?|nás?|nám|nás?|my?|nás?|námi?
-TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tú|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|teho|tomu?|to|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tú|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to|teho|tomu?|to|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
 ONA|ona|jí?,ňí*?|jí?,ňí*?|ji?,ňi*?|-|ňí*?|jí?,ňí*?
 -
-|SE||SE|
-k|kDOSI||KDOSI|
-|MY||MY|
-t|tEN||TEN|
-|ONA||ONA|
+|SE||SE||
+k|kDOSI||KDOSI||
+|MY||MY||
+t|tEN||TEN||
+|ONA||ONA||
 -
 -
 -
@@ -74,18 +79,20 @@ neBÝT|23|-1|byť|jsem?|jsi?|ňí?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?
 BÝT|247|-1|být?|jsem?|jsi?|je?|zmy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by|bychom?|byste?|by?
 přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?
 -
-otrav|otravOVAT|dožýr|dožýrAT|
-neotrav|otravOVAT|nedožýr|dožýrAT|
-ne|neBÝT|ne|neBÝT|
-|BÝT||BÝT|
-při|přiJÍT|při|přiJÍT|
-nepři|přiJÍT|nepři|přiJÍT|
-||neudrhła||
+otrav|otravOVAT|dožýr|dožýrAT||
+neotrav|otravOVAT|nedožýr|dožýrAT||
+ne|neBÝT|ne|neBÝT||
+|BÝT||BÝT||
+při|přiJÍT|při|přiJÍT||
+nepři|přiJÍT|nepři|přiJÍT||
+||neudrhła|||
+dout||duje|||sncj
 -
+dneska,dnes|neskaj||sncj
 -
-na||na|
+na||na||
 -
-nebo|nebo|
-či|či|
+nebo|nebo||
+či|či||
 -
 -
