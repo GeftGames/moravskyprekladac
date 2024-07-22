@@ -1,9 +1,10 @@
-TW v1.0
+TW v3
 tKladná Žilín
 aGG
 d19.07.2023 13:05:44
 i dřevník: koťí sa ťi drvárka Luhačovice ZL (Kladná Žilín);
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Kladn%C3%A1+%C5%BDil%C3%ADn">sncj.ujc.cas.cz</a>
+u1
 sLuhačovice
 g49.087959,17.789486
 q0
@@ -23,19 +24,19 @@ dřevníK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 pohádKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 dřevníK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 -
-dřevní|dřevníK|0|drvár|pohádKA
+dřevní|dřevníK|0|drvár|pohádKA||
 -
 -
 -
 -
-SE|-1|-|sebe|si,sobě|se,sebe|-|sobě|sebou
-tY|-1|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
 -
-SE|-1|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
-TY|-1|ty?|t[1],tebe?|ťi|t[1],tebe?|ty?|tobě?|tebou?
+SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
+TY|ty?|t[1],tebe?|ťi|t[1],tebe?|ty?|tobě?|tebou?
 -
-SE|SE
-t||tY|TY
+|SE||SE||
+t|tY||TY||
 -
 -
 -

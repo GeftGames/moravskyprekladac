@@ -1,9 +1,10 @@
-TW v2
+TW v3
 tKyjovice
 aGG
 d27.06.2023 14:48:48
 iparu led ih ňechali otpočyvadž a dobytky se na ňich pašč Kyjovice OP
 c#Zdroje dat\n-sncj.ujc.cas.cz
+bsncj|i=Kyjovice OP|zpracovano=
 u2
 g49.8329671,18.0449124
 q0
@@ -13,9 +14,10 @@ oSlezsko
 -
 -
 -
-pár let|1|paru led|
-neslyšel nikoho|1|ňečuł žadneho|
-na nose|1|na noše|
+pár let|1|paru led||
+neslyšel nikoho|1|ňečuł žadneho||
+na nose|1|na noše||
+tehdy za dob|1|tehdaj za času||sncj
 -
 -
 ne|ňe
@@ -25,27 +27,36 @@ sil|šył
 žinou|žynum
 tal|tał
 -
-nos|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
 BRÝLE|1|-|-|-|-|-|-|-|brýle|brýlí|brýlím|brýle|brýle|brýlích|brýlemi
-ondřej|2||e|i,ovi|e|i|i,ovi|em|ové|ů|ům|e|ové|ích|i
-jiří|2||ho,*|mu,*|ho,*||m,*|m||ch|m|||ch|mi
+čas|3||u|u||e|e,u|em|y|ů|ům|y|y|ech|y
 družinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 hostinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+jiří|2||ho,*|mu,*|ho,*||m,*|m||ch|m|||ch|mi
+mlýn|3||a|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+nos|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+ondrA|2|a|y|ovi|u|o|ovi|ou|ové|ů|ům|y|ové|ech|y
+ondřej|2||e|i,ovi|e|i|i,ovi|em|ové|ů|ům|e|ové|ích|i
 -
-noS|3|š?|šu?|šu?|š?|še?|še?|šem?|šy?|šú?|šúm?|šy?|šy?|šech?|šy?
 BRÝLE|1|-|-|-|-|-|-|-|brýle?|brýlí?|brýlím?|brele|brýle?|brýlích?|brýlemi?
-ondraŠ|2|ž|še?|ši?,šovi?|še?|ši?|ši?,šovi?|šem?|šové?|šú?|šúm?|še?|šové?|ších?|ši?
-JurAŠ|2|aš|ho?,*?|mu?,*?|ho?,*?|?|m?,*?|m?|?|ch?|m?|?|?|ch?|mi?
+čas|3|?|u?|u?|?|e?|e?,u?|em?|y?|ú|úm?|y?|y?|ech?|y?
 družyNA|1|na?|ny?|ňe?|nu?|no?|ňe?|num|ny?|n?|nám?|ny?|ny?|nách?|nami?
 hoščiNA|1|na?|ny?|ňe?|nu|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+JurAŠ|2|aš|aša|mu?|ho?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?
+noS|3|š?|šu?|šu?|š?|še?|še?|šem?|šy?|šú?|šúm?|šy?|šy?|šech?|šy?
+ondrÁŠ|2|áž|áša|ovi?|u?|o?|ovi?|ou?|ové?|ú?|úm?|y?|ové?|ech?|y?
+młyN|3|n?|na?|nu?|n?|ne?|ňe|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
 -
-||0|Holiška ||
-nos|nos|0|no|noS|
-|BRÝLE|0||BRÝLE|
-ondřej|ondřej|0|ondra|ondraŠ|
-jiří|jiří|2|jur|JurAŠ|
-družin|družinA|0|družy|družyNA|
-hostin|hostinA|0|hošči|hoščiNA|
+||0|Holiška |||
+|BRÝLE|0||BRÝLE||
+čas|čas|0|čas|čas||sncj
+družin|družinA|0|družy|družyNA||
+hostin|hostinA|0|hošči|hoščiNA||
+jiří|jiří|2|jur|JurAŠ||sncj
+nos|nos|0|no|noS||
+ondr|ondrA|2|ondr|ondrÁŠ||sncj
+mlýn|mlýn|0|młyn|młyN||
+ondřej|ondřej|0|ondr|ondrÁŠ||sncj
+||0|Hadryšy|||sncj
 -
 mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -53,8 +64,8 @@ celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é
 mokRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|ry|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 ceŁÝ|-1|łé?|łého?|łému?|łé?|łé?|łém?|łým?|-|-|łá?|łých?|łým?|łá?|łá?|łých?|łými?|-|-|łá?|łé?|łé?|łou?|łá?|łé?|łum|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-|łý?|łého?|łému?|łého?|łý?|łém?|łým?|-|-|łí?|łých?|łým?|łé?|łí?|łých?|łými?|-|-|łý?|łého?|łému?|łý?|łý?|łém?|łým?|-|-|łé?|łých?|łým?|łé?|łé?|łých?|łými?|-|-
 -
-sta|mokRÝ|sta|mokRÝ|
-cel|celÝ|ce|ceŁÝ|
+sta|mokRÝ|sta|mokRÝ||
+cel|celÝ|ce|ceŁÝ||
 -
 ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -66,10 +77,10 @@ SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
 žádNÝ|ný?|neho|nému?|ného?|-|ném?|ným?|ňí?|ných?|ným?|né?|-|ných?|nými?|ný?|ného?|nému?|ný?|-|ném?|ným?|né?|ných?|ným?|né?|-|ných?|nými?|ná?|né?|né?|nou?|-|né?|nou?|né?|ných?|ným?|né?|-|ných?|nými?|né?|ného?|nému?|né?|-|ném?|ným?|ná?|ných?|ným?|ná?|-|ných?|nými?
 JÁ|ja?|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 -
-|ONI||ONI|
-|SE||SE|
-žádn|žádnÝ|žad|žádNÝ|
-|JÁ||JÁ|
+|ONI||ONI||
+|SE||SE||
+žádn|žádnÝ|žad|žádNÝ||
+|JÁ||JÁ||
 -
 dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-
 dvojE|2|e|ích|ím|e|e|ích|ími
@@ -77,8 +88,8 @@ dvojE|2|e|ích|ím|e|e|ích|ími
 dvA|4|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-
 dvojE|2|e|ích?|ím?|e?|e?|ích?|ími?
 -
-dv|dvA|dv|dvA|
-dvoj|dvojE|dvoj|dvojE|
+dv|dvA|dv|dvA||
+dvoj|dvojE|dvoj|dvojE||
 -
 odpočívAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 nechAT|30|-1|at|ám|áš|á|áme|áte|ají|,nechej|me,nechejme|te,nechejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
@@ -88,6 +99,7 @@ slyšET|15|-1|et|ím|íš|í|íme|íte|í|,poslyš|me,poslyšme|te,poslyšte|el|
 noSIT|15|-1|sit|sím|síš|sí|síme|síte|sí|s|sme|ste|sil|sil|sila|silo|sili|sily|sily|sila|šen|šen|šena|šeno|šeni|šeny|šeny|šena
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 vzkazOVAT|15|-1|ovat|uji,vzkazuju|uješ|uje|ujeme|ujete|ují,vzkazujou|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 otpočyvAT|7|-1|adž|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 ňechAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|,nechej?|me,nechejme?|te,nechejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
@@ -96,23 +108,29 @@ viĎET|15|-1|ďet?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|z?|zme?|zte?|dže�
 čUT|15|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?,poslyš?|me?,poslyšme?|te?,poslyšte?|uł|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 noSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sí?|s?|sme?|ste?|šył|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeňi?|šeny?|šeny?|šena?
 skazOVAT|15|-1|ovat?|uju|uješ?|uje?|ujeme?|ujete?|ují?,vzkazujou?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováňi?|ovány?|ovány?|ována?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|su|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-odpočív|odpočívAT|otpočyv|otpočyvAT|
-nech|nechAT|ňech|ňechAT|
-p|pÁST|p|pASČ|
-vi|viDĚT|vi|viĎET|
-nevi|viDĚT|ňevi|viĎET|
-slyš|slyšET|č|čUT|
-no|noSIT|no|noSIT|
-vzkaz|vzkazOVAT|skaz|skazOVAT|
-||nachystał ||
+odpočív|odpočívAT|otpočyv|otpočyvAT||
+nech|nechAT|ňech|ňechAT||
+p|pÁST|p|pASČ||
+vi|viDĚT|vi|viĎET||
+nevi|viDĚT|ňevi|viĎET||
+slyš|slyšET|č|čUT||
+no|noSIT|no|noSIT||
+vzkaz|vzkazOVAT|skaz|skazOVAT||
+||nachystał |||
+|BÝT||BÝT||sncj
 -
+tehdy|tehdaj||sncj
+tam|tam||sncj
+doposud|doposavat||sncj
 -
-na||na|
-s||s|
+na||na||sncj
+s||s||
+za||za||sncj
 -
-a|a|
-že|že|
-aby|aby|
+a|a||sncj
+že|že||
+aby|aby||
 -
 -

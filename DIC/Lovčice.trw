@@ -1,26 +1,38 @@
-TW v0.1
+TW v3
 tLovčice
+aGG
 d02.06.2023 9:40:15
 iSymboly: ó̬
 c#Výslovnost\n-ó̬  ...  něco mezi ó a á  \n\n#Zdroje dat\n-Hláskosloví obce Nechvalína u Kyjova - Bělič, Jaromír; str. 32
+u1
 g49.0636888,17.053976
 q0
+oSlovácko>Hanácké Slovácko
 -
 -
 -
 -
 -
+bez oblečení|1|bezobleki||
 -
 -
 -
 -
 ijou|ijó̬
 -
+muž|2||e|i,ovi|e|i|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+kožiCH|3|ch|chu,čeji) kožicha|chu|ch|chu|chu,čeji) kožiše|chem|chy|chů|chům|chy|chy|ších|chy
+-
+muž|2|?|e?|i?,ovi?|e?|i?|i?,ovi?|em?|i|ú?|úm?|e?|i?,ové?|ích?|i?
+kožiCH|3|ch?|cha|chu?|ch?|chu?|chu?|chem?|chy?|chú?|chúm?|chy?|chy?|ších?|chy?
+-
+muž|muž|0|muž|muž||
+||0|bez marínki|||
+koži|kožiCH|0|koži|kožiCH||
 -
 -
 -
--
--
+||bezobleki|||
 -
 -
 -
@@ -30,15 +42,21 @@ ijou|ijó̬
 -
 říkAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 mluvIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
 říkAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ajô|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 mluvIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|ijô|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|sou|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-říkA|říkAT|říkAT
-mluv|mluvIT|mluvIT
-ne|mluvIT|mluvIT
+říkA|říkAT|říkA|říkAT||
+mluv|mluvIT|mluv|mluvIT||
+ne|mluvIT|ne|mluvIT||
+|BÝT||BÝT||
 -
 -
+bez||bez||
 -
+když|gdiš||
+nebo|nebo||
 -
 -

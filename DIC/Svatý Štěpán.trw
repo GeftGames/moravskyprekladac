@@ -1,11 +1,15 @@
-TW v2
+TW v3
 tSvatý Štěpán
 aGG
 d11.06.2023 20:34:32
 c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 252
+u1
 sBrumov-Bylnice
 g49.0413324,18.0245957
+x3
+rnář=Ščepán
 q0
+oValašsko
 -
 -
 -
@@ -25,15 +29,15 @@ centimetr|3||u|u||e,e|u|em|y|ů|ům|y|y|ech|y
 štvrT|1|ť|ťe?|ťi?|t?|ťi?|ťi?|ťí?|ťe?|ťí?|ťím?|ťe?|ťe?|ťích?|ťemi?
 cenťimetr|3|?|a|u?|?|e?,e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-čtvrt|čtvrt|0|štvr|štvrT|
-centimetr|centimetr|0|centimetr|cenťimetr|
+čtvrt|čtvrt|0|štvr|štvrT||
+centimetr|centimetr|0|centimetr|cenťimetr||
 -
 větší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 -
 vječí|-1||ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
 -
-dlouhý||dłhý||
-větší|větší|vječí|vječí|
+dlouhý||dłhý|||
+větší|větší|vječí|vječí||
 -
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -41,32 +45,32 @@ SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 TEN|ten?|teho|tomu?|toho?|-|tom?|tím?|ty?|tych|těm?|ty?|-|těch?|těmi?|ten?|teho|tomu?|ten?|-|tom?|tím?|ty?|tych|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tú|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|teho|tomu?|to?|-|tom?|tím?|ty?|tych|těm?|ty?|-|těch?|těmi?
 SE|-|sebe?|si,sobě?|sa|-|sobě?|sebou?
 -
-t|tEN||TEN|
-|SE||SE|
+t|tEN||TEN||
+|SE||SE||
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
-MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
+MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|měv|měvši|měvše
 JÍT|127|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita|jda|jdouc|jdouce|šed|šedši|šedše
 -
 BÝT|247|-1|být?|sem|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď|buďme?|buďte?|byl?|byl?|byla?|biło|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
-MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|mňeła|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
-JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šel?|šel?|šła|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
+MÍT|39|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|mňeła|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?
+JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď?,jdi?|pojďme?,jděme?|pojďte?,jděte?|šel?|šel?|šła|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 -
-|BÝT||BÝT|
-|MÍT||MÍT|
-|JÍT||JÍT|
+|BÝT||BÝT||
+|MÍT||MÍT||
+|JÍT||JÍT||
 -
-častně|skoro|
-zase|zaz|
-domů|dom|
-tedy|teda|
-dneska|dneskaj|
-tak|tož|
+častně|skoro||
+zase|zaz||
+domů|dom||
+tedy|teda||
+dneska|dneskaj||
+tak|tož||
 -
 -
-jak|jak|
+jak|jak||
 -
 -
