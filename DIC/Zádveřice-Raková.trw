@@ -1,51 +1,87 @@
-TW v2
+TW v3
 tZádveřice-Raková
 aGG
 d16.02.2024 12:09:53
+iaž by z dobrotú sa ňidz nesprav’iło, toš teprve po tom aby sa do teho bez m’iłosťi udeřyło Zádveřice-Raková ZL
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Z%C3%A1dve%C5%99ice-Rakov%C3%A1+ZL%22">SNČJ</a>
+u1
 g49.2130181,17.8079445
 q0
+oValašsko>Podřevnicko
 -
 -
 -
 -
 -
-mravenci černolesklý|1|čerňí brabency|
-skopový dobytek|1|barany|
+mravenci černolesklý|1|čerňí brabency||
+skopový dobytek|1|barany||
 -
 -
 -
+ou|ú
 -
+vilo|v’iło
+řilo|řyło
 -
 mravenEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
 beran|3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
 masO|0|o|a|u|o|o|e,u|em|a||ům|a|a|ech|y
+dobrotA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+milost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
 -
 brabenEC|2|ec?|ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|cy|cú?|cúm?|ce?|ci?|cích?|ci?
 baraN|3|n?|na?|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?|nú?|núm?|ny|ňi?|nech?|ny?
 masO|0|o?|a?|u?|o|o?|e?,u?|em?|a?|?|úm?|a?|a?|ech?|y?
+dobroTA|1|ta?|ty?|ťe?|tu?|to?|ťe?|tú|ty?|t?|tám?|ty?|ty?|tách?|tami?
+m’iłosT|1|t?|ťi|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|tem?|ťi?|ťi?|tech?|tmi?
 -
-mraven|mravenEC|0|braben|brabenEC|
-beran|beran|0|bara|baraN|
-mas|masO|0|mas|masO|
+mraven|mravenEC|0|braben|brabenEC||
+beran|beran|0|bara|baraN||
+mas|masO|0|mas|masO||
+dobrot|dobrotA|0|dobro|dobroTA||
+milost|milost|0|m’iłos|m’iłosT||
 -
 -
 -
 -
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+niC|c|čeho|čemu|c|c|čem|čím
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+SE|-|sebe?|si?,sobje?|sa,sebe?|-|sobje?|sebou?
+ňiC|c?|čeho?|čemu?|dz|c?|čem?|čím?
+TEN|ten?|toho?|tomu?|toho?|-|tom|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|teho|tomu?|to?|-|tom|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
 -
+|SE||SE||
+ni|niC|ňi|ňiC||
+t|tEN||TEN||
 -
 -
 -
 -
 chovAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+udeřIT|30|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 -
 chovAT|15|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by|bychom?|byste?|by?
+udeřIT|30|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|yło|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
-chov|chovAT|chov|chovAT|
+chov|chovAT|chov|chovAT||
+|BÝT||BÝT||
+||nesprav’iło|||
+udeř|udeřIT|udeř|udeřIT||
 -
+až|až||
+tak|toš||
+teprve|teprve||
 -
-na||na|
+na||na||
+s||z||
+po||po||
+do||do||
+bez||bez||
 -
+aby|aby||
 -
 -

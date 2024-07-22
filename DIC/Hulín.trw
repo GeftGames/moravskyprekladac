@@ -1,9 +1,12 @@
-TW v2
+TW v3
 tHulín
 aGG
 d09.09.2023 13:38:46
-c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/38/mode/1up">Dialektologie moravská; František Bartoš</a>\n\n#Popis nářečí\n-V Popovicích, Lutopecnech, Sobělicích, Zlobících, Bojanovicícli, Jarohůovicích, Vážanecli, Drahlově, Věžkách, v Hulíně, Bilanech, Plešovci, v Břestě, Žalkovicích, v Bezmérově, Hradisku, v Chropyni 1. osoba mn. má koncovku my (m. me)
+c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/38/mode/1up">Dialektologie moravská; František Bartoš</a>\n-https://kramerius5.nkp.cz/view/uuid:41103f6f-4363-11dd-b505-00145e5790ea?page=uuid:89da5689-b893-49ee-a45c-207901bcf7cd\n\n#Popis nářečí\n-V Popovicích, Lutopecnech, Sobělicích, Zlobících, Bojanovicícli, Jarohůovicích, Vážanecli, Drahlově, Věžkách, v Hulíně, Bilanech, Plešovci, v Břestě, Žalkovicích, v Bezmérově, Hradisku, v Chropyni 1. osoba mn. má koncovku my (m. me)
+bkniha|autor=Ladislav Hosák, Rudolf Šrámek|nazev=Místní jména na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=307|issn=|odkaz=|zpracovano=1|shortcut=mjnm
+u1
 g49.3164372,17.4659549
+rnář=Hulín
 q0
 oHaná
 -
@@ -16,11 +19,19 @@ oHaná
 -
 -
 -
+krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+-
+krEV|1|ev?|ve?|vi?|yv|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+hulín|3||a|?|?|?|?|?|?|?|?|?|?|?|?
+hulEŇÁK|2|eňák|?|?|?|?|?|?|šči|?|?|?|?|?|?
+-
+kr|krEV|0|kr|krEV||
+||2|hulín|hulín|hulén je v okolí|mjnm
+||2|hul|hulEŇÁK||mjnm
 -
 -
 -
--
--
+||hulínské|||mjnm
 -
 -
 -
@@ -34,9 +45,12 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 spÁT|7|-1|át?|ím?|íš?|í?|íme?|íte?|í?|i?|ěme?|ěte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-sp|spÁT|sp|spÁT|
-|BÝT||BÝT|
+sp|spÁT|sp|spÁT||
+|BÝT||BÝT||
+||rozkvetala|||
 -
+hned|hneď||
+všude|všude||
 -
 -
 -

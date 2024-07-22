@@ -1,11 +1,12 @@
-TW v2
+TW v3
 tBukovec
 aGG
 d06.04.2023 9:25:43
-ikniha - České nářeční texty - Lamprecht, Arnošt 325
-c#Zdroje dat\n-Kellner, Adolf - Východolašská nářečí; str. 120\n-snčj\n\nZápis slov\n-ňo -> nio (hnízdo -> gniozdo)
+ipozor transkipce!\n-ňo -> nio (hnízdo -> gniozdo)
+bkniha|prijmeni=Kellner|jmeno=Adolf|nazev=Východolašská nářečí|misto=|vydavatel=|rok_vydani=|strany=120|issn=|odkaz=|zpracovano=|shortcut=\n\nsncj|i=Bukovec FM|zpracovano=\n\n\nkniha - České nářeční texty - Lamprecht, Arnošt 325
 u2
 g49.5566901,18.8212782
+rpl=Bukowiec,de=Bukowetz,nář=Bukovjec
 q0
 oSlezsko>Goralsko
 -
@@ -13,7 +14,7 @@ oSlezsko>Goralsko
 -
 -
 -
-tak jsem|1|tagech|
+tak jsem|1|tagech||
 -
 -
 hní|gni
@@ -25,6 +26,7 @@ les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 ženA|1|a?|y|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 las|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
@@ -32,14 +34,16 @@ hrad|3|?|u?|u|?|e?|ie|em?|y?|ů?|ům?|y?|y?|ach|y?
 městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 čṵunKO|3|ko|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 čṵunEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+agat|1|a|u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-hodin|ženA|0|godžin|ženA|
-les|les|0|las|las|
-strom|hrad|0|strum|hrad|
-hnízd|městO|0|gniozd|městO|
-angrešt||0|agrest ||
-člun|člunEK|0|čṵun|čṵunKO||čṵun|čṵunEK|
-jilm?||0|Břost||
+hodin|ženA|0|godžin|ženA||
+les|les|0|las|las||
+strom|hrad|0|strum|hrad||
+hnízd|městO|0|gniozd|městO||
+angrešt||0|agrest |||
+člun|člunEK|0|čṵun|čṵunKO|||čṵun|čṵunEK||
+jilm?||0|Břost|||
+akát|akát|0|agat|agat||sncj
 -
 -
 -
@@ -51,23 +55,23 @@ jilm?||0|Břost||
 -
 šejždž|2||i?|i?|?|?|i?|i?
 -
-šest|šest|šejždž|šejždž|
+šest|šest|šejždž|šejždž||
 -
 -
 -
 -
-ještě|ešče|
-tak|tak|
-třeba|třa|
-potom|potym|
-jednou|ros|
-již|juš|
+ještě|ešče||
+tak|tak||
+třeba|třa||
+potom|potym||
+jednou|ros||
+již|juš||
 -
-v||v|
-na||na|
-do||do|
-i||aji|
+v||v||
+na||na||
+do||do||
+i||aji||
 -
-protože|bo|
+protože|bo||
 -
 -

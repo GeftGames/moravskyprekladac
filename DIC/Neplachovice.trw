@@ -1,8 +1,8 @@
-TW v2
+TW v3
 tNeplachovice
 aGG
 d03.06.2023 11:17:34
-c#Zdroje dat\n-Základové dialektologie československé - Šembera, Alois Vojtěch; str. 119\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+Neplachovice+OP">sncj.ujc.cas.cz</a>
+bsncj|i=Neplachovice OP|zpracovano=\n\nkniha|prijmeni=Šembera|jmeno=Alois Vojtěch|nazev=Základové dialektologie československé|misto=|vydavatel=|rok_vydani=|strany=119|issn=|odkaz=|zpracovano=|shortcut=
 u2
 g49.9914631,17.8099005
 q0
@@ -12,9 +12,9 @@ oSlezsko>Opavsko
 -
 -
 -
-puchrovitostí napadené švestky|1|bouchorky|
-švestky napadené puchrovitostí|1|bouchorky|
-plody lopuchu|1|cyganske knefle|
+puchrovitostí napadené švestky|1|bouchorky||
+švestky napadené puchrovitostí|1|bouchorky||
+plody lopuchu|1|cyganske knefle||
 -
 -
 ne|ňe
@@ -28,20 +28,23 @@ bil|bił
 les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 sluncE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
+akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 les|3|?|a?|u?|?|e?|e|em?|y?|ů?|ům?|y?|y?|ích?|y?
 městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 sluncE|0|e?|e?|i?|o|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
+agac|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-les|les|0|leś|les|
-slunc|sluncE|0|słunc|sluncE|
-vesnice||0|dědina||
+les|les|0|leś|les||
+slunc|sluncE|0|słunc|sluncE||
+vesnice||0|dědina|||
+akát|akát|0|agac|agac||sncj
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 -
 zelenÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|||á?|ých?|ým?|á?|á?|ých?|ými?|||á?|é?|é?|ou?|á?|é?|ou?|||e|ých?|ým?|é?|é?|ých?|ými?|||ý?|ého?|ému?|ého?|ý?|ém?|ým?|||í?|ých?|ým?|é?|í?|ých?|ými?|||ý?|ého?|ému?|ý?|ý?|ém?|ým?|||é?|ých?|ým?|é?|é?|ých?|ými?||
 -
-plan|zelenÝ|płan|zelenÝ|
+plan|zelenÝ|płan|zelenÝ||
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
@@ -53,10 +56,10 @@ tEN|en?|eho|emu|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|emu|en?|-
 SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-|JÁ||JÁ|
-t|tEN|t|tEN|
-|SE||SE|
-|CO||CO|
+|JÁ||JÁ||
+t|tEN|t|tEN||
+|SE||SE||
+|CO||CO||
 -
 -
 -
@@ -65,18 +68,18 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|su|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-|BÝT||BÝT|
-||ňezrobił||
+|BÝT||BÝT||
+||ňezrobił|||
 -
-jednou|raz|
-jmenovitě|menoviće|
-dobře|dobře|
-aspoň|aspoň|
-jen,jenom|ene|
+jednou|raz||
+jmenovitě|menoviće||
+dobře|dobře||
+aspoň|aspoň||
+jen,jenom|ene||
 -
 -
-že|že|
-protože,neboť|bo|
-aby|aby|
+že|že||
+protože,neboť|bo||
+aby|aby||
 -
 -

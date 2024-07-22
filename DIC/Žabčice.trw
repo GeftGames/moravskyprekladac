@@ -1,52 +1,102 @@
-TW v1.0
+TW v3
 tŽabčice
 d11.07.2023 8:09:41
 ipotom mňe dala štvrtko kudlufa makuvaniho Žabčice BO
-c#Zdroje dat\n- https://sncj.ujc.cas.cz/entry/12905
+c# Popis\n-beli (bili)\n-vorali\n-hudili maso
+bkniha|prijmeni=|jmeno=|nazev=Hustopečsko|misto=|vydavatel=|rok_vydani=|strany=125,126,128|issn=|odkaz=https://archive.org/details/hustopecsko/page/125/mode/1up|zpracovano=|shortcut=hust\n\nweb|nazev=|nazev_webu=|odkaz=https://sncj.ujc.cas.cz/entry/12905|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=
+u1
 g49.0118331,16.6023397
+rnář=Žabčice
 q0
 -
 -
 -
 -
 -
-makové bábovky|kudlufa makuvaniho
+makové bábovky|1|kudlufa makuvaniho||
 -
 -
+o|vo
+u|hu
 -
+ou|ó
 -
 -
 pohádKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 les|3||a|u||e|e|em|y|ů|ům|y|y|ích|y
+masO|0|o|a|u|o|o|e,u|em|a||ům|a|a|ech|y
+vrbA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+vrchol|3||u|u||e|e,u|em|y|ů|ům|y|y|ech|y
+KALHOTY|1|-|-|-|-|-|-|-|kalhoty|kalhot|kalhotám|kalhoty|kalhoty|kalhotách|kalhotami
+GATĚ|1|-|-|-|-|-|-|-|gatě|gatí|gatím|gatě|gatě|gatích|gatěmi
 -
 pohádKA|1|ka?|ky?|ce?|kö|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 les|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
+masO|0|o?|a?|u?|o|o?|e?,u?|em?|a?|?|úm?|a?|a?|ech?|y?
+vrbA|1|a|y?|je?|u?|o?|je?|ou?|y?|?|ám?|y?|y?|ách?|ami?
+vršEK|3|ek|u?|u?|?|e?|e?,u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+GAŤE|1|-|-|-|-|-|-|-|gaťe?|gaťí?|gaťím?|gaťe|gaťe?|gaťích?|gaťemi?
 -
-čtvrt|pohádKA|0|štvrt|pohádKA
-bávov|pohádKA|0|kudluf|les
+čtvrt|pohádKA|0|štvrt|pohádKA||
+bávov|pohádKA|0|kudluf|les||
+mas|masO|0|mas|masO||hust
+||0|u Přísnoťic|||hust
+vrb|vrbA|0|vrb|vrbA||hust
+vrchol|vrchol|0|vrš|vršEK||
+||0|hantaléři|||hust
+|KALHOTY|0||GAŤE||hust
+|GATĚ|0||GAŤE||hust
+||0|z próťí|||hust
 -
 -
 -
+||přísnotšťí|||hust
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tY|y|[1],ebe|[1],obě|[1],ebe|y|obě|ebou
+SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 -
-JÁ|-1|já?|mě,(knižně) mne[2]?|mňe|mě,(knižně) mne[2]?|já?|mně?|mnou?
+JÁ|já?|mě,(knižně) mne[2]?|mňe|mě,(knižně) mne[2]?|já?|mně?|mnou?
+TY|ty?|ťe[1]?,tebe?|ťi[1]?,tobje?|ťi,tebe?|ty?|tobje?|tebou?
+SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
+ONA|ona?|jí?,ňí*?|jí,ňí*?|ji?,ňi*?|-|ňí*?|jí?,ňí*?
 -
-JÁ|JÁ
+|JÁ||JÁ||
+t|tY||TY||
+|SE||SE||hust
+|ONA||ONA||hust
 -
 -
 -
 -
 dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+uDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|zen|zen|zena|zeno|zeni|zeny|zeny|zena
+stÁT|7|-1|át|ojím|ojíš|ojí|ojíme|ojíte|ojí|ůj|ůjme|ůjte|ál|ál|ála|álo|áli|ály|ály|ála
+kroutIT|3|-1|it|ím|íš|í|íme|íte|í|ť|ťme|ťte
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 -
 dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|beli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+huĎIT|15|-1|ďit?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďili|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
+stÁT|7|-1|át?|ojím?|ojíš?|ojí|ojíme?|ojíte?|ojí?|új?|újme?|újte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
+krouťIT|1|-1|it|?|?|í|?|?|?
+mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
-d|dÁT|dÁT
+d|dÁT|d|dÁT||
+|BÝT||BÝT||hust
+u|uDIT|hu|huĎIT||
+st|stÁT|st|stÁT||hust
+krout|kroutIT|króť|krouťIT||
+m|mÍT|m|mÍT||hust
 -
-potom
+potom|potom||
 -
+u||u||hust
+z||z||hust
 -
 -
 -

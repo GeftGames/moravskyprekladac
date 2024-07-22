@@ -1,23 +1,25 @@
-TW v2
+TW v3
 tDub nad Moravou
 aGG
 d06.08.2023 13:28:00
 iďáh ví, co to belo za jídlo Dub nad Moravou OL – nikdo neví\nale u ďácha, još so zasék s ceste Dub nad Moravou OL\nale je toho očeňi na ďáche! Dub nad Moravou OL\ndo ďáchanta Dub nad Moravou OL – zaklení
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Dub+nad+Moravou+OL%22">SNČJ</a>\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/70/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n-V Dubě a přifařených Nenakonicích, pak ve Štítovicích t v infinitivě měkne: vołať, běžeť, młátiť kdežto v sousedních Vrbátkách už je tvrdé t.\n-Tak hanácké nářečí obyvatel Dubu se odlišovalo od hanáčtiny a není proto divu, že "praví" Hanáci se jim posmívali: Aha, te se z Dobo, co tam tak roztahojóho hobo! (hanácký kalendář, 1998, Společnost přátel vesnice a malého města v Olomouci) \n-V Pivíně, Štítovicích, Bedihošti, Dubě, Nenakonicích a v Senici je zástupné e (= ý, í) vyšší, skoro kojetské: léčet, čéhat, křéž, zavołé, stréc, bék, z té biłé hôse.\n-Ve Výšovicích, Vřesovicích, Stítovicích, v Dubě a Nenakovicích je ó (= ú) hodně vysoké = 6 : za našó zahradó.
+u1
 g49.4824789,17.2769199
 rnář=Dob
 q0
-oHaná
+oHaná>Moravjácko
 -
 -
 -
 -
+ale dopekla|1|ale u ďácha||sncj
 -
-nikdo neví|1|ďáh ví|
-z cesty|1|s ceste|
-jsem zase|1|so zasék|
-velmi mnoho|1|na ďáche|
-sakraporte|1|do ďáchanta|?
+nikdo neví|1|ďáh ví||
+z cesty|1|s ceste||
+jsem zase|1|so zasék||
+velmi mnoho|1|na ďáche||
+sakraporte|1|do ďáchanta|?|
 -
 -
 -
@@ -33,10 +35,10 @@ cestA|0|a?|e|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 jídLO|0|lo?|la?|lu?|lo|lo?|lu?,le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
 očeňi|0|?|?|?||?|?|m?|?|?|m?|?|?|ch?|mi?
 -
-ďáb|ďábEL|0|ďá|ďáCH|
-cest|cestA|0|cest|cestA|
-jíd|jídLO|0|jíd|jídLO|
-učení|učení|0|očeňi|očeňi|
+ďáb|ďábEL|0|ďá|ďáCH||
+cest|cestA|0|cest|cestA||sncj
+jíd|jídLO|0|jíd|jídLO||
+učení|učení|0|očeňi|očeňi||
 -
 -
 -
@@ -47,8 +49,8 @@ CO|co|čeho|čemu|co,-č|-|čem|čím
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 CO|co?|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-t|tEN||tEN|
-|CO||CO|
+t|tEN||tEN||
+|CO||CO||
 -
 -
 -
@@ -59,18 +61,18 @@ vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ě
 BÝT|247|-1|být?|so,jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|belo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 vĚĎET|7|-1|ěďet?|ím?|íš?|í|íme?|íte?|ěďí?|ěz?|ězme?|ězte?|ěďel?|ěďel?|ěďela?|ěďelo?|ěďeli?|ěďely?|ěďely?|ěďela?
 -
-|BÝT||BÝT|
-v|vĚDĚT|v|vĚĎET|
+|BÝT||BÝT||
+v|vĚDĚT|v|vĚĎET||
 -
-již|još|
-zase|zasék|
+již|još||sncj
+zase|zasék||sncj
 -
-za||za|
-do||do|
-u||u|
-na||na|
-z||s|
+za||za||
+do||do||
+u||u||sncj
+na||na||
+z||s||sncj
 -
-ale|ale|
+ale|ale||sncj
 -
 -

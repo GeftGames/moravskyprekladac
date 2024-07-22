@@ -1,9 +1,12 @@
-TW v2
+TW v3
 tMorkovice
 aGG
 d14.04.2023 17:48:18
 c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/63/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n- i v slabikách: li, ři, zi, si, ci, zi, ši, či v Morkovicích je čisté : list, peřina, zima, siła, cigán, žito, šidit, atd. vyjmouc : ceboľa;\n- í v týchž slabikách přechází v é v Morkovicích, nebo, v é v Počenicích jenom ve slovech: psék, vozék, nožéček, šépek \n-y je v Morkovicích čisté: ryby, hrušky, muchy\n-ý se mění v Morkovicích v é . bék, stréc, dobré
+bkniha|autor=Ladislav Hosák Rudolf Šrámek|nazev=Místní jména na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=|shortcut=mjnm\n\nkniha|prijmeni=|jmeno=|nazev=Dialektologie moravska : prvni dil nareci slovenske, dolske, valasske a lasske|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor00bart/page/309/mode/1up|zpracovano=|shortcut=bar1
+u1
 g49.2472682,17.2059437
+rnář=Morkovice
 q0
 oHaná
 -
@@ -28,6 +31,8 @@ hrušKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 mOUCHA|1|oucha|ouchy|ouše|ouchu|oucho|ouše|ouchou|ouchy|uch|ouchám|ouchy|ouchy|ouchách|ouchami
 býK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 strýc|2||e|i,ovi|e|i,e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
+MorkovicE|-1|e||ím|e|e|ích|emi|-|-|-|-|-|-|-
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 list|3||u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 peřiNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
@@ -41,22 +46,28 @@ hrušKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky|ek?|kám?|ky?|ky?|kách?|kami?
 mOUCHA|1|oucha?|ouchy?|ouše?|ouchu?|oucho?|ouše?|ouchou?|uchy|uch?|ouchám?|ouchy?|ouchy?|ouchách?|ouchami?
 béK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 stréc|2||e?|i?,ovi?|e?|i?,e?|i?,ovi?|em?|i?,ové?|ú?|úm?|e?|i?,ové?|ích?|i?
+MorkovicE|-1|e||ím?|e?|e?|ích|ama|-|-|-|-|-|-|-
+zemčata|1|?|u?|u?|?|e?|u?|em?|a|ú?|úm?|y?|y?|ech?|y?
 -
-list|list|0|list|list|
-peřin|peřinA|0|peři|peřiNA|
-zim|zimA|0|zim|zimA|
-s|sÍLA|0|s|sÍLA|
-cikán|cikán|0|cigá|cigáN|
-žit?pšenice|žitO|0|žit|žitO|
-cibul|cibulE|0|cebo|cibulE|
-ryb|rybA|0|ryb|rybA|
-hruš|hrušKA|0|hruš|hrušKA|
-m|mOUCHA|0|m|mOUCHA|
-bý|býK|0|bé|béK|
-strýc|strýc|0|stréc|stréc|
+list|list|0|list|list||
+peřin|peřinA|0|peři|peřiNA||
+zim|zimA|0|zim|zimA||
+s|sÍLA|0|s|sÍLA||
+cikán|cikán|0|cigá|cigáN||
+žit?pšenice|žitO|0|žit|žitO||
+cibul|cibulE|0|cebo|cibulE||
+ryb|rybA|0|ryb|rybA||
+hruš|hrušKA|0|hruš|hrušKA||
+m|mOUCHA|0|m|mOUCHA||
+bý|býK|0|bé|béK||
+strýc|strýc|0|stréc|stréc||
+morkovic|MorkovicE|2|morkovic|MorkovicE||mjnm
+||2|morkovčák|||mjnm
+brambor|brambor|0|zemčat|zemčata||
 -
 -
 -
+||morkovské|||mjnm
 -
 -
 -
@@ -68,7 +79,7 @@ strýc|strýc|0|stréc|stréc|
 -
 šiĎIT|15|-1|ďit?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|ďí?|ď?|ďme?|ďte?|ďil?|ďil?|ďila?|ďilo?|ďili?|ďily?|ďily?|ďila?|zen?|zen?|zena?|zeno?|zeňi?|zeny?|zeny?|zena?
 -
-ši|šiDIT|ši|šiĎIT|
+ši|šiDIT|ši|šiĎIT||
 -
 -
 -

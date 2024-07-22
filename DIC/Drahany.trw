@@ -1,8 +1,10 @@
-TW v2
+TW v3
 tDrahany
 aGG
 d09.09.2023 20:18:16
 c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/99/mode/2up#page=99">Dialektologie moravská</a>
+bkniha|prijmeni=|jmeno=|nazev=Dialektologie moravska : prvni dil nareci slovenske, dolske, valasske a lasske|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor00bart/page/309/mode/1up|zpracovano=|shortcut=bar1
+u1
 g49.4338253,16.8980913
 rnář=Drahanê
 q0
@@ -17,8 +19,11 @@ oDrahansko
 -
 -
 -
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
+krompel|1|?|u?|u?|?|e?|u?|em?|e|ú?|úm?|y?|y?|ech?|y?
 -
+brambor|brambor|0|krompel|krompel||
 -
 -
 -
@@ -27,7 +32,7 @@ ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (po
 -
 ON|on?|ho*?,jej?,něj**jeho?,něho**?|mu*?,jemu?,němu**?|ho,jej?,něj**jeho?,něho** (pouze životný)?|-|něm**?|jím?,ním*?
 -
-|ON||ON|
+|ON||ON||
 -
 -
 -
@@ -38,10 +43,10 @@ VÉST|31|-1|vést|vedu|vedeš|vede|vedeme|vedete|vedou|povedu,budu vést|povede�
 NÉST|31|-1|nést?|nesu?|neseš?|nese?|nesemê|nesete?|nesou?|ponesu,budu nést?|poneseš,budeš nést?|ponese,bude nést?|poneseme,budeme nést?|ponesete,budete nést?|ponesou,budou nést?|nes?|nesme?|neste?|nesl?|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseni?|neseny?|neseny?|nesena?
 VÉST|31|-1|vést?|vedu?|vedeš?|vede?|vedeme|vedete?|vedou?|povedu,budu vést?|povedeš,budeš vést?|povede,bude vést?|povedeme,budeme vést?|povedete,budete vést?|povedou,budou vést?|veď?|veďme?|veďte?|vedl?|vedl?|vedla?|vedlo?|vedli?|vedly?|vedly?|vedla?|veden?|veden?|vedena?|vedeno?|vedeni?|vedeny?|vedeny?|vedena?
 -
-|NÉST||NÉST|
-|VÉST||VÉST|
+|NÉST||NÉST||
+|VÉST||VÉST||
 -
-kde|hde|
+kde|hde||
 -
 -
 -

@@ -1,9 +1,9 @@
-TW v2
+TW v3
 tSlatina
 aGG
 d25.03.2023 20:29:07
 i1: ta Eva mňela još tře ďeťi. Laďika, to, co je tam f tim, Evo̮...\n\n2: Evo̮ (1).\n\n1: a Aňičko̮, ne? ne, hinak se menovalo, Evo, a ešče jedno, bil to Milo.\n\n2: Milo.\n\n1: ona ho̮vaře̮la hrnec, štiřlitrové hrnedz bramborové polífke̮ f poledne, pak jim dala večír takovó misko̮, ale f tem mohla žička stát. ešťe jim dala, nadudla do toho chleba, a voňi..., a teť té Zdeňe Novákové… oňi si stóple̮ k té stole̮čce (smích) a be̮lo to jak vobrázek a jedle̮ [to jidilko]. (hmm.) [a mňele̮]...\n\n2: [fšeci] s té jedné miske̮. (smích) (aha.)\n\n1: no, aš to sňedle̮, dostale̮ do takoviho hrňička nadojeni vot kráve̮ mlíko, to ve̮pile̮ a šle̮ spat. (hmm.) že? a Marta poá:"tak to me̮sim be̮ch nejedla."\n\nOrtografický přepis (rovina ort):\n1: a ta Eva měla už .. tře děti .. Ladika .. to . co je tam v tým . Evo +\n\n2: Evo (1) .\n\n1: + a Aničko . ne? . ne . jinak se jmenovalo . Evo a ještě jedno . byl to .. Milo\n\n2: Milo .\n\n1: ona uvařila hrnec . čtyřlitrové hrnec bramborové polívke v poledne .. pak jim dala večír takovó misko .. ale v tem mohla lžička stát . ještě jim dala nadudla do toho chleba .. a voni . teď té Zdeně Novákové .. oni si stoupli k té stoličce (smích) .. a bylo to jak vobrázek a jedle [to . jídílko] . (hmm) [a měle] -\n\n2: [všeci] z té jedné miske (smích) (aha)\n\n1: až to snědle . dostale do takovýho hrníčka nadojený vod krávy mlíko .. to vypili a šle spát (hmm) že? a Marta povídá . tak to myslím bych nejedla .\n\n Transkripce v korpusu DIALEKT\nRozbor ukázky:\nHláskosloví\nkrácení í > i: Laďika, do takoviho hrňička nadojeni\n\nzachování tzv. supina spat (infinitiv spát): šle̮ spat\n\nzachování skupiny šč namísto šť: ešče jedno\n\nzměna é > í (úžení): polífke̮, mlíko\n\nsplynutí y/ý s i/í: bil\n\nzměna y > e (v jistém rozsahu též i > e), v centrální podskupině v e̮: ho̮vaře̮la, polífke̮, si stóple̮\n\nzměna ý (částečně í) > ej > é: štiřlitrové hrnedz\n\nzměna ú > ou > ó: si stóple̮\n\nzměna u > o, v centrální podskupině o̮: Evo̮ a Aňičko̮, ho̮vaře̮la, misko̮\n\nprotetické v-: voňi, vobrázek, vot kráve̮\n\nprotetické h-: hinak ,jinak’; ho̮vaře̮la ,uvařila’\n\n Archiv nářečních hlásek ČJ\nTvarosloví\ntvary ukazovacího zájmena ten analogicky vyrovnány podle zájmenného skloňování měkkého typu náš, 6. pád j. č. ukazovacího zájmena ten ve tvarech: f tim, f tem\n\nSlovní zásoba\njoš ,teď’\n\nnadudnót ,dát, naložit’\n\nžička ‚lžíce‘\n\nJiné\nNa ortografické rovině se používá pauzová interpunkce (pauzy .. / předěly .). Pasáže v hranatých závorkách [to jidilko] značí překrývání promluv mluvčích. Barevně odlišené pasáže v kulatých závorkách (hmm) a (aha) jsou vstupy explorátora (osoby provádějící výzkum).\n\nPoznámka\nNářeční ukázky jsou přepsány podle skutečné výslovnosti mluvčích a jsou doklady úzu, v němž mohou mít jednotlivé nářeční jevy rozkolísanou podobu (n\n\nhttps://korpus.cz/mapka/#\n\n\např. Evo̮/Evo, voňi/oňi, ešče/ešťe).
-c#Zdroje dat\n-https://korpus.cz/mapka/#
+bsncj|i=Slatina ZN|zpracovano=\n\nweb|nazev=|nazev_webu=|odkaz=-https://korpus.cz/mapka/#|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=
 u1
 g49.6297833,16.6072662
 x3
@@ -14,17 +14,17 @@ oMoravské Horácko>Malá Haná
 -
 -
 -
-tři děťi|1|tře ďeťi|
-v tom|1|f tim||f tem|
-čtyřlitrový|1|štiřlitrové|
-v poledne|1|f poledne|
-ale v tom|1|ale f tem|
-do toho|1|do toho|
-vše|1|fše|
-z té jedné|1|s té jedné|
+tři děťi|1|tře ďeťi||
+v tom|1|f tim|||f tem||
+čtyřlitrový|1|štiřlitrové||
+v poledne|1|f poledne||
+ale v tom|1|ale f tem||
+do toho|1|do toho||
+vše|1|fše||
+z té jedné|1|s té jedné||
 -
-říká|1|poá|
-nadojeno|1|nadojeni|
+říká|1|poá||
+nadojeno|1|nadojeni||
 -
 uv|ho̮v
 uva|hôva
@@ -80,6 +80,7 @@ hrníčEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 krÁVA|1|áva|ávy|ávě|ávu|ávo|ávě|ávou|ávy|av|avám,ávám|ávy|ávy|avách,ávách|avami,ávami
 mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
 martA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 evA|1|a|y?|ě?|ô|o|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 aňičKA|1|ka?|ky?|ce?|kô|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
@@ -98,35 +99,37 @@ hrňičEK|3|ek?|ka|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 krÁVA|1|áva?|ávê|ávě?|ávu?|ávo?|ávě?|ávou?|ávy?|av?|avám?,ávám?|ávy?|ávy?|avách?,ávách?|avami?,ávami?
 mlíKO|0|ko?|ka?|ku?|ko|ko?|ku?,ce?|kem?|ka?|k?|kúm?|ka?|ka?|cích?,kách?|ky?
 marTA|1|ta|ty?|ťe?|tu?|to?|ťe?|tou?|ty?|t?|tám?|ty?|ty?|tách?|tami?
+hagác|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-||0|Laďika||
-||0|Milo||
-||0|vobrázek ||
-||0|nadojeni  4p||
-anič|aničKA|0|aňič|aňičKA|
-ev|evA|2|ev|evA|
-hrn|hrnEC|0|hrn|hrnEC|
-hrneč|hrníčEK|0|hrňič|hrňičEK|
-hrňíč|hrníčEK|0|hrňič|hrňičEK|
-chl|chlÉB|0|chl|chlÉB|
-kr|krÁVA|0|kr|krÁVA|
-lž|lžÍCE|0|žič|žičKA|
-mart|martA|2|mar|marTA|
-mis|misKA|0|mis|misKA|
-mlé|mléKO|0|mlí|mlíKO|
-novákov|novákovÁ|2|novákov|novákovÁ|
-poledn|polednE|0|poled|poledNE|
-polév|polévKA|0|polí|políVKA|
-stolič|stoličKA|0|stolêč|stolêčKA|
-večer|večer|0|več|večER|
-zden|zdenA|2|zde|zdeNA|
+||0|Laďika|||
+||0|Milo|||
+||0|vobrázek |||
+||0|nadojeni  4p|||
+anič|aničKA|0|aňič|aňičKA||
+ev|evA|2|ev|evA||
+hrn|hrnEC|0|hrn|hrnEC||
+hrneč|hrníčEK|0|hrňič|hrňičEK||
+hrňíč|hrníčEK|0|hrňič|hrňičEK||
+chl|chlÉB|0|chl|chlÉB||
+kr|krÁVA|0|kr|krÁVA||
+lž|lžÍCE|0|žič|žičKA||
+mart|martA|2|mar|marTA||
+mis|misKA|0|mis|misKA||
+mlé|mléKO|0|mlí|mlíKO||
+novákov|novákovÁ|2|novákov|novákovÁ||
+poledn|polednE|0|poled|poledNE||
+polév|polévKA|0|polí|políVKA||
+stolič|stoličKA|0|stolêč|stolêčKA||
+večer|večer|0|več|večER||
+zden|zdenA|2|zde|zdeNA||
+akát|akát|0|hagác|hagác||
 -
 bramborovÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 -
 bramborovÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 -
-bramborov|bramborovÝ|bramborov|bramborovÝ|
-čtyřlitrov|bramborovÝ|štiřlitrov|bramborovÝ|
+bramborov|bramborovÝ|bramborov|bramborovÝ||
+čtyřlitrov|bramborovÝ|štiřlitrov|bramborovÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
@@ -147,14 +150,14 @@ takovÝ|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|�
 SE|-|sebe?|si,sobje?|se?,sebe?|-|sobje?|sebou?
 fšECHEN|echen?|eho?|emu?|eho?|echen?|em?|ím?|eci|ech?|em?|echny?|ichňi?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echno?|eho?|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
 -
-t|tEN||TEN|
-|CO||CO|
-|SE||SE|
-|ONA||ONA|
-|ONI||OŇI|
-takov|takovÝ|takov|takovÝ|
-|SE||SE|
-vš|všECHEN|fš|fšECHEN|
+t|tEN||TEN||
+|CO||CO||
+|SE||SE||
+|ONA||ONA||
+|ONI||OŇI||
+takov|takovÝ|takov|takovÝ||
+|SE||SE||
+vš|všECHEN|fš|fšECHEN||
 -
 třI|4|i|í,třech[1]|em|i|i|ech|emi|||||||||||||||||||||||||||||||||||||||||||||||||
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
@@ -162,8 +165,8 @@ jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|no
 třE|4|i?|í,třech[1]?|em?|e|i?|ech?|emi?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?|?
 jedEN|4|en?|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né|né?|no|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 -
-tř|třI|tř|třE|
-jed|jedEN|jed|jedEN|
+tř|třI|tř|třE||
+jed|jedEN|jed|jedEN||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
@@ -197,46 +200,46 @@ spÁT|7|-1|at|ím?|íš?|í?|íme?|íte?|í?|i?|jeme?|jete?|al?|al?|ala?|alo?|al
 poVÍDAT|7|-1|vídat?|vídám?|vídáš?|á|vídáme?|vídáte?|vídají?|vídej?|vídejme?|vídejte?|vídal?|vídal?|vídala?|vídalo?|vídali?|vídaly?|vídaly?|vídala?
 mêSLET|15|-1|slet?|sim|slíš?|slí?|slíme?|slíte?|slí?,myslejí?|sli?|sleme?|slete?|slel?|slel?|slela?|slelo?|sleli?|slely?|slely?|slela?|šlen?|šlen?|šlena?|šleno?|šleňi?|šleny?|šleny?|šlena?
 -
-|BÝT||BÝT|
-naložit||nadudla||
-|JÍT||JÍT|
-d|dÁT|d|dÁT|
-dosta|dostaT|dosta|dostaT|
-j|jÍST|j|jÍST|
-jmen|jmenOVAT|men|menOVAT|
-m|mÍT|m|mÍT|
-m|mOCT|m|mOCT|
-naložit||nadudnót||
-sn|snÍST|sň|sňÍST|
-st|stÁT|st|stÁT|
-stoupnout||stóple̮ ||
-uvař|uvařIT|hôvař|uvařIT|
-vyp|vypÍT|vêp|vypÍT|
-sp|spÁT|sp|spÁT|
-povíd|povídAT|po|povídAT|
-my|mySLET|mê|mêSLET|
-nej|jÍST|nej|jÍST|
+|BÝT||BÝT||
+naložit||nadudla|||
+|JÍT||JÍT||
+d|dÁT|d|dÁT||
+dosta|dostaT|dosta|dostaT||
+j|jÍST|j|jÍST||
+jmen|jmenOVAT|men|menOVAT||
+m|mÍT|m|mÍT||
+m|mOCT|m|mOCT||
+naložit||nadudnót|||
+sn|snÍST|sň|sňÍST||
+st|stÁT|st|stÁT||
+stoupnout||stóple̮ |||
+uvař|uvařIT|hôvař|uvařIT||
+vyp|vypÍT|vêp|vypÍT||
+sp|spÁT|sp|spÁT||
+povíd|povídAT|po|povídAT||
+my|mySLET|mê|mêSLET||
+nej|jÍST|nej|jÍST||
 -
-až|aš|
-ještě|ešče||ešťe|nová náplava spisovné češtiny
-jinak|hinak|
-již,už|još|
-pak|pak|
-tam|tam|
-teď|teť|
-večer|večír|
-tak|tak|
+až|aš||
+ještě|ešče|||ešťe|nová náplava spisovné češtiny|
+jinak|hinak||
+již,už|još||
+pak|pak||
+tam|tam||
+teď|teť||
+večer|večír||
+tak|tak||
 -
-od||vot|
-v||f|
-z||s|
-do||do|
+od||vot||
+v||f||
+z||s||
+do||do||
 -
-vždyť|teť|
-ale|ale|
-a|a|
-jak|jak|
-že|že|
+vždyť|teť||
+ale|ale||
+a|a||
+jak|jak||
+že|že||
 -
-ne|ne|
+ne|ne||
 -

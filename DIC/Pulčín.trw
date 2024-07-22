@@ -1,17 +1,18 @@
-TW v2
+TW v3
 tPulčín
 aGG
 d25.05.2024 9:31:27
-c#Zdroje dat\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715
+bweb|nazev=|nazev_webu=|odkaz=http://nase-rec.ujc.cas.cz/archiv.php?art=4715|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor00bart/page/325/mode/1up|zpracovano=|shortcut=bar1
 g49.2204116,18.0779014
 q0
 oValašsko
 -
 -
 -
-Dají-li mi gořalky, teprve tehdy budu jíst.|1|Napřeď ňe dajú piď gořalky, potem budu jesť.|
+Dají-li mi gořalky, teprve tehdy budu jíst.|1|Napřeď ňe dajú piď gořalky, potem budu jesť.||
 -
 -
+stlučené máslo|1|výťisk||bar1
 -
 -
 -
@@ -22,7 +23,7 @@ kořalKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 gořalKA|1|ka?|ky|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-kořal|kořalKA|0|gořal|gořalKA|
+kořal|kořalKA|0|gořal|gořalKA||
 -
 -
 -
@@ -31,7 +32,7 @@ JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 -
 JÁ|já?|mě?,(kňižňe) mne[2]?|ňe|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 -
-|JÁ||JÁ|
+|JÁ||JÁ||
 -
 -
 -
@@ -46,13 +47,13 @@ pÍT|15|-1|iď|iju?,piji?|iješ?|ije?|ijeme?|ijete?|ijou?,pijí?|ij?|ijme?|ijte?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 jÍST|15|-1|esť|ím?|íš?|í?|íme?|íte?|eďí?|ez?|ezme?|ezte?|edl?|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeňi?|edeny?|edeny?|edena?
 -
-d|dÁT|d|dÁT|
-p|pÍT|p|pÍT|
-|BÝT||BÝT|
-j|jÍST|j|jÍST|
+d|dÁT|d|dÁT||
+p|pÍT|p|pÍT||
+|BÝT||BÝT||
+j|jÍST|j|jÍST||
 -
-napřed|napřeď|
-potom|potem|
+napřed|napřeď||
+potom|potem||
 -
 -
 -

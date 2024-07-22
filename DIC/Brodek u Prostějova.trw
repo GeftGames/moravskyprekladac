@@ -1,18 +1,24 @@
-TW v2
+TW v3
 tBrodek u Prostějova
 aGG
 d22.01.2024 21:58:53
-istréc se pozďéš přesťehoval do Viškova blésko g autobusáku Brodek u Prostějova PV
+istréc se pozďéš přesťehoval do Viškova blésko g autobusáku Brodek u Prostějova PV\n přestat líbat; dokončit líbání: dolóbali se pod žudrem a šli dom Brodek u Prostějova PV
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/70/mode/1up">Dialektologie moravská</a>\n\n#Popis nářečí\n-V Stařechovicích, Čelechovicích, Kostelci, Bílovicích, Lešanech, Ohrozimi, Plumlově, Krumsíně, Uherčících, Dědkovicích, Brodku, Zelči, jakož i v sousedních západních osadách tohoto podřečí je přídechové v : voko, voves, vodehnal. \n-V Plumlově, v Kelčicích, Vřesovicích, Kobeřicích, Hradčanech, v Brodku a v Želčí jest jedno l, střední.\n-V Brodku a Želči je zástupné é a ó snížené, hrdelné: stréc, dobřé, omé, zakré.
+u1
 g49.3701789,17.0904801
 q0
-oHaná
+oHaná>Blaťácko
 -
 -
 -
 -
+tak viděl jsi tam tu úrodu|1|tož viďełs tam órodo||sncj
 -
-k autobusovému nádraží|1|g autobusáku|
+k autobusovému nádraží|1|g autobusáku||
+přestali s líbáním|1|dolóbali||
+jak to s tím líbání skončili|1|jak se dolóbali||
+viděl jsi|1|viďels||sncj
+k čertu|1|g ďácho|zakletí|sncj
 -
 -
 -
@@ -24,25 +30,36 @@ agent|2||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
 starostA|2|a|y|ovi|u|o|ovi|ou|ové|ů|ům|y|ové|ech|y
 ovES|1|es|sa|su|es|se|su,se|sem|sy|sů|sům|sy|sy|sech|sy
 oKO|0|ko|ka|ku|ko|ko|ku|kem|či[1]|čí|čím|či|či|čích|čima*
+střeCHA|1|cha|chy|še|chu|cho|še|chou|chy|ch|chám|chy|chy|chách|chami
+anténA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+obraz|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
 -
 stréc|2||e?|i?,ovi?|e?|i?,e?|i?,ovi?|em?|i?,ové?|ú?|úm?|e?|i?,ové?|ích?|i?
 agenT|2|t|ta?|tu?,tovi?|ta?|te?|tu?,tovi?|tem?|ťi?|tú?|túm?|ty?|ťi?|tech?|ty?
 starostA|2|a?|y?|ovi?|u?|o?|ovi?|ó|ové?|ú?|úm?|y?|ové?|ech?|y?
 vovES|1|es|sa?|su?|es?|se?|su?,se?|sem?|sy?|sú?|súm?|sy?|sy?|sech?|sy?
 voKO|0|ko|ka?|ku?|ko?|ko?|ku?|kem?|či[1]?|čí?|čím?|či?|či?|čích?|čima*?
+střeCHA|1|cha?|chy?|še?|chu|cho?|še?|chou?|chy?|ch?|chám?|chy?|chy?|chách?|chami?
+antéNA|1|na?|ny?|ňe?|nu|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
+vobraZ|3|z?|zu?|zu?|s|ze?|zu?,ze?|zem?|zy?|zú?|zúm?|zy?|zy?|zech?|zy?
 -
-strýc|strýc|0|stréc|stréc|
-||0|do Viškova||
-agent|agent|0|agen|agenT|
-starost|starostA|0|starost|starostA|
-ov|ovES|0|vov|vovES|
-o|oKO|0|vo|voKO|
+strýc|strýc|0|stréc|stréc||
+||0|do Viškova|||
+agent|agent|0|agen|agenT||
+starost|starostA|0|starost|starostA||
+ov|ovES|0|vov|vovES||
+o|oKO|0|vo|voKO||
+stře|střeCHA|0|stře|střeCHA||
+antén|anténA|0|anté|antéNA||
+obraz|obraz|0|vobra|vobraZ||
+||0|žudrem|||
+||0|órodo|||sncj
 -
 komunistiCKÝ|-1|cké|ckého|ckému|cké|cké|ckém|ckým|-|-|cká|ckých|ckým|cká|cká|ckých|ckými|-|-|cká|cké|cké|ckou|cká|cké|ckou|-|-|cké|ckých|ckým|cké|cké|ckých|ckými|-|-|cký|ckého|ckému|ckého|cký|ckém|ckým|-|-|čtí|ckých|ckým|cké|čtí|ckých|ckými|-|-|cký|ckého|ckému|cký|cký|ckém|ckým|-|-|cké|ckých|ckým|cké|cké|ckých|ckými|-|-
 -
 komuňisťiCKÝ|-1|cké?|ckého?|ckému?|cké?|cké?|ckém?|ckým?|-|-|cká?|ckých?|ckým?|cká?|cká?|ckých?|ckými?|-|-|cká?|cké?|cké?|ckou?|cká?|cké?|ckou?|-|-|cké?|ckých?|ckým?|cké?|cké?|ckých?|ckými?|-|-|cké|ckého?|ckému?|ckého?|cký?|ckém?|ckým?|-|-|čťí?|ckých?|ckým?|cké?|čťí?|ckých?|ckými?|-|-|cký?|ckého?|ckému?|cký?|cký?|ckém?|ckým?|-|-|cké?|ckých?|ckým?|cké?|cké?|ckých?|ckými?|-|-
 -
-komunisti|komunistiCKÝ|komunisti|komuňisťiCKÝ|
+komunisti|komunistiCKÝ|komunisti|komuňisťiCKÝ||
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
@@ -50,8 +67,8 @@ tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ě
 SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 -
-|SE||SE|
-t|tEN||TEN|
+|SE||SE||
+t|tEN||TEN||
 -
 -
 -
@@ -59,23 +76,38 @@ t|tEN||TEN|
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 stÁT|7|-1|át|ojím|ojíš|ojí|ojíme|ojíte|ojí|ůj|ůjme|ůjte|ál|ál|ála|álo|áli|ály|ály|ála
 stÁT_SE|22|-1|át_se|anu|aneš|ane|aneme|anete|anou|aň|aňme|aňte|al|al|ala|alo|ali|aly|aly|ala
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bil|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 stÁT|7|-1|át?|ojím?|ojíš?|ojí?|ojíme?|ojíte?|ojí?|új?|újme?|újte?|ál?|ál?|ála?|álo?|áli?|ály?|ály?|ála?
 stÁT_SE|22|-1|át_se?|anu?|aneš?|ane?|aneme?|anete?|anou?|aň?|aňme?|aňte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?
+musET|5|-1|et?|im|íš?|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
+NEJÍT|31|-1|nejít?|nejdu?|nejdeš?|nende|nejdeme?|nejdete?|nejdou?|nepújdu?|nepújdeš?|nepújde?|nepújdeme?|nepújdete?|nepújdou?|nepojď?,nejďi?|nepojďme?,nejďeme?|nepojďte?,nejďete?|nešel?|nešel?|nešla?|nešlo?|nešli?|nešly?|nešly?|nešla?|nejit?|nejit?|nejita?|nejito?|nejiťi?|nejity?|nejity?|nejita?
 -
-||přesťehoval||
-|BÝT||BÝT|
-st|stÁT|st|stÁT|
-st|stÁT_SE|st|stÁT_SE|
-||vodehnal||
+||přesťehoval|||
+|BÝT||BÝT||
+st|stÁT|st|stÁT||
+st|stÁT_SE|st|stÁT_SE||
+||vodehnal|||
+mus|musET|mus|musET||
+||vilist |||
+|JÍT||JÍT||
+ne|JÍT||NEJÍT||
+||dolóbali|||
 -
-později|pozďéš|
-blízko|blésko|
-dřív,dříve|dřif|
+později|pozďéš||
+blízko|blésko||
+dřív,dříve|dřif||
+domů|dom||
+tam|tam||sncj
 -
-do||do|
-k||g|
+do||do||
+k||g||
+na||na||
+pod||pod||
 -
+a|a||
 -
 -

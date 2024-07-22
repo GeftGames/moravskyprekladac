@@ -1,17 +1,21 @@
-TW v2
+TW v3
 tPočenice
 aGG
 d06.02.2024 12:42:40
 c#Zdroje dat\n-<a href="https://archive.org/details/dialektologiemor02bartuoft/page/63/mode/1up">Dialektologie moravská</a>\n-<a href="https://archive.org/details/lidnrodsebran02bartuoft/page/307/mode/1up">Lid a národ; sebrané rozpravy národopisné a literární</a>\n\n#Popis nářečí\n-v Počenicích v některých slabikách malinko se ztemňuje v ê: perêna, žêd, hľêna, ešľê vedle: zima, síła.\n-í v é v Počenicích jenom ve slovech: psék, vozék, nožéček, šépek\n-y v Počenicích malinko ztemněno v ê : rêbê (téměř = ryby), muchê, słêšim).\n-ý v Podenicích v é: bék, stréc, dobré.\n-ů v Počenicích se zdlouha vyslovuje: růža, kůň.\n-/nemajó tam kostelA/
+bkniha|prijmeni=|jmeno=|nazev=Dialektologie moravska : prvni dil nareci slovenske, dolske, valasske a lasske|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor00bart/page/309/mode/1up|zpracovano=|shortcut=bar1
+u1
 sPočenice-Tetětice
 g49.2716444,17.2283948
+rnář=Počeňice
 q0
+oHaná
 -
 -
 -
 -
 -
-nemají tam kostel|1|nemajó tam kostela|
+nemají tam kostel|1|nemajó tam kostela||
 -
 -
 -
@@ -37,6 +41,7 @@ vesnicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 ČLOVĚK|2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,(v&#160;obecném jazyce) lidi|lidí|lidem|lidi|lidé,(v&#160;obecném jazyce) lidi|lidech|lidmi
 žid|2||a|u,ovi|a|e|u,ovi|em|i,é|ů|ům|y|i,é|ech|y
 kostel|3||a|u||e|e|em|y|ů|ům|y|y|ech,ích|y
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 peřêNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 žêD|2|d|da?|du?,dovi?|da?|de?|du?,dovi?|dem?|ďi?,dé?|dú?|dúm?|dy?|ďi?,dé?|dech?|dy?
@@ -56,28 +61,30 @@ kÚŇ|3|úň|oňe?|oňi?,oňovi?|oňe?|oňi?|oňi?,oňovi?|oňem?|oňe?|oňí?,o
 ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|leďi|liďí?|lidem?|liďi?|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
 žiD|2|d?|da?|du?,dovi?|da?|de?|du?,dovi?|dem?|ďi|dú?|dúm?|dy?|ďi?,dé?|dech?|dy?
 kostel|3|?|a|u?|?|e?|e?|em?|y?|ú?|úm?|y?|y?|ech?,ích?|y?
+zemčat|1|?|u?|u?|?|e?|u?|em?|a|ú?|úm?|y?|y?|ech?|y?
 -
-peřin|peřinA|0|peřê|peřêNA|
-žid|žid|0|žê|žêD|
-hlín|hlínA|0|hľê|hľêNA|
-zim|zimA|0|zim|zimA|
-s|sÍLA|0|s|sÍŁA|
-psí|psíK|0|psé|pséK|
-pejs|pejsEK|0|psé|pséK|
-vozí|vozíK|0|vozé|vozéK|
-nožíček||0|nožéček||
-šíp|šípEK|0|šép|šépEK|
-ryb|rybA|0|rêb|rêbA|
-m|mOUCHA|0|m|mOUCHA|
-bý|býK|0|bé|béK|
-strýc|strýc|0|stréc|stréc|
-růž|růžE|0|rúž|rúžE|
-k|kŮŇ|0|k|kÚŇ|
-dědin|dědinA|0|ďeďi|ďeďiNA|
-vesnic|vesnicE|0|ďeďi|ďeďiNA|
-|ČLOVĚK|0||ČLOVĚK|
-žid|žid|0|že|žiD|
-kostel|kostel|0|kostel|kostel|
+peřin|peřinA|0|peřê|peřêNA||
+žid|žid|0|žê|žêD||
+hlín|hlínA|0|hľê|hľêNA||
+zim|zimA|0|zim|zimA||
+s|sÍLA|0|s|sÍŁA||
+psí|psíK|0|psé|pséK||
+pejs|pejsEK|0|psé|pséK||
+vozí|vozíK|0|vozé|vozéK||
+nožíček||0|nožéček|||
+šíp|šípEK|0|šép|šépEK||
+ryb|rybA|0|rêb|rêbA||
+m|mOUCHA|0|m|mOUCHA||
+bý|býK|0|bé|béK||
+strýc|strýc|0|stréc|stréc||
+růž|růžE|0|rúž|rúžE||
+k|kŮŇ|0|k|kÚŇ||
+dědin|dědinA|0|ďeďi|ďeďiNA||
+vesnic|vesnicE|0|ďeďi|ďeďiNA||
+|ČLOVĚK|0||ČLOVĚK||
+žid|žid|0|že|žiD||
+kostel|kostel|0|kostel|kostel||
+brambor|brambor|0|zemčat|zemčat||
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 škaredÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -85,8 +92,8 @@ dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rý
 dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|ré|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 škareDÝ|-1|dé?|dého?|dému?|dé?|dé?|dém?|dým?|-|-|dá?|dých?|dým?|dá?|dá?|dých?|dými?|-|-|dá|dé?|dé?|dou?|dá?|dé?|dou?|-|-|dé?|dých?|dým?|dé?|dé?|dých?|dými?|-|-|dý?|dého?|dému?|dého?|dý?|dém?|dým?|-|-|ďí?|dých?|dým?|dé?|ďí?|dých?|dými?|-|-|dý?|dého?|dému?|dý?|dý?|dém?|dým?|-|-|dé?|dých?|dým?|dé?|dé?|dých?|dými?|-|-
 -
-dob|dobRÝ|dob|dobRÝ|
-škared|škaredÝ|škare|škareDÝ|
+dob|dobRÝ|dob|dobRÝ||
+škared|škaredÝ|škare|škareDÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
@@ -94,8 +101,8 @@ JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 JÁ|já|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 -
-t|tEN||tEN|
-|JÁ||JÁ|
+t|tEN||tEN||
+|JÁ||JÁ||
 -
 -
 -
@@ -112,19 +119,19 @@ neBÝT|23|-1|být?|jsem?|jsi?|ňí?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme
 mosET|5|-1|et?|ím?|íš?|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
 mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ajó|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
-slyš|slyšET|słêš|slyšET|
-|BÝT||BÝT|
-ne|neBÝT|ne|neBÝT|
-mus|musET|mos|mosET|
-nemus|musET|nemos|mosET|
-m|mÍT|m|mÍT|
-nem|mÍT|nem|mÍT|
+slyš|slyšET|słêš|slyšET||
+|BÝT||BÝT||
+ne|neBÝT|ne|neBÝT||
+mus|musET|mos|mosET||
+nemus|musET|nemos|mosET||
+m|mÍT|m|mÍT||
+nem|mÍT|nem|mÍT||
 -
-tam|tam|
+tam|tam||
 -
 -
-jestli|ešľê|
-kdybych|debech|
-jako|jako|
+jestli|ešľê||
+kdybych|debech||
+jako|jako||
 -
 -

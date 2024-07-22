@@ -1,18 +1,20 @@
-TW v2
+TW v3
 tMistřín
 aGG
 d02.07.2023 9:29:18
 iVy miločtí páni- Mistřín41\n(moravskoslovenské)\nVy miločtí páni,\nvy ste grobiáni42\n,\npúščáte z roboty večér po klekání.\nGdyž klekání zvóní,\ndevět hodin bije,\nteprú dráb s čaganem43\nzapisovat ide.
 c#Zdroje dat\n-Nářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n-ŠEVELA, Martin. U žúdra. 3.vyd. Brumovice: Carpe diem, 2003, s. 107(https://is.muni.cz/th/eht4r/Bakalarkska_prace.pdf)\n-https://www.karaoketexty.cz/texty-pisni/lidove-pisne/anicka-dusicka-nekasli-365566 (nevyčerpáno)\nhttps://www.midisoubory.cz/U-TISK.php?ID=333134340000\n-<a href="https://archive.org/details/diaktologiemorav00bartuoft/page/31/mode/1up">Diaktologie moravská</a>\n\n#Popis nářečí\n-výskyt měkkého L (ľ, Ľ)\n-jenom ve Strážnici a Mistříně dlouhého r neznají, vyslovujíce: vrba, hrbek, poprchá.\n-byď (Mistřín a Podluží).\n-V Mistříně obecny jsou tvary: na stromách i na stromech, o vtákách, o koňách.\n- ůj-ova-ovo : súsedúj, Klimšúj (v Bílovicích, Kunovicích, Ostroze, Ostrožské Nové Vsi, v Miloticích, Mistříně\n- teho, temu— tych, tym (Mistřín)\n-keho, kemu (Milotice, Mistřín, Hovorany, Mutěnice, Podluží)
+bkniha|prijmeni=|jmeno=|nazev=Dialektologie moravska : prvni dil nareci slovenske, dolske, valasske a lasske|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor00bart/page/309/mode/1up|zpracovano=|shortcut=bar1
+u1
 g48.9720599,17.0809833
 q0
-oSlovácko
+oSlovácko>Dolňácko
 -
 -
 -
 -
 -
-máme ještě mlátit v seníku|1|máme ešče mṵáťiť kožuchi|
+máme ještě mlátit v seníku|1|máme ešče mṵáťiť kožuchi||
 -
 -
 -
@@ -35,6 +37,7 @@ pavouK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 strom|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 ptáK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 kŮŇ|3|ůň|oně|oni,oňovi|oně,archaicky) kůň[4][5]|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
+brambor|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 ženA|1|a?|y?|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 listí|0|?||?|?|?|?|m?|-|-|-|-|-|-|-
@@ -50,32 +53,34 @@ pauK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 strom|3|?|u?|u?|?|e?|u?,ě?|em?|y?|ú?|úm?|y?|y?|ách,ech|y?
 vtáK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|kách|ky?
 kÚŇ|3|úň?|oňe?|oňi?,oňovi?|oňe?,archaicky) kúň[4][5]?|oňi?|oňi?,oňovi?|oňem?|oňe?|oňí?,oňú?|oňím?,oňúm?|oňe?|oňe?|oňách|oňi?,oňmi?
+artepl|1|?|u?|u?|?|e?|u?|em?|e|ú?|úm?|y?|y?|ech?|y?
 -
-||0|grubián||
-||0|klekání||
-||0|partija ||
-||0|hrbek||
-dědin|dědinA|0|ďeďi|ďeďiNA|
-eskadrona?||0|škadróna||
-hodin|ženA|0|hodin|ženA|
-hůl||0|čagan||
-jetelina||0|jatelinu 4p||
-listí|listí|0|listí|listí|
-mašin|mašinA|0|mašin|mašiNA|
-obilí|obilí|0|obilí|obilí|
-pavéz|pavézA|0|pauz|pauz|
-pavou|pavouK|0|pau|pauK|
-písnič|písničKA|0|pjesňič|písňičKA|
-práce||0|robota||
-proutí||0|bez prúťí||
-stroj|stroj|0|maši|mašiNA|
-svat|svatBA|0|svaj|svatBA|
-vesnic|vesnicE|0|ďeďi|ďeďiNA|
-vrb|vrbA|0|vrb|vrbA|
-zelí|zelí|0|zelí|zelí|
-strom|strom|0|strom|strom|
-ptá|ptáK|0|vtá|vtáK|
-k|kŮŇ|0|k|kÚŇ|
+||0|grubián|||
+||0|klekání|||
+||0|partija |||
+||0|hrbek|||
+dědin|dědinA|0|ďeďi|ďeďiNA||
+eskadrona?||0|škadróna|||
+hodin|ženA|0|hodin|ženA||
+hůl||0|čagan|||
+jetelina||0|jatelinu 4p|||
+listí|listí|0|listí|listí||
+mašin|mašinA|0|mašin|mašiNA||
+obilí|obilí|0|obilí|obilí||
+pavéz|pavézA|0|pauz|pauz||
+pavou|pavouK|0|pau|pauK||
+písnič|písničKA|0|pjesňič|písňičKA||
+práce||0|robota|||
+proutí||0|bez prúťí|||
+stroj|stroj|0|maši|mašiNA||
+svat|svatBA|0|svaj|svatBA||
+vesnic|vesnicE|0|ďeďi|ďeďiNA||
+vrb|vrbA|0|vrb|vrbA||
+zelí|zelí|0|zelí|zelí||
+strom|strom|0|strom|strom||
+ptá|ptáK|0|vtá|vtáK||
+k|kŮŇ|0|k|kÚŇ||
+brambor|brambor|0|artepl|artepl||
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 sousedŮV|-1|ovo|ova|ovu|ovo|ovo|ově,sousedovu|ovým|-|-|ova|ových|ovým|ova|ova|ových|ovými|-|-|ova|ovy|ově|ovu|ova|ově|ovou|-|-|ovy|ových|ovým|ovy|ovy|ových|ovými|-|-|ův|ova|ovu|ova|ův|ově,sousedovu|ovým|-|-|ovi|ových|ovým|ovy|ovi|ových|ovými|-|-|ův|ova|ovu|ův|ův|ově,sousedovu|ovým|-|-|ovy|ových|ovým|ovy|ovy|ových|ovými|-|-
@@ -83,9 +88,9 @@ sousedŮV|-1|ovo|ova|ovu|ovo|ovo|ově,sousedovu|ovým|-|-|ova|ových|ovým|ova|o
 celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á|é?|é?|ú|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 sousedÚV|-1|ovo?|ova?|ovu?|ovo?|ovo?|ově?,sousedovu?|ovým?|-|-|ova?|ových?|ovým?|ova?|ova?|ových?|ovými?|-|-|ova?|ovy?|ově?|ovu?|ova?|ově?|ovou?|-|-|ovy?|ových?|ovým?|ovy?|ovy?|ových?|ovými?|-|-|új|ova?|ovu?|ova?|úv?|ově?,sousedovu?|ovým?|-|-|ovi?|ových?|ovým?|ovy?|ovi?|ových?|ovými?|-|-|úv?|ova?|ovu?|úv?|úv?|ově?,sousedovu?|ovým?|-|-|ovy?|ových?|ovým?|ovy?|ovy?|ových?|ovými?|-|-
 -
-cel|celÝ|cel|celÝ|
-vese|celÝ|vese|celÝ|
-soused|sousedŮV|soused|sousedÚV|
+cel|celÝ|cel|celÝ||
+vese|celÝ|vese|celÝ||
+soused|sousedŮV|soused|sousedÚV||
 -
 vY|y|ás|ám|ás|y|ás|ámi
 jaKÝ|ký|kého|kému|kého|-|kém|kým|cí|kých|kým|ké|-|kých|kými|ký|kého|kému|ký|-|kém|kým|ké|kých|kým|ké|-|kých|kými|ká|ké|ké|kou|-|ké|kou|ké|kých|kým|ké|-|kých|kými|ké|kého|kému|ké|-|kém|kým|ká|kých|kým|ká|-|kých|kými
@@ -101,12 +106,12 @@ SE|-|sebe?|si,sobje?|se?,sebe?|-|sobje?|sebou?
 TEN|ten?|teho|temu|toho?|-|tom?|tím?|ti?|tich|tim|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 KDO|kdo?|keho|kemu|koho?|kdo?|kom?|kým?
 -
-v|vY|v|vY|
-ja|jaKÝ|a|jaKÝ|
-k|kDO||KDO|
-|SE||SE|
-t|tEN||TEN|
-k|kDO||kDO|
+v|vY|v|vY||
+ja|jaKÝ|a|jaKÝ||
+k|kDO||KDO||
+|SE||SE||
+t|tEN||TEN||
+k|kDO||kDO||
 -
 -
 -
@@ -133,30 +138,30 @@ mlÁŤIT|15|-1|áťiť|áťím?|áťíš?|áťí?|áťíme?|áťíte?|áťí?|a�
 dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ajú|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 polÍBIT|30|-1|úbit?|úbím|íbíš?|íbí?|íbíme?|íbíte?|íbí?|ib?|ibme?|ibte?|íbil?|íbil?|íbila?|íbilo?|íbili?|íbily?|íbily?|íbila?|íben?|íben?|íbena?|íbeno?|íbeňi?|íbeny?|íbeny?|íbena?
 -
-|BÝT||BÝT|
-zvo|zvoNIT|zvo|zvONIT|
-|JÍT||JÍT|
-pou|pouštĚT|pou|púščÁT|
-b|bÍT|b|bÍT|
-pře|přeHNAT|pře|přeHNAT|
-m|mÍT|m|mÍT|
-ml|mlÁTIT|mṵ|mlÁŤIT|
-d|dÁT|d|dÁT|
-pol|polÍBIT|pol|polÍBIT|
-||zazpívá||
-||poprchá||
+|BÝT||BÝT||
+zvo|zvoNIT|zvo|zvONIT||
+|JÍT||JÍT||
+pou|pouštĚT|pou|púščÁT||
+b|bÍT|b|bÍT||
+pře|přeHNAT|pře|přeHNAT||
+m|mÍT|m|mÍT||
+ml|mlÁTIT|mṵ|mlÁŤIT||
+d|dÁT|d|dÁT||
+pol|polÍBIT|pol|polÍBIT||
+||zazpívá|||
+||poprchá|||
 -
-večer|večér|
-teprve|teprvú|
-už|už|
-ještě|ešče|
-vesele|vesele|
-převelice|prevelice|ř?
+večer|večér||
+teprve|teprvú||
+už|už||
+ještě|ešče||
+vesele|vesele||
+převelice|prevelice|ř?|
 -
-na||na|
-z||z|
+na||na||
+z||z||
 -
-když|gdyž|
-byť|byď|
+když|gdyž||
+byť|byď||
 -
 -

@@ -1,9 +1,10 @@
-TW v2
+TW v3
 tHošťálkovice
 aGG
 d12.06.2023 10:52:56
 isouhrnně, úhrnem: naz było cełkovje tam sedym haviřy\nňedožyraj furt, ja ňemam času se furt s tebu bavič Ostrava OV (Hošťálkovice)\na cuš, dy un został doma Ostrava OV (Hošťálkovice)\n\n bulač kameň na haldu Ostrava OV (Hošťálkovice)\n\n bulač???
 c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 298\n-https://sncj.ujc.cas.cz/
+bsncj|i=Ostrava OV (Hošťálkovice)|zpracovano=
 u2
 sOstrava
 g49.8523254,18.1871272
@@ -13,33 +14,34 @@ oSlezsko
 -
 -
 -
-Ale kdeš!|1|Ale kajteš!|
+Ale kdeš!|1|Ale kajteš!||
 -
-prsty jako habr|1|pyrsty jag do hrabi|nejistota českého překladu
+prsty jako habr|1|pyrsty jag do hrabi|nejistota českého překladu|
+utrácí rozmařile|1|utraca jag baron||
 -
-nemám čas|1|ňemam času|
-s tebou|1|s tebu|
-posviť na|1|blinkňi tam|
-lépe to uvidíš|1|lepšy to uvidžyš|
-posviť mi na tu|1|blinkňi tam tu|
-dělám to kvůli mě|1|robim dla sebe|
-pro případ že nastane bída|1|dla bidy|
-o kilo více|1|o kilu vjecej|
-o kilo navíc|1|o kilu vjecej|
-týden má sedm dní|1|tydžeň ma sedym dňich|
-má sedm dní|1|ma sedym dňich|
-ze stodoly????|1|s pjatra|
-velmi často|1|často husto|
-on je velmi často nemocný|1|un často husto maroduje|
-část stodoly|1|štfyrč|
-chystat léčku|1|stavjadž budu|
-sedět na bobku s koleny od sebe|1|robidž budu|děvčata
-z toho|1|s teho|
-vydělal peníze|1|zarobił peňis|
-a teď,a hned|1|a fčyleg|
-na hromadu|1|na haldu|
-sypat kamení na hromadu|1|bulač kameň na haldu|
-šel stranou|1|šeł bokem|
+nemám čas|1|ňemam času||
+s tebou|1|s tebu||
+posviť na|1|blinkňi tam||
+lépe to uvidíš|1|lepšy to uvidžyš||
+posviť mi na tu|1|blinkňi tam tu||
+dělám to kvůli mě|1|robim dla sebe||
+pro případ že nastane bída|1|dla bidy||
+o kilo více|1|o kilu vjecej||
+o kilo navíc|1|o kilu vjecej||
+týden má sedm dní|1|tydžeň ma sedym dňich||
+má sedm dní|1|ma sedym dňich||
+ze stodoly????|1|s pjatra||
+velmi často|1|často husto||
+on je velmi často nemocný|1|un často husto maroduje||
+část stodoly|1|štfyrč||
+chystat léčku|1|stavjadž budu||
+sedět na bobku s koleny od sebe|1|robidž budu|děvčata|
+z toho|1|s teho||
+vydělal peníze|1|zarobił peňis||
+a teď,a hned|1|a fčyleg||
+na hromadu|1|na haldu||
+sypat kamení na hromadu|1|bulač kameň na haldu||
+šel stranou|1|šeł bokem||
 -
 -
 ne|ňe
@@ -62,6 +64,7 @@ kočit|kočydž
 dlo|dło
 bil|bił
 hnal|hnał
+nout|nuč
 -
 okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 havíř|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
@@ -91,6 +94,7 @@ baron|2||a|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
 kÁMEN|3|ámen|amene,amenu|ameni,amenu|ámen|ameni|ameni,amenu,ameně|amenem|ameny|amenů|amenům|ameny|ameny|amenech|ameny
 haldA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
+akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 okNO|0|no?|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech?|ny?
 haviř|2|?|e?|i,ovi?|e?|i?|i,ovi?|em?|i?|y|ům?|e?|i?|ích?|i?
@@ -115,49 +119,51 @@ křídLO|0|lo?|la?|lu?|ło|lo?|lu?,le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
 młyn|3|?|a|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 robotňiK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|cy|kú?|kúm?|ky?|ci?|cích?|ky?
 PEŇÍZE|3|-|-|-|-|-|-|-|peňíze?|peňis|peňezúm?|peňíze?|peňíze?|peňezích?|peňezi?
-dušE|1|a?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
+dušA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 baroN|2|n|na?|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?,nové?|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
 kÁMEN|3|ámen?|amene?,amenu?|ameňi?,amenu?|ameň|ameňi?|ameňi?,amenu?,ameňe?|amenem?|ameny?|amenú?|amenúm?|ameny?|ameny?|amenech?|ameny?
 halDA|1|da?|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 cyhLA|1|la?|ly?|le?|łu|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
+agat|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-|člověk|0||člověk|
-||0|šyłu 4p||
-||0|z bura ||
-|PENÍZE|0||PEŇÍZE|
-b|bOUDA|0|b|bOUDA|
-badyán|badyán|0|badyjan|badyjan|
-bý|býK|0|by|byK|
-čas|čas|0|čas|čas|
-d|dEN|0|d|dEN|
-děc|děcKO|0|džec|džecKO|
-duš|dušE|0|duš|dušE|
-havíř|havíř|0|haviř|haviř|
-kil|kilO|0|kil|kilO|
-kříd|křídLO|0|křyd|křídLO|
-má|máK|0|ma|máK|
-mat|matKA|0|mat|matKA|
-mlýn|mlýn|0|młyn|młyn|
-pracovní|pracovníK|0|robotňi|robotňiK|
-pravda||0|pra||
-prst|prst|0|pyrs|pyrsT|
-stra|straCH|0|stra|straCH|
-svět|světLO|0|svjet|světLO|
-světnice||0|jizba||
-syn|synEK|0|syn|synEK|
-tatí|tatíK|0|tačy|tačyK|
-týd|týdEN|0|týd|týdEN|
-ubožá|ubožáK|0|bora|boraK|
-baron|baron|0|baro|baroN|
-k|kÁMEN|0|k|kÁMEN|
-hald|haldA|0|hal|halDA|
-cih|cihLA|0|cyh|cyhLA|
+|člověk|0||člověk||
+||0|šyłu 4p|||
+||0|z bura |||
+|PENÍZE|0||PEŇÍZE||
+b|bOUDA|0|b|bOUDA||
+badyán|badyán|0|badyjan|badyjan||
+bý|býK|0|by|byK||
+čas|čas|0|čas|čas||
+d|dEN|0|d|dEN||
+děc|děcKO|0|džec|džecKO||
+duš|dušE|0|duš|dušA||
+havíř|havíř|0|haviř|haviř||
+kil|kilO|0|kil|kilO||
+kříd|křídLO|0|křyd|křídLO||
+má|máK|0|ma|máK||
+mat|matKA|0|mat|matKA||
+mlýn|mlýn|0|młyn|młyn||
+pracovní|pracovníK|0|robotňi|robotňiK||
+pravda||0|pra|||
+prst|prst|0|pyrs|pyrsT||
+stra|straCH|0|stra|straCH||
+svět|světLO|0|svjet|světLO||
+světnice||0|jizba|||
+syn|synEK|0|syn|synEK||
+tatí|tatíK|0|tačy|tačyK||
+týd|týdEN|0|týd|týdEN||
+ubožá|ubožáK|0|bora|boraK||
+baron|baron|0|baro|baroN||
+k|kÁMEN|0|k|kÁMEN||
+hald|haldA|0|hal|halDA||
+cih|cihLA|0|cyh|cyhLA||
+akát|akát|0|agat|agat||
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
 velKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|||ká?|kých?|kým?|ká?|ká?|kých?|kými?|||ká?|ké?|ké?|kou?|ká?|ké?|kou?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?|||ký?|kého?|kému?|kého?|ký?|kém?|kým?|||cí?|kých?|kým?|ké?|cí?|kých?|kými?|||ký?|kého?|kému?|ký?|ký?|kém?|kým?|||ké?|kých?|kým?|ké?|ké?|kých?|kými?||
 -
-velK|velKÝ|velK|velKÝ|
+velK|velKÝ|velK|velKÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
@@ -183,23 +189,23 @@ ON|un|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,�
 sÁM|am|amého?|amému?|mého?,ama?|-|amém?|amým?|ami?|amých?|amým?|amy?|-|amých?|amými?|ám?|amého?|amému?|ám?|-|amém?|amým?|amy?|amých?|amým?|amy?|-|amých?|amými?|ama?|amé?|amé?|amu?|-|amé?|amou?|amy?|amých?|amým?|amy?|-|amých?|amými?|amo?|amého?|amému?|amo?|-|amém?|amým?|ama?|amých?|amým?|ama?|-|amých?|amými?
 kolik|?|a?|a?||?|a?|a?
 -
-t|tEN||TEN|
-|ONI||ONI|
-|ONA||ONA|
-|MY||MY|
-|JÁ||JÁ|
-|SE||SE|
-t|tY|t|tY|
-|CO||CO|
-|ON||ON|
-s|sÁM|s|sÁM|
-kolik|kolik|kolik|kolik|
+t|tEN||TEN||
+|ONI||ONI||
+|ONA||ONA||
+|MY||MY||
+|JÁ||JÁ||
+|SE||SE||
+t|tY|t|tY||
+|CO||CO||
+|ON||ON||
+s|sÁM|s|sÁM||
+kolik|kolik|kolik|kolik||
 -
 sedm|2||i|i|||i|i
 -
 sedYM|2|ym|i?|i?|?|?|i?|i?
 -
-sedm|sedm|sed|sedYM|
+sedm|sedm|sed|sedYM||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 bydlET|15|-1|et|ím|íš|í|íme|íte|í,bydlejí|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
@@ -226,6 +232,7 @@ doskočIT|22|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila
 brblAT|4|-1|at|al|al|ala|alo|ali|aly|aly|ala
 vydělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 seHNAT|30|-1|hnat|ženu|ženeš|žene|ženeme|ženete|ženou|žeň|žeňme|žeňte|hnal|hnal|hnala|hnalo|hnali|hnaly|hnaly|hnala|hnán|hnán|hnána|hnáno|hnáni|hnány|hnány|hnána
+couvNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,couvnul|l,couvnul|la,couvnula|lo,couvnulo|li,couvnuli|ly,couvnuly|ly,couvnuly|la,couvnula
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|był|był|była|było|byli?|były|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 meškAT|15|-1|at?|ím?|íš?|í?|íme?|íte?|í,bydlejí?|i?|eme?|ete?|el?|el?|ela?|elo?|ali|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
@@ -252,79 +259,82 @@ doskočIT|22|-1|ydž|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|
 brbłAT|7|-1|at?|?|?|?|?|?|?|?|?|?|?|?|?|?|ali|?|?|?
 zarobIT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ił|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 zeHNAT|30|-1|hnat?|ženu?|ženeš?|žene?|ženeme?|ženete?|ženou?|žeň?|žeňme?|žeňte?|hnał|hnal?|hnala?|hnalo?|hnali?|hnaly?|hnaly?|hnala?|hnán?|hnán?|hnána?|hnáno?|hnáňi?|hnány?|hnány?|hnána?
+cofNOUT|22|-1|nuč|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?,couvnul?|l?,couvnul?|la?,couvnula?|lo?,couvnulo?|li?,couvnuli?|ly?,couvnuly?|ly?,couvnuly?|la?,couvnula?
 -
-|BÝT||BÝT|
-bydl|bydlET|bydl|bydlET|
-mus|musET|muš|mušET|
-|MÍT||MÍT|
-st|stÁT|st|stÁT|
-|JÍT||JÍT|
-křič|křičET|křič|křičET|
-bav|bavIT|bav|bavIT|
-otrav|otravOVAT|dožyr|dožyrAT|
-neotrav|otravOVAT|ňedožyr|dožyrAT|
-ne|MÍT|ňe|MÍT|
-v|vĚDĚT|v|vĚDĚT|
-nev|vĚDĚT|ňev|vĚDĚT|
-rozsv|rozsvÍTIT|rož|svÍTIT|
-uvid|uvidĚT|uvid|uvidĚT|
-děl|dělAT|rob|robIT|
-k|kOUPIT|k|kOUPIT|
-|SPADNOUT||SPADNOUT|
-zač|začÍT|zač|začÍT|
-stav|stavĚT|budov|budovAT||stav|stavĚT|
-umř|umřÍT|umř|umřÍT|
-zůsta|zůstaT|zosta|zostaT|
-m|mOCT|m|mOCT|
-nem|mOCT|ňem|mOCT|
-doskoč|doskočIT|doskoč|doskočIT|
-brbl|brblAT|bebł|brbłAT|
-vyděl|vydělAT|zarob|zarobIT|
-||holaj||
-||Utraca ||
-|| bulač||
-se|seHNAT|ze|zeHNAT|
+|BÝT||BÝT||
+|MÍT||MÍT||
+|JÍT||JÍT||
+|SPADNOUT||SPADNOUT||
+||holaj|||
+||Utraca |||
+|| bulač|||
+bav|bavIT|bav|bavIT||
+brbl|brblAT|bebł|brbłAT||
+bydl|bydlET|bydl|bydlET||
+děl|dělAT|rob|robIT||
+doskoč|doskočIT|doskoč|doskočIT||
+k|kOUPIT|k|kOUPIT||
+křič|křičET|křič|křičET||
+m|mOCT|m|mOCT||
+mus|musET|muš|mušET||
+ne|MÍT|ňe|MÍT||
+nem|mOCT|ňem|mOCT||
+neotrav|otravOVAT|ňedožyr|dožyrAT||
+nev|vĚDĚT|ňev|vĚDĚT||
+otrav|otravOVAT|dožyr|dožyrAT||
+rozsv|rozsvÍTIT|rož|svÍTIT||
+se|seHNAT|ze|zeHNAT||
+st|stÁT|st|stÁT||
+stav|stavĚT|budov|budovAT||stav
+umř|umřÍT|umř|umřÍT||
+uvid|uvidĚT|uvid|uvidĚT||
+v|vĚDĚT|v|vĚDĚT||
+vyděl|vydělAT|zarob|zarobIT||
+zač|začÍT|zač|začÍT||
+zůsta|zůstaT|zosta|zostaT||
+couv|couvNOUT|cof|cofNOUT||
 -
-častěji|čaščejšy|častější?
-často|často|
-dolů|naduł|
-doma|doma|
-jednou|raz|
-ještě|ešče|
-kdy|gdy|
-kdy|dy|
-lépe|lepšy|
-nahoře|ve vrchu|
-pořád|furt|
-radši|radšy|
-souhrnně|cełkovje|
-tam|tam|
-teď,nyní|fčyl|
-více|vjecej|
-zas|zas||zaz|
-jen,jenom|ene|
-doopravdy|dozopravdy|
-málo|mało|
-stranou|bokem|
-neoficiálně|bokem|
+častěji|čaščejšy|častější?|
+často|často||
+dolů|naduł||
+doma|doma||
+jednou|raz||
+ještě|ešče||
+kdy|gdy||
+kdy|dy||
+lépe|lepšy||
+nahoře|ve vrchu||
+pořád|furt||
+radši|radšy||
+souhrnně|cełkovje||
+tam|tam||
+teď,nyní|fčyl||
+více|vjecej||
+zas|zas|||zaz||
+jen,jenom|ene||
+doopravdy|dozopravdy||
+málo|mało||
+stranou|bokem||
+neoficiálně|bokem||
+doposud,doteď|dofčyleška||sncj
 -
-ve||ve|
-za||za|
-kvůli||dla|
-o||o|
-bez||bez|
-z||s|
-do||do|
-na||na|
-u||u|
+ve||ve||
+za||za||
+kvůli||dla||
+o||o||
+bez||bez||
+z||s||
+do||do||
+na||na||
+u||u||
 -
-vždyť|dy|
-aby|coby|
-ale|ale|
-a|a|
-ani|aňi|
-jak|jag|
-že|že|
-protože|bo|
+vždyť|dy||
+aby|coby||
+ale|ale||
+a|a||
+ani|aňi||
+jak|jag||
+že|že||
+protože|bo||
 -
 -

@@ -1,192 +1,233 @@
-TW v2
+TW v3
 fSpisovná čeština
-tBrno
+tBrňenské Hantec
 aGG
 d24.02.2023 7:50:51
-c#Zdroje dat\n-http://www.hantec.cz/hantec/slovnik/slovnik.htm\n-http://www.kd.cz/~martin/funny/hantec/hantec.html\n-Brněnská mluva - Svěrák, František; str. 134\n\n#Popis hantecu\nZměna: ej->é\n7. Pád unifikace ama
+c#Poznámka\n-hantec není nářečí, proto není v mapě\n\n#Popis hantecu\nZměna: ej->é\n7. Pád unifikace ama
+bweb|nazev=Slovník brněnskýho hantecu|nazev_webu=|odkaz=http://www.hantec.cz/hantec/slovnik/slovnik.htm|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nweb|nazev=Pepinův slovník hantecu|nazev_webu=|odkaz=http://www.kd.cz/~martin/funny/hantec/hantec.html|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=psh\n\nkniha|prijmeni=Svěrák|jmeno=František|nazev=Brněnská mluva|misto=|vydavatel=|rok_vydani=|strany=143|issn=|odkaz=|zpracovano=|shortcut=\n\nweb|nazev=Brněnský hantec|nazev_webu=Brněnská přehrada a okolí|odkaz=https://www.prygl.net/php/hantec.php|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=
 lHantec
-g49.1940277,16.6062405
 x6
 q1
-oBrněnsko
+oMoravský jazyk
 -
 -
 -
-S kým momentálně žiješ?|1|S kým dejcháš?|
-Přeji hezký den!|1|Zdar jak sviňa!|
-Jak se dostanu na hlavní nádraží?|1|Kudy se tu dostanu na rolu?|
+S kým momentálně žiješ?|1|S kým dejcháš?||
+Přeji hezký den!|1|Zdar jak sviňa!||
+Jak se dostanu na hlavní nádraží?|1|Kudy se tu dostanu na rolu?||
 -
-uběhlo už hodně let od doby|1|prolítlo už hafo jařin vod dob|
-mám za kamaráda Jirku|1|mám za kamoša Jirky|
+uběhlo už hodně let od doby|1|prolítlo už hafo jařin vod dob||
+mám za kamaráda Jirku|1|mám za kamoša Jirky||
 -
-areál lodní dopravy|1|šíftechna|
-běžky|1|běžkařský bretle|
-brněnská přehrada|1|prigl||prýgl|
-Brněnská přehrada|1|Prygl|
-centrum města|1|štatl|
-černá pole|1|blekfíld|
-Černá Pole|1|Blekfild|
-Červený kopec|1|Rotec|
-česká ulice|1|čára|
-Česká ulice|1|Čára|
-Divišova čtvrť|1|Šanc|
-domky pod Stránskou skálou|1|Džungle|
-dopravní podnik|1|glajzové podnik|
-drobné mince|1|ance|
-duševně postižený člověk|1|guma|
-fotit|1|kropit kanónama|
-hlavní vlakové nádraží|1|Rola|
-hotel Slovan|1|Pasingl|
-hrad Špilberk|1|Špéna|
-hrad veveří|1|gracna nad Prýglem|
-Hybešova čtvrť|1|Šanghaj|
-je to jednoduché|1|je to malina|
-je to pryč|1|je to v kakáču|
-je to ztracené|1|je to v kopru|
-Jundrov|1|Jóbsko|
-kapitán lodě|1|šíffýra|
-koukat se po ženách|1|hodit čuz na filáče|
-královo pole|1|kénik||krpole|
-Královo Pole|1|Kénig||Kénik|
-krásná dívka|1|vozubená koňa|
-krásná dívka|1|vozubená koňa|
-kraví hora|1|monte Bú|
-lažánky|1|L.A.žánky|
-loď s elektrickým pohonem|1|šíf na baterky||šalinový šíf|
-maloměřice|1|majlont|
-masarykův okruh|1|Masec|
-medlánecký kopec|1|Medlaňák|
-menstruační vložka|1|bitýška|
-mniší hora|1|Mnichálový bergl|
-Modřice|1|Blajkec|
-modřina pod okem|1|baterka|
-mokrá hora|1|Mokec|
-Na Bělidle|1|Blajchec|
-na hlavní nádraží|1|na rolu|
-nádherné město brno|1|betálný štatl|
-nádherné město brno|1|betálný Štatl|
-nafukovací loď|1|šíf nafólované luftem|
-nahý|1|na ádoša|
-náměstí 28 října v brně|1|Wintrák|
-nekvalitní výrobek|1|aušus||bazmek|
-nudistická pláž|1|nuda|
-občanský průkaz|1|flétna|
-obyvatel Ivančic|1|vančák|
-odskákat si něco|1|vyžrat neco|
-opalovat se|1|lapat bronz|
-opalovat se|1|chytat bronz|
-orální sex|1|kuřim|
-pěkná dívka|1|betálné šnicl|
-plavat prsa|1|pudlovat|
-policejní služebna|1|fízlárna|
-pomník na Moravském nám.|1|Kachláče|
-posadila se|1|hodila sicnu|
-pro taťku|1|pro taťky|
-průkazka mhd|1|šalinkarta|
-severní a západní čechy|1|švédsko|
-severočeši|1|švédi|
-slunce ostře svítí|1|zoncna rubluje|
-slunce ostře svítí|1|zoncna rubluje|
-sokolské koupaliště|1|Sokolák|
-staré brno|1|oltec|
-tisíc korun|1|tác||talíř|
-tlemit se|1|gébit|
-trávit čas na přehradě|1|vylepené na Prýglu|
-udělat dítě|1|uvařit svišťa|
-úřední listina|1|glét,glejt|
-už hodně let|1|už hafo jařin|
-veverská bítýška|1|betlém|
-vlakové nádraží|1|rola|
-vodní plocha|1|vasrplac|
-voják z povolání|1|guma|
-výbornej den|1|špicovej den|
-výborný den|1|špicové den|
-vysokoškolský klub|1|vekson|
-wilsonův les|1|vilzoňák|
-z prahy|1|z práglu|
-zamilovaný hájek|1|zámilec|
-zavřít do vězení|1|zašít|
-zlatý slavík|1|goldnové fógl|
-ženský lékař|1|kundolog|
-Žlutý kopec|1|Gelbec|
-dáme dohromady|1|dáme do holpecu|
+areál lodní dopravy|1|šíftechna||
+běžky|1|běžkařský bretle||
+blbé řeči|1|žgryndy||
+brněnská přehrada|1|prigl|||prýgl||
+Brněnská přehrada|1|Prygl||
+centrum města|1|štatl||
+černá pole|1|blekfíld||
+Černá Pole|1|Blekfild||
+Červený kopec|1|Rotec||
+česká ulice|1|čára||
+Česká ulice|1|Čára||
+dáme dohromady|1|dáme do holpecu||
+Divišova čtvrť|1|Šanc||
+domky pod Stránskou skálou|1|Džungle||
+dopravní podnik|1|glajzové podnik||
+drobné mince|1|ance||
+duševně postižený člověk|1|guma||
+fotit|1|kropit kanónama||
+hlavní vlakové nádraží|1|Rola||
+hotel Slovan|1|Pasingl||
+hrad Špilberk|1|Špéna||
+hrad veveří|1|gracna nad Prýglem||
+Hybešova čtvrť|1|Šanghaj||
+je to jednoduché|1|je to malina||
+je to pryč|1|je to v kakáču||
+je to ztracené|1|je to v kopru||
+Jundrov|1|Jóbsko||
+kapitán lodě|1|šíffýra||
+koukat se po ženách|1|hodit čuz na filáče||
+královo pole|1|kénik|||krpole||
+Královo Pole|1|Kénig|||Kénik||
+krásná dívka|1|vozubená koňa||
+krátký kabát|1|jóžl||
+kraví hora|1|monte Bú||
+lažánky|1|L.A.žánky||
+loď s elektrickým pohonem|1|šíf na baterky|||šalinový šíf||
+malé děvče|1|žaba|||žabka||
+maloměřice|1|majlont||
+masarykův okruh|1|Masec||
+medlánecký kopec|1|Medlaňák||
+menstruační vložka|1|bitýška||
+místo na sezení|1|židlochovice||
+mniší hora|1|Mnichálový bergl||
+Modřice|1|Blajkec||
+modřina pod okem|1|baterka||
+mokrá hora|1|Mokec||
+Na Bělidle|1|Blajchec||
+na hlavní nádraží|1|na rolu||
+nádherné město brno|1|betálný štatl||
+nádherné město brno|1|betálný Štatl||
+nafukovací loď|1|šíf nafólované luftem||
+nahý|1|na ádoša||
+náměstí 28 října v brně|1|Wintrák||
+nekvalitní výrobek|1|aušus|||bazmek||
+nudistická pláž|1|nuda||
+občanský průkaz|1|flétna||
+obyvatel Ivančic|1|vančák||
+odkašlaná slina|1|chrchel||psh
+odskákat si něco|1|vyžrat neco||
+okounět ve městě|1|štatlovat||
+opalovat se|1|lapat bronz||
+opalovat se|1|chytat bronz||
+orální sex|1|kuřim||
+pěkná dívka|1|betálné šnicl||
+plavat prsa|1|pudlovat||
+policejní služebna|1|fízlárna||
+pomník na Moravském nám.|1|Kachláče||
+posadila se|1|hodila sicnu||
+pro taťku|1|pro taťky||
+průkazka mhd|1|šalinkarta||
+severní a západní čechy|1|švédsko||
+severočeši|1|švédi||
+slunce ostře svítí|1|zoncna rubluje||
+slunce ostře svítí|1|zoncna rubluje||
+sokolské koupaliště|1|Sokolák||
+staré brno|1|oltec||
+tisíc korun|1|tác|||talíř||
+tlemit se|1|gébit||
+trávit čas na přehradě|1|vylepené na Prýglu||
+udělat dítě|1|uvařit svišťa||
+úřední listina|1|glét,glejt||
+už hodně let|1|už hafo jařin||
+veverská bítýška|1|betlém||
+vlakové nádraží|1|rola||
+vlivná osoba|1|herfón||psh
+vodní plocha|1|vasrplac||
+voják z povolání|1|guma||
+výbornej den|1|špicovej den||
+výborný den|1|špicové den||
+vysokoškolský klub|1|vekson||
+wilsonův les|1|vilzoňák||
+z prahy|1|z práglu||
+zamilovaný hájek|1|zámilec||
+zanedbaná vodní nádrž|1|žabák||
+zavřít do vězení|1|zašít||
+zlatý slavík|1|goldnové fógl||
+ženský lékař|1|kundolog||
+Žlutý kopec|1|Gelbec||
+jít na pivo|1|jít na jedničku||psh
+smát se|1|lochčit se||psh
+těžké přemýšlení|1|makačka na budku||psh
+hrát karty|1|mastit kiby||psh
 -
-alimenty|1|aloše|
-autobus|1|bas|
-benzín|1|beneli|
-břicho|1|vana||bauch||bauchec|
-bystrc|1|bástr|
-byt|1|bévák|
-cigareta|1|válec|
-cigarety|1|špinky|
-černoch|1|bakeliťák|
-dívka|1|koc|
-hřbitov|1|krchov|
-chleba|1|brzda|
-jídlo|1|chalka||chálka|
-kopec|1|bergl|
-kostel|1|mešita|
-krabice|1|kisna|
-lístek|1|lupeň|
-lužánky|1|Augec|
-meruňky|1|mergle|
-mluvit|1|ševelit|
-nadávka|1|šuft|
-nádraží|1|rola|
-napínat|1|šponovat|
-nepořádek|1|binec |
-obrazovka|1|špizlampa|
-oči|1|augle|
-originální|1|origoš|
-Pavilón|1|Pavec|
-Pisárky|1|Šrajbec|
-písnička|1|zonka|
-pistole|1|bóchačka|
-pivovar|1|pivec|
-podraz|1|šmé|
-polévka|1|blča|
-policie|1|šilci|
-pomoci|1|helfnót|
-ponětí|1|šajn|
-popelník|1|pudřenka|
-poschodí|1|štok|
-pošťuchovat|1|répat|
-potvrzení|1|ferbl|
-provokovat|1|štengrovat|
-radnice|1|rathaus|
-Riviéra|1|Rivec|
-sáhnout|1|šáhnót|
-se|1|se|
-sebrat|1|kásnót|
-sehnat|1|splašit|
-Soběšice|1|Sobůlky|
-soud|1|mlén|
-souložit|1|šukat|
-spaní|1|chrupna|
-strach|1|fedry|
-šetřit|1|špórovat|
-škola|1|bóda|
-televizor|1|idiotbox|
-tetování|1|kérka|
-tisíc|1|tauzn|
-tisícikoruna|1|tauzna|
-udělat|1|uvařit|
-ukrást|1|šlohnót|
-úředník|1|ingóst|
-vědět|1|gómat|
-vědomost|1|ánunk|
-ven|1|aus|
-vinohrady|1|vincky|
-vyčerpán|1|hyn|
-Výstaviště|1|Vystec|
-zahrát|1|zavařit|
-zpívat|1|békat|
-Zvonařka|1|Zvonec|
-zvracení|1|šavla|
-žabovřesky|1|žabiny|
-židenice|1|šimice|
-židle|1|sesla|
-|1||
+alimenty|1|aloše||
+autobus|1|bas||
+bedna|1|lódna||psh
+benzín|1|beneli||
+brambory|1|erteple||psh
+břicho|1|vana|||bauch|||bauchec||
+bystrc|1|bástr||
+byt|1|bévák||
+cigareta|1|válec||
+cigarety|1|špinky||
+cikán|1|morgoš||psh
+čepec|1|micna||psh
+černoch|1|bakeliťák||
+dědit|1|erbit||psh
+díra|1|lochna||psh
+dívka|1|koc||
+hašiš|1|hašek||psh
+hlad|1|módr||psh
+hřbitov|1|krchov||
+chleba|1|brzda||
+jídlo|1|chalka|||chálka||
+jíst|1|chalovat||psh
+kašlat|1|chrchlat||psh
+kolena|1|henkle||psh
+kopec|1|bergl||
+kostel|1|mešita||
+krabice|1|kisna||
+kufr|1|haubna||psh
+lístek|1|lupeň||
+lužánky|1|Augec||
+meruňky|1|mergle||
+měsíc|1|metr||psh
+mluvit|1|ševelit||
+motocykl|1|chrchla||psh
+nadávka|1|šuft||
+nádraží|1|rola||
+náhoda,větev|1|haluz||psh
+napínat|1|šponovat||
+nepořádek|1|binec ||
+nepořádek|1|herberk||psh
+obrazovka|1|špizlampa||
+oči|1|augle||
+originální|1|origoš||
+Pavilón|1|Pavec||
+pětikoruna|1|búra||
+Pisárky|1|Šrajbec||
+písnička|1|zonka||
+pistole|1|bóchačka||
+pivovar|1|pivec||
+podfuk|1|habaďúra||psh
+podraz|1|šmé||
+polévka|1|blča||
+policie|1|šilci||
+pomoci|1|helfnót||
+ponětí|1|šajn||
+popelník|1|pudřenka||
+poschodí|1|štok||
+pošťuchovat|1|répat||
+potvrzení|1|ferbl||
+provokovat|1|štengrovat||
+průšvih|1|malér||psh
+přesvědčovat|1|hecovat||psh
+radnice|1|rathaus||
+Riviéra|1|Rivec||
+rok|1|jár||psh
+roky|1|jařiny||psh
+ruka|1|haluza||psh
+rvačka|1|mlata||psh|mixna||psh
+sáhnout|1|šáhnót||
+se|1|se||
+sebrat|1|kásnót||
+sehnat|1|splašit||
+sešlápnout|1|hemznout||psh
+Soběšice|1|Sobůlky||
+soud|1|mlén||
+souložit|1|šukat||
+spaní|1|chrupna||
+spaní|1|chrupna||psh
+strach|1|fedry||
+šetřit|1|špórovat||
+škola|1|bóda||
+televizor|1|idiotbox||
+tetování|1|kérka||
+tisíc|1|tauzn||
+tisícikoruna|1|tauzna||
+udělat|1|uvařit||
+ukrást|1|šlohnót||
+úředník|1|ingóst||
+vědět|1|gómat||
+vědomost|1|ánunk||
+ven|1|aus||
+vesnice|1|lont||psh
+vesničan|1|lonťák||psh
+vinohrady|1|vincky||
+vlasy|1|harizony||psh
+vyčerpán|1|hyn||
+Výstaviště|1|Vystec||
+zahrát|1|zavařit||
+zatknout|1|mapsnót||psh
+zavřeno|1|machl||psh
+zpívat|1|békat||
+Zvonařka|1|Zvonec||
+zvracení|1|šavla||
+žabovřesky|1|žabiny||
+židenice|1|šimice||
+židle|1|sesla||
 -
 ok|vok
 sh|zh
@@ -267,6 +308,14 @@ kolej|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
 zlatO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 nedělE|1|e|e|i|i|e|i|í|e|,í|ím|e|e|ích|emi
+BOTY|1|-|-|-|-|-|-|-|boty|bot|botám|boty|boty|botách|botami
+nádraží|0|||||||m|||m|||ch|mi
+HODINKY|1|-|-|-|-|-|-|-|hodinky|hodinek|hodinkám|hodinky|hodinky|hodinkách|hodinkami
+hlupáK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+prostitutKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+praK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+žampion|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+továrNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
 -
 NESKLONNÉ|-1||||||||||||||
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
@@ -312,131 +361,147 @@ glajzE|1|?|e?|i?|?|i?|i?|í?|e|í?|ím?|e?|e?|ích?|emi?
 zlatO|0|o?|a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 gólKA|1|ka|by?|bje?|bu?|bo?|bje?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 neďelE|1|e|e?|i?|i?|e?|i?|í?|e?|?,í?|ím?|e?|e?|ích?|emi?
+lojfle|1|-|-|-|-|-|-|-|lojfle|bot?|botám?|boty?|boty?|botách?|botami?
+rolA|0|a|?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+RAKY|1|-|-|-|-|-|-|-|raky|hoďinek?|hoďinkám?|hoďinky?|hoďinky?|hoďinkách?|hoďinkami?
+blbštajn|2||ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+štroncNA|1|na|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+šinDA|3|da|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+žampEC|3|?|u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+fabalA|1|a|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 -
-alimenty||0|aloše||
-aut|městO|0|měst|městO|
-benzín||0|beneli||
-blázin|blázinEC|0|šašk|blázinEC|
-bolíst|pohádKA|0|bebin|městO|
-boul|růžE|0|hrč|ženA|
-brn|městO|0|brnisk|městO|
-brusl|růžE|0|ryg|ženA|
-brýle||0|čočky||
-břich|městO|0|bauch||
-býk|syn|0|bék|syn|
-bystrc||0|bástr||
-čech|syn|0|čížek||
-d|dÍTĚ|0|sysel|syn|
-darebák|syn|0|dacan|syn|
-děck|městO|0|netopýr|syn|
-detail|stroj|0|detajl|hrad|
-děvč|kuřE|0|debrecin|pohádKA|
-dolary||0|dolcky||
-elektrárn|ženA|0|šalintechn|ženA|
-fotograf||0|bléskač||
-hlav|ženA|0|dózn|ženA||gebe|gebeŇA||glocn|ženA|
-hodinky||0|cibul|růžE|
-hor|ženA|0|bergl|ženA|
-hospod|ženA|0|paluš|ženA|
-hrad||0|gracna||
-hřib|hřib|0|gampl|gampl|
-chlap|chlap|0|chlap|chlap|
-jíd|jídLO|0|chál|pohádKA|
-jinačovic|těšeticE|0|jinačky||
-jirk|předsedA|0|jirk|předsedA|
-jundrovan|muž|0|jóbáli||
-jundrovic|těšeticE|0|jóbsk|městO|
-kamenolom|hrad|0|šutrotechn|ženA|
-kaňk|předsedA|0|kaňk|předsedA|
-klouzač|pohádKA|0|šlind|ženA|
-kohoutovice|těšeticE|0|kohótky||
-kolej|kolej|0|glajz|glajzE|
-kop|kopEC|0|bergl|hrad|
-krádež|tramvaj|0|vidl|ženA||čór|pohádKA|
-l|lEST|0|flig|fligNA|
-lan|městO|0|štran|stromEK|
-led|hrad|0|ajsův|pohádKA|
-legrac|růžE|0|čurin|ženA|
-listin|ženA|0|canc|NESKLONNÉ|
-lo|loĎ|0|šíf|hrad|
-matk|ženA|0|mutr|ženA|
-měsíc|stroj|0|metr|hrad|
-měst|městO|0|štatl|hrad|
-míst|městO|0|tympl||
-míst|místO|0|flek|flek|
-myslivn|ženA|0|jégrhaus|hrad|
-náplast|náplast|0|flastr|flastr|
-neděl|nedělE|0|neďel|neďelE|
-noh|ženA|0|haksn|ženA|
-obličej|stroj|0|ciferník|hrad|
-oči||0|augle||
-odborní|odborníK|0|fachmon|fachmon|
-oh|ohEŇ|0|fajer|fajer|
-ok|okNO|0|fenstr|fenstr|
-okolky||0|cavyky||
-opas|stromEK|0|řemeň|les|
-opletač|pohádKA|0|córes|těšeticE|
-ostopovic|růžE|0|ostopky||
-penis|hrad|0|caban|hrad|
-peníz|stroj|0|love|NESKLONNÉ||tintili |||bakule||
-pes|syn|0|čokl|syn|
-pisárky||0|šrajbec||
-piv|městO|0|bahn|městO||čechr|hrad|
-pivovar||0|pivec||
-plav|pohádKA|0|šwimhozn|ženA|
-pokoj|pokoj|0|cimr|cimrA|ve významu místnosti
-policajti||0|švestky||
-policist|policistA|0|filc|filc||fízl||
-postel|tramvaj|0|betl|ženA|
-pr|prÁCE|0|hokn|ženA|
-pra|praHA|2|prágl|prágl|
-pražák|syn|0|cajzl|syn|
-prsa||0|dudy||
-předsed|předsedA|0|předsed|předsedA|
-příběh||0|story||
-přístaviš|přístavišTĚ|0|port|hrad|
-rán|ženA|0|řach|ženA|
-rán|ženA|0|dack|ženA|
-riviéra |ženA|0|rivec|hrad|
-roh|hrad|0|ekl|hrad|
-rok|hrad|0|jár ||
-roky||0|jařiny ||
-rozdrojovic|těšeticE|0|rozdrojky||
-ryb|ženA|0|fišl|ženA|
-rychlost|rychlost|0|fajrunk|fajrunk|
-řečkovice||0|řečky||
-řek|ženA|0|len|ženA|
-sestr|ženA|0|švic|ženA|
-sluh|předsedA|0|dýnstman|syn|
-slunc|mořE|0|zoncn|ženA|
-smích|hrad|0|lochec||
-smích|smích|0|loch|lochEC|
-smrad|hrad|0|rychn|ženA|
-sraz|hrad|0|scu|pohádKA|
-srdc|mořE|0|hercn|ženA|
-svat|svatBA|0|gól|gólKA|
-svratka|pohádKA|0|švarcav|ženA|
-taxi|NESKLONNÉ|0|taxál|hrad|
-televizor||0|idiotbox ||
-tchán|syn|0|švirgrfotr|syn|
-tišnov|les|0|tygál|hrad|
-továr|továrNA|0|fabal|fabalA|
-tramvaj|tramvaj|0|šalin|ženA|
-uch|městO|0|ovar|hrad|
-úředník|syn|0|ingóst||
-vedr|městO|0|hic|hrad|
-venkov|venkov|0|lont|lont|
-vod|ženA|0|vasrův|pohádKA||vasr|pohádKA|
-vstupen|vstupenKA|0|flósek|flósEK|
-výš|pohádKA|0|véš|pohádKA|
-vzduch|hrad|0|luft|hrad|
-wc|NESKLONNÉ|0|retych|hrad|
-zad|zadEK|0|gébiš|gébiš|
-záchod|hrad|0|retych|hrad|
-zim|ženA|0|krut|ženA|
-zlat|zlatO|0|gold|fligNA|
-žabovřesky||0|žabiny||
-žebětín|les|0|žebál|les|
+alimenty||0|aloše|||
+aut|městO|0|měst|městO||
+benzín||0|beneli|||
+blázin|blázinEC|0|šašk|blázinEC||
+bolíst|pohádKA|0|bebin|městO||
+boul|růžE|0|hrč|ženA||
+brn|městO|0|brnisk|městO||
+brusl|růžE|0|ryg|ženA||
+brýle||0|čočky|||
+břich|městO|0|bauch|||
+býk|syn|0|bék|syn||
+bystrc||0|bástr|||
+čech|syn|0|čížek|||
+d|dÍTĚ|0|sysel|syn||
+darebák|syn|0|dacan|syn||
+děck|městO|0|netopýr|syn||
+detail|stroj|0|detajl|hrad||
+děvč|kuřE|0|debrecin|pohádKA||
+dolary||0|dolcky|||
+elektrárn|ženA|0|šalintechn|ženA||
+fotograf||0|bléskač|||
+hlav|ženA|0|dózn|ženA|||gebe|gebeŇA|||glocn|ženA||
+hodinky||0|cibul|růžE||
+hor|ženA|0|bergl|ženA||
+hospod|ženA|0|paluš|ženA||
+hrad||0|gracna|||
+hřib|hřib|0|gampl|gampl||
+chlap|chlap|0|chlap|chlap||
+jíd|jídLO|0|chál|pohádKA||
+jinačovic|těšeticE|0|jinačky|||
+jirk|předsedA|0|jirk|předsedA||
+jundrovan|muž|0|jóbáli|||
+jundrovic|těšeticE|0|jóbsk|městO||
+kamenolom|hrad|0|šutrotechn|ženA||
+kaňk|předsedA|0|kaňk|předsedA||
+klouzač|pohádKA|0|šlind|ženA||
+kohoutovice|těšeticE|0|kohótky|||
+kolej|kolej|0|glajz|glajzE||
+kop|kopEC|0|bergl|hrad||
+krádež|tramvaj|0|vidl|ženA|||čór|pohádKA||
+l|lEST|0|flig|fligNA||
+lan|městO|0|štran|stromEK||
+led|hrad|0|ajsův|pohádKA||
+legrac|růžE|0|čurin|ženA||
+listin|ženA|0|canc|NESKLONNÉ||
+lo|loĎ|0|šíf|hrad||
+matk|ženA|0|mutr|ženA||
+měsíc|stroj|0|metr|hrad||
+měst|městO|0|štatl|hrad||
+míst|městO|0|tympl|||
+míst|místO|0|flek|flek||
+myslivn|ženA|0|jégrhaus|hrad||
+náplast|náplast|0|flastr|flastr||
+neděl|nedělE|0|neďel|neďelE||
+noh|ženA|0|haksn|ženA||
+obličej|stroj|0|ciferník|hrad||
+oči||0|augle|||
+odborní|odborníK|0|fachmon|fachmon||
+oh|ohEŇ|0|fajer|fajer||
+ok|okNO|0|fenstr|fenstr||
+okolky||0|cavyky|||
+opas|stromEK|0|řemeň|les||
+opletač|pohádKA|0|córes|těšeticE||
+ostopovic|růžE|0|ostopky|||
+penis|hrad|0|caban|hrad||
+peníz|stroj|0|love|NESKLONNÉ|||tintili ||||bakule|||
+pes|syn|0|čokl|syn||
+pisárky||0|šrajbec|||
+piv|městO|0|bahn|městO|||čechr|hrad||
+pivovar||0|pivec|||
+plav|pohádKA|0|šwimhozn|ženA||
+pokoj|pokoj|0|cimr|cimrA|ve významu místnosti|
+policajti||0|švestky|||
+policist|policistA|0|filc|filc|||fízl||||hémon|||
+postel|tramvaj|0|betl|ženA||
+pr|prÁCE|0|hokn|ženA||
+pra|praHA|2|prágl|prágl||
+pražák|syn|0|cajzl|syn||
+prsa||0|dudy|||
+předsed|předsedA|0|předsed|předsedA||
+příběh||0|story|||
+přístaviš|přístavišTĚ|0|port|hrad||
+rán|ženA|0|řach|ženA||
+rán|ženA|0|dack|ženA||
+riviéra |ženA|0|rivec|hrad||
+roh|hrad|0|ekl|hrad||
+rok|hrad|0|jár |||
+roky||0|jařiny |||
+rozdrojovic|těšeticE|0|rozdrojky|||
+ryb|ženA|0|fišl|ženA||
+rychlost|rychlost|0|fajrunk|fajrunk||
+řečkovice||0|řečky|||
+řek|ženA|0|len|ženA||
+sestr|ženA|0|švic|ženA||
+sluh|předsedA|0|dýnstman|syn||
+slunc|mořE|0|zoncn|ženA||
+smích|hrad|0|lochec|||
+smích|smích|0|loch|lochEC||
+smrad|hrad|0|rychn|ženA||
+sraz|hrad|0|scu|pohádKA||
+srdc|mořE|0|hercn|ženA||
+svat|svatBA|0|gól|gólKA||
+svratka|pohádKA|0|švarcav|ženA||
+taxi|NESKLONNÉ|0|taxál|hrad||
+televizor||0|idiotbox |||
+tchán|syn|0|švirgrfotr|syn||
+tišnov|les|0|tygál|hrad||
+továr|továrNA|0|fabal|fabalA||
+tramvaj|tramvaj|0|šalin|ženA||
+uch|městO|0|ovar|hrad||
+úředník|syn|0|ingóst|||
+vedr|městO|0|hic|hrad||
+venkov|venkov|0|lont|lont||
+vod|ženA|0|vasrův|pohádKA|||vasr|pohádKA||
+vstupen|vstupenKA|0|flósek|flósEK||
+výš|pohádKA|0|véš|pohádKA||
+vzduch|hrad|0|luft|hrad||
+wc|NESKLONNÉ|0|retych|hrad||
+zad|zadEK|0|gébiš|gébiš||
+záchod|hrad|0|retych|hrad||
+zim|ženA|0|krut|ženA||
+zlat|zlatO|0|gold|fligNA||
+žabovřesky||0|žabiny|||
+žebětín|les|0|žebál|les||
+|BOTY|0||lojfle||
+nádraží|nádraží|0|nádraží|nádraží||
+|HODINKY|0||RAKY||
+hlupá|hlupáK|0|blbštajn|blbštajn||
+prostitut|prostitutKA|0|štronc|štroncNA|||štryc|štroncNA||
+pra|praK|0|šin|šinDA||
+žampion|žampion|0|žamp|žampEC||
+továr|továrNA|0|fabal|fabalA||
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 fialovÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -444,14 +509,14 @@ fialovÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é
 zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|né|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 fialovÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á|é?|é?|ou?|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|é|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í?|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 -
-cel|fialovÝ|cel|fialovÝ|
-výborn|zelenÝ|špicov|fialovÝ|
-zlat|zelenÝ|goldnov|fialovÝ|
-špatn|zelenÝ|pasov|fialovÝ|
-přebytečn|zelenÝ|plonkov|fialovÝ|
-samotn|zelenÝ|plonkov|fialovÝ|
-společn|zelenÝ|společ|zeleNÝ|
-zamčen|zelenÝ|špérova|zeleNÝ|
+cel|fialovÝ|cel|fialovÝ||
+výborn|zelenÝ|špicov|fialovÝ||
+zlat|zelenÝ|goldnov|fialovÝ||
+špatn|zelenÝ|pasov|fialovÝ||
+přebytečn|zelenÝ|plonkov|fialovÝ||
+samotn|zelenÝ|plonkov|fialovÝ||
+společn|zelenÝ|společ|zeleNÝ||
+zamčen|zelenÝ|špérova|zeleNÝ||
 -
 něCO|co|čeho|čemu|co|co|čem|čím
 já|já|mě,mne|mně,mi|mě,mne|já|mně|mnou
@@ -465,17 +530,17 @@ keRĚ|ré|rýho|rýmu|rýho|-|rým|rém|ří|réch|rém|ré|-|réch|réma|ré|r�
 ňáKÝ|ké|kýho|kýmu|kýho|-|kým|kém|cí|kéch|kém|ký|-|kéch|kéma|ký|kého|kému|ký|-|kým|kém|ký|kéch|kém|ký|-|kéch|kéma|ká|ké|ké|kó|-|ké|kó|ké|kých|kým|ké|-|kéch|kéma|ké|kého|kému|ké|-|kým|kém|ká|kých|kým|ká|-|kéch|kéma
 tEN|en|eho|emu|eho|-|em|ím|i|ech|em|y|-|ech|ema|y|eho|emu|en|-|em|ím|y|ech|em|y|-|ech|ema|a|é|é|u|-|é|ó|y|ech|em|y|-|ech|ema|y|eho|emu|o|-|em|ím|a|ech|em|a|-|ech|ema
 -
-|něCO||neCO|
-|já||já|
-kte|kteRÝ|ke|keRĚ|
-něja|nějaKÝ|ňá|ňáKÝ|
-t|tEN|t|tEN|
+|něCO||neCO||
+|já||já||
+kte|kteRÝ|ke|keRĚ||
+něja|nějaKÝ|ňá|ňáKÝ||
+t|tEN|t|tEN||
 -
 mnohO|4|o|a|a|o|o|a|a|||||||||||||||||||||||||||||||||||||||||||||||||
 -
 mnohO|4|o|a|a|o|o|a|a|||||||||||||||||||||||||||||||||||||||||||||||||
 -
-mnoh|mnohO|haf|mnohO|
+mnoh|mnohO|haf|mnohO||
 -
 být|119|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď,budiž|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše
 mluvIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
@@ -493,6 +558,7 @@ hořET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
 sedNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la
 pÍT|15|-1|ít|iju,piji|iješ|ije|ijeme|ijete|ijou,pijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
 dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+balamutit|0|-1|
 -
 bet|247|-1|bet|su,sem|si|je|sme|ste|só|budu|budeš|bude|budeme|budete|budó|buď?,budiž?|buďme?|buďte?|byl|byl|byla|bylo|byli|byly|byly|byla|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|?|?|bi|?|?|?
 mluvIT|15|-1|it|ím|íš|í|íme|íte|ijó||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
@@ -509,72 +575,74 @@ fajrovAT|7|-1|at|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?
 gecNÓT|22|-1|nót|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?|l?|la?|lo?|li?|ly?|ly?|la?
 glgAT|15|-1|at|iju?,piji?|iješ?|ije?|ijeme?|ijete?|ijou?,pijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
 dÁT|30|-1|át?|ám?|áš?|á?|áme|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+balamuťit|0|-1|?
 -
-|být||bet|
-mluv|mluvIT|mluv|bet|
-ch|chTÍT|ch|chTÍT|
-cháp|chápAT|góm|chápAT|
-děl|dělAT|děl|dělAT|
-pomáh|dělAT|helfn|mluvIT|
-sp|spÁT|šlofn|helfnÓT|
-rozsvítit||rožnout||
-koupání||cébračka||
-chodit||córat||
-chytit||čapnout||
-uvidět||zbliknót||
-zahrát||zavařit||
-zaplatit||zacálovat||
-vypít||vyžahnót||
-žít||vegetit||
-udělat||uvařit||
-m|mít|m|mĚT|
-pom|pomOCT|helfn|helfnÓT|
-plavat ||švimčit ||
-zapla|zaplaTIT|zacólovAT|||zacálovAT|||zacvakAT||
-umř|umřÍT|zkalit|||zagrebovat||
-j|jÍST|j|jÍST|
-prac|pracOVAT|fachč|fachčIT|
-hoř|hořET|fajrov|fajrovAT|
-osahávat||filcovat||
-plivat||flusat||
-sed|sedNOUT|gec|gecNÓT|
-tlemit se||gébit||
-p|pÍT|glgAT|glgAT|
-||||
-d|dÁT|d|dÁT|
-nem|mít|nem|mĚT|
+|být||bet||
+|||||
+balamutit|balamutit|bomzovat|balamuťit||
+d|dÁT|d|dÁT||
+děl|dělAT|děl|dělAT||
+hoř|hořET|fajrov|fajrovAT||
+ch|chTÍT|ch|chTÍT||
+cháp|chápAT|góm|chápAT||
+chodit||córat|||
+chytit||čapnout|||
+j|jÍST|j|jÍST||
+koupání||cébračka|||
+m|mít|m|mĚT||
+mluv|mluvIT|mluv|bet||
+nem|mít|nem|mĚT||
+osahávat||filcovat|||
+p|pÍT|glg|glgAT||
+plavat ||švimčit |||
+plivat||flusat|||
+pom|pomOCT|helfn|helfnÓT||
+pomáh|dělAT|helfn|mluvIT||
+prac|pracOVAT|fachč|fachčIT||
+rozsvítit||rožnout|||
+sed|sedNOUT|gec|gecNÓT||
+sp|spÁT|šlofn|helfnÓT||
+tlemit se||gébit|||
+udělat||uvařit|||
+umř|umřÍT|zkalit||||zagrebovat|||
+uvidět||zbliknót|||
+vypít||vyžahnót|||
+zahrát||zavařit|||
+zapla|zaplaTIT|zacólovAT||||zacálovAT||||zacvakAT|||
+zaplatit||zacálovat|||
+žít||vegetit|||
 -
-||
-hezky|pěkně|
-hodně|hafo|
-ještě|ešče|
-neustále|imrvére|
-odsud|vocať|
-pěšky|šórem|
-rychle|fofr|
-samozdžejmě|jasnačka|
-samozřejmě|jasňačka|
-taky|taky|
-teď|fčil|
-téměř|skoro|
-ven,pryč|aus|
-zadarmo|zadara||zadarmiko|
-zítra|zejtra|
-tak|tag|
+|||
+hezky|pěkně||
+hodně|hafo||
+ještě|ešče||
+neustále|imrvére||
+odsud|vocať||
+pěšky|šórem||
+rychle|fofr||
+samozdžejmě|jasnačka||
+samozřejmě|jasňačka||
+taky|taky||
+teď|fčil||
+téměř|skoro||
+ven,pryč|aus||
+zadarmo|zadara|||zadarmiko||
+zítra|zejtra||
+tak|tag||
 -
-o||vo|
-i||aji|
-od||vod|
-do||do|
-na||na|
-z||z|
-ze||ze|
+o||vo||
+i||aji||
+od||vod||
+do||do||
+na||na||
+z||z||
+ze||ze||
 -
-jestli|esi||jesli||esli|
-a|a|
-ale|ale|
-když|když|
+jestli|esi|||jesli|||esli||
+a|a||
+ale|ale||
+když|když||
 -
-prý|pré||prej|
+prý|pré|||prej||
 -
-ahoj|zdarec||zdar|
+ahoj|zdarec|||zdar||

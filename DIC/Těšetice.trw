@@ -1,17 +1,21 @@
-TW v2
+TW v3
 tTěšetice
 aGG
 d19.01.2024 19:51:14
 c#Zdroje dat\n-https://archive.org/details/dialektologiemor02bartuoft/page/65/mode/1up\n\n#Popis nářečí\n-ł a ľ rozeznává se zcela určitě a rázně ještě v Těšeticich: skala, klada, tabola, zěléné, pacholek atd.\n-V Těšeticich a v Kostelci původní e, o a zástupné é, ó zní značně výše nežli v Nákle.
+u1
+lhanácké
 g49.5926446,17.1275434
+x3
+rnář=Těšeťice
 q0
-oHaná
+oHaná>Blaťácko
 -
 -
 -
 -
 -
-vaše dcera|1|vašê? cê?rka|
+vaše dcera|1|vašê? cê?rka||
 -
 -
 -
@@ -24,24 +28,26 @@ tabulE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 matKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 jmÉNO|0|éno|éna|énu|éno|éno|énu,éně|énem|éna|en|énům|éna|éna|énech|ény
+čeledín|-1||a|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
 -
-cêrKA|1|rka|ry?|ři?|ru?|ro?|ři?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
+cêrKA|1|ka|ry?|ři?|ru?|ro?|ři?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 skaŁA|1|ła|ły?|łe?|łu?|ło?|łe?|łou?|ły?|ł?,ł?|łám?,łám?|ły?|ły?|łách?,łách?|łami?,łami?
 kłaDA|1|da|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 tabôĽA|1|ľa|le?|li?|li?|le?|li?|lí?|le?|lí?|lím?|le?|le?|lích?|lemi?
 svaDBA|1|dba|dby?|dbje?|dbu?|dbo?|dbje?|dbou?|dby?|deb?|dbám?|dby?|dby?|dbách?|dbami?
 matKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 mÉNO|0|éno|éna?|énu?|éno?|éno?|énu?,éňe?|énem?|éna?|en?|énúm?|éna?|éna?|énech?|ény?
+pachołEK|-1|ek|na?|nu?,novi?|na?|ne?|nu?,novi?|nem?|ňi?,nové?|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
 -
-dce|dceRA|0|cêr|cêrKA|
-skál|skálA|0|ska|skaŁA|
-klád|kládA|0|kła|kłaDA|
-tabul|tabulE|0|tabô|tabôĽA|
-||0|pachołek||
-||0|zeľené?||
-svat|svatBA|0|sva|svaDBA|
-mat|matKA|0|mat|matKA|
-jm|jmÉNO|0|m|mÉNO|
+dce|dceRA|0|cêr|cêrKA||
+skál|skálA|0|ska|skaŁA||
+klád|kládA|0|kła|kłaDA||
+tabul|tabulE|0|tabô|tabôĽA||
+čeledín|čeledín|0|pachoł|pachołEK||
+||0|zeľené?|||
+svat|svatBA|0|sva|svaDBA||
+mat|matKA|0|mat|matKA||
+jm|jmÉNO|0|m|mÉNO||
 -
 -
 -
@@ -52,8 +58,8 @@ nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|a�
 vÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|ašê|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|ašê|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 -
-v|vÁŠ|v|vÁŠ|
-n|nÁŠ|n|nÁŠ|
+v|vÁŠ|v|vÁŠ||
+n|nÁŠ|n|nÁŠ||
 -
 -
 -
