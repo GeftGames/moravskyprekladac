@@ -415,7 +415,7 @@
                                 <option id="textCes" value="czech">Česká fonetická</option>
                                 <option id="textMor" value="moravian">Moravská (Kozohorský)</option>
                                 <option id="textMor" value="silezian_slabikorzovy">Slezská spřežková (Slabikářův)</option>
-                              <!---->  <optgroup>
+                                <optgroup>
                                     <option id="textAzbuka" value="cyrilice">Cyrilice</option>
                                     <option id="textHiragana" value="hiragana">Hiragana</option>
                                     <option id="textKatakana" value="katakana">Katakana</option>
@@ -505,17 +505,30 @@
                             </div>
                             <div style="display: flex;">
                                 <span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
-										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
-									</span>
+                                    <svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
+                                </span>
                                 <span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="PopPageShow('pageInfoLang');">
-										<svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
-									</span>
+                                    <svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
+                                </span>
                             </div>
-                            <div style="display:none" id="optionsSelect"></div>
+                        </div>
+
+                        <span id="spoilerOptLangOpener" class="link" onclick="
+                            if (document.getElementById('spoilerLangOpt').style.getPropertyValue('max-height')=='0px') {
+                               // document.getElementById('spoilerLangOpt').style.display='block';
+                                document.getElementById('spoilerLangOpt').style.setProperty('max-height','800px');
+                                this.innerText='Skrýt nastavení překladu';
+                            }else {
+                               // document.getElementById('spoilerLangOpt').style.display='none';
+                                document.getElementById('spoilerLangOpt').style.setProperty('max-height','0px');
+                                this.innerText='Zobrazit nastavení překladu';
+                            }">Zobrazit nastavení jazyka</span>
+                        <div id="spoilerLangOpt" style="display:block;max-height: 0" >                            
+                            <div id="optionsSelect"></div>
                         </div>
 
                     </div>
-                    <!---->
+                    
 
                     <div style="display: flex; justify-content: center;margin-top: 20px;height: 38px;">
                         <h2 rel="nofollow" id="tabText" class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));" shorttext="Text">Text</h2>
@@ -869,7 +882,7 @@
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=ê}>',mapper_options_filter('1'))">ê</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=ô}>',mapper_options_filter('1'))">ô</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>',mapper_options_filter('1'))">dź</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>',mapper_options_filter('1'))">dž</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{exists=dž}>',mapper_options_filter('1'))">dž</div>
                                 </div>
                                 <p>Názvy míst</p>
                                 <div class="navrhCat">
