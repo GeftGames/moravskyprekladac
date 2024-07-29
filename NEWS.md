@@ -1,4 +1,7 @@
 # Poslední změny
+### 29.07.2024
++ Moravština nastavení jazyka už by mělo fungovat
+
 ### 2024 19.7.
 + Statistika databáze (boční nastavení > O překladači > Statistika > Statistika databáze)
 + Google Analytics
