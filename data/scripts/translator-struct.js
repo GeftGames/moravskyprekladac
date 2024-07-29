@@ -5615,7 +5615,7 @@ class LanguageTr{
         this.html = htmlFancyOut;
         this.htmlCodeTranslate=true;
 
-        PrepareReplaceRules();
+       // PrepareReplaceRules();
 
         if (dev) console.log("📝 Translating " + this.Name + "...");
 
@@ -7249,7 +7249,7 @@ class Selector {
 }
 
 // By custom defined in lang from select
-function PrepareReplaceRules() {
+/*function PrepareReplaceRules() {
     SimplyfiedReplacedRules = [];
 
     let list = document.getElementById("optionsSelect");
@@ -7263,10 +7263,10 @@ function PrepareReplaceRules() {
             SimplyfiedReplacedRules.push([search, replace]);
         }
     }
-}
+}*/
 
 // Vytvoření volitelností
-function CustomChoosenReplacesCreate() {
+/*function CustomChoosenReplacesCreate() {
     let area = document.getElementById("optionsSelect");
     area.innerHTML = "";
 
@@ -7284,7 +7284,7 @@ function CustomChoosenReplacesCreate() {
     }
 }
 
-var preparedLocalRules = [];
+var preparedLocalRules = [];*/
 
 function ApplyPostRules(text) {
     //	let ret=text;
@@ -7383,10 +7383,12 @@ function FastLoadTranslateTo(rawData, indexStart) {
     return ret;
 }
 
-function ApplyTranscription(str) {
+function ApplyTranscription(text) {
     //	console.log("transcription: ", transcription);
     if (transcription == null) return str;
     //	console.log("before: ", str);
+
+    let str=ReplaceMoravian(text);
 
     let PatternAlrearyReplaced = [];
     for (let i = 0; i <= str.length; i++) {
@@ -7512,12 +7514,27 @@ function GenerateSupCite(source) {
         let c = document.createElement("sup");
         c.innerText = "["+ci+"]";
         c.className = "reference";
-        c.addEventListener("click", (e) => {
+        c.addEventListener("click", () => {
             ShowCite(ci);
         });
         sp.push(c);        
     }
     return sp;   
+}
+
+function ReplaceMoravian(str) {
+    if (currentLang.Id!=moravianId) return str;
+    let ret=str;
+    for (let r of replacesMoravian) {
+        if (r.Type=="var") {
+            ret=ret.replaceAll("<{"+r.Code+"}>", r.Variants[r.Selected]);
+        } else {
+            for (let rr of r.Replace) {
+                ret=ret.replaceAll(rr.From, rr.Variants[r.Selected]);
+            }
+        }
+    }
+    return ret;
 }
 
 console.log("test3", new LanguageTr());

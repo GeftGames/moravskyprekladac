@@ -171,6 +171,7 @@ var currentLang;
 var languagesList = [];
 var languagesListAll = [];
 
+var moravianId=-1;
 
 function initLoadingLangData() {
     if (dev) console.log("Translator inicializating starting...");
@@ -241,13 +242,14 @@ function GetTranslations() {
         //console.log(input_lang);
         if (input_lang!="" && input_lang!=undefined) document.getElementById("selectorTo").value=input_lang;
         currentLang = GetCurrentLanguage();
+        BuildOptionsMoravian();
         if (input_lang!="" && input_lang!=undefined) Translate();
         
         if (mapper_starting_input!=undefined){
             //console.log(mapper_starting_input);
             document.getElementById("mapperInput").value=mapper_starting_input;
             mapper_init();
-            mapper_starting_input=undefined;
+            mapper_starting_input=undefined;            
         }
 
         titleUpdate();
@@ -330,7 +332,9 @@ function GetTranslations() {
             }
             return select2;
         }
-
+        
+        if (lang.Name=='Moravština "spisovná"')moravianId=lang.Id;
+       
         // map=all
         if (FilterCountry(lang.Country)) languagesListAll.push(lang);
 
@@ -341,6 +345,7 @@ function GetTranslations() {
             if ((!betaFunctions && stats >= 10 && FilterCountry(lang.Country)) || (betaFunctions && lang.Quality >= 0) || dev) {
                 let name = lang.Name;
                 //if (betaFunctions || dev){
+                
                 if (lang.Quality > 2) name += " ✅";
                 if (stats == 0) name += " 💩";
                 //else 
@@ -437,6 +442,7 @@ function ClearTextbox(textbox) {
 
 function Translate() {
     currentLang = GetCurrentLanguage();
+
     if (currentLang==null) return;
     let input = document.getElementById("specialTextarea").value;
     if (input == "") document.getElementById("ClearTextbox").style.display = "none";
@@ -452,7 +458,7 @@ function Translate() {
         if (dev) console.log("Transtated as: ", out);
         outputParernt.appendChild(out);
 
-        BuildSelect(currentLang);
+      //  BuildSelect(currentLang);
     }
 }
 
@@ -517,7 +523,7 @@ function ReportDownloadedLanguage() {
         }, 100)
     }
 }
-
+/*
 function BuildSelect(lang) {
     if (lang == null) return "";
     let parent = document.getElementById("optionsSelect");
@@ -548,7 +554,7 @@ function BuildSelect(lang) {
 
         parent.appendChild(node);
     }
-}
+}*/
 
 function translateContentsSubs(contents, name) {
     console.log("Translating file...");

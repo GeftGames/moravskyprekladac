@@ -4,7 +4,7 @@ var webSearchParams=[]; //{showName: page, name: "page", value: "subs"}
 
 //import { mapRedraw } from "./map-lookup.js";
 //import { initLoadingLangData } from "./translator-control.js";
-
+var replacesMoravian;
 // Settings
 var error = false;
 var transcription = null;
@@ -468,6 +468,7 @@ function ChangeDic() {
         localStorage.setItem('trTo', selTo.value);
     //location.hash.to = selTo.value;
     urlParamChange("dic_to", selTo.value, true);
+    BuildOptionsMoravian();
     //let n;
     //let headername = document.getElementById('headername');
 
@@ -1205,6 +1206,8 @@ function hideNav() {
 var Load = function () {
     initLoadingLangData();
     initLookUpMap();
+
+    MaravianVariantsSet();
     //geolocation();
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cacheTabSelect */
@@ -6443,4 +6446,202 @@ function GetTopLangs() {
     generateTopListSipleWorldLike("Particles");
     generateTopListSipleWorldLike("Interjections");
     generateTopListSipleWorldLike("SimpleWords");
+}
+
+function MaravianVariantsSet() {
+    //var: <{ins}>
+    replacesMoravian=[
+        // 7. pád
+        { 
+            // strojamA / strojamI
+            Show: "strojam<x>",
+            Name: "Konec 7. pádu",
+            Type: "var",
+            Code: "ins",
+            Selected: 0,
+            Variants: ["i", "a"]
+        },
+        {
+            // dEJ/dAJ/dÍ
+            Show: "d<x>",
+            Name: "Dvouhláska AJ/EJ",
+            Code: "imp",
+            Type: "var",
+            Selected: 0,
+            Variants: ["aj", "é", "ej"]
+        },
+        {
+            // sušAt, sušEt
+            Show: "suš<x>t",
+            Name: "Přehlasování a",
+            Type: "var",
+            Code: "sl_e",
+            Selected: 0,
+            Variants: ["e", "a"]
+        },
+
+        {
+            // byT/byŤ
+            Show: "by<x>",
+            Name: "Tvrdost infinitivu",
+            Code: "inf",
+            Type: "var",
+            Selected: 0,
+            Variants: ["ť", "t"]
+        },
+
+        {
+            // sou, só, sú
+            Show: "s<x>",
+            Name: "Dvojhláska ou",
+            Type: "rep",
+            Selected: 0,
+            Replace: [
+                {
+                    From: "ou",
+                    Variants: ["ú", "ó", "ou"]
+                }
+            ]
+        },
+
+        {
+            // psaly / psalE
+            Show: "psal<x>",
+            Name: "Hanácké e u než. a žen. min. času",
+            Type: "var",
+            Code: "h_e",
+            Selected: 0,
+            Variants: ["e", "y", "i"]
+        },
+        {
+            // psali / psalE
+            Show: "psal<x>",
+            Name: "Hanácké e u živ. min. času",
+            Type: "var",
+            Code: "h_e2",
+            Selected: 0,
+            Variants: ["i", "e"]
+        },
+
+        {
+            // ľes / les
+            Show: "<x>es",
+            Name: "Měkké Ľ",
+            Type: "rep",
+            Selected: 0,
+            Replace: [
+                {
+                    From: "ľ",
+                    Variants: ["ľ", "l"]
+                },
+                {
+                    From: "Ľ",
+                    Variants: ["Ľ", "L"]
+                }
+            ]
+        },
+
+        {
+            // skała / skala
+            Show: "ska<x>a",
+            Name: "Tvrdé Ł",
+            Type: "rep",
+            Selected: 0,
+            Replace: [
+                {
+                    From: "ł",
+                    Variants: ["ł", "l"]
+                },
+                {
+                    From: "Ł",
+                    Variants: ["Ł", "L"]
+                } 
+            ]
+        },
+    ];
+}
+
+function BuildOptionsMoravian(){
+    let outerOptions=document.getElementById("optionsSelect");
+    outerOptions.innerHTML="";
+    
+    if (moravianId.toString()!=document.getElementById('selectorTo').value) {
+        spoilerOptLangOpener.style.display="none";
+        return;
+    }else spoilerOptLangOpener.style.display="block";
+
+    for (let r of replacesMoravian) {
+        let group=document.createElement("div");
+        let groupLeft=document.createElement("div");
+
+        let label=document.createElement("label");
+        label.innerText=r.Name;
+        label.className="langOption";
+        label.setAttribute("for", "mor_opt_"+r.Code);
+        groupLeft.appendChild(label);
+        groupLeft.className="grOptLangLeft";
+        group.className="groupOptLang";
+
+        if (r.Type=="var") { 
+            let span=document.createElement("span");
+            span.innerText="Ukázka: "+r.Show.replace("<x>", r.Variants[r.Selected]);
+            span.id="mor_opt_show_"+r.Code;
+            span.style="font-style: italic;font-size: 4mm;";
+            groupLeft.appendChild(span);
+            group.appendChild(groupLeft);
+
+            let select=document.createElement("select");
+            select.setAttribute("data-code", r.Code);
+            select.id="mor_opt_"+r.Code;
+            select.addEventListener("change", ()=>{
+                r.Selected=parseInt(select.value);
+                span.innerText="Ukázka: "+r.Show.replace("<x>", r.Variants[r.Selected]);
+                ChangeDic();
+                Translate();
+            });
+            
+            for (let i=0; i<r.Variants.length; i++) {
+                let v=r.Variants[i];
+                let option=document.createElement("option");
+                option.value=i;
+                option.innerText=v;
+                select.appendChild(option);
+            }        
+            
+            select.value=r.Selected;
+
+            group.appendChild(select);
+        } else if (r.Type=="rep") {
+            let span=document.createElement("span");
+            span.innerText="Ukázka: "+r.Show.replace("<x>", r.Replace[0].Variants[r.Selected]);
+            span.id="mor_opt_show_"+r.Code;
+            span.style="font-style: italic;font-size: 4mm;";
+            groupLeft.appendChild(span);
+            group.appendChild(groupLeft);
+
+            let select=document.createElement("select");
+            select.setAttribute("data-code", r.Code);
+            select.id="mor_opt_"+r.Code;
+            select.addEventListener("change", ()=>{
+                r.Selected=parseInt(select.value);
+                span.innerText="Ukázka: "+r.Show.replace("<x>", r.Replace[0].Variants[r.Selected]);
+                ChangeDic();
+                Translate();
+            });
+            
+            for (let i=0; i<r.Replace[0].Variants.length; i++){
+                let v=r.Replace[0].Variants[i];
+                let option=document.createElement("option");
+                option.value=i;
+                option.innerText=v;
+                select.appendChild(option);
+            }        
+            
+            select.value=r.Selected;
+
+            group.appendChild(select);
+        }
+        
+        outerOptions.appendChild(group);
+    }    
 }
