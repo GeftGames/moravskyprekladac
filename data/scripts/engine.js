@@ -6449,7 +6449,7 @@ function GetTopLangs() {
 }
 
 function MaravianVariantsSet() {
-    //var: <{ins}>
+    //var: <{imp}>
     replacesMoravian=[
         // 7. pád
         { 
@@ -6641,7 +6641,14 @@ function BuildOptionsMoravian(){
 
             group.appendChild(select);
         }
+
+      
         
         outerOptions.appendChild(group);
-    }    
+    }   
+
+    let spanNote=document.createElement("span");
+    spanNote.innerText="Nastavení (globální) transkripce je v bočním menu";
+    spanNote.style="font-style: italic; font-size: 4.5mm; display: flex; justify-content: center;";
+    outerOptions.appendChild(spanNote);  
 }
