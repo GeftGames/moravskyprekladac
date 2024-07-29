@@ -162,6 +162,7 @@ body {
 html {
     background-color: var(--ColorBack);
     transition: background-color var(--transitionSlow);
+    scrollbar-color: var(--ColorThemeAccentBack) var(--ConBack);
 }
 
 #header {
@@ -1932,4 +1933,24 @@ input::placeholder,
 .reference:hover {
     color: var(--ColorThemeForward);
     opacity: .8;
+}
+
+.langOption{
+    font-family: var(--f);
+    font-size: 5mm;
+    text-shadow: var(--tsh);
+}
+.groupOptLang{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3px;
+}
+.grOptLangLeft{
+    display: flex;
+    flex-direction: column;
+}
+#spoilerLangOpt{
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
 }
