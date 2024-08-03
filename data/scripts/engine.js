@@ -1586,10 +1586,8 @@ var Load = function () {
     document.getElementById('lang').value = language;
     document.getElementById('manual').checked = autoTranslate;
     document.getElementById('styleOutput').checked = styleOutput;
-    /* document.getElementById('testingFunc').checked = testingFunc;*/
     document.getElementById('dev').checked = dev;
-
-
+    document.getElementById('betaFunctions').checked = betaFunctions;
 
     /*	if (dev) {
     		document.getElementById('moreInfo').style.display = 'block';
@@ -6492,7 +6490,7 @@ function MaravianVariantsSet() {
 
         {
             // sou, só, sú
-            Show: "s<x>",
+            Show: "oni s<x>",
             Name: "Dvojhláska ou",
             Type: "rep",
             Selected: 0,
