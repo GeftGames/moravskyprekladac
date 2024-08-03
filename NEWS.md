@@ -1,4 +1,7 @@
 # Poslední změny
+### 3.8.2024
++ přes 60 000 tis nářečních slov!
+
 ### 29.07.2024
 + Moravština nastavení jazyka už by mělo fungovat
 
