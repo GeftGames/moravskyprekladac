@@ -1,9 +1,10 @@
 # Poslední změny
 ### 8.8.2024
-+ o 50% lepší komprimace balíčku s překlady (- některé překlady se vyčistili tak tech 60 tis už není) 
++ o 50% lepší komprimace balíčku s překlady (- některé překlady se vyčistili tak tech 60 tis už není)
 
 ### 3.8.2024
 + přes 60 000 tis nářečních slov!
++ Pro mě Google Analytics k anylýze návštěvnosti
 
 ### 29.07.2024
 + Moravština nastavení jazyka už by mělo fungovat
