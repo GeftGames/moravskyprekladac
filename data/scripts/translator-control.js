@@ -205,6 +205,15 @@ window.initLoadingLangData = initLoadingLangData;
 let totalDirFiles = -1;
 let downloadedFiles = 0;
 
+var sSimpleWord=[], sPhrase=[], sSentence=[], sSentencePart=[], sSentencePattern=[],sSentencePatternPart=[],
+sReplaceS=[], sReplaceG=[], sReplaceE=[],
+sPatternNounFrom=[], sPatternNounTo=[],
+sPatternAdjectiveFrom=[],sPatternAdjectiveTo=[],
+sPatternPronounFrom=[],sPatternPronounTo=[],
+sPatternNumberFrom=[],sPatternNumberTo=[],
+sPatternVerbFrom=[],sPatternVerbTo=[],
+sAdverb=[],sPreposition=[],sConjunction=[],sParticle=[],sInterjection=[];
+
 function GetTranslations() {
     const xhttp = new XMLHttpRequest();
     //xhttp.timeout=4000;
@@ -223,7 +232,8 @@ function GetTranslations() {
             AddLang(nymburk);
         }
 
-        const delimiter = '§'
+        loadLangFile(this.responseText);
+        /*const delimiter = '§'
         let fileContents = this.responseText.split(delimiter);
 
         // Po souborech
@@ -232,7 +242,7 @@ function GetTranslations() {
                 fileText = fileContents[i + 1];
 
             if (typeof fileText === 'string' || fileText instanceof String) RegisterLang(fileText, i/2);
-        }        
+        }      */  
 
         document.getElementById("totalstats").innerText = CalculateTotalStats();
 
@@ -299,7 +309,57 @@ function GetTranslations() {
     	xhttp2.open("GET", url, true);
     	xhttp2.send();
     }*/
+   
+    function loadLangFile(fileText) {
+        const delimiter = '§'
+        let fileContents = fileText.split(delimiter);
 
+        // Same lines
+        let lines=fileContents[0].split('\n');
+        let lineNumber=1;
+        sSimpleWord=loadShortcuts(lines, lineNumber);
+        sPhrase=loadShortcuts(lines, lineNumber);
+        sSentence=loadShortcuts(lines, lineNumber);
+        sSentencePart=loadShortcuts(lines, lineNumber);
+        sSentencePattern=loadShortcuts(lines, lineNumber);
+        sSentencePatternPart=loadShortcuts(lines, lineNumber);
+        sReplaceS=loadShortcuts(lines, lineNumber);
+        sReplaceG=loadShortcuts(lines, lineNumber);
+        sReplaceE=loadShortcuts(lines, lineNumber);
+        sPatternNounFrom=loadShortcuts(lines, lineNumber);
+        sPatternNounTo=loadShortcuts(lines, lineNumber);
+        sPatternAdjectiveFrom=loadShortcuts(lines, lineNumber);
+        sPatternAdjectiveTo=loadShortcuts(lines, lineNumber);
+        sPatternPronounFrom=loadShortcuts(lines, lineNumber);
+        sPatternPronounTo=loadShortcuts(lines, lineNumber);
+        sPatternNumberFrom=loadShortcuts(lines, lineNumber);
+        sPatternNumberTo=loadShortcuts(lines, lineNumber);
+        sPatternVerbFrom=loadShortcuts(lines, lineNumber);
+        sPatternVerbTo=loadShortcuts(lines, lineNumber);
+        sAdverb=loadShortcuts(lines, lineNumber);
+        sPreposition=loadShortcuts(lines, lineNumber);
+        sConjunction=loadShortcuts(lines, lineNumber);
+        sParticle=loadShortcuts(lines, lineNumber);
+        sInterjection=loadShortcuts(lines, lineNumber);
+
+        // Po souborech
+        for (let i = 1; i < fileContents.length; i++) {
+            let fileText = fileContents[i];
+            /*if (typeof fileText === 'string' || fileText instanceof String)*/ RegisterLang(fileText, i);
+        }        
+    
+        function loadShortcuts(lines, start) {
+            let listShortcuts=[];
+            for (let i=start; i<lines.length; i++) {
+                let line=lines[i];
+                lineNumber++;
+                if (line=="-") return listShortcuts;
+                listShortcuts.push({id: i-start, data: line});
+            }
+            return listShortcuts;
+        }
+    }
+ 
     function RegisterLang(content, id) {
         let lines = content.split(/\r?\n/);
 

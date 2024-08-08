@@ -391,7 +391,7 @@ class ItemSentence {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sSentence).split('|');
         if (raw[0] == '') return null;
         let item = new ItemSentence();
         item.input = raw[0];
@@ -439,7 +439,7 @@ class ItemSentencePart {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sSentencePart).split('|');
         let item = new ItemSentencePart();
 
         if (raw[0] == '') return null;
@@ -486,8 +486,8 @@ class ItemPatternNoun {
         this.Shapes = [];
     }
 
-    static Load(data) {
-        let raw = data.split('|');
+    static Load(data,shortcuts) {
+        let raw = /*data*/LoadDataLinePattern(data,shortcuts).split('|');
 
         let item = new ItemPatternNoun();
         item.Name = raw[0];
@@ -1005,7 +1005,7 @@ class ItemSimpleWord {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sSimpleWord).split('|');
         if (raw[0] == '') return null;
         let item = new ItemSimpleWord();
 
@@ -1082,8 +1082,8 @@ class ItemAdverb {
         this.input = null;
     }
 
-    static Load(data) {
-        let raw = data.split('|');
+    static Load(data, shortcuts) {
+        let raw = /*data*/LoadDataLineString(data,shortcuts).split('|');
       
         if (raw[0] == '') return null;
         let item = new ItemAdverb();
@@ -1188,7 +1188,7 @@ class ItemPhrase {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sPhrase).split('|');
 
         if (raw[0] == '') return null;
         let item = new ItemPhrase();
@@ -1352,7 +1352,7 @@ class ItemReplaceS {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sReplaceS).split('|');
         if (raw[0] == '') return null;
         if (raw.length == 1) {
             let item = new ItemReplaceS();
@@ -1377,7 +1377,7 @@ class ItemReplaceG {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sReplaceG).split('|');
         if (raw[0] == '') return null;
         if (raw.length == 1) {
             let item = new ItemReplaceG();
@@ -1402,7 +1402,7 @@ class ItemReplaceE {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sReplaceE).split('|');
         if (raw[0] == '') return null;
         if (raw.length == 1) {
             let item = new ItemReplaceE();
@@ -1429,7 +1429,7 @@ class ItemPreposition {
     }
 
     static Load(data) {
-        let raw = data.split('|');
+        let raw = /*data*/LoadDataLineString(data,sPreposition).split('|');
         let item = new ItemPreposition();
 
         if (raw[0] == '') return null;
@@ -1443,7 +1443,10 @@ class ItemPreposition {
             }
         }
         item.output = FastLoadTranslateTo(raw, 2);
-        if (item.output == null) return null;
+        if (item.output == null) {
+            console.warn(raw+" is strange");
+            return null;
+        }
         return item;
 }
 
@@ -2069,8 +2072,8 @@ class ItemPatternPronoun {
         this.Shapes;
     }
 
-    static Load(data) {
-        let raw = data.split('|');
+    static Load(data, shortcuts) {
+        let raw = /*data*/LoadDataLinePattern(data,shortcuts).split('|');
         let shapesAll = LoadArr(raw, 14*4, 1)
 
         if (shapesAll.length == 14) {
@@ -2717,9 +2720,8 @@ class ItemPatternAdjective {
         this.MasculineInanimate = [];
     }
 
-
-    static Load(data) {
-        let raw = data.split('|');
+    static Load(data,shortcuts) {
+        let raw = /*data*/LoadDataLinePattern(data,shortcuts).split('|');
         //if (raw.length!=18*4+2) {
         //	if (dev) console.log("PatternPronoun - Chybná délka");
         //	return null;
@@ -3203,8 +3205,8 @@ class ItemPatternNumber {
         this.Shapes = [];
     }
     
-    static Load(data) {
-        let raw = data.split('|');
+    static Load(data,shortcuts) {
+        let raw = /*data*/LoadDataLinePattern(data,shortcuts).split('|');
 
         let item = new ItemPatternNumber();
         item.Name = raw[0];
@@ -3689,8 +3691,8 @@ class ItemPatternVerb {
         return arr;
     }
 
-    static Load(data) {
-        let raw = data.split('|');
+    static Load(data,shortcuts) {
+        let raw = /*data*/LoadDataLinePattern(data,shortcuts).split('|');
         let item = new ItemPatternVerb();
         item.Name = raw[0];
         //item.TypeShow=parseInt(raw[1]);
@@ -4704,65 +4706,65 @@ class Replace {
 
 class LanguageTr{
     constructor() {
-            this.Name = "";
-            //	this.myVocab=[];
-            //	this.Words=[];
-            //this.SameWords=[];
-            this.Sentences = [];
-            this.Phrases = [];
-            this.state = "instanced";
-            this.html = true;
-            this.SelectReplace = [];
-            this.SentencePatterns = [];
-            this.SentencePatternParts = [];
-            this.SentenceParts = [];
-            //	dev=false;
-            this.SimpleWords = [];
-            this.PatternNounsFrom = [];
-            this.PatternNounsTo = [];
-            this.PatternAdjectivesFrom = [];
-            this.PatternAdjectivesTo = [];
-            this.PatternPronounsFrom = [];
-            this.PatternPronounsTo = [];
-            this.PatternNumbersFrom = [];
-            this.PatternNumbersTo = [];
-            this.PatternVerbsFrom = [];
-            this.PatternVerbsTo = [];
-            this.Nouns = [];
-            this.Pronouns = [];
-            this.Verbs = [];
-            this.Adjectives = [];
-            this.Numbers = [];
-            this.Prepositions = [];
-            this.Interjections = [];
-            this.Particles = [];
-            this.Adverbs = [];
-            this.Conjunctions = [];
-            this.option = undefined;
-            this.ReplaceS = [];
-            this.ReplaceG = [];
-            this.ReplaceE = [];
+        this.Name = "";
+        //	this.myVocab=[];
+        //	this.Words=[];
+        //this.SameWords=[];
+        this.Sentences = [];
+        this.Phrases = [];
+        this.state = "instanced";
+        this.html = true;
+        this.SelectReplace = [];
+        this.SentencePatterns = [];
+        this.SentencePatternParts = [];
+        this.SentenceParts = [];
+        //	dev=false;
+        this.SimpleWords = [];
+        this.PatternNounsFrom = [];
+        this.PatternNounsTo = [];
+        this.PatternAdjectivesFrom = [];
+        this.PatternAdjectivesTo = [];
+        this.PatternPronounsFrom = [];
+        this.PatternPronounsTo = [];
+        this.PatternNumbersFrom = [];
+        this.PatternNumbersTo = [];
+        this.PatternVerbsFrom = [];
+        this.PatternVerbsTo = [];
+        this.Nouns = [];
+        this.Pronouns = [];
+        this.Verbs = [];
+        this.Adjectives = [];
+        this.Numbers = [];
+        this.Prepositions = [];
+        this.Interjections = [];
+        this.Particles = [];
+        this.Adverbs = [];
+        this.Conjunctions = [];
+        this.option = undefined;
+        this.ReplaceS = [];
+        this.ReplaceG = [];
+        this.ReplaceE = [];
 
-            this.MakeBold = "\x1b[1m";
-            this.MakeUnderline = "\x1b[4m";
-            this.MakeGreen = "\x1b[32m";
-            this.MakeBlue = "\x1b[34m";
-            this.MakeCyan = "\x1b[36m";
+        this.MakeBold = "\x1b[1m";
+        this.MakeUnderline = "\x1b[4m";
+        this.MakeGreen = "\x1b[32m";
+        this.MakeBlue = "\x1b[34m";
+        this.MakeCyan = "\x1b[36m";
 
-            this.qualityTrTotalTranslatedWell = 0.0;
-            this.qualityTrTotalTranslated = 0.0;
+        this.qualityTrTotalTranslatedWell = 0.0;
+        this.qualityTrTotalTranslated = 0.0;
 
 
-            this.locationX = NaN;
-            this.locationY = NaN;
-            this.gpsX = NaN;
-            this.gpsY = NaN;
-            this.Quality = 0;
-            this.Author = "";
-            this.LastDateEdit = "";
-            this.Comment = "";
-            this.baseLangName = null;
-        }
+        this.locationX = NaN;
+        this.locationY = NaN;
+        this.gpsX = NaN;
+        this.gpsY = NaN;
+        this.Quality = 0;
+        this.Author = "";
+        this.LastDateEdit = "";
+        this.Comment = "";
+        this.baseLangName = null;
+    }
         /*
         	GetVocabulary() {
         		this.state="downloading";
@@ -5099,7 +5101,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternNoun.Load(line);
+            let item = ItemPatternNoun.Load(line,sPatternNounFrom);
             if (item !== null && item !== undefined) this.PatternNounsFrom.push(item);
             else if (dev) console.warn("Cannot load 'PatternNoun' item at line " + i, line);
         }
@@ -5110,7 +5112,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternNoun.Load(line);
+            let item = ItemPatternNoun.Load(line,sPatternNounTo);
             if (item !== null && item !== undefined) this.PatternNounsTo.push(item);
             else if (dev) console.warn("Cannot load 'PatternNoun' item at line " + i, line);
         }
@@ -5134,7 +5136,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternAdjective.Load(line);
+            let item = ItemPatternAdjective.Load(line,sPatternAdjectiveFrom);
             if (item !== null && item !== undefined) this.PatternAdjectivesFrom.push(item);
             else if (dev) console.warn("Cannot load 'PatternAdjective' item at line " + i, line);
         }
@@ -5145,7 +5147,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternAdjective.Load(line);
+            let item = ItemPatternAdjective.Load(line,sPatternAdjectiveTo);
             if (item !== null && item !== undefined) this.PatternAdjectivesTo.push(item);
             else if (dev) console.warn("Cannot load 'PatternAdjective' item at line " + i, line);
         }
@@ -5169,7 +5171,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternPronoun.Load(line);
+            let item = ItemPatternPronoun.Load(line,sPatternPronounFrom);
             if (item !== null && item !== undefined) this.PatternPronounsFrom.push(item);
             else if (dev) console.warn("Cannot load 'PatternPronoun' item at line " + i, line);
         }
@@ -5180,7 +5182,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternPronoun.Load(line);
+            let item = ItemPatternPronoun.Load(line,sPatternPronounTo);
             if (item !== null && item !== undefined) this.PatternPronounsTo.push(item);
             else if (dev) console.warn("Cannot load 'PatternPronoun' item at line " + i, line);
         }
@@ -5204,7 +5206,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternNumber.Load(line);
+            let item = ItemPatternNumber.Load(line,sPatternNumberFrom);
             if (item !== null && item !== undefined) this.PatternNumbersFrom.push(item);
             else if (dev) console.warn("Cannot load 'PatternNumber' item at line " + i, line);
         }
@@ -5215,7 +5217,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternNumber.Load(line);
+            let item = ItemPatternNumber.Load(line,sPatternNumberTo);
             if (item !== null && item !== undefined) this.PatternNumbersTo.push(item);
             else if (dev) console.warn("Cannot load 'PatternNumber' item at line " + i, line);
         }
@@ -5239,7 +5241,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternVerb.Load(line);
+            let item = ItemPatternVerb.Load(line,sPatternVerbFrom);
             if (item !== null && item !== undefined) this.PatternVerbsFrom.push(item);
             else if (dev) console.warn("Cannot load 'PatternVerb' item at line " + i, line);
         }
@@ -5250,7 +5252,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemPatternVerb.Load(line);
+            let item = ItemPatternVerb.Load(line,sPatternVerbTo);
             if (item !== null && item !== undefined) this.PatternVerbsTo.push(item);
             else if (dev) console.warn("Cannot load 'PatternVerb' item at line " + i, line);
         }
@@ -5276,7 +5278,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemAdverb.Load(line);
+            let item = ItemAdverb.Load(line, sAdverb);
             if (item !== null && item !== undefined) this.Adverbs.push(item);
             else if (dev) console.warn("Cannot load 'Adverb' item at line " + i, line);
         }
@@ -5298,7 +5300,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemAdverb.Load(line);
+            let item = ItemAdverb.Load(line, sConjunction);
             if (item !== null && item !== undefined) this.Conjunctions.push(item);
             else if (dev) console.warn("Cannot load 'Conjunction' item at line " + i, line);
         }
@@ -5309,7 +5311,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemAdverb.Load(line);
+            let item = ItemAdverb.Load(line, sParticle);
             if (item !== null && item !== undefined) this.Particles.push(item);
             else if (dev) console.warn("Cannot load 'Particle' item at line " + i, line);
         }
@@ -5320,7 +5322,7 @@ class LanguageTr{
             let line = lines[i];
             if (line == "-") break;
 
-            let item = ItemAdverb.Load(line);
+            let item = ItemAdverb.Load(line, sInterjection);
             if (item !== null && item !== undefined) this.Interjections.push(item);
             else if (dev) console.warn("Cannot load 'Interjection' item at line " + i, line);
         }
@@ -7537,4 +7539,107 @@ function ReplaceMoravian(str) {
     return ret;
 }
 
+function base64ToNum(code) {
+    let num=0;
+    for (let i=0; i<code.length; i++) {
+        let n=GetNumBase64(code[i]);
+        num += (n << 6*(code.length-1-i));
+    }
+    return num;
+    
+    function GetNumBase64(ch) {
+        switch (ch) {
+            case 'A': return 0;
+            case 'B': return 1;
+            case 'C': return 2;
+            case 'D': return 3;
+            case 'E': return 4;
+            case 'F': return 5;
+            case 'G': return 6;
+            case 'H': return 7;
+            case 'I': return 8;
+            case 'J': return 9;
+            case 'K': return 10;
+            case 'L': return 11;
+            case 'M': return 12;
+            case 'N': return 13;
+            case 'O': return 14;
+            case 'P': return 15;
+            case 'Q': return 16;
+            case 'R': return 17;
+            case 'S': return 18;
+            case 'T': return 19;
+            case 'U': return 20;
+            case 'V': return 21;
+            case 'W': return 22;
+            case 'X': return 23;
+            case 'Y': return 24;
+            case 'Z': return 25;
+            case 'a': return 26;
+            case 'b': return 27;
+            case 'c': return 28;
+            case 'd': return 29;
+            case 'e': return 30;
+            case 'f': return 31;
+            case 'g': return 32;
+            case 'h': return 33;
+            case 'i': return 34;
+            case 'j': return 35;
+            case 'k': return 36;
+            case 'l': return 37;
+            case 'm': return 38;
+            case 'n': return 39;
+            case 'o': return 40;
+            case 'p': return 41;
+            case 'q': return 42;
+            case 'r': return 43;
+            case 's': return 44;
+            case 't': return 45;
+            case 'u': return 46;
+            case 'v': return 47;
+            case 'w': return 48;
+            case 'x': return 49;
+            case 'y': return 50;
+            case 'z': return 51;
+            case '0': return 52;
+            case '1': return 53;
+            case '2': return 54;
+            case '3': return 55;
+            case '4': return 56;
+            case '5': return 57;
+            case '6': return 58;
+            case '7': return 59;
+            case '8': return 60;
+            case '9': return 61;
+            case '+': return 62;
+            case '/': return 63;
+            //#$%&()*,.:;<=>?@[]^_`{}~"'
+        }
+        return '_';
+    }
+}
+
+function LoadDataLineString(line, shortcuts) {
+    if (line.startsWith('!')) {
+        let base64_id=line.substring(1);
+        let id=base64ToNum(base64_id);
+        if (id>=shortcuts.length) console.error(id+" is to big", shortcuts, line);        
+        let sh=shortcuts[id];
+        return sh.data;        
+    } else return line;
+}
+
+function LoadDataLinePattern(line, shortcuts) {
+    if (line.includes('|')) return line;
+  //  console.log("line: "+line);
+    let parts=line.split('!');
+    if (parts.length==2){
+        let base64_id=parts[1];
+        let id=base64ToNum(base64_id);
+        if (id>=shortcuts.length) console.error(id+" is to big", shortcuts, line);        
+        let sh=shortcuts[id];
+      //  console.log("LoadDataLinePattern ret: "+parts[0]+'|'+sh.data);
+        return parts[0]+'|'+sh.data;        
+    } else return line;
+}
 console.log("test3", new LanguageTr());
