@@ -798,7 +798,8 @@ function mapper_compute() {
 		let date=new Date();
 		let text="Vygenerováné '"+mapperRenderOptions.inputText+"', "+(date.toLocaleString('cs-CZ'))+", "+serverName;
 		let w=ctx.measureText(text);
-		ctx.fillText(text,(canvasMap.width-w.width-4)*mapperRenderOptions.scale, (canvasMap.height)*mapperRenderOptions.scale)-1-10;
+		ctx.fillText(text,(mapperCanvas.width-w.width-4)/*mapperRenderOptions.scale*/, mapperCanvas.height-mapperRenderOptions.fontSize-1);
+		console.log(w);
 	}
 
 	ctx.restore();
@@ -815,7 +816,7 @@ function mapper_OnlyGood() {
 	mapper_OylyGood=true;//checkBox.checked;
 }
 var points;
-
+/*
 function getPointBetween(p1, p2, p3) {
 		return new Point(X=(p1.X+p2.X+p3.X)/2, X=(p1.X+p2.X+p3.X)/2);
 }
@@ -835,7 +836,7 @@ function getNearests(points) {
 			}
 		}
 	}
-}
+}*/
 
 /*	class Point {
 		constructor() {
