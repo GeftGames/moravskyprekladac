@@ -537,7 +537,7 @@ function ChangeBetaFunctions() {
 function ChangeOnlyMoravia() {
     if (!loaded) return;
     onlyMoravia = document.getElementById('onlyMoravia').value;
-    localStorage.setItem('setting-Country', onlyMoravia);
+    localStorage.setItem('setting-region', onlyMoravia);
 
     if (confirm("Aby se změna aplikovala, tak je nutné stránku znovu načíst. Chcete teď stránku znovu načíst? V případě, že kliknete na ZRUŠIT, tak prosím auktualizujte stránku sami až se Vám to bude hodit.")) location.reload();
 }
@@ -1496,10 +1496,10 @@ var Load = function () {
     transcription = SetCurrentTranscription(TranscriptionText);
 
     // nedokončené funkce
-    betaFunctions = loadSetting(false, 'betaFunctions', "Boolean");
+    betaFunctions = loadSetting(false, 'setting-betaFunctions', "Boolean");
 
     // region
-    onlyMoravia = loadSetting("default", 'onlyMoravia', "String");
+    onlyMoravia = loadSetting("default", 'setting-region', "String");
 
     // Automaciký překlad
     autoTranslate = loadSetting(true, 'setting-autoTranslate', "Boolean");
@@ -1588,6 +1588,7 @@ var Load = function () {
     document.getElementById('styleOutput').checked = styleOutput;
     document.getElementById('dev').checked = dev;
     document.getElementById('betaFunctions').checked = betaFunctions;
+    document.getElementById('onlyMoravia').value = onlyMoravia;
 
     /*	if (dev) {
     		document.getElementById('moreInfo').style.display = 'block';
