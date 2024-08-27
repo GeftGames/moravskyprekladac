@@ -526,7 +526,6 @@
                         <div id="spoilerLangOpt" style="display:block;max-height: 0" >                            
                             <div id="optionsSelect"></div>
                         </div>
-
                     </div>
                     
 
@@ -884,6 +883,24 @@
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=dź}>',mapper_options_filter('1'))">dź</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=dž}>',mapper_options_filter('1'))">dž</div>
                                 </div>
+
+                                <p>% zastoupení</p>
+                                <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=á|of=a}>',mapper_options_numbers('1'))">á/a</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ó|of=o/ô}>',mapper_options_numbers('1'))">ó/o</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=é|of=e/ê}>',mapper_options_numbers('1'))">é/e</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ů|of=u/o}>',mapper_options_numbers('1'))">ů/u,o</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=í/ý|of=i/y/î}>',mapper_options_numbers('1'))">í, ý/i, y</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ú|of=u/û}>',mapper_options_numbers('1'))">ú/u</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ô|of=u}>',mapper_options_numbers('1'))">ô/u</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ê|of=i}>',mapper_options_numbers('1'))">ê/i</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=y/ý|of=i/í}>',mapper_options_numbers('1'))">y/ý</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ł|of=l/ṵ/ľ}>',mapper_options_numbers('1'))">ł/l</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ľ|of=l/ṵ/ł}>',mapper_options_numbers('1'))">ľ/l</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=ṵ|of=l/ľ/ł}>',mapper_options_numbers('1'))">ṵ/l</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{occurrences|search=á/é/í/ó/ú/ý/ạ́|of=u/a/e/i/o/y/û/ê/ô/ů|min=50}>',mapper_options_numbers('1'))">všech dlouhých samohlásek</div>
+                                </div>
+
                                 <p>Názvy míst</p>
                                 <div class="navrhCat">
                                     <div class="mapperNavrh" onclick="navrhClick('<{name=nář}>',mapper_options_noBorder())">Název míst v místní podobě</div>
@@ -908,6 +925,10 @@
                             <div class="settingMapperItem">
                                 <p>Obarvení pozadí</p>
                                 <textarea id="mapperOptionColorBack" placeholder="->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red"></textarea>
+                            </div>
+                            <div class="settingMapperItem">
+                                <p>Stupnice</p>
+                                <p><input type="checkbox" checked id="mapperNumberScale">Numerická stupnice</p>
                             </div>
                             <div class="settingMapperItem">
                                 <p>Tloušťka čar</p>
