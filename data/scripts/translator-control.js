@@ -373,6 +373,7 @@ function GetTranslations() {
         tr.Id = id;
 
         tr.Load(lines);
+        console.log("Loaded lang '"+tr.Name+"'");
         AddLang(tr);
     }
 
@@ -498,6 +499,7 @@ function DisableLangTranslate(search) {
 function ClearTextbox(textbox) {
     document.getElementById(textbox).value = "";
     Translate();
+    document.getElementById(textbox).focus();
 }
 
 function Translate() {

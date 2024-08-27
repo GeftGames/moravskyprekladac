@@ -189,7 +189,7 @@ function mapperRedraw(){
 
 	ctx = canvasMap.getContext('2d', {willReadFrequently:true});
 	const start = performance.now();
-	/**/
+	
 	if (mapper_compute()) {
 		document.getElementById("noteMapperNotFound").style.display="block";
 		document.getElementById("mapperAreaMap").style.display="none";
@@ -200,7 +200,6 @@ function mapperRedraw(){
 
 	document.getElementById("downloadMap").style.display="unset";
 }
-
 
 function Voronoi_borders(points, imageDataBounds) {	
 	/*let c=[];
@@ -663,6 +662,12 @@ function mapper_compute() {
 				break;
 			}
 		}
+		if (mapperRenderOptions.numberScale){
+			//console.log(cell);
+			let f=255-Math.floor(parseFloat(cell.site.text)*255);
+			col="rgb("+f+","+f+","+f+")";
+		//	console.log(f, col);
+		}
 		//console.log(cell,mapperRenderOptions.backColors,col);
 		if (col!=undefined){		
 			//ctx.lineWidth = 1.5;
@@ -765,9 +770,13 @@ function mapper_compute() {
 		ctx.fillStyle="Black";
 		ctx.font = mapperRenderOptions.fontSize+"px sans-serif";
 	//	if (xx+p[0]-w/2>0 && yy+p[1]-radius-5>0) { //<-optimalizace, mimo plochu
-		let w=ctx.measureText(p.text).width;
+		let ptText;
+		if (mapperRenderOptions.numberScale){
+			ptText=Math.round(parseFloat(p.text)*100)+"%";
+		}else ptText=p.text;
 
-		ctx.fillText(p.text, (xx+p.x)*mapperRenderOptions.scale-w/2, (yy+p.y)*mapperRenderOptions.scale-hText);
+		let w=ctx.measureText(ptText).width;
+		ctx.fillText(ptText, (xx+p.x)*mapperRenderOptions.scale-w/2, (yy+p.y)*mapperRenderOptions.scale-hText);
 			
 		// Název místa
 		if (mapperRenderOptions.ShowPlacesShorts) {
@@ -909,6 +918,7 @@ class RenderMapperOptions{
 		this.bordersStyleOthers;
 		this.bordersAlpha=1;
 		this.showNote=true;
+		this.numberScale=false;
 	//	this.wireframe=false;// style transparent
 	}
 	
@@ -928,6 +938,7 @@ class RenderMapperOptions{
 		this.fontSize=document.getElementById('mapperOptionFontSize').value;	
 		this.bordersAlpha=document.getElementById('mapperOptionBordersAlpha').value;
 		this.showNote=document.getElementById('mapperOptionShowNote').checked;	
+		this.numberScale=document.getElementById('mapperNumberScale').checked;
 
 		this.ComputeColors();
 		this.ComputeBorders();
@@ -964,6 +975,7 @@ class RenderMapperOptions{
 		document.getElementById('mapperOptionBordersAlpha').value=this.bordersAlpha;
 		document.getElementById('mapperOptionMinimalQuality').value=this.minQuality*100;	
 		document.getElementById('mapperOptionShowNote').checked=this.showNote;
+		document.getElementById('mapperNumberScale').checked=this.numberScale;
 	}
 	
 	ComputeColors(){
@@ -1017,6 +1029,7 @@ class RenderMapperOptions{
 			this.backgroundRegionMapOpacity=parts[8];
 			this.ShowPlacesShorts=parts[9]=="true";
 			this.minQuality=[10];			
+			this.numberScale=parts[11]=="true";
 			this.ComputeColors();
 			this.ComputeBorders();
 		}
@@ -1034,6 +1047,7 @@ class RenderMapperOptions{
 		data+=this.backgroundRegionMapOpacity+"|";
 		data+=this.ShowPlacesShorts+="|";
 		data+=this.minQuality+="|";
+		data+=this.numberScale+="|";
 		return data;
 	}
 }
@@ -1330,6 +1344,14 @@ function mapper_options_filter(filter){
 	let options=new RenderMapperOptions();
 	options.LoadDefault();
 	options.rawBackColors="->"+filter+"=>gray";
+	options.ComputeColors();
+	return options;
+}
+
+function mapper_options_numbers(){
+	let options=new RenderMapperOptions();
+	options.LoadDefault();
+	options.numberScale=true;
 	options.ComputeColors();
 	return options;
 }

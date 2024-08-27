@@ -391,7 +391,7 @@ class ItemSentence {
     }
 
     static Load(data) {
-        let raw = /*data*/LoadDataLineString(data,sSentence).split('|');
+        let raw = LoadDataLineString(data,sSentence).split('|');
         if (raw[0] == '') return null;
         let item = new ItemSentence();
         item.input = raw[0];
@@ -997,6 +997,20 @@ class ItemNoun {
         if (ret.length == 0) return null;
         else return { Shapes: ret, Gender: this.To.Gender, Object: this };
     }
+
+    AllShapes(){
+        let arr=[];
+        for (let to of this.To) {
+            for (let shape of to.Pattern.Shapes) {
+                for (let s of shape) {
+                    if (s!="?" && s!="-") {
+                        arr.push(to.Body+s);
+                    }
+                }
+            }            
+        }
+        return arr;
+    }
 }
 
 class ItemSimpleWord {
@@ -1178,7 +1192,7 @@ class ItemAdverb {
         p.appendChild(mapper_link(arr_inp[0], out));
 
         return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p };
-    }
+    }    
 }
 
 class ItemPhrase {
@@ -2708,6 +2722,16 @@ class ItemPronoun {
     GetTable() {
         return this.PatternTo.GetTable(this.To);
     }
+    
+    AllShapes(){
+        let arr=[];
+        for (let to of this.To) {
+            for (let shape of to.Pattern.Shapes) {
+                if (shape!="?" || shape!="-") arr.push(to.Body+shape);
+            }            
+        }
+        return arr;
+    }
 }
 
 class ItemPatternAdjective {
@@ -3197,6 +3221,55 @@ class ItemAdjective {
     GetTable() {
         return this.PatternTo.GetTable(this.To);
     }
+    
+    AllShapes(){
+        let arr=[];
+        for (let to of this.To) {
+            for (let shape of to.Pattern.MasculineInanimate) {
+                let shps;
+                if (Array.isArray(shape))shps=shape; else shps=[shape];                
+                for (let s of shps) {
+                    if (s!="?" && s!="-") {
+                        arr.push(to.Body+s);
+                    }
+                }
+            }            
+        }
+        for (let to of this.To) {
+            for (let shape of to.Pattern.MasculineAnimate) {
+                let shps;
+                if (Array.isArray(shape))shps=shape; else shps=[shape];                
+                for (let s of shps) {
+                    if (s!="?" && s!="-") {
+                        arr.push(to.Body+s);
+                    }
+                }
+            }            
+        }
+        for (let to of this.To) {
+            for (let shape of to.Pattern.Feminine) {
+                let shps;
+                if (Array.isArray(shape))shps=shape; else shps=[shape];                
+                for (let s of shps) {
+                    if (s!="?" && s!="-") {
+                        arr.push(to.Body+s);
+                    }
+                }
+            }            
+        }
+        for (let to of this.To) {
+            for (let shape of to.Pattern.Middle) {
+                let shps;
+                if (Array.isArray(shape))shps=shape; else shps=[shape];                
+                for (let s of shps) {
+                    if (s!="?" && s!="-") {
+                        arr.push(to.Body+s);
+                    }
+                }
+            }            
+        }
+        return arr;
+    }
 }
 
 class ItemPatternNumber {
@@ -3653,6 +3726,18 @@ class ItemNumber {
         for (let to of this.To) {
             if (to.Body != "?") return to.GetTable(to);
         }
+    }
+    
+    AllShapes(){
+        let arr=[];
+        for (let to of this.To) {
+            for (let shape of to.Pattern.Shapes) {
+                for (let s of shape) {
+                    if (s!="?" && s!="-") arr.push(to.Body+s);
+                }
+            }            
+        }
+        return arr;
     }
 }
 
@@ -4631,6 +4716,81 @@ class ItemVerb {
 
         return { from: f.innerText, to: ""/*form.to.join(", ")*/, name: name, element: p };
     }
+
+    AllShapes(){
+        let arr=[];
+        for (let to of this.To) {
+            if (to.Pattern.SInfinitive) {
+                for (let shape of to.Pattern.Infinitive) {
+                    if (shape!="?" && shape!="-") arr.push(to.Body+shape);
+                }
+            }
+            if (to.Pattern.SContinous) {
+                for (let shape of to.Pattern.Continous) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }        
+            if (to.Pattern.SFuture) {
+                for (let shape of to.Pattern.Future) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }
+            if (to.Pattern.SPastActive) {
+                for (let shape of to.Pattern.PastActive) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }
+            if (to.Pattern.SPastPasive) {
+                for (let shape of to.Pattern.PastPasive) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }
+            if (to.Pattern.SImperative) {
+                for (let shape of to.Pattern.Imperative) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }
+            if (to.Pattern.STransgressiveCont) {
+                for (let shape of to.Pattern.TransgressiveCont) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }
+            if (to.Pattern.SAuxiliary) {
+                for (let shape of to.Pattern.Auxiliary) {
+                    let shps=shape;
+                    if (Array.isArray(shape))shps=[shape];
+                    for (let s of shps) {
+                        if (s!="?" && s!="-") arr.push(to.Body+s);
+                    }
+                }
+            }
+        }
+        return arr;
+    }
     
 /*
         let from;
@@ -4830,6 +4990,100 @@ class LanguageTr{
         stats += this.Interjections.length;
 
         return stats;
+    }
+
+    Occurrences(search, all) {
+        let searchCount=0, allCount=0;
+        for (const n of this.Nouns) {
+            for (let shape of n.AllShapes()) {                
+                for (let s of search) searchCount+=(shape.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Adjectives) {
+            for (let shape of n.AllShapes()) {
+               // console.log(shape);
+                for (let s of search) searchCount+=(shape.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Pronouns) {
+            for (let shape of n.AllShapes()) {
+                for (let s of search) searchCount+=(shape.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Numbers) {
+            for (let shape of n.AllShapes()) {
+                for (let s of search) searchCount+=(shape.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.match(new RegExp(a, "g")) || []).length;
+            }
+        }        
+        for (const n of this.Verbs) {
+            for (let shape of n.AllShapes()) {
+                for (let s of search) searchCount+=(shape.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Adverbs) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Prepositions) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Conjunctions) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Particles) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Interjections) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Phrases) {
+            for (let shape of n.output) {
+              //  console.log(shape);
+                for (let s of search) searchCount+=(shape.Text.join().match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.join().match(new RegExp(a, "g")) || []).length;
+            }
+        }/*
+        for (const n of this.SimpleWords) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.Sentence) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }
+        for (const n of this.SentenceParts) {
+            for (let shape of n.output) {
+                for (let s of search) searchCount+=(shape.Text.match(new RegExp(s, "g")) || []).length;
+                for (let a of all) allCount+=(shape.Text.match(new RegExp(a, "g")) || []).length;
+            }
+        }*/
+       console.log({name: this.Name, allCount: allCount,searchCount: searchCount});
+        if (allCount==0) return 0; 
+        if (searchCount==0) return 0; 
+        return searchCount/(allCount+searchCount);
     }
 
     Finished() {
@@ -6587,16 +6841,7 @@ class LanguageTr{
         //	parentElement+=ApplyPostRules(string);
         //}
     }
-
-    /*AddSymbol(symbol, parentElement) {
-    	if (this.html){
-    		let node = document.createTextNode(symbol);
-    		parentElement.appendChild(node);
-    	}else{
-    		parentElement+=symbol;
-    	}
-    }*/
-
+   
     AddTextMultiple(variants, parentElement, className) {
         //if (this.html){
         let pack = document.createElement("span");
@@ -6998,7 +7243,7 @@ class LanguageTr{
                     rules[rule[0]] = rule[1];
                 } else rules[rule[0]]=true;//return { Type: "Unknown", To: word, From: str };
             }
-
+         
             if (rules["word"] != undefined) {
                 let word = rules["word"];
                 switch (rules["typ"]) {
@@ -7233,6 +7478,19 @@ class LanguageTr{
                     let ch = rules["name"];
                     let n=this.Names[ch];
                     return { Type: "Special", To: n, From: "name" };
+                }else return { Type: "Unknown", To: "?", From: "name" };
+            }else if (rules["occurrences"] != undefined) { //<{occurrences|search=á|all=a}>
+              //  console.log("R", rules);
+                if ((rules["search"] != undefined) && (rules["of"] != undefined)) {
+                    let search=rules["search"].split('/'), all=rules["of"].split('/'); 
+                    let min=25;
+                    if (rules["min"] != undefined) min=parseInt(rules["min"]);
+                   // console.log("min",min);
+                  //  console.log(search,all);
+                    if (this.Stats()>min){
+                        let n=this.Occurrences(search, all);
+                        return { Type: "Check", To: n.toString(), From: "occurrences" };
+                    }else return { Type: "Unknown", To: "?", From: "name" };
                 }else return { Type: "Unknown", To: "?", From: "name" };
             }
 

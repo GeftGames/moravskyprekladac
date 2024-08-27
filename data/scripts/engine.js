@@ -5075,6 +5075,11 @@ function SetCurrentTranscription(transCode) {
         { from: "ki", to: "ky" },
         { from: "ri", to: "ry" },
 
+        { from: "chí", to: "chý" },
+        { from: "hí", to: "hý" },
+        { from: "kí", to: "ký" },
+        { from: "rí", to: "rý" },
+
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
@@ -5108,6 +5113,43 @@ function SetCurrentTranscription(transCode) {
         { from: "ó́", to: "ó" },
         { from: "ṵ", to: "u̯" },
         { from: "ạ́", to: "̥á" },
+    ];
+    
+    // hanácká
+    if (transCode == "hanak") return [
+        { from: "ʒ", to: "dz" },
+        { from: "ʒ̆", to: "dž" },
+        { from: "vje", to: "vě", type: "end"},
+        { from: "bje", to: "bě" , type: "end"},
+        { from: "pje", to: "pě" },
+        { from: "fje", to: "fě" },
+
+      //  { from: "Vě", to: "Vje" },
+       // { from: "Bě", to: "Bje" },
+        { from: "Pje", to: "Pě" },
+        { from: "Fje", to: "Fě" },
+     
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "e" },
+        { from: "ó́", to: "ó" },
+        { from: "ṵ", to: "u̯" },
+        { from: "ạ́", to: "̥á" },
+
+        { from: "hi", to: "hy"},
+        { from: "chi", to: "chy"},
+        { from: "ki", to: "ky"},
+        { from: "ri", to: "ry"},
+        { from: "di", to: "dy"},
+        { from: "ti", to: "ty"},
+        { from: "ni", to: "ny"},
+
+        { from: "hí", to: "hý"},
+        { from: "chí", to: "chý"},
+        { from: "kí", to: "ký"},
+        { from: "rí", to: "rý"},
+        { from: "dí", to: "dý"},
+        { from: "tí", to: "tý"},
+        { from: "ní", to: "ný"},
     ];
 
     if (transCode == "moravian") return [
@@ -5160,6 +5202,26 @@ function SetCurrentTranscription(transCode) {
         { from: "ďe", to: "dě" },
 
         { from: "ŋ", to: "n" },
+    ];
+
+    if (transCode == "deutsch") return [
+        { from: "č", to: "tsch" },
+        { from: "š", to: "sch" },
+        { from: "ž", to: "sch" },
+        { from: "ř", to: "rz" },
+        { from: "ě", to: "je" },
+        { from: "cí", to: "zie" },
+        { from: "cí", to: "zie" },
+        { from: "ď", to: "dj" },
+        { from: "dě", to: "dje" },
+        { from: "ďe", to: "dje" },
+        { from: "ďi", to: "dji" },
+        { from: "ť", to: "tj" },
+        { from: "ťe", to: "tje" },
+        { from: "tě", to: "tje" },
+        { from: "ťi", to: "tji" },
+        { from: "v", to: "w" },
+        { from: "á", to: "a" },
     ];
 
     if (transCode == "silezian_slabikorzovy") return [
