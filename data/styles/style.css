@@ -1245,6 +1245,7 @@ optgroup {
     #specialTextarea {
         max-height: 40vh;
         height: 40vh;
+        min-height: -webkit-fill-available;
     }
     #dicLte {
         margin-left: 0px;
