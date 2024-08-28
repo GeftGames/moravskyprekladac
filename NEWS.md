@@ -1,4 +1,7 @@
 # Poslední změny
+### 17.8.2024
++ Poměry mezi určitými znaky ''occurrences'' vyjádřeno v %
+
 ### 8.8.2024
 + asi o 50% lepší komprimace balíčku s překlady
 
