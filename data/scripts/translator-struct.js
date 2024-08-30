@@ -2239,14 +2239,18 @@ class ItemPatternPronoun {
                     let tr = document.createElement("tr");
 
                     let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
                     tr.appendChild(td0);
 
                     let td1 = document.createElement("td");
                     td1.innerText = langFile.Single;
+                    td1.style="font-weight: bold;";
                     tr.appendChild(td1);
 
                     let td2 = document.createElement("td");
                     td2.innerText = langFile.Multiple;
+                    td2.style="font-weight: bold;";
                     tr.appendChild(td2);
 
                     tbody.appendChild(tr);
@@ -2285,14 +2289,18 @@ class ItemPatternPronoun {
                     let tr = document.createElement("tr");
 
                     let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
                     tr.appendChild(td0);
 
                     let td1 = document.createElement("td");
-                    td1.innerText = langFile.Single;
+                    td1.innerText = langFile.Single;                    
+                    td1.style="font-weight: bold;";
                     tr.appendChild(td1);
 
                     let td2 = document.createElement("td");
                     td2.innerText = langFile.Multiple;
+                    td2.style="font-weight: bold;";
                     tr.appendChild(td2);
 
                     tbody.appendChild(tr);
@@ -2331,13 +2339,17 @@ class ItemPatternPronoun {
                     let tr = document.createElement("tr");
 
                     let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
                     tr.appendChild(td0);
 
                     let td1 = document.createElement("td");
                     td1.innerText = langFile.Single;
+                    td1.style="font-weight: bold;";
                     tr.appendChild(td1);
 
                     let td2 = document.createElement("td");
+                    td2.style="font-weight: bold;";
                     td2.innerText = langFile.Multiple;
                     tr.appendChild(td2);
 
@@ -2377,14 +2389,18 @@ class ItemPatternPronoun {
                     let tr = document.createElement("tr");
 
                     let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
                     tr.appendChild(td0);
 
                     let td1 = document.createElement("td");
                     td1.innerText = langFile.Single;
+                    td1.style="font-weight: bold;";
                     tr.appendChild(td1);
 
                     let td2 = document.createElement("td");
                     td2.innerText = langFile.Multiple;
+                    td2.style="font-weight: bold;";
                     tr.appendChild(td2);
 
                     tbody.appendChild(tr);
