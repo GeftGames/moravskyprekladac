@@ -2219,6 +2219,235 @@ class ItemPatternPronoun {
         table.appenChild(tbody);
         return table;
     }
+
+    GetTable(before) {       
+        if (this.Shapes.length == 14*4) { 
+            let parent = document.createElement("div");
+
+            {
+                let tableC = document.createElement("table");
+                tableC.className="tableDic";
+                parent.appendChild(tableC);
+    
+                let caption = document.createElement("caption");
+                caption.innerText = "Rod mužský životný";
+                tableC.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableC.appendChild(tbody);
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = langFile.Single;
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Multiple;
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+
+                for (let c = 0; c < 7; c ++) {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = before + this.Shapes[c];
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = before + this.Shapes[c + 7];
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                } 
+            }
+            {
+                let tableC = document.createElement("table");
+                tableC.className="tableDic";
+                parent.appendChild(tableC);
+    
+                let caption = document.createElement("caption");
+                caption.innerText = "Rod mužský neživotný";
+                tableC.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableC.appendChild(tbody);
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = langFile.Single;
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Multiple;
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+
+                for (let c = 0; c < 7; c ++) {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = before + this.Shapes[14+c];
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = before + this.Shapes[14+c + 7];
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                } 
+            }
+            {
+                let tableC = document.createElement("table");
+                tableC.className="tableDic";
+                parent.appendChild(tableC);
+    
+                let caption = document.createElement("caption");
+                caption.innerText = "Rod ženský";
+                tableC.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableC.appendChild(tbody);
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = langFile.Single;
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Multiple;
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+
+                for (let c = 0; c < 7; c ++) {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = before + this.Shapes[14*2+c];
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = before + this.Shapes[14*2+c + 7];
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                } 
+            }
+            {
+                let tableC = document.createElement("table");
+                tableC.className="tableDic";
+                parent.appendChild(tableC);
+    
+                let caption = document.createElement("caption");
+                caption.innerText = "Rod střední";
+                tableC.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableC.appendChild(tbody);
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = langFile.Single;
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Multiple;
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+
+                for (let c = 0; c < 7; c ++) {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = before + this.Shapes[14*3+c];
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = before + this.Shapes[14*3+c + 7];
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                } 
+            }
+            
+            return parent;
+        }
+
+        if (this.Shapes.length == 14) { let tbody = document.createElement("tbody");
+        tbody.appendChild(document.createTextNode("Zájmeno"));
+            for (let c = 0; c < 14; c += 2) {
+                let tr = document.createElement("tr");
+
+                let td1 = document.createElement("td");
+                td1.innerText = before + this.Shapes[c];
+                tr.appendChild(td1);
+
+                let td2 = document.createElement("td");
+                td2.innerText = before + this.Shapes[c + 1];
+                tr.appendChild(td2);
+
+                tbody.appendChild(tr);
+            } return tbody;
+        }
+
+        if (this.Shapes.length == 7) { let tbody = document.createElement("tbody");
+        tbody.appendChild(document.createTextNode("Zájmeno"));
+            for (let c=0; c<7; c ++) {
+                let tr = document.createElement("tr");
+
+                let td1 = document.createElement("td");
+                td1.innerText = (c+1)+".";
+                tr.appendChild(td1);
+
+                let td2 = document.createElement("td");
+                td2.innerText = before + this.Shapes[c];
+                tr.appendChild(td2);
+
+                tbody.appendChild(tr);
+            }
+            return tbody;
+        }
+
+    }
 }
 
 class ItemPronoun {
@@ -2671,43 +2900,52 @@ class ItemPronoun {
     }
 
     GetDicForm(name) {
-        if (this.To == undefined) return null;
+        console.log(this);
+      //  if (this.To == undefined) return null;
         if (this.PatternFrom.Shapes[0] == "?") return null;
         //if (this.PatternTo.Shapes[0]=="?") return null;
 
         let p = document.createElement("p");
+
+        //From
         let f = document.createElement("span");
-        f.innerText = this.From + this.PatternFrom.Shapes[0];
-        
+        f.innerText = this.From + this.PatternFrom.Shapes[0];        
         p.appendChild(f);
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        // Arrow
+        p.appendChild(document.createTextNode(" → "));
 
+        // To
         let to_out=[];
         for (let to of this.To) {
-            let t = document.createElement("span");
-            if (to.Pattern.Shapes[0] != "?" && to.Pattern.Shapes[0] != "-") {
-                let to_text=ApplyPostRules(to.Body + to.Pattern.Shapes[0]);
-                to_out.push(to_text);
-                t.innerText += to_text;
-            }else return null;
-            p.appendChild(t);
+            let patternShapesTo=to.Pattern.Shapes[0];
+            if (!Array.isArray(patternShapesTo))patternShapesTo=[];
+            for (let shape of patternShapesTo){
+                if (shape == "?" || shape=="-") continue;
 
-            if (to.Pattern.Shapes.lenght > 1) {
-                t.addEventListener("click", () => {
-                    ShowPageLangD(t.GetTable());
-                });
-                t.class = "dicCustom";
-            }
+                let t = document.createElement("span");
+                let to_text=ApplyPostRules(to.Body + shape);
+                t.innerText = to_text;
+                if (to.Pattern.Shapes.length > 1) {
+                    t.addEventListener("click", () => {
+                        ShowPageLangD(to.Pattern.GetTable(to.Body));
+                    });
+                    t.className = "dicCustom";
+                }
+                p.appendChild(t);
+                                
+                to_out.push(to_text);
+            }            
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
-        } 
-       /* f.addEventListener("click", function(){
+        }
+
+        if (to_out.length==0) return null;
+
+        f.addEventListener("click", function(){
             mapper_open(f.innerText,to_out);
-        });*/
+        });
 
         let r = document.createElement("span");
         r.innerText = " (zájm.)";
@@ -2716,11 +2954,7 @@ class ItemPronoun {
 
         p.appendChild(mapper_link(f.innerText,to_out));
 
-        return { from: this.From + this.PatternFrom.Shapes[0], /*this.To+this.PatternTo.Shapes[0]*/ to: "", name: name, element: p };
-    }
-
-    GetTable() {
-        return this.PatternTo.GetTable(this.To);
+        return { from: this.From + this.PatternFrom.Shapes[0], to: to_out, name: name, element: p };
     }
     
     AllShapes(){
@@ -3682,44 +3916,51 @@ class ItemNumber {
     }
 
     GetDicForm(name) {
-        if (this.PatternTo == undefined || this.PatternTo == null) return null;
-        if (this.PatternTo.Shapes[0] == "?") return null;
-
+        let fromText=this.From + this.PatternFrom.Shapes[0];
         let p = document.createElement("p");
-        let f = document.createElement("span");
-        f.innerText = this.From + this.PatternFrom[0];
-       /* f.classList="slink";
-        f.addEventListener("click", function(){
-            mapper_open(f.innerText,this.To + this.PatternTo[0]);
-        });
-        p.appendChild(f);*/
-
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
-
-        let t = document.createElement("span");
-        t.innerText = ApplyPostRules(this.To + this.PatternTo[0]);
-        p.appendChild(t);
-
-        if (this.PatternTo.Shapes.length > 1) {
-            t.addEventListener("click", () => {
-                ShowPageLangD(t.GetTable());
-            });
-            t.class = "dicCustom";
-        }
         
-        // cites
-        GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
+        // From
+        let f = document.createElement("span");
+        f.innerText = fromText;
+        p.appendChild(f);
 
-        let r = document.createElement("span");
-        r.innerText = " (čísl.)";
-        r.className = "dicMoreInfo";
-        p.appendChild(r);
+        // Arrow
+        p.appendChild(document.createTextNode(" → "));
 
-        p.appendChild(mapper_link(this.From + this.PatternFrom[0], this.To + this.PatternTo[0]));
+        // To
+        let toShapes=[];
+        for (let to of this.To) {
+            let patternShapes=to.Pattern.Shapes;
 
-        return { from: this.From + this.PatternFrom[0], to: this.To + this.PatternTo[0], name: name, element: p };
+            if (patternShapes[0]=="-" || patternShapes[0]=="?") continue;
+    
+            let t = document.createElement("span");
+            t.innerText = ApplyPostRules(to.Body + patternShapes[0]);
+            p.appendChild(t);
+
+            if (patternShapes.length > 1) {
+                t.addEventListener("click", () => {
+                    ShowPageLangD(t.GetTable());
+                });
+                t.class = "dicCustom";
+            }
+            
+            // cites
+            GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
+
+            let r = document.createElement("span");
+            r.innerText = " (čísl.)";
+            r.className = "dicMoreInfo";
+            p.appendChild(r);
+
+            toShapes.push(to.Body + patternShapes[0]);
+        }
+
+        if (toShapes.length==0) return null;
+
+        p.appendChild(mapper_link(fromText, toShapes));
+      
+        return { from: fromText, toShapes, name: name, element: p };
     }
 
     GetTable() {
@@ -5764,6 +6005,7 @@ class LanguageTr{
         for (let w of this.Numbers) {
             if (IsWordComIncluded(w)) {
                 let g = w.GetDicForm();
+               // console.log("numb out: ",g);
                 if (g != null) out.push(g);
                 total++;
             }
