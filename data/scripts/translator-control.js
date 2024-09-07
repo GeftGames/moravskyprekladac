@@ -344,9 +344,34 @@ function GetTranslations() {
 
         // Po souborech
         for (let i = 1; i < fileContents.length; i++) {
-            let fileText = fileContents[i];
-            /*if (typeof fileText === 'string' || fileText instanceof String)*/ RegisterLang(fileText, i);
-        }        
+            RegisterLang(fileContents[i], i);
+        }
+        
+        // purge
+        sSimpleWord=undefined;
+        sPhrase=undefined;
+        sSentence=undefined;
+        sSentencePart=undefined;
+        sSentencePattern=undefined;
+        sSentencePatternPart=undefined;
+        sReplaceS=undefined;
+        sReplaceG=undefined;
+        sReplaceE=undefined;
+        sPatternNounFrom=undefined;
+        sPatternNounTo=undefined;
+        sPatternAdjectiveFrom=undefined;
+        sPatternAdjectiveTo=undefined;
+        sPatternPronounFrom=undefined;
+        sPatternPronounTo=undefined;
+        sPatternNumberFrom=undefined;
+        sPatternNumberTo=undefined;
+        sPatternVerbFrom=undefined;
+        sPatternVerbTo=undefined;
+        sAdverb=undefined;
+        sPreposition=undefined;
+        sConjunction=undefined;
+        sParticle=undefined;
+        sInterjection=undefined;
     
         function loadShortcuts(lines, start) {
             let listShortcuts=[];

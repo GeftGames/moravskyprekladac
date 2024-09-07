@@ -221,8 +221,6 @@ class Cite{
             pack.className="cite";
 
             this.genEl=pack;
-            //rules.append(pack);
-           // return pack;
            return true;
         } else if (rawrules[0]=="web") {  
             //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf
@@ -362,6 +360,148 @@ class Cite{
             this.genEl=pack;
             //rules.append(pack);
             return true;
+        } else if (rawrules[0]=="periodikum") {  
+            //https://www.citace.com/Vyklad-CSN-ISO-690-2022.pdf
+            /*let vars_support = [
+                "prijmeni", "jmeno", "autor",
+                "prispevek",
+                "periodikum",
+                "podnazev",
+                "rok",
+                "misto", 
+                "vydavatel", 
+                "cislo",
+                "rocnik",
+                "issn",
+            ];*/
+            
+            // autoř(i)
+            let pack=document.createElement("li");
+            if (rules["zpracovano"]=="1") {
+                let names=document.createElement("span");
+                names.innerText="✔️";
+                pack.append(names);
+            }else {
+                let names=document.createElement("span");
+                names.innerText="⌛️";
+                pack.append(names);
+            }
+            if ((rules["prijmeni"]!=undefined && rules["prijmeni"]!="") || (rules["jmeno"]!=undefined && rules["jmeno"]!="")) {
+                let names=document.createElement("span");
+                names.innerText=rules["prijmeni"].toUpperCase()+", "+rules["jmeno"]+". ";
+                pack.append(names);
+            } else if (rules["autor"]!=undefined && rules["autor"]!=""){
+                let names=document.createElement("span");
+                names.innerText=rules["autor"];
+                pack.append(names);
+            }
+    
+            // prispevek
+            if (rules["prispevek"]!=undefined && rules["prispevek"]!=""){
+                let nazev=document.createElement("span");
+                nazev.innerText=rules["prispevek"];
+              //  nazev.style.fontStyle="italic";
+                pack.append(nazev);    
+                pack.append(document.createTextNode(". "));
+            }
+    
+            // periodikum
+            if (rules["periodikum"]!=undefined && rules["periodikum"]!=""){
+                let nazev=document.createElement("span");
+                nazev.innerText=rules["periodikum"];
+                nazev.style.fontStyle="italic";
+                pack.append(nazev);    
+            }
+    
+            // podnazev
+            if (rules["podnazev"]!=undefined && rules["podnazev"]!=""){
+                if (rules["periodikum"]!=undefined && rules["periodikum"]!="") pack.append(document.createTextNode(": "));
+                let nazev=document.createElement("span");
+                nazev.innerText=rules["podnazev"];
+                nazev.style.fontStyle="italic";
+                pack.append(nazev);    
+            }
+    
+            // format
+            if (rules["format"]!=undefined && rules["format"]!="") {
+                let kapitola=document.createElement("span");
+                kapitola.innerText="["+rules["format"]+"]";
+                pack.append(kapitola);
+            }
+            pack.append(document.createTextNode(". "));
+            // rok
+            if (rules["rok"]!=undefined && rules["rok"]!="") {
+                let podkapitola=document.createElement("span");
+                podkapitola.innerText=rules["rok"];
+                pack.append(podkapitola);
+            }
+    
+            // misto
+            if (rules["misto"]!=undefined && rules["misto"]!="") {
+                let misto=document.createElement("span");
+                misto.innerText=rules["misto"]+": ";
+                pack.append(misto);
+            }
+            
+            // vydavatel
+            if (rules["vydavatel"]!=undefined && rules["vydavatel"]!="") {
+                if (rules["misto"]!=undefined) pack.append(document.createTextNode(": "));
+                let vydavatel=document.createElement("span");
+                vydavatel.innerText=rules["vydavatel"];
+                pack.append(vydavatel);
+                pack.append(document.createTextNode(". "));
+            }
+            
+            // cislo
+            if (rules["cislo"]!=undefined && rules["cislo"]!="") {
+                if (rules["vydavatel"]!=undefined) pack.append(document.createTextNode(", "));
+                let rok_vydani=document.createElement("span");
+                rok_vydani.innerText="čís. "+rules["cislo"];
+                pack.append(rok_vydani);
+            } 
+
+            // ročník
+            if (rules["rocnik"]!=undefined && rules["rocnik"]!="") {
+                if (rules["cislo"]!=undefined && rules["cislo"]!="") pack.append(document.createTextNode(", "));
+                let rocnik=document.createElement("span");
+                rocnik.innerText="roč. "+rules["rocnik"];
+                pack.append(rocnik);
+            }
+            if ((rules["rocnik"]!=undefined && rules["rocnik"]!="") || (rules["cislo"]!=undefined && rules["cislo"]!="")) pack.append(document.createTextNode(". "));
+                      
+            // poznamky
+            if (rules["poznamky"]!=undefined && rules["poznamky"]!="") {
+                let poznamky=document.createElement("span");
+                poznamky.innerText=rules["poznamky"];
+                pack.append(poznamky);
+                pack.append(document.createTextNode(". "));
+            }
+    
+            // link
+            if (rules["odkaz"]!=undefined && rules["odkaz"]!=""){
+                let from=document.createElement("span");
+                from.innerText="Dostupné z: ";
+                pack.append(from);
+                
+                let links=rules["odkaz"].split("\\");
+                for (let i=0; i<links.length; i++) {
+                    let link = links[i];
+
+                    let url=document.createElement("a");
+                    url.href=link;
+                    if (link.includes("#")){
+                        url.innerText=link.substring(0,link.indexOf("#"));
+                    }else url.innerText=link;
+                    pack.append(url);
+                    if (i<links.length-1)pack.append(document.createTextNode(", "));
+                }            
+            }
+    
+           if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
+            pack.className="cite";
+            this.genEl=pack;
+            //rules.append(pack);
+            return true;
         } else if (rawrules[0]=="sncj") {
 
             let pack=document.createElement("li");
@@ -379,6 +519,8 @@ class Cite{
             if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
             this.genEl=pack;
             return true;
+        }else{
+            if (dev) console.warn("Unknown reference ", rawrules);
         }
         return false;
     }
@@ -2515,7 +2657,7 @@ class ItemPronoun {
             for (const s of patternShapesFrom) {
 
                 // "s"+"e" == "se"
-                if (this.From + s == str) {
+                if (this.From + s == str || (s.startsWith("#") && this.From + s.substring(1) == str)) {
                     for (let t of this.To) {
                         let body = t.Body;
                         let patternShapesTo = t.Pattern.Shapes[i];
@@ -5344,11 +5486,13 @@ class LanguageTr{
     }
 
     Finished() {
+        if (this.Comment.includes("Zdroje dat")) return "0";
         if (this.Comment.includes("nezpracováno")) return "0";
         if (this.Comment.includes("nezpracovano")) return "0";
         if (this.Comment.includes("nezpracované")) return "0";
         if (this.Comment.includes("nevyčerpáno")) return "0";
         if (this.Comment.includes("nevyčerpáné")) return "0";
+        for (let cite of this.Cites) if (cite.rawCite.includes("zpracováno=0") || cite.rawCite.includes("zpracováno=|")) return "0";
 
         return "1";
     }
