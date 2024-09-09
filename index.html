@@ -432,7 +432,7 @@
                     <div class="sisetting">
                         <p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
                         <span id="textAbout" onclick="PopPageShow('about');/*ShowAboutPage()*/" class="settingLink" data-href="#about">O překladači</span>
-                        <a id="textAddon" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://github.com/GeftGames/moravskyprekladac.web" class="settingLink" data-href="#about">Doplněk do prohlížeče</a>
+                        <a id="textAddon" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://github.com/GeftGames/moravskyprekladac-browser-addon/tree/main" class="settingLink" data-href="#about">Doplněk do prohlížeče</a>
                         <a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
                         <p>Chcete-li přidat více slov zároveň napište na <a href="mailto:geftgames@gmail.com">e-mail</a> nebo veřejně na <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a></p>
                        
@@ -791,6 +791,7 @@
                                 <p>Číslovky</p>
                                 <div class="navrhCat">
                                     <div class="mapperNavrh" onclick="navrhClick('jeden')">JEDEN</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('tři')">TŘI</div>
                                     <div class="mapperNavrh" onclick="navrhClick('čtyři')">ČTYŘI</div>
                                 </div>
                                 <p>Slovesa</p>
@@ -816,6 +817,8 @@
                                     <div class="mapperNavrh" onclick="navrhClick('musel')">MUSEL chodit</div>
                                     <div class="mapperNavrh" onclick="navrhClick('udělat')">UDĚLAT</div>
                                     <div class="mapperNavrh" onclick="navrhClick('mohl')">MOHL</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('chtěl')">CHTĚL</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('povídám')">POVÍDÁM</div>
                                 </div>
                                 <p>Příslovce</p>
                                 <div class="navrhCat">
@@ -838,6 +841,7 @@
                                     <div class="mapperNavrh" onclick="navrhClick('kde')">KDE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('večer')">VEČER</div>
                                     <div class="mapperNavrh" onclick="navrhClick('dolů')">DOLŮ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('takhle')">TAKHLE</div>
                                 </div>
                                 <p>Předložky</p>
                                 <div class="navrhCat">
@@ -845,26 +849,36 @@
                                     <div class="mapperNavrh" onclick="navrhClick('u')">U okna</div>
                                     <div class="mapperNavrh" onclick="navrhClick('od')">OD</div>
                                     <div class="mapperNavrh" onclick="navrhClick('za')">ZA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('o')">O tom</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('při')">PŘI tom</div>
                                 </div>
                                 <p>Spojky</p>
                                 <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('a')">A</div>
                                     <div class="mapperNavrh" onclick="navrhClick('i')">I toto</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('když')">KDYŽ</div>
                                     <div class="mapperNavrh" onclick="navrhClick('jestli')">JESTLI</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('nebo')">NEBO</div>
                                     <div class="mapperNavrh" onclick="navrhClick('protože')">PROTOŽE</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('ale')">ALE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('vždyť')">VŽDYŤ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('že')">ŽE</div>
                                 </div>
                                 <p>Částice</p>
                                 <div class="navrhCat">
+                                    <div class="mapperNavrh" onclick="navrhClick('ano')">ANO</div>
                                     <div class="mapperNavrh" onclick="navrhClick('ne')">NE</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('no')">NO</div>
                                     <div class="mapperNavrh" onclick="navrhClick('jo')">JO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('no')">NO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('ať')">AŤ</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('prý')">PRÝ</div>
                                 </div>
                                 <p>Citoslovce</p>
                                 <div class="navrhCat">
-                                    <div class="mapperNavrh" onclick="navrhClick('ach')">ach</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('jejda')">JEJDA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('ach')">ACH</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('aha')">AHA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('alou')">ALOU</div>
                                 </div>
                                 <p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
                                 <div class="navrhCat">
@@ -1362,7 +1376,7 @@
             </div>
         </div>
 
-        <div id="pagePop_pageStats" class="pagePop" style="display: none; top:500px; z-index: 9; height: inherit; min-height: -webkit-fill-available;">
+        <div id="pagePop_pageStats" class="pagePop" style="display: none; top:500px; z-index: 9; height: auto; min-height: -webkit-fill-available;">
             <div class="pageInside" id="pageStats" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
                 <div onclick="PopPageClose('pageStats')" class="pageFromDownClose" id="closeLangD">
                     <div rel="nofollow">
