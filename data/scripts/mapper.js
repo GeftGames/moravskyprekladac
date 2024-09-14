@@ -176,16 +176,16 @@ function mapperRedraw(){
 	document.getElementById("noteMapperNotFound").style.display="none";
 	document.getElementById("mapperAreaMap").style.display="block";
 	
-	canvasMap = document.getElementById('mapperCanvas');
 	let mapperOuter=document.getElementById("mapperOuter");
 	mapperOuter.style.width=Math.round(imgMap.width*mapperRenderOptions.scale+20)+"px";
 	mapperOuter.style.height=Math.round(imgMap.width*mapperRenderOptions.scale+20)+"px";
 	
 	var displayWidth  = mapperOuter.clientWidth;
 	var displayHeight = mapperOuter.clientHeight;
-
-	canvasMap.width = displayWidth;
-	canvasMap.height = displayHeight;
+	
+	canvasMap = document.getElementById('mapperCanvas');
+	canvasMap.width = displayWidth*dpr;
+	canvasMap.height = displayHeight*dpr;
 
 	ctx = canvasMap.getContext('2d', {willReadFrequently:true});
 	const start = performance.now();
@@ -629,29 +629,15 @@ function polygone_sortPoints(ctx, points) {
 let status_mapper;
 var canvasMap;
 var ctx;
-//let inputTextmapper;
+
 function mapper_compute() {
 	ctx.font = mapperRenderOptions.fontSize+"px sans-serif";
-	/*status_mapper="";
-
-	// Get points	
-	if (mapperAdvanced) inputTextmapper=document.getElementById("mapperSearchPattern").value;
-	else inputTextmapper=document.getElementById("mapperInput").value;
-
-	// Translate points
-	mapperRenderOptions.inputText=inputTextmapper;
-	points=mapper_GetPointsTranslated(languagesListAll, inputTextmapper);
-
-	if (points.length==0) {
-		status_mapper="Not enough data to create map";
-		return true;
-	}
-*/
 	// Clear 
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
 	ctx.globalAlpha = .3;
-	//imagecontext.drawImage(img, 0, 0);
-		//console.log(mapper_borders);
+
+	let scale=mapperRenderOptions.scale*dpr;
+
 	for (let cell of mapper_borders.cells){
 		
 		let col;
@@ -663,28 +649,23 @@ function mapper_compute() {
 			}
 		}
 		if (mapperRenderOptions.numberScale){
-			//console.log(cell);
 			let f=255-Math.floor(parseFloat(cell.site.text)*255);
 			col="rgb("+f+","+f+","+f+")";
-		//	console.log(f, col);
 		}
-		//console.log(cell,mapperRenderOptions.backColors,col);
+
 		if (col!=undefined){		
-			//ctx.lineWidth = 1.5;
-		//	console.log(col);
-			ctx.fillStyle = col;//"rgb("+[0]+","+col[1]+","+col[2]+","+col[3]+")";
+			ctx.fillStyle = col;
 			
 			let pts=[];
 			for (let halfedge of cell.halfedges) {
-				pts.push({x: halfedge.edge.va.x*mapperRenderOptions.scale, y: halfedge.edge.va.y*mapperRenderOptions.scale});
-				pts.push({x: halfedge.edge.vb.x*mapperRenderOptions.scale, y: halfedge.edge.vb.y*mapperRenderOptions.scale});
+				pts.push({x: halfedge.edge.va.x*scale, y: halfedge.edge.va.y*scale});
+				pts.push({x: halfedge.edge.vb.x*scale, y: halfedge.edge.vb.y*scale});
 			}
 			polygone_sortPoints(ctx,pts);
 		}
-	}	
-	//ctx.globalAlpha = 1;
-	// draw lines
+	}
 
+	ctx.lineWidth = 1*dpr;
 	ctx.globalAlpha = mapperRenderOptions.bordersAlpha;
 	for (let line of mapper_borders.edges){
 		if (line.rSite!=undefined && line.lSite!=undefined) {
@@ -705,8 +686,8 @@ function mapper_compute() {
 				ctx.lineWidth = thickness;
 				if (thickness>0){
 					ctx.beginPath();
-					ctx.moveTo(line.va.x*mapperRenderOptions.scale, line.va.y*mapperRenderOptions.scale);
-					ctx.lineTo(line.vb.x*mapperRenderOptions.scale, line.vb.y*mapperRenderOptions.scale);
+					ctx.moveTo(line.va.x*scale, line.va.y*scale);
+					ctx.lineTo(line.vb.x*scale, line.vb.y*scale);
 					//ctx.strokeStyle = 'green';
 					ctx.stroke();
 				}
@@ -717,13 +698,13 @@ function mapper_compute() {
 	ctx.globalAlpha = 1;
 	// draw mask
 	ctx.globalCompositeOperation = 'destination-atop';
-	ctx.drawImage(imgMap_bounds, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+	ctx.drawImage(imgMap_bounds, 0, 0, imgMap_bounds.width*scale, imgMap_bounds.height*scale);
 	//imagecontext.drawImage(mask, 0, 0, width, height);
 	ctx.globalCompositeOperation = "darken";
 	
 	// draw background
 	ctx.globalAlpha = mapperRenderOptions.backgroundRegionMapOpacity;
-	ctx.drawImage(imgMap, 0, 0, imgMap_bounds.width*mapperRenderOptions.scale, imgMap_bounds.height*mapperRenderOptions.scale);
+	ctx.drawImage(imgMap, 0, 0, imgMap_bounds.width*scale, imgMap_bounds.height*scale);
 	
 
 	// reset
@@ -753,12 +734,12 @@ function mapper_compute() {
 	
 
 	// filter
-	let xx=0, yy=0, radius=6;
+	let xx=0, yy=0, radius=6*dpr;
 	ctx.fillStyle = "blue";
 	if (mapperRenderOptions.ShowPlacesShorts){
 		for (let p of mapper_points) {
 			ctx.beginPath();
-			ctx.arc((xx+p.x)*mapperRenderOptions.scale, (yy+p.y)*mapperRenderOptions.scale, radius, 0, 2 * Math.PI);
+			ctx.arc((xx+p.x)*scale, (yy+p.y)*scale, radius, 0, 2 * Math.PI);
 			ctx.fill();
 		}
 	}
@@ -768,7 +749,7 @@ function mapper_compute() {
 	
 	for (let p of mapper_points){
 		ctx.fillStyle="Black";
-		ctx.font = mapperRenderOptions.fontSize+"px sans-serif";
+		ctx.font = (mapperRenderOptions.fontSize*dpr)+"px sans-serif";
 	//	if (xx+p[0]-w/2>0 && yy+p[1]-radius-5>0) { //<-optimalizace, mimo plochu
 		let ptText;
 		if (mapperRenderOptions.numberScale){
@@ -776,19 +757,19 @@ function mapper_compute() {
 		}else ptText=p.text;
 
 		let w=ctx.measureText(ptText).width;
-		ctx.fillText(ptText, (xx+p.x)*mapperRenderOptions.scale-w/2, (yy+p.y)*mapperRenderOptions.scale-hText);
+		ctx.fillText(ptText, (xx+p.x)*scale-w/2, (yy+p.y)*scale-hText);
 			
 		// Název místa
 		if (mapperRenderOptions.ShowPlacesShorts) {
 			ctx.fillStyle="White";
-			ctx.font = "7.5px sans-serif";
+			ctx.font = (7.5*dpr)+"px sans-serif";
 			let name="";
 			if (p.name.length>=2) {
 				name=p.name.substring(0, 2).toUpperCase();
 			} else name=p.name;
 			let wn=ctx.measureText(name).width;
 		//	console.log(name);
-			ctx.fillText(name, (xx+p.x)*mapperRenderOptions.scale-wn/2, (yy+p.y)*mapperRenderOptions.scale+radius/2);		
+			ctx.fillText(name, (xx+p.x)*scale-wn/2, (yy+p.y)*scale+radius/2);		
 		}
 	}	
 	
@@ -799,9 +780,9 @@ function mapper_compute() {
 		ctx.fillStyle="Black";
 		let textSize=ctx.measureText(mapperRenderOptions.text);
 		//console.log(mapperRenderOptions.text);
-		ctx.fillText(mapperRenderOptions.text, 5*mapperRenderOptions.scale, (canvasMap.height/4*3)*mapperRenderOptions.scale);
+		ctx.fillText(mapperRenderOptions.text, 5*scale, (canvasMap.height/4*3)*scale);
 	}
-	ctx.font = "11px sans-serif";
+	ctx.font = (11*dpr)+"px sans-serif";
 	if (mapperRenderOptions.showNote) {
 		ctx.fillStyle="Black";
 		let date=new Date();
@@ -814,89 +795,12 @@ function mapper_compute() {
 	ctx.restore();
 	return false;
 }
-/*
-function mapper_Note() {
-	//var checkBox = document.getElementById("mapperNote");
-	mapper_ShowNote=true;//checkBox.checked;
-}*/
 
 function mapper_OnlyGood() {
 	//var checkBox = document.getElementById("mapperOnlyGood");
 	mapper_OylyGood=true;//checkBox.checked;
 }
 var points;
-/*
-function getPointBetween(p1, p2, p3) {
-		return new Point(X=(p1.X+p2.X+p3.X)/2, X=(p1.X+p2.X+p3.X)/2);
-}
-//https://stackoverflow.com/questions/15968968/how-to-find-delaunay-triangulation-facets-containing-the-given-points
-function sign(p1, p2, p3){
-	return (p1.X-p3.X)*(p2.Y-p3.Y)-(p2.X-p3.X)*(p1.Y-p3.Y);
-}
-
-function getNearests(points) {
-	for (let point in points) {
-		let bestmin=100000;
-		for (let p in points) {
-			let dis=point.Distance(p);
-			if (dis < bestmin) {
-				p.len=dis;
-				point.AddPt(p);
-			}
-		}
-	}
-}*/
-
-/*	class Point {
-		constructor() {
-			X,
-			Y,
-			Value,
-
-			// Points
-			Nearest,
-
-			// Distance to Nearest ones(one from multiple)
-			Len
-		}
-		constructor(x,y) {
-			X=x,
-			Y=y,
-			Value
-		}
-		Distance(p) {
-			return (p.X-X)*(p.X-X)+(p.Y-Y)*(p.Y-Y);
-		}
-		AddPt(pt){
-			if (Nearest.lenght>=3) {
-				Nearest.pop();
-			}
-			Nearest.push(pt);
-			Nearest.sort(i => i.len);//desh asc?????
-		}
-	}
-	
-	class Triangle{
-		constructor() {
-			p1, p2, p3
-		}
-
-		static sign(p1, p2, p3) {
-			return (p1.X-p3.X)*(p2.Y-p3.Y)-(p2.X-p3.X)*(p1.Y-p3.Y);
-		}
-
-		pointInTriangle(pt) {
-			let d1 = this.sign(pt, v1, v2), 			
-				d2 = this.sign(pt, v2, v3), 
-				d3 = this.sign(pt, v3, v1);
-
-			let has_neg = (d1 < 0) || (d2 < 0) || (d3 < 0),
-				has_pos = (d1 > 0) || (d2 > 0) || (d3 > 0);
-
-			return !(has_neg && has_pos);
-		}
-	}*/
-//};*/
 
 class RenderMapperOptions{
 	constructor() {
@@ -1082,7 +986,7 @@ function hexToRGB(color) {
 		if (typeof colours[color.toLowerCase()] != 'undefined')
 		color= colours[color.toLowerCase()];
 	}
-	//if (hex.startsWith('#')) {
+
 	if (color.length==4) {
 		const r = parseInt(color.slice(1, 2), 16);
 		const g = parseInt(color.slice(2, 3), 16);
@@ -1097,7 +1001,6 @@ function hexToRGB(color) {
 
 		return [255, r, g, b];
 	}
-	//} 
 	
 	return [255, 255, 255, 255];
 }
@@ -1227,7 +1130,7 @@ function mapper_save_gml() {
 	}	
 }
 
-function mapper_open_mapy_cz(){
+function mapper_open_mapy_cz() {
 	// https://mapy.cz/turisticka?vlastni-body&ut=Nov%C3%BD%20bod&ut=Nov%C3%BD%20bod&ut=Nov%C3%BD%20bod&uc=9mt.4x8Y-j9n0-4xV3va9lX.4xUgzj&ud=Konick%C3%A1%20vrchovina&ud=Bouzovsk%C3%A1%20vrchovina&ud=16%C2%B019%2751.976%22E%2049%C2%B030%2725.506%22N&x=16.3146251&y=49.5258083&z=9
 	let mapTyle="zakladni"; // "turisticka", "19stoleti", ...
 }

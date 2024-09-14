@@ -11,15 +11,28 @@ var map_DisplayWidth,
     map_DisplayHeight;
 //var map_Touches = -1;
 
+var dpr=1;
 
 var initLookUpMap = function () {
+    
+    // DPI
+    dpr = window.devicePixelRatio || 1;
+    map_Zoom*=dpr;
+      
+    // Change DPI while visiting site
+    matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`).addEventListener("change", ()=>{
+        let oldDpr=dpr;
+        dpr = window.devicePixelRatio || 1;
+        map_Zoom=dpr/oldDpr;
+    }), { once: true };
+    
     var map_Touches = -1;
 
     // pozice začátku při stisknutí prstů
     var map_TouchStartX, map_TouchStartY;
     var map_MoveTime;
     
-     let moved;
+    let moved;
 
     let map_ZoomInit; //touch
 
@@ -40,17 +53,17 @@ var initLookUpMap = function () {
         if (map_Zoom > 12) map_Zoom = 12;
 
         const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-        const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-        const mouseY = e.clientY - rect.top;
+        const mouseX = e.clientX*dpr - rect.left*dpr; // Calculate mouse position relative to canvas
+        const mouseY = e.clientY*dpr - rect.top*dpr;
 
         const imgMX = mouseX - map_LocX,
             imgMY = mouseY - map_LocY;
 
-        const imgPMX = imgMX / (imgMap.width * prevZoom),
-            imgPMY = imgMY / (imgMap.height * prevZoom);
+        const imgPMX = imgMX / (imgMap.width*dpr * prevZoom),
+            imgPMY = imgMY / (imgMap.height*dpr * prevZoom);
 
-        map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX;
-        map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY;
+        map_LocX -= (map_Zoom - prevZoom) * imgMap.width*dpr * imgPMX;
+        map_LocY -= (map_Zoom - prevZoom) * imgMap.height*dpr * imgPMY;
 
         window.requestAnimationFrame(mapRedraw);
     });
@@ -59,8 +72,8 @@ var initLookUpMap = function () {
     mapSelectLang.addEventListener('mousedown', (e) => {
         e.preventDefault();
         moved = true;
-        map_LocTmpX = e.clientX - map_LocX;
-        map_LocTmpY = e.clientY - map_LocY;
+        map_LocTmpX = e.clientX*dpr - map_LocX;
+        map_LocTmpY = e.clientY*dpr - map_LocY;
 
         window.requestAnimationFrame(mapRedraw);
     });
@@ -71,9 +84,9 @@ var initLookUpMap = function () {
     });
 
     mapSelectLang.addEventListener('click', (e) => {
-        const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-        const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-        const mouseY = e.clientY - rect.top /*-*/ ;
+        const rect = mapSelectLang.getBoundingClientRect(); // Get canvas position relative to viewport
+        const mouseX = e.clientX*dpr - rect.left*dpr; // Calculate mouse position relative to canvas
+        const mouseY = e.clientY*dpr - rect.top*dpr;
         mapClick(mouseX, mouseY);
         window.requestAnimationFrame(mapRedraw);
     });
@@ -82,14 +95,14 @@ var initLookUpMap = function () {
         e.preventDefault();
         if (moved) {
             //	console.log('moved');
-            map_LocX = e.clientX - map_LocTmpX;
-            map_LocY = e.clientY - map_LocTmpY;
+            map_LocX = e.clientX*dpr - map_LocTmpX;
+            map_LocY = e.clientY*dpr - map_LocTmpY;
 
             window.requestAnimationFrame(mapRedraw);
         } else {
             const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
-            const mouseX = e.clientX - rect.left; // Calculate mouse position relative to canvas
-            const mouseY = e.clientY - rect.top;
+            const mouseX = e.clientX*dpr - rect.left*dpr; // Calculate mouse position relative to canvas
+            const mouseY = e.clientY*dpr - rect.top*dpr;
 
             mapMove(mouseX, mouseY);
         }
@@ -243,14 +256,78 @@ var initLookUpMap = function () {
             }
         }
     });
+
+        
+
 }
+    function mapClick(mX, mY) {
+       // let canvasMap = document.getElementById("mapSelectLang");
+
+       // map_DisplayWidth = document.getElementById("mapZoom").clientWidth*dpr;
+       // map_DisplayHeight = document.getElementById("mapZoom").clientHeight*dpr;
+
+        //mapSelectLang.width = map_DisplayWidth;
+        //mapSelectLang.height = map_DisplayHeight;
+
+        // point of location
+        let circleRadius = 3 * map_Zoom;
+        if (isTouchDevice()) circleRadius *= 3;
+        if (circleRadius < 2*dpr) circleRadius = 2*dpr;
+        if (circleRadius > 12*dpr) circleRadius = 12*dpr;
+        
+        // generate dots
+        for (let p of languagesList) {
+            if (isNaN(p.locationX)) continue;
+            if (!(p.Quality == 0 && map_Zoom < 1.5*dpr && !(p.Name == currentLang.Name))){
+                console.log("click", { mX: mX, my: mY, x: map_LocX + p.locationX * map_Zoom - circleRadius, y: map_LocY + p.locationY * map_Zoom - circleRadius, w: circleRadius * 2, h: circleRadius * 2 });
+               // console.log("c",mX>map_LocX + p.locationX * map_Zoom - circleRadius, mY> map_LocY + p.locationY * map_Zoom - circleRadius);
+               // console.log("c2",mX+circleRadius * 2>map_LocX + p.locationX * map_Zoom - circleRadius, mY+circleRadius * 2> map_LocY + p.locationY * map_Zoom - circleRadius);
+                if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2) ||
+                (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius*2, circleRadius*2))) {
+                    p.option.selected = true;
+                    PopPageClose('mapPage');
+                    Translate();
+                    GetDic()
+                    return;
+                }
+            }
+        }
+    }
+function mapMove(mX, mY) {
+    let canvasMap = document.getElementById("mapSelectLang");
+    
+    let ele = document.getElementById("mapZoom");
+    map_DisplayWidth = ele.clientWidth*dpr;
+    map_DisplayHeight = ele.clientHeight*dpr;
+
+    //mapSelectLang.width = map_DisplayWidth;
+    //mapSelectLang.height = map_DisplayHeight;
+
+    // point of location
+    let circleRadius = 3 * map_Zoom;
+    if (circleRadius < 2*dpr) circleRadius = 2*dpr;
+    if (circleRadius > 8*dpr) circleRadius = 8*dpr;
+
+    // generate dots
+    for (let p of languagesList) {
+        if (isNaN(p.locationX)) continue;
+        if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
+            if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2)) {
+                if (canvasMap.style.cursor != "pointer") canvasMap.style.cursor = "pointer";
+                return;
+            }
+        }
+    }
+    if (canvasMap.style.cursor != "move") canvasMap.style.cursor = "move";
+}
+
 
 function mapRedraw() {
     let canvasMap = document.getElementById("mapSelectLang");
 
     let ele = document.getElementById("mapZoom");
-    map_DisplayWidth = ele.clientWidth;
-    map_DisplayHeight = ele.clientHeight;
+    map_DisplayWidth = ele.clientWidth*dpr;
+    map_DisplayHeight = ele.clientHeight*dpr;
 
     mapSelectLang.width = map_DisplayWidth;
     mapSelectLang.height = map_DisplayHeight;
@@ -267,8 +344,8 @@ function mapRedraw() {
     // point of location	
     let circleRadius = 3 * map_Zoom;
     if (isTouchDevice()) circleRadius *= 3;
-    if (circleRadius < 2) circleRadius = 2;
-    if (circleRadius > 8) circleRadius = 8;
+    if (circleRadius < 2*dpr) circleRadius = 2*dpr;
+    if (circleRadius > 8*dpr) circleRadius = 8*dpr;
     ctx.lineCap = 'round';
 
     // generate dots
@@ -285,7 +362,6 @@ function mapRedraw() {
             ctx.arc(map_LocX + p.locationX * map_Zoom, map_LocY + p.locationY * map_Zoom, circleRadius, 0, 2 * Math.PI);
             ctx.fill();
 
-
             ctx.strokeStyle = p.ColorStrokeStyle;
             ctx.stroke();
         }
@@ -293,7 +369,7 @@ function mapRedraw() {
 
     if (ThemeLight == "dark") ctx.strokeStyle = 'White';
     else ctx.strokeStyle = 'Black';
-    ctx.font = "16px sans-serif";
+    ctx.font = (16*dpr)+"px sans-serif";
 
     // generate texts
     let z = dev ? 3.5 : 2.5;
@@ -320,65 +396,6 @@ function mapRedraw() {
     //ctx.restore();
 }
 
-function mapClick(mX, mY) {
-    let canvasMap = document.getElementById("mapSelectLang");
-
-    map_DisplayWidth = document.getElementById("mapZoom").clientWidth;
-    map_DisplayHeight = document.getElementById("mapZoom").clientHeight;
-
-    //mapSelectLang.width = map_DisplayWidth;
-    //mapSelectLang.height = map_DisplayHeight;
-
-    // point of location
-    let circleRadius = 3 * map_Zoom;
-    if (isTouchDevice()) circleRadius *= 3;
-    if (circleRadius < 2) circleRadius = 2;
-    if (circleRadius > 12) circleRadius = 12;
-
-    // generate dots
-    for (let p of languagesList) {
-        if (isNaN(p.locationX)) continue;
-        if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
-            if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2) ||
-                (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2))) {
-                console.log("click", { mX: mX, my: mY, x: map_LocX + p.locationX * map_Zoom - circleRadius, y: map_LocY + p.locationY * map_Zoom - circleRadius, w: circleRadius * 2, h: circleRadius * 2 });
-                p.option.selected = true;
-                PopPageClose('mapPage');
-                Translate();
-                GetDic()
-                return;
-            }
-        }
-    }
-}
-
-function mapMove(mX, mY) {
-    let canvasMap = document.getElementById("mapSelectLang");
-
-    let ele = document.getElementById("mapZoom");
-    map_DisplayWidth = ele.clientWidth;
-    map_DisplayHeight = ele.clientHeight;
-
-    //mapSelectLang.width = map_DisplayWidth;
-    //mapSelectLang.height = map_DisplayHeight;
-
-    // point of location
-    let circleRadius = 3 * map_Zoom;
-    if (circleRadius < 2) circleRadius = 2;
-    if (circleRadius > 8) circleRadius = 8;
-
-    // generate dots
-    for (let p of languagesList) {
-        if (isNaN(p.locationX)) continue;
-        if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
-            if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2)) {
-                if (canvasMap.style.cursor != "pointer") canvasMap.style.cursor = "pointer";
-                return;
-            }
-        }
-    }
-    if (canvasMap.style.cursor != "move") canvasMap.style.cursor = "move";
-}
 
 // inside
 function 入っちゃった(mx, my, x, y, w, h) {
