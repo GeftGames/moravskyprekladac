@@ -1,4 +1,7 @@
 # Poslední změny
+### 14.9. 2024
++ u obrazovek s vyšším rozlišením a zaplým škálováním aplikací (hdi) lépší prokreslení mapy
+
 ### 17.8.2024
 + Poměry mezi určitými znaky ''occurrences'' vyjádřeno v %
 
