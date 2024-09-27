@@ -1018,10 +1018,10 @@ function mapper_save() {
 }
 
 function mapper_save_cvs(){
-	if (points.length>0) {
+	if (mapper_points.length>0) {
 		let data= "Místo,Přeložení,N,E"+"\n";
 
-		for (let pt of points) {
+		for (let pt of mapper_points) {
 			data+=pt.name+","+pt.text+","+pt.lang.gpsY+","+pt.lang.gpsX+"\n";
 		}
 
@@ -1031,12 +1031,12 @@ function mapper_save_cvs(){
 
 // https://en.wikipedia.org/wiki/GeoJSON
 function mapper_save_geojson(){
-	if (points.length>0) {
+	if (mapper_points.length>0) {
 		let data='{\n'+
 			'"type": "FeatureCollection",\n'+
 			'"features": [\n';
 
-		for (let pt of points) {
+		for (let pt of mapper_points) {
 			data+='  {\n'+
 			'    "type": "Feature",\n'+
 			'    "geometry": {\n'+
@@ -1052,7 +1052,7 @@ function mapper_save_geojson(){
 
 		data=data.substring(0,data.length-2);
 
-		 data+=']\n'+
+		data+=']\n'+
 			'}\n';
 
 		download_file("mp_mapper "+mapperRenderOptions.inputText+"_GeoJSON.json", data, "text/json");
@@ -1061,7 +1061,7 @@ function mapper_save_geojson(){
 
 //klm+xml
 function mapper_save_klm() {
-	if (points.length>0) {
+	if (mapper_points.length>0) {
 		let data=//	<SimpleField name="kategorie" type="string"></SimpleField>
 `<?xml version="1.0" encoding="utf-8" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
@@ -1076,7 +1076,7 @@ function mapper_save_klm() {
 </Schema>
 <Folder><name>mp_preklady</name>`;
 		let id=1;
-		for (let pt of points) {//<SimpleData name="kategorie">`+pt.lang.Category.join(',')+`</SimpleData>
+		for (let pt of mapper_points) {//<SimpleData name="kategorie">`+pt.lang.Category.join(',')+`</SimpleData>
 		 	data+=`<Placemark>
 <name>`+pt.text+`</name>
 <ExtendedData><SchemaData schemaUrl="#mp_preklady">
@@ -1101,7 +1101,7 @@ function mapper_save_klm() {
 
 //gml
 function mapper_save_gml() {
-	if (points.length>0) {
+	if (mapper_points.length>0) {
 		let data=//	<SimpleField name="kategorie" type="string"></SimpleField>
 `<?xml version="1.0" encoding="utf-8" ?>
 <ogr:FeatureCollection
@@ -1111,7 +1111,7 @@ function mapper_save_gml() {
      xmlns:ogr="http://ogr.maptools.org/"
      xmlns:gml="http://www.opengis.net/gml/3.2">\r\n`;
 		let id=1;
-		for (let pt of points) {
+		for (let pt of mapper_points) {
 		 	data+=`<ogr:featureMember><ogr:mp_preklady gml:id="mp_preklad.`+id+`">
 	<ogr:geometryProperty><gml:Point srsName="urn:ogc:def:crs:EPSG::4326" gml:id="mp_preklad.geom.`+id+`"><gml:pos>`+pt.lang.gpsY+` `+pt.lang.gpsX+`</gml:pos></gml:Point></ogr:geometryProperty>
 	<ogr:ObjectId>`+id+`</ogr:ObjectId>
