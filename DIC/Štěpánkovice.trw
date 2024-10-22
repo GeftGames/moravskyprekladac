@@ -1,9 +1,10 @@
-TW v2
+TW v3
 tŠtěpánkovice
 aGG
 d27.06.2023 15:15:57
 ibonbon: eli my znali bombiky? Štěpánkovice OP
 c#Zdroje dat\n-sncj.ujc.cas.cz\n-snčj
+bkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=75|issn=|odkaz=|zpracovano=0|shortcut=dcjs
 u2
 g49.9574817,18.0359595
 x3
@@ -14,7 +15,8 @@ oSlezsko
 -
 -
 -
-tak se|0|tak se|
+tak se|0|tak se||
+vojenská četa|1|cugy||
 -
 -
 ne|ňe
@@ -22,6 +24,8 @@ ne|ňe
 -
 klo|kło
 ovat|ovač
+hly|hły
+hým|hym
 -
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 hospodář|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
@@ -41,23 +45,23 @@ cep|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 hromaDA|1|da?|dy?|ďe?|du?|do?|ďe?|dou?|dy|d?|dám?|dy?|dy?|dách?|dami?
 PEŇÍZE|3|-|-|-|-|-|-|-|peňíze?|peňis|peňezúm?|peňíze?|peňíze?|peňezích?|peňezi?
 -
-bonbon|hrad|0|bombik|hrad|
-hospodář|hospodář|0|hospodář|hospodář|
-||0|šmiry||
-kon|konEC|0|ko|koŇEC|
-oj|oj|0|oj|oj|
-kap|kapSA|0|kap|kapSA|
-||0|žyto,žytu 3p||
-cep|cep|0|cep|cep|
-hromad|hromadA|0|hroma|hromaDA|
-|PENÍZE|0||PEŇÍZE|
-zlaťák||0|złačakuf ||
-||0|uryngle||
-náramek||0|arbandy||
+bonbon|hrad|0|bombik|hrad||
+hospodář|hospodář|0|hospodář|hospodář||
+||0|šmiry|||
+kon|konEC|0|ko|koŇEC||
+oj|oj|0|oj|oj||
+kap|kapSA|0|kap|kapSA||
+||0|žyto,žytu 3p|||
+cep|cep|0|cep|cep||
+hromad|hromadA|0|hroma|hromaDA||
+|PENÍZE|0||PEŇÍZE||
+zlaťák||0|złačakuf |||
+||0|uryngle|||
+náramek||0|arbandy|||
 -
 -
 -
-suchoučké||suchučke||
+suchoučké||suchučke|||
 -
 MY|my|nás|nám|nás|my|nás|námi
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
@@ -75,16 +79,22 @@ ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ň
 taKY|ký?|kého?|kému?|kého?|-|kém?|kým?|kí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ke|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ke|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
 fšECHEN|echen?|eho?|emu?|eho?|echen?|em?|ím?|ichňi?|ech?|em?|echny?|ichňi?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|ychno?|yckeho|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
 -
-|MY||MY|
-|JÁ||JÁ|
-t|tEN||TEN|
-|SE||SE|
-|ON||ON|
-takov|takovÝ|ta|taKY|
-vš|všECHEN|fš|fšECHEN|
+|MY||MY||
+|JÁ||JÁ||
+t|tEN||TEN||
+|SE||SE||
+|ON||ON||
+takov|takovÝ|ta|taKY||
+vš|všECHEN|fš|fšECHEN||
 -
+jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
+druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 -
+jedEN|4|en|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
+druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hym|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
+jed|jedEN|jed|jedEN||
+dru|druHÝ|dru|druHÝ||
 -
 znÁT|15|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 pravIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
@@ -93,6 +103,7 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 ukazOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 bÍT|15|-1|ít|iji,biju|iješ|ije|ijeme|ijete|ijí,bijou|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
+tÁHNOUT|15|-1|áhnout|áhnu|áhneš|áhne|áhneme|áhnete|áhnou|áhni|áhněme|áhněte|áhl,(hovorově) táhnul|áhl,(hovorově) táhnul|áhla|áhlo|áhli|áhly|áhly|áhla|ažen|ažen|ažena|aženo|aženi|aženy|aženy|ažena
 -
 znÁT|15|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 pravIT|15|-1|it?|ím?|íš?|i|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
@@ -101,29 +112,32 @@ BÝT|247|-1|být?|jsem?|jsi?|je|jsme?|jste?|jsou?|budu?|budžeš|bude?|budeme?|b
 ukazOVAT|15|-1|ovač|uji?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováňi?|ovány?|ovány?|ována?
 mušET|5|-1|et?|ím?|yž|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
 bÍT|15|-1|ič|iji?,biju?|iješ?|ije?|ijeme?|ijete?|ijí?,bijou?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
+tÁHNOUT|15|-1|áhnout?|áhnu?|áhneš?|áhne?|áhneme?|áhnete?|áhnou?|áhňi?|áhňeme?|áhňete?|áhl?,(hovorově) táhnul?|áhl?,(hovorově) táhnul?|áhla?|áhlo?|áhli?|áhly?|ahły|áhla?|ažen?|ažen?|ažena?|aženo?|ažeňi?|aženy?|aženy?|ažena?
 -
-zn|znÁT|zn|znÁT|
-prav|pravIT|prav|pravIT|
-vyčerp|vyčerpAT|brak|brakNOUT|
-||hazały||
-||bombylały ||
-|BÝT||BÝT|
-ukaz|ukazOVAT|ukaz|ukazOVAT|
-mus|musET|muš|mušET|
-nemus|musET|ňemuš|mušET|
-b|bÍT|b|bÍT|
+zn|znÁT|zn|znÁT||
+prav|pravIT|prav|pravIT||
+vyčerp|vyčerpAT|brak|brakNOUT||
+||hazały|||
+||bombylały |||
+|BÝT||BÝT||
+ukaz|ukazOVAT|ukaz|ukazOVAT||
+mus|musET|muš|mušET||
+nemus|musET|ňemuš|mušET||
+b|bÍT|b|bÍT||
+t|tÁHNOUT|t|tÁHNOUT||
 -
-ještě|ešče|
-tak|tak|
-jen,jenom|ene|
-hodně|fest|
-tam|tam|
+ještě|ešče||
+tak|tak||
+jen,jenom|ene||
+hodně|fest||
+tam|tam||
 -
-na||na|
+na||na||
+za||za||
 -
-jestli|eli|
-že|že|
-ani|aňi|
-a|a|
+jestli|eli||
+že|že||
+ani|aňi||
+a|a||
 -
 -

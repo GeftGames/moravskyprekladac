@@ -1,12 +1,14 @@
-TW v2
+TW v3
 tStaré Hamry
 aGG
 d01.05.2023 14:28:04
 iTak se mě představila Ostrava za té prvé noci. Cestou přes Vítkovice cítil\njsem se velice ubohý při pohledu na to moře komínů a továren. Také pohled\nna šachty mocně na mne zapůsobil.… Začátky moje byly v Ostravě těžké. Jsa\nkluk, a tož ocitnuv se v takovém průmyslovém středisku. Byl jsem tamními\npoměry zmaten, a zkusil jsem hodně ústrků a posměšků za svoje horské nářečí\na prostotu duše. Také po stránce výdělku bylo to horší než v Místku. Protože\njsem ještě neměl 16 let, obdržel jsem na směnu 55 krejcarů – t. j. 1,10 K.\nZ toho jsem platil za oběd 28 krejcarů, snídaně 8 krejcarů a večeře 12–16\nkrejcarů mimo chleba, který jsem si musel kupovat sám. Čili celý výdělek jsem\nprojedl. Za byt a prádlo jsem dlužil. Peněz na ošacení jsem neměl.“ \n\n…Sedmého července večer přijdu z práce a byl jsem\nopravdovým tátu. Narodilo se nám děvče, Libuša se zove. Byly křtiny u Satiny a starosti nové. Dosud sem enem skokol kolem svoji Fanky, včil musím\ni kol Libuše, jak spusti varhanky. Ráno letím do roboty, gatě držím v ruce, bo\nuž na mě viso jako strašok na špagatě. Jak to dále se mnu pujdě to ví enem\nPán Bůh. Svobodní se mi posmívají. Však počkajtě, vy sakramenti, až vas to\njak chytně, ež se vy též oženitě, žaden z vas něpipně. \n\nDokolečka na tym, světě,\ndo kola to chodí.\nKaždu špetku te radosti,\nsmutek doprovodí.\nSotva zme s té smoly začli\ntrochu se rychtovať.\nNa vesno zme robě matku\nmuseli pochovať. \n\nZ vlastního pozorování mluvy zdejších obyvatel mohu přidat ještě další znak starohamerského nářečí. Místo obligátního příčestí minulého na -ła se užívá příčestí minulé typické pro neutra -ło (např. namísto „Máňa šła kajsi ku chalupě“ se užije „Máňa šło kajsi ku chalupě“.).\n\n\nneznámé: předza
-c#Zdroje\n-http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf\n-https://adoc.pub/lidova-slovesnost-na-starych-hamrech.html\n-https://www.e15.cz/magazin/vypravejte-nam-neco-tetusko-fanko-849535\n-Karlovické nářečí-Svěrák, František\n\n#popis nářečí\n- původní l, r\n- 1. os sponového slovesa sym
+c#popis nářečí\n- původní l, r\n- 1. os sponového slovesa sym
+bkniha|prijmeni=Svěrák|jmeno=František|nazev=Karlovické nářečí|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://www.e15.cz/magazin/vypravejte-nam-neco-tetusko-fanko-849535|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://adoc.pub/lidova-slovesnost-na-starych-hamrech.html|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nkniha|prijmeni=Sobotka|jmeno=Richard|nazev=Vůně mateřštiny|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf|zpracovano=|shortcut=vm\n\nkniha|autor=Masarykova akademie práce|nazev=Československá vlastivěda - 3. Jazyk|misto=|vydavatel=|rok_vydani=|strany=183|issn=|odkaz=|zpracovano=0|shortcut=cv3j
 u2
 g49.4728785,18.4449781
 x3
+rde=Althammer,nář=Stare Hamry
 q0
 oLašsko
 -
@@ -14,13 +16,16 @@ oLašsko
 -
 -
 -
-z ní|1|z ňi|
-velmi krvácela|1|čuřeła|
-jako z prasete|1|jag z brava|
-do náruče|1|do naručo|
-k tobě|1|ku tebje|
-šla k řezníkovi|1|šła do řezňika|
-kolem něj|1|kole ňeho|
+z ní|1|z ňi||
+velmi krvácela|1|čuřeła||
+jako z prasete|1|jag z brava||
+do náruče|1|do naručo||
+k tobě|1|ku tebje||
+šla k řezníkovi|1|šła do řezňika||
+kolem něj|1|kole ňeho||
+taky jednou|1|ros teš||cv3j
+z těch|1|s tych||cv3j
+dozadu|1|na zadek||cv3j
 -
 -
 žlu|žłu
@@ -29,9 +34,11 @@ tlou|tłu
 tlu|tłu
 -
 mě|mje
+ou|u
 -
 zla|zła
 vila|viła
+tejte|tajťe
 -
 krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
 prasE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
@@ -124,57 +131,57 @@ chłapEC|2|ec|ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|ci?|cú?|cúm?|ce?|ci?|cích
 čarodeňiK|2|k?|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|cy|kú?|kúm?|ky?|ci?|cích?|ky?
 straNA|1|na?|ny?|ňe?|nu|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 -
-||0|ďevucha||
-||0|hrča||
-||0|ščerbak||
-||0|žuna||
-||0|breco||
-bab|babA|0|bab|babA|
-brat|bratR|0|brat|bratR|
-cest|cestA|0|ces|cesTA|
-čert|čert|0|čer|čerT|
-člun|člunEK|0|čłun|čłunEK|
-d|dÍTĚ|0|ď|ďÍŤE|
-des|desKA|0|des|desKA|
-dlu|dluH|0|dłu|dłuH|
-handlíř|handlíř|0|handliř|handliř|
-hnízd|hnízdO|0|hňizd|hňizdO|
-hrn|hrnEC|0|hrn|hrnEC|
-chlap|chlap|0|chłop|chłop|
-j|jÁDRO|0|j|jÁDRO|
-jahod|jahodA|0|jaho|jahoDA|
-jíd|jídLO|0|id|idŁO|
-jitrnic|jitrnicE|0|iterňic|iterňicA|
-koz|kozA|0|koz|kozA|
-kr|krEV|0|kr|krEV|
-měsíc|měsíc|0|mjesic|mjesic|
-měst|městO|0|mjest|mjestO|
-mez?||0|medźa||
-mlé|mléKO|0|mli|mliKO|
-muž|muž|0|chłop|chłop|
-náruč||0|do naručo||
-polév|polévKA|0|poli|poliFKA|
-pras|prasE|0|brav|brav|
-semen|semenO|0|śemen|śemenO|
-sen|senO|0|śen|śenO|
-sloup|sloup|0|słup|słup|
-srdc|srdcE|0|src|srcO|
-srp|srp|0|srp|srp|
-strom|strom|0|strom|strom|
-švag|švagR|0|švag|švagR|
-talíř|talíř|0|taliř|taliř|
-vl|vlK|0|vl|vlK||vil|vlK|
-vln|vlnA|0|vl|vlNA|
-vod|vodA|0|vo|voDA|
-zelí|zelí|0|zel|zelI|
-žlout|žloutEK|0|žult|žultEK|
-žluč|žluč|0|žłuč|žluč||žułč|žluč|
-v|vEJCE|0|v|vAJCO|
-pol|polE|0|pol|polE|
-chlap|chlapEC|0|chłap|chłapEC|
-řezní|řezníK|0|řezňi|řezňiK|
-čarodějní|čarodějníK|0|čarodeňi|čarodeňiK|
-stran|stranA|0|stra|straNA|
+||0|ďevucha|||
+||0|hrča|||
+||0|ščerbak|||
+||0|žuna|||
+||0|breco|||
+bab|babA|0|bab|babA||
+brat|bratR|0|brat|bratR||
+cest|cestA|0|ces|cesTA||
+čarodějní|čarodějníK|0|čarodeňi|čarodeňiK||
+čert|čert|0|čer|čerT||
+člun|člunEK|0|čłun|čłunEK||
+d|dÍTĚ|0|ď|ďÍŤE||
+des|desKA|0|des|desKA||
+dlu|dluH|0|dłu|dłuH||
+handlíř|handlíř|0|handliř|handliř||
+hnízd|hnízdO|0|hňizd|hňizdO||
+hrn|hrnEC|0|hrn|hrnEC||
+chlap|chlap|0|chłop|chłop||
+chlap|chlapEC|0|chłap|chłapEC||
+j|jÁDRO|0|j|jÁDRO||
+jahod|jahodA|0|jaho|jahoDA||
+jíd|jídLO|0|id|idŁO||
+jitrnic|jitrnicE|0|iterňic|iterňicA||
+koz|kozA|0|koz|kozA||
+kr|krEV|0|kr|krEV||
+měsíc|měsíc|0|mjesic|mjesic||
+měst|městO|0|mjest|mjestO||
+mez?||0|medźa|||
+mlé|mléKO|0|mli|mliKO||
+muž|muž|0|chłop|chłop||
+náruč||0|do naručo|||
+pol|polE|0|pol|polE||
+polév|polévKA|0|poli|poliFKA||
+pras|prasE|0|brav|brav||
+řezní|řezníK|0|řezňi|řezňiK||
+semen|semenO|0|śemen|śemenO||
+sen|senO|0|śen|śenO||
+sloup|sloup|0|słup|słup||
+srdc|srdcE|0|src|srcO||
+srp|srp|0|srp|srp||
+stran|stranA|0|stra|straNA||
+strom|strom|0|strom|strom||
+švag|švagR|0|švag|švagR||
+talíř|talíř|0|taliř|taliř||
+v|vEJCE|0|v|vAJCO||
+vl|vlK|0|vl|vlK|||vil|vlK||
+vln|vlnA|0|vl|vlNA||
+vod|vodA|0|vo|voDA||
+zelí|zelí|0|zel|zelI||
+žlout|žloutEK|0|žult|žultEK||
+žluč|žluč|0|žłuč|žluč|||žułč|žluč||
 -
 nejmenší|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 zlÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -196,24 +203,24 @@ tłusTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|-|-|tá?|tých?|tým?|tá?|
 iNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ny|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 suśedÚV|-1|ovo?|ova?|ovu?|ovo?|ovo?|ově?,sousedovu?|ovým?|-|-|ova?|ových?|ovým?|ova?|ova?|ových?|ovými?|-|-|ova?|ovy?|ově?|ovu?|ova?|ově?|ovou?|-|-|ovy?|ových?|ovým?|ovy?|ovy?|ových?|ovými?|-|-|uf|ova?|ovu?|ova?|úv?|ově?,sousedovu?|ovým?|-|-|ovi?|ových?|ovým?|ovy?|ovi?|ových?|ovými?|-|-|úv?|ova?|ovu?|úv?|úv?|ově?,sousedovu?|ovým?|-|-|ovy?|ových?|ovým?|ovy?|ovy?|ových?|ovými?|-|-
 -
-||svaty||
-||||
-boční|nejmenší|bočňi|nejmenši|
-čer|dobRÝ|čer|dobRÝ|
-čerstv|čerstvÝ|čerstv|čerstvÝ|
-červen|zelenÝ|červe|ščosNÝ|
-dob|dobRÝ|dob|dobRÝ|
-lepší|nejmenší|lepši|nejmenši|
-nejkratší|nejmenší|najkroči|nejmenši|
-nejmenší|nejmenší|nejmenši|nejmenši|
-šťastn|zelenÝ|ščos|ščosNÝ|
-vlh|vlhKÝ|vlch|vlhKÝ|
-zl|zlÝ|z|zŁÝ|
-tlust|tlustÝ|tłus|tłusTÝ|
-žlut|tlustÝ|žłu|tłusTÝ||žuł|tłusTÝ|
-jin|jinÝ|i|iNÝ|
-soused|sousedŮV|suśed|suśedÚV|
-||usta|tłusTÝ|
+||svaty|||
+|||||
+boční|nejmenší|bočňi|nejmenši||
+čer|dobRÝ|čer|dobRÝ||
+čerstv|čerstvÝ|čerstv|čerstvÝ||
+červen|zelenÝ|červe|ščosNÝ||
+dob|dobRÝ|dob|dobRÝ||
+lepší|nejmenší|lepši|nejmenši||
+nejkratší|nejmenší|najkroči|nejmenši||
+nejmenší|nejmenší|nejmenši|nejmenši||
+šťastn|zelenÝ|ščos|ščosNÝ||
+vlh|vlhKÝ|vlch|vlhKÝ||
+zl|zlÝ|z|zŁÝ||
+tlust|tlustÝ|tłus|tłusTÝ||
+žlut|tlustÝ|žłu|tłusTÝ|||žuł|tłusTÝ||
+jin|jinÝ|i|iNÝ||
+soused|sousedŮV|suśed|suśedÚV||
+||usta|tłusTÝ||
 -
 ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
 ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
@@ -226,24 +233,24 @@ ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
 ONA|ona?|jí?,#ňi|jí?,ňí*?|ji?,ňi*?|-|ňí*?|jí?,ňí*?
 JÁ|jo|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
-TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
+TEN|ten?|toho?|temu|toho?|-|tom?|ťím?|ťi?|tych|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
 TY|ty|ťe[1]?,tebe?|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
 SE|-|sebe?|si?,sobje?|śe,sebe?|-|sobje?|sebou?
-OŇI|oňi|jich?,ňich*?|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
+OŇI|oňi|jich?,ňich|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
 -
-|ON||ON|
-|ONA||ONA|
-|JÁ||JÁ|
-t|tEN||TEN|
-t|tY||TY|
-|SE||SE|
-|ONI||OŇI|
+|ON||ON||
+|ONA||ONA||
+|JÁ||JÁ||
+t|tEN||TEN||
+t|tY||TY||
+|SE||SE||
+|ONI||OŇI||
 -
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 -
 druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hu|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
-dru|druHÝ|dru|druHÝ|
+dru|druHÝ|dru|druHÝ||
 -
 vynášET|15|-1|et|ím|íš|í|íme|íte|í,vynášejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 krájET|15|-1|et|ím|íš|í|íme|íte|í,krájejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
@@ -271,47 +278,59 @@ smÁT_SE|7|-1|joť|ěji se?,směju?|ěješ?|ěje?|ějeme?|ějete?|ějí se?,smě
 třoST_se|0|-1|ść
 hodzAT|15|-1|ať|ím?|íš?|í?|íme?|íte?|í?,házejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 tłUCŤ|15|-1|ucť|uku??,tluču??|učeš??|uče??|učeme??|učete??|ukou??,tlučou??|uč??,tluc??|učme??,tlucme??|učte??,tlucte??|oukl??|oukl??|oukla??|ouklo??|oukli??|oukly??|oukly??|oukla??|učen??|učen??|učena??|učeno??|učeňi??|učeny??|učeny??|učena??
-BÝT|247|-1|být?|sym|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|sym|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by|bychom?|byste?|by?
 młuvIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|juł|il?|iła|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
-||łupať||
-vynáš|vynášET|vynoš|vynošET|
-||svožať||
-kráj|krájET|kr|krÁJET|
-děl|dělAT|ďeł|ďelAT|
-zkouš|zkoušET|skuš|skušAT|
-vr|vrÁTIT|vr|vrÁŤIT|
-||||
-v|vZÍT|v|vZÍT|
-sm|smÁT_SE|sm|smÁT_SE|
-sáh|sáhNOUT|śoh|śohNUT|
-tř|třÁST|třo|třoST_se|
-ház|házET|hodz|hodzAT|
-||litať||
-||drhnuť||
-tl|tlOUCT|tł|tłUCŤ|
-|BÝT||BÝT|
-vylézt||vyliz,vylezła||
-mluv|mluvIT|młuv|młuvIT|
-|JÍT||JÍT|
-||||
+||łupať|||
+||svožať|||
+|||||
+||litať|||
+||drhnuť|||
+|BÝT||BÝT||
+|JÍT||JÍT||
+děl|dělAT|ďeł|ďelAT||
+ház|házET|hodz|hodzAT||
+kráj|krájET|kr|krÁJET||
+mluv|mluvIT|młuv|młuvIT||
+sáh|sáhNOUT|śoh|śohNUT||
+sm|smÁT_SE|sm|smÁT_SE||
+tl|tlOUCT|tł|tłUCŤ||
+tř|třÁST|třo|třoST_se||
+v|vZÍT|v|vZÍT||
+vr|vrÁTIT|vr|vrÁŤIT||
+vylézt||vyliz,vylezła|||
+vynáš|vynášET|vynoš|vynošET||
+zkouš|zkoušET|skuš|skušAT||
 -
-jenom|enem|
-někde|kajsi|
-všude|všadě|
+jenom|enem||
+někde|kajsi||
+všude|všadě||
+jednou|ros||cv3j
+taky,také|teš||cv3j
+tam|tam||cv3j
+|dolu||
+domů|domu||cv3j
+přece,přeci|přeca||cv3j
 -
-i||aj|
-z||z|
-na||na|
-o||o|
-do||do|
-mezi||medźi|
-k||ku|
-pod||pot|
-kolem||kole|
+i||aj||
+z||z|||s||cv3j
+na||na||cv3j
+o||o||
+do||do||
+mezi||medźi||
+k||ku||
+pod||pot||
+kolem||kole||
+ze||ze||cv3j
+v||v||cv3j
+se||se||cv3j
 -
-jak|jag|
+jak|jag|||jak||cv3j
+že|že||cv3j
+a|a||cv3j
+jako|jako||cv3j
+protože,neboť|bo||cv3j
 -
-ne|ňi|
+ne|ňi||
 -

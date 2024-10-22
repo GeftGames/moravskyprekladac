@@ -1,8 +1,8 @@
-TW v2
+TW v3
 tBruzovice
 aGG
 d15.02.2024 16:04:53
-c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Bruzovice+FM%22">SNČJ</a>
+bkniha|autor=Masarykova akademie práce|nazev=Československá vlastivěda - 3. Jazyk|misto=|vydavatel=|rok_vydani=|strany=181|issn=|odkaz=|zpracovano=0|shortcut=cv3j\n\nsncj|i=Bruzovice FM|zpracovano=\n\nkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=77|issn=|odkaz=|zpracovano=0|shortcut=dcjs
 u2
 g49.7178392,18.4052127
 q0
@@ -12,10 +12,12 @@ oSlezsko>Těšínsko
 -
 -
 -
-v tom|1|f tym|
+v tom|1|f tym||
+a kdyby zapršelo|1|i dyby zapršeło||cv3j
 -
 -
 sbí|zbi
+ne|ňe
 -
 í|i
 á|a
@@ -23,6 +25,7 @@ sbí|zbi
 -
 ralo|rało
 rý|ry
+šelo|šeło
 -
 šípEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 česneK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
@@ -42,21 +45,21 @@ bláTO|0|to?|ta?|tu?|to?|to?|će|tem?|ta?|t?|túm?|ta?|ta?|tech?|ty?
 dEN|0|en?|ne?|ňi?,nu?|źeň|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 ranO|0|o?|a|u?|o?|o?|u?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
-šíp|šípEK|0|šip|šipEK|
-česne|česneK|0|česne|česneK|
-cibul|cibulE|0|cybul|cybulE|
-||0|na słamjonku||
-hus|husA|0|hu|huŚA|
-v|vÍTR|0|v|vÍTR|
-blát|blátO|0|bła|bláTO|
-d|dEN|0|d|dEN|
-rán|ránO|0|ran|ranO|
+šíp|šípEK|0|šip|šipEK||
+česne|česneK|0|česne|česneK||
+cibul|cibulE|0|cybul|cybulE||
+||0|na słamjonku|||
+hus|husA|0|hu|huŚA||
+v|vÍTR|0|v|vÍTR||
+blát|blátO|0|bła|bláTO||
+d|dEN|0|d|dEN||
+rán|ránO|0|ran|ranO||
 -
 mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
 mokRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|rý?|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|ry|rý?|rém?|rým?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 -
-štěd|mokRÝ|ščed|mokRÝ|
+štěd|mokRÝ|ščed|mokRÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -66,9 +69,9 @@ TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten
 SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 MY|my|nás?|nám?|nás?|my?|nás?|námi?
 -
-t|tEN||TEN|
-|SE||SE|
-|MY||MY|
+t|tEN||TEN||
+|SE||SE||
+|MY||MY||
 -
 -
 -
@@ -79,19 +82,34 @@ mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|
 sbírAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|jeli|ěly?|ěly?|ěla?
 -
-sbír|sbírAT|zbir|sbírAT|
-m|mÍT|m|mÍT|
-||kulały||
-postit||pośćiło||
+sbír|sbírAT|zbir|sbírAT||
+m|mÍT|m|mÍT||
+||kulały|||
+postit||pośćiło|||
 -
-už|už|
-vždy|dycky|
-potom|potem|
-tak|tak||tuš|
+brzo|brzo||cv3j
+ještě|ešče||cv3j
+kdy|dy||cv3j
+letos|letoz||cv3j
+málo|mało||cv3j
+potom|potem|||potym||cv3j
+tak|tak|||tuš|||tag||cv3j
+taky,také|teš||cv3j
+už|už||cv3j|uš||cv3j
+vždy|dycky||cv3j
+zase|zaśe||cv3j
 -
-na||na|
-ve||ve|
-od||od|
+na||na||
+ve||ve||
+od||od||
+v||f||cv3j
 -
+jestli|esli||cv3j
+a|a||cv3j
+že|že||cv3j
+protože|bo||cv3j
+dokonce|baj||cv3j
+vždyť|dy||cv3j
 -
+no|no||cv3j
 -

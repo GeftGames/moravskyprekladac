@@ -1,4 +1,4 @@
-TW v2
+TW v3
 tPetřkovice
 aGG
 d01.01.2024 12:02:13
@@ -6,16 +6,20 @@ c#Zdroje dat\n-snčj
 u2
 sOstrava
 g49.874389,18.2589904
+rnář=Petřkovice
 q0
 -
 -
 -
-Pane Bože!|1|Dla božy!|
+Pane Bože!|1|Dla božy!||
+-
+Kde je hrnec?|1|Kaj je gornek?||cv3j
+-
+do sytosti|1|dosyta||
+|1|||
 -
 -
-do sytosti|1|dosyta|
--
--
+ne|ňe
 -
 -
 -
@@ -27,9 +31,9 @@ bÍDA|1|ida|ídy?|íďe?|ídu?|ído?|íďe?|ídou?|ídy?|jed?|ídám?|ídy?|ídy
 chlÉB|3|eba|eba?|ebu?|éb?|ebe?|ebu?,ebje?|ebem?|eby?|ebú?|ebúm?|eby?|eby?|ebech?|eby?
 čurbel|2||ce?|ci?,covi?|ce?|če?|ci?,covi?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
 -
-b|bÍDA|0|b|bÍDA|
-chl|chlÉB|0|chl|chlÉB|
-vrab|vrabEC|0|čurbel|čurbel|
+b|bÍDA|0|b|bÍDA||
+chl|chlÉB|0|chl|chlÉB||
+vrab|vrabEC|0|čurbel|čurbel||
 -
 -
 -
@@ -46,12 +50,22 @@ dostaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 BÝT|247|-1|být?|jsem?|jsi?|je?|zmy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 dostaT|22|-1|t?|nu?|neš?|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|l?|l?|la?|lo?|li|ly?|ly?|la?
 -
-|BÝT||BÝT|
-dosta|dostaT|dosta|dostaT|
-nedosta|dostaT|ňedosta|dostaT|
+|BÝT||BÝT||
+dosta|dostaT|dosta|dostaT||
+nedosta|dostaT|ňedosta|dostaT||
 -
+kde|kaj||cv3j
+jen,jenom|yny||cv3j
+tam|tam||cv3j
+přece,přeci|přecy||cv3j
+pořád|furd||cv3j
+také,taky|teš||cv3j
 -
-ani||aňi|
+ani||aňi||
+s||s||cv3j
 -
+a|a||cv3j
+když|dyž||cv3j
+ale|ale||cv3j
 -
 -

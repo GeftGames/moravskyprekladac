@@ -1,8 +1,9 @@
-TW v2
+TW v3
 tNásedlovice
 aGG
 d25.10.2023 15:33:37
-c#Zdroj dat\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\nNářečí na Břeclavsku a v dolním Pomoraví, František Svěrák\n-Nářečí na Kyjovsku a Ždánsku-Kolaja, Maxmilian; str. 103 (nevyčerpáno)\n\n#Popis\n-j odsouvá: zavolé, zazpívé, nezavazé, nélepší, grécar, té našé bílé husi (v Nenkovicích, Želeticích, Veteřově a v Násedlovicích)\n-ý buď trvá nezměněno: dobrý člověk, rynský, bývajú (ve Vracově, Kyjově, Ježově, Kostelci, Nenkovicích, Želeticích, Násedlovicích)¨\n-Hanácké É místo ej>é\n-políbit>políbnút\n-Na začátku některých (jiskra, jísčerka, jinačí) slov se vyskytuje protetické J \n-na začátku slov tl za kl (klúct)
+c#Popis\n-j odsouvá: zavolé, zazpívé, nezavazé, nélepší, grécar, té našé bílé husi (v Nenkovicích, Želeticích, Veteřově a v Násedlovicích)\n-ý buď trvá nezměněno: dobrý člověk, rynský, bývajú (ve Vracově, Kyjově, Ježově, Kostelci, Nenkovicích, Želeticích, Násedlovicích)¨\n-Hanácké É místo ej>é\n-políbit>políbnút\n-Na začátku některých (jiskra, jísčerka, jinačí) slov se vyskytuje protetické J \n-na začátku slov tl za kl (klúct)
+bkniha|prijmeni=Kolaja|jmeno=Maxmilian|nazev=Nářečí na Kyjovsku a Ždánsku|misto=|vydavatel=|rok_vydani=|strany=103|issn=|odkaz=|zpracovano=0|shortcut=\n\nkniha|prijmeni=Svěrák|jmeno=František|nazev=Nářečí na Břeclavsku a v dolním Pomoraví|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=
 g49.0125234,16.9600295
 q0
 oSlovácko>Hanácké Slovácko
@@ -30,13 +31,13 @@ kožiCH|3|ch|chu,čeji) kožicha?|chu?|ch?|chu?|chu,čeji) kožiše?|chem?|chy?|
 kříž|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
 akát|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 -
-v|vEJCE|0|v|vEJCE|
-|ČLOVĚK|0||ČLOVĚK|
-koži|kožiCH|0|koži|kožiCH|
-klička||0|klučka||
-kříž|kříž|0|kříž|kříž|
-nit?||0|hňiť?||
-akát|akát|0|hagát|akát|
+v|vEJCE|0|v|vEJCE||
+|ČLOVĚK|0||ČLOVĚK||
+koži|kožiCH|0|koži|kožiCH||
+klička||0|klučka|||
+kříž|kříž|0|kříž|kříž||
+nit?||0|hňiť?|||
+akát|akát|0|hagát|akát||
 -
 největší|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
 tlustÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -44,8 +45,8 @@ tlustÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|o
 největší|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?||ho?|mu?|ho?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?
 tlustÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-největší|největší|névječí|největší|
-tlust|tlustÝ|klust|tlustÝ|
+největší|největší|névječí|největší||
+tlust|tlustÝ|klust|tlustÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
@@ -53,8 +54,8 @@ nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|a�
 tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašé|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 -
-t|tEN|t|tEN|
-n|nÁŠ|n|nÁŠ|
+t|tEN|t|tEN||
+n|nÁŠ|n|nÁŠ||
 -
 -
 -
@@ -73,18 +74,18 @@ dÁT|30|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|al
 noSIT|15|-1|sit?|sím?|síš?|sí?|síme?|síte?|sijú|s?|sme?|ste?|sil?|sil?|sila?|silo?|sili?|sily?|sily?|sila?|šen?|šen?|šena?|šeno?|šeni?|šeny?|šeny?|šena?
 tlOUCT|15|-1|ouct?|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,tluc?|učme,tlucme?|učte,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeni?|učeny?|učeny?|učena?
 -
-zavol|zavolAT|zavol|zavolAT|
-utík|utíkAT|u|utíkAT|
-neutík|utíkAT|neu|utíkAT|
-pol|polÍBIT|pol|polÍBIT|
-d|dÁT|d|dÁT|
-no|noSIT|no|noSIT|
-tlačit||klačit||
-tl|tlOUCT|kl|tlOUCT|
+zavol|zavolAT|zavol|zavolAT||
+utík|utíkAT|u|utíkAT||
+neutík|utíkAT|neu|utíkAT||
+pol|polÍBIT|pol|polÍBIT||
+d|dÁT|d|dÁT||
+no|noSIT|no|noSIT||
+tlačit||klačit|||
+tl|tlOUCT|kl|tlOUCT||
 -
-nejvíce|névíc|
+nejvíce|névíc||
 -
 -
 -
-ano|áno|
+ano|áno||
 -

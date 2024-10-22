@@ -40,6 +40,7 @@ velká lžíce|1|žêca||
 velkých trnů|1|velkéch pichálu||sncj
 někam spadnout|1|zahôčet||slme
 čuhácké nářečí|1|čôháčťêna||slme
+truhlík na sekání brambo|1|koráp||slme
 -
 chumlat se|1|babôšêt se||
 ušpiněnec|1|bagón||
@@ -126,6 +127,7 @@ vý|vé
 ží|ži
 žitý|žêté
 žují|žôjó
+|
 -
 konEC|3|ec|ce|ci|ec|ci|ci|cem|ce|ců|cům|ce|ce|cích|ci
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
@@ -275,6 +277,11 @@ dÍRA|1|íra|íry|íře|íru|íro|íře|írou|íry|ěr|írám|íry|íry|írách|
 příkop|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 hřbitov|3||a|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 krEV|1|ev|ve|vi|ev|vi|vi|ví|ve|ví|vím|ve|ve|vích|vemi
+haluz|1||e|i||i|i|í|e|í|ím|e|e|ích|emi
+kominíK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
+kopist|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
+prádelníK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+bruslE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 -
 agát|3||ô|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 alEJ|1|êja|je?|ji?|j?|ji?|ji?|jí?|je?|jí?|jím?|je?|je?|jích?|jemi?
@@ -334,6 +341,7 @@ glG|3|g|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 gořalKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 halmaRA|1|ra|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 halóSKA|1|ska?|sky?|sce?|sku?|sko?|sce?|skou?|skê|sek?|skám?|sky?|sky?|skách?|skami?
+halôz|1||e?|i?|?|i?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 hanáK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|ku|kúm?|kê|ci?|kách|kama
 hlupáK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 hmLA|1|la|hy?|ze?|hu?|ho?|ze?|hou?|hy?|h?|hám?|hy?|hy?|hách?|hami?
@@ -352,10 +360,11 @@ konyFKA|1|fka|fky?|fce?|fku?|fko?|fce?|fkou?|fky?|fek?|fkám?|fky?|fky?|fkách?|
 kópelŇA|1|ňa|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 koróhVA|1|va|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 korôNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
-korotVA|1|ev?|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+korotVA|1|va|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 kosêskO|0|o|e?|i?|e?|e?|i?|em?|e?|?|ím?|e?|e?|ích?|i?
 kost|1|?|i?|i?|?|i?|i?|í?|i?|í?|em?|i?|i?|ech?|mi?
 košôlA|1|a|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+krEV|1|if|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
 křipopA|1|a|u?|u?|?|e?|u?,je?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 kulŇA|1|ňa|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 kystNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
@@ -424,7 +433,10 @@ zvêK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 ženA|1|a?|y?|ě?|u?|o?|ě?|ó|y?|?|ám?|y?|y?|ách?|ami?
 žêtO|0|o|a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 žêvoT|3|t|ta?|tu?|t?|te?|ťe?|tem?|ty?|tú?|túm?|ty?|ty?|tech?|ty?
-krEV|1|if|ve?|vi?|ev?|vi?|vi?|ví?|ve?|ví?|vím?|ve?|ve?|vích?|vemi?
+komiňář|2||ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+kopêsť|1||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+kostn|3||ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+košlA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 -
 ||0||||
 ||0|pichálu|||
@@ -499,10 +511,11 @@ kabel|kabelKA|0|kabil|kabilKA||
 klu|kluK|0|klô|klôK||
 klubko||0|klôpko|||
 kobli|kobliHA|0|koblê|koblêCH||
+kominí|kominíK|0|komiňář|komiňář||slme
 kon|konEV|0|kon|konVA||
 kon|konEC|0|kon|konEC||
 konvič|konvičKA|0|koni|konyFKA||
-koropt|koroptEV|0|korot|korotVA||
+koropt|koroptEV|0|korot|korotVA||slme
 korouh|korouhEV|0|koróh|koróhVA||
 korun|korunA|0|korô|korôNA||
 koryto||0|korêto|||
@@ -510,6 +523,7 @@ kořal|kořalKA|0|gořal|gořalKA||
 kosiš|kosišTĚ|0|kosêsk|kosêskO||
 košil|košilE|0|košôl|košôlA||
 koupel|koupelNA|0|kópel|kópelŇA||
+kr|krEV|0|kr|krEV||slme
 kropítko||0|cezan||na konev|slme
 křoví|křoví|0|chrašti|chrašti||
 kuka|kukaŇ|0|baň|baňKA||
@@ -587,7 +601,7 @@ včel|včelA|0|fčel|fčelA||
 vě|věK|0|vě|věK||
 vejmin|vejminEK|0|vémě|véměNA||
 vesnic|vesnicE|0|ďeďi|ďeďiNA||
-vět|větEV|0|vět|větVA||
+vět|větEV|0|halôz|větVA|||vět|větVA||
 větvič|větvičKA|0|haló|halóSKA||sncj
 vězení||0|árešt|||
 vězení|vězení|0|árešt|árešt||
@@ -618,7 +632,9 @@ zvy|zvyK|0|obêčej|obêčej|||zvê|zvêK||
 život|život|0|žêvo|žêvoT||
 žně||0|žňa|||
 žvást|žvást|0|plk|plkÊ||slme
-kr|krEV|0|kr|krEV||slme
+kopist|kopist|0|kopêsť|kopêsť||slme
+prádelní|prádelníK|0|kostn|kostn||slme
+brusl|bruslE|0|košl|košlA||slme
 -
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -734,17 +750,20 @@ dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 nesklonne|1|
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
+čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
 -
 dvA|4|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|a|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-
 jedEN|4|en|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 nesklonne|1|
 drôHÝ|4|hé|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
+štêRE|2|re|vorově) čtyřech[1]?,?,(hovorově) čtyřech[1]?|em?|re|i?|ech?|tyřma[2]?,mi?,čtyřma[2]?
 -
 několik||nekolêk|||
 dv|dvA|dv|dvA||
 jed|jedEN|jed|jedEN||
 kolikrát|nesklonne|kolêkrát|nesklonne||
 dru|druHÝ|drô|drôHÝ||
+čtyř|čtyřI|štê|štêRE||
 -
 bacIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
@@ -825,9 +844,11 @@ kivlAT_SE|15|2|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|
 |BÝT||BÝT||sncj
 |MÍT||MÍT||
 ||vêslovovat|||
+|||||
 bac|bacIT|bácn|bácnÓT||
 bácnout||bácnót||slme|
 baculatět||bacôlatět||slme|
+c|cÍTIT|č|čÔT||
 ch|chTÍT|ch|chTÍT||
 chumlat se||babôšêt se; za- (se)|||
 j|jÍST|j|jÍST||
@@ -856,19 +877,17 @@ um|umĚT|ôm|umĚT||
 umír|umírAT|ômir|ômirAT||
 urč|určIT|ôrč?|určIT||
 vi|viDĚT|vi|viDĚT||
+vikl|viklAT_SE|kivl|kivlAT_SE||
+vnuknout||vnôknót|||slme
 vřískat||břéskat|||
 vypad|vypadAT|vêpad|vypadAT||
 vyv|vyvÉST|vêv|vêvÉST||
+vzlyk|vzlykAT|zlêk|zlêkAT||
 vzpomín|vzpomínAT|spomin|vzpomínAT||
+z|zÁBST|z|zÁBST||
 zajím|zajímAT|zajim|zajimAT||
 zálež|záležET|zálež|záležET||
-z|zÁBST|z|zÁBST||
 zob|zobAT|zôb|zôbAT||
-vzlyk|vzlykAT|zlêk|zlêkAT||
-vnuknout||vnôknót|||slme
-|||||
-c|cÍTIT|č|čÔT||
-vikl|viklAT_SE|kivl|kivlAT_SE||
 -
 aspoň|aspoň||
 blízko|blésko||

@@ -1,10 +1,11 @@
-TW v0.1
+TW v3
 tLhotka
 aGG
 d03.05.2023 19:45:19
 c#Zdroje dat\n-Bělič, Jaromír - Přehled nářečí českého jazyka; str.68
+bkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=75|issn=|odkaz=|zpracovano=0|shortcut=dcjs
 g49.8565689,18.2286566
-xlokální mluva
+x3
 q0
 -
 -
@@ -23,25 +24,25 @@ městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 městO|0|o?|a?|u?|o|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 -
-míst|mist|městO|městO
-odr||
+míst|městO|0|mist|městO||
+odr||0|odr|||
 -
 -
 -
 -
-tEN|-1|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-všECHEN|-1|echen|eho|emu|eho|echen|em|ím|ichni|ech|em|echny|ichni|ech|emi|echen|eho|emu|echen|echen|em|ím|echny|ech|em|echny|echny|ech|emi|echna|í|í|echnu|echna|í|í|echny|ech|em|echny|echny|ech|emi|echno|eho|emu|echno|echno|em|ím|echna|ech|em|echna|echna|ech|emi
-všE|-1|e|eho|emu|e|e|em|ím
-kteRÝ|-1|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+všECHEN|echen|eho|emu|eho|echen|em|ím|ichni|ech|em|echny|ichni|ech|emi|echen|eho|emu|echen|echen|em|ím|echny|ech|em|echny|echny|ech|emi|echna|í|í|echnu|echna|í|í|echny|ech|em|echny|echny|ech|emi|echno|eho|emu|echno|echno|em|ím|echna|ech|em|echna|echna|ech|emi
+všE|e|eho|emu|e|e|em|ím
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
 -
-TEN|-1|ten|oho?|omu?|oho?|-|tym|ím?|ći|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|tym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|ej|ej|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|tym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-všECHEN|-1|ecke|eho?|emu?|eho?|echen?|em?|ím?|ichni?|ech?|em?|echny?|ichni?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echno?|eho?|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
-kteRÝ|-1|ry|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+TEN|ten|oho?|omu?|oho?|-|tym|ím?|ći|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|tym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|ej|ej|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|tym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+všECHEN|ecke|eho?|emu?|eho?|echen?|em?|ím?|ichni?|ech?|em?|echny?|ichni?|ech?|emi?|echen?|eho?|emu?|echen?|echen?|em?|ím?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echna?|í?|í?|echnu?|echna?|í?|í?|echny?|ech?|em?|echny?|echny?|ech?|emi?|echno?|eho?|emu?|echno?|echno?|em?|ím?|echna?|ech?|em?|echna?|echna?|ech?|emi?
+kteRÝ|ry|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
 -
-t||tEN|TEN
-vš|fš|všECHEN|všECHEN
-vš|fš|všE|všECHEN
-kte|ke|kteRÝ|kteRÝ
+t|tEN||TEN||
+vš|všECHEN|fš|všECHEN||
+vš|všE|fš|všECHEN||
+kte|kteRÝ|ke|kteRÝ||
 -
 -
 -
@@ -52,11 +53,11 @@ uhánĚT|15|-1|ět|ím|íš|í|íme|íte|í,uhánějí|ěj|ějme|ějte|ěl|ěl|�
 BÝT|247|-1|byc|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|był|był|była|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 uhánĚT|15|-1|ět?|ím?|íš?|í?|íme?|íte?|í,uhánějí?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?|ěn?|ěn?|ěna?|ěno?|ěni?|ěny?|ěny?|ěna?
 -
-BÝT|BÝT
-uhán|uhánĚT|uhánĚT
+|BÝT||BÝT||
+uhán|uhánĚT|uhán|uhánĚT||
 -
-potom|potem
-teď|fčylek
+potom|potem||
+teď|fčylek||
 -
 -
 -

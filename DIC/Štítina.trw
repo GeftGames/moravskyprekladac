@@ -3,7 +3,7 @@ tŠtítina
 aGG
 d25.06.2023 16:59:52
 ije na bombiky jag had na mleko Štítina OP\nstryg Vinceg byli celi dostrašeňi Štítina OP
-bsncj|i=Štítina OP|zpracovano=
+bsncj|i=Štítina OP|zpracovano=\n\nkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=72|issn=|odkaz=|zpracovano=0|shortcut=dcjs
 u2
 g49.9148109,18.0120773
 q0
@@ -43,6 +43,7 @@ ní|ňi
 ptej|ptaj
 pý|py
 rý|ry
+nil|ňił
 -
 plán|1||u|u||e|u|em|y|ů|ům|y|y|ech|y
 mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
@@ -66,6 +67,7 @@ jmÉNO|0|éno|éna|énu|éno|éno|énu,éně|énem|éna|en|énům|éna|éna|éne
 uCHO|0|cho|cha|chu|cho|cho|chu|chem|ši|ší|ším|ši|ši|ších|šima
 dÍTĚ|0|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
 děcKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kám,kům|ka|ka|kách|ky
+smrt|1||i|i||i|i|í|i|í|ím|i|i|ích|mi
 -
 plán|1||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 mleKO|0|ko?|ka?|ku?|ko|ko?|ku,ce?|kem?|ka?|k?|kům?|ka?|ka?|cích,kách?|ky?
@@ -88,6 +90,7 @@ mENO|0|éno?|éna?|énu?|eno|éno?|énu?,éňe?|énem?|éna?|en?|énúm?|éna?|�
 uCHO|0|cho?|cha?|chu?|cho?|cho?|chu?|chem?|ši?|ší?|ším?|ši?|ši?|šah|šima?
 ďÍŤE|0|íťe?|íťete?|íťeťi?|íťe?|íťe?|íťeťi?|íťetem?|eťi?|eťí?|etem?|eťi?|eťi?|etech?|etmi?
 ďecKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka|ek?|kám?,kúm?|ka?|ka?|kách?|ky?
+smrT|1|t?|ťi?|čy|t?|ťi?|ťi?|ťí?|ťi?|ťí?|ťím?|ťi?|ťi?|ťích?|tmi?
 -
 ||0|stryg|||
 ||0|Vinceg|||
@@ -120,6 +123,7 @@ jm|jmÉNO|0|m|mENO||
 u|uCHO|0|u|uCHO||sncj
 d|dÍTĚ|0|ďec|ďecKO||sncj
 děc|děcKO|0|ďec|ďecKO||sncj
+smrt|smrt|0|smr|smrT||sncj
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
@@ -162,7 +166,7 @@ t|tEN||TEN||
 takov|takovÝ|ta|taKY||
 |ON||ON||
 m|mŮJ|m|mÚJ||
-|SE||SE||
+|SE||SE||sncj
 t|tY||TY||
 |JÁ||JÁ||sncj
 -
@@ -173,17 +177,20 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 ptÁT_SE|22|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 brNĚT|7|-1|nět|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|něl|něl|něla|nělo|něli|něly|něly|něla
+brÁNIT|15|-1|ánit|áním|áníš|ání|áníme|áníte|ání|aň|aňme|aňte|ánil|ánil|ánila|ánilo|ánili|ánily|ánily|ánila|áněn|áněn|áněna|áněno|áněni|áněny|áněny|áněna
 -
 BÝT|247|-1|být?|sem|jsi?|je|smy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|jeli|ěly?|ěly?|ěla?
 ptÁT_SE|22|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?
 brňET|7|-1|et?|ím?|íš?|í?|íme?|íte?|i|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+brÁŇIT|15|-1|áňit?|áňím?|áňíš?|áňí?|áňíme?|áňíte?|áňí?|aň?|aňme?|aňte?|áňił|áňil?|áňila?|áňilo?|áňili?|áňily?|áňily?|áňila?|áňen?|áňen?|áňena?|áňeno?|áňeňi?|áňeny?|áňeny?|áňena?
 -
 |BÝT||BÝT||
 m|mÍT|m|mÍT||
 pt|ptÁT_SE|pt|ptÁT_SE||
 nept|ptÁT_SE|ňept|ptÁT_SE||
 br|brNĚT|brň|brňET||sncj
+br|brÁNIT|br|brÁŇIT||sncj
 -
 ještě|ešče||
 často|často||
@@ -197,6 +204,7 @@ tajně|bokem||
 tajemně?tajně?|pokryjomku||
 moc|modz||
 domů|dom||sncj
+zbytečně,zbůhdarma,nadarmo,marně|nadarmo||sncj
 -
 na||na||sncj
 do||do||
@@ -208,6 +216,7 @@ jak|jag||
 a|a||
 pokud|pokač||
 neboť,protože|bo||
+ale|ale||sncj
 -
 -
 |břyng||

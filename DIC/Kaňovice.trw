@@ -1,25 +1,28 @@
-TW v2
+TW v3
 tKaňovice
 aGG
 d23.12.2023 18:08:58
 ia tož jeden Žid, Maďar bíł, ten povídá, víte co, mi ím to mosíme slúbit Kaňovice\nuž Vídeň dostad, né?, to bi biła víhoda Kaňovice\nkamíški, pravda Kaňovice\na tož jeden Žid, Maďar bíł, ten povídá, víte co, mi ím to mosíme slúbit Kaňovice\nzvráťíł sa, ostáł bes sebe Kaňovice\n\nMaďaři máme poručené — ze Sibiřa sa doveze jenerál, a máme ho utraťit Kaňovice (druhá věta je tu vlastně vložena mezi věty se vztahem obsahovým: poručili nám, abychom „utratili“ …);\npoť sa zehřít — nech křičíja Kaňovice (… a nech děti křičet; nejde samozřejmě o souvětí účelové — ve spisovném jazyce by tu asi bylo aťsi, srov. Bauer, op. cit., 324, nářeční souvětí však není „spojeno“, druhá věta je aditivně připojena);
 c#Zdroje dat\n-<a href="https://digilib.phil.muni.cz/sites/default/files/pdf/120567.pdf">Chloupek, Jan</a>\n-Československá vlastivěda - 3. Jazyk - Masarykova akademie práce (str. 232) (necyčerpáno)\n-http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131 (nevyčerpáno)\n-http://nase-rec.ujc.cas.cz/archiv.php?art=4715 (nevyčerpáno)
+bkniha|prijmeni=Chloupek|jmeno=Jan|nazev=Nářeční souvětí|misto=|vydavatel=|rok_vydani=1971|strany=|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/120566.pdf|zpracovano=0|shortcut=ns66\n\nkniha|autor=Masarykova akademie práce|nazev=Československá vlastivěda - 3. Jazyk|misto=|vydavatel=|rok_vydani=|strany=232|issn=|odkaz=|zpracovano=0|shortcut=cv3j
+u1
 g49.1088505,17.698525
+rnář=Kaňovice
 q0
 oSlovácko>Luhačovické Zálesí
 -
 -
 -
-A potom přijde z Biskupic?|1|A potem příjďa z Biskupic?|
-|1|zvráťíł sa, ostáł bes sebe|
+A potom přijde z Biskupic?|1|A potem příjďa z Biskupic?||
+|1|zvráťíł sa, ostáł bes sebe||
 -
-kam to neseš|1|gde to neseš|
-ať oni křičí|1|nech křičíja|
-pojď se ohřát|1|poť sa zehřít|
+kam to neseš|1|gde to neseš||
+ať oni křičí|1|nech křičíja||
+pojď se ohřát|1|poť sa zehřít||
 -
-|1|v žížlavém|
-bez sebe|1|bes sebe|
-|1|Maďaři máme poručené|
+|1|v žížlavém||
+bez sebe|1|bes sebe||
+|1|Maďaři máme poručené||
 -
 -
 vý|ví
@@ -71,28 +74,28 @@ víhoDA|1|da|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 sibiř|1|?|a|i?|?|i?|i?|í?|-|-|-|-|-|-|-
 jenerál|2||a?|u?,ovi?|a?|e?|u?,ovi?|em?|ové?|ú?|úm?|y?|ové?|ech?|y?
 -
-||0|do Biskupic||
-dědeč|dědečEK|0|ďedáč|ďedáčEK|
-||0|Odrobinovi 3p||
-noc|noc|0|noc|noc|
-lou|louKA|0|łú|łúKA|
-k|kŮŇ|0|k|kÚŇ|
-uhlí|uhlí|0|uhlí|uhlí|
-brambor|brambor|0|zemňák|zemňák|
-půlnoc|půlnoc|0|púnoc|púnoc|
-vodní|vodníK|0|vodňí|vodňíK|
-žid|žid|2|ži|žiD|
-maďa|maďaR|2|maďa|maďaR|
-||0|kamíški||
-pravd|pravdA|0|prav|pravDA|
-víd|vídEŇ|2|víd|vídEŇ|
-výhod|výhodA|0|vího|víhoDA|
-sibiř|sibiř|2|sibiř|sibiř|
-generál|generál|0|jenerál|jenerál|
+||0|do Biskupic|||
+dědeč|dědečEK|0|ďedáč|ďedáčEK||
+||0|Odrobinovi 3p|||
+noc|noc|0|noc|noc||
+lou|louKA|0|łú|łúKA||
+k|kŮŇ|0|k|kÚŇ||
+uhlí|uhlí|0|uhlí|uhlí||
+brambor|brambor|0|zemňák|zemňák||
+půlnoc|půlnoc|0|púnoc|púnoc||
+vodní|vodníK|0|vodňí|vodňíK||
+žid|žid|2|ži|žiD||
+maďa|maďaR|2|maďa|maďaR||
+||0|kamíški|||
+pravd|pravdA|0|prav|pravDA||
+víd|vídEŇ|2|víd|vídEŇ||
+výhod|výhodA|0|vího|víhoDA||
+sibiř|sibiř|2|sibiř|sibiř||
+generál|generál|0|jenerál|jenerál||
 -
 -
 -
-||poručené ||
+||poručené |||
 -
 ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
@@ -108,18 +111,18 @@ CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 MY|mi|nás?|nám?|nás?|my?|nás?|námi?
 ON|on?|ho,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
 -
-|ONI||ONI|
-t|tEN||TEN|
-|SE||SE|
-|CO||CO|
-|MY||MY|
-|ON||ON|
+|ONI||ONI||
+t|tEN||TEN||
+|SE||SE||
+|CO||CO||
+|MY||MY||
+|ON||ON||
 -
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 -
 jedEN|4|en|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 -
-jed|jedEN|jed|jedEN|
+jed|jedEN|jed|jedEN||
 -
 NÉST|31|-1|nést|nesu|neseš|nese|neseme|nesete|nesou|ponesu,budu nést|poneseš,budeš nést|ponese,bude nést|poneseme,budeme nést|ponesete,budete nést|ponesou,budou nést|nes|nesme|neste|nesl|nesl|nesla|neslo|nesli|nesly|nesly|nesla|nesen|nesen|nesena|neseno|neseni|neseny|neseny|nesena
 přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
@@ -158,47 +161,47 @@ zehřIT|15|-1|ít|eji?|eješ?|eje?|ejeme?|ejete?|ejí?|ej?|ejme?|ejte?|ál?|ál?
 nechAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?||me?,nechejme?|te?,nechejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 křičET|15|-1|et?|ím?|íš?|í?|íme?|íte?|íja|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 -
-|NÉST||NÉST|
-při|přiJÍT|př|přiJÍT|
-||pásávali||
-p|pÉCT|p|pÉCT|
-při|přiJÍT|při|přiJÍT|
-zač|začÍT|zač|začÍT|
-|BÝT||BÝT|
-povíd|povídAT|povíd|povídAT|
-v|vĚDĚT|v|vĚĎET|
-mus|musET|mos|mosET|
-||||
-sl|slÍBIT|sl|slÍBIT|
-dosta|dostaT|dosta|dostaT|
-zůsta|zůstaT|ost|ostAT|
-||zvráťíł sa||
-m|mÍT|m|mÍT|
-||doveze ||
-utra|utraTIT|utra|utraŤIT|
-|JÍT||JÍT|
-ohř|ohřÁT|zehř|zehřIT|
-||||
-nech|nechAT|nech|nechAT|
-křič|křičET|křič|křičET|
+|NÉST||NÉST||
+při|přiJÍT|př|přiJÍT||
+||pásávali|||
+p|pÉCT|p|pÉCT||
+při|přiJÍT|při|přiJÍT||
+zač|začÍT|zač|začÍT||
+|BÝT||BÝT||
+povíd|povídAT|povíd|povídAT||
+v|vĚDĚT|v|vĚĎET||
+mus|musET|mos|mosET||
+|||||
+sl|slÍBIT|sl|slÍBIT||
+dosta|dostaT|dosta|dostaT||
+zůsta|zůstaT|ost|ostAT||
+||zvráťíł sa|||
+m|mÍT|m|mÍT||
+||doveze |||
+utra|utraTIT|utra|utraŤIT||
+|JÍT||JÍT||
+ohř|ohřÁT|zehř|zehřIT||
+|||||
+nech|nechAT|nech|nechAT||
+křič|křičET|křič|křičET||
 -
-kde|gde|
-potom|potem|
-kam|gde|
-jednou|jednúc|
-|tož|
-už|už|
+kde|gde||
+potom|potem||
+kam|gde||
+jednou|jednúc||
+|tož||
+už|už||
 -
-do||do|
-z||z|
-v||v|
-na||na|
-před||přet|
-k||k|
-bez||bes|
-ze||ze|
+do||do||
+z||z||
+v||v||
+na||na||
+před||přet||
+k||k||
+bez||bes||
+ze||ze||
 -
-a|a|
+a|a||
 -
-ne|né|
+ne|né||
 -

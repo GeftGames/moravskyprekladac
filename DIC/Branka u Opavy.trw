@@ -1,8 +1,8 @@
-TW v2
+TW v3
 tBranka u Opavy
 aGG
 d28.01.2024 9:42:20
-c#Zdroje dat\n-snčj
+bkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=72|issn=|odkaz=|zpracovano=0|shortcut=dcjs\n\nsncj|i=|zpracovano=
 u2
 g49.8880997,17.8818767
 q0
@@ -31,8 +31,8 @@ ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho?|tomu?|to?|-|tom?|tym|ty?|těch?|těm?|ty?|-|těch?|těmi?
 OŇI|oňi?|jih,ňich*?|jim?,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
 -
-t|tEN||TEN|
-|ONI||OŇI|
+t|tEN||TEN||
+|ONI||OŇI||
 -
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 třetí|4||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
@@ -44,10 +44,10 @@ třeČY|4|čy|čyho?|čymu?|čyho?|čy?|čym?|čym?|čy?|čych?|čym?|čy?|čy?|
 dvanácT|2|t|ťi?|ťi?|t?|t?|ťi?|ťi?
 čtvrTÝ|4|ty|tého?|tému?|tého?|tý?|tém?|tým?|ťí?|tých?|tým?|té?|ťí?|tých?|tými?|tý?|tého?|tému?|tý?|tý?|tém?|tým?|té?|tých?|tým?|té?|té?|tých?|tými?|tá?|té?|té?|tou?|tá?|té?|tou?|té?|tých?|tým?|té?|té?|tých?|tými?|té?|tého?|tému?|té?|té?|tém?|tým?|tá?|tých?|tým?|tá?|tá?|tých?|tými?
 -
-dru|druHÝ|dru|druHÝ|
-třetí|třetí|tře|třeČY|
-dvanáct|dvanáct|dvanas|dvanácT|
-čtvrt|čtvrtÝ|čtvr|čtvrTÝ|
+dru|druHÝ|dru|druHÝ||
+třetí|třetí|tře|třeČY||
+dvanáct|dvanáct|dvanas|dvanácT||
+čtvrt|čtvrtÝ|čtvr|čtvrTÝ||
 -
 lÉZT|7|-1|ézt|ezu|ezeš|eze|ezeme|ezete|ezou|ez|ezme|ezte|ezl|ezl|ezla|ezlo|ezli|ezly|ezly|ezla
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
@@ -55,12 +55,12 @@ BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou
 lÉZT|7|-1|ézt?|ezu?|ezeš?|eze?|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ez|ezl?|ezla?|ezlo?|ezli?|ezly?|ezly?|ezla?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|było|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
-l|lÉZT|l|lÉZT|
-|BÝT||BÝT|
+l|lÉZT|l|lÉZT||
+|BÝT||BÝT||
 -
 -
-za||za|
+za||za||
 -
-než|ež|
+než|ež||
 -
 -

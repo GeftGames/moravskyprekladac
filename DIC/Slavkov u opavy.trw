@@ -1,9 +1,9 @@
-TW v2
+TW v3
 tSlavkov
 aGG
 d12.06.2023 11:12:27
 ičtvrtka Slavkov OP
-c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 292\n-sncj.ujc.cas.cz
+bsncj|i=|zpracovano=\n\nkniha|prijmeni=Lamprecht|jmeno=Arnošt|nazev=České nářeční texty|misto=|vydavatel=|rok_vydani=|strany=292|issn=|odkaz=|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=72|issn=|odkaz=|zpracovano=0|shortcut=
 u2
 g49.9221079,17.8361169
 q0
@@ -13,9 +13,9 @@ oSlezsko>Opavsko
 -
 -
 -
-v tom|1|f tym|
+v tom|1|f tym||
 -
-2,5l|1|čtvrtka|
+2,5l|1|čtvrtka||
 -
 -
 -
@@ -36,11 +36,11 @@ roK|3|k?|ku,ka?|ku?|k?|ku?|ku|kem?|ky?|ků?|kům?|ky?|ky?|cích?|ky?
 dEN|0|en?|ne?|ňi?,nu?|źeň|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 mjes'ic|3|?|e?|i?||i?|i?|em?|e?|ú?|úm?|e?|e?|ích?|i?
 -
-vál|pohádKA|0|voj|žeNA|
-k|kŮŇ|0|k|kŮŇ|
-?||0|nac’estek||
-d|dEN|0|d|dEN|
-měsíc|měsíc|0|mjes'ic|mjes'ic|
+vál|pohádKA|0|voj|žeNA||
+k|kŮŇ|0|k|kŮŇ||
+?||0|nac’estek|||
+d|dEN|0|d|dEN||
+měsíc|měsíc|0|mjes'ic|mjes'ic||
 -
 -
 -
@@ -53,15 +53,15 @@ SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
 tEN|en?|oho?|omu?|oho?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|oho?|omu?|o?|-|ym|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 ON|un|ho*,jej,něj**jeho,něho**?|mu*,jemu,němu**?|ho*,jej,něj**jeho,něho** (pouze životný)?|-|něm**?|jím,ním*?
 -
-|SE||SE|
-t|tEN|t|tEN|
-|ON||ON|
+|SE||SE||
+t|tEN|t|tEN||
+|ON||ON||
 -
 třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
 -
 třI|2|i?|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
 -
-tř|třI|tř|třI|
+tř|třI|tř|třI||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|(archaicky) měv|(archaicky) měvši|(archaicky) měvše
@@ -71,20 +71,20 @@ BÝT|247|-1|být?|sem|jsi?|je?|smy|jste?|jsou?|budu?|budeš?|bude?|budeme?|budet
 MÍT|103|-1|mít?|mám?|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|mjeła|mělo?|mjeli|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 JÍT|127|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|půjdu?|půjdeš?|půjde?|půjdeme?|půjdete?|půjdou?|pojď,jdi?|pojďme,jděme?|pojďte,jděte?|šeł|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|jda?|jdouc?|jdouce?|šed?|šedši?|šedše?
 -
-|BÝT||BÝT|
-|MÍT||MÍT|
-|JÍT||JÍT|
-smát||smit||
-||namočył||
+|BÝT||BÝT||
+|MÍT||MÍT||
+|JÍT||JÍT||
+smát||smit|||
+||namočył|||
 -
-brzy|skoro|
-ještě|ešče|
-potom|potem|
-zas|zas|
-předem|předy|
+brzy|skoro||
+ještě|ešče||
+potom|potem||
+zas|zas||
+předem|předy||
 -
-za||za|
+za||za||
 -
-ale|ale|
+ale|ale||
 -
 -

@@ -1,10 +1,12 @@
-TW v2
+TW v3
 tVětřkovice
 aGG
 d12.06.2023 10:37:28
 c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 302
+bkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=74|issn=|odkaz=|zpracovano=0|shortcut=dcjs
 u2
 g49.7801977,17.8201911
+rnář=Větřkojice
 q0
 oSlezsko>Opavsko
 -
@@ -12,8 +14,8 @@ oSlezsko>Opavsko
 -
 -
 -
-z toho|1|s teho|
-na měkkou podložku na židlu|1|do bapčaka|
+z toho|1|s teho||
+na měkkou podložku na židlu|1|do bapčaka||
 -
 -
 ne|ňe
@@ -34,17 +36,17 @@ snÍH|3|íh?|ěha|ěhu?|íh?|ěhu?|ěhu?|ěhem?|ěhy?|ěhů?|ěhům?|ěhy?|ěhy?
 robA|1|na?|ny?|ňe?|nu?|no?|ňe?|nou?|y|n?|nám?|ny?|ny?|nách?|nami?
 másLO|0|lo|la?|lu?|lo?|lo?|le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
 -
-míst|místO|0|mist|místO|
-sn|snÍH|0|sň|snÍH|
-más|másLO|0|mas|másLO|
-žen|ženA|0|rob|robA|
-||0|spinky ||
+míst|místO|0|mist|místO||
+sn|snÍH|0|sň|snÍH||
+más|másLO|0|mas|másLO||
+žen|ženA|0|rob|robA||
+||0|spinky |||
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
 dobRÝ|-1|ré?|rého?|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá?|rých?|rými?|-|-|rá?|ré?|ré?|rou?|rá?|ré?|rou?|-|-|ré?|rých?|rým?|ré?|ré?|rých?|rými?|-|-|rý?|rého?|rému?|rého?|rý?|rém?|rým?|-|-|ří?|rých?|rým?|ré?|ří?|rých?|rými?|-|-|rý?|rého?|rému?|rý?|rý?|rém?|rým?|-|-|re|rých?|rým?|ré?|ré?|rých?|rými?|-|-
 -
-dob|dobRÝ|dob|dobRÝ|
+dob|dobRÝ|dob|dobRÝ||
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 vY|y|ás|ám|ás|y|ás|ámi
@@ -54,9 +56,9 @@ JÁ|ja|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
 vY|y?|ás?|am|ás?|y?|ás?|ámi?
 tEN|en?|eho|omu?|oho?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|en?|eho|omu?|en?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o?|eho|omu?|o?|-|om?|ím?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
 -
-|JÁ||JÁ|
-vY|vY|vY|vY|
-t|tEN|t|tEN|
+|JÁ||JÁ||
+vY|vY|vY|vY||
+t|tEN|t|tEN||
 -
 -
 -
@@ -69,23 +71,23 @@ BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|bud
 MÍT|103|-1|mít?|mam|máš?|má?|máme?|máte?|mají?|měj?|mějme?|mějte?|měl?|měl?|mjeła|mělo?|měli?|měly?|měly?|měla?|maje?|majíc?|majíce?|(archaicky) měv?|(archaicky) měvši?|(archaicky) měvše?
 NEBÝT|119|-1|být?|jsem?|jsi?|ní?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|ňi|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?
 -
-|BÝT||BÝT|
-|MÍT||MÍT|
-ne|neBÝT||NEBÝT|
-||ňevyhazujc’e||
+|BÝT||BÝT||
+|MÍT||MÍT||
+ne|neBÝT||NEBÝT||
+||ňevyhazujc’e|||
 -
-kde|kaj|
-aspoň|aspoň|
-potom|potem|
-tam|tam|
-vždy|dycky|
-jen,jenom|ene|
+kde|kaj||
+aspoň|aspoň||
+potom|potem||
+tam|tam||
+vždy|dycky||
+jen,jenom|ene||
 -
-u||u|
-na||na|
-do||do|
+u||u||
+na||na||
+do||do||
 -
-a|a|
-jako|jako|
+a|a||
+jako|jako||
 -
 -
