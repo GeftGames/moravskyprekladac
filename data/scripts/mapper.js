@@ -82,12 +82,12 @@ function mapper_init(customStyle) {
 	urlParamClearB();
 	urlParamChange("input", mapperRenderOptions.inputText, true);
 	
+	
 	// Žádné body
 	if (mapperRenderOptions.inputText=="") {
 		mapper_showError("Text v poli nemůže být prázný");
 		return;
-	}
-	
+	}	
 	
 	// přeložit body
 	mapper_points=mapper_GetPointsTranslated(languagesListAll, mapperRenderOptions.inputText);
@@ -97,6 +97,38 @@ function mapper_init(customStyle) {
 		mapper_showError("Nenalezen žádný překlad, mapy by byla prázná");
 		return;
 	}
+	
+	if (mapperRenderOptions.inputText.startsWith("<{word=") && mapperRenderOptions.inputText.endsWith("}>")){
+		let parts=mapperRenderOptions.inputText.substring(2,mapperRenderOptions.inputText.length-2).split("|");
+		let set=-1;
+		let word;
+
+		for (let i=0; i<parts.length; i++) {
+			let part = parts[i];
+			let p=part.split("=");
+			if (p[0]=="word") {				
+				set=i;
+				word=p[1];
+			}
+			else if (p[0]=="pad") parts[i]="pád "+p[1]+".";
+			else if (p[0]=="cislo") parts[i]="číslo "+p[1]+".";
+			else if (p[0]=="typ") {
+				if (p[1]=="prid") parts[i]="příd.";
+				else parts[i]=p[1]+".";
+			} else if (p[0]=="rod") {
+				if (p[1]=="mz") parts[i]="rod m. živ.";
+				else if (p[1]=="mn") parts[i]="rod m. než.";
+				else if (p[1]=="z") parts[i]="rod žen.";
+				else if (p[1]=="s") parts[i]="rod stř.";
+				else parts[i]="rod "+p[1]+".";
+			}
+		}
+
+		if (set>-1) {			
+			parts.splice(set, 1);				
+			document.getElementById("mapperInputPreview").innerText=word+" ("+parts.join(", ")+")";
+		}else document.getElementById("mapperInputPreview").innerText=parts;		
+	} else document.getElementById("mapperInputPreview").innerText=mapperRenderOptions.inputText;
 
 	// vytvořit hranice
 	mapper_borders=getVoronoi(mapper_points);
