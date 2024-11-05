@@ -65,11 +65,13 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQR1MX6Y22"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        if (location.host!='localhost'){
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    gtag('config', 'G-VQR1MX6Y22');
+            gtag('config', 'G-VQR1MX6Y22');
+        }
     </script>
 
     <!-- Links -->
@@ -544,7 +546,7 @@
                     <div id="transarea" style="justify-content: center; display: flex">
                         <div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">
                             <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()">slovník</a> nebo změnit místo.</span>
-                            <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;">
+                            <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;width: -webkit-fill-available;">
                                 <!-- Source translated text -->
                                 <div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
                                     <textarea oninput="Translate()" spellcheck="true" id="specialTextarea" autofocus placeholder="Sem něco napište"></textarea>
@@ -1029,8 +1031,9 @@
 
 
                     <div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
-                        <div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;">
+                        <div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;flex-direction: column; align-items: center;">
                             <a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Zpátky - Vytvořit další mapu</a>
+                            <h2 id="mapperInputPreview" style="margin-top: 12px;"></h2>
                         </div>
                         <div style="display:flex;flex-wrap: wrap;flex-direction: column;">
                             <div class="listButtons" id="mapperButtons" style="flex-direction: row;">
