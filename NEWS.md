@@ -1,4 +1,7 @@
 # Poslední změny
+### 5.11. 2024
++ nadpis mapper
+
 ### 14.9. 2024
 + u obrazovek s vyšším rozlišením a zaplým škálováním aplikací (hdi) lépší prokreslení mapy
 
