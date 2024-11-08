@@ -39,7 +39,7 @@
     --filterShadow1: drop-shadow(0px 0px 5px var(--RawColorBack1));
     --filterShadow2: drop-shadow(0px 0px 5px var(--RawColorBack1));
     --fontSizeSmall: 4mm;
-    --fontSize: 4.7mm;
+    --fontSizeMedium: 4.5mm;
     --fontSizeBigger: 5.2mm;
     --fontSizeBig: 8mm;
 }
@@ -116,7 +116,7 @@ textarea {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: 100%;
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     line-height: 28px;
     font-family: var(--f);
     height: -webkit-fill-available;
@@ -236,7 +236,7 @@ html {
     outline: 2px transparent dashed;
     outline-offset: 3px;
     transition: outline var(--transitionRFast), outline-offset var(--transitionRFast), box-shadow var(--transitionSlow);
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     max-height: 75vh;
     /*max-width: 50vw;	*/
     display: flex;
@@ -272,7 +272,7 @@ html {
     outline: 2px transparent dashed;
     outline-offset: 3px;
     transition: outline var(--transitionRFast), outline-offset var(--transitionRFast), box-shadow var(--transitionSlow);
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     max-height: 75vh;
     max-width: 50vw;
 }
@@ -295,8 +295,8 @@ html {
 #rte,
 #dicRte {
     display: table-cell;
-    margin-right: 10px;
-    margin-left: 10px;
+   /* margin-right: 10px;
+    margin-left: 10px;*/
     background-color: var(--ConBack);
 }
 
@@ -359,7 +359,7 @@ li {
     display: inline-block;
     margin: 3px 2px;
     cursor: pointer;
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     user-select: none;
     background-color: var(--ConBack);
     background-clip: padding-box;
@@ -393,7 +393,7 @@ li {
 
 input[type="file"] {
     text-shadow: var(--tsh);
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
 }
 
 input[type="file"]::file-selector-button {
@@ -403,7 +403,7 @@ input[type="file"]::file-selector-button {
     margin-right: 2mm;
     color: var(--ColorText);
     border-radius: 3px;
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     cursor: pointer;
     text-shadow: var(--tsh);
     padding: 4px 4px;
@@ -453,7 +453,7 @@ select {
     border-radius: 4px;
     text-shadow: var(--tsh);
     margin-top: 5px;
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     box-shadow: var(--ksh), 0px -2px 8px rgba(var(--RawColorBack), .02) inset;
     padding: 4px;
     font-family: var(--f);
@@ -494,7 +494,7 @@ a {
 p {
     margin: 10px;
     text-shadow: var(--tsh);
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     font-family: var(--f);
     transition: color var(--transitionSlow);
     color: var(--ColorText);
@@ -502,7 +502,7 @@ p {
 
 span {
     text-shadow: var(--tsh);
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     font-family: var(--f);
     transition: color var(--transitionSlow);
     color: var(--ColorText);
@@ -510,7 +510,7 @@ span {
 
 li {
     text-shadow: var(--tsh);
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeMedium);
     font-family: var(--f);
     transition: color var(--transitionSlow);
     color: var(--ColorText);
@@ -950,7 +950,7 @@ optgroup {
 }
 
 .settingSection {
-    margin-bottom: var(--fontSize);
+    margin-bottom: var(--fontSizeMedium);
 }
 
 .pageFromDownHeader {
@@ -1016,7 +1016,7 @@ optgroup {
     display: flex;
     border-radius: 35px;
     outline: none;
-    margin-top: var(--fontSize);
+    margin-top: var(--fontSizeMedium);
 }
 
 .pageFromDownClose:focus-visible {
@@ -1385,7 +1385,7 @@ optgroup {
         width: -moz-available;
     }
     .tab {
-        font-size: var(--fontSize);
+        font-size: var(--fontSizeMedium);
     }
     #transarea {
         padding: 3px;
@@ -1777,7 +1777,7 @@ caption {
     border-bottom: 3px solid var(--ColorTheme);
     color: var(--ColorText);
     text-shadow: .5px .5px 1.5px rgba(var(--RawColorBack), .15);
-    font-size: var(--fontSize);
+    font-size: medium;
     margin: 6px 6px 3px 6px;
 }
 
