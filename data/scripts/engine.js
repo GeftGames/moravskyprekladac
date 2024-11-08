@@ -1475,7 +1475,10 @@ var Load = function () {
         let val;
         try {
             val = localStorage.getItem(savedName);
-        } catch (error) {}
+        } catch (error) {
+            if (dev) console.log(error);
+        }
+        if (val==undefined && dev) console.log("Cannot load", savedName);
 
         // if not loaded
         if (val==undefined || val==null) return defaultValue;
@@ -1491,7 +1494,7 @@ var Load = function () {
     dicAbc = loadSetting(true, 'setting-dic-abc', "Boolean");
     
     // Transkripce
-    TranscriptionText = loadSetting("default", 'sTranscription',  "String");
+    TranscriptionText = loadSetting("default", 'Transcription',  "String");
     if (document.getElementById("sTranscription") !== null) document.getElementById("sTranscription").value = TranscriptionText;
     transcription = SetCurrentTranscription(TranscriptionText);
 
