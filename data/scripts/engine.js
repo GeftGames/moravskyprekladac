@@ -1057,7 +1057,7 @@ function TabSelect(enableElement, tab) {
     //tabTxtFiles.style.backgroundColor="white";
 
     // Enable
-    enableElement.style.display = 'flex';
+    enableElement.style.display = 'block';
     //tab.style.zIndex=3;
     //tab.style.backgroundColor="aliceBlue";
 }
