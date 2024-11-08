@@ -153,8 +153,8 @@ function customTheme() {
     let themeLight; // true or false
     if (ThemeLight == "default") {
         if (window.matchMedia) {
-            themeLight = !window.matchMedia('(prefers-color-scheme: dark)').matches;
-        } else themeLight = true;
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) themeLight="dark"; else themeLight="light";
+        } else themeLight = themeLight="light";
     } else themeLight = ThemeLight;
 
     // Day/Night
@@ -1057,7 +1057,7 @@ function TabSelect(enableElement, tab) {
     //tabTxtFiles.style.backgroundColor="white";
 
     // Enable
-    enableElement.style.display = 'block';
+    enableElement.style.display = 'flex';
     //tab.style.zIndex=3;
     //tab.style.backgroundColor="aliceBlue";
 }
@@ -5060,6 +5060,68 @@ function SetCurrentTranscription(transCode) {
         { from: "ł", to: "l" },
         { from: "ŕ", to: "r" },
         { from: "ĺ", to: "l" },
+
+        { from: "ni", to: "ny" },
+        { from: "ní", to: "ný" },
+
+        { from: "ti", to: "ty" },
+        { from: "tí", to: "tý" },
+
+        { from: "di", to: "dy" },
+        { from: "dí", to: "dý" },
+
+        { from: "chi", to: "chy" },
+        { from: "hi", to: "hy" },
+        { from: "ki", to: "ky" },
+        { from: "ri", to: "ry" },
+
+        { from: "chí", to: "chý" },
+        { from: "hí", to: "hý" },
+        { from: "kí", to: "ký" },
+        { from: "rí", to: "rý" },
+
+        { from: "ẹ", to: "e" },
+        { from: "ọ", to: "o" },
+        { from: "ó́", to: "ó" },
+
+        { from: "ŋ", to: "n" },
+
+        { from: "vje", to: "vě", type: "end" },
+        { from: "bje", to: "bě", type: "end" },
+        { from: "bjející", to: "bějící", type: "end" },
+    ];
+
+    if (transCode == "czechnormal") return [
+        { from: "mňe", to: "mě" },
+        { from: "fje", to: "fě" },
+        { from: "pje", to: "pě" },
+
+        { from: "ďe", to: "dě" },
+        { from: "ťe", to: "tě" },
+        { from: "ňe", to: "ně" },
+
+        { from: "ďi", to: "di" },
+        { from: "ťi", to: "ti" },
+        { from: "ňi", to: "ni" },
+
+        { from: "ďí", to: "dí" },
+        { from: "ťí", to: "tí" },
+        { from: "ňí", to: "ní" },
+
+        { from: "ijo", to: "io" },
+        { from: "iju", to: "iu" },
+        { from: "ije", to: "ie" },
+        { from: "ija", to: "ia" },
+
+        { from: "ijó", to: "ió" },
+        { from: "ijú", to: "iú" },
+        { from: "ijé", to: "ié" },
+        { from: "ijá", to: "iá" },
+
+        { from: "ạ́", to: "̥á" },
+        { from: "̥á", to: "̥á" },
+        { from: "ə", to: "e" },
+        { from: "ṵ", to: "ṷ" },
 
         { from: "ni", to: "ny" },
         { from: "ní", to: "ný" },
