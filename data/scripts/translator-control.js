@@ -290,8 +290,6 @@ function GetTranslations() {
     xhttp.open("GET", languagesPackage /*, true*/ );
     xhttp.send();
 
-
-
     /*function DownloadLang(url) {
     	// ne takto, max 4 stahování zároveň, udělé frontu-doplň
     	const xhttp2 = new XMLHttpRequest();
@@ -419,7 +417,7 @@ function GetTranslations() {
             return select2;
         }
         
-        if (lang.Name=='Moravština "spisovná"')moravianId=lang.Id;
+        if (lang.Name=='Moravština "spisovná"') moravianId=lang.Id;
        
         // map=all
         if (FilterCountry(lang.Country)) languagesListAll.push(lang);
@@ -517,7 +515,6 @@ function DisableLangTranslate(search) {
                 InnerSearch(node, level + 1);
             }
         }
-        //}
     }
 }
 
@@ -544,8 +541,6 @@ function Translate() {
         let out = currentLang.Translate(input, true);
         if (dev) console.log("Transtated as: ", out);
         outputParernt.appendChild(out);
-
-      //  BuildSelect(currentLang);
     }
 }
 
@@ -578,17 +573,26 @@ function GetDic() {
 }
 
 // Získat zvolený překlad
-function GetCurrentLanguage() {
-    let ele2 = document.getElementById("selectorTo").value;
+function GetCurrentLanguage() {    
+    let ele2 = parseInt(document.getElementById("selectorTo").value);
 
+    // own
     if (ele2 == "*own*" && loadedOwnLang) {
         return ownLang;
     }
-    for (let e of languagesList) {
-        if (e.Id == ele2) {
-            return e;
-        }
+    
+    // by <select>
+    let find = languagesList.find(e => e.Id === ele2);
+    if (find!=undefined) {        
+        return find;
+    }else if (dev) console.log("couldnt find", find);
+
+
+    // First one
+    if (languagesList.length>0){
+        return languagesList[0];
     }
+
     return null;
 }
 
@@ -606,42 +610,9 @@ function ReportDownloadedLanguage() {
         setTimeout(function() {
             document.getElementById("appPage_" + appSelected).style.opacity = "100%";
             document.getElementById("loadingPage").style.display = "none";
-            //	document.getElementById("aboutPage").style.display="block";
         }, 100)
     }
 }
-/*
-function BuildSelect(lang) {
-    if (lang == null) return "";
-    let parent = document.getElementById("optionsSelect");
-    parent.innerHTML = "";
-    if (lang.SelectReplace == undefined) return;
-    if (lang.SelectReplace == null) return;
-
-    // lang.SelectReplace = např. [["ł", ["ł", "u"]], ["ê", ["e", "ê"]]]
-    for (let i = 0; i < lang.SelectReplace.length; i++) {
-        const l = lang.SelectReplace[i];
-        let to = l[1];
-        let node = document.createElement("select");
-        node.setAttribute("languageTo", lang.Name)
-        node.setAttribute("languageSelectIndex", i);
-
-        // Options
-        for (const z of to) {
-            let option = document.createElement("option");
-            option.innerText = z;
-            node.appendChild(option);
-        }
-
-
-        // text
-        let info = document.createElement("span");
-        info.innerText = "Výběr: ";
-        parent.appendChild(info);
-
-        parent.appendChild(node);
-    }
-}*/
 
 function translateContentsSubs(contents, name) {
     console.log("Translating file...");
@@ -677,7 +648,7 @@ function translateContentsSubsASS(lines) {
             output += "\n";
         } else output += line + "\n";
     }
-    console.log(output);
+   // console.log(output);
     return output;
 }
 

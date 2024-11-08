@@ -551,9 +551,7 @@ class ItemSentence {
         p.appendChild(f);
 
         // arrow
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         // ro
         for (let to of this.output) {
@@ -566,8 +564,7 @@ class ItemSentence {
             p.appendChild(t);
             
             // cites
-            GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
-
+            GenerateSupCite(to.Source).forEach(e => p.appendChild(e));
         }
 
         return { from: this.input, to: this.output, name: name, element: p };
@@ -600,9 +597,7 @@ class ItemSentencePart {
         f.innerText = this.input;
         p.appendChild(f);
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         for (let to of this.output) {
             let t = document.createElement("span");
@@ -771,36 +766,36 @@ class ItemNoun {
         let item = new ItemNoun();
         item.From = raw[0];
 
-        let paternFrom = this.GetPatternByNameFrom(raw[1]);
-        if (paternFrom == null) {
+        item.PatternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (item.PatternFrom == null) {
             if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
             return null;
         }
-        item.PatternFrom = paternFrom;
         item.UppercaseType = parseInt(raw[2]);
 
-        let to = FastLoadTranslateToWithPattern(raw, 3, this);
-        if (to == null) {
+        item.To = FastLoadTranslateToWithPattern(raw, 3, this);
+        if (item.To == null) {
             if (dev) console.warn("Cannot load to '" + data + "'");
             return null;
         }
-        item.To = to;
 
         return item;
     }
 
     static GetPatternByNameFrom(name) {
-        if (name == "") return null;
+        return ItemNoun_pattensFrom.find(p => p.Name === name) || null;
+        /*if (name == "") return null;
         for (const p of ItemNoun_pattensFrom) {
             if (p.Name == name) return p;
-        }
+        }*/
     }
 
     static GetPatternByNameTo(name) {
-        if (name == "") return null;
+        return ItemNoun_pattensTo.find(p => p.Name === name) || null;
+        /*if (name == "") return null;
         for (const p of ItemNoun_pattensTo) {
             if (p.Name == name) return p;
-        }
+        }*/
     }
 
     GetWordTo(number, fall) {
@@ -893,9 +888,7 @@ class ItemNoun {
         p.appendChild(f);
 
         // arrow
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
         let mapper_from;
 
         // to
@@ -1186,9 +1179,7 @@ class ItemSimpleWord {
                
         p.appendChild(f);
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         let out = [];
         for (let i = 0; i < this.output.length; i++) {
@@ -1239,7 +1230,7 @@ class ItemAdverb {
     }
 
     static Load(data, shortcuts) {
-        let raw = /*data*/LoadDataLineString(data,shortcuts).split('|');
+        let raw = LoadDataLineString(data, shortcuts).split('|');
       
         if (raw[0] == '') return null;
         let item = new ItemAdverb();
@@ -1264,7 +1255,6 @@ class ItemAdverb {
             let ri = arr_inp[i];
             let f = document.createElement("span"); 
             f.innerText=ri;
-          //  f.classList="slink";
       
             p.appendChild(f);
 
@@ -1272,14 +1262,10 @@ class ItemAdverb {
             if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
         }
        
+        p.appendChild(document.createTextNode(" → "));
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
-
-        //console.log(this);
         let out = [];
-        //if (Array.isArray(this.output)) {
+        
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
             let o = ApplyPostRules(to.Text);
@@ -1309,22 +1295,8 @@ class ItemAdverb {
                 let space = document.createTextNode(", ");
                 p.appendChild(space);
             }
-        }      
-
+        }
         
-        /*	} else {
-			let o=this.output;
-			out = o.Text;
-			if (out=="") return null;
-
-			let t = document.createElement("span");
-			t.innerText=o.Text;
-			p.appendChild(t);		
-		}			
-			
-		
-		p.appendChild(document.createTextNode(" "));
-*/
         if (name != "") {
             let r = document.createElement("span");
             r.innerText = " (" + name + ")";
@@ -1450,13 +1422,8 @@ class ItemPhrase {
         }
 
         if (Array.isArray(this.input)) {
-
             for (let i of this.input) {
-                // for (let i of mul_i) {
                 inp += i.join(" ");
-                // }
-                // inp += ", ";
-                //for (let i2 of i) inp+=i2+" ";
             }
         } else inp = this.input;
 
@@ -1465,9 +1432,7 @@ class ItemPhrase {
         f.innerText = inp;
         p.appendChild(f);
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         let t = document.createElement("span");
         t.innerText = ApplyPostRules(out);
@@ -1515,8 +1480,7 @@ class ItemReplaceS {
             item.input = raw[0];
             item.output = raw[0];
             return item;
-        }
-        if (raw.length == 2) {
+        } else if (raw.length == 2) {
             let item = new ItemReplaceS();
             item.input = raw[0];
             item.output = raw[1];
@@ -1540,8 +1504,7 @@ class ItemReplaceG {
             item.input = raw[0];
             item.output = raw[0];
             return item;
-        }
-        if (raw.length == 2) {
+        }else if (raw.length == 2) {
             let item = new ItemReplaceG();
             item.input = raw[0];
             item.output = raw[1];
@@ -1560,13 +1523,13 @@ class ItemReplaceE {
     static Load(data) {
         let raw = /*data*/LoadDataLineString(data,sReplaceE).split('|');
         if (raw[0] == '') return null;
+
         if (raw.length == 1) {
             let item = new ItemReplaceE();
             item.input = raw[0];
             item.output = raw[0];
             return item;
-        }
-        if (raw.length == 2) {
+        } else if (raw.length == 2) {
             let item = new ItemReplaceE();
             item.input = raw[0];
             if (raw[1].includes(',')) item.output = raw[1].split(",");
@@ -1604,7 +1567,7 @@ class ItemPreposition {
             return null;
         }
         return item;
-}
+    }
 
     IsStringThisWord(str) {
         if (this.input == str) {
@@ -1620,18 +1583,12 @@ class ItemPreposition {
 
             f.innerText = ri;
             
-            /*f.classList="slink";
-            f.addEventListener("click", function(){
-                mapper_open(ri,this.output);
-            });*/
             p.appendChild(f);
 
             if (ri!=this.input[this.input.length-1])p.appendChild(document.createTextNode(", "));
         }
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         //for (const to of this.output) {
         let out=[];
@@ -1646,7 +1603,6 @@ class ItemPreposition {
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
-
 
             if (to.Comment != undefined) {
                 if (to.Comment != "") {
@@ -2238,22 +2194,19 @@ class ItemPatternPronoun {
             item.Type = 1;
             item.Shapes = shapesAll;
             return item;
-        }
-        if (shapesAll.length == 7) {
+        }else if (shapesAll.length == 7) {
             let item = new ItemPatternPronoun();
             item.Name = raw[0];
             item.Type = 2;
             item.Shapes = shapesAll;
             return item;
-        }
-        if (shapesAll.length == 1) {
+        }else if (shapesAll.length == 1) {
             let item = new ItemPatternPronoun();
             item.Name = raw[0];
             item.Type = 3;
             item.Shapes = shapesAll;
             return item;
-        }
-        if (shapesAll.length == 14 * 4) {
+        }else if (shapesAll.length == 14 * 4) {
             let item = new ItemPatternPronoun();
             item.Name = raw[0];
             item.Type = 4;
@@ -2620,32 +2573,24 @@ class ItemPronoun {
         let item = new ItemPronoun();
         item.From = raw[0];
 
-        let paternFrom = this.GetPatternByNameFrom(raw[1]);
-        if (paternFrom == null) {
+        item.PatternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (item.PatternFrom == null) {
             if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
             return null;
         }
-        item.PatternFrom = paternFrom;
 
-        let to = FastLoadTranslateToWithPattern(raw, 2, this);
-        if (to == null) {
-            return null;
-        }
-        item.To = to;
+        item.To = FastLoadTranslateToWithPattern(raw, 2, this);
+        if (item.To == null) return null;
 
         return item;
     }
 
     static GetPatternByNameFrom(name) {
-        for (const p of ItemPronoun_pattensFrom) {
-            if (p.Name == name) return p;
-        }
+        return ItemPronoun_pattensFrom.find(p => p.Name === name) || null;
     }
 
     static GetPatternByNameTo(name) {
-        for (const p of ItemPronoun_pattensTo) {
-            if (p.Name == name) return p;
-        }
+        return ItemPronoun_pattensTo.find(p => p.Name === name) || null;
     }
 
     IsStringThisWordGetTo(from, to, str, number, fallOffset, gender) {
@@ -2682,6 +2627,7 @@ class ItemPronoun {
         //console.log(arr);
         return arr;
     }
+
     IsStringThisWordGetToNG(from, to, str, number, fallOffset) {
         let arr = [];
         for (let i = from; i < to; i++) {
@@ -3247,9 +3193,7 @@ class ItemPatternAdjective {
 class ItemAdjective {
     constructor() {
         this.From;
-        //this.To;
         this.PatternFrom;
-        //	this.PatternTo;
         this.To = [];
     }
 
@@ -3259,12 +3203,11 @@ class ItemAdjective {
         let item = new ItemAdjective();
         item.From = raw[0];
 
-        let paternFrom = this.GetPatternByNameFrom(raw[1]);
-        if (paternFrom == null) {
+        item.PatternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (item.PatternFrom == null) {
             if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
             return null;
         }
-        item.PatternFrom = paternFrom;
 
         item.To = FastLoadTranslateToWithPattern(raw, 2, this);
         if (item.To == null) return null;
@@ -3544,23 +3487,24 @@ class ItemAdjective {
     }
 
     static GetPatternByNameFrom(name) {
-        for (const p of ItemAdjective_pattensFrom) {
+        return ItemAdjective_pattensFrom.find(p => p.Name === name) || null;
+        /*for (const p of ItemAdjective_pattensFrom) {
             if (p.Name == name) return p;
         }
-        return null;
+        return null;*/
     }
 
     static GetPatternByNameTo(name) {
-        for (const p of ItemAdjective_pattensTo) {
+        return ItemAdjective_pattensTo.find(p => p.Name === name) || null;
+        /*for (const p of ItemAdjective_pattensTo) {
             if (p.Name == name) return p;
         }
-        return null;
+        return null;*/
     }
 
     GetDicForm(name) {
         if (typeof this.PatternTo == undefined) return null;
         if (this.To.Shapes == undefined) return null;
-        //if (this.PatternTo.Shapes[0]=="-") return null;
 
         let from = "",
             to = "";
@@ -3578,15 +3522,8 @@ class ItemAdjective {
         let p = document.createElement("p");
         let f = document.createElement("span");
         f.innerText = from;
-        /*f.classList="slink";
-        f.addEventListener("click", function(){
-            mapper_open(f.innerText,to);
-        });
-        p.appendChild(f);*/
 
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         let t = document.createElement("span");
         t.innerText = to;
@@ -3717,12 +3654,11 @@ class ItemNumber {
         let item = new ItemNumber();
         item.From = raw[0];
 
-        let paternFrom = this.GetPatternByNameFrom(raw[1]);
-        if (paternFrom == null) {
+        item.PatternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (item.PatternFrom == null) {
             if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
             return null;
         }
-        item.PatternFrom = paternFrom;
 
         item.To = FastLoadTranslateToWithPattern(raw, 2, this);
         if (item.To == null) {
@@ -3733,15 +3669,17 @@ class ItemNumber {
     }
 
     static GetPatternByNameFrom(name) {
-        for (const p of ItemNumber_pattensFrom) {
+        return ItemNumber_pattensFrom.find(p => p.Name === name) || null;
+        /*for (const p of ItemNumber_pattensFrom) {
             if (p.Name == name) return p;
-        }
+        }*/
     }
 
     static GetPatternByNameTo(name) {
-        for (const p of ItemNumber_pattensTo) {
+        return ItemNumber_pattensTo.find(p => p.Name === name) || null;
+        /*for (const p of ItemNumber_pattensTo) {
             if (p.Name == name) return p;
-        }
+        }*/
     }
 
     IsStringThisWordG(str, startIndex, endIndex, number, gender) {
@@ -4156,18 +4094,6 @@ class ItemPatternVerb {
     }
 
     static GetArray(source, pos, len) {
-        /*let arr = [len];
-        for (let i=0; i<len; i++) {			
-        	if (source[pos+i].includes(",")) {
-        		arr[i]=[];
-        		for (let f of source[pos+i].split(',')) {
-        			if (f.includes('?')) arr[i].push('?'); 
-        			else arr[i].push(f); 
-        		}
-        	}//arr[i]=source[pos+i].split(',');
-        	else if (source[pos+i].includes('?')) arr[i]='?'; 
-        	else arr[i]=source[pos+i];
-        }*/
         let arr = [];
         for (let i = pos; i < pos + len; i++) {
             arr.push(source[i]);
@@ -4609,18 +4535,14 @@ class ItemVerb {
         let item = new ItemVerb();
         item.From = raw[0];
 
-        let paternFrom = this.GetPatternByNameFrom(raw[1]);
-        if (paternFrom == null) {
+        item.PatternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (item.PatternFrom == null) {
             if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
             return null;
         }
-        item.PatternFrom = paternFrom;
 
-        let to = FastLoadTranslateToWithPattern(raw, 2, this);
-        if (to == null) {
-            return null;
-        }
-        item.To = to;
+        item.To = FastLoadTranslateToWithPattern(raw, 2, this);
+        if (item.To == null) return null;
 
         return item;
     }
@@ -4651,17 +4573,6 @@ class ItemVerb {
                                 if (e == '?') continue;
                                 this.ret.push({ Text: to.Body + e, Number: num, Person: 1 + i - fromIndex, Form: name });
                             }
-                            /*
-                            							if (Array.isArray(patternShapesTo[i])) {
-                            								for (const e of patternShapesTo[i]) {
-                            									if (e=='?') continue;
-                            									this.ret.push({Text: to.Body+e, Number: num, Person: 1+i-fromIndex, Form: name});
-                            								}
-                            							} else {
-                            								if (patternShapesTo[i]=='?') continue;
-                            								this.ret.push({Text: to.Body+patternShapesTo[i], Number: num, Person: 1+i-fromIndex, Form: name});
-                            								break;
-                            							}*/
                         }
                     }
                 }
@@ -4673,8 +4584,6 @@ class ItemVerb {
 
                 if (shape == match) {
                     for (let to of this.To) {
-                        //		console.log(to.Pattern);
-                        //	console.log(pattenShapesName);
                         let patternShapesTo = to.Pattern[pattenShapesName];
                         if (patternShapesTo == undefined) continue;
 
@@ -4909,15 +4818,17 @@ class ItemVerb {
     }
 
     static GetPatternByNameFrom(name) {
-        for (const p of ItemVerb_pattensFrom) {
+        return ItemVerb_pattensFrom.find(p => p.Name === name) || null;
+        /*for (const p of ItemVerb_pattensFrom) {
             if (p.Name == name) return p;
-        }
+        }*/
     }
 
     static GetPatternByNameTo(name) {
-        for (const p of ItemVerb_pattensTo) {
+        return ItemVerb_pattensTo.find(p => p.Name === name) || null;
+        /*for (const p of ItemVerb_pattensTo) {
             if (p.Name == name) return p;
-        }
+        }*/
     }
 
     TryDicForm(to, varible, index) {
@@ -5019,9 +4930,7 @@ class ItemVerb {
         p.appendChild(f);
         
         // Arrow
-        let e = document.createElement("span");
-        e.innerText = " → ";
-        p.appendChild(e);
+        p.appendChild(document.createTextNode(" → "));
 
         // To
         for (let ti=0; ti<arr_forms.length; ti++) {
@@ -5266,9 +5175,6 @@ class Replace {
 class LanguageTr{
     constructor() {
         this.Name = "";
-        //	this.myVocab=[];
-        //	this.Words=[];
-        //this.SameWords=[];
         this.Sentences = [];
         this.Phrases = [];
         this.state = "instanced";
@@ -5277,7 +5183,6 @@ class LanguageTr{
         this.SentencePatterns = [];
         this.SentencePatternParts = [];
         this.SentenceParts = [];
-        //	dev=false;
         this.SimpleWords = [];
         this.PatternNounsFrom = [];
         this.PatternNounsTo = [];
@@ -5312,7 +5217,6 @@ class LanguageTr{
 
         this.qualityTrTotalTranslatedWell = 0.0;
         this.qualityTrTotalTranslated = 0.0;
-
 
         this.locationX = NaN;
         this.locationY = NaN;
@@ -6070,7 +5974,6 @@ class LanguageTr{
         let out = [];
         let total = 0;
         for (let w of this.Phrases) {
-            //			console.log(w.input);
             if (IsWordIncluded(w.input)) {
                 let g = w.GetDicForm();
                 if (g != null) out.push(g);
@@ -6079,7 +5982,6 @@ class LanguageTr{
         }
         for (let w of this.Adverbs) {
             if (IsWordIncluded(w.input)) {
-                //	console.log(w);				
                 let g = w.GetDicForm("přís.");
                 if (g != null) out.push(g);
                 total++;
@@ -6180,13 +6082,6 @@ class LanguageTr{
         }
 
         let display;
-        /*if (!dev){
-        	for (let i=0; i<out.length; i++) {
-        		if (out[i].join("").includes("undefined")) {
-        			out.splice(i, 1);
-        		}
-        	}
-        }*/
 
         // Nenalezeno
         if (out == "") {
@@ -6459,6 +6354,7 @@ class LanguageTr{
 
                 // Add unknown word
                 let TryReplaces = this.ReplaceWord(word);
+                console.log(TryReplaces);
                 BuildingSentence.push({ Type: "Unknown", To: TryReplaces, From: Zword });
                 continue;
             }
@@ -7488,7 +7384,8 @@ class LanguageTr{
             PatternAlrearyReplaced.push("o");
         }
         let ret = inside;
-        for (let g of this.ReplaceG) {
+        console.log("ReplaceWord");
+        for (let g of this.ReplaceG) {console.log(inside, g.input,this.ReplaceG);
             if (inside.includes(g.input)) {
                 // No overlap replaces
                 let startOfReplace = inside.indexOf(g.input);
@@ -8050,6 +7947,7 @@ function ApplyTranscription(text) {
     if (transcription == null) return str;
     //	console.log("before: ", str);
 
+    // Moravština návrh
     let str=ReplaceMoravian(text);
 
     let PatternAlrearyReplaced = [];
@@ -8058,7 +7956,9 @@ function ApplyTranscription(text) {
     }
 
     let ret = str;
+    //return str;
     for (let g of transcription) {
+        
         if (ret.type == "end") {
             if (ret.endsWith(g.from)) {
                 let startOfReplace = str.lastIndexOf(g.from);
@@ -8083,7 +7983,7 @@ function ApplyTranscription(text) {
         } else {
             let ind = -1;
             for (let i = 0; i < 10; i++) {
-                if (ret.includes(g.from)) {
+                if (ret.includes(g.from)) {console.log(str, PatternAlrearyReplaced, g);
                     let startOfReplace;
                     if (ind > 0) {
                         startOfReplace = str.substring(0, ind + g.from.length).indexOf(g.from) + g.from.length;

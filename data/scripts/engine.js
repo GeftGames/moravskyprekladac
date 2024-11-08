@@ -5101,7 +5101,26 @@ function SetCurrentTranscription(transCode) {
 
         { from: "ďe", to: "dě" },
         { from: "ťe", to: "tě" },
-        { from: "ňe", to: "ně" },
+        { from: "ňe", to: "ně" }, 
+        
+        { from: "ni", to: "ny" },
+        { from: "ní", to: "ný" },
+
+        { from: "ti", to: "ty" },
+        { from: "tí", to: "tý" },
+
+        { from: "di", to: "dy" },
+        { from: "dí", to: "dý" },
+
+        { from: "chi", to: "chy" },
+        { from: "hi", to: "hy" },
+        { from: "ki", to: "ky" },
+        { from: "ri", to: "ry" },
+
+        { from: "chí", to: "chý" },
+        { from: "hí", to: "hý" },
+        { from: "kí", to: "ký" },
+        { from: "rí", to: "rý" },
 
         { from: "ďi", to: "di" },
         { from: "ťi", to: "ti" },
@@ -5126,24 +5145,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ə", to: "e" },
         { from: "ṵ", to: "ṷ" },
 
-        { from: "ni", to: "ny" },
-        { from: "ní", to: "ný" },
-
-        { from: "ti", to: "ty" },
-        { from: "tí", to: "tý" },
-
-        { from: "di", to: "dy" },
-        { from: "dí", to: "dý" },
-
-        { from: "chi", to: "chy" },
-        { from: "hi", to: "hy" },
-        { from: "ki", to: "ky" },
-        { from: "ri", to: "ry" },
-
-        { from: "chí", to: "chý" },
-        { from: "hí", to: "hý" },
-        { from: "kí", to: "ký" },
-        { from: "rí", to: "rý" },
+      
 
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
