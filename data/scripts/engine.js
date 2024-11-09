@@ -5145,13 +5145,13 @@ function SetCurrentTranscription(transCode) {
         { from: "ə", to: "e" },
         { from: "ṵ", to: "ṷ" },
 
-      
-
+        
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
-
+        
         { from: "ŋ", to: "n" },
+        { from: "ɣ", to: "ch" },
 
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },

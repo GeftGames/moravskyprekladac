@@ -355,14 +355,25 @@ function mapRedraw() {
         //out of map
         if (入っちゃった(map_LocX + p.locationX * map_Zoom + circleRadius * 2, map_LocY + p.locationY * map_Zoom + circleRadius * 2, 0, 0, map_DisplayWidth + circleRadius * 4, map_DisplayHeight + circleRadius * 4)) {
 
-            if (p.Id == currentLang.Id) ctx.fillStyle = "Black";
-            else ctx.fillStyle = p.ColorFillStyle;
+            if (p.Id == currentLang.Id) {
+                if (ThemeLight == "dark") ctx.fillStyle = "white";
+                else ctx.fillStyle = "Black";
+            }else {
+                if (ThemeLight == "dark" && p.ColorFillStyle=='rgb(128,128,128,.1)') ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
+                else  ctx.fillStyle = p.ColorFillStyle;
+                console.log(p.ColorFillStyle);
+            }
 
             ctx.beginPath();
             ctx.arc(map_LocX + p.locationX * map_Zoom, map_LocY + p.locationY * map_Zoom, circleRadius, 0, 2 * Math.PI);
             ctx.fill();
 
-            ctx.strokeStyle = p.ColorStrokeStyle;
+          
+           // console.log(ctx.strokeStyle=="rgba(0, 0, 0, 0.5)");
+            if (ThemeLight == "dark") ctx.strokeStyle = 'rgba(255,255,255,.5)';
+            else {
+                ctx.strokeStyle = p.ColorStrokeStyle;
+            }
             ctx.stroke();
         }
     }
@@ -381,11 +392,16 @@ function mapRedraw() {
 
                 // Text color
                 if (p.Quality == 0) {
-                    if (p.Category === undefined) ctx.fillStyle = "#996666";
-                    else ctx.fillStyle = "Gray";
+                    if (ThemeLight == "dark"){
+                        if (p.Category === undefined) ctx.fillStyle = "#d7d0d0";
+                        else ctx.fillStyle = "#d7d7d7";
+                    }else{
+                        if (p.Category === undefined) ctx.fillStyle = "#996666";
+                        else ctx.fillStyle = "Gray";
+                    }
                 } else {
                     if (ThemeLight == "dark") ctx.fillStyle = "White";
-                    else ctx.fillStyle = "Black";
+                    else ctx.fillStyle = "black";
                 }
                 let w = ctx.measureText(p.Name).width;
                 ctx.fillText(p.Name, map_LocX + p.locationX * map_Zoom - w / 2, map_LocY + p.locationY * map_Zoom - circleRadius - 5);

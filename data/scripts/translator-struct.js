@@ -205,13 +205,13 @@ class Cite{
             // specified loc
             if (rules["isbn"]!=undefined && rules["isbn"]!="") {
                 pack.innerHTML+=` <a class="link" href='https://www.google.com/search?q=%22${rules["nazev"]}%22+${rules["isbn"]}'>Google</a>`;
-                pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["isbn"]}'>WorlCat</a>`;
+                pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["isbn"]}'>WorldCat</a>`;
                 //https://vufind.mzk.cz/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=978-80-270-0125-5&type0%5B%5D=ISN&bool0%5B%5D=OR&illustration=-1&limit=10&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=#back
                 pack.innerHTML+=` <a class="link" href='https://vufind.mzk.cz/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=${rules["isbn"]}&type0%5B%5D=ISN&bool0%5B%5D=OR&illustration=-1&limit=10&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=#back'>Moravská Zemská Knihovna</a>`;
             }else{
                 if (rules["odkaz"]==undefined || rules["odkaz"]=="") {
                     pack.innerHTML+=` <a class="link" href='https://www.google.com/search?q=${rules["nazev"]}'>Google</a>`;
-                    pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["nazev"]}'>WorlCat</a>`;
+                    pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["nazev"]}'>WorldCat</a>`;
                 }
             }
     

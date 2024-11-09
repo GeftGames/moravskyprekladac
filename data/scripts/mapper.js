@@ -1233,7 +1233,7 @@ function CreateSavedList() {
 		for (const rawOptions of allItems) {
 			let options=new RenderMapperOptions();
 			options.Load(rawOptions);
-			ret+="<div style='display: flex;align-items: center;'><div class='mapperNavrh' onclick='OpenAndSetAdvancedMapper("+id+");'>"+options.inputText+"</div> <div class='mapperSavedRemoveBtn' onclick='mapper_removeSaved("+id+",this)'>X</div></div>";
+			ret+="<div style='display: flex;align-items: center;'><div class='mapperNavrh' onclick='OpenAndSetAdvancedMapper("+id+");'>"+options.inputText+"</div> <div class='mapperSavedRemoveBtn' onclick='mapper_removeSaved("+id+",this)'>╳</div></div>";
 			id++;
 		}
 	}
@@ -1242,7 +1242,7 @@ function CreateSavedList() {
 		document.getElementById("mapperSaved").style.display="none";
 		document.getElementById("mapperSavedHeader").style.display="none";
 	}else{
-		document.getElementById("mapperSaved").style.display="block";
+		document.getElementById("mapperSaved").style.display="flex";
 		document.getElementById("mapperSavedHeader").style.display="block";
 	}
 	document.getElementById("mapperSaved").innerHTML=ret;

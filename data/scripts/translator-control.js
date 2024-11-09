@@ -455,13 +455,13 @@ function GetTranslations() {
                 // Add color
                 if (lang.Quality == 5) {
                     lang.ColorFillStyle = "Gold";
-                    lang.ColorStrokeStyle = "Black";
+                    lang.ColorStrokeStyle = "#000";
                 } else if (lang.Quality == 4) {
                     lang.ColorFillStyle = "Yellow";
-                    lang.ColorStrokeStyle = "Black";
+                    lang.ColorStrokeStyle = "#000";
                 } else if (lang.Quality == 3) {
                     lang.ColorFillStyle = "Orange";
-                    lang.ColorStrokeStyle = "Black";
+                    lang.ColorStrokeStyle = "#000";
                 } else if (lang.Quality == 2) {
                     lang.ColorFillStyle = "#cd7f32";
                     lang.ColorStrokeStyle = 'rgb(0,0,0,.9)';
@@ -471,7 +471,7 @@ function GetTranslations() {
                 } else if (lang.Quality == 0) {
                     lang.ColorFillStyle = "rgb(128,128,128,.1)";
                     lang.ColorStrokeStyle = 'rgb(0,0,0,.5)';
-                } else { lang.ColorFillStyle = "Black"; }
+                } else { lang.ColorFillStyle = "#000"; }
 
                 let nodeLang = document.createElement('option');
                 lang.option = nodeLang;
