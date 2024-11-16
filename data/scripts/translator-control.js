@@ -396,7 +396,7 @@ function GetTranslations() {
         tr.Id = id;
 
         tr.Load(lines);
-        console.log("Loaded lang '"+tr.Name+"'");
+        if (dev) console.log("Loaded lang '"+tr.Name+"'");
         AddLang(tr);
     }
 
@@ -560,7 +560,7 @@ function GetDic() {
     let input = dicInput.value;
 
     urlParamChange("input", input, true);
-    urlParamChange("lang", currentLang.Name, true);
+    urlParamChange("lang", currentLang.Id, true);
 
     if (currentLang.Quality < 2) document.getElementById("nodeTranslateTextLowQuality").style.display = "block";
     else document.getElementById("nodeTranslateTextLowQuality").style.display = "none";

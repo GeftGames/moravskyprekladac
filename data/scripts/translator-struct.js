@@ -1172,13 +1172,15 @@ class ItemSimpleWord {
 
     GetDicForm(name) {
         let p = document.createElement("p");
-        let f = document.createElement("span");
+        //let f = document.createElement("span");
+        let f;
         if (Array.isArray(this.input)) {
-            f.innerText = this.input.join(", ");
-        } else f.innerText = this.input;
+            f = this.input.join(", ");
+        } else f = this.input;
                
-        p.appendChild(f);
-
+        //p.appendChild(f);        
+        p.appendChild(document.createTextNode(f));
+        
         p.appendChild(document.createTextNode(" → "));
 
         let out = [];
@@ -1189,9 +1191,10 @@ class ItemSimpleWord {
             out.push(o);
             if (o == "") return null;
 
-            let t = document.createElement("span");
+            /*let t = document.createElement("span");
             t.innerText = o;
-            p.appendChild(t);
+            p.appendChild(t);*/
+            p.appendChild(document.createTextNode(o));
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
@@ -3004,7 +3007,7 @@ class ItemPronoun {
     }
 
     GetDicForm(name) {
-        console.log(this);
+       // console.log(this);
       //  if (this.To == undefined) return null;
         if (this.PatternFrom.Shapes[0] == "?") return null;
         //if (this.PatternTo.Shapes[0]=="?") return null;
@@ -3618,26 +3621,295 @@ class ItemPatternNumber {
         return item;
     }
 
-    GetTable(to) {
-        let tbody = document.createElement("tbody");
-        tbody.appendChild(document.createTextNode("Číslovka"));
-        if (Shapes.length == 14) {
+    GetTable(prefix) {
+        let combineWord = function(arr) {
+            if (!Array.isArray(arr))arr=[arr];
+            let o=[];
+            for (let a of arr) {
+                if (a!="?") o.push(ApplyPostRules(prefix+a));
+            }
+            if (o.length==0) return "?";
+            return o.join(", ");
+        }
+    
+        let parent = document.createElement("div");
+        
+      /*  let caption = document.createElement("span");
+        caption.innerText = langFile.Number;
+        parent.appendChild(caption);*/
+      
+        if (this.Shapes.length == 14*4) {  
+            {
+                let tableI = document.createElement("table");
+                tableI.className="tableDic";
+                parent.appendChild(tableI);
+
+                let caption = document.createElement("caption");
+                caption.innerText = langFile.MasculineAnimate;
+                tableI.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableI.appendChild(tbody);
+
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
+                    tr.appendChild(td0);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Single;
+                    td2.style="font-weight: bold;";
+                    tr.appendChild(td2);
+
+                    let td3 = document.createElement("td");
+                    td3.innerText = langFile.Multiple;
+                    td3.style="font-weight: bold;";
+                    tr.appendChild(td3);
+
+                    tbody.appendChild(tr);
+                }
+                for (let c=0; c<7; c++) {
+                    let tr = document.createElement("tr");
+                    
+                    let tdp = document.createElement("td");
+                    tdp.innerText = (c+1)+".";
+                    tr.appendChild(tdp);
+                    
+                    let td1 = document.createElement("td");
+                    td1.innerText = combineWord(this.Shapes[c]);
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = combineWord(this.Shapes[c+7]);
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+            }
+            
+            {
+                let tableI = document.createElement("table");
+                tableI.className="tableDic";
+                parent.appendChild(tableI);
+
+                let caption = document.createElement("caption");
+                caption.innerText = langFile.MasculineInanimate;
+                tableI.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableI.appendChild(tbody); 
+
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
+                    tr.appendChild(td0);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Single;
+                    td2.style="font-weight: bold;";
+                    tr.appendChild(td2);
+
+                    let td3 = document.createElement("td");
+                    td3.innerText = langFile.Multiple;
+                    td3.style="font-weight: bold;";
+                    tr.appendChild(td3);
+
+                    tbody.appendChild(tr);
+                }
+                for (let c = 14; c < 14*2-7; c ++) {
+                    let tr = document.createElement("tr");
+                    
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c-14+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = combineWord(this.Shapes[c]);
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = combineWord(this.Shapes[c + 7]);
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+            }
+
+            {
+                let tableI = document.createElement("table");
+                tableI.className="tableDic";
+                parent.appendChild(tableI);
+
+                let caption = document.createElement("caption");
+                caption.innerText = langFile.Feminine;
+                tableI.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableI.appendChild(tbody);
+
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
+                    tr.appendChild(td0);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Single;
+                    td2.style="font-weight: bold;";
+                    tr.appendChild(td2);
+
+                    let td3 = document.createElement("td");
+                    td3.innerText = langFile.Multiple;
+                    td3.style="font-weight: bold;";
+                    tr.appendChild(td3);
+
+                    tbody.appendChild(tr);
+                }
+                for (let c = 14*2; c < 14*3-7; c++) {
+                    let tr = document.createElement("tr");
+                    
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c-28+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = combineWord(this.Shapes[c]);
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = combineWord(this.Shapes[c + 7]);
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+            }
+
+            {
+                let tableI = document.createElement("table");
+                tableI.className="tableDic";
+                parent.appendChild(tableI);
+
+                let caption = document.createElement("caption");
+                caption.innerText = langFile.Middle;
+                tableI.appendChild(caption);
+
+                let tbody = document.createElement("tbody");
+                tableI.appendChild(tbody);
+
+                {
+                    let tr = document.createElement("tr");
+
+                    let td0 = document.createElement("td");
+                    td0.innerText = langFile.Fall;
+                    td0.style="font-weight: bold;";
+                    tr.appendChild(td0);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = langFile.Single;
+                    td2.style="font-weight: bold;";
+                    tr.appendChild(td2);
+
+                    let td3 = document.createElement("td");
+                    td3.innerText = langFile.Multiple;
+                    td3.style="font-weight: bold;";
+                    tr.appendChild(td3);
+
+                    tbody.appendChild(tr);
+                }
+                for (let c = 14*3; c < 14*4-7; c++) {
+                    let tr = document.createElement("tr");
+                    
+                    let td0 = document.createElement("td");
+                    td0.innerText = (c-14*3+1)+".";
+                    tr.appendChild(td0);
+
+                    let td1 = document.createElement("td");
+                    td1.innerText = combineWord(this.Shapes[c]);
+                    tr.appendChild(td1);
+
+                    let td2 = document.createElement("td");
+                    td2.innerText = combineWord(this.Shapes[c+7]);
+                    tr.appendChild(td2);
+
+                    tbody.appendChild(tr);
+                }
+            }
+        } else if (this.Shapes.length == 14) {
+            let tableI = document.createElement("table");
+            tableI.className="tableDic";
+            parent.appendChild(tableI);
+
+            let caption = document.createElement("caption");
+            caption.innerText = langFile.Number;
+            tableI.appendChild(caption);
+
+            let tbody = document.createElement("tbody");
+            tableI.appendChild(tbody);
+
             for (let c = 0; c < 14; c += 2) {
                 let tr = document.createElement("tr");
 
                 let td1 = document.createElement("td");
-                td1.innerText = to.Body + Shapes[c];
-                tr.appenChild(td1);
+                td1.innerText = combineWord(this.Shapes[c]);
+                tr.appedChild(td1);
 
                 let td2 = document.createElement("td");
-                td2.innerText = to.Body + Shapes[c + 1];
-                tr.appenChild(td2);
+                td2.innerText = combineWord(this.Shapes[c + 1]);
+                tr.appendChild(td2);
 
-                tbody.appenChild(tr);
+                tbody.appendChild(tr);
             }
-        }
+        } else if (this.Shapes.length == 7) {    
+            let tableI = document.createElement("table");
+            tableI.className="tableDic";
+            parent.appendChild(tableI);
 
-        return tbody;
+            let caption = document.createElement("caption");
+            caption.innerText = langFile.Number;
+            tableI.appendChild(caption);
+
+            let tbody = document.createElement("tbody");
+            tableI.appendChild(tbody);
+          
+            {              
+                let tr = document.createElement("tr");
+
+                let td0 = document.createElement("td");
+                td0.innerText = langFile.Fall;
+                td0.style="font-weight: bold;";
+                tr.appendChild(td0);
+
+                let td1 = document.createElement("td");
+                td1.innerText = "Tvary";
+                td1.style="font-weight: bold;";
+                tr.appendChild(td1);
+                tbody.appendChild(tr);
+            }
+            for (let c = 0; c < 7; c ++) {
+                let tr = document.createElement("tr");
+
+                let tdp = document.createElement("td");
+                tdp.innerText = (c+1)+".";
+                tr.appendChild(tdp);
+
+                let td1 = document.createElement("td");
+                td1.innerText = combineWord(this.Shapes[c]);
+                tr.appendChild(td1);
+
+                tbody.appendChild(tr);
+            }
+        }else console.log("Unknown shape len");
+       
+
+        return parent;
     }
 }
 
@@ -4012,13 +4284,15 @@ class ItemNumber {
     }
 
     GetDicForm(name) {
+      //  console.log("numb",this);
         let fromText=this.From + this.PatternFrom.Shapes[0];
         let p = document.createElement("p");
         
         // From
-        let f = document.createElement("span");
+       /* let f = document.createElement("span");
         f.innerText = fromText;
-        p.appendChild(f);
+        p.appendChild(f);*/
+        p.appendChild(document.createTextNode(fromText));
 
         // Arrow
         p.appendChild(document.createTextNode(" → "));
@@ -4027,7 +4301,7 @@ class ItemNumber {
         let toShapes=[];
         for (let to of this.To) {
             let patternShapes=to.Pattern.Shapes;
-
+          //  console.log(patternShapes);
             if (patternShapes[0]=="-" || patternShapes[0]=="?") continue;
     
             let t = document.createElement("span");
@@ -4036,9 +4310,10 @@ class ItemNumber {
 
             if (patternShapes.length > 1) {
                 t.addEventListener("click", () => {
-                    ShowPageLangD(t.GetTable());
+                    ShowPageLangD(to.Pattern.GetTable(to.Body));
+                  //  ShowPageLangD(t.GetTable());
                 });
-                t.class = "dicCustom";
+                t.className = "dicCustom";
             }
             
             // cites
@@ -4051,19 +4326,19 @@ class ItemNumber {
 
             toShapes.push(to.Body + patternShapes[0]);
         }
-
+      //  console.log("numb2",toShapes);
         if (toShapes.length==0) return null;
 
         p.appendChild(mapper_link(fromText, toShapes));
       
         return { from: fromText, toShapes, name: name, element: p };
     }
-
+/*
     GetTable() {
         for (let to of this.To) {
-            if (to.Body != "?") return to.GetTable(to);
+            if (to.Body != "?") return to.GetTable(this.From);
         }
-    }
+    }*/
     
     AllShapes(){
         let arr=[];
@@ -4272,11 +4547,11 @@ class ItemPatternVerb {
 
             tbody.appendChild(tr);
 
-            for (let c = 0; c < 6; c += 2) {
+            for (let c = 0; c < 3; c ++) {
                 let tr = document.createElement("tr");
 
                 let td0 = document.createElement("td");
-                td0.innerText = c % 3 + 1;
+                td0.innerText = (c+1)+".";
                 tr.appendChild(td0);
 
                 let td1 = document.createElement("td");
@@ -4284,7 +4559,7 @@ class ItemPatternVerb {
                 tr.appendChild(td1);
 
                 let td2 = document.createElement("td");
-                td2.innerText = combineWord(this.Continous[c + 1]);
+                td2.innerText = combineWord(this.Continous[c + 3]);
                 tr.appendChild(td2);
 
                 tbody.appendChild(tr);
@@ -4324,11 +4599,11 @@ class ItemPatternVerb {
 
             tbody.appendChild(tr);
 
-            for (let c = 0; c < 6; c += 2) {
+            for (let c = 0; c < 3; c++) {
                 let tr = document.createElement("tr");
 
                 let td0 = document.createElement("td");
-                td0.innerText = c % 3 + 1;
+                td0.innerText = (c+1)+".";
                 tr.appendChild(td0);
 
                 let td1 = document.createElement("td");
@@ -4336,7 +4611,7 @@ class ItemPatternVerb {
                 tr.appendChild(td1);
 
                 let td2 = document.createElement("td");
-                td2.innerText = combineWord(this.Future[c + 1]);
+                td2.innerText = combineWord(this.Future[c + 3]);
                 tr.appendChild(td2);
 
                 tbody.appendChild(tr);
@@ -4379,7 +4654,7 @@ class ItemPatternVerb {
                 let tr = document.createElement("tr");
 
                 let td0 = document.createElement("td");
-                td0.innerText = "1";
+                td0.innerText = "1.";
                 tr.appendChild(td0);
 
                 let td1 = document.createElement("td");
@@ -4395,7 +4670,7 @@ class ItemPatternVerb {
                 let tr = document.createElement("tr");
 
                 let td0 = document.createElement("td");
-                td0.innerText = "2";
+                td0.innerText = "2.";
                 tr.appendChild(td0);
 
                 let td1 = document.createElement("td");
@@ -4442,22 +4717,22 @@ class ItemPatternVerb {
 
             tbody.appendChild(tr);
 
-            for (let c = 0; c < 8; c += 2) {
+            for (let c = 0; c < 4; c ++) {
                 let tr = document.createElement("tr");
 
                 let td0 = document.createElement("td");
                 if (c == 0) td0.innerText = "Muž. živ.";
-                else if (c == 2) td0.innerText = "Muž. než.";
-                else if (c == 4) td0.innerText = "ženský";
-                else if (c == 6) td0.innerText = "Střední";
+                else if (c == 1) td0.innerText = "Muž. než.";
+                else if (c == 2) td0.innerText = "ženský";
+                else if (c == 3) td0.innerText = "Střední";
                 tr.appendChild(td0);
 
                 let td1 = document.createElement("td");
-                td1.innerText = combineWord(this.PastActive[c/2]);
+                td1.innerText = combineWord(this.PastActive[c]);
                 tr.appendChild(td1);
 
                 let td2 = document.createElement("td");
-                td2.innerText = combineWord(this.PastActive[c + 1]);
+                td2.innerText = combineWord(this.PastActive[c + 4]);
                 tr.appendChild(td2);
 
                 tbody.appendChild(tr);
@@ -4496,14 +4771,14 @@ class ItemPatternVerb {
 
             tbody.appendChild(tr);
 
-            for (let c = 0; c < 8; c += 2) {
+            for (let c = 0; c < 4; c ++) {
                 let tr = document.createElement("tr");
 
                 let td0 = document.createElement("td");
                 if (c == 0) td0.innerText = "Muž. živ.";
-                else if (c == 2) td0.innerText = "Muž. než.";
-                else if (c == 4) td0.innerText = "ženský";
-                else if (c == 6) td0.innerText = "Střední";
+                else if (c == 1) td0.innerText = "Muž. než.";
+                else if (c == 2) td0.innerText = "ženský";
+                else if (c == 3) td0.innerText = "Střední";
                 tr.appendChild(td0);
 
                 let td1 = document.createElement("td");
@@ -4511,7 +4786,7 @@ class ItemPatternVerb {
                 tr.appendChild(td1);
 
                 let td2 = document.createElement("td");
-                td2.innerText = combineWord(this.PastPassive[c + 1]);
+                td2.innerText = combineWord(this.PastPassive[c + 4]);
                 tr.appendChild(td2);
 
                 tbody.appendChild(tr);
@@ -5959,7 +6234,6 @@ class LanguageTr{
             if (w.PatternFrom == null) return false;
             let shape = w.PatternFrom.Infinitive;
             let ww = w.From + shape;
-
             return ww.startsWith(input);
         }
 
@@ -5967,7 +6241,6 @@ class LanguageTr{
             if (w.PatternFrom == null) return false;
             let shape = w.PatternFrom.MasculineAnimate[0];
             let ww = w.From + shape;
-
             return ww.startsWith(input);
         }
 
@@ -6041,23 +6314,16 @@ class LanguageTr{
             }
         }
 
-        for (let w of this.Pronouns) {
-            if (IsWordComIncluded(w)) {
-                let g = w.GetDicForm();
-                if (g != null) out.push(g);
-                total++;
-            }
-        }
-        for (let w of this.Verbs) {
-            if (IsWordVerbIncluded(w)) {
+        for (let w of this.Adjectives) {
+            if (IsWordAdjIncluded(w)) {
                 let g = w.GetDicForm();
                 if (g != null) out.push(g);
                 total++;
             }
         }
 
-        for (let w of this.Adjectives) {
-            if (IsWordAdjIncluded(w)) {
+        for (let w of this.Pronouns) {
+            if (IsWordComIncluded(w)) {
                 let g = w.GetDicForm();
                 if (g != null) out.push(g);
                 total++;
@@ -6067,7 +6333,15 @@ class LanguageTr{
         for (let w of this.Numbers) {
             if (IsWordComIncluded(w)) {
                 let g = w.GetDicForm();
-               // console.log("numb out: ",g);
+                console.log("numb out: ",g);
+                if (g != null) out.push(g);
+                total++;
+            }
+        }
+
+        for (let w of this.Verbs) {
+            if (IsWordVerbIncluded(w)) {
+                let g = w.GetDicForm();
                 if (g != null) out.push(g);
                 total++;
             }
@@ -7647,7 +7921,7 @@ class LanguageTr{
                             let cislo = -1,
                                 pad = -1,
                                 rod = "";
-
+                            console.log(rules);
                             if (rules["cislo"] != undefined) {
                                 if (rules["cislo"] == "m") cislo = 2;
                                 else if (rules["cislo"] == "j") cislo = 1;
@@ -7680,8 +7954,8 @@ class LanguageTr{
                             if (words != null) {
                                 for (const w of words.Shapes) {
                                     if ((w.Number == cislo || cislo == -1) && (w.Fall == pad || pad == -1) && (w.Gender == rod || rod == "")) {
-                                        //console.log(w,(w.Number==cislo || cislo==-1) , (w.Fall==pad || pad==-1), (w.Gender==rod || rod==""));
-                                        return { Type: "Pronoun", To: [w], From: word };
+                                        console.log(w,(w.Number==cislo || cislo==-1) , (w.Fall==pad || pad==-1), (w.Gender==rod || rod==""));
+                                        return { Type: "Pronoun", To: { Shapes: [w], Gender: words.Gender, Object: words.Object }, From: word };
                                     }
                                 }
                             }

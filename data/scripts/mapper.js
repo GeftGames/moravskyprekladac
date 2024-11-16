@@ -82,22 +82,9 @@ function mapper_init(customStyle) {
 	urlParamClearB();
 	urlParamChange("input", mapperRenderOptions.inputText, true);
 	
-	
-	// Žádné body
-	if (mapperRenderOptions.inputText=="") {
-		mapper_showError("Text v poli nemůže být prázný");
-		return;
-	}	
-	
 	// přeložit body
 	mapper_points=mapper_GetPointsTranslated(languagesListAll, mapperRenderOptions.inputText);
 
-	// Žádné body
-	if (mapper_points.length==0) {
-		mapper_showError("Nenalezen žádný překlad, mapy by byla prázná");
-		return;
-	}
-	
 	if (mapperRenderOptions.inputText.startsWith("<{word=") && mapperRenderOptions.inputText.endsWith("}>")){
 		let parts=mapperRenderOptions.inputText.substring(2,mapperRenderOptions.inputText.length-2).split("|");
 		let set=-1;
@@ -127,9 +114,21 @@ function mapper_init(customStyle) {
 		if (set>-1) {			
 			parts.splice(set, 1);				
 			document.getElementById("mapperInputPreview").innerText=word+" ("+parts.join(", ")+")";
-		}else document.getElementById("mapperInputPreview").innerText=parts;		
+		} else document.getElementById("mapperInputPreview").innerText=parts;		
 	} else document.getElementById("mapperInputPreview").innerText=mapperRenderOptions.inputText;
+	
+	// Žádné body
+	if (mapperRenderOptions.inputText=="") {
+		mapper_showError("Text v poli nemůže být prázný");
+		return;
+	}
 
+	// Žádné body
+	if (mapper_points.length==0) {
+		mapper_showError("Nenalezen žádný překlad, mapy by byla prázná");
+		return;
+	}
+	
 	// vytvořit hranice
 	mapper_borders=getVoronoi(mapper_points);
 

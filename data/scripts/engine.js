@@ -467,7 +467,7 @@ function ChangeDic() {
     // localStorage.setItem('trFrom', selFrom.value);
         localStorage.setItem('trTo', selTo.value);
     //location.hash.to = selTo.value;
-    urlParamChange("dic_to", selTo.value, true);
+    urlParamChange("input", selTo.value, true/**/);
     BuildOptionsMoravian();
     //let n;
     //let headername = document.getElementById('headername');
@@ -1014,28 +1014,28 @@ function SetLanguage() {
 function TabSelect(enableElement, tab) {
     if (tab == tabText) {
         //location.hash = "text";
-        urlParamChange("page","text", false);
+        urlParamChange("page","text", false/**/);
         tabText.classList.add("tabSelected");
         tabSubs.classList.remove("tabSelected");
         tabDic.classList.remove("tabSelected");
         tabTxtFiles.classList.remove("tabSelected");
     } else if (tab == tabSubs) {
         //location.hash = "subs";
-        urlParamChange("page","subs", false);
+        urlParamChange("page","subs", false/**/);
         tabText.classList.remove("tabSelected");
         tabSubs.classList.add("tabSelected");
         tabDic.classList.remove("tabSelected");
         tabTxtFiles.classList.remove("tabSelected");
     } else if (tab == tabTxtFiles) {
         //location.hash = "files";
-        urlParamChange("page","files", false);
+        urlParamChange("page","files", false/**/);
         tabText.classList.remove("tabSelected");
         tabDic.classList.remove("tabSelected");
         tabSubs.classList.remove("tabSelected");
         tabTxtFiles.classList.add("tabSelected");
     } else if (tab == tabDic) {
        // location.hash = "dic";
-        urlParamChange("page","dic", false);
+        urlParamChange("page","dic", false/**/);
         tabText.classList.remove("tabSelected");
         tabTxtFiles.classList.remove("tabSelected");
         tabSubs.classList.remove("tabSelected");
@@ -1226,101 +1226,96 @@ var Load = function () {
         return;
     }
 
-    let hashes=[];    
+    let hashes={};    
     if (location.search.startsWith("?")) {
-        hashes=location.search.substring(1).split("&");
+        _hashes=location.search.substring(1).split("&");
+
+        for (let hash of _hashes) {
+            let s=hash.split("=");
+            if (s[1]==undefined) hashes[s[0]]=true;
+            else hashes[s[0]]=s[1];
+        }
     } else if (location.hash.startsWith("#")) {
-        hashes=location.hash.split("#");
+        _hashes=location.hash.split("#");
+
+        for (let hash of _hashes) {
+            let s=hash.split("=");
+            if (s[1]==undefined) hashes[s[0]]=true;
+            else hashes[s[0]]=s[1];
+        }
+
         //location.hash=undefined;
         history.replaceState({}, document.title, window.location.href.split('#')[0]);
     }
-    
-    if (hashes.includes("about") || hashes.includes("about=")) {
-        //ShowAboutPage()
+  //  console.log(hashes);
+
+
+    if (hashes["about"]!=undefined) {
         PopPageShow("about");
-        urlParamChange("page", "about", false);
-    } else if (hashes.includes("mapper") || hashes.includes("mapper=")) {
+        urlParamChange("page", "about", false/**/);
+    } else if (hashes["mapper"]!=undefined) {
         appSelected = "mapper";
-        let input_text_var="input=";
-        for (let l of hashes) {  
-            if (l.startsWith(input_text_var)) {
-                let s=input_text_var.length;
-                input_text=decodeURI(l.substring(s));
-                
-                if (input_text!="") {
-                   // document.getElementById("specialTextarea").value=input_text;
-                    mapper_starting_input=input_text;
-                    //console.log("mapeer");
-                 //   mapper_init(false,input_text)
-                }
-            }     
-        }
-        urlParamChange("page", "mapper", false);
-    } else if (hashes.includes("search") || hashes.includes("search=")) {
-        appSelected = "search";
-        urlParamChange("page", "search", false);
-
-    } else if (hashes.includes("translate") || hashes.includes("translate=")) {
-        appSelected = "translate";
-        urlParamChange("page", "translate", false);
-
-        var input_text="";
-       
-        let input_text_var="input=", input_lang_var="lang=";
-
-        for (let l of hashes) {            
-            if (l.startsWith(input_text_var)) {
-                let s=input_text_var.length;
-                input_text=decodeURI(l.substring(s));
-                urlParamChange("input", input_text, true);
-                if (input_text!="") {
-                    document.getElementById("specialTextarea").value=input_text;
-                }
-            }            
+        
+        if (hashes["input"]!=undefined) {
+            input_text=decodeURI(hashes["input"]);
             
-            if (l.startsWith(input_lang_var)) {
-                let s=input_lang_var.length;
-                input_lang=decodeURI(l.substring(s));
-                urlParamChange("lang", input_lang, true);
-                if (input_lang!="") {                    
-                    document.getElementById("selectorTo").value=input_lang;
-                }
+            if (input_text!="") {
+                mapper_starting_input=input_text;
+            }  
+        }
+        urlParamChange("page", "mapper", false/**/);
+    } else if (hashes["search"]!=undefined) {
+        appSelected = "search";
+        urlParamChange("page", "search", false/**/);
+
+    } else if (hashes["text"]) {
+        appSelected = "translate";
+        urlParamChange("page", "text", false/**/);
+       
+        if (hashes["input"]!=undefined) {
+            let input_text=decodeURI(hashes["input"]);
+            urlParamChange("input", input_text, true);
+            if (input_text!="") {
+                document.getElementById("specialTextarea").value=input_text;
+            }
+        }            
+        console.log(input_text);
+        
+        if (hashes["lang"]!=undefined) {
+            let input_lang=decodeURI(hashes["lang"]);
+            urlParamChange("lang", input_lang, true);
+            if (input_lang!="") {                    
+                document.getElementById("selectorTo").value=input_lang;
             }
         }
        
-    } else if (hashes.includes("dic") || hashes.includes("dic=")) {
+    } else if (hashes["dic"]!=undefined) {
         TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic'));
         var input_text="";
-       
-        let input_text_var="input=", input_lang_var="lang=";
-
-        for (let l of hashes) {            
-            if (l.startsWith(input_text_var)) {
-                let s=input_text_var.length;
-                input_text=decodeURI(l.substring(s));
-                urlParamChange("input", input_text, true);
-                if (input_text!="") {
-                    document.getElementById("dicInput").value=input_text;
-                }
-            }            
             
-            if (l.startsWith(input_lang_var)) {
-                let s=input_lang_var.length;
-                input_lang=decodeURI(l.substring(s));
-                urlParamChange("lang", input_lang, true);
-                if (input_lang!="") {
-                    document.getElementById("selectorTo").value=input_lang;
-                }
+        if (hashes["input"]!=undefined) {
+            let input_text=decodeURI(hashes["input"]);
+            urlParamChange("input", input_text, true);
+            if (input_text!="") {
+                document.getElementById("dicInput").value=input_text;
+            }
+        }            
+        
+        if (hashes["lang"]!=undefined) {
+            let input_lang=decodeURI(hashes["lang"]);
+            urlParamChange("lang", input_lang, true);
+            if (input_lang!="") {
+                document.getElementById("selectorTo").value=input_lang;
             }
         }
-    } else if (hashes.includes("files") || hashes.includes("files=")) {
+    } else if (hashes["files"]!=undefined) {
         TabSelect(document.getElementById('translateFiles'), document.getElementById('tabTxtFiles'));
-    } else if (hashes.includes("subs") || hashes.includes("subs=")) {
+    } else if (hashes["subs"]!=undefined) {
         TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
-    } else if (hashes.includes("text") || hashes.includes("text=")) {
+    } else if (hashes["text"]!=undefined) {
         TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
     }else{
-        urlParamChange("page", "translate", false);
+        urlParamChange("page", "text", false);
     }
   
 
@@ -4984,7 +4979,7 @@ function ShowAppPage(name) {
     }, 10);
 
     appSelected = name;
-    urlParamChange("page", name, false);
+    urlParamChange("page", name=="translate" ? "text": name, false);
    // location.hash = name;
 
     // Remove animation
@@ -5166,6 +5161,11 @@ function SetCurrentTranscription(transCode) {
         { from: "bě", to: "bje" },
         { from: "pě", to: "pje" },
         { from: "fě", to: "fje" },
+
+        { from: "mě", to: "mňe" },
+        { from: "ně", to: "ňe" },
+        { from: "dě", to: "ďe" },
+        { from: "tě", to: "ťe" },
 
         { from: "Vě", to: "Vje" },
         { from: "Bě", to: "Bje" },
@@ -6293,11 +6293,11 @@ function titleUpdate() {
 // redraw url
 function urlParamUpdate() { 
     // Wayback Machine may have problems
-    if (![serverName, serverNameGithub].includes(window.location.origin+window.location.pathname)) return;
-
+   // if (![serverName, serverNameGithub].includes(window.location.origin+window.location.pathname)) return;
+//console.log("urlParamUpdate");
     let str_url="";
     // set up
-    for (let param of webSearchParams){
+    for (let param of webSearchParams) {
         if (param.showName) {
             if (str_url=="") str_url+=param.name+"="+param.value;
             else str_url+="&"+param.name+"="+param.value;
@@ -6312,11 +6312,11 @@ function urlParamUpdate() {
     // clear
     const url = new URL(window.location);
     url.search=str_url;
-    
-    window.history.replaceState({}, '', url);
+  //  console.log("./"+str_url);
+    window.history.replaceState({}, '', /*url*/"./?"+str_url);
 }
 
-function urlParamChange(name, value, showName){
+function urlParamChange(name, value, showName/**/){
     for (let param of webSearchParams) {
         if (param.name==name){
             param.value=value;
@@ -6326,7 +6326,7 @@ function urlParamChange(name, value, showName){
             return;
         }
     }
-    webSearchParams.push({showName: showName, name: name, value: value});
+    webSearchParams.push({showName: showName,/**/ name: name, value: value});
     urlParamUpdate();
     if (name=="page") titleUpdate();
 }

@@ -234,10 +234,10 @@ var initLookUpMap = function () {
 
                 // now distance
                 dx = (m1x - map_LocX) - (m2x - map_LocX), dy = (m1y - map_LocY) - (m2y - map_LocY);
-                console.log(map_LocTmpX, m1x - map_LocX);
-                console.log(map_LocTmpY, m1y - map_LocY);
-                console.log(map_LocTmp2Y, m2y - map_LocY);
-                console.log(map_LocTmp2Y, m2y - map_LocY);
+             //   console.log(map_LocTmpX, m1x - map_LocX);
+             //   console.log(map_LocTmpY, m1y - map_LocY);
+             //   console.log(map_LocTmp2Y, m2y - map_LocY);
+              //  console.log(map_LocTmp2Y, m2y - map_LocY);
                 let now = Math.sqrt(dx * dx + dy * dy);
                 let prevZoom = map_Zoom;
                 map_Zoom = map_ZoomInit / (start / now);
@@ -361,7 +361,7 @@ function mapRedraw() {
             }else {
                 if (ThemeLight == "dark" && p.ColorFillStyle=='rgb(128,128,128,.1)') ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
                 else  ctx.fillStyle = p.ColorFillStyle;
-                console.log(p.ColorFillStyle);
+             //   console.log(p.ColorFillStyle);
             }
 
             ctx.beginPath();

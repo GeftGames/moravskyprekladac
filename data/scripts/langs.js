@@ -27,6 +27,11 @@ langs["cs"] = {
     Color: "Barva",
     RegionWithTr: "Země s překlady",
 
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
+
 
     // Překládání
     From: "Z",
@@ -277,6 +282,10 @@ langs["en"] = {
     Mode: "Mode",
     Power: "Power",
     Color: "Colour",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     // Překládání
     From: "From",
@@ -530,6 +539,10 @@ langs["jp"] = {
     Mode: "モード",
     Power: "パフォーマンス",
     Color: "色",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     // Překládání
     TranslateFormat: "{0}から{1}へ",
@@ -783,6 +796,10 @@ langs["pl"] = {
     Mode: "Tryb",
     Power: "Wydajność",
     Color: "Kolor",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     // Překládání
     From: "Z",
@@ -1034,6 +1051,10 @@ langs["sk"] = {
     Mode: "Režim",
     Power: "Optimalizace",
     Color: "Farba",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     // Překládání
     From: "Z",
@@ -1276,6 +1297,10 @@ langs["de"] = {
     AppTabTranslateShort: "Übersetzung",
     AppTabSearchShort: "Suchen",
     AppTabMapperShort: "In den Karten",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     SearchInputCaption: "Ich suche nach dem, was es bedeutet...",
     SearchButton: "Suchen",
@@ -1528,6 +1553,10 @@ langs["hanak"] = {
     AppTabTranslateShort: "Překlad",
     AppTabSearchShort: "Hlenání",
     AppTabMapperShort: "V mapách",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     SearchInputCaption: "Hledám co znamená...",
     SearchButton: "Vêhledat",
@@ -1779,6 +1808,10 @@ langs["valach"] = {
     AppTabTranslateShort: "Překlad",
     AppTabSearchShort: "Hlenání",
     AppTabMapperShort: "V mapách",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
 
     SearchInputCaption: "Hledám co znamená...",
     SearchButton: "Vyhledat",
@@ -2021,6 +2054,10 @@ langs["slova"] = {
     RegionWithTr: "Země s překladama",
 
     Transcription: "Přepis",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
     // Zpráva
     noteStillInDev: "Překladač je v jedném kusi nedoďelaný. Esi scete zapnút velmi rané překlady, tož kliknite v levým, vrchním rohu na tři čáry.",
 
@@ -2268,6 +2305,10 @@ langs["mor_radikalni"] = {
     Region: "Oblast",
     BitSlz: "a trošku slezský",
     RegionWithTr: "Země s překladami",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
     // Zpráva
     noteStillInDev: "Překladač je furt ve vývoju, ešli cete rozfifňané jazyky zapnite v nastavení ve vrchním levém rožku",
 
@@ -2516,6 +2557,10 @@ langs["ce_cechy"] = {
     Region: "Oblast",
     BitSlz: "a trochu slezský",
     RegionWithTr: "Země s překlady",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
     // Zpráva
     noteStillInDev: "Překladač je pořád ve vývoji, velmi rané překlady je možné zapnout v nastavení, levém horním menu.",
 
@@ -2768,6 +2813,10 @@ langs["cs_slz"] = {
     Transcription: "Transkripce",
     
     RegionWithTr: "Země s překlady",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
     // Zpráva
     noteStillInDev: "Překladač je furt ve vývoju, velmi rané překlady lze zapnout v nastavení, levém horním menu.",
 
@@ -3020,6 +3069,10 @@ langs["cs_mor"] = {
     RegionWithTr: "Země s překlady",
 
     Transcription: "Transkripce",
+    MasculineAnimate: "Mužský životný",
+    MasculineInanimate: "Mužský životný",
+    Feminine: "Ženský",
+    Middle: "Střední",
     // Zpráva
     noteStillInDev: "Překladač je furt ve vývoju, nedodělané jazyky zapnete v nastavení v horním levém rohu",
 
