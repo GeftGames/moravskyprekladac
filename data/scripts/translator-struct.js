@@ -1566,7 +1566,7 @@ class ItemPreposition {
         }
         item.output = FastLoadTranslateTo(raw, 2);
         if (item.output == null) {
-            console.warn(raw+" is strange");
+            if (dev) console.warn(raw+" is strange");
             return null;
         }
         return item;
@@ -3965,7 +3965,7 @@ class ItemNumber {
                         for (let to of this.To) {
                             if (to.Body != "?") {
                                 for (let shapeTo of to.Pattern.Shapes[i]) {
-                                    if (shapeTo != "?") arr.push({ Text: to.Body + shapeTo, Number: number, Fall: i + 1 - startIndex, Gender: gender });
+                                    if (shapeTo != "?")arr.push({ Text: to.Body + shapeTo, Number: number, Fall: i + 1 - startIndex, Gender: gender });
                                 }
                             }
                         }
@@ -3990,14 +3990,15 @@ class ItemNumber {
 
     IsStringThisWord(str) {
         //	if (this.PatternTo==null) return;
-        if (this.PatternFrom == null) return;
+        if (this.PatternFrom == null) return null;
+        if (!str.startsWith(this.From)) return null;
+       
 
         // Return all possible falls with numbers
         // [[tvar, číslo, pád], rod]
         let ret = [];
-        if (!str.startsWith(this.From)) return;
 
-        if (this.PatternFrom.Shapes.length == 14 * 4) {
+        if (this.PatternFrom.Shapes.length == 14 * 4) { 
             {
                 let s1 = this.IsStringThisWordG(str, 0, 7, 1, "muz");
                 if (s1.length > 0) ret.push(...s1);
@@ -4034,7 +4035,7 @@ class ItemNumber {
                     for (const s of shape) {
                         if (this.From + s == str) {
                             for (let to of this.To) {
-                                console.log(to);
+                              //  console.log(to);
                                 if (to.Body != "?") {
                                     if (Array.isArray(to.Pattern.Shapes[i])) {
                                         for (let shapeTo of to.Pattern.Shapes[i]) {
@@ -4094,7 +4095,7 @@ class ItemNumber {
                     }
                 }
             }
-        }
+        } else if (dev) console.warn("unknown length", this.PatternFrom.Shapes.length);
         /*
         		for (let i=0; i<7; i++) {
         			let shape=this.PatternFrom.Shapes[i];
@@ -4278,7 +4279,6 @@ class ItemNumber {
         				}
         			}
         		}*/
-
         if (ret.length > 0) return { Shapes: ret, Object: this };
         else return null;
     }
@@ -6565,7 +6565,7 @@ class LanguageTr{
                         BuildingSentence.push({ Type: "Pronoun", To: n, From: Zword });
                         continue;
                     }
-                } {
+                } {//console.log(word);
                     let n = this.searchWordNumber(word);
                     if (n != null) {
                         // n=[[tvar, číslo, pád], rod];
@@ -6628,7 +6628,7 @@ class LanguageTr{
 
                 // Add unknown word
                 let TryReplaces = this.ReplaceWord(word);
-                console.log(TryReplaces);
+                //console.log(TryReplaces);
                 BuildingSentence.push({ Type: "Unknown", To: TryReplaces, From: Zword });
                 continue;
             }
@@ -6984,12 +6984,13 @@ class LanguageTr{
     searchWordAdjective(input) {
         for (const n of this.Adjectives) {
             let z = n.IsStringThisWord(input);
-            //			console.log(z);
+           
             if (z !== null) return z;
         }
         return null;
     }
 
+   // console.log(input);
     searchWordNumber(input) {
         for (const n of this.Numbers) {
             let z = n.IsStringThisWord(input);
@@ -7658,8 +7659,8 @@ class LanguageTr{
             PatternAlrearyReplaced.push("o");
         }
         let ret = inside;
-        console.log("ReplaceWord");
-        for (let g of this.ReplaceG) {console.log(inside, g.input,this.ReplaceG);
+     //   console.log("ReplaceWord");
+        for (let g of this.ReplaceG) {//console.log(inside, g.input,this.ReplaceG);
             if (inside.includes(g.input)) {
                 // No overlap replaces
                 let startOfReplace = inside.indexOf(g.input);
@@ -8257,7 +8258,7 @@ function ApplyTranscription(text) {
         } else {
             let ind = -1;
             for (let i = 0; i < 10; i++) {
-                if (ret.includes(g.from)) {console.log(str, PatternAlrearyReplaced, g);
+                if (ret.includes(g.from)) {//console.log(str, PatternAlrearyReplaced, g);
                     let startOfReplace;
                     if (ind > 0) {
                         startOfReplace = str.substring(0, ind + g.from.length).indexOf(g.from) + g.from.length;

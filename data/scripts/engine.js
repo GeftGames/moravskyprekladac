@@ -26,7 +26,7 @@ var imgMap_bounds;
 var imgMap;
 
 // app
-var input_lang="";
+var input_lang=0; //startup index of lang
 var appSelected = "translate";
 //var chngtxt;
 
@@ -1252,7 +1252,7 @@ var Load = function () {
 
     if (hashes["about"]!=undefined) {
         PopPageShow("about");
-        urlParamChange("page", "about", false/**/);
+        urlParamChange("page", "about", false);
     } else if (hashes["mapper"]!=undefined) {
         appSelected = "mapper";
         
@@ -1263,14 +1263,14 @@ var Load = function () {
                 mapper_starting_input=input_text;
             }  
         }
-        urlParamChange("page", "mapper", false/**/);
+        urlParamChange("page", "mapper", false);
     } else if (hashes["search"]!=undefined) {
         appSelected = "search";
-        urlParamChange("page", "search", false/**/);
+        urlParamChange("page", "search", false);
 
     } else if (hashes["text"]) {
         appSelected = "translate";
-        urlParamChange("page", "text", false/**/);
+        urlParamChange("page", "text", false);
        
         if (hashes["input"]!=undefined) {
             let input_text=decodeURI(hashes["input"]);
@@ -1282,7 +1282,7 @@ var Load = function () {
         console.log(input_text);
         
         if (hashes["lang"]!=undefined) {
-            let input_lang=decodeURI(hashes["lang"]);
+            input_lang=decodeURI(hashes["lang"]);
             urlParamChange("lang", input_lang, true);
             if (input_lang!="") {                    
                 document.getElementById("selectorTo").value=input_lang;
@@ -1302,7 +1302,7 @@ var Load = function () {
         }            
         
         if (hashes["lang"]!=undefined) {
-            let input_lang=decodeURI(hashes["lang"]);
+            input_lang=decodeURI(hashes["lang"]);
             urlParamChange("lang", input_lang, true);
             if (input_lang!="") {
                 document.getElementById("selectorTo").value=input_lang;

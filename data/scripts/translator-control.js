@@ -249,11 +249,12 @@ function GetTranslations() {
         document.getElementById("appPage_" + appSelected).style.display = "block";
         document.getElementById("appPage_" + appSelected).style.opacity = "0%";
 
-        //console.log(input_lang);
-        if (input_lang!="" && input_lang!=undefined) document.getElementById("selectorTo").value=input_lang;
+        console.log("input_lang", input_lang);
+        if (input_lang>=0 && input_lang!=undefined) document.getElementById("selectorTo").value=input_lang;
         currentLang = GetCurrentLanguage();
         BuildOptionsMoravian();
-        if (input_lang!="" && input_lang!=undefined) Translate();
+        //if (input_lang>=0 && input_lang!=undefined) 
+        Translate();
         
         if (mapper_starting_input!=undefined){
             //console.log(mapper_starting_input);
