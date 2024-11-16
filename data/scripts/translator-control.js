@@ -250,7 +250,8 @@ function GetTranslations() {
         document.getElementById("appPage_" + appSelected).style.opacity = "0%";
 
         console.log("input_lang", input_lang);
-        if (input_lang>=0 && input_lang!=undefined) document.getElementById("selectorTo").value=input_lang;
+        //if (input_lang>=0 && input_lang!=undefined) 
+        document.getElementById("selectorTo").value=input_lang;
         currentLang = GetCurrentLanguage();
         BuildOptionsMoravian();
         //if (input_lang>=0 && input_lang!=undefined) 
