@@ -1268,7 +1268,7 @@ var Load = function () {
         appSelected = "search";
         urlParamChange("page", "search", false);
 
-    } else if (hashes["text"]) {
+    } else if (hashes["text"]!=undefined) {
         appSelected = "translate";
         urlParamChange("page", "text", false);
        
@@ -1279,7 +1279,7 @@ var Load = function () {
                 document.getElementById("specialTextarea").value=input_text;
             }
         }            
-        console.log(input_text);
+        //console.log(input_text);
         
         if (hashes["lang"]!=undefined) {
             input_lang=decodeURI(hashes["lang"]);
@@ -1312,9 +1312,11 @@ var Load = function () {
         TabSelect(document.getElementById('translateFiles'), document.getElementById('tabTxtFiles'));
     } else if (hashes["subs"]!=undefined) {
         TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));
-    } else if (hashes["text"]!=undefined) {
+    } 
+   /* else if (hashes["text"]!=undefined) {
         TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));
-    }else{
+    }*/
+    else{
         urlParamChange("page", "text", false);
     }
   
