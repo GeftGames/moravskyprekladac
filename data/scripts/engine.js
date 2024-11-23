@@ -1247,7 +1247,6 @@ var Load = function () {
         //location.hash=undefined;
         history.replaceState({}, document.title, window.location.href.split('#')[0]);
     }
-  //  console.log(hashes);
 
 
     if (hashes["about"]!=undefined) {
@@ -1257,7 +1256,7 @@ var Load = function () {
         appSelected = "mapper";
         
         if (hashes["input"]!=undefined) {
-            input_text=decodeURI(hashes["input"]);
+            input_text=decodeURIComponent(hashes["input"]);
             
             if (input_text!="") {
                 mapper_starting_input=input_text;
@@ -1273,7 +1272,7 @@ var Load = function () {
         urlParamChange("page", "text", false);
        
         if (hashes["input"]!=undefined) {
-            let input_text=decodeURI(hashes["input"]);
+            let input_text=decodeURIComponent(hashes["input"]);
             urlParamChange("input", input_text, true);
             if (input_text!="") {
                 document.getElementById("specialTextarea").value=input_text;
@@ -1282,7 +1281,7 @@ var Load = function () {
         //console.log(input_text);
         
         if (hashes["lang"]!=undefined) {
-            input_lang=decodeURI(hashes["lang"]);
+            input_lang=decodeURIComponent(hashes["lang"]);
             urlParamChange("lang", input_lang, true);
             if (input_lang!="") {                    
                 document.getElementById("selectorTo").value=input_lang;
@@ -1294,7 +1293,7 @@ var Load = function () {
         var input_text="";
             
         if (hashes["input"]!=undefined) {
-            let input_text=decodeURI(hashes["input"]);
+            let input_text=decodeURIComponent(hashes["input"]);
             urlParamChange("input", input_text, true);
             if (input_text!="") {
                 document.getElementById("dicInput").value=input_text;
@@ -1302,7 +1301,7 @@ var Load = function () {
         }            
         
         if (hashes["lang"]!=undefined) {
-            input_lang=decodeURI(hashes["lang"]);
+            input_lang=decodeURIComponent(hashes["lang"]);
             urlParamChange("lang", input_lang, true);
             if (input_lang!="") {
                 document.getElementById("selectorTo").value=input_lang;
