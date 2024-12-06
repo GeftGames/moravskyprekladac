@@ -38,3 +38,6 @@
 ## Site
 - Official site: https://moravskyprekladac.pages.dev/ 
 - Alternative url: https://geftgames.github.io/moravskyprekladac/
+
+## Social
+- [Pinterest](https://pinterest.com/GeftGamesOficial/)
