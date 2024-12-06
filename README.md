@@ -40,4 +40,4 @@
 - Alternative url: https://geftgames.github.io/moravskyprekladac/
 
 ## Social
-- [Pinterest](https://pinterest.com/GeftGamesOficial/)
+- [Pinterest](https://cz.pinterest.com/GeftGamesOficial/moravsk%C3%BD-p%C5%99eklada%C4%8D/)
