@@ -166,7 +166,7 @@ function customTheme() {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) themeLight="dark"; else themeLight="light";
         } else themeLight = themeLight="light";
     } else themeLight = ThemeLight;*/
-    themeLight=getThemeLight();
+    let themeLight=getCurrentThemeLight();
 
     // Day/Night
     let themeDay; // true or false
