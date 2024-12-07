@@ -141,13 +141,14 @@ function customText() {
 }
 
 function getCurrentThemeLight(){
+    if (ThemeLight == "semi") return "semi";
+    if (ThemeLight == "light") return "light";
     if (ThemeLight == "default") {
         if (window.matchMedia) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) return "dark"; else return "light";
         } else return "light";
-    } else return "light";
-
-    return themeThemeLightLight;
+    }
+    return "light";
 }
 
 function customTheme() {
