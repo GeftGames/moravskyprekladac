@@ -140,6 +140,16 @@ function customText() {
     transcription = SetCurrentTranscription(TranscriptionText);
 }
 
+function getCurrentThemeLight(){
+    if (ThemeLight == "default") {
+        if (window.matchMedia) {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) return "dark"; else return "light";
+        } else return "light";
+    } else return "light";
+
+    return themeThemeLightLight;
+}
+
 function customTheme() {
     ThemeLight = document.getElementById("themeLight").value;
     Power = document.getElementById("power").value;
@@ -150,12 +160,13 @@ function customTheme() {
     localStorage.setItem('Power', Power);
 
     // Dark/Light
-    let themeLight; // true or false
+   /* let themeLight; // true or false
     if (ThemeLight == "default") {
         if (window.matchMedia) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) themeLight="dark"; else themeLight="light";
         } else themeLight = themeLight="light";
-    } else themeLight = ThemeLight;
+    } else themeLight = ThemeLight;*/
+    themeLight=getThemeLight();
 
     // Day/Night
     let themeDay; // true or false

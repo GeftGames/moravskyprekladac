@@ -347,6 +347,8 @@ function mapRedraw() {
     if (circleRadius < 2*dpr) circleRadius = 2*dpr;
     if (circleRadius > 8*dpr) circleRadius = 8*dpr;
     ctx.lineCap = 'round';
+    
+    let theme=getCurrentThemeLight();
 
     // generate dots
     for (let p of languagesList) {
@@ -355,11 +357,12 @@ function mapRedraw() {
         //out of map
         if (入っちゃった(map_LocX + p.locationX * map_Zoom + circleRadius * 2, map_LocY + p.locationY * map_Zoom + circleRadius * 2, 0, 0, map_DisplayWidth + circleRadius * 4, map_DisplayHeight + circleRadius * 4)) {
 
+            
             if (p.Id == currentLang.Id) {
-                if (ThemeLight == "dark") ctx.fillStyle = "white";
+                if (theme == "dark") ctx.fillStyle = "white";
                 else ctx.fillStyle = "Black";
             }else {
-                if (ThemeLight == "dark" && p.ColorFillStyle=='rgb(128,128,128,.1)') ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
+                if (theme == "dark" && p.ColorFillStyle=='rgb(128,128,128,.1)') ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
                 else  ctx.fillStyle = p.ColorFillStyle;
              //   console.log(p.ColorFillStyle);
             }
@@ -370,7 +373,7 @@ function mapRedraw() {
 
           
            // console.log(ctx.strokeStyle=="rgba(0, 0, 0, 0.5)");
-            if (ThemeLight == "dark") ctx.strokeStyle = 'rgba(255,255,255,.5)';
+            if (theme == "dark") ctx.strokeStyle = 'rgba(255,255,255,.5)';
             else {
                 ctx.strokeStyle = p.ColorStrokeStyle;
             }
@@ -378,7 +381,7 @@ function mapRedraw() {
         }
     }
 
-    if (ThemeLight == "dark") ctx.strokeStyle = 'White';
+    if (theme == "dark") ctx.strokeStyle = 'White';
     else ctx.strokeStyle = 'Black';
     ctx.font = (16*dpr)+"px sans-serif";
 
@@ -392,7 +395,7 @@ function mapRedraw() {
 
                 // Text color
                 if (p.Quality == 0) {
-                    if (ThemeLight == "dark"){
+                    if (theme == "dark"){
                         if (p.Category === undefined) ctx.fillStyle = "#d7d0d0";
                         else ctx.fillStyle = "#d7d7d7";
                     }else{
@@ -400,7 +403,7 @@ function mapRedraw() {
                         else ctx.fillStyle = "Gray";
                     }
                 } else {
-                    if (ThemeLight == "dark") ctx.fillStyle = "White";
+                    if (theme == "dark") ctx.fillStyle = "White";
                     else ctx.fillStyle = "black";
                 }
                 let w = ctx.measureText(p.Name).width;
