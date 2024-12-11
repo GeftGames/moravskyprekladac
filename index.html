@@ -901,24 +901,47 @@
                                     <div class="mapperNavrh" onclick="navrhClick('alou')">ALOU</div>
                                 </div>
                                 
-                                 <!-- <p>Obyklé zakončení</p>
+                                 <p>Obyklé zakončení</p>
                                 <div class="navrhCat" style="flex-direction: column;">
-                                  // Neumí rozlišit otcův, matčin, jarní, tvrdyý vzory
+                                  
+                                 <!--  <span>Neumí rozlišit u přídavných jmen měkké, tvrdé, přivlastňovací!</span>
                                     <div style="display: flex;">
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=á|typ=prid|rod=zen|cislo=j|pad=1}>',mapper_options_numbers('1'))">&lt;velkÁ&gt; žena</div>
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=a|typ=prid|rod=zen|cislo=j|pad=1}>',mapper_options_numbers('1'))">&lt;velkA&gt; žena</div>
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=o|typ=prid|rod=zen|cislo=j|pad=1}>',mapper_options_numbers('1'))">&lt;velkO&gt; žena</div>
                                     </div>
-                                    <div style="display: flex;">
+                                    <div style="display: flex;">                                        
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=á|typ=prid|rod=str|cislo=m|pad=1}>',mapper_options_numbers('1'))">&lt;velkÁ&gt; města</div>
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=é|typ=prid|rod=str|cislo=m|pad=1}>',mapper_options_numbers('1'))">&lt;velkÉ&gt; města</div>
                                     </div>
                                     <div style="display: flex;">
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=í|typ=prid|rod=zen|cislo=j|pad=2}>',mapper_options_numbers('1'))">bez &lt;velkÍ&gt; ženy</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=é|typ=prid|rod=zen|cislo=j|pad=2}>',mapper_options_numbers('1'))">bez &lt;velkÉ&gt; ženy</div>
+                                    </div>-->
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=a|vse=y/i/e/ê|typ=slov|d=mincin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylA, žilA,...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=y/i|vse=a/e/ê|typ=slov|d=mincin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylY/I, žilY/I, ...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=e/ê/ǝ|vse=a/i/y|typ=slov|d=mincin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylE, žilÊ, šlƎ, ...&gt;</div>
                                     </div>
-                                    <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=a|typ=slov|d=min cin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylA&gt;</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=y|typ=slov|d=min cin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylY&gt;</div>
-                                </div>-->
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=i|vse=e/ê/ǝ|typ=slov|d=mincin|rod=muz|cislo=m}>',mapper_options_numbers('1'))">lidé &lt;bylI, žilI, ...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=e/ê/ǝ|vse=i|typ=slov|d=mincin|rod=muz|cislo=m}>',mapper_options_numbers('1'))">lidé &lt;bylE/Ê, žilE/Ê, ...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=ê|vse=i/e/ǝ|typ=slov|d=mincin|rod=muz|cislo=m}>',mapper_options_numbers('1'))">lidé &lt;bylÊ, žilÊ, ...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=e|vse=i/ê/ǝ|typ=slov|d=mincin|rod=muz|cislo=m}>',mapper_options_numbers('1'))">lidé &lt;bylE, žilE, ...&gt;</div>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=ál/áł/áṵ|vse=al/ał/aṵ|typ=slov|d=mincin|rod=muz|cislo=j}>',mapper_options_numbers('1'))">on &lt;plakÁL, chlastÁL, ...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=él/éł/éṵ|vse=el/eł/eṵ|typ=slov|d=mincin|rod=muz|cislo=j}>',mapper_options_numbers('1'))">on &lt;chťÉL, šÉL, ...&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=ýl/ýł/ýṵ/íl/íł/íṵ|vse=yl/ył/yṵ/il/ił/iṵ|typ=slov|d=mincin|rod=muz|cislo=j}>',mapper_options_numbers('1'))">on &lt;bÝL, žÍL, ...&gt;</div>
+                                    </div>
+                                    <!--
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=yho|typ=cisl|rod=muz|cislo=1|pad=2}>',mapper_options_numbers('1'))">bez &lt;jednYHO&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=eho|typ=cisl|rod=muz|cislo=1|pad=2}>',mapper_options_numbers('1'))">bez &lt;jednEHO&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=oho|typ=cisl|rod=muz|cislo=1|pad=2}>',mapper_options_numbers('1'))">bez &lt;jednOHO&gt;</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=ého|typ=cisl|rod=muz|cislo=1|pad=2}>',mapper_options_numbers('1'))">bez &lt;jednÉHO&gt;</div>
+                                    </div>-->
+                                </div>
 
                                 <p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
                                 <div class="navrhCat">
