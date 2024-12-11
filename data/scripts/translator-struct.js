@@ -12,11 +12,12 @@ var ItemVerb_pattensFrom, ItemVerb_pattensTo;
 var lastAppMapper;
 
 console.log("test1.1", "ok");
-
-String.prototype.replaceAll = function(find, replace) {
-    var str = this;
-    return str.replace(new RegExp(find, 'g'), replace);
-};
+//if (!String.prototype.replaceAll) {
+    String.prototype.replaceAll = function(find, replace) {
+        var str = this;
+        return str.replace(new RegExp(find, 'g'), replace);
+    };
+//}
 console.log("test1.2", "ok");
 
 class Cite{ 
@@ -7806,8 +7807,6 @@ class LanguageTr{
         if (str.startsWith(starting) && str.endsWith(ending)) {
             //let listOfItems;
             let body = str.substring(starting.length, str.length - starting.length);
-            //	console.log(body);
-            //console.log(vars);
 
             let rules = {};
             let vars = body.split('|');
@@ -8066,6 +8065,114 @@ class LanguageTr{
                         return { Type: "Check", To: n.toString(), From: "occurrences" };
                     }else return { Type: "Unknown", To: "?", From: "name" };
                 }else return { Type: "Unknown", To: "?", From: "name" };
+            }else if (rules["ending"] != undefined) {  
+                if (rules["typ"]=="prid") { //<{ending|zakonceni=á|typ=prid|rod=zen|cislo=m|pad=1}>
+                    if ((rules["zakonceni"] != undefined) && (rules["typ"] != undefined) && (rules["rod"] != undefined) && (rules["cislo"] != undefined) && (rules["pad"] != undefined)) {
+                        let number=rules["cislo"]=="m" ? 7 : 0; 
+                        let zakonceni=rules["zakonceni"];
+                        let fall=parseInt(rules["pad"])-1;
+
+                        let gender;
+                        if (rules["rod"]=="muz") gender="MasculineAnimate";
+                        else if (rules["rod"]=="mun") gender="MasculineInanimate";
+                        else if (rules["rod"]=="zen") gender="Feminine";
+                        else if (rules["rod"]=="str") gender="Middle";
+                        else return { Type: "Unknown", To: "?", From: str }; 
+                        
+                        let same=0, all=0;
+                        for (const adj of this.Adjectives) {
+                            for (const adjTo of adj.To) {
+                                let patternShapes=adjTo.Pattern[gender];                               
+                                let endings=patternShapes[number+fall];
+                               
+                                for (const ending of endings) {
+                                    if (ending=="?" || ending=="-") continue;
+
+                                    let word=adjTo.Body+ending;
+                                    if (word.endsWith(zakonceni)) same++;
+                                    all++;                                    
+                                }
+                            }
+                        }
+                        if (all>0) return { Type: "Check", To: (same/all).toString(), From: "ending" };
+                    }
+                } else if (rules["typ"]=="slov") { //<{ending|zakonceni=a|vse=y/i/e/ê|typ=slov|d=min_cin|rod=zen|cislo=m}>
+                   // if ((rules["zakonceni"] != undefined) && (rules["typ"] != undefined) && (rules["rod"] != undefined) && (rules["cislo"] != undefined) && (rules["d"] != undefined)) {
+                        let number=rules["cislo"]=="m" ? 4 : 0; 
+                        let person=parseInt(rules["osoba"])-1; 
+                        let zakonceni=rules["zakonceni"].split("/");
+                        let vse=rules["vse"].split("/");
+                       // let rules["vse"];
+
+                        let gender;
+                        if (rules["rod"]=="muz") gender=0;
+                        else if (rules["rod"]=="mun") gender=1;
+                        else if (rules["rod"]=="zen") gender=2;
+                        else if (rules["rod"]=="str") gender=3;
+                     //   else return { Type: "Unknown", To: "?", From: str }; 
+                        
+                        let shapePattern;
+                        if (rules["d"]=="mincin") shapePattern="PastActive";
+                        if (rules["d"]=="prub") shapePattern="Continous";
+                        else return { Type: "Unknown", To: "?", From: str }; 
+
+                        let same=0, all=0;
+                        for (const verb of this.Verbs) {
+                            for (const verbTo of verb.To) {
+                                if (!verbTo.Pattern["S"+shapePattern]) continue;
+
+                                let patternShapes=verbTo.Pattern[shapePattern];       
+                                let endings=patternShapes[number+gender+person];
+
+                                for (const ending of endings) {
+                                    if (ending=="?" || ending=="-") continue;
+                                    let word=verbTo.Body+ending; 
+                                    for (const z of zakonceni){
+                                        if (word.endsWith(z)) {same++;all++}
+                                    }
+                                    for (const v of vse){
+                                         if (word.endsWith(v)){
+                                            all++;  
+                                         }
+                                    }                                                                      
+                                }
+                            }
+                        }
+                        if (all>0) return { Type: "Check", To: (same/all).toString(), From: "ending" };
+                   // } else console.log("Something misssing in rules",rules);
+                } else if (rules["typ"]=="cisl") { //<{ending|zakonceni=yho|typ=cisl|rod=muz|cislo=1|pad=2}>
+                    //if ((rules["zakonceni"] != undefined) && (rules["typ"] != undefined) && (rules["rod"] != undefined) && (rules["cislo"] != undefined) && (rules["pad"] != undefined)) {
+                        let number=rules["cislo"]=="m" ? 7 : 0; 
+                        let zakonceni=rules["zakonceni"];
+                        let fall=parseInt(rules["pad"])-1;
+
+                        let gender;
+                        if (rules["rod"]=="muz") gender=0;
+                        else if (rules["rod"]=="mun") gender=14;
+                        else if (rules["rod"]=="zen") gender=14*2;
+                        else if (rules["rod"]=="str") gender=14*3;
+                        else return { Type: "Unknown", To: "?", From: str }; 
+                        
+                        let same=0, all=0;
+                        for (const num of this.Numbers) {
+                            for (const numTo of num.To) {
+                                let patternShapes=numTo.Pattern.Shapes;
+                                if (patternShapes[number+fall]==undefined) continue;                               
+                                let endings=patternShapes[number+fall];
+                               console.log(patternShapes, endings);
+                                for (const ending of endings) {
+                                    if (ending=="?" || ending=="-") continue;
+
+                                    let word=numTo.Body+ending;
+                                    if (word.endsWith(zakonceni)) same++;
+                                    console.log();
+                                    all++;                                    
+                                }
+                            }
+                        }
+                        if (all>0) return { Type: "Check", To: (same/all).toString(), From: "ending" };
+                  //  }
+                }
             }
 
             return { Type: "Unknown", To: "?", From: str };
