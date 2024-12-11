@@ -8099,30 +8099,31 @@ class LanguageTr{
                 } else if (rules["typ"]=="slov") { //<{ending|zakonceni=a|vse=y/i/e/ê|typ=slov|d=min_cin|rod=zen|cislo=m}>
                    // if ((rules["zakonceni"] != undefined) && (rules["typ"] != undefined) && (rules["rod"] != undefined) && (rules["cislo"] != undefined) && (rules["d"] != undefined)) {
                         let number=rules["cislo"]=="m" ? 4 : 0; 
-                        let person=parseInt(rules["osoba"])-1; 
+                      //  let person=parseInt(rules["osoba"])-1;
                         let zakonceni=rules["zakonceni"].split("/");
                         let vse=rules["vse"].split("/");
                        // let rules["vse"];
-
+                      
                         let gender;
                         if (rules["rod"]=="muz") gender=0;
                         else if (rules["rod"]=="mun") gender=1;
                         else if (rules["rod"]=="zen") gender=2;
                         else if (rules["rod"]=="str") gender=3;
-                     //   else return { Type: "Unknown", To: "?", From: str }; 
+                        else return { Type: "Unknown", To: "?", From: str }; 
                         
                         let shapePattern;
                         if (rules["d"]=="mincin") shapePattern="PastActive";
-                        if (rules["d"]=="prub") shapePattern="Continous";
+                        else if (rules["d"]=="prub") shapePattern="Continous";
                         else return { Type: "Unknown", To: "?", From: str }; 
-
+  
                         let same=0, all=0;
                         for (const verb of this.Verbs) {
                             for (const verbTo of verb.To) {
                                 if (!verbTo.Pattern["S"+shapePattern]) continue;
 
                                 let patternShapes=verbTo.Pattern[shapePattern];       
-                                let endings=patternShapes[number+gender+person];
+                                let endings=patternShapes[number+gender];
+                                console.log(endings);
 
                                 for (const ending of endings) {
                                     if (ending=="?" || ending=="-") continue;
