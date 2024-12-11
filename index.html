@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="cs" style="min-height: 100%">
-
 <head>
     <meta charset="UTF-8">
     <script type="application/ld+json">
@@ -63,7 +62,7 @@
     </script>
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQR1MX6Y22"></script>
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQR1MX6Y22"></script>
     <script>
         if (location.host!='localhost'){
             window.dataLayer = window.dataLayer || [];
@@ -71,6 +70,17 @@
             gtag('js', new Date());
 
             gtag('config', 'G-VQR1MX6Y22');
+        }
+    </script>-->
+    
+    <!-- MS Clarity -->
+    <script type="text/javascript">
+        if (location.host!='localhost'){
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "pcarpq8fyi");
         }
     </script>
 
@@ -892,6 +902,26 @@
                                     <div class="mapperNavrh" onclick="navrhClick('aha')">AHA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('alou')">ALOU</div>
                                 </div>
+                                
+                                 <!-- <p>Obyklé zakončení</p>
+                                <div class="navrhCat" style="flex-direction: column;">
+                                  // Neumí rozlišit otcův, matčin, jarní, tvrdyý vzory
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=á|typ=prid|rod=zen|cislo=j|pad=1}>',mapper_options_numbers('1'))">&lt;velkÁ&gt; žena</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=a|typ=prid|rod=zen|cislo=j|pad=1}>',mapper_options_numbers('1'))">&lt;velkA&gt; žena</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=o|typ=prid|rod=zen|cislo=j|pad=1}>',mapper_options_numbers('1'))">&lt;velkO&gt; žena</div>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=á|typ=prid|rod=str|cislo=m|pad=1}>',mapper_options_numbers('1'))">&lt;velkÁ&gt; města</div>
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=é|typ=prid|rod=str|cislo=m|pad=1}>',mapper_options_numbers('1'))">&lt;velkÉ&gt; města</div>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=í|typ=prid|rod=zen|cislo=j|pad=2}>',mapper_options_numbers('1'))">bez &lt;velkÍ&gt; ženy</div>
+                                    </div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=a|typ=slov|d=min cin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylA&gt;</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=y|typ=slov|d=min cin|rod=str|cislo=m}>',mapper_options_numbers('1'))">města &lt;bylY&gt;</div>
+                                </div>-->
+
                                 <p>Výskyt znaků (může být pomalejší + v malých slovníkách se nemusí vyskytovat)</p>
                                 <div class="navrhCat">
                                     <div class="mapperNavrh" onclick="navrhClick('<{exists=á}>',mapper_options_filter('1'))">á</div>
