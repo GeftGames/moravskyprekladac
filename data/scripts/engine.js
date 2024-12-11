@@ -4378,15 +4378,8 @@ function mapper_download() {
     a.click();
 }
 
+/*
 function geolocation() {
-    /*1	https://geolocation-db.com/json/
-    -1	https://ip-api.io/json/
-    https://lite.ip2location.com/czechia-ip-address-ranges
-    geoip_isp_by_name
-
-    <script>
-    var x = document.getElementById("demo");
-    function getLocation() {*/
     if (navigator.geolocation) {
         let pos = navigator.geolocation.getCurrentPosition(showPosition);
         console.log(navigator.geolocation);
@@ -4399,8 +4392,7 @@ function geolocation() {
         //	x.innerHTML = "Latitude: " + position.coords.latitude +
         //"<br>Longitude: " + position.coords.longitude;
     }
-
-}
+}*/
 
 function navrhClick(text, customStyle) {
     mapperInput.value = text;

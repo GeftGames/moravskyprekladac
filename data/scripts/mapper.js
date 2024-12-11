@@ -38,6 +38,9 @@ function mapper_next(){
 	}
 
 	CreateSavedList();
+	
+   // urlParamChange("input", undefined, true);
+    urlParamClearB();
 }
 
 // přiblížit
@@ -80,7 +83,7 @@ function mapper_init(customStyle) {
 	}
 
 	urlParamClearB();
-	urlParamChange("input", mapperRenderOptions.inputText, true);
+	urlParamChange("input", mapperRenderOptions.inputText.replaceAll(/\+/,"%20"), true);
 	
 	// přeložit body
 	mapper_points=mapper_GetPointsTranslated(languagesListAll, mapperRenderOptions.inputText);
