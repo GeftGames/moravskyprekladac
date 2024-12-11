@@ -1,6 +1,6 @@
 # Poslední změny
 ### 11.12. 2024
-+ obvyklá zakončení (zatím u sloves)
++ obvyklá zakončení (zatím u sloves některých tvarů)
   
 ### 5.11. 2024
 + nadpis mapper
