@@ -145,10 +145,10 @@ function getCurrentThemeLight(){
     if (ThemeLight == "light") return "light";
     if (ThemeLight == "default") {
         if (window.matchMedia) {
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) return "dark"; else return "light";
-        } else return "light";
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) return "dark"; else return "semi";
+        } else return "semi";
     }
-    return "light";
+    return "semi";
 }
 
 function customTheme() {
