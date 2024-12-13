@@ -213,6 +213,7 @@ sPatternPronounFrom=[],sPatternPronounTo=[],
 sPatternNumberFrom=[],sPatternNumberTo=[],
 sPatternVerbFrom=[],sPatternVerbTo=[],
 sAdverb=[],sPreposition=[],sConjunction=[],sParticle=[],sInterjection=[];
+var defaultLangString="Obecná hanáčtina", defaultLang;
 
 function GetTranslations() {
     const xhttp = new XMLHttpRequest();
@@ -249,10 +250,12 @@ function GetTranslations() {
         document.getElementById("appPage_" + appSelected).style.display = "block";
         document.getElementById("appPage_" + appSelected).style.opacity = "0%";
 
-        console.log("input_lang", input_lang);
-        //if (input_lang>=0 && input_lang!=undefined) 
-        document.getElementById("selectorTo").value=input_lang.toString();
-        if (document.getElementById("selectorTo").value=="") document.getElementById("selectorTo").selectedIndex=0;
+        if (input_lang>=0) document.getElementById("selectorTo").value=input_lang.toString();
+        if (document.getElementById("selectorTo").value=="") {
+            // def lang
+            if (defaultLang!=undefined) document.getElementById("selectorTo").value=defaultLang;
+            else document.getElementById("selectorTo").selectedIndex=0;
+       }
         currentLang = GetCurrentLanguage();
         BuildOptionsMoravian();
         //if (input_lang>=0 && input_lang!=undefined) 
@@ -431,10 +434,11 @@ function GetTranslations() {
             
             if ((!betaFunctions && stats >= 10 && FilterCountry(lang.Country)) || (betaFunctions && lang.Quality >= 0) || dev) {
                 let name = lang.Name;
-                //if (betaFunctions || dev){
-                
+                if (name==defaultLangString) defaultLang=lang.Id; console.log(name==defaultLangString,name);
+
                 if (lang.Quality > 2) name += " ✅";
                 if (stats == 0) name += " 💩";
+
                 //else 
                 //if (lang.Quality<=1) name+=" 👎";
 
@@ -453,8 +457,7 @@ function GetTranslations() {
                 } else { //console.log("ncat");
                     category = insideSearch(select2, lang.Category);
                 }
-                //				console.log(category);
-
+             
                 // Add color
                 if (lang.Quality == 5) {
                     lang.ColorFillStyle = "Gold";

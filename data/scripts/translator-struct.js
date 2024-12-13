@@ -5551,6 +5551,7 @@ class LanguageTr{
         		};
         	}*/
     Stats() {
+        if (this._Stats!=undefined) return this._Stats;
         let stats = 0;
         stats += this.SimpleWords.length;
         stats += this.Phrases.length;
@@ -5568,7 +5569,8 @@ class LanguageTr{
         stats += this.Particles.length;
         stats += this.Interjections.length;
 
-        return stats;
+        this._Stats=stats;
+        return this._Stats;
     }
 
     Occurrences(search, all) {
