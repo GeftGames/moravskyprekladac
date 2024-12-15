@@ -164,6 +164,7 @@ let translations = [
     ],
 
     "Moravský jazyk",
+    "Slezský jazyk",
 
     "Ostatní"
 ];
