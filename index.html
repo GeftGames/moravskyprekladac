@@ -62,7 +62,7 @@
     </script>
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQR1MX6Y22"></script>
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQR1MX6Y22"></script>
     <script>
         if (location.host!='localhost'){
             window.dataLayer = window.dataLayer || [];
@@ -71,15 +71,28 @@
 
             gtag('config', 'G-VQR1MX6Y22');
         }
-    </script>
+    </script>-->
     
     <!-- MS Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "pcarpq8fyi");
+    <!--<script type="text/javascript">
+        if (location.host!='localhost') {
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "pcarpq8fyi");
+        }
+    </script>-->
+
+    <!-- PostHog  -->
+    <script>
+        if (location.host!='localhost') {
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_NFiGmR7ZM3kId6jKP5eUxR0TaFMl215ZGL1EZMIxm8t', {
+                api_host:'https://eu.i.posthog.com',
+                person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+            });
+        }
     </script>
 
     <!-- Links -->
@@ -588,7 +601,7 @@
                                     <div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
                                         <span rel="nofollow" class="butIc tooltipL" data-tooltip="Ukazuje v % jak je kvalitní překlad" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>
                                         <span rel="nofollow" class="butIc tooltipL" data-tooltip="Kopírovat překlad" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
-                                        <span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>
+                                     <!--   <span rel="nofollow" class="butIc" onclick="CopyLink()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 32 32"><path d="M4 6 4 28C4 30 6 32 8 32L22 32C24 32 26 30 26 28L26 14 23 14 23 26Q23 29 20 29L10 29Q7 29 7 26L7 8Q7 5 10 5L14 5 14 2 8 2Q4 2 4 6M15 7 12 10Q11 11 11 13L11 13C11 15 13 17 15 17L15 17C16 17 17 17 18 16L21 13 19 11 16 14C15 15 13 13 14 12L17 9 15 7M17 5 19 7 22 4C23 3 25 5 24 6L21 9 23 11 26 8C27 7 27 6 27 5 27 3 25 1 23 1S20 2 20 2L17 5"/></svg></span>-->
                                         <span rel="nofollow" class="butIc tooltipL" data-tooltip="Uložit překlad" onclick="SaveTrans()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 30 30"><path d="m0 11 11.5 0 3.6-10.7 3.6 10.7 11.5 0-9.3 6.6 3.6 10.7-9.3-6.6-9.3 6.6 3.6-10.7-9.5-6.6zM6.3 12.7 12 16.6 9.2 23.6 15.3 19.2 21.4 23.8 18.5 16.6 24.6 12.6 17.2 12.6 15.3 6 13.2 12.7 6.3 12.7"></path></svg></span>
                                         <!--<a id="edit"  class="butIc" onclick="Edit()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" alt="Upravit překlad"><svg class="ib" viewBox="0 0 24 24" ><path d="M3 16 17 2 22 7 8 21 3 21l0-5M17 5 19 7 7 19 5 17 17 5Z"/><path style="color: aliceblue;" d="M19 7 19 7 7 19 5 17 17 5Z"></svg></a>-->
                                     </div>
