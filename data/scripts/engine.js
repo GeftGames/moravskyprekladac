@@ -4945,6 +4945,12 @@ function SetCurrentTranscription(transCode) {
         { from: "ťi", to: "tji" },
         { from: "v", to: "w" },
         { from: "á", to: "a" },
+        { from: "źym", to: "siym" ,type: "end"},
+        { from: "ńś", to: "nsch" ,type: "end"},
+        { from: "zi", to: "si" ,type: "start"},
+        { from: "zi", to: "si"},
+        { from: "ṵ", to: "u" },
+        { from: "vźů", to: "wsio" },
     ];
 
     if (transCode == "silezian_slabikorzovy") return [
@@ -5434,6 +5440,16 @@ function SetCurrentTranscription(transCode) {
 
     if (transCode == "steuer") return [
         { from: "vě", to: "vje" },
+        { from: "š", to: "sz" },
+        { from: "źy", to: "siy" },
+        { from: "ů", to: "ō" },
+        { from: "ńś", to: "nś", type: "end"},
+        { from: "uo", to: "ô", type: "start" },
+    ];
+
+    if (transCode == "lysohorsky") return [
+        { from: "v", to: "w" },
+        { from: "ů", to: "ó" },
     ];
 
     if (transCode == "runy") return [
@@ -6436,3 +6452,36 @@ function BuildOptionsMoravian(){
     spanNote.style="font-style: italic; font-size: 4.5mm; display: flex; justify-content: center;";
     outerOptions.appendChild(spanNote);  
 }
+/*
+async function shareImage() {
+    let canvas=document.getElementById("mapperCanvas");
+
+    if (typeof canvas.toBlob !== "function") {
+        alert("ERROR: toBlob method not available");
+        return;
+    }
+
+    canvas.toBlob(
+        async (blob) => {
+            let img=new File(
+                [blob],
+                'mapa.png',
+                { type: "image/jpeg" }
+            );
+           // console.log(img);
+             console.log(navigator.canShare({files: [img]}))
+            try{
+                await navigator.share(
+                    {
+                        files: [img],
+                        title: 'Canvas Image',
+                        text: 'Check out this image I created!',
+                    }
+                );
+            }catch{
+                alert('ERROR, prohlížeč nepodporuje share()');
+            }
+        },
+        "image/png"
+    );   
+}*/
