@@ -345,18 +345,10 @@ li {
     width: 100%;
 }
 
-
-/*
-.btnsm {
-	display: table-cell;
-	vertical-align: middle;
-	font-size: 7mm;
-}*/
-
 .button {
     color: var(--ColorText);
     font-family: var(--f);
-    border: 1px solid #353535;
+    border: 1px solid var(--RawColorBack5);/*#353535;*/
     text-decoration: none;
     padding: 4px 4px;
     text-align: center;
@@ -402,7 +394,7 @@ input[type="file"] {
 
 input[type="file"]::file-selector-button {
     background-color: var(--ConBack);
-    border: 1px solid #353535;
+    border: 1px solid var(--RawColorBack5);
     margin: 3px 2px;
     margin-right: 2mm;
     color: var(--ColorText);
