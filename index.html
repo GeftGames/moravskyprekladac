@@ -427,7 +427,7 @@
 
 
                         <!-- Zápis -->
-                        <div style="display: flex; justify-content: space-between; align-items: center">
+                        <div id="oTranscription" style="display: flex; justify-content: space-between; align-items: center">
                             <p style="flex-direction: column">
                                 <span id="textTranscription">Transkripce</span>
                             </p>
@@ -438,6 +438,7 @@
                                 <option id="textCes" value="czechnormal">Česká obvyklá</option>
                                 <option id="textCes" value="czech">Česká fonetická</option>
                                 <option id="textMor" value="moravian">Moravská (Kozohorský)</option>
+                                <option id="textLys" value="lysohorsky">Lašská (Łysohorskeho)</option>
                                 <option id="textMor" value="silezian_slabikorzovy">Slezská spřežková (Slabikářův)</option>
                                 <optgroup>
                                     <option id="textAzbuka" value="cyrilice">Cyrilice</option>
@@ -510,24 +511,13 @@
 
                     <!-- Combobox From-To -->
                     <div id="translatorSelLang">
-                        <!---->
                         <div id="changeLangSection">
-                            <div id="translateFromToSelect" style="display: flex;flex-wrap: wrap;justify-content: center;">
+                            <div id="translateFromToSelect" style="display: flex; flex-wrap: wrap; justify-content: center;">
                                 <p id="from" style="display: inline">Z</p>
-                                <!--	<select id="selectorFrom" style="margin: 5px;display:none" onchange="ChangeDic();" onclick="Translate();"></select>		-->
                                 <p id="czech" style="display: flex">češtiny</p>
-                                <!--</div>
-								<div style="display: flex" id="rowSelectTo">-->
                                 <p id="to" style="display: inline;display: flex;align-items: center;">do</p>
                                 <select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
-                            </div>
-                            <div>
-                                <button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
-
-                                <!--<div style="display: none" id="noteMOGEN">
-										<br><p>Ucelená moravština <i>neexistuje</i>, zde "moravština" zahrnuje stejné rysy moravských nářečí nebo blízké, popř. doplňuje o známé výrazy</p>
-									</div>-->
-                            </div>
+                            </div>   
                             <div style="display: flex;">
                                 <span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
                                     <svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
@@ -537,19 +527,31 @@
                                 </span>
                             </div>
                         </div>
+                        <div>
+                            <button class="button" onclick="Translate();GetDic()" id="autoTranslate" style="display: none">Přeložit</button>
+                        </div>
 
                         <span id="spoilerOptLangOpener" class="link" onclick="
                             if (document.getElementById('spoilerLangOpt').style.getPropertyValue('max-height')=='0px') {
-                               // document.getElementById('spoilerLangOpt').style.display='block';
                                 document.getElementById('spoilerLangOpt').style.setProperty('max-height','800px');
                                 this.innerText='Skrýt nastavení překladu';
                             }else {
-                               // document.getElementById('spoilerLangOpt').style.display='none';
                                 document.getElementById('spoilerLangOpt').style.setProperty('max-height','0px');
                                 this.innerText='Zobrazit nastavení překladu';
                             }">Zobrazit nastavení překladu</span>
-                        <div id="spoilerLangOpt" style="display:block;max-height: 0" >                            
+                        <div id="spoilerLangOpt" style="display:block;max-height: 0">                            
                             <div id="optionsSelect"></div>
+                        </div>
+
+                        <div id="recSwitchTransc" style="display: none; align-items: center;flex-wrap: wrap;justify-content: center;">
+                            <span>Nechcet přepnout do obvyklé transkripce</span>
+                            &nbsp;
+                            <div>
+                                <span id="textRecTranscription" style="font-style: italic; cursor: pointer;" onclick="showSetting('oTranscription')">Česká obvyklá</span>
+                                <span>?</span>
+                            </div>
+                            &nbsp;
+                            <a class="button" id="switchTranscription">Přepnout</a>          
                         </div>
                     </div>
                     
