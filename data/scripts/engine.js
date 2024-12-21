@@ -13,11 +13,11 @@ var enabletranslate = true;
 var forceTranslate = false;
 var onlyMoravia;
 var dicAbc=true;
-var language, autoTranslate, styleOutput, dev, betaFunctions;
+var language, autoTranslate, styleOutput=false, dev, betaFunctions;
 var saved = [];
 var loaded = false;
 var TranscriptionText;
-var ThemeLight, ThemeDay, Power;
+var ThemeLight, ThemeDay, Power, colorH=208;
 var usingTheme;
 
 // mapping
@@ -28,56 +28,9 @@ var imgMap;
 // app
 var input_lang=0; //startup index of lang
 var appSelected = "translate";
-//var chngtxt;
 
 var lastInputText = [];
-//var textNote;
-
-// texts
-/*
-var textRefreshTooltip;
-var textCHTranslator, textHCTranslator;
-var textNightDark;
-var textCopy,
-    textCannotTranslate,
-    textWriteSomething,
-    textHereShow,
-    textFrom,
-    textTo,
-    textConClear,
-    textSavedTrans,
-    textAddChar,
-    textTranslation,
-    textCopyThisTrans,
-    textSettings,
-    textWeblanguage,
-    textAutoTranslate,
-    textMark,
-    textMoreInfo,
-    textMoreInfoDev,
-    textSaved,
-    textPCSaving,
-    textCookies,
-    textInfo,
-    textRemove,
-    text2CSje,
-    text2CS,
-    text2HA,
-    text2VA,
-    text2SO,
-    text2SL,
-    text2HAOB,
-    text2HAOLA,
-    text2HASL,
-    text2BH, text2Slez,
-    text2MO,
-    textWoc;
-var NotenterredMozFirstSpace = true;
-var textSaveTrans;
-var textTheme,
-    textDefault2,
-    textLight,
-    textDark;*/
+var dynamicsUrls=true;
 
 class savedTraslation {
     constructor() {
@@ -151,14 +104,34 @@ function getCurrentThemeLight(){
     return "semi";
 }
 
-function customTheme() {
+function changeThemeLight() {
     ThemeLight = document.getElementById("themeLight").value;
-    Power = document.getElementById("power").value;
-    ThemeDay = document.getElementById("themeDay").value;
-
     localStorage.setItem('ThemeLight', ThemeLight);
+}
+
+function changeThemeDay() {
+    ThemeDay = document.getElementById("themeDay").value;
     localStorage.setItem('ThemeDay', ThemeDay);
+}
+
+function changePower() {
+    Power = document.getElementById("power").value;
     localStorage.setItem('Power', Power);
+}
+
+function changeCustomColor() {
+    colorH = document.getElementById("customColor").value;
+    localStorage.setItem('Color', colorH);
+}
+
+function customTheme() {
+   // ThemeLight = document.getElementById("themeLight").value;
+   // Power = document.getElementById("power").value;
+   // ThemeDay = document.getElementById("themeDay").value;
+
+  //  
+  //  localStorage.setItem('ThemeDay', ThemeDay);
+  //  localStorage.setItem('Power', Power);
 
     // Dark/Light
    /* let themeLight; // true or false
@@ -257,8 +230,8 @@ function customTheme() {
         }
     } else power = Power;
 
-    let colorH = myRange.value;
-    localStorage.setItem('Color', colorH);
+   // let colorH = myRange.value;
+   // localStorage.setItem('Color', colorH);
 
     for (let s of document.styleSheets) {
         /*if (s.href.endsWith('blue.css')) {
@@ -570,77 +543,16 @@ function ChangeTesting() {
     else document.querySelectorAll('.devFunction').forEach(e => e.style.display = 'none');
 }
 
+function ChangeLanguage(){
+    let e = document.getElementById('lang');
+    language=e.options[e.selectedIndex].value;
+    localStorage.setItem('setting-language', language);
+}
+
 function SwitchHide(e) {
     e.classList.toggle("hidden");
 }
-/*
-function ShowAboutPage(){
-	location.hash="about";
-	
-	document.getElementById("aboutPage").style.display="block";
-	document.getElementById("aboutPage").style.opacity="1";
-	document.getElementById("aboutPage").style.position="absolute";
-	
-	document.getElementById("aboutPage").style.top="99px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-}
 
-function CloseAboutPage(){
-	location.hash="";
-
-	document.getElementById("aboutPage").style.opacity="0";
-	document.getElementById("aboutPage").style.top="500px";
-	document.getElementById("aboutPage").style.position="fixed";
-	
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		document.getElementById("aboutPage").style.display="none";
-	}, 300);
-}
-
-function ShowAboutPage(){
-	location.hash="about";
-	
-	document.getElementById("aboutPage").style.display="block";
-	document.getElementById("aboutPage").style.opacity="1";
-	document.getElementById("aboutPage").style.position="absolute";
-	
-	document.getElementById("aboutPage").style.top="99px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-}
-
-function CloseAboutPage(){
-	location.hash="";
-
-	document.getElementById("aboutPage").style.opacity="0";
-	document.getElementById("aboutPage").style.top="500px";
-	document.getElementById("aboutPage").style.position="fixed";
-	
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		document.getElementById("aboutPage").style.display="none";
-	}, 300);
-}*/
 let PopPage_lastOpen = "";
 
 function PopPageShow(name) {
@@ -732,36 +644,6 @@ function PopPageClose(name) {
         element.style.display = "none";
     }, 300);
 }
-/*
-function ShowPageOwnLang(){
-	document.getElementById("pageOwnLang").style.display="block";
-	document.getElementById("pageOwnLang").style.opacity="1";
-	document.getElementById("pageOwnLang").style.position="absolute";
-	document.getElementById("pageOwnLang").style.top="99px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-}
-
-function ClosePageOwnLang(){
-	document.getElementById("pageOwnLang").style.opacity="0";
-	document.getElementById("pageOwnLang").style.top="500px";
-	document.getElementById("pageOwnLang").style.position="fixed";
-	//document.getElementById("aboutPage").style.display="none";
-	//document.getElementById("translatingPage").style.display="block";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		document.getElementById("pageOwnLang").style.display="none";
-	}, 300);
-}*/
 
 // ze slovníku tvarosloví
 function ShowPageLangD(element) {
@@ -802,84 +684,7 @@ function ClosePageLangD() {
         document.getElementById("pageLangD").style.display = "none";
     }, 300);
 }
-/*
-function ShowPageInfoLang(){
-	let lang=GetCurrentLanguage();
-	if (lang==null) return;
-	document.getElementById("langName").innerText=lang.Name;
-	if (dev){
-		document.getElementById("infoLangText").innerHTML="Umístění: ";	
-		if (lang.Category === undefined) document.getElementById("infoLangText").innerHTML+="neznámé";
-		else document.getElementById("infoLangText").innerHTML+=lang.Category.join(" > ");
-		document.getElementById("infoLangText").innerHTML+="<br>"+"Počet zázamů: "+lang.Stats()+"<br>"+lang.Comment;	
-	}else{
-		document.getElementById("infoLangText").innerHTML=lang.Comment;
-	}
-	document.getElementById("pageInfoLang").style.display="block";
-	document.getElementById("pageInfoLang").style.opacity="1";
-	document.getElementById("pageInfoLang").style.position="absolute";
-//	document.getElementById("translatingPage").style.display="none";
-	document.getElementById("pageInfoLang").style.top="99px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-}
-function ClosePageInfoLang(){
 
-	document.getElementById("pageInfoLang").style.opacity="0";
-	document.getElementById("pageInfoLang").style.top="500px";
-	document.getElementById("pageInfoLang").style.position="fixed";
-	//document.getElementById("aboutPage").style.display="none";
-	//document.getElementById("translatingPage").style.display="block";
-
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{ 
-		document.getElementById("pageInfoLang").style.display="none";
-	}, 300);
-}
-*/
-/*
-function ShowMapPage(){
-	document.getElementById("mapPage").style.display="block";
-	document.getElementById("mapPage").style.opacity="1";
-	document.getElementById("mapPage").style.position="absolute";
-//	document.getElementById("translatingPage").style.display="none";
-	document.getElementById("mapPage").style.top="99px";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	window.requestAnimationFrame(mapRedraw);
-}
-
-function CloseMapPage(){
-	console.log("closing map page");//throw new Error({'hehe':'haha'});
-	document.getElementById("mapPage").style.opacity="0";
-	document.getElementById("mapPage").style.top="500px";
-	document.getElementById("mapPage").style.position="fixed";
-	//document.getElementById("aboutPage").style.display="none";
-	//document.getElementById("translatingPage").style.display="block";
-	if (document.getElementById('nav').style.opacity=='1') {
-		document.getElementById('butShow').style.opacity='1';
-		document.getElementById('butclose').style.opacity='0'; 
-		document.getElementById('nav').classList.add('navTrans');
-		document.getElementById('nav').style.opacity='0.1';
-	}
-	setTimeout(()=>{
-		document.getElementById("mapPage").style.display="none";
-	}, 300);
-}
-*/
 var langFile;
 
 function SetLanguage() {
@@ -908,7 +713,7 @@ function SetLanguage() {
         return;
     }
 
-    localStorage.setItem('setting-language', language);
+  //  localStorage.setItem('setting-language', language);
 
     document.documentElement.lang = tmpLang;
 
@@ -1260,7 +1065,6 @@ var Load = function () {
         history.replaceState({}, document.title, window.location.href.split('#')[0]);
     }
 
-
     if (hashes["about"]!=undefined) {
         PopPageShow("about");
         urlParamChange("page", "about", false);
@@ -1329,27 +1133,11 @@ var Load = function () {
     }*/
     else{
         urlParamChange("page", "text", false);
-    }
-  
+    }  
 
     simpleTabContent = window.innerWidth < 550;
 
     SetSwitchForced();
-
-    /*
-    	if ('serviceWorker' in navigator) {
-    		window.addEventListener('load', function () {
-    			navigator.serviceWorker.register('service-worker.js')
-    				.then(function (registration) {
-    					// Registration was successful
-    					console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    				}, function (err) {
-    					// registration failed :(
-    					console.log('ServiceWorker registration failed: ', err);
-    				})
-    		});
-    	}
-    */
 
     document.getElementById("mapperInput").addEventListener("keydown", (e) => {
         if (e.key === 'Enter') {
@@ -1436,29 +1224,12 @@ var Load = function () {
     if (zColor === null) {
         Power = 208;
     } else Power = parseInt(zColor);
-    myRange.value = Power;
-
-    //  toggleNoTransitionOn();
+    document.getElementById("customColor").value = Power;
 
     document.documentElement.style.display = "unset";
 
     RegisterSpecialTextarea();
 
-   // let zlanguage = "default";
- //   let zautoTranslate;
-//    let zstyleOutput;
-    //let zdev;
-   // let savedget;
-   // let zmyvocabHA;
-    //let zmyvocabCS;
-  //  let trTo = "mo";
-  //  let trFrom = "cs";
-    
-  //  let zTestingFunc;
-  //  let zTranscription;
-  //  let zbetaFunctions;
-   // let zOnlyMoravia;
-   // let zTextStyle;
     try {
        // zlanguage = localStorage.getItem('setting-language');
       //  zautoTranslate = localStorage.getItem('setting-autoTranslate');
@@ -1528,7 +1299,7 @@ var Load = function () {
     }
 
     // Dev tools
-    styleOutput = loadSetting(true, 'setting-styleOutput', "Boolean");
+    styleOutput = loadSetting(false, 'setting-styleOutput', "Boolean");
       
     // Language
     language = loadSetting(null, 'setting-language', "String");
@@ -1620,21 +1391,6 @@ var Load = function () {
     customTheme();
 }
 
-//window.addEventListener('load', Load);
-//window.Load = Load;
-/*
-function AddToVocabHA(str) {
-    myVocabHA.push(str);
-    localStorage.setItem('vocab-ha', JSON.stringify(myVocabHA));
-    //SpellingJob();
-}*/
-/*
-function AddToVocabCS(str) {
-    myVocabCS.push(str);
-    localStorage.setItem('vocab-cs', JSON.stringify(myVocabCS));
-    //SpellingJob();
-}*/
-
 function SetSavedTranslations() {
     if (saved==undefined) console.error("saved is undefined");
     if (saved.length > 0) {
@@ -1712,175 +1468,6 @@ function SetSavedTranslations() {
         document.getElementById("savedDiv").style.display = "none";
     }
 }
-
-/*
-function GetVocabulary() {
-	if (dev) console.log("INFO| Starting Downloading ListHa.txt");
-	var request = new XMLHttpRequest();
-	request.open('GET', 'ListHa.txt', true);
-	request.send();
-	request.onerror = function () {
-		if (dev) console.log("ERROR| Cannot downloaded ListHa.txt");
-	};
-	request.onreadystatechange = function () {
-		if (request.readyState === 4) {
-			if (request.status === 200) {
-				if (dev) console.log("INFO| Downloaded ListHa.txt");
-
-				let text = request.responseText;
-				//	console.log("INFO| Downloaded ListHa.txt"+text);
-				let lines = text.split('\r\n');
-				if (lines.length < 100 && dev) {
-					if (dev) console.log("ERROR| Downloaded ListHa.txt seems too small");
-					enabletranslate = false;
-					return;
-				}
-				document.getElementById('slovnik').innerText = lines.length;
-				for (var line = 0; line < lines.length; line++) {
-					let lineText = lines[line];
-
-					let elements = lineText.split("|");
-
-					if (elements.length > 0) {
-
-						switch (elements[0]) {
-							case "W": {
-								if (dev) {
-									if (lineText.includes(' ')) console.log("ERROR| Word on line " + (line + 1) + " has space");
-								}
-								if (elements.length == 3) {
-									let z = new Word();
-									z.input = elements[1].split("#");
-									z.output = elements[2].split("#");
-									Words.push(z);
-									//console.log("Added w");
-									break;
-								} else if (dev) console.log("ERROR| Word on line " + (line + 1));
-								break;
-							}
-
-							case "O": {
-								if (elements.length == 2) {
-									let z = new SameWord();
-									z.input = elements[1];
-									SameWords.push(z);
-									//	console.log("Added o "+elements[1]);
-								} else if (dev) console.log("ERROR| Word on line " + (line + 1));
-								break;
-							}
-
-							case "P": {
-								if (elements.length == 3) {
-									let z = new Phrase();
-									z.input = elements[1].split('#');
-									z.output = elements[2].split('#');
-									Phrases.push(z);
-								} else if (dev) console.log("ERROR| Phrase on line " + (line + 1));
-								break;
-							}
-
-							case "S": {
-								let z = new Sentence();
-								z.input = elements[1];
-								z.output = elements[2];
-								Sentences.push(z);
-								break;
-							}
-
-							case "G": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								Replaces.push(z);
-								break;
-							}
-							case "GC": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								ReplacesC.push(z);
-								break;
-							}
-							case "RC": {
-								let z = new chigau();
-								z.input = elements[1];
-								z.output = elements[2].split('#');
-								//z.output.unshift(z.input);
-								RepairsC.push(z);
-								break;
-							}
-							case "RH": {
-								let z = new chigau();
-								z.input = elements[1];
-								z.output = elements[2].split('#');
-								//z.output.unshift(z.input);
-								RepairsH.push(z);
-								break;
-							}
-							case "GH": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								ReplacesH.push(z);
-								break;
-							}
-							case "GE": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								ReplacesEnding.push(z);
-								break;
-							}
-							case "GEH": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								ReplacesEndingH.push(z);
-								break;
-							}
-							case "GEC": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								ReplacesEndingC.push(z);
-								break;
-							}
-							case "GS": {
-								let z = new GeneralReplace();
-								z.input = elements[1].split('#')[0];
-								z.output = elements[2].split('#')[0];
-								ReplacesStarting.push(z);
-								break;
-							}
-
-							default: {
-								if (dev) console.log("ERROR| Unknown on line " + (line + 1));
-								break;
-							}
-						}
-					}
-				}
-				// sort
-				Replaces.sort(comparelr);
-				ReplacesStarting.sort(comparelr);
-				ReplacesEnding.sort(comparelr);
-				ReplacesEndingH.sort(comparelr);
-				ReplacesEndingC.sort(comparelr);
-
-				// translate
-				//SpellingJob();
-				prepareToTranslate(true);
-				//console.log("Replaces: "+Replaces);
-			} else {
-				if (request.status == 0) ShowError("<b>Jejda, něco se pokazilo.</b><br>Nelze stáhnout seznam slovíček překladu");
-				else ShowError("<b>Jejda, něco se pokazilo.</b><br>Nelze stáhnout seznam slovíček překladu<br>Chyba " + request.status);
-				return;
-			}
-		}
-	};
-
-	
-}*/
 
 function comparelr(a, b) {
     if (a.input.length > b.input.length) {
@@ -2006,1121 +1593,6 @@ function SetText(input) {
     return input;
 }
 
-/*
-function translate() {
-    let from = document.getElementById('selectorFrom').value;
-    let to = document.getElementById('selectorTo').value;
-    let reverse = (document.getElementById('selectorFrom').value == "cs")
-
-    let dic = langMO;
-
-
-
-    if (from == "cs" && to == "ha") {
-        //	dic = langHA;
-        dic = langCS_HA;
-        reverse = true;
-        if (document.getElementById('langSetHa') != null) {
-            if (document.getElementById('langSetHa').style.display == 'none') document.getElementById('langSetHa').style.display = 'block';
-        }
-    } else {
-        dic = langHA_CS;
-        if (document.getElementById('langSetHa') != null) {
-            if (document.getElementById('langSetHa').style.display != 'none') document.getElementById('langSetHa').style.display = 'none';
-        }
-    }
-    if (from == "cs" && to == "ha_zabr") { dic = langHA_zabr;
-        reverse = true; }
-    if (from == "cs" && to == "cs_je") { dic = langCS_je;
-        reverse = true; }
-    if (from == "cs" && to == "va") { dic = langVA;
-        reverse = true; }
-    if (from == "cs" && to == "mo") {
-        if (document.getElementById('langSetMo') != null) {
-            if (document.getElementById('langSetMo').style.display == 'none') document.getElementById('langSetMo').style.display = 'block';
-        }
-        dic = langMO;
-        reverse = true;
-    } else {
-        if (document.getElementById('langSetMo') != null) {
-            if (document.getElementById('langSetMo').style.display != 'none') document.getElementById('langSetMo').style.display = 'none';
-        }
-    }
-    if (from == "cs" && to == "sl") { dic = langSL;
-        reverse = true; }
-    if (from == "cs" && to == "sk") { dic = langSK;
-        reverse = true; }
-    if (from == "cs" && to == "slez") {
-        if (document.getElementById('langSetSlez') != null) {
-            if (document.getElementById('langSetSlez').style.display == 'none') document.getElementById('langSetSlez').style.display = 'block';
-        }
-        dic = langSLEZ;
-        reverse = true;
-    } else {
-        if (document.getElementById('langSetSlez') != null) {
-            if (document.getElementById('langSetSlez').style.display != 'none') document.getElementById('langSetSlez').style.display = 'none';
-        }
-    }
-    if (from == "cs" && to == "la") { dic = langLA;
-        reverse = true; }
-    if (from == "cs" && to == "br") { dic = langBR;
-        reverse = true; }
-    if (from == "cs" && to == "ceskytesin") { dic = langCT;
-        reverse = true; }
-
-    if (from == "ha" && to == "cs") { dic = langHA;
-        reverse = false; }
-    if (from == "ha_zabr" && to == "cs") { dic = langHA_zabr;
-        reverse = false; }
-    if (from == "cs_je" && to == "cs") { dic = langCS_je;
-        reverse = false; }
-    if (from == "va" && to == "cs") { dic = langVA;
-        reverse = false; }
-    if (from == "mo" && to == "cs") { dic = langMO;
-        reverse = false; }
-    if (from == "sl" && to == "cs") { dic = langSL;
-        reverse = false; }
-    if (from == "sk" && to == "cs") { dic = langSK;
-        reverse = false; }
-    if (from == "slez" && to == "cs") { dic = langSLEZ;
-        reverse = false; }
-    if (from == "la" && to == "cs") { dic = langLA;
-        reverse = false; }
-    if (from == "br" && to == "cs") { dic = langBR;
-        reverse = false; }
-    if (from == "ceskytesin" && to == "cs") { dic = langCT;
-        reverse = false; }
-
-    if (from == to) {
-        let parent = document.getElementById('outputtext');
-        let nodecannotTr = document.createElement("span");
-        nodecannotTr.innerText = textCannotTranslate;
-        nodecannotTr.style.color = "red";
-        nodecannotTr.id = "cannotTr";
-        parent.innerHTML = "";
-        parent.appendChild(nodecannotTr);
-        return;
-    }
-
-    auto_grow();
-    HidePopUps();
-    let input = document.getElementById('specialTextarea').value //document.getElementById('textInput').value
-        //.replaceAll(' ', ' ')
-        .replaceAll('‘', '’')
-        .replaceAll('\xa0', ' ')
-        .replaceAll('‚', ',');
-
-    if (chngtxt == input && !forceTranslate) {
-        enabletranslate = true;
-        console.log("Tried to translate same text again and again");
-        return;
-    } else chngtxt = input;
-    console.log(dic);
-    console.log(reverse);
-    forceTranslate = false;
-
-    let parent = document.getElementById('outputtext');
-    parent.innerHTML = "";
-
-    let limit = input.length + 100;
-    //let iii = -2;
-    //let
-    idPops = 0;
-
-    Begin: while (true) {
-        limit--;
-        if (input == "") {
-            enabletranslate = true;
-            if (dev) console.log("Done translating!");
-            return;
-        }
-        if (limit < 0) {
-            enabletranslate = true;
-            if (dev) {
-                console.log("ERROR|function translate() - infinity loop");
-                console.log("input: '" + input + "'");
-            }
-            return;
-        }
-
-        if (input.startsWith(" ")) {
-            let span = document.createTextNode(" ");
-            parent.appendChild(span);
-            //enabletranslate = true;
-            input = input.substring(1);
-            //return;
-        }
-        if (input.startsWith("\n")) {
-            let br = document.createElement("br");
-            parent.appendChild(br);
-            //enabletranslate = true;
-            input = input.substring(1);
-            continue Begin;
-        }
-        //iii++;
-
-        // Sentence:
-        for (let i = 0; i < dic.Sentences.length; i++) {
-            let sentance = dic.Sentences[i];
-
-            if (input.startsWith(reverse ? sentance.input : sentance.output)) {
-                let span = document.createElement("span");
-                //span.style="color: "+ColorTranslated+";";
-                if (styleOutput) span.className = "phase";
-                span.innerText = reverse ? sentance.output : sentance.input;
-                parent.appendChild(span);
-
-                input = input.substring(reverse ? sentance.input.length : sentance.output.length);
-                continue Begin;
-            }
-        }
-
-        let lowerInput = input.toLowerCase();
-
-        // Phrase:
-        //console.log("Phrase");
-        for (let i = 0; i < dic.Phrases.length; i++) {
-            let phrase = dic.Phrases[i];
-
-            let inpt = reverse ? phrase.input : phrase.output;
-
-            for (let j = 0; j < inpt.length; j++) {
-                let s = inpt[j];
-
-                if (lowerInput.startsWith(s)) {
-                    if (input[0] == lowerInput[0]) {
-
-                        let set = (reverse ? phrase.output : phrase.input);
-                        if (set.length == 1) {
-
-                            let span = document.createElement("span");
-                            if (styleOutput) span.className = "phase";
-                            span.innerText = SetText(set[0]);
-                            parent.appendChild(span);
-
-                            input = input.substring(reverse ? phrase.input[0].length : phrase.output[0].length);
-                            //output+="<span style='"+ColorTranslatedPhase+"'>"+set[0]+"</span>";
-                        } else {
-                            let pack = document.createElement("span");
-                            pack.className = "traMOp";
-
-                            let span = document.createElement("span"); 
-                            span.style = "text-decoration: underline dotted;  cursor: pointer;";
-                            if (styleOutput) span.className = "phase";
-
-                            let box = document.createElement("ul");
-                            box.style = "opacity: 0";
-                            box.setAttribute("canHide", false);
-                            box.style.display = "none";
-                            box.className = "pop";
-
-                            for (let i = 0; i < set.length; i++) {
-                                let tag = document.createElement("li");
-                                tag.style = "cursor: pointer;";
-                                tag.innerHTML = set[i];
-                                tag.addEventListener('click', function() {
-                                    phrase.selectedIndex = i;
-                                    span.innerText = set[i];
-                                    box.style.opacity = "0";
-                                    box.style.display = "none";
-                                    box.setAttribute("canHide", false);
-                                    setTimeout(function() { box.style.display = 'none'; }, 100);
-                                });
-                                box.appendChild(tag);
-                            }
-
-                            span.addEventListener('click', function() {
-                                if (box.style.opacity == "1") {
-                                    box.style.opacity = "0";
-                                    setTimeout(function() { box.style.display = 'none'; }, 100);
-                                } else {
-                                    box.style.display = 'block';
-                                    box.style.opacity = "1";
-                                    box.setAttribute("canHide", false);
-                                    setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                }
-                            });
-
-                            window.addEventListener('click', function(e) {
-                                if (!box.contains(e.target)) {
-                                    if (!span.contains(e.target)) {
-                                        if (box.style.opacity == "1") {
-                                            if (box.getAttribute("canHide")) {
-                                                box.style.opacity = "0";
-                                                setTimeout(function() {
-                                                    if (box.getAttribute("canHide")) {
-                                                        box.style.display = 'none';
-                                                        box.setAttribute("canHide", false);
-                                                    }
-                                                }, 100);
-                                            }
-                                        }
-                                    }
-                                }
-                            });
-
-                            span.innerText = SetText(set[phrase.selectedIndex]);
-                            //parent.appendChild(span);
-                            //parent.appendChild(box);
-
-                            pack.appendChild(span);
-                            pack.appendChild(box);
-                            parent.appendChild(pack);
-
-                            idPops++;
-                            input = input.substring(reverse ? phrase.input[0].length : phrase.output[0].length);
-                        }
-                    } else {
-                        //console.log(input[0]);
-                        let str = reverse ? phrase.output[0] : phrase.input[0];
-                        //console.log(str[0].toString().toUpperCase()+str.substring(1));
-                        let span = document.createElement("span");
-                        //span.style=ColorTranslatedPhase;
-                        if (styleOutput) span.className = "phase";
-                        span.innerText = SetText(str[0].toString().toUpperCase() + str.substring(1)); //input[0].toString().toUpperCase()+(reverse ? phrase.output[0] : phrase.input[0]).substring(1);
-                        parent.appendChild(span);
-
-                        input = input.substring(reverse ? phrase.input[0].length : phrase.output[0].length);
-
-                    }
-
-                    // input=input.substring(reverse ? phrase.input[0].length :phrase.output[0].length);
-                    continue Begin;
-                }
-            }
-        }
-
-        // Word
-        if (input == "") {
-            enabletranslate = true;
-            if (dev) console.log("Done translating!");
-            return;
-        }
-
-        // Slovo je tvar textu od začátku ke znakům níže
-        let lowerWrittedWord;
-
-        {
-            let nextCh = [ '\xa0', ' ', ',', '.', '!', '?', ';', '\n', '(', ')', '„', '“', '"', '…', '’', ':', '\t'];
-            let min = 2147483647;
-
-            for (let i = 0; i < nextCh.length; i++) {
-                let ch = nextCh[i];
-
-                if (input.includes(ch)) {
-                    let d = input.indexOf(ch);
-                    if (d < min) min = d;
-                }
-            }
-
-            if (min == 0 && input.length > 2) {
-                let t = document.createTextNode(input.charAt(0));
-                parent.appendChild(t);
-
-                //output+=input[0];
-                input = input.substring(1);
-                //console.log("Symbol ou: "+input);
-                continue Begin;
-            } else if (min == 2147483647) {
-                lowerWrittedWord = input.toLowerCase();
-            } else {
-                lowerWrittedWord = input.substring(0, min).toLowerCase();
-            }
-
-            if (lowerWrittedWord == "") {
-                if (input.Length > 1) {
-                    let span = document.createElement("span");
-                    //if (styleOutput)span.className="symbols";
-                    span.innerText = input[0];
-                    parent.appendChild(span);
-
-                    //	output+="<span style='"+ColorSymbols+"'>"+input[0]+"}";
-
-                    input = input.substring(1);
-                    continue Begin;
-                }
-            }
-
-            //console.log(lowerWrittedWord);
-            //	console.log(input);
-            //console.log( "lowerWrittedWord:"+lowerWrittedWord);
-            for (let i = 0; i < dic.Words.length; i++) {
-                let word = dic.Words[i];
-
-                let dggdfg = reverse ? word.input : word.output;
-                //	console.log("dggdfg:" + dggdfg);
-                for (let j = 0; j < dggdfg.length; j++) {
-                    let s = dggdfg[j];
-
-                    if (lowerWrittedWord == s) {
-                        let set = (reverse ? word.output : word.input);
-
-                        if (set.length == 1) {
-                            let txt;
-
-                            // Full uppercase
-                            if (input == lowerInput.toUpperCase()) {
-                                txt = set[0].toUpperCase();
-
-                                // Only first uppercase
-                            } else if (input[0] == lowerInput[0].toUpperCase()) {
-                                let tmp = set[0]
-                                txt = tmp.charAt(0).toUpperCase() + tmp.substring(1);
-
-                                // lowercase
-                            } else {
-                                txt = set[0];
-                            }
-                            //let idText="txt"+idPops, idPopUp="pop"+idPops;
-
-                            let span = document.createElement("span");
-                            //span.style=ColorTranslated;
-                            if (styleOutput) span.className = "translated";
-                            //span.onclick="document.getElementById("+'"'+idText+'"'+").style.display="+'"block"'+";' style='"+ColorPops+"'";
-                            span.innerText = SetText(txt); //set[0];
-                            parent.appendChild(span);
-
-
-                            input = SetText(input.substring(lowerWrittedWord.length  ));
-                            continue Begin;
-                        } else {
-                            let pack = document.createElement("span");
-                            pack.className = "traMOp";
-
-                            let span = document.createElement("span");
-                            if (styleOutput) span.className = "translated";
-
-                            let box = document.createElement("ul");
-                            box.style = "opacity: 0";
-                            box.setAttribute("canHide", false);
-                            box.style.display = "none";
-                            box.className = "pop";
-
-                            if (input == lowerInput.toUpperCase()) {
-                                for (let i = 0; i < set.length; i++) {
-                                    let tagx2 = document.createElement("li");
-                                    tagx2.style = "cursor: pointer;";
-                                    tagx2.innerHTML = set[i].toUpperCase();
-                                    tagx2.addEventListener('click', function() {
-                                        word.selectedIndex = i;
-                                        span.innerText = SetText(set[i].toUpperCase());
-                                        box.style.opacity = "0";
-                                        //	console.log("Working1");
-                                        box.style.display = "none";
-                                        box.setAttribute("canHide", false);
-                                        setTimeout(function() { box.style.display = 'none'; }, 100);
-                                    });
-                                    box.appendChild(tagx2);
-                                }
-
-                                span.addEventListener('click', function() {
-                                    if (box.style.opacity == "1") {
-                                        box.style.opacity = "0";
-                                        setTimeout(function() { box.style.display = 'none'; }, 100);
-                                    } else {
-                                        box.style.display = 'block';
-                                        box.style.opacity = "1";
-                                        box.setAttribute("canHide", false);
-                                        setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                    }
-                                });
-
-                                window.addEventListener('click', function(e) {
-                                    if (!box.contains(e.target)) {
-                                        if (!span.contains(e.target)) {
-                                            if (box.style.opacity == "1") {
-                                                if (box.getAttribute("canHide")) {
-                                                    box.style.opacity = "0";
-                                                    setTimeout(function() {
-                                                        if (box.getAttribute("canHide")) {
-                                                            box.style.display = 'none';
-                                                            box.setAttribute("canHide", false);
-                                                        }
-                                                    }, 100);
-                                                }
-                                            }
-                                        }
-                                    }
-                                });
-
-                                span.innerText = SetText(set[word.selectedIndex]);
-
-                                //	console.log("b: |"+input);
-                                input = input.substring(lowerWrittedWord.length );
-                                //	console.log("a: |"+input);
-                            } else if (input[0] == lowerInput[0]) {
-                                for (let i = 0; i < set.length; i++) {
-                                    let tag = document.createElement("li");
-                                    tag.style = "cursor: pointer;";
-                                    tag.innerHTML = set[i];
-                                    tag.addEventListener('click', function() {
-                                        word.selectedIndex = i;
-                                        span.innerText = set[i];
-                                        box.style.opacity = "0";
-                                        //console.log("Working2");
-                                        box.style.display = "none";
-                                        box.setAttribute("canHide", false);
-                                        setTimeout(function() { box.style.display = 'none'; }, 100);
-                                    });
-                                    box.appendChild(tag);
-                                }
-
-                                span.addEventListener('click', function() {
-                                    if (box.style.opacity == "1") {
-                                        box.style.opacity = "0";
-                                        setTimeout(function() { box.style.display = 'none'; }, 100);
-                                    } else {
-                                        box.style.display = 'block';
-                                        box.style.opacity = "1";
-                                        box.setAttribute("canHide", false);
-                                        setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                    }
-                                });
-
-                                window.addEventListener('click', function(e) {
-                                    if (!box.contains(e.target)) {
-                                        if (!span.contains(e.target)) {
-                                            if (box.style.opacity == "1") {
-                                                if (box.getAttribute("canHide")) {
-                                                    box.style.opacity = "0";
-                                                    setTimeout(function() {
-                                                        if (box.getAttribute("canHide")) {
-                                                            box.style.display = 'none';
-                                                            box.setAttribute("canHide", false);
-                                                        }
-                                                    }, 100);
-                                                }
-                                            }
-                                        }
-                                    }
-                                });
-
-                                span.innerText = SetText(set[word.selectedIndex]);
-
-                                input = input.substring(lowerWrittedWord.length );
-                            } else {
-                                for (let i = 0; i < set.length; i++) {
-                                    let taghg = document.createElement("li");
-                                    taghg.style = "cursor: pointer;";
-                                    taghg.innerHTML = set[i].charAt(0).toUpperCase() + set[i].substring(1);
-                                    taghg.addEventListener('click', function() {
-                                        word.selectedIndex = i;
-                                        span.innerText = SetText(set[i].charAt(0).toUpperCase() + set[i].substring(1));
-                                        box.style.opacity = "0";
-                                        console.log("Working3");
-                                        box.style.display = "none";
-                                        box.setAttribute("canHide", false);
-                                        setTimeout(function() { box.style.display = 'none'; }, 100);
-                                    });
-                                    box.appendChild(taghg);
-                                }
-
-                                span.addEventListener('click', function() {
-                                    if (box.style.opacity == "1") {
-                                        box.style.opacity = "0";
-                                        setTimeout(function() { box.style.display = 'none'; }, 100);
-                                    } else {
-                                        box.style.display = 'block';
-                                        box.style.opacity = "1";
-                                        box.setAttribute("canHide", false);
-                                        setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                    }
-                                });
-
-                                window.addEventListener('click', function(e) {
-                                    if (!box.contains(e.target)) {
-                                        if (!span.contains(e.target)) {
-                                            if (box.style.opacity == "1") {
-                                                if (box.getAttribute("canHide")) {
-                                                    box.style.opacity = "0";
-                                                    setTimeout(function() {
-                                                        if (box.getAttribute("canHide")) {
-                                                            box.style.display = 'none';
-                                                            box.setAttribute("canHide", false);
-                                                        }
-                                                    }, 100);
-                                                }
-                                            }
-                                        }
-                                    }
-                                });
-
-                                span.innerText = SetText(set[word.selectedIndex].charAt(0).toUpperCase() + set[word.selectedIndex].substring(1)); //set[word.selectedIndex].toString().toUpperCase()+set[word.selectedIndex].substring(1);
-
-                                input = input.substring(lowerWrittedWord.length  );
-                            }
-
-                            pack.appendChild(span);
-                            pack.appendChild(box);
-                            parent.appendChild(pack);
-                            idPops++;
-
-                        }
-                        continue Begin;
-                    }
-                }
-            }
-
-            for (let i = 0; i < dic.SameWords.length; i++) {
-                let word = dic.SameWords[i];
-
-                if (lowerWrittedWord == word.input) {
-
-                    let txt, inp = word.input;
-
-                    // Full uppercase lowerInput
-                    //	console.log(input[0]+"=="+lowerWrittedWord.toUpperCase());
-                    if (input.substr(0, lowerWrittedWord.length) == lowerWrittedWord.toUpperCase()) {
-                        txt = inp.toUpperCase();
-
-                        // Only first uppercase
-                    } else if (input[0] == lowerWrittedWord[0].toUpperCase()) {
-                        //		console.log(input+" "+lowerInput.toUpperCase()+" "+lowerWrittedWord);
-                        // if (input[0]==lowerInput[0].toUpperCase()) {
-                        txt = inp.charAt(0).toUpperCase() + inp.substring(1);
-
-                        // lowercase
-                    } else {
-                        txt = inp;
-                    }
-
-
-                    let span = document.createElement("span");
-                    if (styleOutput) span.className = "translated";
-                    //	span.style=ColorTranslated;
-                    span.innerText = SetText(txt);
-                    parent.appendChild(span);
-                    parent.appendChild(span);
-
-                    input = input.substring(inp.length);
-
-                    continue Begin;
-                }
-            }
-
-            // try edited world
-            if (from == 'ha') {
-                for (let i = 0; i < dic.Words.length; i++) {
-                    let word = dic.Words[i];
-
-                    let dggdfg = reverse ? word.input : word.output;
-
-                    for (let j = 0; j < dggdfg.length; j++) {
-                        let s;
-
-                        s = dggdfg[j].replaceAll('ê', 'e').replaceAll('ô', 'o');
-                        //console.log(s);
-
-
-                        if (lowerWrittedWord == s) {
-                            let set = (reverse ? word.output : word.input);
-
-                            if (set.length == 1) {
-                                let txt;
-
-                                // Full uppercase
-                                if (input == lowerInput.toUpperCase()) {
-                                    txt = set[0].toUpperCase();
-
-                                    // Only first uppercase
-                                } else if (input[0] == lowerInput[0].toUpperCase()) {
-                                    txt = set[0].charAt(0).toUpperCase() + set[0].substring(1);
-
-                                    // lowercase
-                                } else {
-                                    txt = set[0];
-                                }
-                                //let idText="txt"+idPops, idPopUp="pop"+idPops;
-
-                                let span = document.createElement("span");
-                                //span.style=ColorTranslated;
-                                if (styleOutput) span.className = "translated";
-                                //span.onclick="document.getElementById("+'"'+idText+'"'+").style.display="+'"block"'+";' style='"+ColorPops+"'";
-                                span.innerText = SetText(txt); //set[0];
-                                parent.appendChild(span);
-
-
-                                input = SetText(input.substring(lowerWrittedWord.length  ));
-                                continue Begin;
-                            } else {
-                                let pack = document.createElement("span");
-                                pack.className = "traMOp";
-
-                                let span = document.createElement("span");
-                                if (styleOutput) span.className = "translated";
-
-                                let box = document.createElement("ul");
-                                box.style = "opacity: 0";
-                                box.setAttribute("canHide", false);
-                                box.style.display = "none";
-                                box.className = "pop";
-
-                                if (input == lowerInput.toUpperCase()) {
-                                    for (let i = 0; i < set.length; i++) {
-                                        let tagx2 = document.createElement("li");
-                                        tagx2.style = "cursor: pointer;";
-                                        tagx2.innerHTML = set[i].toUpperCase();
-                                        tagx2.addEventListener('click', function() {
-                                            word.selectedIndex = i;
-                                            span.innerText = SetText(set[i].toUpperCase());
-                                            box.style.opacity = "0";
-                                            //	console.log("Working1");
-                                            box.style.display = "none";
-                                            box.setAttribute("canHide", false);
-                                            setTimeout(function() { box.style.display = 'none'; }, 100);
-                                        });
-                                        box.appendChild(tagx2);
-                                    }
-
-                                    span.addEventListener('click', function() {
-                                        if (box.style.opacity == "1") {
-                                            box.style.opacity = "0";
-                                            setTimeout(function() { box.style.display = 'none'; }, 100);
-                                        } else {
-                                            box.style.display = 'block';
-                                            box.style.opacity = "1";
-                                            box.setAttribute("canHide", false);
-                                            setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                        }
-                                    });
-
-                                    window.addEventListener('click', function(e) {
-                                        if (!box.contains(e.target)) {
-                                            if (!span.contains(e.target)) {
-                                                if (box.style.opacity == "1") {
-                                                    if (box.getAttribute("canHide")) {
-                                                        box.style.opacity = "0";
-                                                        setTimeout(function() {
-                                                            if (box.getAttribute("canHide")) {
-                                                                box.style.display = 'none';
-                                                                box.setAttribute("canHide", false);
-                                                            }
-                                                        }, 100);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    });
-
-                                    span.innerText = SetText(set[word.selectedIndex]);
-
-                                    //	console.log("b: |"+input);
-                                    input = input.substring(lowerWrittedWord.length  );
-                                    //	console.log("a: |"+input);
-                                } else if (input[0] == lowerInput[0]) {
-                                    for (let i = 0; i < set.length; i++) {
-                                        let tag = document.createElement("li");
-                                        tag.style = "cursor: pointer;";
-                                        tag.innerHTML = set[i];
-                                        tag.addEventListener('click', function() {
-                                            word.selectedIndex = i;
-                                            span.innerText = set[i];
-                                            box.style.opacity = "0";
-                                            //console.log("Working2");
-                                            box.style.display = "none";
-                                            box.setAttribute("canHide", false);
-                                            setTimeout(function() { box.style.display = 'none'; }, 100);
-                                        });
-                                        box.appendChild(tag);
-                                    }
-
-                                    span.addEventListener('click', function() {
-                                        if (box.style.opacity == "1") {
-                                            box.style.opacity = "0";
-                                            setTimeout(function() { box.style.display = 'none'; }, 100);
-                                        } else {
-                                            box.style.display = 'block';
-                                            box.style.opacity = "1";
-                                            box.setAttribute("canHide", false);
-                                            setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                        }
-                                    });
-
-                                    window.addEventListener('click', function(e) {
-                                        if (!box.contains(e.target)) {
-                                            if (!span.contains(e.target)) {
-                                                if (box.style.opacity == "1") {
-                                                    if (box.getAttribute("canHide")) {
-                                                        box.style.opacity = "0";
-                                                        setTimeout(function() {
-                                                            if (box.getAttribute("canHide")) {
-                                                                box.style.display = 'none';
-                                                                box.setAttribute("canHide", false);
-                                                            }
-                                                        }, 100);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    });
-
-                                    span.innerText = SetText(set[word.selectedIndex]);
-
-                                    input = input.substring(lowerWrittedWord.length);
-                                } else {
-                                    for (let i = 0; i < set.length; i++) {
-                                        let taghg = document.createElement("li");
-                                        taghg.style = "cursor: pointer;";
-                                        taghg.innerHTML = set[i].charAt(0).toUpperCase() + set[i].substring(1);
-                                        taghg.addEventListener('click', function() {
-                                            word.selectedIndex = i;
-                                            span.innerText = SetText(set[i].charAt(0).toUpperCase() + set[i].substring(1));
-                                            box.style.opacity = "0";
-                                            console.log("Working3");
-                                            box.style.display = "none";
-                                            box.setAttribute("canHide", false);
-                                            setTimeout(function() { box.style.display = 'none'; }, 100);
-                                        });
-                                        box.appendChild(taghg);
-                                    }
-
-                                    span.addEventListener('click', function() {
-                                        if (box.style.opacity == "1") {
-                                            box.style.opacity = "0";
-                                            setTimeout(function() { box.style.display = 'none'; }, 100);
-                                        } else {
-                                            box.style.display = 'block';
-                                            box.style.opacity = "1";
-                                            box.setAttribute("canHide", false);
-                                            setTimeout(function() { box.setAttribute("canHide", true); }, 100);
-                                        }
-                                    });
-
-                                    window.addEventListener('click', function(e) {
-                                        if (!box.contains(e.target)) {
-                                            if (!span.contains(e.target)) {
-                                                if (box.style.opacity == "1") {
-                                                    if (box.getAttribute("canHide")) {
-                                                        box.style.opacity = "0";
-                                                        setTimeout(function() {
-                                                            if (box.getAttribute("canHide")) {
-                                                                box.style.display = 'none';
-                                                                box.setAttribute("canHide", false);
-                                                            }
-                                                        }, 100);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    });
-
-                                    span.innerText = SetText(set[word.selectedIndex].charAt(0).toUpperCase() + set[word.selectedIndex].substring(1)); //set[word.selectedIndex].toString().toUpperCase()+set[word.selectedIndex].substring(1);
-
-                                    input = input.substring(lowerWrittedWord.length  );
-                                }
-
-                                pack.appendChild(span);
-                                pack.appendChild(box);
-                                parent.appendChild(pack);
-                                idPops++;
-
-                            }
-                            continue Begin;
-                        }
-                    }
-                }
-            }
-
-
-         
-        }
-
-        if (input != "") {
-            // Neznámé slovo
-            if (input.includes(' ') || lowerWrittedWord.length > 1) {
-                let addstape;
-                if (input.includes(' ')) {
-                    if (input.indexOf(' ') == lowerWrittedWord.length) addstape = true;
-                    else addstape = false;
-                } else addstape = false;
-
-                let nextSpace = lowerWrittedWord.length;
-
-                let str = lowerWrittedWord.substring(0, nextSpace);
-                if (!isNaN(str)) {
-                    let span = document.createElement("span");
-                    //span.style=ColorTranslated;
-                    if (styleOutput) span.className = "translated";
-                    span.innerText = SetText(str);
-                    parent.appendChild(span);
-                    input = input.substring(nextSpace);
-
-                    if (addstape) {
-                        let t = document.createTextNode(" ");
-                        parent.appendChild(t);
-                    }
-                    continue Begin;
-                }
-               
-
-                let span = document.createElement("span");
-                if (styleOutput) span.className = "untranslated";
-
-                let st = StartingReplaces(str);
-                let en = EndingReplaces(str  );
-
-                let setText;
-
-                if (st[1] > 0 && en[1] > 0) setText = GeneralReplaces(str.substr(st[1], str.length - en[1] - st[1]));
-                else if (st[1] == -1 && en[1] > 0) setText = GeneralReplaces(str.substr(0, str.length - en[1]));
-                else if (st[1] > 0 && en[1] == -1) setText = GeneralReplaces(str.substr(st[1], str.length - st[1]));
-                else setText = GeneralReplaces(str);
-
-                if (input.substring(0, nextSpace) == str.toUpperCase()) {
-                    // uppercase
-                    if (st[1] > 0) {
-                        st[0].innerText = st[0].innerText.toUpperCase();
-                        parent.appendChild(st[0]);
-                    }
-                    span.innerHTML = ConvertHTMLCodeToUpperCase(setText);
-                    parent.appendChild(span);
-
-                    if (en[1] > 0) {
-                        en[0].innerText = en[0].innerText.toUpperCase();
-                        parent.appendChild(en[0]);
-                    }
-                } else if (input.charAt(0) == str.charAt(0).toUpperCase()) {
-
-                    // first big
-                    let setBig = false;
-
-                    if (st[1] > 0) {
-                        let txt = st[0].innerText;
-                        if (txt.length > 1) st[0].innerText = txt.charAt(0).toUpperCase() + txt.substr(1);
-                        else if (txt.length == 1) st[0].innerText = txt.toUpperCase();
-                        parent.appendChild(st[0]);
-                        setBig = true;
-                    }
-                    //console.log(setText);
-                    if (setBig) span.innerHTML = SetText(setText);
-                    else span.innerHTML = ConvertHTMLCodeSetUpperCaseFirst(setText);
-                    parent.appendChild(span);
-
-                    if (en[1] > 0) {
-                        parent.appendChild(en[0]);
-                    }
-                } else {
-                    // lowercase (or i dONt knoW nanika ókí)
-                    if (st[1] > 0) {
-                        parent.appendChild(st[0]);
-                    }
-
-                    span.innerHTML = setText;
-                    parent.appendChild(span);
-
-                    if (en[1] > 0) {
-                        parent.appendChild(en[0]);
-                    }
-                }
-
-                input = input.substring(nextSpace);
-
-                if (addstape) {
-                    let t = document.createTextNode(" ");
-                    parent.appendChild(t);
-                }
-                continue Begin;
-            } else {
-                let str = input;
-                let span = document.createElement("span");
-
-                // Number
-                if (!isNaN(str)) {
-                    if (styleOutput) span.className = "translated";
-                    span.innerText = str;
-                    parent.appendChild(span);
-                    //input=input.substring(nextSpace);
-                    //	break;
-                } else {
-
-                    if (styleOutput) span.className = "untranslated";
-                    span.innerText = str;
-                }
-
-                parent.appendChild(span);
-                return;
-            }
-        } else {
-            //	return;
-        }
-
-        break;
-
-        function GeneralReplaces(inp) {
-            let editing = inp;
-
-            if (reverse) {
-                for (let v = 0; v < dic.ReplacesT.length; v++) {
-                    let reph = dic.ReplacesT[v];
-
-                    if (styleOutput) editing = editing.replace(reverse ? reph.input : reph.output, "<span class='replaces' comment='GH'>" + (reverse ? reph.output : reph.input) + "</span>");
-                    else editing = editing.replace(reverse ? reph.input : reph.output, (reverse ? reph.output : reph.input));
-                }
-
-                for (let u = 0; u < dic.Replaces.length; u++) {
-                    let rep = dic.Replaces[u];
-
-                    if (styleOutput) editing = editing.replace(reverse ? rep.input : rep.output, '<span class="replaces" comment="G">' + (reverse ? rep.output : rep.input) + "</span>");
-                    else editing = editing.replace(reverse ? rep.input : rep.output, (reverse ? rep.output : rep.input));
-                }
-
-
-                //editing = editing.replaceAll('ý', '<span class="replaces" comment="in">y</span>');
-                //editing = editing.replaceAll('í', '<span class="replaces" comment="in">i</span>');
-                //editing = editing.replaceAll('ú', '<span class="replaces" comment="in">u</span>');
-                //editing = editing.replaceAll('ů', '<span class="replaces" comment="in">u</span>');
-            } else {
-                for (let v = 0; v < dic.ReplacesC.length; v++) {
-                    let repc = dic.ReplacesC[v];
-
-                    if (styleOutput) editing = editing.replace(reverse ? repc.input : repc.output, "<span class='replaces' comment='GC'>" + (reverse ? repc.output : repc.input) + "</span>");
-                    else editing = editing.replace(reverse ? repc.input : repc.output, (reverse ? repc.output : repc.input));
-                }
-
-                for (let u = 0; u < dic.Replaces.length; u++) {
-                    let rep = dic.Replaces[u];
-
-                    if (styleOutput) editing = editing.replace(reverse ? rep.input : rep.output, '<span class="replaces" comment="G">' + (reverse ? rep.output : rep.input) + "</span>");
-                    else editing = editing.replace(reverse ? rep.input : rep.output, (reverse ? rep.output : rep.input));
-                }
-
-                //editing = editing.replaceAll('ê', '<span class="replaces" comment="in">e</span>');
-                //editing = editing.replaceAll('ô', '<span class="replaces" comment="in">o</span>');
-            }
-            return SetText(editing);
-        }
-
-        function EndingReplaces(inp  ) {
-            let id = -1;
-            let maxEnds = -1;
-            let lst = -1;
-
-
-            for (let u = 0; u < dic.ReplacesEnding.length; u++) {
-                let rep = dic.ReplacesEnding[u];
-                let ii = reverse ? rep.input : rep.output;
-
-                if (inp.endsWith(ii)) {
-                    if (ii.length > maxEnds) {
-                        maxEnds = ii.length;
-                        id = u;
-                        lst = 0;
-                    }
-                }
-            }
-
-            if (reverse) { //console.log("ReplacesEndingT: "+inp+" "+ii);
-                for (let u = 0; u < dic.ReplacesEndingF.length; u++) {
-                    let rep = dic.ReplacesEndingF[u];
-                    let ii =  reverse ? rep.input : rep.output  ;
-
-                    if (inp.endsWith(ii)) {
-                        if (ii.length > maxEnds) {
-                            maxEnds = ii.length;
-                            id = u;
-                            lst = 2;
-                        }
-                    }
-                }
-            } else {
-
-                for (let u = 0; u < dic.ReplacesEndingT.length; u++) {
-                    let rep = dic.ReplacesEndingT[u];
-                    let ii =  reverse ? rep.input : rep.output;
-
-                    if (inp.endsWith(ii)) {
-                        if (ii.length > maxEnds) {
-                            maxEnds = ii.length;
-                            id = u;
-                            lst = 1;
-                        }
-                    }
-                }
-
-
-            }
-            //	console.log(typeUp);
-            if (id != -1) {
-                if (lst == 0) {
-                    let ff = reverse ? dic.ReplacesEnding[id].output : dic.ReplacesEnding[id].input;
-
-                    let span = document.createElement("span");
-                    span.className = "replaces";
-                    //if (typeUp==1) span.innerText=ff.toUpperCase();
-                    //else if (st==0) span.innerText=ff.charAt(0).toUpperCase()+ff.substring(1);
-                    //else
-                    span.innerText = SetText(ff);
-                    return [span, maxEnds];
-                }
-                if (lst == 1) {
-                    let ff = reverse ? dic.ReplacesEndingT[id].output : dic.ReplacesEndingT[id].input;
-
-                    let span = document.createElement("span");
-                    span.className = "replaces";
-                    //if (typeUp==1) span.innerText=ff.toUpperCase();
-                    //else if (st==0) span.innerText=ff.charAt(0).toUpperCase()+ff.substring(1);
-                    //else
-                    span.innerText = SetText(ff);
-                    return [span, maxEnds];
-                }
-                if (lst == 2) {
-                    let ff = reverse ? dic.ReplacesEndingF[id].output : dic.ReplacesEndingF[id].input;
-
-                    let span = document.createElement("span");
-                    span.className = "replaces";
-                    //if (typeUp==1) span.innerText=ff.toUpperCase();
-                    //else if (st==0) span.innerText=ff.charAt(0).toUpperCase()+ff.substring(1);
-                    //else
-                    span.innerText = SetText(ff);
-                    return [span, maxEnds];
-                }
-            }
-            return [null, maxEnds];
-        }
-
-        function StartingReplaces(inp) {
-            let id = -1;
-            let maxStarts = -1;
-
-            for (let u = 0; u < dic.ReplacesStarting.length; u++) {
-                let rep = dic.ReplacesStarting[u];
-                let ii = reverse ? rep.input : rep.output;
-                //console.log(ii);
-                if (inp.startsWith(ii)) {
-                    //console.log(ii);
-                    //console.log(ii.length);
-
-                    if (ii.length > maxStarts) {
-                        maxStarts = ii.length;
-                        id = u;
-                        //	console.log(maxEnds);
-                    }
-                }
-            }
-
-            if (id != -1) {
-                let xstr = reverse ? dic.ReplacesStarting[id].output : dic.ReplacesStarting[id].input;
-                let ff;
-                //	console.log("typeUp: "+typeUp);
-                //if (typeUp==0) ff=xstr.charAt(0).toUpperCase()+xstr.substr(1);
-                //	else if(typeUp==1) ff=xstr.toUpperCase()
-                //else
-                ff = xstr;
-                let span = document.createElement("span");
-                span.className = "replaces";
-                //span.style=ColorReplaces;
-                span.innerText = SetText(ff);
-                return [span, maxStarts];
-            }
-            return [null, maxStarts]; //maxStarts
-        }
-
-    }
-
-    enabletranslate = true;
-    if (dev) console.log("Done translating!");
-}*/
-
 function ConvertHTMLCodeToUpperCase(input) {
     let building = "";
     let htmlTag;
@@ -3175,10 +1647,6 @@ function ConvertHTMLCodeSetUpperCaseFirst(input) {
 function timeoutEnableTranslating() {
     enabletranslate = true;
 }
-
-//function checkHaSymbols() {
-// Not existing in ha: "í", "ou", "ú", "ý"
-//}
 
 function insertAtCursor(myField, myValue) {
     //myField.focus();
@@ -5983,9 +4451,11 @@ function urlParamUpdate() {
     
     // clear
     const url = new URL(window.location);
-    url.search=str_url;
-  //  console.log("./"+str_url);
-    window.history.replaceState({}, '', /*url*/"./?"+str_url);
+    if (dynamicsUrls){
+        url.search=str_url;
+    //  console.log("./"+str_url);
+        window.history.replaceState({}, '', /*url*/"./?"+str_url);
+    }
 }
 
 function urlParamChange(name, value, showName/**/){

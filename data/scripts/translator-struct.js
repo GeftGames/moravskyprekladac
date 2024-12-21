@@ -1172,6 +1172,7 @@ class ItemSimpleWord {
     }
 
     GetDicForm(name) {
+        if (!this.show) return null;
         let p = document.createElement("p");
         //let f = document.createElement("span");
         let f;
