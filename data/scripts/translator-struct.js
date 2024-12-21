@@ -5504,6 +5504,7 @@ class LanguageTr{
         this.LastDateEdit = "";
         this.Comment = "";
         this.baseLangName = null;
+        this.recTranscription = null;
     }
         /*
         	GetVocabulary() {
@@ -5812,6 +5813,10 @@ class LanguageTr{
 
                 case "q":
                     this.Quality = parseFloat(line.substring(1));
+                    break;
+
+                case "y":
+                    this.recTranscription = parseInt(line.substring(1));
                     break;
 
                 case "l":

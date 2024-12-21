@@ -91,6 +91,9 @@ function customText() {
     localStorage.setItem('Transcription', TranscriptionText);
 
     transcription = SetCurrentTranscription(TranscriptionText);
+    //ChangeDic();
+    if (document.getElementById("tabDic").classList.contains("tabSelected")) GetDic();
+    if (document.getElementById("tabText").classList.contains("tabSelected")) Translate();
 }
 
 function getCurrentThemeLight(){
@@ -3165,6 +3168,10 @@ function SetCurrentTranscription(transCode) {
         { from: "ťi", to: "ti" },
         { from: "ňi", to: "ni" },
 
+        { from: "ďê", to: "dě" },
+        { from: "ťê", to: "tě" },
+        { from: "ňê", to: "ně" },
+
         { from: "ďí", to: "dí" },
         { from: "ťí", to: "tí" },
         { from: "ňí", to: "ní" },
@@ -3425,6 +3432,8 @@ function SetCurrentTranscription(transCode) {
         { from: "zi", to: "si"},
         { from: "ṵ", to: "u" },
         { from: "vźů", to: "wsio" },
+        { from: "ê", to: "e" },
+        { from: "ô", to: "o" },
     ];
 
     if (transCode == "silezian_slabikorzovy") return [
@@ -3924,6 +3933,12 @@ function SetCurrentTranscription(transCode) {
     if (transCode == "lysohorsky") return [
         { from: "v", to: "w" },
         { from: "ů", to: "ó" },
+        { from: "ťi", to: "ti" },
+        { from: "ďi", to: "di" },
+        { from: "ňi", to: "ni" },
+        { from: "ťí", to: "tí" },
+        { from: "ďí", to: "dí" },
+        { from: "ňí", to: "ní" },
     ];
 
     if (transCode == "runy") return [
@@ -4918,14 +4933,15 @@ function BuildOptionsMoravian(){
             group.appendChild(select);
         }
 
-      
-        
         outerOptions.appendChild(group);
     }   
 
     let spanNote=document.createElement("span");
     spanNote.innerText="Nastavení (globální) transkripce je v bočním menu";
-    spanNote.style="font-style: italic; font-size: 4.5mm; display: flex; justify-content: center;";
+    spanNote.style="font-style: italic; font-size: 4.5mm; display: flex; justify-content: center;cursor:pointer;margin-top: 15px;margin-bottom: 15px;";
+    spanNote.addEventListener("click", ()=>{
+         showSetting('oTranscription');
+    });
     outerOptions.appendChild(spanNote);  
 }
 /*
@@ -4961,3 +4977,73 @@ async function shareImage() {
         "image/png"
     );   
 }*/
+
+function ShowRecSwitchTransription() {
+    if (currentLang.recTranscription>0){
+        let valTranscription="";
+        switch (currentLang.recTranscription){
+            case 1:
+                textRecTranscription.innerText="Česká obyvklá";
+                valTranscription="czechnormal";
+                break;
+                
+            case 2:
+                textRecTranscription.innerText="Slezská spřežková (Slabikářův)";
+                valTranscription="silezian_slabikorzovy";
+                break;
+            
+            case 3:
+                textRecTranscription.innerText="Lašská (Łysohorskeho)";
+                valTranscription="lysohorsky";
+                break;
+                
+            case 4:
+                textRecTranscription.innerText="Moravská (Kozohorský)";
+                valTranscription="moravian";
+                break;
+        }
+        if (TranscriptionText!=valTranscription){
+            document.getElementById("recSwitchTransc").style.display="flex";
+            document.getElementById("switchTranscription").addEventListener("click", ()=>{
+                console.log("valTranscription has value",valTranscription);
+                document.getElementById("sTranscription").value=valTranscription; 
+                document.getElementById("recSwitchTransc").style.display="none";
+                customText();
+            });
+        }
+    } else {
+        document.getElementById("recSwitchTransc").style.display="none";
+    }  
+
+}
+
+function showSetting(setting){
+    document.getElementById('butShow').style.opacity='0';
+    document.getElementById('butclose').style.opacity='1';
+    document.getElementById('nav').style.opacity='1';
+    document.getElementById('nav').classList.remove('navTrans');
+    document.getElementById('openCloseNav').classList.remove('tooltipR');
+
+    let eSetting=document.getElementById(setting);
+    eSetting.style.transition="backgroundcolor .3s";
+    eSetting.style.backgroundColor="var(--ColorTheme)";
+
+    let cnt=0;
+    function flashingTimer() {
+        if (cnt%2==1)eSetting.style.backgroundColor="var(--ColorTheme)";
+        else eSetting.style.backgroundColor="unset";
+        
+        if (cnt>10) {
+            window.clearTimeout(flashing);     
+            eSetting.style.backgroundColor="unset";
+            eSetting.style.transition="unset";
+        }else{
+            let tick;
+            if (cnt%2==1) tick=100+cnt*20;
+            else tick=100+cnt*10;            
+            setTimeout(flashingTimer, tick);
+        }
+        cnt++;
+    }    
+    let flashing =  setTimeout(flashingTimer, 100);
+}

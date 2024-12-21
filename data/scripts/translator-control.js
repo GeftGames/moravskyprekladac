@@ -542,13 +542,15 @@ function Translate() {
     urlParamChange("input", input, true);
     urlParamChange("lang", currentLang.Id, true);
 
-    if (currentLang !== null) {
+    ShowRecSwitchTransription();
+
+    //if (currentLang !== null) {
         let outputParernt = document.getElementById("outputtext");
         outputParernt.innerHTML = "";
         let out = currentLang.Translate(input, true);
         if (dev) console.log("Transtated as: ", out);
         outputParernt.appendChild(out);
-    }
+    //}
 }
 
 function TranslateSimpleText(input) {
