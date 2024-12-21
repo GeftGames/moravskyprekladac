@@ -435,7 +435,7 @@ function GetTranslations() {
             
             if ((!betaFunctions && stats >= 10 && FilterCountry(lang.Country)) || (betaFunctions && lang.Quality >= 0) || dev) {
                 let name = lang.Name;
-                if (name==defaultLangString) defaultLang=lang.Id; console.log(name==defaultLangString,name);
+                if (name==defaultLangString) defaultLang=lang.Id;
 
                 if (lang.Quality > 2) name += " ✅";
                 if (stats == 0) name += " 💩";

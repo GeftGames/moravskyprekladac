@@ -272,6 +272,8 @@ function customTheme() {
                     styles.setProperty('--RawColorBack', '255, 255, 255');
                     styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
                 }
+
+                styles.setProperty('--ksh', '0px 0px 3px rgba(var(--RawColorBack), .5)');
             } else if (themeLight == "light") {
                 if (themeDay) {
                     //	console.log("light, day");
@@ -300,6 +302,8 @@ function customTheme() {
                     styles.setProperty('--RawColorBack', '0, 0, 0');
                     styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
                 }
+                
+                styles.setProperty('--ksh', '0px 0px 3px rgba(var(--RawColorBack), .3)');
             } else { // Semilight
                 if (themeDay) {
                     //	console.log("semi, day");
@@ -328,6 +332,7 @@ function customTheme() {
                     styles.setProperty('--RawColorBack', '0, 0, 0');
                     styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
                 }
+                styles.setProperty('--ksh', '0px 0px 3px rgba(var(--RawColorBack), .3)');
             }
 
             if (Power == "fancy") {
