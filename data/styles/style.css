@@ -1091,7 +1091,7 @@ optgroup {
     align-items: center;
 }
 
-#myRange {
+#customColor {
     position: inherit;
     -webkit-appearance: none;
     height: 25px;
@@ -1107,7 +1107,7 @@ optgroup {
     box-shadow: inset 0 0 2px #00000033, 0 0 2px #00000055;
 }
 
-#myRange::-webkit-slider-thumb {
+#customColor::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 15px;
     height: 25px;
@@ -1118,7 +1118,7 @@ optgroup {
     box-shadow: inset 0 0 2px #00000033, 0 0 2px #00000055;
 }
 
-#myRange::before {
+#customColor::before {
     display: none;
 }
 
