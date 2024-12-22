@@ -109,6 +109,13 @@ class Cite{
                 zastupny_nazev.style.fontStyle="italic";
                 pack.append(zastupny_nazev);
             }
+
+            //díl
+            if (rules["dil"]!=undefined && rules["dil"]!="") {
+                let dil=document.createElement("span");
+                dil.innerText=". "+rules["dil"]+" díl";
+                pack.append(dil);
+            }
     
             // kapitola
             if (rules["kapitola"]!=undefined && rules["kapitola"]!="") {
@@ -656,7 +663,7 @@ class ItemPatternNoun {
             if (i != shapes.length - 1) out += ", ";
         }
         if (out == "") return undefined;
-        return ApplyPostRules(out);
+        return out;
     }
 
     GetShape(starting, fall) {
@@ -920,9 +927,11 @@ class ItemNoun {
             }            
             if (str_to == undefined) continue;
             listTo.push(str_to);
+
             // text
             let t = document.createElement("span");
             t.innerText = ApplyPostRules(str_to);
+            console.log(t.innerText, str_to);
             t.addEventListener("click", () => {
                 ShowPageLangD(pattern.GetTable(body));
             });
@@ -6342,7 +6351,7 @@ class LanguageTr{
         for (let w of this.Numbers) {
             if (IsWordComIncluded(w)) {
                 let g = w.GetDicForm();
-                console.log("numb out: ",g);
+           //     console.log("numb out: ",g);
                 if (g != null) out.push(g);
                 total++;
             }
@@ -6386,6 +6395,7 @@ class LanguageTr{
         }
 
         // Setřídit
+        let outBeforeLen=out.length;
         out = out.sort((a, b) => {
             if (typeof a.from == 'string') return a.from.localeCompare(b.from);
             else {
@@ -6406,10 +6416,11 @@ class LanguageTr{
 
         display = document.createElement("div");
         
-        if (out.length == 0) {
+        if (out.length == 0) {           
             let no = document.createElement("p");
             no.style = "font-style: italic";
-            no.innerText = "Slovníček tohoto místa je prázdný.";
+             if (outBeforeLen>0) no.innerText = "Nebylo nic konkrétnějšího nalezeno.";
+             else no.innerText = "Slovníček tohoto místa je prázdný.";
             display.appendChild(no);
             return display;
         }
@@ -6427,11 +6438,6 @@ class LanguageTr{
                         lastCh=z.from[0];
                     }
                 }
-                //if (typeof z[3] === "string") {
-                //if (z[2]=="") display+="<p>"+z[0]+" → "+z[1]+"  <i>"+z[3]+"</i></p>";
-                //else display+="<p>"+z[0]+" → "+z[1]+"; "+z[2]+"  <i>"+z[3]+"</i></p>";
-                //} else 
-                //	console.log(z);
                 display.appendChild(z.element);
             }
         }
@@ -8341,13 +8347,14 @@ function ApplyTranscription(text) {
     // Moravština návrh
     let str=ReplaceMoravian(text);
 
+    // do not replac emultiple times
     let PatternAlrearyReplaced = [];
+
     for (let i = 0; i <= str.length; i++) {
         PatternAlrearyReplaced.push("o");
     }
 
     let ret = str;
-    //return str;
     for (let g of transcription) {
         
         if (ret.type == "end") {
@@ -8374,7 +8381,8 @@ function ApplyTranscription(text) {
         } else {
             let ind = -1;
             for (let i = 0; i < 10; i++) {
-                if (ret.includes(g.from)) {//console.log(str, PatternAlrearyReplaced, g);
+                if (ret.includes(g.from)) {
+                    //console.log(str, PatternAlrearyReplaced, g);
                     let startOfReplace;
                     if (ind > 0) {
                         startOfReplace = str.substring(0, ind + g.from.length).indexOf(g.from) + g.from.length;
@@ -8402,7 +8410,7 @@ function ApplyTranscription(text) {
         }
     }
 
-    //	console.log("Replaced: ", ret);
+    // console.log("Replaced: ", ret);
     return ret;
 }
 
