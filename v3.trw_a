@@ -2230,8 +2230,8 @@ tit|tět
 1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 3|ůň|oně|oni,oňovi|oně|oni|oni,oňovi|oněm|oně|oní,oňů|oním,oňům|oně|oně|oních|oni,oňmi
 1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
-1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
 0|||||||m|-×7
+1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
 2|člověk|člověka|člověku,člověkovi|člověka|člověče|člověku,člověkovi|člověkem|lidé,lidi|lidí|lidem|lidi|lidé,lidi|lidech|lidmi
 0|o|a|u|o|o|ě|em|a||ům|a|a|ech|y
 2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
@@ -2285,13 +2285,13 @@ tit|tět
 3|ůr|ora,oru|oru|ůr|ore|oru,oře|orem|ory|orů|orům|ory|ory|orech|ory
 2||e|i,ovi|e|i|i,ovi|em|ové|ů|ům|e|ové|ích|i
 1||i|i||i|i|í|i|í|ím|i|i|ích|mi
+0|en|ne|ni,nu|en|ne,ni|ni,nu,ne|nem|ni,ny|ní,nů|nům|ni,ny|ni,ny|nech|ny
 1|e|e|i,ovi|e|e|i,ovi|em|i,ové|ů|ům|e|i,ové|ích|i
 2|ý|ého|ému|ého|ý|ém|ým|í|ých|ým|é|í|ých|ými
 1|es|sa|su|es|se|su,se|sem|sy|sů|sům|sy|sy|sech|sy
 1|ec|ce|ci|ec|ci|ci|cí|ce|cí|cím|ce|ce|cích|cemi
 3|en|na|nu|en|ne|nu|nem|ny|nů|nům|ny|ny|nech|ny
 3|-×7|peníze|peněz|penězům|peníze|peníze|penězích|penězi
-0|en|ne|ni,nu|en|ne,ni|ni,nu,ne|nem|ni,ny|ní,nů|nům|ni,ny|ni,ny|nech|ny
 3||a|u,ovi|a|e|u,ovi|em|i|ů|ům|y|i|ech|y
 3||a|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 0|no|na|nu|no|no|ně|nem|na|en|nům|na|na|nech|ny
@@ -5975,10 +5975,10 @@ jen,jenom|enem
 zase|zas
 hned|hneť
 moc|moc||1
-ještě|ješče
 někde|negde
 proč|proč
 však|šag
+ještě|ješče
 dobře|dobře||1
 tak|tak|||tag
 jen,jenom|jen
@@ -7160,7 +7160,7 @@ laři|loře
 mují|mujum
 -
 A!K
-B!c
+B!Bq
 C!5
 D!BR
 F!g
@@ -7169,9 +7169,9 @@ I!l
 J!C
 K!Bk
 L!EY
-M!z
+M|1|ě|ě|i|i|ě|i|í|ě|í,sviň|ím|ě|ě|ích|ěmi
 N!U
-O!W
+O!1
 P!Q
 Q!A
 R!+
@@ -7182,7 +7182,7 @@ C!EI
 D!Bk
 E|3|?×5|lcu|?|?|ĺi|?×5
 F!E+
-G|1|?×5|e|?|-×7
+G|1|?×5|ne|?|-×7
 H|3|ut,ud|odu|?×12
 I|3|?×12|ńach|?
 J!G
@@ -7195,6 +7195,9 @@ P|0|?×5|ńe|?×8
 Q|1|?×3|e|?×10
 R|3|?×5|ře|rym|?×7
 -
+|L|0||O||2
+|O|0||B||2
+cukr|R|0|cuk|R||2
 d|B|0|d|C
 jar|K|0|́v́os|P||2
 jíd|C|0|jod|F
@@ -7202,16 +7205,13 @@ karvin|H|0|karv́i|G||2
 med|J|0|ḿ|H||2
 ot|D|0|o|A||2
 pařez|F|0|p|I|nebo málopravděpodobně kmen|2
+pras|N|0|śv́i|M||2
+svin|M|0|ś́v́i|M||2
 škol|A|0|ško|N
 úl|F|0|hu|E||2
 včel|A|0|pšč|L||2
 včelař|I|0|pščoloř|K||2
-|L|0||O||2
-svin|M|0|ś́v́i|M||2
-pras|N|0|śv́i|M||2
-|O|0||B||2
 zim|Q|0|źim|Q||2
-cukr|R|0|cuk|R||2
 -
 -
 -
@@ -7281,33 +7281,32 @@ O|22||?×6|num|?×11
 d|J|d|B||2
 dáv|E|dov|C
 děl|E|ro|I
+dosta|O|dosta|O||2
 m|L||D||2
 mív|D|ḿyv|E
+mus|M|muš|M
+nakrm|F|nakor|N||2
 ne|B|ňe|F
+nedosta|O|ńedosta|O||2
 neu|H|ńeu|K||2
 nevybír|E|ńevyb́yr|C
 p|C|p|H
 pař|F|pař|G||2
 spoušt|K|spušč|J
-u|H|u|K||2
+um|H|u|K||2
 vybír|E|vybír|C
-mus|M|muš|M
-nakrm|F|nakor|N||2
-dosta|O|dosta|O||2
-nedosta|O|ńedosta|O||2
 -
-!V
-!Gc
-!l
-!0
-sotva|ledve
-!DQ
-ještě|jeśće
-jen,jenom|jyny||2
-tak|tag||2
 dnes,dneska|dźiśo||2
+!DQ
+jen,jenom|jyny||2
+ještě|jeśće|||ješče
 jinak|inakšy||2
 lépe|lepšy||2
+!0
+sotva|ledve
+!V
+tak|tag||2
+!Gc
 -
 !y
 !CN
@@ -7417,7 +7416,7 @@ G!c
 H!Bf
 I!EZ
 J!K
-K!0
+K!z
 L!Bg
 M!A
 N!Cu
@@ -16601,7 +16600,7 @@ i|1|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kích,kách|ky
 j|1|en|ne|ni,nu|en|ne,ni|ni,nu,ne|nem|ni,ny,nové|ní,nů|nům|ni,ny|ni,ny,nové|nech|ny
 k!BU
 l!DV
-m!Bq
+m!Br
 n|1|ně|ně|ni|ni|ně|ni|ní|ně|ň,ministryní|ním|ně|ně|ních|němi
 o!D
 p!Bh
@@ -16614,7 +16613,7 @@ v!g
 w!B
 0!H
 1!Q
-2!z
+2!0
 4!BJ
 5!j
 6!E
@@ -16622,8 +16621,8 @@ w!B
 8!l
 9!F
 +|2||a|u,ovi|a|e|u,ovi|em|i.ové|ů|ům|y|i|ech|y
-/!Bt
-BB!Br
+/!Bu
+BB!Bs
 BC|3|ek|ka|ku|ek,ka|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 BD!Fm
 BE!B7
@@ -17736,7 +17735,7 @@ G!J
 H!A
 I!v
 J!O
-K!Bq
+K!Br
 L!B
 M!T
 N!k
@@ -20796,7 +20795,7 @@ X|3|k|ku,ka|ku|k|ku|ku,ce|kem|ky|ků|kům|ky|ky|cích,kách|ky
 Y|2|ka|ky|ce|ku|ko|ce|kou|ce|kou|kám|ce|ce|kou,kách|kama
 Z!Ez
 a!DC
-b!Bq
+b!Br
 c!Fj
 d!H
 e!Bg
@@ -20804,7 +20803,7 @@ f|4||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 g|4|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
 h|-1||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
 i!Fk
-j!0
+j!z
 k!BH
 m!Cv
 n!E
@@ -22535,7 +22534,7 @@ c!B
 d!k
 e!C
 f!J
-g!Bq
+g!Br
 h!D
 i!H
 j!Ce
@@ -23427,14 +23426,14 @@ nahorů,navrch|hore
 !G2
 !DX
 nejdřív|prv
-!m
+!l
 !Ct
 nyní,teď|fčíl|||fčilka|||fčilék|||teď|zdroj: snčj
 !BR
 !Z
 !BS
 právě|akorát
-!n
+!m
 !BT
 !CN
 !Gk
@@ -24934,7 +24933,7 @@ G!R
 H!H
 I!Y
 J!k
-K!Bq
+K!Br
 L!I
 M!DL
 N!U
@@ -25449,7 +25448,7 @@ D!h
 E!G
 F!B5
 G!q
-H!0
+H!z
 I!D+
 J!s
 K!B
@@ -25486,7 +25485,7 @@ z!BR
 5!Bi
 7!BT
 9!K
-+!Br
++!Bs
 /!o
 BA!Da
 BB!H
@@ -28635,7 +28634,7 @@ Z!B
 a!I
 b!P
 d!Y
-e!0
+e!z
 g!Fx
 h!B8
 i!H
@@ -28645,7 +28644,7 @@ n!Bg
 p!D+
 t!r
 v!Ez
-w!Bu
+w!Bv
 x!Dt
 y!B0
 z!Fy
@@ -28654,7 +28653,7 @@ z!Fy
 3!BY
 4!n
 5!Ft
-7!z
+7!0
 8|2|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
 9!Fm
 /!B1
@@ -29316,7 +29315,7 @@ nahoru|navrch
 !Bo
 !Bp
 nějak,ňák|nejak
-!m
+!l
 neobvykle|neobyč<{imp}>ňe
 !Db
 pořádně|pořáďňe
@@ -29496,7 +29495,7 @@ B!E
 C!K
 D!B
 E!M
-F!z
+F!0
 G!S
 H!B2
 I!BA
@@ -29519,7 +29518,7 @@ f!Bc
 h!Ee
 i!u
 j!Cv
-k!Bu
+k!Bv
 l!Cy
 n!c
 p!Cb
@@ -29534,7 +29533,7 @@ y!m
 1!o
 2!f
 3!8
-5!z
+5!0
 7!O
 8!T
 9!v
@@ -30058,7 +30057,7 @@ loni,vloni|vluňi
 !BR
 !5
 !HG
-!n
+!m
 prostě|hold
 !De
 radši|rač||2
@@ -30255,7 +30254,7 @@ p!W
 r!Cz
 s!U
 t!Fz
-u!0
+u!z
 v!D
 y!A
 -
@@ -31093,7 +31092,7 @@ H!BT
 I!w
 J!Eg
 K!t
-L!Bq
+L!Br
 M!E
 O!I
 R!BG
@@ -31411,7 +31410,7 @@ tit|čič'
 -
 A!Ci
 B!Cf
-C!Bv
+C!Bw
 D!2
 E!d
 F!x
@@ -31761,7 +31760,7 @@ B!U
 C!A
 D!BC
 E!F
-F!Bu
+F!Bv
 G!S
 H!b
 I!E
@@ -32908,7 +32907,7 @@ kde|gde|||de
 !Ek
 !D
 !t
-!o
+!n
 !Q
 !BZ
 zadarmo,zadara|zadarmo
@@ -32964,7 +32963,7 @@ B!K
 C!B3
 D!B
 E!E+
-F!0
+F!z
 H!9
 -
 A!L
@@ -33315,7 +33314,7 @@ Z!G
 b!W
 c!B
 d!Cn
-e!Br
+e!Bs
 f!N
 i!Dp
 j!d
@@ -35254,7 +35253,7 @@ D!B7
 E|1|-×7|Katovice|Katovic|Katovicím,Katovicům|Katovice|Katovice|Katovicích|Katovicemi
 G!A
 H!De
-I!Br
+I!Bs
 K!BR
 L!DK
 M!BU
@@ -36283,7 +36282,7 @@ G!BY
 H!B
 I!v
 J!C
-K!Br
+K!Bs
 L!F
 M!Y
 N!a
@@ -36585,7 +36584,7 @@ N!CX
 P!E
 R!BM
 S!n
-T!0
+T!z
 U!BX
 V!BJ
 W!a
@@ -36922,7 +36921,7 @@ jistě|isto
 potom|potym|||poty
 !Hf
 !C0
-!l
+!o
 velmi|bardzo
 !A
 !W
@@ -37186,7 +37185,7 @@ neb|O|ňeb|O||1
 b|O|b|O
 -
 jestli|jeśli
-!l
+!o
 dlouho|długo|||dṵugo
 !A
 donedávna|doňedovna
@@ -38424,11 +38423,11 @@ D!CI
 E!E
 F!B
 G!K
-H!z
+H!0
 I!O
 J!I
 K!CS
-L!0
+L!z
 M!J
 N!a
 -
@@ -38655,7 +38654,7 @@ tenkým pramínkem teče voda|1|čurči voda
 -
 A|3||u|u|||u|em|y|ů|ům|y|y|ách|y
 B!A
-C!Bw
+C!Bq
 D!L
 F!BW
 I!W
@@ -38967,7 +38966,7 @@ vyb|S|vyb|X
 -
 dost|doźdź|||dość
 !DQ
-!l
+!o
 málo|maṵo
 nejdříve|nejpřůt
 potom,poté|potym
@@ -39041,7 +39040,7 @@ F!B
 G!S
 H!K
 J!C8
-K!Bw
+K!Bq
 L!a
 -
 A!Gf
@@ -39243,8 +39242,8 @@ E!Cb
 F!g
 G!1
 I!e
-J!Bw
-K!Bu
+J!Bq
+K!Bv
 L!C3
 N!H
 O!F
@@ -39593,7 +39592,7 @@ hr|a|hr|Z||1
 naboso,boso,bosky|boski
 !5
 !J
-!n
+!m
 !b
 !C
 !H
@@ -39714,7 +39713,7 @@ y0
 -
 -
 -
-A!Bt
+A!Bu
 B!B
 C!h
 D!F
@@ -40064,7 +40063,7 @@ A!O
 B!1
 C!d
 D!A
-E!0
+E!z
 F!Z
 G!Q
 H!J
@@ -40278,7 +40277,7 @@ C!s
 D!A
 F!Cr
 H!B
-I!Bu
+I!Bv
 -
 A!W
 B!D5
@@ -40526,7 +40525,7 @@ l|1|ňa|ni|ně,ni|ňu|ňo|ně,ni|ňou|ni|ň|ňám|ni|ni|ňách|ňami
 o!3
 p!L
 s!m
-v!z
+v!0
 w!U
 y!Cs
 z!e
@@ -41316,7 +41315,7 @@ R!d
 S!BH
 T!/
 U!i
-V!0
+V!z
 W!Bc
 Z!BJ
 a!CS
@@ -41330,7 +41329,7 @@ h!D
 i!F7
 l!M
 m!j
-n!z
+n!0
 r!E
 s!I
 t!Bi
@@ -41361,7 +41360,7 @@ Bz!+
 B3!En
 CA!q
 CD!y
-CK!Bu
+CK!Bv
 CL|1|-×7|dudy|dud|dudám|dudy|dudy|dudách|dudami
 CN!C3
 CQ!CA
@@ -41888,7 +41887,7 @@ nejprve|néprf
 nejraději|nérač|||nérači
 nejvěrněji|névěrňéš
 nejvýš|névéš
-!m
+!l
 někudy|nekôdêma
 neustále,pořád|furt
 !Hw
@@ -42428,7 +42427,7 @@ b!E5
 c!R
 d!N
 f!2
-g!Br
+g!Bs
 j!BR
 k!F
 l!FI
@@ -42451,7 +42450,7 @@ y!O
 BA!CO
 BB!BX
 BC!BW
-BD!z
+BD!0
 BF!CZ
 BG!By
 BI!s
@@ -43243,7 +43242,7 @@ odtamtud|otáď||6
 pěšky|pěški||6
 !Z
 !J
-!n
+!m
 !E0
 přeci,přece|přeca||6
 radši|rači||4
@@ -44835,7 +44834,7 @@ g!k
 h!q
 i!CT
 m!t
-n!Bq
+n!Br
 o!H
 p!Bd
 q!D0
@@ -45801,7 +45800,7 @@ F!a
 G!Bm
 H!A
 I!D/
-J!Bw
+J!Bq
 K!X
 L!7
 M!J
@@ -47471,7 +47470,7 @@ D!y
 E!w
 F!BU
 G!S
-H!Bv
+H!Bw
 I!m
 J!A
 K!BB
@@ -48305,7 +48304,7 @@ d!n
 e!F
 h!BU
 i!B6
-l!z
+l!0
 m!x
 n!BP
 o!U
@@ -48337,7 +48336,7 @@ BS|3|ý|ého|ému|ý|ý|ém|ým|é|ých|ým|é|é|ých|ými
 BU!i
 BW!BG
 BY!FC
-BZ!Bv
+BZ!Bw
 Ba!l
 Bc|2|h|ha|hovi,hu|ha|hu|hovi,hu|hem|zi,hové|hů|hům|hy|zi,hové|zích|hy
 Bh!BA
@@ -49179,7 +49178,7 @@ BY!L
 Bd!CS
 Be!B1
 Bk!BW
-Bl!z
+Bl!0
 Bp!Cc
 Br!Bl
 Bv!CN
@@ -49823,7 +49822,7 @@ mokl|mokł
 -
 A!D
 B!1
-D!0
+D!z
 F!T
 G!P
 H!t
@@ -49836,7 +49835,7 @@ N!y
 O!Bz
 P!B
 Q!M
-S!Bu
+S!Bv
 T!+
 U!V
 V!F
@@ -50166,7 +50165,7 @@ C!F
 D!5
 F!BZ
 G!8
-H!z
+H!0
 I!BY
 J!R
 K!G
@@ -50297,7 +50296,7 @@ M!C
 N!6
 O!Bh
 P!Bb
-R!Bv
+R!Bw
 T!s
 U!d
 V!G
@@ -52297,7 +52296,7 @@ S!G
 T!s
 U!T
 W!r
-X!0
+X!z
 Y!F1
 Z!E
 b!CH
@@ -53344,7 +53343,7 @@ y0
 -
 -
 A!H
-B!Br
+B!Bs
 C!D
 D!F
 E!A
@@ -53496,7 +53495,7 @@ B!P
 C!d
 D!I
 E!r
-F!Bs
+F!Bt
 G!Bc
 H!A
 I!K
@@ -53511,7 +53510,7 @@ S!i
 T!L
 U!BF
 W!Z
-X!0
+X!z
 Y!T
 a!GN
 b!B
@@ -53827,7 +53826,7 @@ dolů,dole|dolu|||dúle
 nahoře,nahoru|hore
 !FI
 !FR
-!m
+!l
 !Ia
 !Ib
 !Cf
@@ -53980,7 +53979,7 @@ M!B
 N!BG
 P!T
 Q!H
-R!Bv
+R!Bw
 S!P
 U!Cx
 V!o
@@ -54317,7 +54316,7 @@ taky|baj|||také
 !Q
 !M
 !FT
-!n
+!m
 !Ct
 hezky,pěkně|pěkňe
 -
@@ -54520,7 +54519,7 @@ F|0|é|é|é|é|é|é|é|é|é|é|é|é|é|é
 G!H
 H!T
 I!Cs
-J!Br
+J!Bs
 K!L
 L!X
 M!U
@@ -54571,7 +54570,7 @@ BH!BC
 BI!B1
 BJ!CF
 BK!DM
-BM!0
+BM!z
 BO!Bh
 BP!Ed
 BR!EQ
@@ -55211,7 +55210,7 @@ opravdu|opravdo
 !B2
 potichu,tiše|poťicho
 !J
-!n
+!m
 !FV
 !DY
 šeplavě|šepľavje
@@ -55225,7 +55224,7 @@ už|ož
 !Ii
 !Ic
 !EX
-!o
+!n
 zase|zasi||4
 !Bd
 !Dz
@@ -56356,7 +56355,7 @@ E!A
 F!J
 G!v
 H!O
-I!Bq
+I!Br
 J!f
 K!Y
 L!k
@@ -56976,14 +56975,14 @@ Bn!Y
 Bo!B6
 Bp!V
 Br!ER
-Bs!Bu
+Bs!Bv
 Bw!t
 Bx!u
 B2!w
 B3!i
 B4!3
 B5!k
-B7!z
+B7!0
 B+!F0
 CE!Eb
 CF!CW
@@ -58034,7 +58033,7 @@ h!D
 j!E
 k!BA
 m!7
-n!Bw
+n!Bq
 o!DI
 p!L
 q!2
@@ -58316,7 +58315,7 @@ uděl|I|uďel|V
 při|d|př|S
 -
 !FX
-!m
+!l
 !R
 !A
 těžce|ťaško
@@ -60843,14 +60842,14 @@ H!q
 I!A
 J!E
 K!e
-L!Br
-M!Bu
+L!Bs
+M!Bv
 O!Bf
 P!b
 S!N
 T!M
 U!D
-Z!Bv
+Z!Bw
 a!BQ
 -
 A!Kn
@@ -61932,7 +61931,7 @@ G!T
 H!A
 I!B4
 K!s
-L!z
+L!0
 M!c
 P!D
 -
@@ -62850,7 +62849,7 @@ C!+
 D!K
 E!CU
 F!C
-G!Bw
+G!Bq
 -
 A!Dy
 B|1|s|?×6|śi|?×6
@@ -63754,7 +63753,7 @@ C!D
 D!BK
 E!M
 F!S
-G!z
+G!0
 I!6
 J!A
 K!Cv
@@ -64654,12 +64653,12 @@ ilo|iuo
 -
 A!Ga
 B!5
-C!0
+C!z
 D!T
 E!Bi
 F!m
 G!Gb
-H!z
+H!0
 I!D
 J!r
 K!i
@@ -65539,7 +65538,7 @@ G!U
 H!M
 I!l
 K!B+
-L!0
+L!z
 M!CK
 O!8
 Q!H
@@ -65553,7 +65552,7 @@ Z!I
 c!Dj
 d!D
 e!C
-f!Bv
+f!Bw
 g!P
 h!Ck
 i!o
@@ -66109,7 +66108,7 @@ jistě|isťeže
 !C
 !JG
 !P
-!o
+!n
 jistěže|isťeže
 !B
 -
@@ -66409,7 +66408,7 @@ jak teď|1|fčylej
 !5
 !CJ
 -
-A!z
+A!0
 B!A
 C!P
 -
@@ -67309,7 +67308,7 @@ Z!1
 a!Bm
 b!n
 c!U
-d!Bt
+d!Bu
 e!BX
 f!a
 i!BJ
@@ -68914,7 +68913,7 @@ C!C
 D!L
 E!R
 F!CG
-G!Bw
+G!Bq
 H!7
 I!Z
 J|1|ňka|ňky|ňce|ňku|ňko|ňce|ňkou|ňky|něk|ňkám|ňky|ňky|ňkách|ňkami
@@ -69595,7 +69594,7 @@ P!j
 Q!m
 S!2
 T!i
-U!Bs
+U!Bt
 W!J
 X!CG
 Y!C
@@ -69606,7 +69605,7 @@ d!Bi
 f!G
 g!EA
 j!FR
-n!z
+n!0
 q!+
 s!CZ
 t!F
@@ -70448,7 +70447,7 @@ D!T
 E!C+
 F!C
 G!A
-H!Bv
+H!Bw
 -
 A!BC
 B!E1
@@ -70642,7 +70641,7 @@ T!G
 U!BO
 W!D/
 Y!O
-Z!Bu
+Z!Bv
 a!BW
 b!Bk
 d!j
@@ -71024,7 +71023,7 @@ L!BB
 M!Dh
 N!f
 O!D8
-P!Bv
+P!Bw
 Q!Dm
 R!D
 S!q
@@ -71522,7 +71521,7 @@ F!BW
 H!BV
 I!Bx
 J!Dd
-K!Bw
+K!Bq
 L!D
 N!B
 O!CG
@@ -72608,7 +72607,7 @@ k čertu|1|g ďácho|zakletí|1
 A!Bd
 B!BC
 C!k
-D!Bs
+D!Bt
 E!Bb
 F!B2
 G!A
@@ -72703,11 +72702,11 @@ y0
 -
 -
 -
-A!Bt
+A!Bu
 B!B
 C!h
 D!Bb
-E!Bs
+E!Bt
 -
 A!CE
 B!Cc
@@ -74183,7 +74182,7 @@ sotva|ledva
 !Iz
 !C6
 nejlépe,nejlíp|ňejlepši
-!l
+!o
 !Eq
 -
 !g
@@ -74477,7 +74476,7 @@ A!e
 B!s
 C!Bj
 D!x
-E!0
+E!z
 F!r
 G!s
 H!F
@@ -74954,7 +74953,7 @@ K!J
 L!N
 N!M
 O!o
-Q!z
+Q!0
 S!g
 -
 A!F
@@ -75395,7 +75394,7 @@ L!I
 M!Bk
 N!r
 O!Cv
-P!Bu
+P!Bv
 Q!Cy
 R!y
 S!B
@@ -75876,7 +75875,7 @@ zp|sp
 A!F
 B!b
 C!BE
-D!Bu
+D!Bv
 E!i
 F!Bp
 G!D5
@@ -75964,7 +75963,7 @@ poslouch|H|poslóch|H
 zpív|H|spív|I
 vdáv|J|vdáv|J
 -
-!l
+!o
 !/
 !DF
 dříve|prṵ
@@ -76349,7 +76348,7 @@ byl|bíl
 ového|ovího
 !K0
 -
-A!Bt
+A!Bu
 B!A
 C!I
 D!FU
@@ -77599,7 +77598,7 @@ odtamtud,ztama|otamtáď
 !B2
 poprvé|poníprv
 !BD
-!n
+!m
 !g
 tak|tag|||tož|||tak|||ta
 !A
@@ -77702,7 +77701,7 @@ hali|hale
 A!D
 B!De
 C!Cf
-D!Br
+D!Bs
 E!I
 F!Cs
 G!Bl
@@ -78199,7 +78198,7 @@ mus|K|mus|K
 -
 take|take
 už|oš
-!m
+!l
 vloňi|vluňi
 !L
 !e
@@ -78262,7 +78261,7 @@ F!B
 G!Gd
 H!FG
 I!T
-L!z
+L!0
 M!C
 -
 A!F
@@ -78418,10 +78417,10 @@ C!I
 D!C
 E!L
 F!h
-G!Bt
+G!Bu
 H!B
 I!Bb
-J!Bs
+J!Bt
 K!m
 L!o
 M!E
@@ -78615,7 +78614,7 @@ t|P|t|P
 !BW
 !DK
 !Eb
-!l
+!o
 !BP
 !L
 kdy|dê
@@ -80012,7 +80011,7 @@ J!e
 L!Cr
 M!CO
 N!Bm
-O!Bw
+O!Bq
 P!C
 -
 A!B9
@@ -80450,7 +80449,7 @@ také,taky|takê||1
 !BJ
 !L
 !B2
-!l
+!o
 !I
 potom|poton
 !FI
@@ -81290,7 +81289,7 @@ P!U
 Q!b
 R!Y
 T!v
-U!z
+U!0
 V!BH
 W!f
 X!I
@@ -81314,7 +81313,7 @@ u!BC
 v!Bm
 w!B6
 x!H
-0!z
+0!0
 2!g
 6!F
 7!C
@@ -81833,10 +81832,10 @@ E!J
 F!K
 G!E
 H!B
-I!z
+I!0
 K!I
 L!O
-M!Bq
+M!Br
 N!8
 O!x
 P!FS
@@ -82094,7 +82093,7 @@ nejvíce,nejvíc|najvíc
 !M
 !Jl
 !H
-!o
+!n
 !IY
 !Fw
 !6
@@ -82607,7 +82606,7 @@ kovské|kofské
 A!Bg
 B!ED
 C!B
-D!0
+D!z
 E!H
 F!EE
 H!V
@@ -83612,7 +83611,7 @@ t|i|t|i||1
 -
 dozadu|dozadu
 !j
-!l
+!o
 !DW
 málokdy|máṵogdi
 !DM
@@ -83624,7 +83623,7 @@ málokdy|máṵogdi
 !Jp
 !O
 odtud|otát
-!m
+!l
 !Jq
 -
 !i
@@ -84226,7 +84225,7 @@ R!D
 S!f
 T!N
 U!A
-V!Br
+V!Bs
 X!R
 Y!Dq
 f!s
@@ -84239,7 +84238,7 @@ o!C7
 p!Cj
 q!n
 t!1
-x!Bv
+x!Bw
 y!BF
 z!o
 1!BI
@@ -84642,7 +84641,7 @@ někdy,občas|barkedy
 obyčejně|običajňe
 !e
 !J
-!n
+!m
 přesně,zrovna,natruc|akorát
 !9
 !C
@@ -84943,9 +84942,9 @@ W!U
 X!Da
 Y!R
 a!CI
-b!0
+b!z
 e!Ct
-f!Bt
+f!Bu
 g!D
 j!BH
 m!P
@@ -84968,11 +84967,11 @@ BF!CA
 BG!V
 BI!BF
 BJ!L
-BK!z
+BK!0
 BM!H
 BN!B0
 BO!F
-BR!Bu
+BR!Bv
 BU!m
 BW!/
 Bd!o
@@ -86206,7 +86205,7 @@ B!s
 C!BP
 D!Dr
 H!DA
-J!z
+J!0
 K!BW
 L!B
 -
@@ -87073,7 +87072,7 @@ sli|slê
 !Ep
 !i
 -
-A!Bw
+A!Bq
 B!C
 C!Gm
 D!F
@@ -87354,7 +87353,7 @@ nech|g|nech|g
 !Y
 !U
 !T
-!l
+!o
 !CM
 !EF
 kdesi|kdesê
@@ -87504,7 +87503,7 @@ K!F
 L!N
 M!A
 N!n
-O!0
+O!z
 P!t
 Q!D
 R!p
@@ -87936,7 +87935,7 @@ S!C1
 T!i
 U!e
 V!El
-W!0
+W!z
 X!Bn
 Y!DR
 Z!CA
@@ -88559,7 +88558,7 @@ B!A
 C!D6
 D!K
 E!D
-F!Br
+F!Bs
 G!H
 I!CU
 K!V
@@ -88921,7 +88920,7 @@ I!H
 J!E
 L|1|ě|ě|i|i|ě|i|í|ě|í,|ím|ě|ě|ích|ěmi
 M!v
-N!z
+N!0
 P!7
 Q!B4
 R!h
@@ -89147,7 +89146,7 @@ G!s
 H!u
 I!B
 K!N
-L!0
+L!z
 M!d
 N!c
 O!BZ
@@ -90079,7 +90078,7 @@ h!F
 j!B2
 k!X
 l!C
-n!Bt
+n!Bu
 o!9
 p!g
 s!U
@@ -90593,7 +90592,7 @@ A!Ce
 B!I
 C!CL
 D!F
-E!Br
+E!Bs
 F!u
 G!8
 H!CE
@@ -90614,7 +90613,7 @@ V!BQ
 W!i
 X!H
 Y!l
-b!0
+b!z
 c!A
 d!Cm
 e!B4
@@ -91555,7 +91554,7 @@ L!P
 M!k
 N!J
 O!B0
-P!Bq
+P!Br
 Q!D
 R!H
 S!G
@@ -91861,13 +91860,13 @@ C!EJ
 D!Bk
 E!ER
 F!Cu
-G!Bq
+G!Br
 H!W
 I!A
 J!a
 K!FV
 N!5
-P!0
+P!z
 Q!N
 R!B
 S!BF
@@ -92264,7 +92263,7 @@ G!Bk
 H!Cr
 I!J
 J!D
-K!Bs
+K!Bt
 L!C
 M!E
 N!b
@@ -92280,7 +92279,7 @@ a!DU
 b!BH
 e!Dk
 f!Y
-h!z
+h!0
 i!Ch
 j!GA
 k!o
@@ -92600,7 +92599,7 @@ H!F
 I!BH
 J!B
 K!L
-M!Bv
+M!Bw
 -
 A!Iv
 B!U
@@ -93280,7 +93279,7 @@ s|E|s|E||1
 -
 !I
 !Hv
-!l
+!o
 -
 !W
 !B
@@ -93386,7 +93385,7 @@ B!Z
 C!B
 D!BE
 E!A
-F!Br
+F!Bs
 I!BI
 J!B3
 K!BC
@@ -93400,14 +93399,14 @@ S!CL
 T!Y
 U!s
 V!B8
-W!Bs
+W!Bt
 X!P
 Y!G
 a!CT
 c!b
 e!DM
 f!B7
-g!Bu
+g!Bv
 h!N
 j!B2
 l!3
@@ -94076,7 +94075,7 @@ chumáč ovoce|1|brmbále
 !DH
 -
 A!L
-B!z
+B!0
 C!K
 -
 A!V
@@ -94392,7 +94391,7 @@ F!B
 G!m
 H!l
 I!B0
-K!Bu
+K!Bv
 L!BB
 M!EC
 N!K
@@ -95177,7 +95176,7 @@ A!Dr
 B!CE
 C!f
 D!BN
-E!z
+E!0
 F!Cs
 -
 A!I3
@@ -95631,7 +95630,7 @@ babi|1|babi|5.pád
 -
 A!B
 B!BF
-C!Bv
+C!Bw
 D!A
 F!7
 -
@@ -96108,7 +96107,7 @@ tak|toš|||tak
 !N
 teprve,teprov|teprof
 !K
-!o
+!n
 !d
 !Dn
 nahoře|na vrchu
@@ -96544,7 +96543,7 @@ i!Cz
 j!E
 k|2|ga|gy|govi|gu|go|govi|gou|gové|gů|gům|gy|gové|zích|gy
 n!l
-q!Bv
+q!Bw
 -
 A!Y
 B!BM
@@ -97007,8 +97006,8 @@ F!M
 H!m
 I!P
 J!t
-K!z
-L!Bq
+K!0
+L!Br
 M!v
 O!w
 Q!y
@@ -97839,7 +97838,7 @@ v|R|v|R
 !N
 spátky,nazpět,zpět|naspádek
 !GB
-!m
+!l
 !F
 !O
 !R
@@ -98899,8 +98898,8 @@ bili|bilè
 y|ė
 -
 A!I
-B!z
-C!0
+B!0
+C!z
 D!B
 E!L
 F!O
@@ -99401,7 +99400,7 @@ vuje|vuje
 !Bo
 -
 A!CF
-B!Bu
+B!Bv
 C!D
 D!BI
 E!b
@@ -100908,7 +100907,7 @@ vl|S|vl|R
 hezky|hezky
 také|take
 !KL
-!o
+!n
 radši,raději|réši
 někdy|nekdá
 jenom,jen|jenom|||jen
@@ -102082,7 +102081,7 @@ N!E
 O!j
 P!CG
 Q!a
-R!Bw
+R!Bq
 S!m
 T!A
 U!C
@@ -102431,7 +102430,7 @@ H!+
 I!G
 J!M
 K!BG
-L!0
+L!z
 N!g
 O!k
 Q!B
@@ -102761,7 +102760,7 @@ f!M
 h!BT
 i!FR
 m!CS
-n!Bs
+n!Bt
 q!Gl
 s!BD
 u!V
@@ -103230,7 +103229,7 @@ U!ED
 V!C
 W!N
 Y!e
-Z!Bv
+Z!Bw
 b!9
 c!G
 d!B
@@ -103934,7 +103933,7 @@ y0
 -
 -
 A!Bb
-B!Bs
+B!Bt
 -
 A!S
 B!Be
@@ -104174,7 +104173,7 @@ fouk|S|d|X||2
 -
 !Co
 !T
-!l
+!o
 !Ce
 !Cf
 prostě,zkrátka|prosťe
@@ -104295,7 +104294,7 @@ S!Eo
 T!BP
 U!Cm
 V!D2
-W!0
+W!z
 Y!g
 c!CJ
 d!CZ
@@ -104678,7 +104677,7 @@ c!I
 d!E
 f!c
 h!Cp
-i!0
+i!z
 m!/
 n!X
 o!BL
@@ -105368,7 +105367,7 @@ R!Z
 S!q
 T!5
 U!By
-W!Bv
+W!Bw
 X!J
 Y!Bm
 Z!BJ
@@ -106212,7 +106211,7 @@ tak|tag|||toš|||tož
 !A
 !N
 venku|venko|||po venkô
-!o
+!n
 !GE
 bosky|boskê
 spíše|spiž||1
@@ -106315,10 +106314,10 @@ y0
 A!C
 B!M
 C!h
-D!Bt
+D!Bu
 E!B
 F!C0
-G!Bs
+G!Bt
 -
 A!A
 B!H
@@ -106779,7 +106778,7 @@ hu|ho
 -
 A!C
 C!Fe
-D!0
+D!z
 E!1
 F!BL
 G!X
@@ -106818,7 +106817,7 @@ s!P
 t!D
 u!CA
 v!H
-w!Bv
+w!Bw
 x!C6
 y!G
 0!N
@@ -107379,7 +107378,7 @@ m|H|m|H
 -
 !GM
 !Q
-!o
+!n
 !Bf
 !N
 !Db
@@ -107819,7 +107818,7 @@ v|C|v|C
 !CQ
 !GN
 !CL
-!o
+!n
 !Kh
 -
 !N
@@ -107876,7 +107875,7 @@ dím|džym
 !EH
 -
 A!BN
-B!0
+B!z
 C!c
 D!B
 E!W
@@ -108594,7 +108593,7 @@ věsí|v́eśi
 !Ls
 -
 A!B
-B!z
+B!0
 C!EY
 D!A
 E!Ct
@@ -109422,7 +109421,7 @@ náctek|nástek
 !B8
 -
 A!K
-B!Bq
+B!Br
 C!B
 D!R
 E!P
@@ -109461,7 +109460,7 @@ v!I
 w!G
 x|2|o|a,y|ovi,u|a,u|o|ovi,u|em|ové|ů|ům|y|ové|ech|y
 y!b
-z!Bv
+z!Bw
 2!Z
 3!q
 4!D
@@ -109859,7 +109858,7 @@ tak|tag|||tak|||toš
 tenkrát|teŋkrád
 !/
 !Cd
-!o
+!n
 !d
 !w
 !EB
@@ -109955,13 +109954,13 @@ B!R
 C!I
 D!A
 E!J
-F!z
+F!0
 G!B
 H!P
 I!E
 J!D
 K!q
-L!Bq
+L!Br
 M!BR
 N!B6
 O!N
@@ -110702,7 +110701,7 @@ hezky,pěkně|heske
 !Km
 !J6
 !E
-!o
+!n
 !Kn
 !E5
 dneska,dnes|neska
@@ -111464,7 +111463,7 @@ S!6
 T!M
 U!E
 V!C
-W!0
+W!z
 X!N
 Y!CE
 Z!I
@@ -111731,7 +111730,7 @@ nedočk|Y|nedostar|X
 !BM
 !Bp
 !Gj
-!n
+!m
 silněji|sêlňéž 
 tady|tadi|||tade
 !G
@@ -111853,7 +111852,7 @@ b!CH
 c!EJ
 d!B7
 e!I
-g!Bv
+g!Bw
 i!J
 k!E
 l!Ee
@@ -112143,7 +112142,7 @@ tak|tag|||tož|||toš
 !GQ
 !Bm
 !K
-!o
+!n
 !Ja
 -
 !A
@@ -113620,7 +113619,7 @@ dost|hodňe
 !E7
 kdepak|depak||2|gdepak||2
 najednou|najednou||2
-!m
+!l
 někde|negde||2
 německy|ňemecki||2
 nikde|ňigde||2
@@ -113812,7 +113811,7 @@ A!B
 C!2
 D!A
 E!M
-F!Bw
+F!Bq
 H!h
 I!K
 J!O
@@ -115392,7 +115391,7 @@ D!A
 E!J
 F!E
 G!B
-H!z
+H!0
 I!X
 J!H
 K!CO
@@ -115710,7 +115709,7 @@ B!Ci
 C!BH
 D!O
 E!C
-F!Bt
+F!Bu
 H!BE
 I!B
 K!CU
@@ -116138,7 +116137,7 @@ B!Bx
 C!Ca
 D!+
 E!Ej
-F!Bw
+F!Bq
 G!Bc
 H!CL
 I!Q
@@ -117948,10 +117947,10 @@ ovském|ofskim
 -
 A!N
 B!h
-C!Bt
+C!Bu
 D!B
 E!Bb
-F!Bs
+F!Bt
 -
 A!FA
 B!1
@@ -119333,7 +119332,7 @@ A!r
 B!D
 C!e
 D!b
-E!Bu
+E!Bv
 -
 A!Er
 B!DW
@@ -119495,7 +119494,7 @@ Z!C
 a!B
 c!B8
 d!j
-e!0
+e!z
 h!W
 i!X
 j!D
@@ -120359,7 +120358,7 @@ D!T
 E!DV
 F!BI
 G!V
-H!z
+H!0
 I!E
 J!B
 K!A
@@ -120380,7 +120379,7 @@ d!x
 f!C
 g!4
 h!ER
-j!Br
+j!Bs
 l!Fd
 m!6
 o!c
@@ -120765,7 +120764,7 @@ I!V
 J!BP
 K!Bh
 L!B
-M!z
+M!0
 N!Bm
 O!F
 P!EP
@@ -121118,7 +121117,7 @@ porodní asistentka|1|bábinka
 A!T
 B!Bp
 C!r
-D!0
+D!z
 E!FH
 F!Ba
 -
@@ -121429,7 +121428,7 @@ L!BJ
 M!BM
 N!B1
 O!CF
-P!z
+P!0
 Q!N
 U!p
 V!Bj
@@ -121456,8 +121455,8 @@ v!F
 w|0|o|a,e|u,i|o|o|u,i,ě|em|a|,ou,ouch|ům|a|a|ech,ou,ouch|y
 x!EW
 z!J
-0!Bu
-1!Br
+0!Bv
+1!Bs
 -
 A|1|?×13|vama
 B|1|?|ve|?×3|vě|?×8
@@ -121715,7 +121714,7 @@ tady,tu|to
 !BI
 vepředu|napředko
 !Y
-!n
+!m
 nahoře|navrcho||1
 -
 !C+
@@ -121806,7 +121805,7 @@ B!B
 C!P
 D!G
 E!BD
-F!Bv
+F!Bw
 G!CX
 H!BX
 I!Bn
@@ -122166,7 +122165,7 @@ M!Cf
 N!H
 O!BB
 Q!GB
-R!z
+R!0
 S!CE
 U!Bp
 V!C5
@@ -122604,7 +122603,7 @@ D!1
 E!BE
 F!f
 G!V
-H!Bw
+H!Bq
 I!G
 J!E
 K!BH
@@ -122775,7 +122774,7 @@ couv|O|cóf|O
 podle|podle
 !I
 !6
-!o
+!n
 !Bh
 -
 i||ê|||aji
@@ -122881,7 +122880,7 @@ G!V
 I!Dz
 J!r
 K!M
-L!Bv
+L!Bw
 M!F
 N!Bk
 O!v
@@ -122893,7 +122892,7 @@ U!i
 V!Ck
 W!1
 X!9
-Z!Br
+Z!Bs
 a!/
 b!e
 d!Bg
@@ -123496,7 +123495,7 @@ na ramenu|1|na rameňe||1
 -
 A!h
 B!Bb
-C!Bs
+C!Bt
 D!C+
 E!FV
 F!DD
@@ -124073,7 +124072,7 @@ Y!2
 Z!Bz
 b!BM
 c!H
-d!Bv
+d!Bw
 e!K
 f!g
 -
@@ -124407,7 +124406,7 @@ vému|vimô
 !Dr
 -
 A!Bb
-B!Bs
+B!Bt
 C!Bo
 D!3
 E!DS
@@ -124827,7 +124826,7 @@ R!C
 S!F
 T!A
 U!K
-V!Bt
+V!Bu
 W!Z
 X!J
 Z!h
@@ -125488,7 +125487,7 @@ hu|hô
 !M
 ré|ri
 -
-A!Bw
+A!Bq
 B!M
 C!Bn
 D!A
@@ -126004,7 +126003,7 @@ váním|váňim
 !Da
 -
 A!B
-B!Bw
+B!Bq
 D!Q
 E!BF
 F!A
@@ -126694,7 +126693,7 @@ zil|zíł
 A!FK
 B!D
 C!1
-D!0
+D!z
 G!T
 H!P
 I!t
@@ -127176,7 +127175,7 @@ máme ještě mlátit v seníku|1|máme ešče mṵáťiť kožuchi
 -
 -
 A!A
-B!0
+B!z
 C!D
 E!w
 G!H
@@ -128405,7 +128404,7 @@ G!L
 I!Cp
 J|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách|kama
 K!E
-L!Bs
+L!Bt
 M!W
 N!v
 O!R
@@ -129111,7 +129110,7 @@ K!j
 L!Cz
 M!b
 N!BK
-P!z
+P!0
 Q!c
 R!L
 -
@@ -129906,7 +129905,7 @@ D!BT
 E!g
 F!Bb
 G!h
-H!Bs
+H!Bt
 -
 A!H
 B!U
@@ -129981,7 +129980,7 @@ opravdu|kór
 nazpátek|nazpátek
 jen|jen
 !K+
-!l
+!o
 !EH
 !F
 !O
@@ -130021,7 +130020,7 @@ jdou|jdú
 -
 A!u
 B!B
-C!0
+C!z
 D!S
 E!U
 F!K
@@ -131537,7 +131536,7 @@ U!J
 W!F
 X!E
 Y!Bp
-a!Bq
+a!Br
 b!C8
 c!D
 d|0|lo|la|lu|lo|lo|lu|lem|la|el|lům|la|la|lech|ly
@@ -131546,7 +131545,7 @@ h!T
 i!BX
 j!Ce
 k!B
-l!Bt
+l!Bu
 -
 A|3|človjek|?×13
 B!F5
@@ -132574,7 +132573,7 @@ b!BS
 d!d
 e!E
 f!t
-h!Bw
+h!Bq
 i!o
 j!s
 k!9
@@ -132591,7 +132590,7 @@ z!Cx
 0!By
 3!2
 4!ET
-5!Bt
+5!Bu
 8!W
 +!FK
 BA!J
@@ -132628,7 +132627,7 @@ CC!CK
 CD!Bo
 CE!Eh
 CG!Go
-CI!0
+CI!z
 CL!Cc
 CQ!Fd
 CR!n
@@ -134022,7 +134021,7 @@ D!B
 F!h
 G|2||a|u,ovi|a|e|u,ovi|em|i,é|ů,í|ům|y|i,é|ech|y
 H!o
-I!Bw
+I!Bq
 J!Dv
 K!b
 L!v
@@ -134043,7 +134042,7 @@ d!B6
 e!DW
 g!Gu
 h!H
-i!Bu
+i!Bv
 -
 A|0|?×3|deň|?×3|ďňi|?×6
 B!l
@@ -134903,7 +134902,7 @@ F!A
 G!J
 H!O
 I!v
-J!Bq
+J!Br
 K!B
 L!f
 M!Y
@@ -135188,7 +135187,7 @@ byl|bel
 -
 A!o
 B!p
-C!Bw
+C!Bq
 E!D
 F!BT
 G!X
@@ -135200,7 +135199,7 @@ L!E
 M!B
 N!B5
 O!A
-P!Bt
+P!Bu
 Q!m
 R!Ds
 T!T
@@ -135553,7 +135552,7 @@ dneska|dnesky
 !BI
 vždy|decke|||decky
 !C
-!m
+!l
 raději,radši|réši
 !Bi
 !2
@@ -135561,7 +135560,7 @@ raději,radši|réši
 takříkajíc,říkajíc|takřikajic
 !Kv
 !E
-!m
+!l
 !DM
 -
 !B
@@ -135782,7 +135781,7 @@ a!C
 b!CL
 d!G1
 e!Fh
-f!Bt
+f!Bu
 g!C0
 h!P
 i!D
@@ -136088,7 +136087,7 @@ původně|púvoďňe
 !G
 !Jl
 !IQ
-!n
+!m
 strachy|strachi
 -
 !DI
@@ -136175,11 +136174,11 @@ D!V
 E!B
 F!G
 G!A
-H!Bw
+H!Bq
 J!Dx
 K!O
 L!g
-N!Br
+N!Bs
 P!Bi
 Q!BA
 R!FY
@@ -136423,7 +136422,7 @@ pjekňe|pjekňe
 !A
 !Be
 !IT
-!o
+!n
 zase|zaséj|||záz
 zaz|záz|||zaséj
 zpět|spátky
@@ -136527,7 +136526,7 @@ O!P
 P|1|-×7|áně|aní|aním|áně|áně|aních|aněmi
 Q!B0
 R!g
-S!Bq
+S!Br
 T!K
 U!Q
 V!k
@@ -136902,7 +136901,7 @@ S!Ct
 U!CK
 V!Z
 W!BY
-X!Bt
+X!Bu
 Y!CC
 -
 A!P
@@ -137174,7 +137173,7 @@ plno|pľno
 !DA
 !D+
 !j
-!o
+!n
 !Bd
 podemnou|podemnú
 !CO
@@ -137382,7 +137381,7 @@ umír|R|umír|R
 !EY
 !E
 !Hw
-!n
+!m
 -
 !D
 !A
@@ -137478,7 +137477,7 @@ G!B1
 H!1
 I!CH
 J!P
-K!Bw
+K!Bq
 L!Cd
 M|1|-×7|Prušánky|Prušánek|Prušánkám|Prušánky|Prušánky|Prušánkách|Prušánkami
 O!Cr
@@ -138258,7 +138257,7 @@ neř|G|neř|G
 !J
 !F1
 !EA
-!n
+!m
 jestlipak|ešipak
 sem|se
 jestli|ešik
@@ -138364,8 +138363,8 @@ M!K
 N!BM
 O!K
 P!J
-Q!z
-R!z
+Q!0
+R!0
 S!O
 T!W
 U!i
@@ -139054,8 +139053,8 @@ H!Cg
 I!B
 J!n
 K!Z
-L!Br
-M!Bq
+L!Bs
+M!Br
 N!I
 O!BH
 P!A
@@ -139063,7 +139062,7 @@ Q!Bf
 R|3||e|i,ovi|e|i|i,ovi|em|ové|ů|ům|e|ové|ích|i
 S!Bi
 T!S
-U!0
+U!z
 W!5
 X!L
 Z!b
@@ -141536,7 +141535,7 @@ babičko|1|babi
 -
 A!a
 B!Y
-C!Br
+C!Bs
 D!M
 E!B
 F!K
@@ -142395,7 +142394,7 @@ E!V
 F!EH
 G!L
 H!f
-J!Bq
+J!Br
 K!Bn
 -
 A!BD
@@ -142506,7 +142505,7 @@ ve dvoře|0|ve dvoře
 !H
 -
 -
-A!0
+A!z
 B!BY
 C!EH
 D|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kám|kách|ka|kám|ky
@@ -142829,7 +142828,7 @@ G|-1|ky|ek|kám|ky|ky|kách|ky|-×7
 H|-1||a|u||e|u,ě|em|-×7
 I|3||a,u|u||e|u,ě|em|-×7
 J|1|e||cím|e|e|ích|emi|-×7
-K!Bu
+K!Bv
 L!C3
 M!F
 N!BK
@@ -143307,7 +143306,7 @@ kolikrát|kolikrát
 !Bo
 !B1
 !Kp
-!m
+!l
 oněkdy|onehdi
 pořád|pořát|||pořád
 !M
@@ -143321,7 +143320,7 @@ teď,nyní|fčíl|||fčíł
 !DE
 !z
 !s
-!o
+!n
 !BN
 !Bd
 -
@@ -143953,7 +143952,7 @@ B!ET
 C!A
 D!DW
 E!J
-F!0
+F!z
 G!C
 H!Q
 I!S
@@ -144492,7 +144491,7 @@ B!Ek
 C!Dq
 D!BQ
 E!T
-F!z
+F!0
 G!S
 H!A
 I!a
@@ -146105,9 +146104,9 @@ K!Z
 L!Y
 M!H
 N!k
-O!Bq
+O!Br
 P!BJ
-Q!z
+Q!0
 R|3|en|ne|ni,nu|en|ne,ni|ni,nu,ne|nem|ni,ny|ní,nů|nům|ni,ny|ni,ny|nech|ny
 S!F
 T!E
@@ -146831,7 +146830,7 @@ V!D
 W!Bb
 X!H
 Y!BR
-Z!Bs
+Z!Bt
 a!f
 c!EH
 d!BK
@@ -147262,7 +147261,7 @@ D!A
 E!J
 F!O
 G!v
-H!Bq
+H!Br
 I!f
 J!3
 K!k
@@ -147281,7 +147280,7 @@ Y!j
 Z!T
 a!GY
 b!L
-c!0
+c!z
 d!Ct
 -
 A!Hb
@@ -147655,7 +147654,7 @@ B|127||?×9|pude|?×28
 |A||A
 |B||B
 -
-!l
+!o
 !ER
 !Gr
 -
@@ -147921,7 +147920,7 @@ a!O
 b!C
 f!g
 h!j
-i!0
+i!z
 k!W
 l!X
 m!D
@@ -148794,7 +148793,7 @@ pl|C|pl|C
 |D||D
 -
 !A
-!n
+!m
 !BB
 -
 !C
@@ -150227,7 +150226,7 @@ zůsta|U|osta|M
 !LN
 malinko|máľúnko
 naposledy,naposled|naposľedy
-!m
+!l
 odevšad|zotvšúť
 onehdy,oněkdy,oněkdá|onehdy
 !BD
@@ -150485,7 +150484,7 @@ E!BU
 G!L
 H!1
 I!Cn
-J!Bw
+J!Bq
 K!6
 L!Eh
 N!GH
@@ -152075,7 +152074,7 @@ musE|C|musE|C
 tady|tedy
 !B
 nyní,teď|fčí
-!m
+!l
 !BQ
 !K
 !J
@@ -152200,7 +152199,7 @@ K!n
 L!l
 M!c
 N!BV
-O!0
+O!z
 P!BR
 Q!B
 R!E
@@ -152214,7 +152213,7 @@ b!o
 d!BQ
 e!L
 f!BO
-g!z
+g!0
 h!BS
 i!i
 k!e
@@ -153074,7 +153073,7 @@ U!H
 V!M
 W!G1
 Y|0|o|a|u|o|o||em|a||ům|a|a|ech|y
-Z!0
+Z!z
 b!C
 d!c
 e!m
@@ -153553,10 +153552,10 @@ A!D
 B!P
 C!C2
 D!I
-E!0
+E!z
 F!O
 G!A
-H!Bq
+H!Br
 I!v
 J!J
 K!Y
@@ -154463,7 +154462,7 @@ C!D
 D!B
 E!A
 F!O
-G!Bq
+G!Br
 H!3
 I!f
 J!k
@@ -156170,7 +156169,7 @@ F!B6
 G!C/
 H!p
 I!L
-J!Bt
+J!Bu
 K!B
 L!h
 -
@@ -156571,7 +156570,7 @@ co jsi šil|1|cos šél
 -
 -
 A!Bb
-B!Bs
+B!Bt
 C!BV
 D!n
 -
@@ -156641,7 +156640,7 @@ I!O
 J!j
 K!D
 L!H
-M!Br
+M!Bs
 -
 A!K
 B!R
@@ -157036,7 +157035,7 @@ zdí|zďi
 A!L
 B!V
 C!B
-D!z
+D!0
 -
 A!3
 B!d
@@ -157143,7 +157142,7 @@ lilo|lilu
 žu|žo
 !g
 -
-A!0
+A!z
 B!I
 C!N
 D!Q
@@ -157707,7 +157706,7 @@ zept|A|zopt|A
 m|B|m|B
 zůsta|C|zosta|C
 -
-!l
+!o
 -
 !G
 -
@@ -159993,7 +159992,7 @@ flámovat|1|bôžirovat
 A!U
 B!C3
 C!BH
-D!0
+D!z
 E!B
 F!A
 G!D
@@ -160003,7 +160002,7 @@ M!CB
 O!7
 P!Y
 R!V
-T!z
+T!0
 U!Ba
 V!C/
 W|3|el|le|li|el|li|li|lem|le|lů|lům|le|le|lích|li
@@ -160982,7 +160981,7 @@ zept|f|zept|k
 chytře|chêtře
 !U
 !T
-!l
+!o
 již,už|jôž
 !e
 pevně|pevňe
@@ -162292,7 +162291,7 @@ zpovzdálí|pozdaleka
 !u
 !BG
 !b
-!n
+!m
 -
 !I
 !C
@@ -162800,7 +162799,7 @@ C!l
 D!9
 E!B
 F!i
-G!Bu
+G!Bv
 -
 A!F8
 B!O8
@@ -162942,14 +162941,14 @@ C!K
 D!F
 F!Bb
 G!h
-H!Bs
+H!Bt
 I!C
 J!c
 K!B
 L!D
 M!A
 N!N
-O!0
+O!z
 R!BI
 -
 A|3|?×6|fcem|?×7
@@ -163622,7 +163621,7 @@ F!E
 G!K
 H!Dn
 I!y
-J!z
+J!0
 K!m
 L!G2
 M!I
@@ -164149,7 +164148,7 @@ A!L
 -
 |A||A
 -
-!l
+!o
 -
 -
 !C
@@ -164389,7 +164388,7 @@ B!K
 C!R
 D!A
 E!l
-F!Bv
+F!Bw
 G!H
 H!J
 I!s
@@ -164405,7 +164404,7 @@ R!L
 S|1|-×7|e|í|ím|e|e|ích|mi
 T!E+
 U!N
-V!Br
+V!Bs
 a!F
 b!BZ
 c!i
@@ -165640,7 +165639,7 @@ A!G
 B!L
 C!E
 D!j
-E!0
+E!z
 G!Z
 H!J
 I!C
@@ -167879,7 +167878,7 @@ y0
 -
 A!B
 B!Bb
-C!Bs
+C!Bt
 -
 A!D
 B!S
@@ -168250,7 +168249,7 @@ G!H
 H!D
 I!I
 J!Bc
-K!Bs
+K!Bt
 M!B
 O!v
 P!Ee
@@ -168662,7 +168661,7 @@ Y!g
 b!v
 d!Cq
 e!B9
-f!0
+f!z
 i!S
 j!Bi
 k!J
@@ -169036,7 +169035,7 @@ R!E
 S!F
 T!Dd
 U!BV
-V!0
+V!z
 W!L
 X!H
 Y!2
@@ -169659,7 +169658,7 @@ vedoucího procesí poutníků|1|celfotra
 -
 -
 -
-A!z
+A!0
 B!B
 -
 A!5
@@ -170008,7 +170007,7 @@ býv|F|býv|F
 !J
 vevnitř|vevnitřku
 !B
-!m
+!l
 nahoře|nahóře
 -
 !H
@@ -170114,7 +170113,7 @@ L!BZ
 M!D
 N!DZ
 O!2
-P!Br
+P!Bs
 Q!b
 R!A
 T|3||a|u||u|u|em|-×7
@@ -170419,7 +170418,7 @@ I!G
 J!f
 K!x
 L!8
-M!0
+M!z
 N!BP
 O!C6
 P|3|-×7|y|ů|ům|y|y|ech|y
@@ -170626,7 +170625,7 @@ A!G
 B!A
 C!J
 D!E
-E!z
+E!0
 F!I
 G!M
 -
@@ -172374,7 +172373,7 @@ zdily|zďile
 A!M
 B!U
 C|0|?×14
-D!z
+D!0
 E!B
 F!Q
 G!BM
@@ -173604,7 +173603,7 @@ natah|K|natah|K
 !x
 !L
 !X
-!m
+!l
 !D2
 !J
 !EC
@@ -174641,11 +174640,11 @@ y0
 -
 -
 -
-A!Bt
+A!Bu
 B!B
 C!h
 D!Bb
-E!Bs
+E!Bt
 -
 A!CE
 B!Cc
@@ -174698,10 +174697,10 @@ y0
 -
 -
 A!h
-B!Bt
+B!Bu
 C!B
 D!Bb
-E!Bs
+E!Bt
 -
 A!1
 B!CE
@@ -174753,11 +174752,11 @@ y0
 -
 -
 -
-A!Bt
+A!Bu
 B!B
 C!h
 D!Bb
-E!Bs
+E!Bt
 -
 A!CE
 B!Cc
@@ -176011,7 +176010,7 @@ také v sprnu|1|též f srpňe
 -
 -
 A!w
-B!Bu
+B!Bv
 -
 A!EB
 B!DI
@@ -176342,7 +176341,7 @@ takové nějaké|1|nejaki taki
 -
 -
 -
-A!Bt
+A!Bu
 -
 A!CE
 -
@@ -176562,7 +176561,7 @@ Q!F
 R!f
 S!Dm
 T!DA
-W!z
+W!0
 Y!i
 Z!Di
 a!O
@@ -176973,7 +176972,7 @@ kdysi|kdysik
 !BR
 pořádně|počádňe
 potichu|poťichu
-!n
+!m
 přece|přecé
 přímo|přímo
 !CO
@@ -179503,7 +179502,7 @@ y0
 -
 -
 -
-A!z
+A!0
 -
 A!C0
 -
@@ -180594,7 +180593,7 @@ vali|valǝ
 rné|rny
 !Dt
 -
-A!z
+A!0
 B!3
 C|2||e|i,ovi|e|i,e|ovi|em|i,ové|ů|ům|e|i,ové|ích|i
 D!I
