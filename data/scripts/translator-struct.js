@@ -6395,7 +6395,6 @@ class LanguageTr{
         }
 
         // Setřídit
-        let outBeforeLen=out.length;
         out = out.sort((a, b) => {
             if (typeof a.from == 'string') return a.from.localeCompare(b.from);
             else {
@@ -6419,7 +6418,7 @@ class LanguageTr{
         if (out.length == 0) {           
             let no = document.createElement("p");
             no.style = "font-style: italic";
-             if (outBeforeLen>0) no.innerText = "Nebylo nic konkrétnějšího nalezeno.";
+             if ((input).length>0) no.innerText = "Nebylo nic konkrétnějšího nalezeno.";
              else no.innerText = "Slovníček tohoto místa je prázdný.";
             display.appendChild(no);
             return display;
