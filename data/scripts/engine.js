@@ -1282,7 +1282,7 @@ var Load = function () {
     dicAbc = loadSetting(true, 'setting-dic-abc', "Boolean");
     
     // Transkripce
-    TranscriptionText = loadSetting("default", 'Transcription',  "String");
+    TranscriptionText = loadSetting("czechnormal", 'Transcription',  "String");
     if (document.getElementById("sTranscription") !== null) document.getElementById("sTranscription").value = TranscriptionText;
     transcription = SetCurrentTranscription(TranscriptionText);
 
@@ -3439,21 +3439,32 @@ function SetCurrentTranscription(transCode) {
     if (transCode == "silezian_slabikorzovy") return [
         { from: "bje", to: "bie" },
         { from: "vje", to: "vie" },
+        { from: "mje", to: "mie" },
+        { from: "dźe", to: "dzie" },
         { from: "vě", to: "vie" },
         { from: "pě", to: "pie" },
-        { from: "mje", to: "mie" },
-        { from: "mě", to: "mie" },
-        { from: "dźe", to: "dzie" },
-        { from: "ňa", to: "nia" },
         
         { from: "tě", to: "tie" },
         { from: "ťe", to: "tie" },
         
+        { from: "ňa", to: "nia" },
         { from: "ňe", to: "nie" },
         { from: "ně", to: "nie" },
         { from: "ńe", to: "nie" },
-
+        { from: "́ńa", to: "nia" },
+        { from: "́ńi", to: "ni" },
+        
         { from: "ṕi", to: "pi" },
+        { from: "b́i", to: "bi" },
+        { from: "b́y", to: "by" },
+        
+        { from: "́v́o", to: "vio" },
+        { from: "́v́i", to: "vi" },
+        
+        { from: "mě", to: "mie" },
+        { from: "́ḿe", to: "mie" },
+        { from: "́ḿo", to: "ḿio" },
+        { from: "́ḿů", to: "ḿió" },
 
         { from: "ća", to: "cia" },
         { from: "će", to: "cie" },
@@ -3502,6 +3513,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
+
+        { from: "ĺ", to: "l" },
 
         { from: "ŋ", to: "n" },
     ];
