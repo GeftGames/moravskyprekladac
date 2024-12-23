@@ -3234,6 +3234,10 @@ function SetCurrentTranscription(transCode) {
         { from: "ďe", to: "dě" },
         { from: "ťe", to: "tě" },
         { from: "ňe", to: "ně" }, 
+
+        { from: "Ďe", to: "Dě" },
+        { from: "Ťe", to: "Tě" },
+        { from: "Ňe", to: "Ně" }, 
         
         { from: "ni", to: "ny" },
         { from: "ní", to: "ný" },

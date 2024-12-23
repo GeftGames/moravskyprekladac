@@ -10,6 +10,7 @@ var ItemPronoun_pattensFrom, ItemPronoun_pattensTo;
 var ItemNumber_pattensFrom, ItemNumber_pattensTo;
 var ItemVerb_pattensFrom, ItemVerb_pattensTo;
 var lastAppMapper;
+const eArrow=" → ";
 
 console.log("test1.1", "ok");
 //if (!String.prototype.replaceAll) {
@@ -19,7 +20,6 @@ console.log("test1.1", "ok");
     };
 //}
 console.log("test1.2", "ok");
-
 class Cite{ 
     constructor(){
         this.rawCite;
@@ -559,7 +559,7 @@ class ItemSentence {
         p.appendChild(f);
 
         // arrow
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         // ro
         for (let to of this.output) {
@@ -605,7 +605,7 @@ class ItemSentencePart {
         f.innerText = this.input;
         p.appendChild(f);
 
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         for (let to of this.output) {
             let t = document.createElement("span");
@@ -896,7 +896,7 @@ class ItemNoun {
         p.appendChild(f);
 
         // arrow
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
         let mapper_from;
 
         // to
@@ -931,7 +931,7 @@ class ItemNoun {
             // text
             let t = document.createElement("span");
             t.innerText = ApplyPostRules(str_to);
-            console.log(t.innerText, str_to);
+         //   console.log(t.innerText, str_to);
             t.addEventListener("click", () => {
                 ShowPageLangD(pattern.GetTable(body));
             });
@@ -1183,7 +1183,7 @@ class ItemSimpleWord {
     GetDicForm(name) {
         if (!this.show) return null;
         let p = document.createElement("p");
-        //let f = document.createElement("span");
+        
         let f;
         if (Array.isArray(this.input)) {
             f = this.input.join(", ");
@@ -1192,7 +1192,7 @@ class ItemSimpleWord {
         //p.appendChild(f);        
         p.appendChild(document.createTextNode(f));
         
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         let out = [];
         for (let i = 0; i < this.output.length; i++) {
@@ -1202,9 +1202,6 @@ class ItemSimpleWord {
             out.push(o);
             if (o == "") return null;
 
-            /*let t = document.createElement("span");
-            t.innerText = o;
-            p.appendChild(t);*/
             p.appendChild(document.createTextNode(o));
             
             // cites
@@ -1213,7 +1210,7 @@ class ItemSimpleWord {
             if (to.Comment != undefined) {
                 if (to.Comment != "") {
                     let c = document.createElement("span");
-                    c.innerText = to.Comment;
+                    c.innerText = " "+to.Comment;
                     c.className = "dicMeaning";
                     p.appendChild(c);
                 }
@@ -1276,7 +1273,7 @@ class ItemAdverb {
             if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
         }
        
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         let out = [];
         
@@ -1446,7 +1443,7 @@ class ItemPhrase {
         f.innerText = inp;
         p.appendChild(f);
 
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         let t = document.createElement("span");
         t.innerText = ApplyPostRules(out);
@@ -1602,7 +1599,7 @@ class ItemPreposition {
             if (ri!=this.input[this.input.length-1])p.appendChild(document.createTextNode(", "));
         }
 
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         //for (const to of this.output) {
         let out=[];
@@ -3031,7 +3028,7 @@ class ItemPronoun {
         p.appendChild(f);
 
         // Arrow
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         // To
         let to_out=[];
@@ -3537,7 +3534,7 @@ class ItemAdjective {
         let f = document.createElement("span");
         f.innerText = from;
 
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         let t = document.createElement("span");
         t.innerText = to;
@@ -4306,7 +4303,7 @@ class ItemNumber {
         p.appendChild(document.createTextNode(fromText));
 
         // Arrow
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         // To
         let toShapes=[];
@@ -5216,7 +5213,7 @@ class ItemVerb {
         p.appendChild(f);
         
         // Arrow
-        p.appendChild(document.createTextNode(" → "));
+        p.appendChild(document.createTextNode(eArrow));
 
         // To
         for (let ti=0; ti<arr_forms.length; ti++) {
@@ -8347,12 +8344,13 @@ function ApplyTranscription(text) {
     let str=ReplaceMoravian(text);
 
     // do not replac emultiple times
-    let PatternAlrearyReplaced = [];
-
-    for (let i = 0; i <= str.length; i++) {
-        PatternAlrearyReplaced.push("o");
-    }
-
+  /*  let PatternAlrearyReplaced = [];
+    
+    for (let i = 0; i <= str.length; i++) {//o=1, x=0
+        PatternAlrearyReplaced.push(true);
+    }*/
+    let PatternAlrearyReplaced = new Array(str.length+1).fill(true); 
+    
     let ret = str;
     for (let g of transcription) {
         
@@ -8363,7 +8361,7 @@ function ApplyTranscription(text) {
                 // Pokuď néni obsazene
                 let doReplace = true;
                 for (let i = startOfReplace; i < g.from.length; i++) {
-                    if (PatternAlrearyReplaced[i] != "o") {
+                    if (PatternAlrearyReplaced[i] != 1) {
                         doReplace = false;
                         break;
                     }
@@ -8373,7 +8371,7 @@ function ApplyTranscription(text) {
                     ret = ret.substring(0, str.length - g.from.length) + g.to;
 
                     for (let i = startOfReplace; i < g.from.length; i++) {
-                        PatternAlrearyReplaced[i] = "x";
+                        PatternAlrearyReplaced[i] = false;
                     }
                 }
             }
@@ -8391,7 +8389,7 @@ function ApplyTranscription(text) {
                     // Pokuď néni obsazene
                     let doReplace = true;
                     for (let i = startOfReplace; i < g.from.length; i++) {
-                        if (PatternAlrearyReplaced[i] != "o") {
+                        if (PatternAlrearyReplaced[i] != true) {
                             doReplace = false;
                             break;
                         }
@@ -8401,7 +8399,7 @@ function ApplyTranscription(text) {
                         ret = ret.replace(g.from, g.to);
 
                         for (let i = startOfReplace; i < g.from.length; i++) {
-                            PatternAlrearyReplaced[i] = "x";
+                            PatternAlrearyReplaced[i] = false;
                         }
                     } else break;
                 } else break;
