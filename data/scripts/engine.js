@@ -3280,7 +3280,6 @@ function SetCurrentTranscription(transCode) {
         { from: "̥á", to: "̥á" },
         { from: "ə", to: "e" },
         { from: "ṵ", to: "ṷ" },
-
         
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
@@ -3321,6 +3320,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ó́", to: "ó" },
         { from: "ṵ", to: "u̯" },
         { from: "ạ́", to: "̥á" },
+        { from: "'", to: "’" },
     ];
     
     // hanácká
@@ -3442,10 +3442,10 @@ function SetCurrentTranscription(transCode) {
 
     if (transCode == "silezian_slabikorzovy") return [
         { from: "bje", to: "bie" },
-        { from: "vje", to: "vie" },
+        { from: "vje", to: "wie" },
         { from: "mje", to: "mie" },
         { from: "dźe", to: "dzie" },
-        { from: "vě", to: "vie" },
+        { from: "vě", to: "wie" },
         { from: "pě", to: "pie" },
         
         { from: "tě", to: "tie" },
@@ -3462,8 +3462,8 @@ function SetCurrentTranscription(transCode) {
         { from: "b́i", to: "bi" },
         { from: "b́y", to: "by" },
         
-        { from: "́v́o", to: "vio" },
-        { from: "́v́i", to: "vi" },
+        { from: "́v́o", to: "wio" },
+        { from: "́v́i", to: "wi" },
         
         { from: "mě", to: "mie" },
         { from: "́ḿe", to: "mie" },
