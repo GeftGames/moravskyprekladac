@@ -1229,7 +1229,7 @@ class ItemSimpleWord {
             p.appendChild(r);
         }
 
-        p.appendChild(mapper_link(f.innerText, out));
+        p.appendChild(mapper_link(f, out));
 
         return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p };
     }
