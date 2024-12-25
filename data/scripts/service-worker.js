@@ -1,32 +1,24 @@
-var version="2.1";
+var version="3.0";
 var cacheName = 'moravskyprekladac-ver-'+version;
 var filesToCache = [
-    "index.php",
+    "index.html",
 
     "data/scripts/engine.js",
     "data/scripts/langs.js",	
     "data/scripts/inicialize.js",
     "data/scripts/mapper.js",
     "data/scripts/translate.js",
+    "data/scripts/map-lookup.js",
     "data/scripts/rhill-voronoi-core.js",
 	
     "data/styles/style.css",
-    "data/styles/themes/dark.css",
-    "data/styles/themes/nightdark.css",
-    "data/styles/themes/light.css",
 
     "favicon.ico",
-    "v2.trw_a",
+    "v3.trw_a",
 
     "data/images/icon64.png",
     "data/images/icon96.png",
     "data/images/icon512.png",
-
-    "data/errorPages/index400.html",
-    "data/errorPages/index401.html",
-    "data/errorPages/index403.html",
-    "data/errorPages/index404.html",
-    "data/errorPages/index503.html",
 
     "data/manifests/manifestEN.json",
     "data/manifests/manifestHA.json",
