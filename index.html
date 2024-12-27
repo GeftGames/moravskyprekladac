@@ -460,9 +460,12 @@
                         <p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
                         <span id="textAbout" onclick="PopPageShow('about');/*ShowAboutPage()*/" class="settingLink" data-href="#about">O překladači</span>
                         <a id="textAddon" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://github.com/GeftGames/moravskyprekladac-browser-addon/tree/main" class="settingLink" data-href="#about">Doplněk do prohlížeče</a>
+                    </div> 
+                    <div class="settingSection">
+                        <p style="display:inline-block" id="textSettingsHello" class="settingHeader">Dejte nám vědět</p>
                         <a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
                         <p>Chcete-li přidat více slov zároveň napište na <a href="mailto:geftgames@gmail.com">e-mail</a> nebo veřejně na <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a></p>
-                       
+                        <span id="textFeedback" onclick="PopPageShow('feedback');" class="settingLink">Rychlá zpětná vazba</span>
                         <!--<span id="textNews"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">Novinky</span>-->
                         <!-- report -->
                         <div class="settingItem">
@@ -761,15 +764,18 @@
                                     <div class="mapperNavrh" onclick="navrhClick('míč')">MÍČ</div>
                                     <div class="mapperNavrh" onclick="navrhClick('brambory')">BRAMBORY</div>
                                     <div class="mapperNavrh" onclick="navrhClick('žena')">ŽENA</div>
-
+                                    
                                     <!-- změna části slova-->
                                     <div class="mapperNavrh" onclick="navrhClick('slunce')">SLUNCE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('hlava')">HLAVA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=noci|typ=pods|cislo=j|pad=6}>')">o NOCI</div>
                                     <!--	<div class="mapperNavrh" onclick="navrhClick('kachna')">KACHNA</div>-->
-
+                                    
                                     <!-- Atipické skloňování-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div>
                                     <div class="mapperNavrh" onclick="navrhClick('stromům')">ke STROMŮM</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=děvče|typ=pods|cislo=j|pad=1}>')">DĚVČE</div>
 
                                     <!-- Krátkost-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=práce|typ=pods|cislo=j|pad=1}>')">PRÁCE</div>
@@ -778,6 +784,7 @@
                                     <div class="mapperNavrh" onclick="navrhClick('zima')">ZIMA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('růže')">RŮŽE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=léto|typ=pods|cislo=j|pad=1}>')">LÉTO</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=kůň|typ=pods|cislo=j|pad=1}>')">KŮŇ</div>
                                     <!--<div class="mapperNavrh" onclick="navrhClick('mák')">MÁK</div>-->
 
                                     <!-- Změna -->
@@ -1521,6 +1528,54 @@
                         <caption>Nejčastější nezařazená slova</caption>
                         <tbody id="topSimpleWords"></tbody>
                     </table>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div id="pagePop_feedback" class="pagePop" style="display: none; top:500px; z-index: 9; height: auto; min-height: -webkit-fill-available;">
+            <div class="pageInside" id="pageFeedback" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('feedback')" class="pageFromDownClose" id="closeFeedbackD">
+                    <div rel="nofollow">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                        </svg>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Zpězná vazba</span></p>
+                </div>
+                <div id="formFeedback">
+                    <form action="https://getform.io/f/anllzrqa" method="POST">
+                        <p style="font-size: 5mm;" for="text">Něco nám napište</p>
+                        <p style="font-size: 4mm;">Co máme zlepšit, na čem zapracovat, co tady chybí?</p>
+                        <textarea name="text" placeholder="" style="overflow-y: scroll; margin-left: 10px;height: 40mm; resize: vertical;" required></textarea>
+                        
+                        <br>
+                        <br>
+                        <p style="font-size: 5mm;" for="rating">Jak jsou stránky dobré?</p>
+                        <p style="font-size: 4mm; margin-bottom: 0px;">1× hvězda = zlé, 5× hvězd = výborné</p>
+                        <!-- select field handle -->
+                        <div class="rating" style="margin-left: 10px;">
+                            <div class="starrating selectedStar" type="radio" name="rating" onclick="setStarts(1)">★</div>
+                            <div class="starrating selectedStar" type="radio" name="rating" onclick="setStarts(2)">★</div>
+                            <div class="starrating selectedStar" type="radio" name="rating" onclick="setStarts(3)">★</div>
+                            <div class="starrating" type="radio" name="rating" onclick="setStarts(4)">★</div>
+                            <div class="starrating" type="radio" name="rating" onclick="setStarts(5)">★</div>
+                            <input id="webRating" type="hidden" name="web_rating" value="">
+                        </div>
+                        
+                        <br>
+                        <button class="button" type="submit" style="margin-left: 10px;">Odeslat</button>
+                        <p style="font-size: 4mm;">Zpětná vazba je anonymní</p>
+                        <p style="font-size: 3mm;">Prostřednictvím platformy getform.io zpracováváme tuto zpětnou vazbu.</p>
+                        <br>
+                        <hr>
+                        <p style="font-size: 4mm;">Anebo může využít github k <a href="https://github.com/GeftGames/moravskyprekladac/discussions">diskuzi</a> kolem této stránky nebo <a href="https://github.com/GeftGames/moravskyprekladac/issues">hlášení chyb</a>.</p>
+                        <p style="font-size: 4mm;">Slovíčka posílejte prostřednictvím <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url">forms</a> 
+                            nebo <a href="mailto:geftgames@gmail.com">email</a>, <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a>.</p>
+                    </form>
                 </div>
                 <br>
             </div>
