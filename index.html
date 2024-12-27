@@ -319,7 +319,8 @@
                         <!-- Denní/Noční -->
                         <div style="display: flex; justify-content: space-between; align-items: center">
                             <p style="flex-direction: column">
-                                <span id="textMode">Režim</span>
+                                <span id="textMode">Dení režim</span>
+                                <span class="moreinfo" id="textMoreLight">Ztlumit jas</span>
                             </p>
                             <select id="themeDay" style="margin: 5px;text-align: center;" onchange="changeThemeDay();customTheme();">
                                 <option id="textDefaultNight" value="default" style="font-weight: bold">Výchozí</option>
@@ -430,6 +431,7 @@
                         <div id="oTranscription" style="display: flex; justify-content: space-between; align-items: center">
                             <p style="flex-direction: column">
                                 <span id="textTranscription">Transkripce</span>
+                                <span class="moreinfo" id="textOnlyMoraviaMore">čas ↔ czas</span>
                             </p>
                             <select id="sTranscription" style="margin: 5px;text-align: center;" onchange="customText();">
                                 <option id="textDefaultText" value="default" style="font-weight: bold">Výchozí fonetická</option>
@@ -543,7 +545,7 @@
                             <div id="optionsSelect"></div>
                         </div>
 
-                        <div id="recSwitchTransc" style="display: none; align-items: center;flex-wrap: wrap;justify-content: center;">
+                        <div id="recSwitchTransc" style="display: none; align-items: center;flex-wrap: wrap;justify-content: center;font-size: 4mm;">
                             <span>Nechcete přepnout do obvyklé transkripce</span>
                             &nbsp;
                             <div>
@@ -750,8 +752,8 @@
                                     <div class="mapperNavrh" onclick="navrhClick('polštář')">POLŠTÁŘ</div>
                                     <div class="mapperNavrh" onclick="navrhClick('peřina')">PEŘINA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('postel')">POSTEL</div>
-                                    <!--<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>-->
-                                    <div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>
+                                    <!--<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>-->
                                     <div class="mapperNavrh" onclick="navrhClick('dědeček')">DĚDEČEK</div>
                                     <div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
