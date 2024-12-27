@@ -5087,3 +5087,14 @@ async function TranslateOnline(lang, text){
      return out.translatedText;
      // out.confidence - vynásobit Q?
 }
+
+function setStarts(n){
+    let elems=document.getElementsByClassName("starrating");
+    for (let i=0; i<n; i++) {
+        elems[i].className="starrating selectedStar";
+    }
+    for (let i=n; i<elems.length; i++) {
+        elems[i].className="starrating";
+    }
+    document.getElementById("webRating").value=n;
+}
