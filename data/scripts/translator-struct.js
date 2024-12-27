@@ -1332,8 +1332,9 @@ class ItemPhrase {
         if (raw[0] == '') return null;
         let item = new ItemPhrase();
         item.input = this.DoubleSplitInp(raw[0]);
-        item.show = raw[0] == "1";
-        item.output = this.FastLoadTranslateTo(raw, 2);
+        item.show = raw[1] == "1";
+        item.pos = parseInt(raw[2]);
+        item.output = this.FastLoadTranslateTo(raw, 3);
         if (item.output == null) return null;
         return item;
     }

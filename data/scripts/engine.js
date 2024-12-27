@@ -5064,3 +5064,26 @@ function showSetting(setting){
     }    
     let flashing =  setTimeout(flashingTimer, 100);
 }
+
+// testing...
+// https://libretranslate.com/
+async function LibreTranslate(lang, text) {
+    const res = await fetch("https://libretranslate.com/translate", {
+        method: "POST",
+        body: JSON.stringify({
+            q: text,
+            source: lang,
+            target: "cs",
+            format: "text",
+            alternatives: 3,
+            api_key: ""
+        }),
+        headers: { "Content-Type": "application/json" }
+    });  
+}
+
+async function TranslateOnline(lang, text){
+     let out=await LibreTranslate(lang, text).json();
+     return out.translatedText;
+     // out.confidence - vynásobit Q?
+}

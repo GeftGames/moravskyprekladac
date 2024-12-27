@@ -1,4 +1,4 @@
-var version="3.0";
+var version="4.0";
 var cacheName = 'moravskyprekladac-ver-'+version;
 var filesToCache = [
     "index.html",
