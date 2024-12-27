@@ -84,6 +84,9 @@ h2 {
     text-decoration: underline wavy 1.5px #ff000099;
 }
 
+#oTranscription{
+    border-radius: 5px;
+}
 .hidden {
     display: none;
 }
@@ -1954,4 +1957,18 @@ input::placeholder,
 #spoilerLangOpt{
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+}
+.starrating{
+    color: var(--ColorTheme);
+    font-size: 10mm;
+    text-shadow: var(--dsh);
+    display: inline;
+    transition: color .1s;
+    cursor: pointer;
+}
+.starrating.selectedStar{
+    color: var(--ColorOrig);
+}
+.starrating:hover{
+    color: var(--ColorThemeForward);
 }
