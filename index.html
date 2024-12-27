@@ -1544,13 +1544,13 @@
                     <p style="display:inline;" id="closeSelector">Zavřít</p>
                 </div>
                 <div>
-                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Zpězná vazba</span></p>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Zpětná vazba</span></p>
                 </div>
                 <div id="formFeedback">
-                    <form action="https://getform.io/f/anllzrqa" method="POST">
+                    <form method="POST" action="https://script.google.com/macros/s/AKfycbw9nTWCCql_HNsV8RZ9qjt7pkbu6jcCS8wbZpd6AtT9FHXWQxSgCGAzuAVyjDt4uq6c/exec">
                         <p style="font-size: 5mm;" for="text">Něco nám napište</p>
                         <p style="font-size: 4mm;">Co máme zlepšit, na čem zapracovat, co tady chybí?</p>
-                        <textarea name="text" placeholder="" style="overflow-y: scroll; margin-left: 10px;height: 40mm; resize: vertical;" required></textarea>
+                        <textarea name="Comment" placeholder="" style="overflow-y: scroll; margin-left: 10px;height: 40mm; resize: vertical;"  maxlength="5000" required></textarea>
                         
                         <br>
                         <br>
@@ -1563,13 +1563,13 @@
                             <div class="starrating selectedStar" type="radio" name="rating" onclick="setStarts(3)">★</div>
                             <div class="starrating" type="radio" name="rating" onclick="setStarts(4)">★</div>
                             <div class="starrating" type="radio" name="rating" onclick="setStarts(5)">★</div>
-                            <input id="webRating" type="hidden" name="web_rating" value="">
+                            <input id="webRating" type="hidden" name="WebRating" value="" required>
                         </div>
                         
                         <br>
                         <button class="button" type="submit" style="margin-left: 10px;">Odeslat</button>
                         <p style="font-size: 4mm;">Zpětná vazba je anonymní</p>
-                        <p style="font-size: 3mm;">Prostřednictvím platformy getform.io zpracováváme tuto zpětnou vazbu.</p>
+                        <p style="font-size: 3mm;">Prostřednictvím platformy docs.google.com/spreadsheets zpracováváme tuto zpětnou vazbu.</p>
                         <br>
                         <hr>
                         <p style="font-size: 4mm;">Anebo může využít github k <a href="https://github.com/GeftGames/moravskyprekladac/discussions">diskuzi</a> kolem této stránky nebo <a href="https://github.com/GeftGames/moravskyprekladac/issues">hlášení chyb</a>.</p>
