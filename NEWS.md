@@ -1,6 +1,7 @@
 # Poslední změny
 ### 29.12. 2024
 + tlačítko ve slovníku, pokusit se hledat v mapě
++ nové rozhraní na posílání slov
   
 ### 11.12. 2024
 + obvyklá zakončení (zatím u sloves některých tvarů)
