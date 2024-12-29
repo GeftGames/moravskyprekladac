@@ -3224,6 +3224,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ó́", to: "ó" },
 
         { from: "ŋ", to: "n" },
+        { from: "ʒ́", to: "dž" },
+        { from: "ǯ", to: "dž" },
 
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },
@@ -3291,6 +3293,8 @@ function SetCurrentTranscription(transCode) {
         
         { from: "ŋ", to: "n" },
         { from: "ɣ", to: "ch" },
+        { from: "ʒ́", to: "dź" },
+        { from: "ǯ", to: "dž" },
 
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },
@@ -3300,6 +3304,7 @@ function SetCurrentTranscription(transCode) {
     // czech phonetics
     if (transCode == "czech") return [
         { from: "dz", to: "ʒ" },
+        { from: "dź", to: "ʒ́" },
         { from: "dž", to: "ʒ̆" },
         { from: "vě", to: "vje" },
         { from: "bě", to: "bje" },
@@ -3523,6 +3528,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ó́", to: "ó" },
 
         { from: "ĺ", to: "l" },
+        { from: "ʒ́", to: "dź" },
+        { from: "ǯ", to: "dž" },
 
         { from: "ŋ", to: "n" },
     ];
@@ -3960,6 +3967,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ťí", to: "tí" },
         { from: "ďí", to: "dí" },
         { from: "ňí", to: "ní" },
+        { from: "ǯ", to: "dž" },
     ];
 
     if (transCode == "runy") return [
@@ -5131,7 +5139,7 @@ function addRow(tableName){
     
     let cellRemove=document.createElement("td");
     let btnRemove=document.createElement("div");
-    btnRemove.classList="butIc tooltipR";
+    btnRemove.classList="butIc";
     btnRemove.style="padding: 0;";
     let remove=document.createElementNS("http://www.w3.org/2000/svg", "svg");
     remove.classList="ib";
