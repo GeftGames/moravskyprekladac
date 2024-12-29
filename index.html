@@ -90,6 +90,7 @@
             !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
             posthog.init('phc_NFiGmR7ZM3kId6jKP5eUxR0TaFMl215ZGL1EZMIxm8t', {
                 api_host:'https://eu.i.posthog.com',
+                persistence: "memory", // or 'localStorage'?
                 person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
             });
           //  var _posthog=posthog;
@@ -431,7 +432,7 @@
                         <div id="oTranscription" style="display: flex; justify-content: space-between; align-items: center">
                             <p style="flex-direction: column">
                                 <span id="textTranscription">Transkripce</span>
-                                <span class="moreinfo" id="textOnlyMoraviaMore">čas ↔ czas</span>
+                                <span class="moreinfo" id="textOnlyMoraviaMore">město ↔ mňesto</span>
                             </p>
                             <select id="sTranscription" style="margin: 5px;text-align: center;" onchange="customText();">
                                 <option id="textDefaultText" value="default" style="font-weight: bold">Výchozí fonetická</option>
@@ -1576,6 +1577,124 @@
                         <p style="font-size: 4mm;">Slovíčka posílejte prostřednictvím <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url">forms</a> 
                             nebo <a href="mailto:geftgames@gmail.com">email</a>, <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a>.</p>
                     </form>
+                </div>
+                <br>
+            </div>
+        </div>
+        
+        <div id="pagePop_sendWords" class="pagePop" style="display: none; top:500px; z-index: 9; height: auto; min-height: -webkit-fill-available;">
+            <div class="pageInside" id="page_sendWords" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('sendWords')" class="pageFromDownClose" id="close_sendWords">
+                    <div rel="nofollow">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                        </svg>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Poslání slovíček k dolnění</span></p>
+                </div>
+                <p class="note">Na této strínce ještě pracujeme!</p>
+                <div style="max-width: -webkit-fill-available;">
+                 
+                        <p style="font-size: 5mm;" for="text">Místo spjaté ke slovům</p>
+                        <p style="font-size: 4mm;">Město/část města, vesnice/část vesnice. (nepsat oblast! - ať víme kam slovo přesně přiřadit)</p>
+                        <input type="text" id="place" style="width: -webkit-fill-available;margin-left: 10px;">
+                        <br><br>
+                            
+                        <p style="font-size: 5mm;" for="text">Seznam slovíček</p>   
+                        <p style="font-size: 4mm;">Může to být slovo, fráze, věta. Zkuste napsat slovo foneticky (dávejte si pozor na češtinu po<b>ň</b>dělí, podle<b>ď</b>ní, <b>f</b>čela, ...)</p>
+                    
+                        <div style="
+                            margin-left: 10px;  overflow-x: auto;
+                            width: -webkit-fill-available; 
+                            max-width: 100%;
+                          
+                            overflow-y: hidden;
+                            display: inline-block;
+                            height: 100%;
+                            ">
+                            <table style="overflow: hidden;">
+                                <tbody id="excelLike">
+                                    <tr>
+                                        <td style="text-align: center;"><span>Slovíčko</span></td>
+                                        <td style="text-align: center;"><span>Význam</span></td>
+                                        <td style="text-align: center;"><span>Poznámka (není nutná)</span></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <a class="button" onclick="addRow('excelLike')" style="margin-left: 10px;">Přidat řádek</a>
+                        <br><br><br>
+
+                        <form method="POST">
+                            <input type="hidden" name="place" id="finalPlace">
+                            <input type="hidden" name="data" id="finalDataWords">
+                        </form>
+
+                        <button class="button" onclick="submit_SendWords()" style="margin-left: 10px;">Odeslat</button>
+                        <p style="font-size: 4mm;">Poslání je anonymní</p>
+                        <p style="font-size: 3mm;">Prostřednictvím platformy docs.google.com/spreadsheets zpracováváme tyto slovíčka a následně je vložíme do databáze Moravského Překladače.</p>
+                        <br>
+                        <hr>
+                        <p style="font-size: 4mm;">Github můžete využít k <a href="https://github.com/GeftGames/moravskyprekladac/discussions">diskuzi</a> kolem této stránky nebo <a href="https://github.com/GeftGames/moravskyprekladac/issues">hlášení chyb</a>.</p>
+                        <p style="font-size: 4mm;">Slovíčka můžete také poslat prostřednictvím <a href="mailto:geftgames@gmail.com">emailu</a> nebo uveřejněním na <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a>.</p>
+                   
+                </div>
+                <br>
+            </div>
+        </div>
+        
+        <div id="pagePop_GDPR" class="pagePop" style="display: none; top:500px; z-index: 9; height: auto; min-height: -webkit-fill-available;">
+            <div class="pageInside" id="pageGDPR" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('GDPR')" class="pageFromDownClose" id="closeGDPR">
+                    <div rel="nofollow">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                        </svg>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Nakládání s daty</span></p>
+                </div>
+                <p class="note">Na této stránce ještě pracujeme!</p>
+                <div id="formGDPR">
+                    <h3>My</h3>
+
+                    <h4>Ukládaní dat</h4>
+                    <p>Cookie - nepoužíváme, používáme localStorage k ukládání dat, princip je takový, 
+                        upravíte nastavení na webu, tako změna se zaznamená v <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>.
+                        Jedná se pouze o technická data ().</p>
+
+                    <h4>Jak vyděláváme?</h4>
+                    <p>V současné době nevyděláváme. Reklamy nejsou, s Vašemi neobchodujeme, žádné sponzorské dary jsme zatím neobdrželi.</p>
+
+                    <h3>Které společnosti využíváme?</h3>       
+
+                    <h4><a href="https://github.com/">Github</a></h4>
+                    <p>Soubory stránky hostujemke na Githubu. Kódy stránek jsou dostupné <a href="https://github.com/GeftGames/moravskyprekladac">tady</a>.</p>
+                    <span onclick="moreGithub.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
+                    <p id="moreGithub" style="display:none">Tato služba je integrální součástí běžného provozu, nelze její používání obejít. Leda, že by jste si chtěli <a href="https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github">stáhnout</a> tento web a hostovat si ho u sebe pro sebe.</p>
+
+                    <h4><a href="https://www.cloudflare.com/">Cloudfare</a></h4>
+                    <p>Stránka je hostonaná na Githubu, data jsou přesměrovány přes Cloudfare na doménu stránky moravskyprekladac.pages.dev.
+                    Doména moravskyprekladac.pages.dev je za účelem snažší nalezitelnosti.</p>
+                    <span onclick="moreCloudfare.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
+                    <p id="moreCloudfare" style="display:none">Používání této služby lze obejít používáním překladače skrze url <a href="https://geftgames.github.io/moravskyprekladac/">https://geftgames.github.io/moravskyprekladac/</a>
+                    </p>
+                    
+                    <h4><a href="https://posthog.com/">PostHog</a></h4>
+                    <p>Tuto službu využíváme k analýze návštěvnosti.</p>
+                    <span onclick="moreGithub.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
+
+                    <h4><a href="https://about.google/">Google</a></h4>
+                    <p>Konkrétně se jedná o <a href="https://docs.google.com/spreadsheets">Google sheets</a> které se využívají ke zpracování <a onclick="PagePopShow('feedback')">zpětné vazby</a> a <a onclick="PagePopShow('sendWords')">slovníčku</a>.</p>
+                    <span onclick="moreGoogle.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
+                    <p id="moreGoogle" style="display:none">Jestli zpětnou vazbu nebo slovíčka (přes ty formuláře) k nám neposíláte, pak tuto službu nepoužíváte.</p>
                 </div>
                 <br>
             </div>
