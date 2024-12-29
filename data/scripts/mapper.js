@@ -128,7 +128,7 @@ function mapper_init(customStyle) {
 
 	// Žádné body
 	if (mapper_points.length==0) {
-		mapper_showError("Nenalezen žádný překlad, mapy by byla prázná");
+		mapper_showError("Nenalezen žádný překlad, mapa by byla prázná");
 		return;
 	}
 	

@@ -576,6 +576,8 @@ function PopPageShow(name) {
     element.style.opacity = "1";
     element.style.position = "absolute";
     element.style.top = "99px";
+    element.style.height=(document.body.clientHeight-document.getElementById("header").clientHeight)+"px";
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
     if (document.getElementById('nav').style.opacity == '1') {
         document.getElementById('butShow').style.opacity = '1';

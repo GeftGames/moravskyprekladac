@@ -6786,7 +6786,7 @@ class LanguageTr{
         }
         if (this.html) {
             let quality = (Math.round((this.qualityTrTotalTranslatedWell / this.qualityTrTotalTranslated) * 100)).toString();
-            if (quality == "100") quality = "99";
+            if (quality == "100") quality = " ✔";
             else if (quality.length == 1) quality = "0" + quality;
             else if (quality == "NaN") quality = "?";
             document.getElementById("translateWellLevel").innerText = "Q" + quality;
