@@ -1065,7 +1065,10 @@ optgroup {
     position: absolute;
     box-shadow: 0px 0px 3px #00000050;
     clip-path: inset(-5px -5px 1px -5px);
-    background: linear-gradient(180deg, var(--ColorTheme) 0%, var(--ColorTheme) 10%, var(--ColorBack) 100%);
+    /*background: linear-gradient(180deg, var(--ColorTheme) 0%, var(--ColorTheme) 10%, var(--ColorBack) 100%);*/
+    background: linear-gradient(180deg, var(--ColorTheme) 0%, 
+        color-mix(in srgb, var(--ColorTheme) 50%, var(--ColorBack)) 25%, 
+        color-mix(in srgb, var(--ColorTheme) 15%, var(--ColorBack)) 50%, var(--ColorBack) 100%);
 }
 
 #mapperButtons {
@@ -1971,4 +1974,21 @@ input::placeholder,
 }
 .starrating:hover{
     color: var(--ColorThemeForward);
+}
+#excelLike input{
+    width: -webkit-fill-available;
+    margin: 7px;
+}
+h4{
+    font-family: var(--f);
+    font-size: 5mm;
+}
+h3{
+    font-family: var(--f);
+    font-size: 5mm;
+}
+.addSymbol{
+    cursor: pointer;
+    padding: 2px;
+    font-size: var(--fontSizeBigger);
 }
