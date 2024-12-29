@@ -5098,3 +5098,69 @@ function setStarts(n){
     }
     document.getElementById("webRating").value=n;
 }
+
+function addRow(tableName){
+    let table=document.getElementById(tableName);
+
+    let tr=document.createElement("tr");
+
+    let cellInp=document.createElement("td");
+    let word=document.createElement("input");
+    word.type="text";
+    cellInp.appendChild(word);
+    tr.appendChild(cellInp);
+
+    let cellTxt=document.createElement("td");
+    let meaning=document.createElement("input");
+    meaning.type="text";
+    cellTxt.appendChild(meaning);
+    tr.appendChild(cellTxt);
+    
+    let cellComment=document.createElement("td");
+    let comment=document.createElement("input");
+    comment.type="text";
+    cellComment.appendChild(comment);
+    tr.appendChild(cellComment);
+    
+    let cellRemove=document.createElement("td");
+    let btnRemove=document.createElement("div");
+    btnRemove.classList="butIc tooltipR";
+    btnRemove.style="padding: 0;";
+    let remove=document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    remove.classList="ib";
+    remove.setAttribute('width', '24');
+    remove.setAttribute('height', '24');
+    
+    remove.setAttribute('viewbox', '0 0 24 24');
+    remove.viewbox="0 0 24 24";
+    remove.style="display: flex";
+
+    var path = document.createElementNS("http://www.w3.org/2000/svg", 'path');    
+    path.setAttribute("d", "M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z");
+    remove.appendChild(path);
+
+    remove.addEventListener("click", ()=>{
+        tr.outerHTML="";
+    });
+    btnRemove.appendChild(remove);
+    cellRemove.appendChild(btnRemove);
+    tr.appendChild(cellRemove);
+
+    table.appendChild(tr);
+}
+
+function submit_SendWords(){
+    let arr_words=[];
+    let table=document.getElementById("excelLike");
+    let rows=table.childNodes;
+    for (let i=1; i<rows.length; i++) {
+        let cells = rows[i].childNodes;
+        arr_words.push([
+            cell[0].childNodes[0].value,
+            cell[1].childNodes[0].value,
+            cell[2].childNodes[0].value,
+        ]);
+    }
+    document.getElementById("finalDataWords").value=Json.stringify(arr_words);
+    document.getElementById("finalPlace").value=Json.stringify(arr_words);
+}

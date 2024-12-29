@@ -6414,12 +6414,30 @@ class LanguageTr{
         display = document.createElement("div");
         
         if (out.length == 0) {           
-            let no = document.createElement("p");
-            no.style = "font-style: italic";
-             if ((input).length>0) no.innerText = "Nebylo nic konkrétnějšího nalezeno.";
-             else no.innerText = "Slovníček tohoto místa je prázdný.";
-            display.appendChild(no);
-            return display;
+            
+            if ((input).length>0) {
+                let no = document.createElement("p");
+                no.style = "font-style: italic";
+                no.innerText = "Nebylo nic konkrétnějšího nalezeno.";
+                display.appendChild(no);
+                
+                let btntry = document.createElement("a");
+                btntry.innerText = "Zkusit vyhledat v mapě";
+                btntry.classList="button";
+                btntry.style="padding-top: inherit; padding-bottom: inherit; margin-left: 8px;";
+                btntry.addEventListener("click", ()=>{                 
+                    mapper_open(input, "");            
+                    lastAppMapper="dic";
+                });
+                display.appendChild(btntry);
+                return display;
+            } else {
+                let no = document.createElement("p");
+                no.style = "font-style: italic";
+                no.innerText = "Slovníček tohoto místa je prázdný.";
+                display.appendChild(no);
+                return display;
+            }
         }
 
         let lastCh="";
