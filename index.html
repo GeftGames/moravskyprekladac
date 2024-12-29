@@ -464,8 +464,9 @@
                     </div> 
                     <div class="settingSection">
                         <p style="display:inline-block" id="textSettingsHello" class="settingHeader">Dejte nám vědět</p>
-                        <a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>
-                        <p>Chcete-li přidat více slov zároveň napište na <a href="mailto:geftgames@gmail.com">e-mail</a> nebo veřejně na <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a></p>
+                        <span id="textsendWords" onclick="PopPageShow('sendWords');" class="settingLink">Poslat slovíčka</span>
+                       <!-- <a id="textAdd" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://docs.google.com/forms/d/e/1FAIpQLSeWFkWeMyxEYxEHhTP3SB3p5jxs6_ubsw6WB28csYRgEuR8WQ/viewform?usp=pp_url" class="settingLink" data-href="#about">Přidat slovo/frázi/větu</a>-->
+                        <p>Nebo se slovíčky napište na <a href="mailto:geftgames@gmail.com">e-mail</a> nebo veřejně na <a href="https://github.com/GeftGames/moravskyprekladac/issues">github</a></p>
                         <span id="textFeedback" onclick="PopPageShow('feedback');" class="settingLink">Rychlá anonymní zpětná vazba</span>
                         <!--<span id="textNews"  onclick="ShowAboutPage()" class="settingLink" data-href="#about">Novinky</span>-->
                         <!-- report -->
@@ -1186,8 +1187,9 @@
                 <div>
                     <p class="aboutPageHeader" id="aboutTranslator">O Překladači</p>
                 </div>
-                <p id="aboutTranslatorText">Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část a slezský jazyk není řešený primárně (překladač je funguje přesněji pro jazyk moravský). Plánuje s i další okolí (Čech, Slovenska, Polska, Rakouska?).
-                    K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.</p>
+                <p id="aboutTranslatorText">Moravský překladač byl primárně navržený k překladům do moravských dialektů. 
+                    Slezská část a slezský jazyk není řešený primárně (překladač je funguje přesněji pro jazyk moravský). 
+                    Překladač slouží k jejich seznámení a popularizaci jazyka, neboť v součastné době je původní jazyk lidí na ústupu.</p>
                 <p id="textItsNotBest">Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je palec dolů. U těch co mají palec nahoru 👍 tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.</p>
                 <p id="textNoMoney">Projekt není finacován. Reklamy zde umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněn od 2023 (2021 velmi raná verze), doufáme, že jeho vývoj bude pokračovat.</p>
 
@@ -1228,7 +1230,6 @@
                     <p class="aboutPageHeader" id="func">Funkce</p>
                 </div>
                 <p id="gis">Vygenerovaná mapa nářečí lze exportovat do GISu - JSON (testováno ArcGis Pro), KML (testováno Google Earth), GML</p>
-                <p id="textabc">Tlačítko ABC dole ve slovníku umožní zobrazit <strong>celý slovník nářečí</strong> všctně písmen v abcedy v záhlaví</p>
 
                 <div>
                     <p class="aboutPageHeader" id="stats">Statistika</p>
@@ -1322,12 +1323,14 @@
                 <div>
                     <p class="aboutPageHeader" id="aboutTranslator">Výběr stáhnutí mapy</p>
                 </div>
-                <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;align-self: center;">
-                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_download();PopPageClose('mapper_download_options')">PNG</span>                        <span style="width: 90px;">obrázek</span></div>
-                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_cvs();PopPageClose('mapper_download_options')">CSV</span>                        <span style="width: 90px;">tabulka</span></div>
-                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_geojson();PopPageClose('mapper_download_options')">GeoJSON</span>                        <span style="width: 90px;">gis</span></div>
-                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_klm();PopPageClose('mapper_download_options')">KML</span>                        <span style="width: 90px;">gis</span></div>
-                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gml();PopPageClose('mapper_download_options')">GML</span>                        <span style="width: 90px;">gis</span></div>
+                <br>
+                <div style="display: flex;justify-content: center;flex-direction: column;align-self: center;align-items: flex-start;">
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_download();PopPageClose('mapper_download_options')">PNG</span>                        <span>obrázek</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_cvs();PopPageClose('mapper_download_options')">CSV</span>                        <span>tabulka</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_geojson();PopPageClose('mapper_download_options')">GeoJSON</span>                        <span>GIS</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_klm();PopPageClose('mapper_download_options')">KML</span>                        <span>Keyhole Markup Language</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gml();PopPageClose('mapper_download_options')">GML</span>                        <span>Geography Markup Language</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gpx();PopPageClose('mapper_download_options')">GPX</span>                        <span>Výměný formát GPS</span></div>
                 </div>
             </div>
         </div>
@@ -1595,17 +1598,36 @@
                 <div>
                     <p class="" id="pageTypeLangD"><span id="langName" style="font-size:10mm">Poslání slovíček k dolnění</span></p>
                 </div>
-                <p class="note">Na této strínce ještě pracujeme!</p>
+                <div id="noteSendWords"></div>
                 <div style="max-width: -webkit-fill-available;">
                  
                         <p style="font-size: 5mm;" for="text">Místo spjaté ke slovům</p>
-                        <p style="font-size: 4mm;">Město/část města, vesnice/část vesnice. (nepsat oblast! - ať víme kam slovo přesně přiřadit)</p>
-                        <input type="text" id="place" style="width: -webkit-fill-available;margin-left: 10px;">
+                        <p style="font-size: 4mm;">Město/část města, vesnice/část vesnice. (ať víme kam slovo přesně přiřadit)</p>
+                        <p style="font-size: 4mm;">V případě, že existuje více takových obcí s tím názvem, uveďte u kterého významného města je (jaká Lhota? Lhota u Vsetína)</p>
+                        <input type="text" id="place_sendWords" style="width: -webkit-fill-available;margin-left: 10px;" placeholder="Brno - Líšeň">
                         <br><br>
                             
                         <p style="font-size: 5mm;" for="text">Seznam slovíček</p>   
-                        <p style="font-size: 4mm;">Může to být slovo, fráze, věta. Zkuste napsat slovo foneticky (dávejte si pozor na češtinu po<b>ň</b>dělí, podle<b>ď</b>ní, <b>f</b>čela, ...)</p>
-                    
+                        <p style="font-size: 4mm;">Může to být slovo, fráze, věta. Zkuste napsat slovo foneticky, tak jak to slyšíte (po<b>ň</b>ďelí, podle<b>ď</b>ňí, <b>f</b>čela, ...). </p>
+                        <p style="font-size: 4mm;">Poznámka hlavně pro Slezáky (po naszymu): Transkripce je v databázi česká, ale až dotatečně se přepisuje na stránce na na jakoukoliv jinou, v případě že slova zapíšete v jiné transkripci, tak to uveďte do poznámky (do tabulka nebo dole) Vaši transkripci (např. Slabikářův).</p>
+                        
+                        <p style="font-size: 5mm;" for="text">Vložit symboly:   
+                        <span>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ł')" data-tooltip="tvrdé L">ł</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ľ')" data-tooltip="měkké L">ľ</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ĺ')" data-tooltip="dlouhé L">ĺ</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ŕ')" data-tooltip="dlouhé R">ŕ</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ṵ')" data-tooltip="slovácké/lašské U (místo Ł)">ṷ</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ê')" data-tooltip="hanácké široké e">ê</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ô')" data-tooltip="hanácké široké o">ô</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ə')" data-tooltip="převrácené e (znojemské/kravařské)">ə</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('yͤ')" data-tooltip="zaolšské y">yͤ</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ů')" data-tooltip="přehlasované o (=ponaszymu ó)">ů</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ź')" data-tooltip="palatalizované z (Zaolší)">ź</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ś')" data-tooltip="palatalizované s (Zaolší)">ś</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ć')" data-tooltip="palatalizované c (Zaolší)">ć</a>
+                        </span></p> 
+
                         <div style="
                             margin-left: 10px;  overflow-x: auto;
                             width: -webkit-fill-available; 
@@ -1630,12 +1652,17 @@
                         <a class="button" onclick="addRow('excelLike')" style="margin-left: 10px;">Přidat řádek</a>
                         <br><br><br>
 
-                        <form method="POST">
-                            <input type="hidden" name="place" id="finalPlace">
-                            <input type="hidden" name="data" id="finalDataWords">
+                        <p style="font-size: 5mm;" for="text">Poznámka na závěr (není nutná)</p>   
+                        <textarea id="comment_sendwords" style="overflow-y: scroll; margin-left: 10px;height: 20mm; resize: vertical;" maxlength="5000"></textarea>
+                        <br><br><br>
+
+                        <form id="sendWords_finalForm">
+                            <input type="hidden" name="Place" id="finalPlace">
+                            <textarea style="display:none" name="Comment" id="finalComment"></textarea>
+                            <input type="hidden" name="Data" id="finalDataWords">
                         </form>
 
-                        <button class="button" onclick="submit_SendWords()" style="margin-left: 10px;">Odeslat</button>
+                        <button class="button" onclick="submit_SendWords()" id="btnSubmitSendWords" style="margin-left: 10px;">Odeslat</button>
                         <p style="font-size: 4mm;">Poslání je anonymní</p>
                         <p style="font-size: 3mm;">Prostřednictvím platformy docs.google.com/spreadsheets zpracováváme tyto slovíčka a následně je vložíme do databáze Moravského Překladače.</p>
                         <br>
