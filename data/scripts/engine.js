@@ -633,6 +633,8 @@ function PopPageShow(name) {
         }
     }else if (name == "pageStats") {
         GetTopLangs();
+    }else if (name == "sendWords") {
+        addRow('excelLike');
     }
 }
 
@@ -5100,7 +5102,7 @@ function setStarts(n){
     }
     document.getElementById("webRating").value=n;
 }
-
+var lastElementFocus;
 function addRow(tableName){
     let table=document.getElementById(tableName);
 
@@ -5109,12 +5111,15 @@ function addRow(tableName){
     let cellInp=document.createElement("td");
     let word=document.createElement("input");
     word.type="text";
+    word.placeholder="rožnót"; 
+    word.addEventListener("focus",()=>{lastElementFocus=word});
     cellInp.appendChild(word);
     tr.appendChild(cellInp);
 
     let cellTxt=document.createElement("td");
     let meaning=document.createElement("input");
-    meaning.type="text";
+    meaning.type="text";   
+    meaning.placeholder="rozsvítit";
     cellTxt.appendChild(meaning);
     tr.appendChild(cellTxt);
     
@@ -5151,18 +5156,66 @@ function addRow(tableName){
     table.appendChild(tr);
 }
 
+function addSymbol(symbol) {
+    if (lastElementFocus!=undefined) {
+        lastElementFocus.value+=symbol;
+        lastElementFocus.focus();
+    }
+}
+
 function submit_SendWords(){
-    let arr_words=[];
+    let arr_words="";
     let table=document.getElementById("excelLike");
     let rows=table.childNodes;
-    for (let i=1; i<rows.length; i++) {
-        let cells = rows[i].childNodes;
-        arr_words.push([
-            cell[0].childNodes[0].value,
-            cell[1].childNodes[0].value,
-            cell[2].childNodes[0].value,
-        ]);
+    if (document.getElementById("place_sendWords").value.length<2){
+        document.getElementById("noteSendWords").innerHTML="<p class='error'>Doplňte místo!</p>";
+        return;
     }
-    document.getElementById("finalDataWords").value=Json.stringify(arr_words);
-    document.getElementById("finalPlace").value=Json.stringify(arr_words);
+    if (rows.length==0){
+        document.getElementById("noteSendWords").innerHTML="<p class='error'>Doplňte slovíčka!</p>";
+        return;
+    }
+    
+    let skip_first=true;
+    for (let i=0; i<rows.length; i++) {        
+        let cells = rows[i];
+        if (cells.tagName=="TR") {
+            if (skip_first){skip_first=false; continue;}
+
+            arr_words+=
+                cells.childNodes[0].childNodes[0].value+"|"+
+                cells.childNodes[1].childNodes[0].value+"|"+
+                cells.childNodes[2].childNodes[0].value+"|";
+        }
+    }
+    console.log(arr_words);
+    document.getElementById("finalDataWords").value=arr_words;
+    document.getElementById("finalPlace").value=document.getElementById("place_sendWords").value;
+    document.getElementById("finalComment").value=document.getElementById("comment_sendwords").value;
+    document.getElementById("btnSubmitSendWords").style.display="none";
+    send_form__finalForm();
+}
+     
+function send_form__finalForm(){
+    const formData = new FormData(document.getElementById('sendWords_finalForm'));
+        
+    fetch('https://script.google.com/macros/s/AKfycbymxJHIwnl3L6UqAQThytkigODVMRrBjSjuC9BDwtKB_m0qRwp8s7LHw0oxNWB8iwTO/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data=="OK") {
+            PopPageClose('sendWords');
+            alert("Děkujeme posláno!");
+            document.getElementById("btnSubmitSendWords").style.display="block";
+        }else{
+            document.getElementById("noteSendWords").innerHTML="<p class='error'><span>Nepodařilo se poslat slovíčka</span><span>"+data+"</span></p>";
+            document.getElementById("btnSubmitSendWords").style.display="block";
+        }
+    })
+    .catch(error => {
+        document.getElementById("noteSendWords").innerHTML="<p class='error'><span>Nepodařilo se poslat slovíčka</span><span>"+error+"</span></p>";
+        document.getElementById("btnSubmitSendWords").style.display="block";
+    });
 }

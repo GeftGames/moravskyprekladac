@@ -1164,9 +1164,49 @@ function mapper_save_gml() {
 	}	
 }
 
+/*
 function mapper_open_mapy_cz() {
-	// https://mapy.cz/turisticka?vlastni-body&ut=Nov%C3%BD%20bod&ut=Nov%C3%BD%20bod&ut=Nov%C3%BD%20bod&uc=9mt.4x8Y-j9n0-4xV3va9lX.4xUgzj&ud=Konick%C3%A1%20vrchovina&ud=Bouzovsk%C3%A1%20vrchovina&ud=16%C2%B019%2751.976%22E%2049%C2%B030%2725.506%22N&x=16.3146251&y=49.5258083&z=9
 	let mapTyle="zakladni"; // "turisticka", "19stoleti", ...
+	let zoomWindow="x=16.7733765&y=49.6534046&z=8";
+	let names="";
+	let pos="";
+	let translated="";
+
+	for (let pt of mapper_points) {
+		translated+="&ut="+encodeURIComponent(pt.text);
+		//names+="&ud="+encodeURIComponent(pt.name);
+		pos+="&x="+pt.lang.gpsX+"&y="+pt.lang.gpsY;
+	}
+
+	let url="https://mapy.cz/"+mapTyle+"?vlastni-body"+translated+names+pos+zoomWindow;
+	window.open(url, '_blank').focus();
+}*/
+
+//gpx
+function mapper_save_gpx() {	
+	if (mapper_points.length>0) {
+		let data=`<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="MoravskyPrekladac"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<metadata>
+		<name>`+mapperRenderOptions.inputText+`</name>
+		<desc>Vygenerovaný překlad</desc>
+		<author>
+			<name>User of Moravský překladač</name>
+		</author>
+	</metadata>\r\n`;
+		let id=1;
+		for (let pt of mapper_points) {
+			data+=`<wpt lat="`+pt.lang.gpsY+`" lon="`+pt.lang.gpsX+`">\r\n`;
+			data+=`<name>`+pt.text+`</name>\r\n`;
+			data+=`<cmt>`+pt.name+`</cmt>\r\n`;
+			data+=`</wpt>\r\n`;
+		}
+		data+=`</gpx>`;
+	
+		download_file("mp_mapper "+mapperRenderOptions.inputText+"_GML.gpx", data, "text/gpx");
+	}
 }
 
 function download_file(name, contents, mime_type) {
