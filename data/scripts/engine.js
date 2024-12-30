@@ -602,7 +602,7 @@ function PopPageShow(name) {
         if (lang.Cites==undefined || lang.Cites.length==0){
             document.getElementById("infoLangText").innerHTML = lang.Comment;
         }else{
-            let citeArr=document.createElement("ul");
+            let citeArr=document.createElement("ol");
             citeArr.style="margin-left: 24px;";
             for (let cite of lang.Cites){
 //                console.log(lang.Cites,cite);
