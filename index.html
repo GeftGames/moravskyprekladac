@@ -576,7 +576,7 @@
 
                     <div id="transarea" style="display: block; place-items: center;">
                         <div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">
-                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()">slovník</a> nebo změnit místo.</span>
+                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()">slovník</a> nebo změnit místo. <br>Neznáte nějaká slovíčka? <span onclick="PopPageShow('sendWords');" class="link">Poslat slovíčka</span></span>
                             <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;width: -webkit-fill-available;">
                                 <!-- Source translated text -->
                                 <div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
@@ -1609,13 +1609,13 @@
                  
                         <p style="font-size: 5mm;" for="text">Místo spjaté ke slovům</p>
                         <p style="font-size: 4mm;">Město/část města, vesnice/část vesnice. (ať víme kam slovo přesně přiřadit)</p>
-                        <p style="font-size: 4mm;">V případě, že existuje více takových obcí s tím názvem, uveďte u kterého významného města je (jaká Lhota? Lhota u Vsetína)</p>
+                        <p style="font-size: 4mm;">V případě, že existuje více takových obcí s tím názvem, uveďte u kterého významného města je (jaká Lhota? Lhota u Vsetína?)</p>
                         <input type="text" id="place_sendWords" style="width: -webkit-fill-available;margin-left: 10px;" placeholder="Brno - Líšeň">
                         <br><br>
                             
                         <p style="font-size: 5mm;" for="text">Seznam slovíček</p>   
                         <p style="font-size: 4mm;">Může to být slovo, fráze, věta. Zkuste napsat slovo foneticky, tak jak to slyšíte (po<b>ň</b>ďelí, podle<b>ď</b>ňí, <b>f</b>čela, ...). </p>
-                        <p style="font-size: 4mm;">Poznámka hlavně pro Slezáky (po naszymu): Transkripce je v databázi česká, ale až dotatečně se přepisuje na stránce na na jakoukoliv jinou, v případě že slova zapíšete v jiné transkripci, tak to uveďte do poznámky (do tabulka nebo dole) Vaši transkripci (např. Slabikářův).</p>
+                        <p style="font-size: 4mm;">Poznámka hlavně pro Slezáky (po naszymu): Transkripce je v databázi česká, ale až dotatečně se přepisuje na stránce na na jakoukoliv jinou, v případě že slova zapíšete v jiné transkripci, tak to uveďte do poznámky (do tabulky nebo dole) Vaši transkripci (např. spřežková slabikářův).</p>
                         
                         <p style="font-size: 5mm;" for="text">Vložit symboly:   
                         <span>
@@ -1632,6 +1632,7 @@
                             <a class="addSymbol tooltipC" onclick="addSymbol('ź')" data-tooltip="palatalizované z (Zaolší)">ź</a>
                             <a class="addSymbol tooltipC" onclick="addSymbol('ś')" data-tooltip="palatalizované s (Zaolší)">ś</a>
                             <a class="addSymbol tooltipC" onclick="addSymbol('ć')" data-tooltip="palatalizované c (Zaolší)">ć</a>
+                            <a class="addSymbol tooltipC" onclick="addSymbol('ń')" data-tooltip="">ń</a>
                         </span></p> 
 
                         <div style="
