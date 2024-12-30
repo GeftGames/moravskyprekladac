@@ -5110,7 +5110,7 @@ function setStarts(n){
     }
     document.getElementById("webRating").value=n;
 }
-var lastElementFocus;
+var lastElementFocus=undefined;
 function addRow(tableName){
     let table=document.getElementById(tableName);
 
@@ -5123,6 +5123,7 @@ function addRow(tableName){
     word.addEventListener("focus",()=>{lastElementFocus=word});
     cellInp.appendChild(word);
     tr.appendChild(cellInp);
+    if (lastElementFocus==undefined) lastElementFocus=word;
 
     let cellTxt=document.createElement("td");
     let meaning=document.createElement("input");
@@ -5154,7 +5155,7 @@ function addRow(tableName){
     path.setAttribute("d", "M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z");
     remove.appendChild(path);
 
-    remove.addEventListener("click", ()=>{
+    cellRemove.addEventListener("click", ()=>{
         tr.outerHTML="";
     });
     btnRemove.appendChild(remove);

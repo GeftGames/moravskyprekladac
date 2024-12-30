@@ -527,6 +527,13 @@ class Cite{
             if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
             this.genEl=pack;
             return true;
+        }else if (rawrules[0]=="inf") {
+            let pack=document.createElement("li");
+            pack.className="cite";
+            pack.innerHTML="Anonymní informátor(ři), kteří nám poslali svá slovíčka";
+            if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
+            this.genEl=pack;
+            return true;
         }else{
             if (dev) console.warn("Unknown reference ", rawrules);
         }
