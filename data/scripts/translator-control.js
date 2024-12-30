@@ -460,7 +460,7 @@ function GetTranslations() {
                 }
              
                 // Add color
-                if (lang.Quality == 5) {
+             /*   if (lang.Quality == 5) {
                     lang.ColorFillStyle = "Gold";
                     lang.ColorStrokeStyle = "#000";
                 } else if (lang.Quality == 4) {
@@ -473,12 +473,14 @@ function GetTranslations() {
                     lang.ColorFillStyle = "#cd7f32";
                     lang.ColorStrokeStyle = 'rgb(0,0,0,.9)';
                 } else if (lang.Quality == 1) {
-                    lang.ColorFillStyle = "Red";
+                 //   lang.ColorFillStyle = "Red";
+                    lang.ColorFillStyle = "rgb(128,128,128,.12)";
+                  //  lang.ColorStrokeStyle = 'rgb(0,0,0,.8)';
                     lang.ColorStrokeStyle = 'rgb(0,0,0,.8)';
-                } else if (lang.Quality == 0) {
+                } else if (lang.Quality == 0) {*/
                     lang.ColorFillStyle = "rgb(128,128,128,.1)";
-                    lang.ColorStrokeStyle = 'rgb(0,0,0,.5)';
-                } else { lang.ColorFillStyle = "#000"; }
+                    lang.ColorStrokeStyle = 'rgb(0,0,0,.7)';
+             //   } else { lang.ColorFillStyle = "#000"; }
 
                 let nodeLang = document.createElement('option');
                 lang.option = nodeLang;

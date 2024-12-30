@@ -10,7 +10,7 @@ var map_LocTmp2X = 0,
 var map_DisplayWidth, 
     map_DisplayHeight;
 //var map_Touches = -1;
-
+var zoomMax=18;
 var dpr=1;
 
 var initLookUpMap = function () {
@@ -50,7 +50,7 @@ var initLookUpMap = function () {
         if (delta > 0) map_Zoom *= 1.2;
         else map_Zoom /= 1.2;
         if (map_Zoom <= 0.2) map_Zoom = 0.2;
-        if (map_Zoom > 12) map_Zoom = 12;
+        if (map_Zoom > zoomMax) map_Zoom = zoomMax;
 
         const rect = document.getElementById("mapSelectLang").getBoundingClientRect(); // Get canvas position relative to viewport
         const mouseX = e.clientX*dpr - rect.left*dpr; // Calculate mouse position relative to canvas
@@ -394,18 +394,22 @@ function mapRedraw() {
             if (入っちゃった(map_LocX + p.locationX * map_Zoom + circleRadius * 2, map_LocY + p.locationY * map_Zoom + circleRadius * 2, 0, 0, map_DisplayWidth + circleRadius * 4, map_DisplayHeight + circleRadius * 4)) {
 
                 // Text color
-                if (p.Quality == 0) {
+             /*   if (p.Quality == 0) {
                     if (theme == "dark"){
                         if (p.Category === undefined) ctx.fillStyle = "#d7d0d0";
                         else ctx.fillStyle = "#d7d7d7";
                     }else{
                         if (p.Category === undefined) ctx.fillStyle = "#996666";
+                     //   else ctx.fillStyle = "Gray";
                         else ctx.fillStyle = "Gray";
                     }
                 } else {
                     if (theme == "dark") ctx.fillStyle = "White";
                     else ctx.fillStyle = "black";
-                }
+               // }*/ 
+                if (theme == "dark") ctx.fillStyle = "rgba(255,255,255,.8)";                   
+                else ctx.fillStyle = "rgba(0,0,0,.8)";
+
                 let w = ctx.measureText(p.Name).width;
                 ctx.fillText(p.Name, map_LocX + p.locationX * map_Zoom - w / 2, map_LocY + p.locationY * map_Zoom - circleRadius - 5);
             }
