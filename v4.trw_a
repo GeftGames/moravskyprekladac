@@ -2715,6 +2715,7 @@ tit|tět
 0|?×8|et|?×5
 1|?×10|ky|?×3
 1|ňa|?×13
+1|?×10|y|?×3
 0|eň|?×13
 0|?×3|ko|?×10
 1|a|?|?|u|?×10
@@ -2727,7 +2728,6 @@ tit|tět
 2|?×7|liďi|?×6
 1|es|?×13
 1|?×5|e|?×8
-1|?×10|y|?×3
 0|?×7|eťi|?×6
 2|?×8|ú|?×5
 1|?×12|ách|?
@@ -7240,7 +7240,7 @@ J|1|?×7|ty|?×6
 K!GF
 L!KY
 M!CW
-N!B
+N!BW
 -
 řeč|A|0|řeč|B||1
 stodol|B|0|stodo|C||1
@@ -7461,7 +7461,7 @@ H!A
 I!KZ
 J!BE
 K!T
-L!BW
+L!BX
 M!BR
 N!Hl
 O!B4
@@ -7893,7 +7893,7 @@ R!T
 S!M
 T!B
 U|2|?×7|pci|?×6
-V!Bh
+V!Bi
 W!r
 X!Kc
 Y!A
@@ -8194,7 +8194,7 @@ H!Hk
 I|2|?|oha|?×4|ohem|?×7
 J!R
 K!Br
-L!BW
+L!BX
 M!Hp
 N!z
 O!C
@@ -8836,7 +8836,7 @@ P!b
 Q!C1
 R!a
 S!CY
-T!BX
+T!BY
 U!Kj
 V!Kk
 W|0|?×8|ši|?×5
@@ -17407,7 +17407,7 @@ By!GN
 Bz|3||a|?×5|i|?×6
 B0!Ku
 B1|3|n|?×6|ňi|?×6
-B2!BY
+B2!BZ
 B3|-1|?|u|?×5|-|-×6
 B4|3|-×7|šaty|?×6
 B5!Bv
@@ -29087,14 +29087,14 @@ I!D
 J!EP
 K!H
 L!FO
-M!BZ
+M!Ba
 N!c
 O!F
 P!y
 R!IC
 S!Hw
 U!1
-W!BZ
+W!Ba
 X!B
 Y!H
 Z!F
@@ -31439,7 +31439,7 @@ T!K
 U!A
 V!N
 W!t
-X!Bi
+X!BW
 Y|0|?×3|žyn|?×10
 Z!IF
 a|1|?×3|ile|?×10
@@ -31465,7 +31465,7 @@ u!A
 v!K
 w!D
 x!A
-y!BZ
+y!Ba
 z!E
 0!H
 1|3|ůz|?×13
@@ -32031,7 +32031,7 @@ T!EX
 U|2|?|?|ľovi|?×4|ľé|?×6
 V!D2
 W!CA
-X!Ba
+X!Bb
 Y!BM
 Z!LD
 a!E
@@ -32510,7 +32510,7 @@ X!LF
 Y!N
 Z!Cr
 a!C
-b!Bb
+b!Bc
 -
 |O|0||O
 b|I|0|b|I
@@ -32997,7 +32997,7 @@ Q!Y
 R!IL
 S!T
 T!V
-U!BY
+U!BZ
 V!Z
 W!/
 X|3|?×7|ky|kou|?×5
@@ -33481,7 +33481,7 @@ c!CR
 d!N
 e!IM
 f!Cd
-h!Ba
+h!Bb
 i!U
 j!f
 k!X
@@ -33505,7 +33505,7 @@ z|2|?|?|rému|?×11
 6!Ce
 7|1||?|?|u|?×10
 8!CX
-9!Bc
+9!Bd
 +!B0
 /!D2
 BA!G
@@ -35750,7 +35750,7 @@ D!v
 E|1|-×7|dveřy|?×6
 F!A
 G!Y
-H!BY
+H!BZ
 I!c
 J!Dj
 K!u
@@ -36367,7 +36367,7 @@ G!CS
 H!IS
 I!CB
 J!z
-K!Bd
+K!Be
 L!D8
 M|3|?|ára|?×12
 N!W
@@ -37147,7 +37147,7 @@ O!Bj
 P|1|ra|?|?|ru|?×10
 Q|1|?|?|ďe|du|?|ďe|?×8
 R!IV
-S!BY
+S!BZ
 T|3|?×5|du|?×8
 U!p
 V!CQ
@@ -37680,7 +37680,7 @@ A!B
 B!Le
 C!B
 D!BB
-E!BZ
+E!Ba
 F!K
 G!Ec
 H|2|ʒ|?×13
@@ -38328,7 +38328,7 @@ G!f
 H!C
 I!BM
 J!M
-K!Bc
+K!Bd
 L!Y
 M!Bn
 N!I
@@ -38837,7 +38837,7 @@ BA!9
 BB|3|?×13|ámi
 BC!C
 BE!1
-BF!Bi
+BF!BW
 -
 beran|A|0|bara|A
 bles|Q|0|bles|B
@@ -40429,7 +40429,7 @@ A!e
 B!Cu
 C!s
 D!B
-E!Be
+E!Bf
 F!C7
 G!Ls
 H!Eb
@@ -42813,7 +42813,7 @@ n!Fd
 o!H
 p!CF
 r!B
-s!Ba
+s!Bb
 t|2|?×12|koch|?
 v|0|?|í|í|?|?|í|?×8
 w!Ip
@@ -43397,7 +43397,7 @@ z!CL
 5!Gm
 6!Is
 7|-1|?×10|e|?×3
-8!Ba
+8!Bb
 9!L+
 +!3
 /|1|?|?|dze|?×11
@@ -43455,7 +43455,7 @@ B2|2|ařeček|?×6|árci|?×6
 B3!Ff
 B4!i
 B5|1|a|?|?|u|?×3|i|?×6
-B7!BX
+B7!BY
 B8!CF
 B9!EB
 B+!A
@@ -43470,7 +43470,7 @@ CI!Go
 CJ!J
 CK!J
 CL!q
-CM!Bc
+CM!Bd
 CO|1|-×7|vangla|?×6
 CP!B
 CQ!B
@@ -44349,12 +44349,12 @@ p!P
 q!Ix
 r!U
 s!6
-t!Bf
+t!Bg
 u!BP
 x!El
 y!B5
 z!P
-0!Bc
+0!Bd
 1|1|íla|?×13
 2!e
 3!J
@@ -46661,7 +46661,7 @@ z!CO
 9|3|?×6|ołem|?×7
 +|3|?×5|će|?×8
 /!Ih
-BA!BZ
+BA!Ba
 BB!CS
 BC!F
 BD!C9
@@ -46672,7 +46672,7 @@ BH!X
 BI!c
 BJ!/
 BL|2|?×8|nów|?×5
-BM!Ba
+BM!Bb
 BN|3|én|?×13
 BO!A
 BQ!F
@@ -47186,7 +47186,7 @@ i!BV
 j!B
 k!DU
 l!Cb
-m!Be
+m!Bf
 n!H2
 o|1|?×6|hó|he|?×6
 p!Es
@@ -47233,7 +47233,7 @@ BY!Ge
 BZ!I7
 Ba!Cq
 Bb|0|?×12|ó,óch|?
-Bc!Bb
+Bc!Bc
 Bd!Br
 -
 |p|0||J
@@ -47892,13 +47892,13 @@ i|1|-×7|vánoce|?×6
 j!B
 k|3|?×3|eg|?×6|ki|?×3
 l!I
-m!Bf
+m!Bg
 n!BE
 o!GY
 p!MW
 q!Ka
 r!Ei
-s!Bc
+s!Bd
 t!V
 u|0|?|?|ku|?×11
 v!Bm
@@ -48967,7 +48967,7 @@ B!CO
 C!BV
 D!4
 -
-A!BZ
+A!Ba
 B!B1
 C!Ma
 D!Bk
@@ -49753,7 +49753,7 @@ N!C
 A!M
 B!D
 C|2|?×3|ě|i|?×9
-D!BX
+D!BY
 E!G
 F!r
 G!k
@@ -51191,7 +51191,7 @@ F!Ci
 G|1|?|dy|?×3|ďe|?×8
 H|2|?×10|ťe|?×3
 I!Bk
-J!BZ
+J!Ba
 K|1|-×7|kléšče|?×6
 L!C
 M|1|?×7|ťky|?×6
@@ -52018,7 +52018,7 @@ a!H
 b!G4
 e!Mn
 f!C
-g!BZ
+g!Ba
 h!N
 j|2||?×12|ami
 k|3|?×9|um|?×3|ami
@@ -52667,14 +52667,14 @@ B!+
 C!G
 D!F
 E!L
-F!BY
+F!BZ
 G|3|?×3|k|?|ku|?|?|kuf|?×5
 H!F
 I|1|ka|?|?|ku|?|ce|?×8
 J!P
 K|0|?×7|ňi|?×6
 M!BD
-N!Ba
+N!Bb
 O|1|?×8|m|?×5
 P!i
 Q|1|?×6|ym|?×7
@@ -52691,7 +52691,7 @@ a!Mu
 b|1|?×6|kům|?×7
 c!u
 d!I
-e!BZ
+e!Ba
 -
 člun|Q|0|čuṵ|S
 děvč|N|0|džyvč|M
@@ -53785,7 +53785,7 @@ X!Q
 Y!Bz
 Z!E
 a!P
-c!Bh
+c!Bi
 d!t
 f!H
 g!u
@@ -53793,7 +53793,7 @@ h!Bo
 i!V
 j!CX
 k!O
-l!Be
+l!Bf
 m|1|?|ti|?×12
 n!Cn
 o!Bp
@@ -54197,7 +54197,7 @@ U!C
 V!K9
 W!L
 X|0|žiň|ňa|?|žiň|?×10
-Y!Bi
+Y!BW
 Z!H
 b!A
 c|1|?×7|fk’i|?×6
@@ -55149,7 +55149,7 @@ r|0|ĺi|lo|?×12
 s!D0
 t|1|́fa|?×13
 u|2|?×10|ṵy|?×3
-v!Bi
+v!BW
 w!BR
 x|-1|?×10|ǵi|?×3
 y!Cb
@@ -55981,7 +55981,7 @@ I!Bw
 -
 A!U
 B!EG
-C!Bh
+C!Bi
 D!M4
 E!JF
 F!I7
@@ -57141,7 +57141,7 @@ Bc!r
 Bd!A
 Be!DG
 Bf!M/
-Bg!Bd
+Bg!Be
 Bh!A
 Bk!Fp
 Bl|0|iro|?×13
@@ -57169,7 +57169,7 @@ CL|1|?×3|tkô|?×10
 CM!C
 CQ!D
 CS|1|êla|?×13
-CT!Bb
+CT!Bc
 CU!N
 CV!r
 CW!E
@@ -58204,7 +58204,7 @@ N!JK
 O!B0
 P|-1|?×8|í|?×5
 Q!Y
-R!BY
+R!BZ
 S!Q
 T!Bv
 U!A
@@ -59125,7 +59125,7 @@ M!Da
 N|2|ca|?×13
 O!DH
 P!BE
-Q!Ba
+Q!Bb
 R!JL
 S|0|ko|?×6|či|čí|?×4|čima
 T|3|?×7|i|?|?|i|?×3
@@ -59379,7 +59379,7 @@ J!r
 -
 A!B
 B!Ec
-C!BW
+C!BX
 D!BE
 E!CA
 F|1|ív|?×13
@@ -59513,7 +59513,7 @@ F!C0
 H!r
 I!C
 -
-A!BW
+A!BX
 B!NM
 C!NN
 D!K
@@ -59836,7 +59836,7 @@ B!D
 C!GV
 D!HH
 E!BT
-F!Bd
+F!Be
 G!Fd
 H!E
 J!h
@@ -60182,7 +60182,7 @@ V|1|-×7|Lidice|Lidic|Lidicím,Lidicům|Lidice|Lidice|Lidicích|Lidicemi
 W!r
 X!C
 -
-A!Bf
+A!Bg
 B!Do
 C!G
 D!z
@@ -60193,7 +60193,7 @@ H!B3
 I!r
 J!n
 K!NQ
-L!Bh
+L!Bi
 M|1|?|ke|?|ko|?|?|kó|ke|?×6
 N!BD
 O!CL
@@ -63059,7 +63059,7 @@ H!D
 I!v
 J|3|yšč|yšče|?×12
 K|0|êca|?×13
-L!Bb
+L!Bc
 M|0|ěło|?×13
 N!JS
 O!Eo
@@ -63097,7 +63097,7 @@ v!FG
 x|1|ež|?×13
 y!J
 z!DH
-0!BZ
+0!Ba
 1!L2
 2!G
 3!P
@@ -63114,7 +63114,7 @@ BF!B
 BG!C
 BH|0|?|a,í|?×5|a|?×6
 BJ!Ep
-BL!Bb
+BL!Bc
 BM!A
 BO!Cp
 BP!JU
@@ -65359,7 +65359,7 @@ G!B2
 H!Z
 I!ED
 J!Fy
-K!Bh
+K!Bi
 L!M8
 M!B
 N!BS
@@ -65843,7 +65843,7 @@ p!FV
 q|1|la|ly|?×12
 r!Nm
 s!G2
-t!Bg
+t!Bh
 u!Nn
 v!Cn
 w!La
@@ -66287,8 +66287,8 @@ b!I
 c!C
 d!CJ
 e!EQ
-f!Bi
-g!Bi
+f!BW
+g!BW
 h!DO
 i!Z
 j!d
@@ -66940,7 +66940,7 @@ BO!N
 BP!k
 BQ!q
 BR!A
-BS!Bh
+BS!Bi
 BT!CK
 BU|2|?|?|ikovi|?×11
 BV!G
@@ -67733,7 +67733,7 @@ B!HJ
 C!B
 D!A
 E!Nz
-F!BW
+F!BX
 G!G
 H!t
 I!D
@@ -67772,7 +67772,7 @@ p!A
 q!MC
 r!Dk
 s!Ji
-t!Ba
+t!Bb
 u!I
 v!JA
 w!G
@@ -68228,7 +68228,7 @@ G!Bw
 H!Jj
 I!N0
 J!L
-K!Bd
+K!Be
 -
 vojsk|A|0|vojsk|A
 děl|A|0|ďel|A
@@ -69029,7 +69029,7 @@ E!D
 F!U
 G|-1|?|a|?×5|-|-×6
 H!r
-I!Be
+I!Bf
 J!EY
 K|0|?×7|ecka|?|eckám|?×4
 L!C
@@ -70272,11 +70272,11 @@ G!BW
 H!+
 -
 A!F2
-B!Bb
+B!Bc
 C!g
 D|3|?×5|umě|?×8
 E!De
-F!Bc
+F!Bd
 G!c
 H|3|?×3|eba|?×10
 -
@@ -70815,7 +70815,7 @@ A!BP
 B!m
 C!q
 D!JZ
-E!Bd
+E!Be
 F!D
 G!Bu
 H!T
@@ -72464,7 +72464,7 @@ T|2|dz|ca|?×12
 U!M
 V!E
 W|3|-×7|?|?×5|šatama
-X!BZ
+X!Ba
 Y!G
 Z!c
 a!OD
@@ -72919,7 +72919,7 @@ B!G
 C!a
 D!A
 E|2|?|feca|?×12
-F!BY
+F!BZ
 G!Cv
 H!Fl
 I!Gz
@@ -75063,7 +75063,7 @@ I!BE
 J!Fn
 K!OJ
 L!D
-M!Bb
+M!Bc
 N!r
 -
 řep|A|0|řep|A||1
@@ -75255,7 +75255,7 @@ F!D9
 G|1|-×7|?|?×5|vjiduama
 H|1|?×3|um|?×10
 I|0|é|?|?|é|?×10
-J!Bi
+J!BW
 K!DW
 L!B2
 M!A
@@ -75463,7 +75463,7 @@ A!D
 B|2|čłov'eg|?×13
 C!Bj
 D|3|úm|?×13
-E!Bi
+E!BW
 F!4
 G!A
 H!Bn
@@ -75763,7 +75763,7 @@ D!CB
 E!OK
 F!S
 G!C
-H!BY
+H!BZ
 I|3|ek|?×4|ku|?×4|ki|?×3
 J|0|-×7|?|trnek|?|trnki|?×3
 K!NT
@@ -76721,7 +76721,7 @@ y0
 -
 A!A
 -
-A!Ba
+A!Bb
 -
 kuron|A|0|koron|A
 -
@@ -77257,7 +77257,7 @@ M!G
 N!Ds
 -
 A!Bv
-B!BW
+B!BX
 C|0|?|va|?×12
 D|0|?×5|ě|?×8
 E|1|ka|?×6|ky|?×6
@@ -77671,7 +77671,7 @@ g!O
 h|2|?×3|hu|?×10
 i!BC
 j!D
-k!Bb
+k!Bc
 l|-1|?×7|í|?×6
 m|0|e|?×5|etem|?×7
 n!HP
@@ -78770,7 +78770,7 @@ C|3|ek|?|?|eg|?×10
 D!EJ
 E!OU
 F!z
-G!Bb
+G!Bc
 H|1|?×3|chô|?×10
 I!E6
 J|0|?×3|tô|?×10
@@ -79253,7 +79253,7 @@ E!B7
 F!OV
 G!v
 H!z
-I!Bd
+I!Be
 J!DR
 K!Jx
 L!R
@@ -79400,7 +79400,7 @@ I!L
 A!CP
 B!C
 C!CP
-D!BZ
+D!Ba
 E!E5
 F!Dw
 G!D7
@@ -79946,7 +79946,7 @@ L|3|?×3|ń|?×10
 M|1|?×7|le|ĺi|um|le|?×3
 N!P
 O|0|?×6|čkum|?×7
-P!Bi
+P!BW
 Q!A
 R|1|?×3|ńym|?×10
 S!N
@@ -81378,10 +81378,10 @@ O!Iv
 P!Eo
 Q!HI
 R!z
-S!Bc
+S!Bd
 T!x
 U!NM
-V!Bi
+V!BW
 W!CE
 X|3|?×5|če|?×8
 Y!e
@@ -81851,7 +81851,7 @@ V!BM
 W!Be
 -
 A!J
-B!BX
+B!BY
 C!F
 D!Dw
 E!G
@@ -81869,7 +81869,7 @@ P!CN
 R|0|?×3|eno|?×10
 S|0|?×12|šah|?
 T!G
-U!Be
+U!Bf
 V|1|?|?|čy|?×11
 -
 |J|0||J
@@ -82933,7 +82933,7 @@ H!U
 A!E
 B!Br
 C|2|?×6|ó|?×7
-D!Bg
+D!Bh
 E!S
 F!Ie
 G!4
@@ -83029,7 +83029,7 @@ A!CH
 B!Cc
 C!y
 D!S
-E!Bg
+E!Bh
 -
 ob|A|0|vob|A
 okur|B|0|vokur|B
@@ -83442,7 +83442,7 @@ N|-1|?×8|ou|?×3|ech|?
 O!Iy
 P!P
 Q!J
-R!BY
+R!BZ
 S!C
 T!Oi
 U!O
@@ -83808,7 +83808,7 @@ D!H
 E!C
 -
 A|0|éce|?×13
-B!Bf
+B!Bg
 C!x
 D!F
 E!A
@@ -85754,7 +85754,7 @@ X!IW
 Y!ES
 Z!D
 a!Mu
-b!Bi
+b!BW
 c!BR
 d!C
 e!L
@@ -86018,7 +86018,7 @@ C|-1|ek|ka|?×12
 D!f
 E!F9
 F!B/
-G!Bf
+G!Bg
 H!JO
 I|1|-×7|e||?×3|ích|?
 J|2|?×6|hó|?×7
@@ -86686,7 +86686,7 @@ T!Bm
 V!Bn
 -
 A|1|ka|?|ce|?×3|kó|?×7
-B!BW
+B!BX
 C|3||u|u||e|ě|em|e|ů|ům|y|y|ech|ama
 D|2|ec|ce|ci,ovi|ce|če|ci,ovi|cem|ci|ců|cům|ce|ci|cích|ci
 E|3||a|u||e|ě|em|e|ů|ům|y|y|ech|ama
@@ -87651,7 +87651,7 @@ G!Bj
 H!Cm
 I!BA
 J|3|?×7|me|?×6
-K!Bd
+K!Be
 L!J7
 M|3|ur|?×13
 N|3|?|omo|?×12
@@ -87670,7 +87670,7 @@ Z!BI
 a!r
 b!b
 c|1|-×7|?|lázňe|?×5
-d!Bh
+d!Bi
 e!X
 f!HQ
 g!A
@@ -88039,7 +88039,7 @@ N!C
 O!z
 P!Dx
 -
-A!Bc
+A!Bd
 B|0|?×5|o|?|-×7
 C!Ds
 D|2|?×13|éma
@@ -88789,13 +88789,13 @@ X!CH
 Y!y
 Z!S
 a!Cc
-b!Bg
+b!Bh
 c!Ot
 d|1|?×3|eco|?×10
 e!h
 f!a
 g!HU
-h!BX
+h!BY
 -
 beč|H|0|beč|A
 brambor|B|0|hertepl|e
@@ -90103,7 +90103,7 @@ D!E
 E|2|?×4|ane|?|?|áňi|?×6
 F!Ox
 G!S
-H!Bd
+H!Be
 I!NF
 J!A
 K!Cw
@@ -92613,7 +92613,7 @@ J!BK
 K|2|?×7|ci|cú|?×5
 L|3|-×7|?|?×4|ách|?
 M|-1|?|ka|?|kú|?×4|kú|?×5
-N!Bc
+N!Bd
 O!I8
 P|2||?×3|e|?×9
 Q|0|ňá|ňá|?×12
@@ -92624,7 +92624,7 @@ U!O7
 V|0|?×10|na|?×3
 W|3|?×12|ách|?
 X!H
-Y!BW
+Y!BX
 Z!OJ
 a|1|?×6|olú|?×7
 b!NN
@@ -93728,7 +93728,7 @@ s!K
 t!a
 u!H
 v!3
-w!BX
+w!BY
 y!d
 z!F
 0!A
@@ -95059,7 +95059,7 @@ B!h
 C!CK
 D!PN
 E!c
-F!Bh
+F!Bi
 G!PN
 H|3|?×5|izė|?×8
 I|2|?|a|?×5|i|?×6
@@ -95230,7 +95230,7 @@ E|1|?×10|ce|?×3
 F!F4
 G|3|?×3|z|?×6|se|?×3
 H!Q
-I!Be
+I!Bf
 J|1|?×10|de|?×3
 K!PP
 L!Cv
@@ -95512,7 +95512,7 @@ K!BW
 L!B
 -
 A!Q
-B!Bh
+B!Bi
 C|3|d,t|?|tovi|?×11
 D|1|aba|?|?|abo|?×10
 E|1|?|?|ďe|do|?×10
@@ -95865,7 +95865,7 @@ a!F
 A!PR
 B!BK
 C!C7
-D!Bh
+D!Bi
 E!d
 F|3|?×8|ópek|?|opke|?×3
 G!PS
@@ -97421,7 +97421,7 @@ F!i
 G!F
 H!L
 I!N
-J!Bd
+J!Be
 K!A
 L|1|?×9|ím|?×4
 M!G
@@ -97752,7 +97752,7 @@ B!X
 C!H
 -
 A!p
-B!Bf
+B!Bg
 C!A
 -
 chlap|A|0|chlap|A
@@ -97984,7 +97984,7 @@ J!Bl
 K!By
 L!Cf
 M!Dg
-N!BW
+N!BX
 O!Ma
 P!Bk
 -
@@ -98551,8 +98551,8 @@ G|1|da|?×6|-|-×6
 H|1|ta|?×6|-|-×6
 I!K
 J|2|?×7|lêďi|?|?|liďi|?×3
-K!Be
-L!BW
+K!Bf
+L!BX
 M!Bj
 N!C7
 O!K
@@ -98561,7 +98561,7 @@ Q!W
 R!O
 S!J7
 T!P
-U!BX
+U!BY
 V!PY
 W!CC
 X!Cg
@@ -98573,7 +98573,7 @@ d!BE
 e|3|?×8|ú|?×3|ech|?
 f!CD
 g!CM
-h!Be
+h!Bf
 i!Y
 j!H
 k!K
@@ -98876,7 +98876,7 @@ E!N
 F!x
 G|2|?×8|u|?×4|ami,y
 H!A
-I!BZ
+I!Ba
 J!F
 K!PZ
 L!E
@@ -99331,7 +99331,7 @@ N!N
 P!EL
 Q|3|?|ṵa|?|eṵ|?×10
 R!FN
-S!BY
+S!BZ
 T!Hl
 U!B
 V!B4
@@ -100533,7 +100533,7 @@ p!t
 q!v
 -
 A|2|?|ára|?×12
-B!Bf
+B!Bg
 C|0|deň|?×7|ďňí|?×5
 D!Dp
 E!E
@@ -100548,14 +100548,14 @@ M!Bl
 N!Bt
 O!l
 P!Dq
-Q!Bg
+Q!Bh
 R!B0
 S!Bv
 T!O
 U!Pf
 V!Bu
 W|1|?×8||?|i|?×3
-X!BY
+X!BZ
 Y|1|?|ťe|?×12
 Z|3|?|ehu|?×12
 a!Cx
@@ -101703,7 +101703,7 @@ o!E2
 p|1|?×7|ṵse,fse|?×6
 q|1|a|i|?×12
 r|2|?×13|olma
-s!Bc
+s!Bd
 t|-1|?×7|i|u|?×5
 u!L
 v!B
@@ -103000,7 +103000,7 @@ L!j
 M!L8
 N!Pk
 O!J
-P!Be
+P!Bf
 Q!Ll
 R!Ph
 S!D
@@ -105166,7 +105166,7 @@ D!B
 E!B
 G!Jm
 H!Po
-I!Ba
+I!Bb
 J!P
 K!Z
 L!B
@@ -107359,7 +107359,7 @@ H!F6
 I!Z
 J|3|?×8|nu|?×5
 K!C
-M!Bd
+M!Be
 N|1|?×6|ạ́|?×7
 O!N
 P!A
@@ -109296,7 +109296,7 @@ r!Fj
 A|1|?|ídy|?×12
 B!j
 C|2|čľověk|?×6|ľiďi|?×6
-D!Be
+D!Bf
 E!BK
 F|0|eň|ňa|?|eň|?×10
 G!G
@@ -109320,7 +109320,7 @@ Y!I
 Z!A
 a!BN
 b!FQ
-d!Bd
+d!Be
 e!X
 f!G
 g!P1
@@ -109768,7 +109768,7 @@ U!B0
 V!Io
 W!P3
 X!CF
-Y!Bf
+Y!Bg
 Z!E3
 a!KL
 c!7
@@ -110482,7 +110482,7 @@ m!K
 n!N
 o!J0
 q|0|-×7|?|?|?|a|?|ech|?
-r!BY
+r!BZ
 s!P5
 t!B5
 u!2
@@ -110924,7 +110924,7 @@ x!Df
 y!BY
 z!L
 -
-A!BW
+A!BX
 B!Q
 C!n
 D!I
@@ -110963,7 +110963,7 @@ j|3|?|a|o|?×4|-|-×6
 k!Z
 l!J
 m!J
-n!Bh
+n!Bi
 p!CM
 q!Hf
 r!E
@@ -111536,7 +111536,7 @@ A!Bg
 B!Bv
 -
 A!S
-B!Bg
+B!Bh
 -
 o|A|0|vo|A
 ov|B|0|vov|B
@@ -112643,7 +112643,7 @@ E!i
 F!F
 G|-1|dz|?×13
 H!t
-I!Bd
+I!Be
 J!H
 -
 neděl|A|0|neďel|A
@@ -112819,7 +112819,7 @@ A!G
 B|2|?×8|y|?×5
 C|3|?×10|u|?×3
 D|2|?|čłovjeka|?×12
-E!BZ
+E!Ba
 F!G
 G!Dl
 H!m
@@ -113237,7 +113237,7 @@ E!Nl
 F!C
 G!W
 H!Fm
-I!Be
+I!Bf
 J!BA
 K!v
 L|0|?×3|ecko|?×10
@@ -113766,7 +113766,7 @@ C!y
 D!CH
 E!Cc
 F!S
-G!Bg
+G!Bh
 H!C8
 -
 cop|A|0|cuplék|A
@@ -113889,7 +113889,7 @@ P|1|?×5|ďi|?×4|ďi|?×3
 Q!K
 R!J
 S!CL
-T!BX
+T!BY
 U!G
 V!j
 W|1|?×5|áce|?×8
@@ -114960,7 +114960,7 @@ C!E
 D|0|?×12|ích|?
 E!DB
 F!DU
-G!Bd
+G!Be
 H!w
 I!PB
 J|2|?×5|ko|?×8
@@ -115990,7 +115990,7 @@ V|1|nka|?×5|nkum|?×7
 W|1|?|ny|?×8|ny|?×3
 X!Jz
 Y!KA
-Z!BZ
+Z!Ba
 a|1|?×5|te|tum|?×7
 b!E
 -
@@ -116671,7 +116671,7 @@ y!o
 z!IY
 0!MD
 1!BI
-2!Bd
+2!Be
 3!CX
 4!Pq
 -
@@ -117455,7 +117455,7 @@ D!p
 E!Ft
 F|2||?×6|e|?×6
 G!F0
-H!BY
+H!BZ
 I|3|?×6|ětrem|?×7
 J!HS
 K!c
@@ -118010,7 +118010,7 @@ C!C
 E!H
 -
 A!CE
-B!BZ
+B!Ba
 C!A
 D|-1|ňa|?×12|ňama
 E!H
@@ -118233,7 +118233,7 @@ K!D8
 -
 A!QA
 C|1|?|?|áce|?×11
-D!Bh
+D!Bi
 E!W
 F!K
 G!W
@@ -120811,7 +120811,7 @@ G!F
 H!A
 -
 A!A
-B!Bf
+B!Bg
 C!F
 D!B/
 E!Cu
@@ -121913,7 +121913,7 @@ G!A
 H!B
 -
 A!G
-B!Be
+B!Bf
 C!NX
 D!E
 E!KE
@@ -122043,7 +122043,7 @@ B!KP
 C!C
 D!Ca
 E!QL
-F!Bb
+F!Bc
 G!BQ
 H!Hf
 I|1|-×7|?|dveři|?|dveři|?×3
@@ -122212,7 +122212,7 @@ A!T
 B|1|?×3|ó|?×10
 C!j
 D!V
-E!Bd
+E!Be
 F!J
 G!I
 H!h
@@ -122509,7 +122509,7 @@ P!Dq
 -
 A!BJ
 B!3
-C!BX
+C!BY
 D!9
 E!B
 F!B
@@ -122661,7 +122661,7 @@ O!Dx
 -
 A!DD
 B!a
-C!Ba
+C!Bb
 D|1|?|?|vje|?×11
 E!8
 F!F7
@@ -122867,7 +122867,7 @@ S|1|?×6|hó|?×7
 T!Fv
 U!G0
 V!W
-W!Bb
+W!Bc
 X!X
 Y!KD
 Z!L
@@ -125063,7 +125063,7 @@ B!y
 C!CH
 D!N0
 E!S
-F!Bg
+F!Bh
 -
 zám|A|0|zám|A
 ok|B|0|vok|B
@@ -126867,12 +126867,12 @@ J!B
 K!a
 L!BA
 M|0|?×11|ata|?|?
-N!Bi
+N!BW
 O|1|?×6|łou|?×7
 Q!b
 R!C1
 S!HU
-T!BX
+T!BY
 U!L
 V|3|?×3|dz|?×10
 -
@@ -127106,7 +127106,7 @@ S|2|?×10|ý|?×3
 T!I
 U!A
 V|2|án,an|?|ánovjî|?×11
-W!Bi
+W!BW
 X!c
 Y!BD
 Z!QN
@@ -127122,7 +127122,7 @@ i!2
 j!Dq
 k!KS
 l!Bq
-m!BY
+m!BZ
 o|1|a|ŷ|?|?|o|?×9
 p!BO
 q!Hb
@@ -127474,7 +127474,7 @@ D!X
 E!J
 F!I
 G!C3
-H!BW
+H!BX
 J!DW
 K!Jg
 L!CV
@@ -128185,7 +128185,7 @@ Z|3||?×9|e|?×3
 a!CT
 b|0|ka|ke|?×12
 c!k
-d!Bh
+d!Bi
 e!R
 f!P8
 g!A
@@ -128206,7 +128206,7 @@ u|1|?×8|el|?×5
 v!DB
 w!H
 x|3|?×8|jetru|?×5
-y!Bb
+y!Bc
 z!l
 0!Kx
 -
@@ -128935,9 +128935,9 @@ D|2|?|človjeka|?×12
 E!Di
 F!Df
 G!I
-H!BW
+H!BX
 I!B+
-J!Bh
+J!Bi
 K|1|?×3|ko|?×4|ek|?×5
 L!4
 M!BH
@@ -129233,7 +129233,7 @@ R!HN
 S!KN
 T!CD
 U!DF
-V!Bf
+V!Bg
 W|3|?×3|ł|?|le|?×8
 X!CG
 Y!Ix
@@ -129517,7 +129517,7 @@ S!Bs
 T!B
 U!F
 W!C
-X!Bf
+X!Bg
 Y!h
 -
 |Y|0||X||2
@@ -129818,7 +129818,7 @@ G!B
 -
 A!G
 B!S
-C!Bg
+C!Bh
 D!Hm
 E!C7
 F!Y
@@ -130748,7 +130748,7 @@ Z!A
 a!C6
 -
 A!S
-B!Bg
+B!Bh
 C!E
 D|2|?|?|ọvi|?×7|ê|?×3
 E!B
@@ -132297,7 +132297,7 @@ H|1|-×7|?|hrápki|?×5
 I|1|?×3||?×6|i|?×3
 J!F8
 K!I
-L!BX
+L!BY
 M!KF
 N!Bn
 -
@@ -132585,7 +132585,7 @@ Z|0|?|?|kovi|?×11
 a!I
 b!GL
 c!E
-d!BW
+d!BX
 e!P
 f!B
 g!M
@@ -133375,7 +133375,7 @@ L!J
 M!k
 N!D3
 O!B+
-P!Bf
+P!Bg
 R|3|?×13|omama
 S!k
 T!H
@@ -134588,7 +134588,7 @@ T!5
 U!Q
 -
 A!B6
-B!Bf
+B!Bg
 C!Ja
 D!L
 E|1|?×4||?×9
@@ -134596,7 +134596,7 @@ F!B3
 G!L
 H!k
 I!a
-J!BX
+J!BY
 K!EI
 L!F6
 M!DU
@@ -135181,7 +135181,7 @@ L!CY
 M!Ep
 N!8
 O|1|?|ávê|?×12
-P!BX
+P!BY
 Q!Cs
 R!A
 -
@@ -135385,7 +135385,7 @@ C!He
 D!k
 E!CY
 F!v
-G!Bb
+G!Bc
 H!c
 I!p
 J!I3
@@ -135703,7 +135703,7 @@ D!G
 E!B+
 F!S
 G!y
-H!Bg
+H!Bh
 -
 kous|A|0|kós|A
 strýč|B|0|stréč|B
@@ -136616,7 +136616,7 @@ J!I
 -
 A|3|?×3||?×3|e|?×6
 B!B7
-C!BX
+C!BY
 D!Cz
 E!Qb
 F|2|?×7|lidi|?×6
@@ -137362,7 +137362,7 @@ W|1|?|?|ci|?×11
 X!KT
 Y!DP
 Z|2|?×3|ne|?|ňe|?×6|nḁ́ch|?
-a!Bb
+a!Bc
 -
 |A|0||A
 de|C|0|de|C||1
@@ -138419,7 +138419,7 @@ K!BC
 L|1|?|ry|?×5|-|-×6
 M|3|-×7|?|?×4|zakladach|?
 N!DI
-O!Ba
+O!Bb
 P!Qe
 Q!O
 R|1|-×7|?|?×5|dveřoma
@@ -138885,7 +138885,7 @@ W!Bl
 X!K
 Y!X
 Z!Bk
-a!Ba
+a!Bb
 b|3|?×5|sku|?×8
 c!DF
 d!j
@@ -140690,7 +140690,7 @@ U!R
 V!l
 X!CU
 -
-A!BY
+A!BZ
 B!C5
 C!Bj
 D!EF
@@ -141400,7 +141400,7 @@ E!Oi
 F!Y
 G!E+
 H!He
-I!Bf
+I!Bg
 J!B
 K!a
 L!v
@@ -142218,7 +142218,7 @@ b|1|?|ťi|?|ť|?×10
 c|0|i|i|i|í|í|i|im|a||ám|a|a|ich|ama
 d|1|a|?×8|om|?×4
 e|1|la|le|le|lô|lo|le|ló|le|el|lám|le|le|lách|lama
-f!Bh
+f!Bi
 g|1||?|i||jo|i|jó|ňe|ňé|ňám|ňe|ňe|ňách|ňama
 h!Ca
 i!Di
@@ -144843,9 +144843,9 @@ G!r
 A!C
 B!K
 C!S
-D!Bf
+D!Bg
 E!A
-F!Bc
+F!Bd
 G!x
 -
 slz|A|0|sľz|A
@@ -145631,7 +145631,7 @@ M!l
 N!EM
 -
 A!A
-B!Bc
+B!Bd
 C!B
 D!B
 E!F
@@ -146130,7 +146130,7 @@ C!u
 -
 A!FG
 B!H
-C!Be
+C!Bf
 -
 kus|A|0|ko|A
 kříž|B|0|křéž|B
@@ -146703,7 +146703,7 @@ Z|-1|?×5|fci|?×8
 a|-1|?||?×5|-|-×6
 b|1|-×7|?|?|?|lunzocht|?×3
 c!CT
-d!BX
+d!BY
 e!U
 f!E
 g!Eh
@@ -146724,7 +146724,7 @@ u!w
 v|3|-×7|?|šatú|?×5
 w!BS
 x!CW
-y!Bc
+y!Bd
 z!Bs
 0!Eg
 1!Cl
@@ -147639,7 +147639,7 @@ A!Y
 B!Ck
 C!B
 D!C
-E!Bc
+E!Bd
 -
 skřip|A|0|skřip|A
 mýd|B|0|mid|B
@@ -147768,7 +147768,7 @@ Q!G
 S!DH
 T!B
 -
-A!Ba
+A!Bb
 B!MO
 C!C
 D!g
@@ -148030,7 +148030,7 @@ S!0
 T!6
 U!X
 V!Dv
-W!Be
+W!Bf
 X!CF
 Y!G
 Z!C
@@ -148527,7 +148527,7 @@ N|0|?×13|ny
 O!Dy
 P!BL
 Q|0|?×5|ňi|?×8
-R!BW
+R!BX
 S!g
 T!t
 U!L
@@ -150517,7 +150517,7 @@ A|2|?|ra|?×6|rú|?×5
 B!DZ
 C!F9
 D|2|?×7|ludzi|?|?|ludzi|?×3
-E!Be
+E!Bf
 F|0|a|?|?|e|?×5|encóm|?×4
 G!Ho
 H!D3
@@ -151393,7 +151393,7 @@ K!e
 L!e
 M|1|?×7|ně|?×6
 N!Gx
-O!Bb
+O!Bc
 P|2|?×10|ledi|?×3
 Q!U
 -
@@ -152117,7 +152117,7 @@ B!P+
 C!G
 D!0
 E!l
-F!Be
+F!Bf
 G!C
 H!F
 I!D
@@ -152624,7 +152624,7 @@ Z!Jy
 a!S
 b!F2
 c!G
-d!Ba
+d!Bb
 e!B
 f!n
 g!i
@@ -152632,7 +152632,7 @@ h!G
 i!8
 j!U
 k!2
-l!Bh
+l!Bi
 m!N
 n!Qb
 -
@@ -154042,11 +154042,11 @@ E|1|?×6|ó|-×7
 F!I5
 G!GT
 H!Cy
-I!Be
+I!Bf
 J!0
 K|0|?×6|ťim|?×7
 L|1|?×8|óp|?×5
-M!BX
+M!BY
 N|1|?|ê|?||?×10
 O!P9
 P|0|?×10|čê|?×3
@@ -154284,7 +154284,7 @@ G!U
 -
 A!N1
 B!2
-C!Bh
+C!Bi
 D!BI
 E!G
 F!DW
@@ -155381,14 +155381,14 @@ U!HL
 V!F
 W!CW
 X!Pp
-Y!Bc
+Y!Bd
 Z|3|?×3|t|?|ďe|?|di|?×6
 a!Bp
 b!N
 c!B2
 d!Cp
 e!BC
-f!BX
+f!BY
 g|1|?|?|ú|?×11
 h!HH
 i!w
@@ -156225,7 +156225,7 @@ C|0|?×7|ni,ny,nové|nu|?×4|ňami
 D|0|e|a|?×7|am|?|?|ach|ama
 E!EV
 F|0|?|a|?×11|ami
-G!BY
+G!BZ
 H|1|a|?×5|u|y|?|am|?|?|ach|ama
 I!B
 J!B
@@ -156542,7 +156542,7 @@ J!K
 K!O
 -
 A!D
-B!Bb
+B!Bc
 C!a
 D!R
 E!B
@@ -158913,7 +158913,7 @@ D!9
 -
 A!Qa
 B!T
-C!Bd
+C!Be
 D!I
 -
 bar|A|0|bar|A
@@ -159067,7 +159067,7 @@ L!h
 A!CP
 B!C
 C!CP
-D!BZ
+D!Ba
 E!E5
 F!Dw
 G!D7
@@ -159466,7 +159466,7 @@ C!BU
 D!n
 -
 A!S
-B!Bg
+B!Bh
 C!W
 D!K
 -
@@ -159787,7 +159787,7 @@ C!c
 -
 A!C
 B!D
-C!Bi
+C!BW
 -
 žen|A|0|rob|A
 babič|B|0|stařen|B
@@ -161094,7 +161094,7 @@ E!Bk
 -
 A!CB
 B!Bx
-C!Bi
+C!BW
 D!B
 E|3|?|ołu|?×12
 -
@@ -161459,7 +161459,7 @@ E!W
 A|0|?×5|šče|?×8
 B!MQ
 C|2|?×7|lude|?×6
-D!Be
+D!Bf
 -
 měst|A|0|mje|A
 cest|B|0|cest|B
@@ -161702,7 +161702,7 @@ A!e
 B!Bm
 C!A
 -
-A!BW
+A!BX
 B!PM
 C!9
 -
@@ -161934,7 +161934,7 @@ C!BQ
 D!n
 -
 A!V
-B!Bd
+B!Be
 C!r
 D!K
 -
@@ -162855,7 +162855,7 @@ J!d
 K!BD
 L!c
 M|2|d|?×6|-|-×6
-N!BW
+N!BX
 O|3|?×5|chô|?×8
 P|1|êma|?×13
 Q!z
@@ -162863,7 +162863,7 @@ R!OO
 S!Ez
 T|3|?|sa|?|z,s|?×10
 U!j
-V!Bb
+V!Bc
 W!N
 X!D7
 Y|3|êl|?×13
@@ -165525,7 +165525,7 @@ B!Pe
 C!E
 D!B7
 E|1|ka|ke|?×12
-F!Bd
+F!Be
 G!BR
 H!C
 -
@@ -165677,7 +165677,7 @@ D!Cr
 E!0
 F!S
 G!y
-H!Bg
+H!Bh
 I!A
 J!KV
 K!BI
@@ -165849,7 +165849,7 @@ J!H
 A!3
 B!Bu
 C!Fu
-D!Bf
+D!Bg
 E!EE
 F|1|?×6|tou|?×7
 G|1|f|?×13
@@ -166123,7 +166123,7 @@ S!E+
 T!Ia
 U!HQ
 V|2|?×3|ca|?×10
-W!BY
+W!BZ
 X!Q
 Z!F
 a!G
@@ -166355,7 +166355,7 @@ Y!R
 a!CX
 b!C
 -
-A!BX
+A!BY
 B|3|?×10|e|?|?|ama
 C!Qj
 D!n
@@ -167144,7 +167144,7 @@ L!D4
 M!x
 N!Jc
 O!F1
-P!Ba
+P!Bb
 Q!EK
 R|2|?×10|oly|?×3
 S!Qd
@@ -167465,7 +167465,7 @@ C!BF
 D!DB
 -
 A|1|?×6|ňí|?×7
-B!Ba
+B!Bb
 C|1|?×5|éšné|?×8
 D!Hm
 -
@@ -170349,7 +170349,7 @@ C!Bv
 -
 A!D
 B!S
-C!Bg
+C!Bh
 -
 cibul|A|0|cêbôlên|A
 o|B|0|vo|B
@@ -170733,7 +170733,7 @@ G!A
 H!DG
 I!G
 J!BG
-K!Bg
+K!Bh
 L!O
 M!B4
 N!Z
@@ -171165,7 +171165,7 @@ Y!r
 Z|1|?×6|ňú|?×7
 a!KA
 b!Fx
-c!BZ
+c!Ba
 d!r
 e!CP
 f!E
@@ -171510,7 +171510,7 @@ Y!2
 A!QD
 B!CM
 C!Bm
-D!BY
+D!BZ
 E!D
 G!BT
 H!Cv
@@ -172221,7 +172221,7 @@ K!B
 -
 A!Qv
 B!Cw
-C!Ba
+C!Bb
 D|3|?×10|ike|?×3
 E!BD
 F!QV
@@ -172412,7 +172412,7 @@ D!O
 E!G
 -
 A!JI
-B!Bb
+B!Bc
 C|2|?×4|čoveče|?×9
 D!CO
 E!A
@@ -173098,7 +173098,7 @@ G!M
 -
 A!F
 B!C
-C!Bi
+C!BW
 D!B
 F!B
 G!1
@@ -174660,7 +174660,7 @@ A!D
 B!A
 C!CU
 -
-A!Bc
+A!Bd
 B!R
 C!M
 -
@@ -176534,9 +176534,9 @@ D!B/
 E!Y
 F!v
 -
-A!Bf
+A!Bg
 B|1|íca|?×13
-C!Bc
+C!Bd
 D!x
 E!j
 F!Eu
@@ -177069,7 +177069,7 @@ A!CH
 B!Cc
 C!y
 D!S
-E!Bg
+E!Bh
 -
 ob|A|0|vob|A
 okur|B|0|vokur|B
@@ -177125,7 +177125,7 @@ A!y
 B!CH
 C!Cc
 D!S
-E!Bg
+E!Bh
 -
 ok|A|0|vok|A
 ob|B|0|vob|B
@@ -177181,7 +177181,7 @@ A!CH
 B!Cc
 C!y
 D!S
-E!Bg
+E!Bh
 -
 ob|A|0|ob|A
 okur|B|0|vokur|B
@@ -180470,7 +180470,7 @@ y0
 -
 A!e
 -
-A!BW
+A!BX
 -
 d|A|0|d|A
 -
@@ -180852,7 +180852,7 @@ y0
 -
 A!B
 -
-A!Bi
+A!BW
 -
 borův|A|0|hefer|A
 -
@@ -181618,8 +181618,8 @@ A!X
 B!D
 D!B
 -
-A!Bf
-B!Bc
+A!Bg
+B!Bd
 C!G
 D!B
 -
