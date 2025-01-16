@@ -4,7 +4,7 @@ var webSearchParams=[]; //{showName: page, name: "page", value: "subs"}
 
 //import { mapRedraw } from "./map-lookup.js";
 //import { initLoadingLangData } from "./translator-control.js";
-var replacesMoravian;
+//var replacesMoravian;
 // Settings
 var error = false;
 var transcription = null;
@@ -462,7 +462,8 @@ function ChangeDic() {
         localStorage.setItem('trTo', selTo.value);
     //location.hash.to = selTo.value;
     urlParamChange("input", selTo.value, true/**/);
-    BuildOptionsMoravian();
+    currentLang = GetCurrentLanguage();
+    BuildOptions();
     //let n;
     //let headername = document.getElementById('headername');
 
@@ -1037,7 +1038,7 @@ var Load = function () {
     initLoadingLangData();
     initLookUpMap();
 
-    MaravianVariantsSet();
+   // MaravianVariantsSet();
     //geolocation();
     /* document.documentElement.style.visibility="unset";
     Reload hash - need twice refresh for new page without cacheTabSelect */
@@ -4767,7 +4768,7 @@ function GetTopLangs() {
     generateTopListSipleWorldLike("Interjections");
     generateTopListSipleWorldLike("SimpleWords");
 }
-
+/*
 function MaravianVariantsSet() {
     //var: <{imp}>
     replacesMoravian=[
@@ -4880,17 +4881,21 @@ function MaravianVariantsSet() {
         },
     ];
 }
-
-function BuildOptionsMoravian(){
+*/
+function BuildOptions(){
     let outerOptions=document.getElementById("optionsSelect");
     outerOptions.innerHTML="";
     
-    if (moravianId.toString()!=document.getElementById('selectorTo').value) {
+    // no options
+    if (currentLang.Options==undefined) {
         spoilerOptLangOpener.style.display="none";
         return;
-    }else spoilerOptLangOpener.style.display="block";
+    }    
+    
+    // options    
+    spoilerOptLangOpener.style.display="block";
 
-    for (let r of replacesMoravian) {
+    for (let r of currentLang.Options) {
         let group=document.createElement("div");
         let groupLeft=document.createElement("div");
 
@@ -4904,7 +4909,7 @@ function BuildOptionsMoravian(){
 
         if (r.Type=="var") { 
             let span=document.createElement("span");
-            span.innerText="Ukázka: "+r.Show.replace("<x>", r.Variants[r.Selected]);
+            span.innerText="Ukázka: "+r.Example.replace("<x>", r.Options[r.Selected]);
             span.id="mor_opt_show_"+r.Code;
             span.style="font-style: italic;font-size: 4mm;";
             groupLeft.appendChild(span);
@@ -4915,13 +4920,13 @@ function BuildOptionsMoravian(){
             select.id="mor_opt_"+r.Code;
             select.addEventListener("change", ()=>{
                 r.Selected=parseInt(select.value);
-                span.innerText="Ukázka: "+r.Show.replace("<x>", r.Variants[r.Selected]);
+                span.innerText="Ukázka: "+r.Example.replace("<x>", r.Options[r.Selected]);
                 ChangeDic();
                 Translate();
             });
             
-            for (let i=0; i<r.Variants.length; i++) {
-                let v=r.Variants[i];
+            for (let i=0; i<r.Options.length; i++) {
+                let v=r.Options[i];
                 let option=document.createElement("option");
                 option.value=i;
                 option.innerText=v;
@@ -4933,7 +4938,7 @@ function BuildOptionsMoravian(){
             group.appendChild(select);
         } else if (r.Type=="rep") {
             let span=document.createElement("span");
-            span.innerText="Ukázka: "+r.Show.replace("<x>", r.Replace[0].Variants[r.Selected]);
+            span.innerText="Ukázka: "+r.Example.replace("<x>", r.Replace[0].Options[r.Selected]);
             span.id="mor_opt_show_"+r.Code;
             span.style="font-style: italic;font-size: 4mm;";
             groupLeft.appendChild(span);
@@ -4944,13 +4949,13 @@ function BuildOptionsMoravian(){
             select.id="mor_opt_"+r.Code;
             select.addEventListener("change", ()=>{
                 r.Selected=parseInt(select.value);
-                span.innerText="Ukázka: "+r.Show.replace("<x>", r.Replace[0].Variants[r.Selected]);
+                span.innerText="Ukázka: "+r.Example.replace("<x>", r.Replace[0].Options[r.Selected]);
                 ChangeDic();
                 Translate();
             });
             
-            for (let i=0; i<r.Replace[0].Variants.length; i++){
-                let v=r.Replace[0].Variants[i];
+            for (let i=0; i<r.Replace[0].Options.length; i++){
+                let v=r.Replace[0].Options[i];
                 let option=document.createElement("option");
                 option.value=i;
                 option.innerText=v;
@@ -4971,7 +4976,8 @@ function BuildOptionsMoravian(){
     spanNote.addEventListener("click", ()=>{
          showSetting('oTranscription');
     });
-    outerOptions.appendChild(spanNote);  
+
+    outerOptions.appendChild(spanNote);
 }
 /*
 async function shareImage() {

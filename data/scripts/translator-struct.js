@@ -165,13 +165,21 @@ class Cite{
                 pack.append(document.createTextNode(". "));
             }
             
+            // licence
+            if (rules["licence"]!=undefined && rules["licence"]!="") {
+                let poznamky=document.createElement("span");
+                poznamky.innerText=rules["licence"];
+                pack.append(poznamky);
+                pack.append(document.createTextNode(". "));
+            }
+            
             // issn
             if (rules["issn"]!=undefined && rules["issn"]!="") {
                 let issn=document.createElement("span");
                 issn.innerText="ISSN "+rules["issn"];
                 pack.append(issn);
                 pack.append(document.createTextNode(". "));
-            }
+            }   
             
             // isbn
             if (rules["isbn"]!=undefined && rules["isbn"]!="") {
@@ -188,6 +196,8 @@ class Cite{
                 pack.append(poznamky);
                 pack.append(document.createTextNode(". "));
             }
+
+         
     
             // link
             if (rules["odkaz"]!=undefined && rules["odkaz"]!=""){
@@ -476,7 +486,15 @@ class Cite{
                 pack.append(rocnik);
             }
             if ((rules["rocnik"]!=undefined && rules["rocnik"]!="") || (rules["cislo"]!=undefined && rules["cislo"]!="")) pack.append(document.createTextNode(". "));
-                      
+             
+            // licence
+            if (rules["licence"]!=undefined && rules["licence"]!="") {
+                let poznamky=document.createElement("span");
+                poznamky.innerText=rules["licence"];
+                pack.append(poznamky);
+                pack.append(document.createTextNode(". "));
+            }
+
             // poznamky
             if (rules["poznamky"]!=undefined && rules["poznamky"]!="") {
                 let poznamky=document.createElement("span");
@@ -5752,7 +5770,12 @@ class LanguageTr{
                     break;
 
                 case "e":
-                    this.BuildSelect(line.substring(1));
+                    let optionsRaw=line.substring(1);
+                        if (optionsRaw.length>1){
+                        this.Options=JSON.parse(optionsRaw.replaceAll(/\\n/, "\n"));
+                        console.log(this.Options);
+                    }
+                    //this.BuildSelect(line.substring(1));
                     break;
 
                 case "c":
@@ -8507,7 +8530,7 @@ function GenerateSupCite(source) {
 }
 
 function ReplaceMoravian(str) {
-    if (currentLang.Id!=moravianId) return str;
+ /*   if (currentLang.Id!=moravianId) return str;
     let ret=str;
     for (let r of replacesMoravian) {
         if (r.Type=="var") {
@@ -8515,6 +8538,20 @@ function ReplaceMoravian(str) {
         } else {
             for (let rr of r.Replace) {
                 ret=ret.replaceAll(rr.From, rr.Variants[r.Selected]);
+            }
+        }
+    }
+    return ret;*/
+    console.log(currentLang.Options);
+    if (currentLang.Options==undefined) return str;
+
+    let ret=str;
+    for (let r of currentLang.Options) {
+        if (r.Type=="var") {
+            ret=ret.replaceAll("<{"+r.Code+"}>", r.Options[r.Selected]);
+        } else {
+            for (let rr of r.Replace) {
+                ret=ret.replaceAll(rr.From, rr.Options[r.Selected]);
             }
         }
     }

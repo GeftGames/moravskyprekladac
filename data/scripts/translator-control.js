@@ -258,7 +258,7 @@ function GetTranslations() {
             else document.getElementById("selectorTo").selectedIndex=0;
        }
         currentLang = GetCurrentLanguage();
-        BuildOptionsMoravian();
+        BuildOptions();
         //if (input_lang>=0 && input_lang!=undefined) 
         Translate();
         
