@@ -8542,7 +8542,6 @@ function ReplaceMoravian(str) {
         }
     }
     return ret;*/
-    console.log(currentLang.Options);
     if (currentLang.Options==undefined) return str;
 
     let ret=str;
