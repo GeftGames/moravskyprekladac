@@ -498,7 +498,11 @@ p {
     transition: color var(--transitionSlow);
     color: var(--ColorText);
 }
-
+label{
+    color: var(--ColorText);
+    font-family: var(--f);
+    text-shadow: var(--tsh);
+}
 span {
     text-shadow: var(--tsh);
     font-size: var(--fontSizeMedium);
