@@ -31,6 +31,7 @@ var appSelected = "translate";
 
 var lastInputText = [];
 var dynamicsUrls=true;
+var contrast=1;
 
 class savedTraslation {
     constructor() {
@@ -250,7 +251,7 @@ function customTheme() {
             if (themeLight == "dark") {
                 if (themeDay) {
                     //	console.log("dark, day");
-                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 17%)');
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% '+(17*contrast)+'%)');
                     styles.setProperty('--ColorText', 'white');
                     styles.setProperty('--ConBack', '#2f2f2f');
                     styles.setProperty('--ColorBack', '#101010');
@@ -280,7 +281,7 @@ function customTheme() {
             } else if (themeLight == "light") {
                 if (themeDay) {
                     //	console.log("light, day");
-                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 96%)');
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% '+(96*contrast)+'%)');
                     styles.setProperty('--ColorText', 'black');
                     styles.setProperty('--ConBack', 'white');
                     styles.setProperty('--ColorBack', 'white');
@@ -310,7 +311,7 @@ function customTheme() {
             } else { // Semilight
                 if (themeDay) {
                     //	console.log("semi, day");
-                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% 90%)');
+                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% '+(contrast*90)+'%)');
                     styles.setProperty('--ColorText', 'black');
                     styles.setProperty('--ConBack', 'hsl(' + colorH + 'deg 60% 99%)');
                     styles.setProperty('--ColorBack', 'hsl(' + colorH + 'deg 60% 98%)');
@@ -4413,8 +4414,8 @@ function customLevenshtein(s1, s2) {
             let cost;
             if (s1[i - 1] === s2[j - 1]) {
                 cost = 0;
-            } else if (isSimilarChar(s1[i - 1], s2[j - 1])) {
-                cost = 0.5;
+           /* } else if (isSimilarChar(s1[i - 1], s2[j - 1])) {
+                cost = 0.5;*/
             } else {
                 cost = 1;
             }
@@ -4431,7 +4432,7 @@ function customLevenshtein(s1, s2) {
 
 function similarityOfTwoWords(s1, s2) {
     let len;
-    if (s1.length>s2.length) len=s1.length; else s2.length;
+    if (s1.length>s2.length) len=s1.length; else len=s2.length;
 
     return 1-customLevenshtein(s1, s2)/len;
 }

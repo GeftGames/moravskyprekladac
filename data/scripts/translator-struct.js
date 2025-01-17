@@ -226,10 +226,11 @@ class Cite{
                 pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["isbn"]}'>WorldCat</a>`;
                 //https://vufind.mzk.cz/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=978-80-270-0125-5&type0%5B%5D=ISN&bool0%5B%5D=OR&illustration=-1&limit=10&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=#back
                 pack.innerHTML+=` <a class="link" href='https://vufind.mzk.cz/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=${rules["isbn"]}&type0%5B%5D=ISN&bool0%5B%5D=OR&illustration=-1&limit=10&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=#back'>Moravská Zemská Knihovna</a>`;
-            }else{
+            } else {
                 if (rules["odkaz"]==undefined || rules["odkaz"]=="") {
                     pack.innerHTML+=` <a class="link" href='https://www.google.com/search?q=${rules["nazev"]}'>Google</a>`;
                     pack.innerHTML+=` <a class="link" href='https://search.worldcat.org/cs/search?q=${rules["nazev"]}'>WorldCat</a>`;
+                    pack.innerHTML+=` <a class="link" href='https://www.digitalniknihovna.cz/mzk/search?q=${rules["nazev"]}'>digi knihovna MZK</a>`;
                 }
             }
     
@@ -2560,7 +2561,8 @@ class ItemPatternPronoun {
             return parent;
         }
 
-        if (this.Shapes.length == 14) { let tbody = document.createElement("tbody");
+        if (this.Shapes.length == 14) { 
+            let tbody = document.createElement("tbody");
         tbody.appendChild(document.createTextNode("Zájmeno"));
             for (let c = 0; c < 14; c += 2) {
                 let tr = document.createElement("tr");
@@ -2577,8 +2579,12 @@ class ItemPatternPronoun {
             } return tbody;
         }
 
-        if (this.Shapes.length == 7) { let tbody = document.createElement("tbody");
-        tbody.appendChild(document.createTextNode("Zájmeno"));
+        if (this.Shapes.length == 7) { 
+            let tableC = document.createElement("table");
+            tableC.className="tableDic";
+
+            let tbody = document.createElement("tbody");
+            tbody.appendChild(document.createTextNode("Zájmeno"));
             for (let c=0; c<7; c ++) {
                 let tr = document.createElement("tr");
 
@@ -2592,7 +2598,8 @@ class ItemPatternPronoun {
 
                 tbody.appendChild(tr);
             }
-            return tbody;
+            tableC.appendChild(tbody);
+            return tableC;
         }
 
     }
@@ -3058,12 +3065,15 @@ class ItemPronoun {
 
         // To
         let to_out=[];
+        let onebefore=false;
         for (let to of this.To) {
             let patternShapesTo=to.Pattern.Shapes[0];
             if (!Array.isArray(patternShapesTo))patternShapesTo=[];
             for (let shape of patternShapesTo){
-                if (shape == "?" || shape=="-") continue;
-
+                if (shape == "?" || shape=="-") continue;     
+                
+                if (onebefore) p.appendChild(document.createTextNode(", "));
+                
                 let t = document.createElement("span");
                 let to_text=ApplyPostRules(to.Body + shape);
                 t.innerText = to_text;
@@ -3073,19 +3083,21 @@ class ItemPronoun {
                     });
                     t.className = "dicCustom";
                 }
-                p.appendChild(t);
-                                
+                p.appendChild(t);     onebefore=true;
+                
                 to_out.push(to_text);
             }            
             
             // cites
-            GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
+            GenerateSupCite(to.Source).forEach(e => p.appendChild(e)); 
+       
+       
         }
 
         if (to_out.length==0) return null;
 
         f.addEventListener("click", function(){
-            mapper_open(f.innerText,to_out);
+            mapper_open(f.innerText, to_out);
         });
 
         let r = document.createElement("span");

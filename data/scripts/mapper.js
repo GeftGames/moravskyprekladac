@@ -88,6 +88,13 @@ function mapper_init(customStyle) {
 	// přeložit body
 	mapper_points=mapper_GetPointsTranslated(languagesListAll, mapperRenderOptions.inputText);
 
+	if (mapperRenderOptions.similarity) {
+		for (let pt of mapper_points) {
+			console.log(pt.text, mapperRenderOptions.similarityToText)
+			pt.text=similarityOfTwoWords(pt.text, mapperRenderOptions.similarityToText);
+		}
+	}
+
 	if (mapperRenderOptions.inputText.startsWith("<{word=") && mapperRenderOptions.inputText.endsWith("}>")){
 		let parts=mapperRenderOptions.inputText.substring(2,mapperRenderOptions.inputText.length-2).split("|");
 		let set=-1;
@@ -857,6 +864,8 @@ class RenderMapperOptions{
 		this.bordersAlpha=1;
 		this.showNote=true;
 		this.numberScale=false;
+		this.similarity=false;
+		this.similarityToText="";
 	//	this.wireframe=false;// style transparent
 	}
 	
@@ -877,6 +886,9 @@ class RenderMapperOptions{
 		this.bordersAlpha=document.getElementById('mapperOptionBordersAlpha').value;
 		this.showNote=document.getElementById('mapperOptionShowNote').checked;	
 		this.numberScale=document.getElementById('mapperNumberScale').checked;
+
+		this.similarity=document.getElementById('mapperOptionCalculateSimilarity').checked;
+		this.similarityToText=document.getElementById('mapperOptionSimilarityText').value;
 
 		this.ComputeColors();
 		this.ComputeBorders();
@@ -914,6 +926,9 @@ class RenderMapperOptions{
 		document.getElementById('mapperOptionMinimalQuality').value=this.minQuality*100;	
 		document.getElementById('mapperOptionShowNote').checked=this.showNote;
 		document.getElementById('mapperNumberScale').checked=this.numberScale;
+
+		document.getElementById('mapperOptionCalculateSimilarity').checked=this.similarity;
+		document.getElementById('mapperOptionSimilarityText').value=this.similarityToText;
 	}
 	
 	ComputeColors(){
@@ -966,8 +981,10 @@ class RenderMapperOptions{
 			this.inputText=parts[7];
 			this.backgroundRegionMapOpacity=parts[8];
 			this.ShowPlacesShorts=parts[9]=="true";
-			this.minQuality=[10];			
+			this.minQuality=parts[10];			
 			this.numberScale=parts[11]=="true";
+			this.similarity=parts[12]=="true";
+			this.similarityToText=parts[13];
 			this.ComputeColors();
 			this.ComputeBorders();
 		}
@@ -986,6 +1003,8 @@ class RenderMapperOptions{
 		data+=this.ShowPlacesShorts+="|";
 		data+=this.minQuality+="|";
 		data+=this.numberScale+="|";
+		data+=this.similarity+="|";
+		data+=this.similarityToText+="|";
 		return data;
 	}
 }
