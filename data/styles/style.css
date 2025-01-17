@@ -68,7 +68,7 @@ h1 {
     font-weight: 400;
 }
 
-h2 {
+h2, h3 {
     font-family: var(--f);
     font-weight: 400;
     margin: 0;
@@ -1939,11 +1939,11 @@ input::placeholder,
     color: var(--ColorOrig);
     user-select: none;
     transition: color .3s;
-    opacity: .6;
+    opacity: .75;
 }
 .reference:hover {
     color: var(--ColorThemeForward);
-    opacity: .8;
+    opacity: .85;
 }
 
 .langOption{
