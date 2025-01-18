@@ -1,4 +1,7 @@
 # Poslední změny
+### 17.01. 2025
++ kalkulace podobnosti v mapě
+  
 ### 29.12. 2024
 + tlačítko ve slovníku, pokusit se hledat v mapě
 + nové rozhraní na posílání slov
