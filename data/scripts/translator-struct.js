@@ -8501,6 +8501,16 @@ function LoadArr(rawArr, len, start) {
 }
 
 function mapper_link(input, filter){
+    let img = document.createElementNS("http://www.w3.org/2000/svg","svg");
+    let use = document.createElementNS("http://www.w3.org/2000/svg","use");
+    use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#imgPathMap");
+    img.appendChild(use);
+  /*  img.setAttribute("viewBox","0 0 60 60");*/
+    img.classList="mapperBtn";
+    img.addEventListener("click", function(){
+        mapper_open(input, filter);
+    });
+/*
     let img = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     img.classList="mapperBtn";
     img.addEventListener("click", function(){
@@ -8510,7 +8520,7 @@ function mapper_link(input, filter){
 
     let path=document.createElementNS("http://www.w3.org/2000/svg", 'path');
     path.setAttribute("d", "M15.8.6C10 .5 3.9 3.7 1.7 9.3c-1.1 2.4-.6 5.2-.8 7.8l-.1 32.4a40.3 40.3 0 0124.5-13C22 31 20 24.8 17.9 18.8 13.7 5.2 19 2.7 19.2 1a10 10 0 00-3.4-.4Zm45.6 1a30.5 30.5 0 01-16 6.4 45 45 0 01-21-4.9c-2.3 1-3.4 6.8-3.3 8.7 4.6 1.5 18.3 4.3 40.4 13V1.6ZM22 16.2a56 56 0 0010.8 23.2c2.6 2.6 5.5 5.5 9.3 6.3 3 .3 5.6-1.2 8.1-2.5 4.1-2.2 7.8-5.1 11.3-8.1v-5.7C48.4 25.8 35.2 19.7 22 16.2Zm6 24.2c-4.9 1-9.8 1.8-14.2 4-4.5 2.8-10.7 8-13 10.7l.1 3.8c8-3.3 16.9-5 25.4-3.1 7.6 1.4 15 4.6 23 3.4 5.3-.9 10.8-4.5 12.3-10 .3-2.8 0-6.5 0-9.3-5 4.1-12 8.5-18.6 9-7.2-.3-13.5-8-14.9-9.7z");
-    img.appendChild(path);
+    img.appendChild(path);*/
 
     lastAppMapper="dic";
 

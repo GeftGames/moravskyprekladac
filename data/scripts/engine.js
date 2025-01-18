@@ -129,6 +129,36 @@ function changeCustomColor() {
     localStorage.setItem('Color', colorH);
 }
 
+function smoothAdjustBlue(h, s, l) {
+    const centerHue = 250; // Center of the blue range
+    const range = 30;      // ±30° range around the center
+
+    // Calculate the distance from the center hue
+    const distance = Math.abs(h - centerHue);
+
+    // Compute a weight (1 at the center, 0 at the edges)
+    const weight = Math.max(0, 1 - Math.pow(distance / range,2)); // Linear fall-off
+
+    // Smoothly adjust lightness and saturation based on the weight
+    const lightnessBoost = weight * 12; // Boost lightness by up to 10%
+    const saturationReduction = weight * 45; // Reduce saturation by up to 10%
+
+    l = Math.min(l + lightnessBoost, 100); // Ensure lightness doesn't exceed 100%
+    s = Math.max(s - saturationReduction, 0); // Ensure saturation stays non-negative
+
+    return { h, s, l };
+}
+
+function smoothAdjustBlueHSL(h, s, l) {
+    let col=smoothAdjustBlue(h,s,l);
+    return 'hsl(' + col.h + 'deg '+col.s+'% '+col.l+'%)';
+}
+
+function smoothAdjustBlueRGB(h, s, l) {
+    let col=smoothAdjustBlue(h,s,l);
+    return HSLToRGB(col.h, col.s, col.l);
+}
+
 function customTheme() {
    // ThemeLight = document.getElementById("themeLight").value;
    // Power = document.getElementById("power").value;
@@ -251,17 +281,17 @@ function customTheme() {
             if (themeLight == "dark") {
                 if (themeDay) {
                     //	console.log("dark, day");
-                    styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 100% '+(17*contrast)+'%)');
+                    styles.setProperty('--ColorTheme',smoothAdjustBlueHSL(colorH,100,17)/* 'hsl(' + colorH + 'deg 100% '+(17*contrast)+'%)'*/); 
                     styles.setProperty('--ColorText', 'white');
                     styles.setProperty('--ConBack', '#2f2f2f');
                     styles.setProperty('--ColorBack', '#101010');
-                    styles.setProperty('--ColorThemeAccent', HSLToRGB(colorH, 0, 50) /*'hsl('+colorH+'deg 30% 50%)'*/ );
-                    styles.setProperty('--ColorThemeForward', 'hsl(' + colorH + 'deg 30% 90%)');
-                    styles.setProperty('--ColorThemeAccentBack', 'hsl(' + colorH + 'deg 30% 80%)');
+                    styles.setProperty('--ColorThemeAccent', smoothAdjustBlueRGB(colorH, 0, 50)/*HSLToRGB(colorH, 0, 50)*/ /*'hsl('+colorH+'deg 30% 50%)'*/ );
+                    styles.setProperty('--ColorThemeForward', smoothAdjustBlueHSL(colorH, 30, 90)/*'hsl(' + colorH + 'deg 30% 90%)'*/);
+                    styles.setProperty('--ColorThemeAccentBack', smoothAdjustBlueHSL(colorH,30,80)/*'hsl(' + colorH + 'deg 30% 80%)'*/);
 
                     styles.setProperty('--RawColorForw', '0, 0, 0');
                     styles.setProperty('--RawColorBack', '255, 255, 255');
-                    styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
+                    styles.setProperty('--ColorOrig', smoothAdjustBlueHSL(colorH,100,50)/*'hsl(' + colorH + 'deg 100% 50%)'*/);
                 } else {
                     //	console.log("dark, night");
                     styles.setProperty('--ColorTheme', 'hsl(' + colorH + 'deg 80% 12%)');

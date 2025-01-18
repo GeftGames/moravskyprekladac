@@ -675,12 +675,18 @@ function mapper_compute() {
 	ctx.font = mapperRenderOptions.fontSize+"px sans-serif";
 	// Clear 
 	ctx.clearRect(0, 0, canvasMap.width, canvasMap.height);
-	ctx.globalAlpha = .3;
+
+	let fontColor;
+	if (getCurrentThemeLight()=="dark") fontColor="white";
+	else fontColor="black";
+
+	if (getCurrentThemeLight()=="dark")  ctx.globalAlpha = .2;
+	else ctx.globalAlpha = .3;
 
 	let scale=mapperRenderOptions.scale*dpr;
 
-	for (let cell of mapper_borders.cells){
-		
+	// cells back color
+	for (let cell of mapper_borders.cells) {		
 		let col;
 		for (let c of mapperRenderOptions.backColors) {
 			//console.log(c);
@@ -691,7 +697,10 @@ function mapper_compute() {
 		}
 		if (mapperRenderOptions.numberScale){
 			let f=255-Math.floor(parseFloat(cell.site.text)*255);
-			col="rgb("+f+","+f+","+f+")";
+			if (getCurrentThemeLight()=="dark") col="rgb("+(255-f)+","+(255-f)+","+(255-f)+")";
+			else col="rgb("+f+","+f+","+f+")";
+			
+			//col="rgba(0,0,0,"+f+")";
 		}
 
 		if (col!=undefined){		
@@ -706,6 +715,7 @@ function mapper_compute() {
 		}
 	}
 
+	// draw lines
 	ctx.lineWidth = 1*dpr;
 	ctx.globalAlpha = mapperRenderOptions.bordersAlpha;
 	for (let line of mapper_borders.edges){
@@ -729,30 +739,30 @@ function mapper_compute() {
 					ctx.beginPath();
 					ctx.moveTo(line.va.x*scale, line.va.y*scale);
 					ctx.lineTo(line.vb.x*scale, line.vb.y*scale);
-					//ctx.strokeStyle = 'green';
+					ctx.strokeStyle = fontColor;
 					ctx.stroke();
 				}
 			}
 		}
 	}
 
+	// remove outside with mask
 	ctx.globalAlpha = 1;
-	// draw mask
-	ctx.globalCompositeOperation = 'destination-atop';
+	ctx.globalCompositeOperation = 'destination-in';	
 	ctx.drawImage(imgMap_bounds, 0, 0, imgMap_bounds.width*scale, imgMap_bounds.height*scale);
-	//imagecontext.drawImage(mask, 0, 0, width, height);
-	ctx.globalCompositeOperation = "darken";
-	
+
 	// draw background
+	ctx.globalCompositeOperation = "destination-over";
+	ctx.globalAlpha = .4;
 	ctx.globalAlpha = mapperRenderOptions.backgroundRegionMapOpacity;
 	ctx.drawImage(imgMap, 0, 0, imgMap_bounds.width*scale, imgMap_bounds.height*scale);
 	
 
 	// reset
 	ctx.globalCompositeOperation = "source-over";
-	ctx.globalAlpha = 1;
-	//ctx.save();
+	ctx.globalAlpha = 1;	
 	
+
 	/*
 	let imageDataBounds = ctx.getImageData(0,0,canvasMap.width, canvasMap.height);
 
@@ -772,8 +782,6 @@ function mapper_compute() {
 	ctx.globalAlpha = 1;
 	*/
 
-	
-
 	// filter
 	let xx=0, yy=0, radius=6*dpr;
 	ctx.fillStyle = "blue";
@@ -789,7 +797,7 @@ function mapper_compute() {
 	if (mapperRenderOptions.ShowPlacesShorts) hText=radius+5;
 	
 	for (let p of mapper_points){
-		ctx.fillStyle="Black";
+		ctx.fillStyle=fontColor;
 		ctx.font = (mapperRenderOptions.fontSize*dpr)+"px sans-serif";
 	//	if (xx+p[0]-w/2>0 && yy+p[1]-radius-5>0) { //<-optimalizace, mimo plochu
 		let ptText;
@@ -814,18 +822,18 @@ function mapper_compute() {
 		}
 	}	
 	
-	ctx.fillStyle="Black";
+	ctx.fillStyle=fontColor;
 	ctx.font = mapperRenderOptions.fontSize+"px sans-serif";
 
 	if (mapperRenderOptions.text!="") {
-		ctx.fillStyle="Black";
+		ctx.fillStyle=fontColor;
 		let textSize=ctx.measureText(mapperRenderOptions.text);
 		//console.log(mapperRenderOptions.text);
 		ctx.fillText(mapperRenderOptions.text, 5*scale, (canvasMap.height/4*3)*scale);
 	}
 	ctx.font = (11*dpr)+"px sans-serif";
 	if (mapperRenderOptions.showNote) {
-		ctx.fillStyle="Black";
+		ctx.fillStyle=fontColor;
 		let date=new Date();
 		let text="Vygenerováné '"+mapperRenderOptions.inputText+"', "+(date.toLocaleString('cs-CZ'))+", "+serverName;
 		let w=ctx.measureText(text);
