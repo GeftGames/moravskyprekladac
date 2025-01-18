@@ -15,11 +15,15 @@ function mapper_open(text_input, filter) {
 
 	let customStyle=new RenderMapperOptions();
 	customStyle.LoadDefault();
+
+	let color="gray";
+	if (getCurrentThemeLight()=="dark") color="white";
+
 	if (Array.isArray(filter)){
 		for (let f of filter){
-			customStyle.rawBackColors+="->"+f+"=>gray;";
+			customStyle.rawBackColors+="->"+f+"=>"+color+";";
 		}
-	}else customStyle.rawBackColors="->"+filter+"=>gray";
+	}else customStyle.rawBackColors="->"+filter+"=>"+color;
 	customStyle.ComputeColors();
 
 	mapper_init(customStyle);
@@ -1347,7 +1351,10 @@ function mapper_options_noBorder(){
 function mapper_options_filter(filter){
 	let options=new RenderMapperOptions();
 	options.LoadDefault();
+	//if (getCurrentThemeLight()=="dark") options.rawBackColors="->"+filter+"=>red";
+	//else 
 	options.rawBackColors="->"+filter+"=>gray";
+//	options.rawBackColors="->"+filter+"=>gray";
 	options.ComputeColors();
 	return options;
 }
