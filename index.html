@@ -1069,12 +1069,13 @@
                                 <h3>Grafika</h3>								
                                 <div class="settingMapperItem">
                                     <p>Obarvení pozadí</p>
-                                    <textarea style="margin-left: 10px;" id="mapperOptionColorBack" placeholder="->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red"></textarea>
+                                    <textarea style="margin-left: 10px;resize: vertical;" id="mapperOptionColorBack" placeholder="->dôb => #000; ->dob => #557788; ->dub => white; ->_ => red"></textarea>
+                                    <a class="button" onclick="fillBackgroundColors()">Automaticky vyplnit</a>
                                 </div>
 
                                 <div class="settingMapperItem">
                                     <p>Tloušťka čar</p>
-                                    <textarea style="margin-left: 10px;" id="mapperOptionBordersStyle" placeholder="dub-dôb=>1; dub->dob=>1.2; dôb->dob=>0.5"></textarea>
+                                    <textarea style="margin-left: 10px;resize: vertical;" id="mapperOptionBordersStyle" placeholder="dub-dôb=>1; dub->dob=>1.2; dôb->dob=>0.5"></textarea>
                                 </div>
 
 								<!--<div>
@@ -1108,6 +1109,7 @@
 									<p>Post-kalkulace podobnosti</p>
 									<p><input type="checkbox" checked id="mapperOptionCalculateSimilarity"><label for="mapperOptionCalculateSimilarity" style="user-select: none;">Spočítat podobnost ke slovu (Levenshtein nevážený)</label></p>
                                     <input style="margin-left: 10px;" type="text" id="mapperOptionSimilarityText" placeholder="dub">	
+                                    <p>Středníky oddělit synonyma</p>					
                                     <p>Levenshtein nevážený znamená podobnost např. mezi znaky a-a=0, a-e=1, e-ê=1, i=y=1 (plánujeme "vážený" tak aby byly podobné e-ê, i=y, ... mezi 1 a 0)</p>					
                                     <p>Čím větší % tím podobnější, čím menší % tím méně podobné. Stačí změnit jedno písmeno a může být slovo nerozpoznatelné. 50% neznamená, že je z poloviny podobné!</p>					
                                     <p>Chcete-li spočítat podobnost k jazyku, teoreticky by mělo jít. Utvořte hromadu překladů podobností a spočítejte průměrný obrazek (průměr každého pixelu). Je třeba vypnout popisky (velikost textu=0), pozadí-mapu, čáry a nechat jenom škálu.</p>					
