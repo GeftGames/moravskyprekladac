@@ -5265,3 +5265,32 @@ function send_form__finalForm(){
         document.getElementById("btnSubmitSendWords").style.display="block";
     });
 }
+
+function fillBackgroundColors() {
+    let _mapper_points=mapper_GetPointsTranslated(languagesListAll, mapperSearchPattern.value);
+    
+    // bet all translates
+    let existsText=[];
+    for (let pt of _mapper_points) {
+        let exists=false;
+        for (let ptE of existsText) {
+            if (ptE==pt.text){
+                exists=true;
+            }
+        }
+        if (exists) continue;  
+        existsText.push(pt.text);
+    }
+    
+    // sort
+    existsText.sort();
+
+    // create string
+    let txt="";
+    for (let t of existsText) {
+        txt+="->"+t+"=>transparent;";
+    }
+
+    // add
+    document.getElementById("mapperOptionColorBack").value+=txt;
+}

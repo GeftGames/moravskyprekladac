@@ -957,7 +957,6 @@ class ItemNoun {
             // text
             let t = document.createElement("span");
             t.innerText = ApplyPostRules(str_to);
-         //   console.log(t.innerText, str_to);
             t.addEventListener("click", () => {
                 ShowPageLangD(pattern.GetTable(body));
             });
@@ -982,7 +981,7 @@ class ItemNoun {
             }
        
             let r = document.createElement("span");
-            let info = " (podst.";
+            let info = " (pods.";
             if (pattern.Gender == 1) info += ", rod žen.";
             else if (pattern.Gender == 0) info += ", rod stř.";
             else if (pattern.Gender == 2) info += ", rod muž. ž.";
@@ -997,7 +996,7 @@ class ItemNoun {
             r.className = "dicMoreInfo";
             p.appendChild(r);
                 
-           if (mapper_from!=undefined)p.appendChild(mapper_link("<{word="+mapper_from+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to));
+           if (mapper_from!=undefined)p.appendChild(mapper_link("<{word="+mapper_from+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", ApplyPostRules(str_to)));
         }
         
         if (listTo.length==0) return null;
@@ -5237,13 +5236,17 @@ class ItemVerb {
         let from_pattern=this.PatternFrom["Infinitive"];
         if (from_pattern==undefined) return null;
 
+        //zvratné
+        let add="";
+        if (this.PatternFrom.Type==2) add=" se"; else if (this.PatternFrom.Type==3) add=" si";
+           // console.log(from_pattern,this.PatternFrom,add)
         if (Array.isArray(from_pattern)) {
             for (let f of from_pattern) {
-                if (f != "?") str_from.push(this.From+f);
+                if (f != "?") str_from.push(this.From+f+add);
             }
         } else {
             if (from_pattern == "?") return null;
-            else str_from.push(this.From+from_pattern);
+            else str_from.push(this.From+from_pattern+add);
         }
         
         let f = document.createElement("span");
@@ -8261,95 +8264,9 @@ class Selector {
     }
 }
 
-// By custom defined in lang from select
-/*function PrepareReplaceRules() {
-    SimplyfiedReplacedRules = [];
-
-    let list = document.getElementById("optionsSelect");
-
-    for (let l of list.childNodes) {
-        if (l.tagName == "select") {
-            let replaceRule = this.SelectReplace[l.languageselectindex];
-            let search = replaceRule[0];
-            let replace = l.value;
-            if (replace == search) continue;
-            SimplyfiedReplacedRules.push([search, replace]);
-        }
-    }
-}*/
-
-// Vytvoření volitelností
-/*function CustomChoosenReplacesCreate() {
-    let area = document.getElementById("optionsSelect");
-    area.innerHTML = "";
-
-    for (const rule of currentLang.SelectReplace) {
-        let select = document.createElement("select");
-        select.name = rule.Name;
-
-        for (const v of rule.Replaces) {
-            let option = document.createElement("option");
-            option.value = v;
-            option.innerText = v;
-            select.appendChild(option);
-        }
-        area.appendChild(select);
-    }
-}
-
-var preparedLocalRules = [];*/
-
 function ApplyPostRules(text) {
-    //	let ret=text;
     if (typeof text === "string") return ApplyTranscription(text);
     return "";
-    // 1=nahrazeno, 0=nenahrazeno
-    /*let pattern = CreatePattern(text.length);
-
-	
-    for (let rule of preparedLocalRules) {
-    	let from=rule[0];
-    	
-    	// No overlap replaces
-    	if (inside.includes(from)) {
-    		let startOfReplace=inside.indexOf(from);
-    		
-    		let doReplace=true;
-    		for (let i=startOfReplace; i<from.length; i++) {
-    			if (pattern[i]==1) {
-    				doReplace=false;
-    				break;
-    			}
-    		}
-    		
-    		if (doReplace) {
-    			let to=rule[1];
-    			ret=ret.replace(from, to);
-
-    			for (let i=startOfReplace; i<from.length; i++) {
-    				pattern[i]=1;
-    			}
-
-    			let delta=from.length-to.length;
-    			// Zkrácení
-    			if (delta>0) {
-    				pattern.slice(startOfReplace, 1);
-    			} 
-    			// Zdelšení
-    			else if (delta<0) {
-    				pattern.insert(startOfReplace,1);
-    			}
-    		}
-    	}			
-    	
-    }
-
-    return ret;
-    function CreatePattern(len) {
-    	let p=[];
-    	for (let i=0; i<len; i++) p.push(0);
-    	return p;
-    }*/
 }
 
 function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
@@ -8468,7 +8385,6 @@ function ApplyTranscription(text) {
         }
     }
 
-    // console.log("Replaced: ", ret);
     return ret;
 }
 
@@ -8476,7 +8392,6 @@ function LoadArr(rawArr, len, start) {
     let arr = [];
     for (let i = start; i < len + start && i < rawArr.length; i++) {
         let rawShape = rawArr[i];
-        //console.log(rawShape);
         if (!rawShape.includes(",")) {
             // Uncompress
             if (rawShape.startsWith("?×")) {
@@ -8496,7 +8411,6 @@ function LoadArr(rawArr, len, start) {
 
         arr.push(rawShape.split(','));
     }
-    //console.log(arr);
     return arr;
 }
 
@@ -8505,23 +8419,10 @@ function mapper_link(input, filter){
     let use = document.createElementNS("http://www.w3.org/2000/svg","use");
     use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#imgPathMap");
     img.appendChild(use);
-  /*  img.setAttribute("viewBox","0 0 60 60");*/
     img.classList="mapperBtn";
     img.addEventListener("click", function(){
         mapper_open(input, filter);
     });
-/*
-    let img = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    img.classList="mapperBtn";
-    img.addEventListener("click", function(){
-        mapper_open(input, filter);
-    });
-    img.setAttribute("viewBox","0 0 60 60");
-
-    let path=document.createElementNS("http://www.w3.org/2000/svg", 'path');
-    path.setAttribute("d", "M15.8.6C10 .5 3.9 3.7 1.7 9.3c-1.1 2.4-.6 5.2-.8 7.8l-.1 32.4a40.3 40.3 0 0124.5-13C22 31 20 24.8 17.9 18.8 13.7 5.2 19 2.7 19.2 1a10 10 0 00-3.4-.4Zm45.6 1a30.5 30.5 0 01-16 6.4 45 45 0 01-21-4.9c-2.3 1-3.4 6.8-3.3 8.7 4.6 1.5 18.3 4.3 40.4 13V1.6ZM22 16.2a56 56 0 0010.8 23.2c2.6 2.6 5.5 5.5 9.3 6.3 3 .3 5.6-1.2 8.1-2.5 4.1-2.2 7.8-5.1 11.3-8.1v-5.7C48.4 25.8 35.2 19.7 22 16.2Zm6 24.2c-4.9 1-9.8 1.8-14.2 4-4.5 2.8-10.7 8-13 10.7l.1 3.8c8-3.3 16.9-5 25.4-3.1 7.6 1.4 15 4.6 23 3.4 5.3-.9 10.8-4.5 12.3-10 .3-2.8 0-6.5 0-9.3-5 4.1-12 8.5-18.6 9-7.2-.3-13.5-8-14.9-9.7z");
-    img.appendChild(path);*/
-
     lastAppMapper="dic";
 
     return img;
@@ -8552,18 +8453,6 @@ function GenerateSupCite(source) {
 }
 
 function ReplaceMoravian(str) {
- /*   if (currentLang.Id!=moravianId) return str;
-    let ret=str;
-    for (let r of replacesMoravian) {
-        if (r.Type=="var") {
-            ret=ret.replaceAll("<{"+r.Code+"}>", r.Variants[r.Selected]);
-        } else {
-            for (let rr of r.Replace) {
-                ret=ret.replaceAll(rr.From, rr.Variants[r.Selected]);
-            }
-        }
-    }
-    return ret;*/
     if (currentLang.Options==undefined) return str;
 
     let ret=str;

@@ -94,8 +94,18 @@ function mapper_init(customStyle) {
 
 	if (mapperRenderOptions.similarity) {
 		for (let pt of mapper_points) {
-			console.log(pt.text, mapperRenderOptions.similarityToText)
-			pt.text=similarityOfTwoWords(pt.text, mapperRenderOptions.similarityToText);
+			const separator=";"
+			let words=[];
+			// synonyma
+			if (mapperRenderOptions.similarityToText.includes(separator))words=mapperRenderOptions.similarityToText.split(separator);
+			else words=[mapperRenderOptions.similarityToText];
+
+			let best=0;
+			for (let word of words) {
+				let similarity=similarityOfTwoWords(pt.text, word);
+				if (similarity>best)best=similarity;
+			}
+			pt.text=best;
 		}
 	}
 
