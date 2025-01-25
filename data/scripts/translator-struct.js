@@ -1316,12 +1316,12 @@ class ItemAdverb {
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
 
-            p.appendChild(document.createTextNode(" "));
+            //p.appendChild(document.createTextNode(" "));
 
             if (to.Comment != undefined) {
                 if (to.Comment != "") {
                     let c = document.createElement("span");
-                    c.innerText = to.Comment;
+                    c.innerText = " "+to.Comment;
                     c.className = "dicMeaning";
                     p.appendChild(c);
                 }
@@ -1644,7 +1644,7 @@ class ItemPreposition {
             if (to.Comment != undefined) {
                 if (to.Comment != "") {
                     let t = document.createElement("span");
-                    t.innerText = to.Comment;
+                    t.innerText = " "+to.Comment;
                     t.className = "dicMeaning";
                     p.appendChild(t);
                 }
