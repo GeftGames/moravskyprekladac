@@ -5796,6 +5796,9 @@ class LanguageTr{
                 case "c":
                     {
                         let stri = line.substring(1);
+                        if (stri.startsWith("#zdroje") || stri.startsWith("#Zdroje")) {
+                            if (dev) console.warn("Staré zdroje dat '"+this.Name+"'");
+                        }
                         //		if (stri instanceof String || typeof myVar === 'string') {
                         let l = stri.replaceAll(/\r?\n/, "\n").replaceAll("->", "➔").split('\\n');
                         let text = "";
