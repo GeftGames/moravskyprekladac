@@ -4585,14 +4585,13 @@ function ShowCite(shortcut) {
         PopPageShow('pageInfoLang');
         let citeEl=document.getElementById("sc_"+shortcut);
         if (citeEl!=null) {
-
             citeEl.classList.add("focus");
-
-            setTimeout(()=>{            
+            
+            setTimeout(()=>{       
                 citeEl.classList.remove("focus");
             }, 5000);
-        }
-    }
+        }else if (dev) console.warn("Element of cite not found!",shortcut);
+    }else if (dev) console.warn("Cite not found!",shortcut);
 }
 
 function GetTopLangs() {

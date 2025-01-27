@@ -62,7 +62,10 @@ class Cite{
         
             
             // autoř(i)
-            let pack=document.createElement("li");
+            let pack=document.createElement("cite");
+            pack.className="citation";
+            pack.setAttribute("itemprop", "citation");
+            pack.setAttribute("itemtype", "https://schema.org/Book");
             if (rules["zpracovano"]=="1") {
                 let names=document.createElement("span");
                 names.innerText="✔️";
@@ -76,10 +79,12 @@ class Cite{
             if ((rules["prijmeni"]!=undefined && rules["prijmeni"]!="") && (rules["jmeno"]!=undefined && rules["jmeno"]!="")) {
                 let names=document.createElement("span");
                 names.innerText=rules["prijmeni"].toUpperCase()+", "+rules["jmeno"]+". ";
+                names.setAttribute("itemprop", "author");
                 pack.append(names);
             } else if (rules["autor"]!=undefined && rules["autor"]!=""){
                 let names=document.createElement("span");
                 names.innerText=rules["autor"];
+                names.setAttribute("itemprop", "author");
                 pack.append(names);
             }else if (rules["organizace"]!=undefined && rules["organizace"]!=""){
                 let names=document.createElement("span");
@@ -143,6 +148,7 @@ class Cite{
                 if (rules["misto"]!=undefined) pack.append(document.createTextNode(": "));
                 let vydavatel=document.createElement("span");
                 vydavatel.innerText=rules["vydavatel"];
+                vydavatel.setAttribute("itemprop", "publisher");
                 pack.append(vydavatel);
                 pack.append(document.createTextNode(". "));
             }
@@ -151,6 +157,7 @@ class Cite{
             if (rules["rok_vydani"]!=undefined && rules["rok_vydani"]!="") {
                 if (rules["vydavatel"]!=undefined) pack.append(document.createTextNode(", "));
                 let rok_vydani=document.createElement("span");
+                rok_vydani.setAttribute("itemprop", "datePublished");
                 rok_vydani.innerText=rules["rok_vydani"];
                 pack.append(rok_vydani);            
                 //pack.append(document.createTextNode(". "));
@@ -183,9 +190,10 @@ class Cite{
             
             // isbn
             if (rules["isbn"]!=undefined && rules["isbn"]!="") {
-                let issn=document.createElement("span");
-                issn.innerText="ISBN "+rules["isbn"];
-                pack.append(issn);
+                let isbn=document.createElement("span");
+                isbn.innerText="ISBN "+rules["isbn"];
+                isbn.setAttribute("itemprop", "isbn");
+                pack.append(isbn);
                 pack.append(document.createTextNode(". "));
             }
             
@@ -211,6 +219,7 @@ class Cite{
                   //  console.log(rules["odkaz"],links, i, link);
                     let url=document.createElement("a");
                     url.href=link;
+                    url.setAttribute("itemprop", "url");
                     if (link.includes("#")){
                         url.innerText=link.substring(0,link.indexOf("#"));
                     }else url.innerText=link;
@@ -237,7 +246,6 @@ class Cite{
            // if (rules["sid"]!=undefined) this.Shortcut=rules["sid"];
 
             if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
-            pack.className="cite";
 
             this.genEl=pack;
            return true;
@@ -257,7 +265,10 @@ class Cite{
             ];*/
             
             // autoř(i)
-            let pack=document.createElement("li");
+            let pack=document.createElement("cite");
+            pack.className="citation";
+            pack.setAttribute("itemprop", "citation");            
+            pack.setAttribute("itemtype", "https://schema.org/Webpage");
             if (rules["zpracovano"]=="1") {
                 let names=document.createElement("span");
                 names.innerText="✔️";
@@ -323,6 +334,7 @@ class Cite{
             if (rules["misto"]!=undefined && rules["misto"]!="") {
                 let misto=document.createElement("span");
                 misto.innerText=rules["misto"];
+                misto.setAttribute("itemprop", "locationCreated");    
                 pack.append(misto);
             }
             
@@ -375,7 +387,6 @@ class Cite{
            // if (rules["shortcut"]!=undefined) this.Shortcut=rules["shortcut"];
 
            if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
-            pack.className="cite";
             this.genEl=pack;
             //rules.append(pack);
             return true;
@@ -395,7 +406,10 @@ class Cite{
             ];*/
             
             // autoř(i)
-            let pack=document.createElement("li");
+            let pack=document.createElement("cite");
+            pack.className="citation";
+            pack.setAttribute("itemprop", "citation");
+            pack.setAttribute("itemtype", "https://schema.org/Book");
             if (rules["zpracovano"]=="1") {
                 let names=document.createElement("span");
                 names.innerText="✔️";
@@ -448,11 +462,13 @@ class Cite{
                 pack.append(kapitola);
             }
             pack.append(document.createTextNode(". "));
+
             // rok
             if (rules["rok"]!=undefined && rules["rok"]!="") {
-                let podkapitola=document.createElement("span");
-                podkapitola.innerText=rules["rok"];
-                pack.append(podkapitola);
+                let rok_vydani=document.createElement("span");
+                rok_vydani.innerText=rules["rok"];                
+                rok_vydani.itemprop="datePublished";
+                pack.append(rok_vydani);
             }
     
             // misto
@@ -525,14 +541,15 @@ class Cite{
             }
     
            if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
-            pack.className="cite";
             this.genEl=pack;
             //rules.append(pack);
             return true;
         } else if (rawrules[0]=="sncj") {
 
-            let pack=document.createElement("li");
-            pack.className="cite";
+            let pack=document.createElement("cite");
+            pack.className="citation";
+            pack.setAttribute("itemprop", "citation");
+            pack.setAttribute("itemtype", "https://schema.org/Webpage");
 
             let now=new Date();
             pack.innerHTML=`<i>Slovník nářečí českého jazyka</i> [online]. Brno: dialektologické oddělení Ústavu pro jazyk český AV ČR, v. v. i. ©&nbsp;2016– [cit. ${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}]. Dostupné z:&nbsp;<a href='https://sncj.ujc.cas.cz'>https://sncj.ujc.cas.cz</a>`;
@@ -547,9 +564,17 @@ class Cite{
             this.genEl=pack;
             return true;
         }else if (rawrules[0]=="inf") {
-            let pack=document.createElement("li");
-            pack.className="cite";
-            pack.innerHTML="Anonymní informátor(ři), kteří nám poslali svá slovíčka";
+            let pack=document.createElement("cite");
+            pack.className="citation";
+            pack.setAttribute("itemprop", "citation");
+         
+          
+            let name=document.createElement("span");
+            name.innerText="Anonymní informátor(ři)";
+            name.setAttribute("itemprop", "sender");
+            name.setAttribute("itemtype", "https://schema.org/Person");
+            pack.appendChild(name);
+            pack.appendChild(document.createTextNode(", kteří nám poslali svá slovíčka"));
             if (this.Shortcut!="") pack.id="sc_"+this.Shortcut;
             this.genEl=pack;
             return true;
@@ -8444,7 +8469,7 @@ function GenerateSupCite(source) {
     // arr of elements
     let sp=[];
     for (let ci of arrCite) {
-        let c = document.createElement("sup");
+        let c = document.createElement("cite");
         c.innerText = "["+ci+"]";
         c.className = "reference";
         c.addEventListener("click", () => {

@@ -261,6 +261,7 @@ function GetTranslations() {
         BuildOptions();
         //if (input_lang>=0 && input_lang!=undefined) 
         Translate();
+        GetDic();
         
         if (mapper_starting_input!=undefined){
             //console.log(mapper_starting_input);
