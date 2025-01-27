@@ -1930,7 +1930,7 @@ input::placeholder,
     margin: 2px 0px 2px 0px;
     border-radius: 4px;
 }
-.cite.focus{
+.citation.focus{
     background-color: var(--ColorTheme);
 }
 
@@ -1940,6 +1940,9 @@ input::placeholder,
     user-select: none;
     transition: color .3s;
     opacity: .75;
+    vertical-align: super;
+    font-size: var(--fontSizeSmall);
+    font-style: normal;
 }
 .reference:hover {
     color: var(--ColorThemeForward);
@@ -1995,4 +1998,9 @@ h3{
     cursor: pointer;
     padding: 2px;
     font-size: var(--fontSizeBigger);
+}
+.citation{
+    display: list-item;
+    font-style: normal;
+    margin: 5px;
 }
