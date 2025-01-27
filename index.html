@@ -10,34 +10,28 @@
             "itemListElement": [{
                 "@type": "ItemList",
                 "name": "Přeložit text",
-                "position": 1,
-                "url": "https://moravskyprekladac.pages.dev/#text"
+                "url": "https://moravskyprekladac.pages.dev/?text"
             }, {
                 "@type": "ItemList",
                 "name": "Slovník",
-                "position": 2,
-                "url": "https://moravskyprekladac.pages.dev/dic.html"
+                "url": "https://moravskyprekladac.pages.dev/?dic"
             }, {
                 "@type": "ItemList",
                 "name": "Přeložit titulky",
-                "position": 3,
-                "url": "https://moravskyprekladac.pages.dev/subs.html"
+                "url": "https://moravskyprekladac.pages.dev/?subs"
             }, {
                 "@type": "ItemList",
                 "name": "Generátor map",
-                "position": 4,
-                "url": "https://moravskyprekladac.pages.dev/mapper.html"
+                "url": "https://moravskyprekladac.pages.dev/?mapper"
             }, {
                 "@type": "ItemList",
                 "name": "Přeložení souborů",
-                "position": 5,
-                "url": "https://moravskyprekladac.pages.dev/files.html"
+                "url": "https://moravskyprekladac.pages.dev/?files"
             }, {
                 "@type": "ItemList
                 ", 
                 "name": "Vyhledávání slov",
-                "position": 6,
-                "url": "https://moravskyprekladac.pages.dev/search.html"
+                "url": "https://moravskyprekladac.pages.dev/?search"
             }]
         }
     </script>
@@ -131,7 +125,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <!-- General aplication -->
-    <meta id="metaDescription2" name="application-name" content="Moravský překladač">
+    <meta name="application-name" content="Moravský překladač" id="metaDescription2">
+    <meta property="og:title" content="Moravský překladač">
+    <meta property="og:site_name" content="Moravský překladač">
+    <meta name="twitter:title" content="Moravský překladač">
     <!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.ga"-->
 
     <!-- Windows modern UI -->
@@ -212,7 +209,9 @@
 							</svg>
 						</button>
                     <div style="display: flex; flex-direction: column;">
-                        <h1 rel="nofollow" id="headername" onclick="CleanCache();window.location=window.location.origin;" style="margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">Moravský překladač</h1>
+                        <h1 rel="nofollow" onclick="CleanCache();window.location=window.location.origin;" style="display: flex;margin: 0px 0px 0px 0px;text-decoration: none;  text-shadow: var(--tsh);">
+                            <span id="headername">Moravský překladač</span>
+                        </h1>
                         <span id="trBitSlz" style="font-size: 3.2mm;">a částečně slezský</span>
                     </div>
                 </div>
@@ -1237,7 +1236,7 @@
                 </div>
                 <p>Moravu a Slezsko dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
                 <div style="display: flex; justify-content: center">
-                    <img src="data/images/morava s popisky.svg" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy">
+                    <img itemprop="primaryImageOfPage" src="data/images/morava s popisky.svg" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy">
                 </div>
                 <div style="display: flex; justify-content: center">
                     <img src="data/images/map_uprava_v3.png" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy - návrh úpravy">
