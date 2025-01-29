@@ -3255,6 +3255,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
+        { from: "ế", to: "é" },
 
         { from: "ŋ", to: "n" },
         { from: "ʒ́", to: "dž" },
@@ -3323,6 +3324,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
+        { from: "ế", to: "é" },
         
         { from: "ŋ", to: "n" },
         { from: "ɣ", to: "ch" },
@@ -3357,9 +3359,14 @@ function SetCurrentTranscription(transCode) {
         { from: "au", to: "au̯" },
         { from: "eu", to: "eu̯" },
         { from: "ou", to: "ou̯" },
+
+        // ignore rare letters in sources
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "e" },
         { from: "ó́", to: "ó" },
+        { from: "ế", to: "é" },
+
+        // official shapes
         { from: "ṵ", to: "u̯" },
         { from: "ạ́", to: "̥á" },
         { from: "'", to: "’" },
@@ -3384,6 +3391,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ó́", to: "ó" },
         { from: "ṵ", to: "u̯" },
         { from: "ạ́", to: "̥á" },
+        { from: "ế", to: "é" },
 
         { from: "hi", to: "hy"},
         { from: "chi", to: "chy"},
@@ -3418,6 +3426,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ŋ", to: "n" },
+        { from: "ế", to: "é" },
 
         { from: "ň", to: "ň", type: "end" },
         { from: "ó́", to: "ó" },
@@ -3451,6 +3460,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ďí", to: "dí" },
         { from: "ďe", to: "dě" },
 
+        { from: "ế", to: "é" },
         { from: "ŋ", to: "n" },
     ];
 
@@ -3479,6 +3489,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ṵ", to: "u" },
         { from: "vźů", to: "wsio" },
         { from: "ê", to: "e" },
+        { from: "ế", to: "e" },
         { from: "ô", to: "o" },
     ];
 
@@ -3564,6 +3575,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ʒ́", to: "dź" },
         { from: "ǯ", to: "dž" },
 
+        { from: "ế", to: "é" },
         { from: "ŋ", to: "n" },
     ];
 
@@ -3576,6 +3588,7 @@ function SetCurrentTranscription(transCode) {
 
         { from: "á", to: "aː" },
         { from: "é", to: "eː" },
+        { from: "ế", to: "e" },
         { from: "í", to: "iː" },
         { from: "ó", to: "ɔː" },
         { from: "ú", to: "uː" },
@@ -3770,15 +3783,19 @@ function SetCurrentTranscription(transCode) {
 
         { from: "ne", to: "ネ" },   { from: "Ne", to: "ネ" },
         { from: "né", to: "ネー" }, { from: "Né", to: "ネー" },
+        { from: "nế", to: "ネー" }, { from: "Nế", to: "ネー" },
         
         { from: "ke", to: "ケ" },   { from: "Ke", to: "ケ" },
         { from: "ké", to: "ケー" }, { from: "Ké", to: "ケー" },
+        { from: "kế", to: "ケー" }, { from: "Kế", to: "ケー" },
  
         { from: "se", to: "セ" },   { from: "Se", to: "セ" },
         { from: "sé", to: "セー" }, { from: "Sé", to: "セー" },
+        { from: "sế", to: "セー" }, { from: "Sế", to: "セー" },
  
         { from: "re", to: "レ" },   { from: "Re", to: "レ" },
         { from: "ré", to: "レー" }, { from: "Ré", to: "レー" },
+        { from: "rế", to: "レー" }, { from: "Rế", to: "レー" },
 
         { from: "le", to: "レ゚" },   { from: "Le", to: "レ゚" },
         { from: "lê", to: "レ゚" },   { from: "Lê", to: "レ゚" },
