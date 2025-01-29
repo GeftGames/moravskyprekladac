@@ -1187,6 +1187,7 @@ var Load = function () {
     document.getElementById("mapperInput").addEventListener("keydown", (e) => {
         if (e.key === 'Enter') {
             mapper_init();
+            lastAppMapper='mapper';
         }
     });
 
