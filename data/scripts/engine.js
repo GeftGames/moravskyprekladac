@@ -3252,6 +3252,7 @@ function SetCurrentTranscription(transCode) {
         { from: "kí", to: "ký" },
         { from: "rí", to: "rý" },
 
+        // ignore rare letters
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
@@ -3321,6 +3322,7 @@ function SetCurrentTranscription(transCode) {
         { from: "ə", to: "e" },
         { from: "ṵ", to: "ṷ" },
         
+        // ignore rare letters
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
@@ -3460,7 +3462,9 @@ function SetCurrentTranscription(transCode) {
         { from: "ďí", to: "dí" },
         { from: "ďe", to: "dě" },
 
+        // ignore rare letters
         { from: "ế", to: "é" },
+
         { from: "ŋ", to: "n" },
     ];
 
@@ -3566,6 +3570,7 @@ function SetCurrentTranscription(transCode) {
 
         { from: "ů", to: "ō" },
 
+        // ignore rare letters
         { from: "ṵ", to: "ł" },
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
@@ -4006,6 +4011,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ů", to: "ō" },
         { from: "ńś", to: "nś", type: "end"},
         { from: "uo", to: "ô", type: "start" },
+        
+        { from: "ế", to: "é" },
     ];
 
     if (transCode == "lysohorsky") return [
@@ -4018,6 +4025,8 @@ function SetCurrentTranscription(transCode) {
         { from: "ďí", to: "dí" },
         { from: "ňí", to: "ní" },
         { from: "ǯ", to: "dž" },
+
+        { from: "ế", to: "é" },
     ];
 
     if (transCode == "runy") return [
@@ -4211,10 +4220,13 @@ function SetCurrentTranscription(transCode) {
 
     // málo vyskytující se jevy potlačit (v datech moc neřešené)
     if (transCode == "default") return [
+        // ignore rare letters
         { from: "ẹ", to: "e" },
         { from: "ọ", to: "o" },
         { from: "ó́", to: "ó" },
         { from: "ŋ", to: "n" },
+        { from: "ế", to: "é" },
+        
         { from: "vě", to: "vje" },
         { from: "bě", to: "bje" },
         { from: "pě", to: "pje" },
