@@ -61,6 +61,8 @@ function mapper_zoomOut(){
 
 // nová mapa
 function mapper_init(customStyle) {
+	mapper_events();
+
 	// grafické
 	document.getElementById("mapperPreview").style.display="flex";
 	document.getElementById("areaStartGenerate").style.display="none";
@@ -1375,4 +1377,15 @@ function mapper_options_numbers(){
 	options.numberScale=true;
 	options.ComputeColors();
 	return options;
+}
+
+function mapper_events(){
+	let el=document.getElementById("mapperCanvas");
+
+	el.addEventListener("mousewheel", (ev)=>{
+		if (ev.shiftKey){
+			if (ev.deltaY<0) mapper_zoomIn();
+			else if (ev.deltaY>0) mapper_zoomOut();
+		}
+	});
 }
