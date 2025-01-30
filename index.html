@@ -2,38 +2,45 @@
 <html lang="cs" style="min-height: 100%">
 <head>
     <meta charset="UTF-8">
+    <!-- do vyhledávání -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
-            "@type": "ItemList",
-            "itemListOrder": "Ascending",
+            "@type": "BreadcrumbList",
             "itemListElement": [{
                 "@type": "ItemList",
+                "position": 1,
                 "name": "Přeložit text",
                 "url": "https://moravskyprekladac.pages.dev/?text"
             }, {
                 "@type": "ItemList",
+                "position": 2,
                 "name": "Slovník",
                 "url": "https://moravskyprekladac.pages.dev/?dic"
             }, {
                 "@type": "ItemList",
+                "position": 3,
                 "name": "Přeložit titulky",
                 "url": "https://moravskyprekladac.pages.dev/?subs"
             }, {
                 "@type": "ItemList",
+                "position": 4,
                 "name": "Generátor map",
                 "url": "https://moravskyprekladac.pages.dev/?mapper"
             }, {
                 "@type": "ItemList",
+                "position": 5,
                 "name": "Přeložení souborů",
                 "url": "https://moravskyprekladac.pages.dev/?files"
             }, {
                 "@type": "ItemList", 
+                "position": 6,
                 "name": "Vyhledávání slov",
                 "url": "https://moravskyprekladac.pages.dev/?search"
             }]
         }
     </script>
+    <!-- tato app -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -47,7 +54,7 @@
             "countriesSupported": "CZ, SK, DE, AT,  PL, JP, GB, US",
             "releaseNotes": "https://github.com/GeftGames/moravskyprekladac/blob/main/NEWS.md",
             "softwareHelp": "https://github.com/GeftGames/moravskyprekladac/wiki",
-            "license": "https://github.com/GeftGames/moravskyprekladac?tab=License-1-ov-file",
+            "license": "MIT License",
             "screenshot": "https://moravskyprekladac.pages.dev/data/images/screenshot.png",
             "url": "https://moravskyprekladac.pages.dev",
 
@@ -59,6 +66,41 @@
                         "contentType": "application/json+ld"
                     }
                 ]
+            },
+
+            "offers": {
+                "@type": "Offer",
+                "price": 0
+            }
+        }
+    </script>
+    <!-- do prohlížeče -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "SoftwareApplication",
+            "browserRequirements": "Firefox or Chrome",
+            "name": "Moravský překladač pro WEB",
+            "operatingSystem": "ALL",
+            "applicationCategory": "Translator",
+            "countriesSupported": "CZ, SK, DE, AT,  PL, JP, GB, US",
+            "license": "https://github.com/GeftGames/moravskyprekladac?tab=License-1-ov-file",
+            "downloadUrl": "https://addons.mozilla.org/en-US/firefox/addon/moravsk%C3%BD-p%C5%99eklada%C4%8D-pro-web/",
+            "softwareHelp": "https://github.com/GeftGames/moravskyprekladac-browser-addon/wiki",
+
+            "potentialAction": {
+                "@type": "ViewAction",
+                "target": [
+                    "https://moravskyprekladac.pages.dev", {
+                        "@type": "EntryPoint",
+                        "contentType": "application/json+ld"
+                    }
+                ]
+            },
+
+            "offers": {
+                "@type": "Offer",
+                "price": 0
             }
         }
     </script>
