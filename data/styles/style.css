@@ -1249,6 +1249,10 @@ optgroup {
         width: auto;
         max-height: 40vh;
     }
+    #dicRte{
+        max-height: 100vh;
+    }
+
     /*textarea, */
     #specialTextarea {
         max-height: 40vh;
@@ -1331,6 +1335,9 @@ optgroup {
     #dicRte {
         max-height: 40vh;
         margin-top: 10px;
+    }    
+    #dicRte{
+        max-height: 100vh;
     }
     /*#changeLangSection{
 		flex-direction: column;
@@ -2003,4 +2010,5 @@ h3{
     display: list-item;
     font-style: normal;
     margin: 5px;
+    overflow-wrap: anywhere;
 }
