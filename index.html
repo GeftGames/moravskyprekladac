@@ -136,6 +136,9 @@
                 persistence: "memory", // or 'localStorage'?
                 person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
             });
+
+
+        //    posthog.opt_out_capturing()
           //  var _posthog=posthog;
        // }
     </script>
@@ -157,7 +160,7 @@
     <meta id="cententlang" http-equiv="Content-Language" content="cs">
 
     <!-- Search -->
-    <meta name="description" content="Přeložení do moravského jazyka! Překlad text na text; slovník; překlad souborů, titulků či generování mapy. Překlad moravština, hanácky, slovácky, valašsky, lašsky, ... " id="metaDescription">
+    <meta name="description" content="Přeložení do moravského jazyka! Překlad text na text; moravský slovník; překlad souborů, titulků či generování mapy. Překlad moravština, hanácky, slovácky, valašsky, lašsky, ... " id="metaDescription">
     <meta name="keywords" content="moravština, moravsky, překladač, hanáčtina, valaština, laština, hantec, slovník, dialekt, Haná, Valašsko, Slovácko, titulky, translator, valašsky, slovácky, hanácky, Podluží, goralsko, Brno, po nasymu, po nasimu, silezian, dialekty, interdialekty, čeština, česky, překladač do moravštiny, slovenština, GeftGames">
     <meta property="og:locale" content="cs_CZ" id="metalocale">
 
@@ -584,9 +587,11 @@
                             <div style="display: flex;">
                                 <span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
                                     <svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 50 75"><path d="m25 75c0 0 25-35 25-50 0-14-12-25-25-25-13 0-25 11-25 25 0 16 25 50 25 50zm0-63m-13 13c0-7 6-13 13-13 8 0 13 7 13 13 0 7-6 13-13 13-7 0-13-6-13-13z"></svg>
+                                    <span style="font-size: small;position: absolute;top: 79%;">z mapy</span>
                                 </span>
                                 <span data-tooltip="Zobrazit poznámky k překladu" style="width: fit-content; height: fit-content;" class="butIc tooltipL" rel="nofollow" onclick="PopPageShow('pageInfoLang');">
                                     <svg class="ib" style="width: 31px; height: 31px" viewBox="0 0 32 32"><path d="M0 0M0 16A1 1 0 0032 16 1 1 0 000 16M16 30C8.5 30 2 23 2 16 2 8.5 8.5 2 16 2 23.5 2 30 8.5 30 16 30 23.5 22.5 30 16 30M14 8A1 1 0 0018 8 1 1 0 0014 8M18 14A1 1 0 0014 14L14 24A1 1 0 0018 24L18 14"></svg>
+                                    <span style="font-size: small;position: absolute;top: 79%;">info</span>
                                 </span>
                             </div>
                         </div>
@@ -607,14 +612,14 @@
                         </div>
 
                         <div id="recSwitchTransc" style="display: none; align-items: center;flex-wrap: wrap;justify-content: center;font-size: 4mm;">
-                            <span>Nechcete přepnout do obvyklé transkripce</span>
+                            <span style="font-size: 4.5mm;">Nechcete přepnout do obvyklé transkripce</span>
                             &nbsp;
                             <div>
-                                <span id="textRecTranscription" style="font-style: italic; cursor: pointer;" onclick="showSetting('oTranscription')">Česká obvyklá</span>
+                                <span style="font-size: 4.5mm;font-style: italic; cursor: pointer;" id="textRecTranscription" onclick="showSetting('oTranscription')">Česká obvyklá</span>
                                 <span>?</span>
                             </div>
                             &nbsp;
-                            <a class="button" id="switchTranscription">Přepnout</a>          
+                            <a class="button" id="switchTranscription" style="font-size: 4.5mm">Přepnout</a>          
                         </div>
                     </div>
                     
@@ -631,8 +636,9 @@
                     <div id="tabBackGround"></div>
 
                     <div id="transarea" style="display: block; place-items: center;">
-                        <div id="translateText" style="display: flex;    flex-direction: column;justify-items: center;    width: calc(100% - 1cm);">
-                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()">slovník</a> nebo změnit místo. <br>Neznáte nějaká slovíčka? <span onclick="PopPageShow('sendWords');" class="link">Poslat slovíčka</span></span>
+                        <div id="translateText" style="display: flex; flex-direction: column;justify-items: center; width: calc(100% - 1cm);">
+                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;font-size: 4.5mm;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()" style="font-size: 4.5mm;">slovník</a> nebo změnit místo. 
+                                <!--<br>Neznáte nějaká slovíčka? <span onclick="PopPageShow('sendWords');" class="link">Poslat slovíčka</span>--></span>
                             <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;width: -webkit-fill-available;">
                                 <!-- Source translated text -->
                                 <div id="lte" style="min-height:75px;display: flex;justify-content: flex-end;flex-direction: row;margin-bottom: 0px;width: -webkit-fill-available;width: -moz-available;">
@@ -793,7 +799,7 @@
                                 <div class="navrhCat">
                                     <!-- Unikátní slova-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=vesnice|typ=pods|cislo=j|pad=1}>')">VESNICE</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('<{word=mrkev|typ=pods|cislo=j|pad=1}>')">MRKEV</div>
+                                  <!--  <div class="mapperNavrh" onclick="navrhClick('<{word=mrkev|typ=pods|cislo=j|pad=1}>')">MRKEV</div>-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=jaro|typ=pods|cislo=j|pad=1}>')">JARO</div>
                                     <div class="mapperNavrh" onclick="navrhClick('polštář')">POLŠTÁŘ</div>
                                     <div class="mapperNavrh" onclick="navrhClick('peřina')">PEŘINA</div>
@@ -1782,35 +1788,45 @@
                     <h3>My</h3>
 
                     <h4>Ukládaní dat</h4>
-                    <p>Cookie - nepoužíváme, používáme localStorage k ukládání dat, princip je takový, 
+                    <p style="margin-left: 0px;">Cookie - nepoužíváme, používáme localStorage k ukládání dat, princip je takový, 
                         upravíte nastavení na webu, tako změna se zaznamená v <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>.
-                        Jedná se pouze o technická data ().</p>
+                        Jedná se pouze o technická data - Barva, motiv, vybraný překlad (jazyk), ...</p>
 
                     <h4>Jak vyděláváme?</h4>
-                    <p>V současné době nevyděláváme. Reklamy nejsou, s Vašemi neobchodujeme, žádné sponzorské dary jsme zatím neobdrželi.</p>
-
-                    <h3>Které společnosti využíváme?</h3>       
+                    <p style="margin-left: 0px;">V současné době nevyděláváme. Reklamy nejsou, s Vašemi neobchodujeme, žádné sponzorské dary jsme zatím neobdrželi.</p>
+                    <br><br>
+                    <h3 style="font-weight: bold;">Které společnosti využíváme?</h3>       
 
                     <h4><a href="https://github.com/">Github</a></h4>
-                    <p>Soubory stránky hostujemke na Githubu. Kódy stránek jsou dostupné <a href="https://github.com/GeftGames/moravskyprekladac">tady</a>.</p>
+                    <p style="margin-left: 0px;">Soubory stránky hostujemke na Githubu. Kódy stránek jsou dostupné <a href="https://github.com/GeftGames/moravskyprekladac">tady</a>.</p>
                     <span onclick="moreGithub.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
                     <p id="moreGithub" style="display:none">Tato služba je integrální součástí běžného provozu, nelze její používání obejít. Leda, že by jste si chtěli <a href="https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github">stáhnout</a> tento web a hostovat si ho u sebe pro sebe.</p>
 
                     <h4><a href="https://www.cloudflare.com/">Cloudfare</a></h4>
-                    <p>Stránka je hostonaná na Githubu, data jsou přesměrovány přes Cloudfare na doménu stránky moravskyprekladac.pages.dev.
+                    <p style="margin-left: 0px;">Stránka je hostonaná na Githubu, data jsou přesměrovány přes Cloudfare na doménu stránky moravskyprekladac.pages.dev.
                     Doména moravskyprekladac.pages.dev je za účelem snažší nalezitelnosti.</p>
                     <span onclick="moreCloudfare.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
                     <p id="moreCloudfare" style="display:none">Používání této služby lze obejít používáním překladače skrze url <a href="https://geftgames.github.io/moravskyprekladac/">https://geftgames.github.io/moravskyprekladac/</a>
                     </p>
                     
                     <h4><a href="https://posthog.com/">PostHog</a></h4>
-                    <p>Tuto službu využíváme k analýze návštěvnosti.</p>
-                    <span onclick="moreGithub.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
+                    <p style="margin-left: 0px;">Tuto službu využíváme k analýze návštěvnosti.</p>
+                   <!-- <span onclick="moreGithub.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>-->
+                    <div class="settingItem">
+                        <p id="textComplexAnalitics">Povolit komplexnější analýzu</p>
+
+                        <label class="switch">
+                            <input id="posthogComplex" type="checkbox" onchange="ChangePosthogComplex()">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
 
                     <h4><a href="https://about.google/">Google</a></h4>
-                    <p>Konkrétně se jedná o <a href="https://docs.google.com/spreadsheets">Google sheets</a> které se využívají ke zpracování <a onclick="PagePopShow('feedback')">zpětné vazby</a> a <a onclick="PagePopShow('sendWords')">slovníčku</a>.</p>
+                    <p style="margin-left: 0px;">Konkrétně se jedná o <a href="https://docs.google.com/spreadsheets">Google sheets</a> které se využívají ke zpracování <a onclick="PagePopShow('feedback')">zpětné vazby</a> a <a onclick="PagePopShow('sendWords')">slovníčku</a>.</p>
                     <span onclick="moreGoogle.style.display='block';this.classList=''" class="link">Jaké jsou možnosti?</span>
-                    <p id="moreGoogle" style="display:none">Jestli zpětnou vazbu nebo slovíčka (přes ty formuláře) k nám neposíláte, pak tuto službu nepoužíváte.</p>
+                    <p id="moreGoogle" style="display:none">Jestli zpětnou vazbu nebo slovíčka (přes ty formuláře na tomto webu) k nám neposíláte, pak tuto službu nepoužíváte.</p>
+                <hr>
+                    <p style="margin-left: 0px;">Nastavení lze později změnit</p>
                 </div>
                 <br>
             </div>
