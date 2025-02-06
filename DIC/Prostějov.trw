@@ -1,10 +1,11 @@
-TW v3
+TW v4
 fSpisovná čeština
 tProstějov
 aGG
 d17.03.2023 7:39:00
 icokolvjek Prostějov PV\nto só boháči, majó velké obévág aji z akvárijem! Prostějov PV\nfták cvaká zobákem Prostějov PV
-c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Prost%C4%9Bjov+PV%22">sncj</a>\n-https://archive.org/details/dialektickslov00bartuoft/page/524/mode/1up#page=524\n-Nápis na zdi zámku v Prostějově\n-https://veslovech.cz/zvukovy-archiv/prostejovska-hladova-demonstrace/ (nevyčerpáno)\n-https://veslovech.cz/zvukovy-archiv/listkovy-system-a-domovni-kontroly/\n\n#Popis nářečí\n-Řeč města Prostějova má sice ráz podřečí okolního, ale již se značně „poměštila"; \n     a) hlásky v, «, y jsou čistý: budu, žito, hlina, ryby a t. d.; \n     b) ú mění se v ó, ý, ej v é jako v okolí: dobré stréc, dé; \n     c) í se krátí a mění se v é toliko v koncovce ík, po z, ž a š: vozék, nožék, košék.
+c#Popis nářečí\n-Řeč města Prostějova má sice ráz podřečí okolního, ale již se značně „poměštila"; \n     a) hlásky v, «, y jsou čistý: budu, žito, hlina, ryby a t. d.; \n     b) ú mění se v ó, ý, ej v é jako v okolí: dobré stréc, dé; \n     c) í se krátí a mění se v é toliko v koncovce ík, po z, ž a š: vozék, nožék, košék.
+bNápis na zdi zámku v Prostějově\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektickslov00bartuoft/page/524/mode/1up#page=524|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://veslovech.cz/zvukovy-archiv/listkovy-system-a-domovni-kontroly/|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://veslovech.cz/zvukovy-archiv/prostejovska-hladova-demonstrace/|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=0|shortcut=\n\nsncj|i=Prostějov PV|zpracovano=
 u1
 lHanáčtina
 g49.4723368,17.1101128
@@ -20,29 +21,29 @@ tento <id=1,podst,pad=1,rod=muz> o štyři roky déle|tento staré zámek dyl o 
 když mi ještě nebylo čtrnáct|1
 kteří nějak byli|1
 -
-nebo ne|1
-tanečník při muzice|1
-velice daleko|1
-správce vinic|1
-plody lopuchu|1
-troška tekuniny|1
-bez sebe|0
-jako soudek|1
-do konce světa|1
-no a tak|0
-v tu|1
-na přídělové lístky|1
-|1
-|1
-snažili se získat u mlynářů|1
-takhle mimo přídělových lístků|0
-kolikrát byla|0
-hlavně tam u nás|0
-v té|0
-hodně Sokolů|0
-bylo hodně|0
-berany berany duc|1
-chrouzd bzučí|1|chrózd brňi||sncj
+nebo ne|1|-1
+tanečník při muzice|1|-1
+velice daleko|1|-1
+správce vinic|1|-1
+plody lopuchu|1|-1
+troška tekuniny|1|-1
+bez sebe|0|-1
+jako soudek|1|-1
+do konce světa|1|-1
+no a tak|0|-1
+v tu|1|-1
+na přídělové lístky|1|-1
+|1|-1
+|1|-1
+snažili se získat u mlynářů|1|-1
+takhle mimo přídělových lístků|0|-1
+kolikrát byla|0|-1
+hlavně tam u nás|0|-1
+v té|0|-1
+hodně Sokolů|0|-1
+bylo hodně|0|-1
+berany berany duc|1|-1
+chrouzd bzučí|1|-1|chrózd brňi||sncj
 -
 prodlužuje|1
 li|1|le||sncj
@@ -118,6 +119,8 @@ oplatEK|1|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|cích|kama,ky
 čarodějníK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
 ptáK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 zobáK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
+potkan|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+bicykl|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 abatyšA|1|a|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 akváriUM|0|um?|a?|u?|um?|um?|u?|jem|a?|í?|ím?|a?|a?|ích?|i?
@@ -128,7 +131,7 @@ cop|3|?|u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 čajDA|1|da|hy?|ze?|hu?|ho?|ze?|hou?|-|-|-|-|-|-|-
 čajTA|1|ta|hy?|ze?|hu?|ho?|ze?|hou?|-|-|-|-|-|-|-
 čarodeňiK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
-ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|lidé?,(v&#160;obecném jazyce) liďi?|liďí?|lidem?|liďi|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
+ČLOVĚK|2|člověk?|člověka?|člověku?,člověkovi?|člověka?|člověče?|člověku?,člověkovi?|člověkem?|lêďi|liďí?|lidem?|liďi|lidé?,(v&#160;obecném jazyce) liďi?|lidech?|lidmi?
 ďecKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka|ek?|kám?,kúm?|ka?|ka?|kách?|ky?
 dEN|0|eň|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňí?,nú?|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
 ďÍŤE|0|íťe?|íťete?|íťeťi?|íťe?|íťe?|íťeťi?|íťetem?|eťi|eťí?|etem?|eťi?|eťi?|etech?|etmi?
@@ -158,9 +161,11 @@ zámEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 zedníK|2|k|ka?|ku,kovi?|ka?|ku?|ku,kovi?|kem?|ci?|ků?|kům?|ky?|ci?|cích?|ky?
 ftáK|2|k|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 zobáK|3|k?|ku?|ku?|k?|ku?|ku?|kem|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
+potkáN|2|n?|na?|novi?,nu?|na?|ne?|novi?,nu?|nem?|ňi?,nové?|nú?|nom|ny?|ňi?,nové?|nech?|ny?
+bicikl|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
 ||0|skonáňi|||
-|ČLOVĚK|0||ČLOVĚK||
+|ČLOVĚK|0||ČLOVĚK||sncj
 abatyš|růžE|0|habatêš|abatyšA||
 akvári|akváriUM|0|akvári|akváriUM||
 beran|beran|0|bara|baraN||
@@ -199,6 +204,8 @@ zám|zámEK|0|zám|zámEK||
 ptá|ptáK|0|ftá|ftáK||
 zobá|zobáK|0|zobá|zobáK||
 chrouzd?||0|chrózd|||sncj
+potkan|potkan|0|potká|potkáN||sncj
+bicykl|bicykl|0|bicikl|bicikl||sncj
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -225,6 +232,7 @@ něCO|co|čeho|čemu|co|co|čem|čím
 tENHLE|enhle|ohohle|omuhle|ohohle |-|omhle|ímhle|yhle|ěchhle|ěmhle|yhle|-|ěchhle|ěmihle|enhle|ohohle|omuhle|enhle|-|omhle|ímhle|yhle|ěchhle|ěmhle|yhle|-|ěchhle|ěmihle|ahle|éhle|éhle|uhle|-|éhle|ouhle|yhle|ěchhle|ěmhle|yhle|-|ěchhle|ěmihle|ohle|ohohle|omuhle|ohle|-|omhle|ímhle|ahle|ěchhle|ěmhle|ahle|-|ěchhle|ěmihle
 někDO|do|oho|omu|oho|-|om|ým
 MY|my|nás|nám|nás|my|nás|námi
+COKOLIV|cokoliv|čehokoliv|čemukoliv|cokoliv||čemkoliv|čímkoliv
 -
 SE|-|sebe|si?,sobje?|se,sebe?|-|sobje?|sebou?
 COKOLI|cokolvjek|čehokoli?|čemukoli?|cokoli?|?|čemkoli?|čímkoli?
@@ -251,16 +259,17 @@ ně|něCO|ňe|ňeCO||
 t|tENHLE||TENHLE||
 něk|někDO|ne|ňekDO||
 |MY||MY||
+|COKOLIV||COKOLI||
 -
 čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
 -
-šteŘE|2|ři?|řvorově) čtyřech[1]?,ř?,ř(hovorově) čtyřech[1]?|řem?|ře|ři?|řech?|řtyřma[2]?,řmi?,řčtyřma[2]?
+šteRE|2|re|řvorově) čtyřech[1]?,ř?,ř(hovorově) čtyřech[1]?|řem?|re|ři?|řech?|řtyřma[2]?,řmi?,řčtyřma[2]?
 jedEN|4|en|noho?|nomu?|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 druHÝ|4|hý?|hiho|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|hých?|hými?|hý?|hého?|hému?|hý?|hý?|hém?|hým?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|há?|hé?|hé?|hou?|há?|hé?|hou?|hé?|hých?|hým?|hé?|hé?|hých?|hými?|hé?|hého?|hému?|hé?|hé?|hém?|hým?|há?|hých?|hým?|há?|há?|hých?|hými?
 -
-čtyř|čtyřI|šte|šteŘE||
+čtyř|čtyřI|šte|šteRE||
 jed|jedEN|jed|jedEN||
 dru|druHÝ|dru|druHÝ||
 -
@@ -285,6 +294,7 @@ neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|bud
 couvNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,couvnul|l,couvnul|la,couvnula|lo,couvnulo|li,couvnuli|ly,couvnuly|ly,couvnuly|la,couvnula
 dřepĚT|7|-1|ět|ím|íš|í|íme|íte|í|,dřepěj|me,dřepějme|ěte,dřepějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
 brNĚT|7|-1|nět|ním|níš|ní|níme|níte|ní|ň|ňme|ňte|něl|něl|něla|nělo|něli|něly|něly|něla
+brÁNIT|15|-1|ánit|áním|áníš|ání|áníme|áníte|ání|aň|aňme|aňte|ánil|ánil|ánila|ánilo|ánili|ánily|ánily|ánila|áněn|áněn|áněna|áněno|áněni|áněny|áněny|áněna
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|zme|jste?|só|budu?|budeš?|bode|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|bila|bylo?|bili|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 mÍT|7|-1|ít?|ám?|áš?|á?|áme?|áte?|ajó|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ňeli|ěly?|ěly?|ěla?
@@ -307,6 +317,7 @@ nEBÝT|23|-1|ebýt?|ejsem?|ejsi?|eňí?|ejsme?|ejste?|ésó|ebudu?|ebudeš?|ebud
 cófNOUT|22|-1|nout?|nu?|neš?|ne?|nem|nete?|nou?|ňi?|ňeme?|ňete?|l?,couvnul?|l?,couvnul?|la?,couvnula?|lo?,couvnulo?|li?,couvnuli?|ly?,couvnuly?|ly?,couvnuly?|la?,couvnula?
 čapJET|7|-1|jet|ím?|íš?|í?|íme?|íte?|í?|?,dřepjej?|me?,dřepjejme?|jete?,dřepjejte?|jel?|jel?|jela?|jelo?|jeli?|jely?|jely?|jela?
 brňET|7|-1|et?|ím?|íš?|i|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+brÁŇIT|15|-1|áňit?|áňím?|áňíš?|áňí?|áňíme?|áňíte?|áňijó|aň?|aňme?|aňte?|áňil?|áňil?|áňila?|áňilo?|áňili?|áňily?|áňily?|áňila?|áňen?|áňen?|áňena?|áňeno?|áňeňi?|áňeny?|áňeny?|áňena?
 -
 |BÝT||BÝT||
 m|mÍT|m|mÍT||
@@ -339,6 +350,7 @@ ne|neBÝT|n|nEBÝT||
 couv|couvNOUT|cóf|cófNOUT||
 dřep|dřepĚT|čap|čapJET||
 br|brNĚT|brň|brňET||sncj
+br|brÁNIT|br|brÁŇIT||sncj
 -
 aspoň|aspoň||
 déle|dyl||
@@ -357,6 +369,7 @@ tedy|teda||
 zase|zaz||
 zkrátka,prostě|holt||
 zrovna|zrovna||
+těžce|ťeško||sncj
 -
 i||aji||
 s||z||
@@ -366,6 +379,7 @@ do||do||
 po||po||
 v||v|||f||
 u||u||
+proti||proťi||sncj
 -
 že|že||
 ani|aňi||

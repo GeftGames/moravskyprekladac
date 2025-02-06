@@ -1,22 +1,23 @@
-TW v2
+TW v4
 tKojetín
 aGG
 d16.07.2023 20:28:07
 i# Ze snčj\nmňel atestaci zaz z veznamenáňim Kojetín PR\nbot. ocún (Colchicum): bogdalec Prostějovsko, Kojetín PR\nlevá ruka: čajda Kojetín PR\njá ťe dám šeďid a cegáňet! Kojetín PR\n\n\nhttps://edu.ceskatelevize.cz/video/7063-hana-peprek-i-cecuvka???\n\n# Poznámky\n-Kojetín je nářečně Kojaťin???
-c#Zdroje dat\n-https://sncj.ujc.cas.cz/
+bkniha|prijmeni=Jančář|jmeno=Josef|nazev=Lidová kultura na Moravě|misto=Strážnice|vydavatel=Ústav lidové kultury|rok_vydani=2000|strany=266|issn=|odkaz=|poznamka=|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=Hisorie Hanácké besedy|misto=|vydavatel=|rok_vydani=2009+?|strany=|issn=|odkaz=https://mekskojetin.cz/download?f=%2Fsoubory%2Fzajmove-soubory%2Fhanacka-beseda%2Fhistorie-hb.pdf|zpracovano=|shortcut=hhb\n\nsncj|i=|zpracovano=\n
+u1
 g49.3524347,17.3024424
 x3
 rnář=Kojaťin
 q0
-oHaná
+oHaná>Střední Haná
 -
 -
 -
 -
 -
-školní vysvědčení|1|atestaci|
-zase s|1|zaz z|
-levá ruka|1|čajda|
+školní vysvědčení|1|-1|atestaci||
+zase s|1|-1|zaz z||
+levá ruka|1|-1|čajda||
 -
 -
 -
@@ -25,29 +26,29 @@ levá ruka|1|čajda|
 stavení|0|||||||m|||m|||ch|mi
 ocún|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 pulEC|2|ec|ce|ci|ce|če|ci|cem|ci|ců|cům|ce|ci|cích|ci
+svatBA|1|ba|by|bě|bu|bo|bě|bou|by|eb|bám|by|by|bách|bami
 -
 stavení|0|?|?|?|?|?|?|m|?|?|m?|?|?|ch?|mi?
 ocún|3||u?|u?|?|e?|u?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 pulEC|2|ec|ce?|ci?|ce?|če?|ci?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+svajBA|1|ba?|by?|bje?|bu|bo?|bje?|bou?|by?|eb?|bám?|by?|by?|bách?|bami?
 -
-vyznamenání|stavení|0|veznamenáňi|stavení|
-bohdal|pulEC|0|bogdal|pulEC|
-ocún|ocún|0|bogdal|pulEC|
+vyznamenání|stavení|0|veznamenáňi|stavení||
+bohdal|pulEC|0|bogdal|pulEC||
+ocún|ocún|0|bogdal|pulEC||
+svat|svatBA|0|svaj|svajBA||hhb
 -
 -
 -
 -
 JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
 tY|y|[1],ebe|i,obě|[1],ebe|y|obě|ebou
-tI|i|ěch|ěm|y|-|ěch|ěmi
 -
 JÁ|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
-tY|ty?|t[1],tebe?|ťě|t[1],tebe?|ty?|tobě?|tebou?
-tI|i?|ěch?|ěm?|y?|-|ěch?|ěmi?
+TY|ty?|tě?,tebe?|ťe|tě?,tebe?|ty?|tobě?|tebou?
 -
-|JÁ||JÁ|
-t|tY|t|tY|
-t|tI|t|tI|
+|JÁ||JÁ||
+t|tY||TY||
 -
 -
 -
@@ -63,16 +64,16 @@ cegáŇET|15|-1|ňet|adu?|adeš?|ade?|ademe?|adete?|adou?|aď?|aďme?|aďte?|adl
 dÁT|94|-1|át?|ám|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 šeĎID|15|-1|ďid|dím?|díš?|dí?|díme?|díte?|dí?|ď?|ďme?|ďte?|dil?|dil?|dila?|dilo?|dili?|dily?|dily?|dila?|zen?|zen?|zena?|zeno?|zeni?|zeny?|zeny?|zena?
 -
-|MÍT||MÍT|
-l|lHÁT|cegá|cegáŇET|
-kr|krÁST|cegá|cegáŇET|
-d|dÁT|d|dÁT|
-ši|šiDIT|še|šeĎID|
+|MÍT||MÍT||
+l|lHÁT|cegá|cegáŇET||
+kr|krÁST|cegá|cegáŇET||
+d|dÁT|d|dÁT||
+ši|šiDIT|še|šeĎID||
 -
-zase|zaz|
+zase|zaz||
 -
-s||z|
+s||z||
 -
-a|a|
+a|a||
 -
 -

@@ -1,8 +1,10 @@
-TW v2
+TW v4
 tStarý Lískovec
 aGG
 d29.07.2023 13:57:21
 iprodavačka cukroví: ha bévale tade te šókle, jak sme řikale kolotočúm, a téch cukrbabé co tam belo Brno BM (Starý Lískovec)\n\nšókle??
+bkniha|prijmeni=Svěráková|jmeno=Božena|nazev=U nás v Brně|misto=Brno|vydavatel=Měst. kult. středisko S. K. Neumanna|rok_vydani=1989|strany=86|licence=|ibsn=|issn=|odkaz=|zpracovano=|shortcut=mkss
+u1
 sBrno
 g49.1645079,16.5639511
 q0
@@ -12,7 +14,7 @@ oBrněnsko
 -
 -
 -
-prodavaček cukroví|1|cukrbabé|
+prodavaček cukroví|1|-1|cukrbabé||
 -
 -
 -
@@ -22,7 +24,7 @@ kolotoč|3||e|i||i|i|em|e|ů|ům|e|e|ích|i
 -
 kolotoč|3|?|e?|i?|?|i?|i?|em?|e?|ů?|ům?|e?|e?|ích?|i?
 -
-kolotoč|kolotoč|0|kolotoč|kolotoč|
+kolotoč|kolotoč|0|kolotoč|kolotoč||
 -
 -
 -
@@ -33,8 +35,8 @@ CO|co|čeho|čemu|co,-č|-|čem|čím
 tEN|en?|oho?|omu?|oho?|-|om?|ím?|i?|éch|ěm?|i?|-|éch?|ěmi?|en?|oho?|omu?|en?|-|om?|ím?|e|éch|ěm?|y?|-|éch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|éch?|ěm?|y?|-|éch?|ěmi?|o?|oho?|omu?|o?|-|om?|ím?|y?|éch|ěm?|y?|-|éch?|ěmi?
 CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
 -
-t|tEN|t|tEN|
-|CO||CO|
+t|tEN|t|tEN||
+|CO||CO||
 -
 -
 -
@@ -47,14 +49,14 @@ BÝT|247|-1|být?|jsem?|jsi?|je?|sme|jste?|jsou?|budu?|budeš?|bude?|budeme?|bud
 říkAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 bývAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|ale|aly?|ala?
 -
-|BÝT||BÝT|
-řík|říkAT|řik|říkAT|
-býv|bývAT|bév|bývAT|
+|BÝT||BÝT||
+řík|říkAT|řik|říkAT||
+býv|bývAT|bév|bývAT||
 -
-tady|tade|
+tady|tade||
 -
 -
-a|ha||a|
-jak|jak|
+a|ha|||a||
+jak|jak||
 -
 -

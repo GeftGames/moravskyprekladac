@@ -1,10 +1,13 @@
-TW v2
+TW v4
 tJiříkovice u Brna
 aGG
 d20.05.2024 8:42:00
-c#Zdroje dat\n-https://moravscina.wordpress.com/2011/12/12/o-putovani-p-jezise-se-sv-petrem/
+cẹ (bartoš ė)
+bkniha|primeni=|jmeno=|nazev=Diaktologie moravská|misto=|vydavatel=|rok_vydani=|strany=179|issn=|odkaz=https://ia801300.us.archive.org/14/items/diaktologiemorav02bartuoft/diaktologiemorav02bartuoft.pdf/https://moravscina.wordpress.com/2011/12/12/o-putovani-p-jezise-se-sv-petrem/|zpracovano=0\n\n
+u1
 g49.1675147,16.7576588
 q0
+oBrněnsko
 -
 -
 -
@@ -13,24 +16,91 @@ q0
 -
 -
 -
+ou|ó
+-
+lu|lo
+eli|elẹ
+šli|šlẹ
+by|bẹ
+ku|ko
+ali|alẹ
+kají|kajó
+-
+pekařKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+chvilKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+těstO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
+-
+pekařKA|1|ka?|ky?|ce|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+chvilKA|1|ka?|ky?|ce?|ko|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+ťestO|0|o?|a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
+-
+pekař|pekařKA|0|pekař|pekařKA||
+chvil|chvilKA|0|chvil|chvilKA||
+těst|těstO|0|ťest|ťestO||
 -
 -
 -
 -
+ONI|oni|jich,nich*|jim,nim*|je,ně*|-|nich*|jimi,nimi*
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
+CO|co|čeho|čemu|co,-č|-|čem|čím
+-
+OŇI|voňi|jich?,ňich*?|jim,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
+ONA|ona?|jí?,ňí*?|jí?,ňí*?|ji?,ňi*?|-|ňí*?|jí?,ňí*?
+CO|co|čeho?|čemu?|co?,-č?|-|čem?|čím?
+-
+|ONI||OŇI||
+|ONA||ONA||
+|CO||CO||
 -
 -
 -
 -
+přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
+chTÍT|15|-1|tít|ci,(nářečně) chcu|ceš|ce|ceme|cete|tějí,(zastarale) chtí,(nářečně) chcou|těj|tějme|tějte|těl|těl|těla|tělo|těli|těly|těly|těla|těn|těn|těna|těno|těni|těny|těny|těna
+prodAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+počkAT|22|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
+mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
+dÁT|30|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+odeJÍT|30|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jdi|jděme|jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
+přiJÍT|22|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šel?|šel?|šla?|šlo?|šlẹ|šly?|šly?|šla?
+chŤÍT|15|-1|ťít?|ci?,(nářečňe) chcu?|ceš?|ce?|ceme?|cete?|ťejí?,(zastarale) chťí?,(nářečňe) chcou?|ťej?|ťejme?|ťejte?|ťel?|ťel?|ťela?|ťelo?|celẹ|ťely?|ťely?|ťela?|ťen?|ťen?|ťena?|ťeno?|ťeňi?|ťeny?|ťeny?|ťena?
+prodAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+počkAT|22|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|alẹ|aly?|aly?|ala?
+mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
+dÁT|30|-1|át?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bode|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+vodeJÍT|30|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|ndó|jďi?|jďeme?|jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
+při|přiJÍT|při|přiJÍT||
+ch|chTÍT|ch|chŤÍT||
+prod|prodAT|prod|prodAT||
+počk|počkAT|počk|počkAT||
+||hotrhne|||
+m|mÍT|m|mÍT||
+d|dÁT|d|dÁT||
+||zadělaní|||
+|BÝT||BÝT||
+ode|odeJÍT|vode|vodeJÍT||
 -
+jednou|jednó||
+zase,zas|zasi||
+spolu|spolo||
+však|šak||
+hned|hneď||
+dost|dosť||
+tedy|teda||
 -
+k||k||
 -
--
--
--
--
--
--
+a|a||
+aby|habẹ||
+kdyby|dẹbẹ||
+že|že||
+když|dẹž||
+jak|jak||
+ale|ale||
 -
 -

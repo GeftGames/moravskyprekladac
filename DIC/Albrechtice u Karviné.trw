@@ -1,31 +1,34 @@
-TW v2
+TW v4
 tAlbrechtice
 aGG
 d25.12.2023 11:57:18
-c#Zdroje dat\n-snčj
+c#Zdroje dat\n-snčj\n-https://is.muni.cz/th/mo4db/Mowa_zaolzianskich_Polakow.pdf
+bkniha|prijmeni=Bělič|jmeno=Jaromír|nazev=Nástin české dialektologie|misto=Praha|vydavatel=Státní pedagogické nakladatelství|rok_vydani=1972|strany=316|licence=|ibsn=|issn=|odkaz=|zpracovano=|shortcut=ncd
 g49.7861031,18.5245789
 q0
 -
 -
 -
 -
+jízní kola nebyly|1|b’icygli ňebyṵo||sncj
 -
 -
 -
+ne|ňe
 -
 -
 -
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
+autobus|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+bicykl|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 čołnEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
+autobus|3|?|u?|u?|?|e?|u?,e?|em?|y?|uv|úm?|y?|y?|ech?|y?
+b’icygl|3|?|u?|u?|?|e?|u?|em?|i|ú?|úm?|i?|y?|ech?|y?
 -
-člun|člunEK|0|čołn|čołnEK|
--
--
--
--
--
--
+člun|člunEK|0|čołn|čołnEK||
+autobus|autobus|0|autobus|autobus||sncj
+bicykl|bicykl|0|b’icygl|b’icygl||sncj
 -
 -
 -
@@ -33,6 +36,17 @@ q0
 -
 -
 -
+-
+-
+-
+neBÝT|23|-1|být|jsem|jsi|ní|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla
+-
+neBÝT|23|-1|být?|jsem?|jsi?|ňí?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|byṵo|byli?|byly?|byly?|byla?
+-
+ne|neBÝT|ne|neBÝT||sncj
+-
+pěšky|p’ešo||sncj
+pořád|furt||sncj
 -
 -
 -

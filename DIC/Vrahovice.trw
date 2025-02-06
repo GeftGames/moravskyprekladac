@@ -1,8 +1,10 @@
-TW v2
+TW v4
 tVrahovice
 aGG
 d01.11.2023 19:51:55
-c#Zdroje dat\n-https://archive.org/details/dialektologiemor02bartuoft/page/93/mode/1up#page=93\n\n#Popis nářečí\n-genitiv jedn. substantiv vzoru starosta na u vedle akkusativu na o, kdežto přece každé u se mění v o: To je bratr našeho Peku; ale jenom ve Vrahovicích
+c#Popis nářečí\n-genitiv jedn. substantiv vzoru starosta na u vedle akkusativu na o, kdežto přece každé u se mění v o: To je bratr našeho Peku; ale jenom ve Vrahovicích
+bkniha|prijmeni=|jmeno=|nazev=Dobrodružství etymologie. Články Františka Kopečného z prostějovského časopisu Štafeta|misto=Praha|vydavatel=|rok_vydani=2009|strany=35|issn=|odkaz=https://www.academia.edu/20887587/2009_SEB_7_Dobrodru%C5%BEstv%C3%AD_etymologie_%C4%8Cl%C3%A1nky_Franti%C5%A1ka_Kope%C4%8Dn%C3%A9ho_z_prost%C4%9Bjovsk%C3%A9ho_%C4%8Dasopisu_%C5%A0tafeta_Ed_A_Bi%C4%8Dan_and_E_Havlov%C3%A1_Nakladatelstv%C3%AD_Lidov%C3%A9_noviny_Praha_2009_232_pp|zpracovano=|shortcut=defk\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor02bartuoft/page/93/mode/1up#page=93|zpracovano=|shortcut=
+u1
 g49.4808747,17.1482295
 rnář=Brahovice
 q0
@@ -12,31 +14,78 @@ oHaná
 -
 -
 -
+mladí vranovští|1|-1|vranovská omlaďina||defk
 -
 -
 -
+ou|ú
+ni|ňi
+di|ďi
+ti|ťi
 -
+zice|zece
+ty|te
+y|e
+ného|niho
+né|ni
 -
 slepicE|1|e|e|i|i|e|i|í|e||ím|e|e|ích|emi
+pozvání|0|||||||m|||m|||ch|mi
+muziKA|1|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
+pantátA|2|a|y|ovi|u|o|ovi|ou|ové|ů|ům|y|ové|ech|y
+vstupnÉ|0|é|ého|ému|é|é|ém|ým|á|ých|ým|á|á|ých|ými
+chlapEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
+děvčE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+účel|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+lavičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 slepicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e?|e?|ích?|emi?
+pozváňí|0||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
+muzeKA|1|ka?|ky?|ce|ku?|ko?|ce?|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
+pantátA|2|a?|e|ovi?|u?|o?|ovi?|ou?|ové?|ú?|úm?|y?|ové?|ech?|y?
+vstupnÉ|0|i|ého?|ému?|é?|é?|ém?|ým?|á?|ých?|ým?|á?|á?|ých?|ými?
+chlapEC|2|ec?|ce?|ci?,covi?|ce|če?|ci?,covi?|cem?|ci?|cú?|cúm?|ce?|ci?|cích?|ci?
+ďevčE|0|e?|ete?|eťi?|e?|e?|eťi?|etem?|ata?|at?|atúm?|ata|ata?|atech?|aty?
+účel|3|?|u?|u?||e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+lavečKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
-vrahovic|slepicE|2|brahovic|slepicE|
-slepic|slepicE|0|slepic|slepicE|
+vrahovic|slepicE|2|brahovic|slepicE||
+slepic|slepicE|0|slepic|slepicE||
+pozvání|pozvání|0|pozváňí|pozváňí||defk
+muzi|muziKA|0|muze|muzeKA||defk
+||0|omlaďina|||defk
+pantát|pantátA|0|pantát|pantátA||defk
+||0|Stodenyho|||defk
+vstupn|vstupnÉ|0|vstupn|vstupnÉ||defk
+chlap|chlapEC|0|chlap|chlapEC||defk
+děvč|děvčE|0|ďevč|ďevčE||defk
+účel|účel|0|účel|účel||defk
+lavič|lavičKA|0|laveč|lavečKA||
+-
+-
+-
+||vranovská|||defk
+||dobročinný účel|||defk
+||čestý|||defk
+-
+kteRÝ|rý|rého|rému|rého|-|rém|rým|ří|rých|rým|ré|-|rých|rými|rý|rého|rému|rý|-|rém|rým|ré|rých|rým|ré|-|rých|rými|rá|ré|ré|rou|-|ré|rou|ré|rých|rým|ré|-|rých|rými|ré|rého|rému|ré|-|rém|rým|rá|rých|rým|rá|-|rých|rými
+-
+keRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ří?|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rú|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
+-
+kte|kteRÝ|ke|keRÝ||defk
 -
 -
 -
 -
+pořádAT|15|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+-
+pořádAT|15|-1|at?|ám?|áš?|á|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+-
+pořád|pořádAT|pořád|pořádAT||defk
 -
 -
--
--
--
--
--
--
--
--
+u||o||defk
+pro||pro||defk
 -
 -
 -

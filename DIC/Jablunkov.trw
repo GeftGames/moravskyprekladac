@@ -1,10 +1,9 @@
-TW v3
+TW v4
 tJablunkov
 aGG
 d02.04.2023 15:38:56
-igdo dṵugo ṵygo, tego chlyb odbygo Jablunkov FM;\nm’oṵ bydž bogaty, zostoṵ chṵupaty Jablunkov FM – zůstal chudý\ns kraja brač, ňebabrač Jablunkov FM – nevybírat si\n\nṵygo ????\nodbygo ???\n
-c#Zdroje dat\n-Kellner, Adolf - Východolašská nářečí; str.119\nhttps://is.muni.cz/th/mo4db/Mowa_zaolzianskich_Polakow.pdf
-bsncj|i=Jablunkov FM|zpracovano=0
+igdo dṵugo ṵygo, tego chlyb odbygo Jablunkov FM;\nm’oṵ bydž bogaty, zostoṵ chṵupaty Jablunkov FM – zůstal chudý\ns kraja brač, ňebabrač Jablunkov FM – nevybírat si\n\nṵygo ????\nodbygo ???\n\n\n\nchvolia cygunka robote a cygun krot Jablunkov FM  krot???
+bsncj|i=Jablunkov FM|zpracovano=0\n\nweb|nazev=|nazev_webu=|odkaz=https://www.youtube.com/watch?v=t6a5LmxqW6c|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=0|shortcut=\n\nkniha|prijmeni=Kellner|jmeno=Adolf|nazev=Východolašská nářečí|misto=|vydavatel=|rok_vydani=|strany=119|issn=|odkaz=|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://is.muni.cz/th/mo4db/Mowa_zaolzianskich_Polakow.pdf|zpracovano=|shortcut=
 u2
 g49.5767657,18.7634146
 x1
@@ -16,25 +15,28 @@ oSlezsko>Goralsko
 -
 -
 -
-bramborové placky|1|stryki||
-pletením připojit|1|doštrykovač||
-tenkým proudem|1|čurčkym||
-z cizího|1|s cudzego||
-na kuchyňská kamna|1|na blache||
-dej ohřát vodu na kamna|1|postof na blache vode||
-nestojí to za zaznamenání|1|to mušim zaṕisač čornum krejdum do kuḿina||
-má to černé na bílým,má písemně zaručeno,má písemně potvrzeno|1|mo to tu čorne na b́oṵym||
-měl být|1|ḿoṵ bydž||
-cihlička žihličky|1|cegṵosko||
-lepší něco jak nic|1|lepši coši ňiž ňic||
-lepší něco než nic|1|lepši coši ňiž ňic||
-velká zima|1|žima jako v bužňicy||
-ve velké neútulné místnosti|1|v bužňicy||
-babí léto|1|bapsk’i lato||
-z kraje|1|s kraja||
-nevybírat si|1|ňebabrač||
-2. leden|1|džiň roschodny||
-žít bez jistory co bude zítra|1|židž z dňa na džiň||
+bramborové placky|1|-1|stryki||
+pletením připojit|1|-1|doštrykovač||
+tenkým proudem|1|-1|čurčkym||
+z cizího|1|-1|s cudzego||
+na kuchyňská kamna|1|-1|na blache||
+dej ohřát vodu na kamna|1|-1|postof na blache vode||
+nestojí to za zaznamenání|1|-1|to mušim zaṕisač čornum krejdum do kuḿina||
+má to černé na bílým,má písemně zaručeno,má písemně potvrzeno|1|-1|mo to tu čorne na b́oṵym||
+měl být|1|-1|ḿoṵ bydž||
+cihlička žihličky|1|-1|cegṵosko||
+lepší něco jak nic|1|-1|lepši coši ňiž ňic||
+lepší něco než nic|1|-1|lepši coši ňiž ňic||
+velká zima|1|-1|žima jako v bužňicy||
+ve velké neútulné místnosti|1|-1|v bužňicy||
+babí léto|1|-1|bapsk’i lato||
+z kraje|1|-1|s kraja||
+nevybírat si|1|-1|ňebabrač||
+2. leden|1|-1|džiň roschodny||
+žít bez jistory co bude zítra|1|-1|židž z dňa na džiň||
+|1|-1|||
+borůvkových koláčů|1|-1|borufčokuf||sncj
+tak to nejde|1|-1|tak še cyguňi ňeb’ijum||snj
 -
 -
 chlu|chṵu
@@ -49,6 +51,7 @@ tý|ty
 tal|toṵ
 patý|paty
 rat|rač
+kla|kła
 -
 almaRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 kanEC|2|ec|ce|ci,covi|ce|če|ci,covi|cem|ci|ců|cům|ce|ci|cích|ci
@@ -77,6 +80,13 @@ dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu|nem|ni,ny|ní,nů|nům|ni,ny|ni,ny|nech|ny
 rybA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 beránEK|3|ek|ka|kovi,ku|ka|ku|kovi,ku|kem|ci,kové|ků|kům|ci,kové|ky|cích|ky
 cementárNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
+záchod|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+borůvKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+cikán|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+cikán|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+cikánKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+prÁCE|1|áce|áce,ářečně) práci,rácí[1]|áci|áci|áce|áci|ací|áce|ací|acím,ářečně,astarale) pracem[2]|áce|áce|acích,ářečně,astarale) pracech[2]|acemi
+bicykl|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 odmaRA|1|ryja|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rami?
 gaňEC|2|ec|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
@@ -105,6 +115,12 @@ dEN|0|žiň|ňa|ňi?,nu?|žiň|ne?,ňi?|ňi?,nu?|nem?|ňi?,ny?|ňí?,nú?|núm?|
 rybA|1|a?|y?|je?|u?|o?|je?|ou?|y?|?|ám?|y|y?|ách?|ami?
 baranEK|3|ek|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?,kové?|kú?|kúm?|ci?,kové?|ky?|cích?|ky?
 cymyntarŇA|1|ňa|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
+aport|3||u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+boruVKA|1|vka?|vky?|vce?|vku?|vko?|vce?|vkou?|fk’i|vek?|vkám?|vky?|vky?|vkách?|vkami?
+cykuN|2|n|na?|novi?,nu?|na?|ne?|novi?,nu?|nem?|ňi|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
+cygunKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+roboTA|1|áce?|áce?,ářečňe) práci?,rácí[1]?|áci?|áci?|áce?|te?|ací?|áce?|ací?|acím?,ářečňe?,astarale) pracem[2]?|te?|áce?|acích?,ářečňe?,astarale) pracech[2]?|acemi?
+b’icygel|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
 ||0|doachtlika |||
 ||0|krejdum |||
@@ -136,6 +152,14 @@ ryb|rybA|0|ryb|rybA||
 ||0|goždž |||
 berán|beránEK|0|baran|baranEK||
 cementár|cementárNA|0|cymyntar|cymyntarŇA||
+záchod|záchod|0|aport|aport||sncj
+borův|borůvKA|0|boru|boruVKA||sncj
+||0|pun|||sncj
+cikán|cikán|0|cyku|cykuN||sncj
+cikán|cikán|0|cygu|cykuN||sncj
+cikán|cikánKA|0|cygun|cygunKA||sncj
+pr|prÁCE|0|robo|roboTA||sncj
+bicykl|bicykl|0|b’icygel|b’icygel||sncj
 -
 rezavÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -173,7 +197,7 @@ něCO|co|čeho|čemu|co|co|čem|čím
 -
 TY|ty|ťe[1]?,tebe?|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
 KDO|gdo|koho?|komu?|koho?|kdo?|kom?|kým?
-TEN|ten?|tego|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
+TEN|tyn|tego|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to|toho?|tomu?|to?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 SE|-|sebe?|si?,sobje?|še,sebe?|-|sobje?|sebou?
 žodNÝ|ný?|ného?|nému?|ného?|-|ném?|ným?|ňí?|ných?|ným?|né?|-|ných?|nými?|yn|ného?|nému?|ný?|-|ném?|ným?|né?|ných?|ným?|né?|-|ných?|nými?|ná?|né?|né?|nou?|-|né?|nou?|né?|ných?|ným?|né?|-|ných?|nými?|né?|ného?|nému?|né?|-|ném?|ným?|ná?|ných?|ným?|ná?|-|ných?|nými?
 COSI|coši|čehosi?|čemusi?|cosi?|-|čemsi?|čímsi?
@@ -181,8 +205,8 @@ COSI|coši|čehosi?|čemusi?|cosi?|-|čemsi?|čímsi?
 ňeCO|co?|čeho?|čemu?|co?|co?|čem?|čím?
 -
 t|tY||TY||
-k|kDO||KDO||
-t|tEN||TEN||
+k|kDO||KDO||sncj
+t|tEN||TEN||sncj
 |SE||SE||
 žádn|žádnÝ|žod|žodNÝ||
 |COSI||COSI||
@@ -208,8 +232,10 @@ RŮST|23|-1|růst|rostu|rosteš|roste|rosteme|rostete|rostou|porostu,budu růst|
 bRÁT|15|-1|rát|eru|ereš|ere|ereme|erete|erou|er|erme|erte|ral|ral|rala|ralo|rali|raly|raly|rala|rán|rán|rána|ráno|ráni|rány|rány|rána
 smrDĚT|7|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla
 couvNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,couvnul|l,couvnul|la,couvnula|lo,couvnulo|li,couvnuli|ly,couvnuly|ly,couvnuly|la,couvnula
+krÁST|15|-1|ást|adu|adeš|ade|ademe|adete|adou|aď|aďme|aďte|adl|adl|adla|adlo|adli|adly|adly|adla|aden|aden|adena|adeno|adeni|adeny|adeny|adena
+bÍT|15|-1|ít|iji,(hovorově) biju|iješ|ije|ijeme|ijete|ijí,(hovorově) bijou|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila|it|it|ita|ito|iti|ity|ity|ita
 -
-BÝT|247|-1|bydž|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|bydžež|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|bydž|sym|jsi?|je?|jsme?|jste?|jsou?|budu?|bydžež|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|były|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 žÍT|15|-1|ič,idž|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
 ČÉCT|7|-1|čéct?|čeku?,čteču?|čečeš?|čeče|čečeme?|čečete?|čekou?,čtečou?|čeč?|čečme?|čečte?|čekl?|čekl?|čekla?|čeklo?|čekli?|čekly?|čekly?|čekla?
 postaVIT|30|-1|vit?|vím?|víš?|ví?|víme?|víte?|ví?|f|vme?|vte?|vil?|vil?|vila?|vilo?|vili?|vily?|vily?|vila?|ven?|ven?|vena?|veno?|veňi?|veny?|veny?|vena?
@@ -222,24 +248,32 @@ RÚST|23|-1|rúst?|rostu?|rosteš?|rošňe|rosteme?|rostete?|rostou?|porostu?,bu
 bRÁT|15|-1|rač|eru?|ereš?|ere?|ereme?|erete?|erou?|er?|erme?|erte?|ral?|ral?|rala?|ralo?|rali?|raly?|raly?|rala?|rán?|rán?|rána?|ráno?|ráňi?|rány?|rány?|rána?
 smrĎET|7|-1|ďet?|ďím?|ďíš?|ďí?|ďíme?|ďíte?|dzum|ď?|ďme?|ďte?|ďel?|ďel?|ďela?|ďelo?|ďeli?|ďely?|ďely?|ďela?
 cofNOUT|22|-1|nyč|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?,couvnul?|l?,couvnul?|la?,couvnula?|lo?,couvnulo?|li?,couvnuli?|ly?,couvnuly?|ly?,couvnuly?|la?,couvnula?
+krÁST|15|-1|ást?|adu?|adeš?|adže|ademe?|adete?|adou?|aď?|aďme?|aďte?|adl?|adl?|adla?|adlo?|adli?|adly?|adly?|adla?|aden?|aden?|adena?|adeno?|adeňi?|adeny?|adeny?|adena?
+bÍT|15|-1|ít?|iji?,(hovorově) biju?|iješ?|ije?|ijeme?|ijete?|’ijum|ij?|ijme?|ijte?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|it?|it?|ita?|ito?|iťi?|ity?|ity?|ita?
 -
 |BÝT||BÝT||
-ž|žÍT|ž|žÍT||
 ||vlyjče |||
-t|tÉCT||ČÉCT||
+||ḿoṵ|||
+|RŮST||RÚST||
+b|bRÁT|b|bRÁT||
+couv|couvNOUT|cof|cofNOUT||
+hř|hřÁT|gř|gřÁT||
+m|mÍT|m|mÍT||
+mus|musET|muš|mušET||
+ne|RŮST|ňe|RÚST||
 net|tÉCT|ňe|ČÉCT||
 postav|postavIT|posto|postaVIT||
-hř|hřÁT|gř|gřÁT||
-mus|musET|muš|mušET||
-zap|zapSAT|za|zapSAT||
-m|mÍT|m|mÍT||
-||ḿoṵ|||
-zůsta|zůstaT|zosto|zostaT||
-|RŮST||RÚST||
-ne|RŮST|ňe|RÚST||
-b|bRÁT|b|bRÁT||
 smr|smrDĚT|smr|smrďET||
-couv|couvNOUT|cof|cofNOUT||
+t|tÉCT||ČÉCT||
+zap|zapSAT|za|zapSAT||
+zůsta|zůstaT|zosto|zostaT||
+ž|žÍT|ž|žÍT||
+|||||
+lhát, šidit???||cygaňi|||sncj
+kr|krÁST|kr|krÁST||sncj
+||chvoliua|||sncj
+neb|bÍT|ňeb|bÍT||sncj
+b|bÍT|b|bÍT||
 -
 jestli|jeśli||
 ještě|ješče||
@@ -250,6 +284,9 @@ tady|tu||
 dokud|dokjyl||
 doposud,doteď|doposyč||sncj
 doteď|dofčil||sncj
+tak|tak||sncj
+napřed?|napřut||sncj
+potom|potym||sncj
 -
 do||do||
 na||na||
@@ -259,5 +296,7 @@ z||s||
 než|ňiž||
 nech|ňech||
 jako|jako||
+i|i||sncj
+a|a||sncj
 -
 -

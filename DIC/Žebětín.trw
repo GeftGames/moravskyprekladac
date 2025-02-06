@@ -1,8 +1,11 @@
-TW v1.0
+TW v4
 tŽebetín
 aGG
 d14.04.2023 14:58:59
 ibech já s tém bévala neďelala ňic, tak to belo dobré Brno BM (Žebětín);
+bsncj|i=Brno BM (Žebětín)|zpracovano=\n\nkniha|prijmeni=Sušil|jmeno=František|nazev=Moravské národní písně s nápěvy do textu vřaděnými|misto=Brno|vydavatel=K. Winiker|rok_vydani=1860|strany=215|licence=|ibsn=|issn=|odkaz=|zpracovano=|shortcut=mnpn
+u1
+sBrno
 g49.2072081,16.4861743
 q0
 oBrněnsko
@@ -11,32 +14,51 @@ oBrněnsko
 -
 -
 -
-s tím|s tém
+s tím|1|-1|s tém||
 -
 -
+neote|nevute
+o|vo
 -
 -
+lý|ké
+du|do
+ménko|mýnko
+ký|ké
+ňují|ňujó
+né|ný
 -
+rampouCH|3|ch|chu|chu|ch|chu|chu|chem|chy|chů|chům|chy|chy|ších|chy
+střechýl|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+týdEN|3|en|ne|nu,ni|en|ne,ni|nu,ni|nem|ny|nů|nům|ny|ny|nech|ny
+srdíčKO|0|ko|ka|ku|ko|ko|ku|kem|ka|ek|kům|ka|ka|kách|ky
 -
+cák|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+tédEN|3|en?|ne?|nu?,ňi?|eň|ne?,ňi?|nu?,ňi?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
+srdečKO|0|ko?|ka?|ku?|ko|ko?|ku?|kem?|ka?|ek?|kúm?|ka?|ka?|kách?|ky?
 -
+rampou|rampouCH|0|cák|cák||sncj
+střechýl|střechýl|0|cák|cák||sncj
+týd|týdEN|0|téd|tédEN||mnpn
+srdíč|srdíčKO|0|srdeč|srdečKO||mnpn
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|||rá|rých|rým|rá|rá|rých|rými|||rá|ré|ré|rou|rá|ré|rou|||ré|rých|rým|ré|ré|rých|rými|||rý|rého|rému|rého|rý|rém|rým|||ří|rých|rým|ré|ří|rých|rými|||rý|rého|rému|rý|rý|rém|rým|||ré|rých|rým|ré|ré|rých|rými||
 -
 dobRÝ|-1|ré|rého?|rému?|ré?|ré?|rém?|rým?|?|?|rá?|rých?|rým?|rá?|rá?|rých?|rými?|?|?|rá?|ré?|ré?|rou?|rá?|ré?|rou?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?|rý?|rého?|rému?|rého?|rý?|rém?|rým?|?|?|ří?|rých?|rým?|ré?|ří?|rých?|rými?|?|?|rý?|rého?|rému?|rý?|rý?|rém?|rým?|?|?|ré?|rých?|rým?|ré?|ré?|rých?|rými?|?|?
 -
-dob|dobRÝ|dobRÝ
+dob|dobRÝ|dob|dobRÝ||
 -
-JÁ|-1|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
-tEN|-1|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
-niC|-1|c|čeho|čemu|c|c|čem|čím
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+niC|c|čeho|čemu|c|c|čem|čím
 -
-JÁ|-1|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
-tEN|-1|en?|oho?|omu?|oho?|-|om?|ém|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
-niC|-1|c|čeho?|čemu?|c?|c?|čem?|čím?
+JÁ|já|mě,(knižně) mne[2]?|mně,mi?|mě,(knižně) mne[2]?|já?|mně?|mnou?
+tEN|en?|oho?|omu?|oho?|-|om?|ém|i?|ěch?|ěm?|i?|-|ěch?|ěmi?|en?|oho?|omu?|en?|-|om?|ém|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|a?|é?|é?|u?|-|é?|ou?|y?|ěch?|ěm?|y?|-|ěch?|ěmi?|o|oho?|omu?|o?|-|om?|ém|y?|ěch?|ěm?|y?|-|ěch?|ěmi?
+niC|c|čeho?|čemu?|c?|c?|čem?|čím?
 -
-JÁ|JÁ
-t|tEN|tEN
-ni|niC|niC
+|JÁ||JÁ||
+t|tEN|t|tEN||
+ni|niC|ni|niC||
 -
 -
 -
@@ -44,18 +66,25 @@ ni|niC|niC
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 bývAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala
 dělAT|79|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
+přiJÍT|22|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|jď|jďme|jďte|šel|šel|šla|šlo|šli|šly|šly|šla
+musET|5|-1|et|ím|íš|í|íme|íte|ejí,musí|el,musil|el,musil|ela,musila|elo,musilo|eli,musili|ely,musily|ely,musily|ela,musila
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|belo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bech|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|belo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bech|bys?|by?|bychom?|byste?|be
 bévAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?
 dělAT|79|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
+přeJÍT|22|-1|jít?|ndo|jdeš?|jde?|jdeme?|jdete?|jdou?|jď?|jďme?|jďte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?
+mosET|5|-1|et?|ím|íš?|í?|íme?|íte?|ejí?,musí?|el?,musil?|el?,musil?|ela?,musila?|elo?,musilo?|eli?,musili?|ely?,musily?|ely?,musily?|ela?,musila?
 -
-BÝT|BÝT
-býv|bév|bývAT|bévAT
-děl|ďel|dělAT|dělAT
-neděl|neďel|dělAT|dělAT
+|BÝT||BÝT||mnpn
+býv|bývAT|bév|bévAT||
+děl|dělAT|ďel|dělAT||
+neděl|dělAT|neďel|dělAT||
+při|přiJÍT|pře|přeJÍT||mnpn
+mus|musET|mos|mosET||mnpn
 -
-tak
+tak|tak||
 -
 -
+když|dež||mnpn
 -
 -

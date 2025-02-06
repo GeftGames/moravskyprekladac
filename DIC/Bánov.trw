@@ -1,10 +1,14 @@
-TW v2
+TW v4
 tBánov
 aGG
 d28.07.2023 20:13:28
-c#Zdroje dat\n-https://www.folklorni-akademie.cz/pisnicka/banove-banove\n-<a href="https://archive.org/details/diaktologiemorav00bartuoft/page/28/mode/1up">Diaktologie moravská</a>\n\n#Popis nářečí\n-Za akk. mn. životných v Bánovně a v Nivnici užívá se genitivu: má dvúch bratrů, třech synů, mám tam známých.
+c#Popis nářečí\n-Za akk. mn. životných v Bánovně a v Nivnici užívá se genitivu: má dvúch bratrů, třech synů, mám tam známých.
+bkniha|prijmeni=|jmeno=|nazev=Diaktologie moravská|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/diaktologiemorav00bartuoft/page/28/mode/1up|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://www.folklorni-akademie.cz/pisnicka/banove-banove|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nweb|nazev=Zazpívej, slavíčku 2008|nazev_webu=|odkaz=https://www.folklorni-akademie.cz/pisnicka/ta-nasa-lavecka-kristyna-mala-2008|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=fats
+u1
 g48.9880471,17.7171054
+rnář=Banov
 q0
+oSlovácko>Dolňácko>UherskoHradišstko
 -
 -
 -
@@ -37,6 +41,8 @@ hoRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 dEN|0|en|ne|ni,nu|en|ne,ni|ni,nu,ne[4]|nem|ni,ny,básnicky,knižně) dnové[3]|ní,nů|nům|ni,ny|ni,ny,básnicky,knižně) dnové[3]|nech|ny
 bratR|2|r|ra|ru,rovi|ra|ře|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 syn|2||a|u,ovi|a|u|u,ovi|em|ové|ů|ům|y|ové|ech|y
+lavičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+srdcE|0|e|e|i|e|e|i|em|e|í|ím|e|e|ích|i
 -
 vdovA|1|a?|y?|ě?|u?|o?|ě?|ú|y?|?|ám?|y?|y?|ách?|ami?
 polínKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem?|ka?|ek?|kom|ka?|ka?|kách?|ky?
@@ -54,25 +60,29 @@ hoRA|1|ra?|ry?|ře?|ru?|ro?|ře?|rou?|ry?|r?|rám?|ry?|ry?|rách?|rama
 dEN|0|eň|ne?|ni,nu?|en?|ne,ni?|ni,nu,ne[4]?|nem?|ni,ny,básnicky,knižně) dnové[3]?|ní,nů?|nům?|ni,ny?|ni,ny,básnicky,knižně) dnové[3]?|nech?|ny?
 bratR|2|r?|ra?|ru?,rovi?|ra?|ře?|ru?,rovi?|rem?|ři?|rú|rúm?|ry?|ři?|rech?|ry?
 syn|2|?|a?|u?,ovi?|a?|u?|u?,ovi?|em?|ové?|ú|úm?|y?|ové?|ech?|y?
+lavečKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+srdcE|0|e?|a|i?|e?|e?|i?|em?|e?|í?|ím?|e?|e?|ích?|i?
 -
-vdov|vdovA|0|vdov|vdovA|
-polín|polínKO|0|polén|polínKO|
-pacholek||0|pacholkom||
-káč|káčA|2|kač|káčA|
-otčenáš|otčenáš|0|otčenáš|otčenáš|
-k|kŮŇ|0|k|kŮŇ|
-chlap|chlapEC|0|šohaj|šohaj|
-půlnoc|půlnoc|0|púnoc|půlnoc|
-soused|soused|0|súsed|soused|
-slíp|slípKA|0|slép|slípKA|
-hlav|hlavA|0|hłav|hlavA|
-hřebín|hřebínEK|0|hřebén|hřebínEK|
-peří|peří|0|péří|peří|
-ho|hoRA|0|ho|hoRA|
-d|dEN|0|d|dEN|
-brat|bratR|0|brat|bratR|
-syn|syn|0|syn|syn|
-||0|známých||
+vdov|vdovA|0|vdov|vdovA||
+polín|polínKO|0|polén|polínKO||
+pacholek||0|pacholkom|||
+káč|káčA|2|kač|káčA||
+otčenáš|otčenáš|0|otčenáš|otčenáš||
+k|kŮŇ|0|k|kŮŇ||
+chlap|chlapEC|0|šohaj|šohaj||
+půlnoc|půlnoc|0|púnoc|půlnoc||
+soused|soused|0|súsed|soused||
+slíp|slípKA|0|slép|slípKA||
+hlav|hlavA|0|hłav|hlavA||
+hřebín|hřebínEK|0|hřebén|hřebínEK||
+peří|peří|0|péří|peří||
+ho|hoRA|0|ho|hoRA||
+d|dEN|0|d|dEN||
+brat|bratR|0|brat|bratR||
+syn|syn|0|syn|syn||
+||0|známých|||
+lavič|lavičKA|0|laveč|lavečKA||fats
+srdc|srdcE|0|srdc|srdcE||fats
 -
 bílÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 veliKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -86,12 +96,12 @@ zlatÝ|-1|é|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými
 jinÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 miłÝ|-1|łé?|łého?|łému?|łé?|łé?|łém?|łým?|ł?|ł?|łá?|łých?|łým?|łá?|łá?|łých?|łými?|ł?|ł?|łá?|łé?|łéj|łou?|łá?|łé?|łou?|ł?|ł?|łé?|łých?|łým?|łé?|łé?|łých?|łými?|ł?|ł?|łý?|łého?|łému?|łého?|łý?|łém?|łým?|ł?|ł?|łí?|łých?|łým?|łé?|łí?|łých?|łými?|ł?|ł?|łý?|łého?|łému?|łý?|łý?|łém?|łým?|ł?|ł?|łé?|łých?|łým?|łé?|łé?|łých?|łými?|ł?|ł?
 -
-bíl|bílÝ|bil|bílÝ|
-||nedójenú||
-veli|veliKÝ|veli|veliKÝ|
-zlat|zlatÝ|złat|zlatÝ|
-jin|jinÝ|in|jinÝ|
-mil|milÝ|mi|miłÝ|
+bíl|bílÝ|bil|bílÝ||
+||nedójenú|||
+veli|veliKÝ|veli|veliKÝ||
+zlat|zlatÝ|złat|zlatÝ||
+jin|jinÝ|in|jinÝ||
+mil|milÝ|mi|miłÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
@@ -109,13 +119,13 @@ tY|y?|[1]?,ebe?|[1]?,obě?|[1]?,ebe?|y?|obě?|ebú
 JÁ|já?|mňa|mně?,mi?|mě?,(knižně) mne[2]?|já?|mně?|mňú
 ONA|ona?|jí?,ní*?|ju,ní*?|ji?,ni*?|-|ní*?|jí?,ní*?
 -
-t|tEN|t|tEN|
-n|nÁŠ|n|nÁŠ|
-||Kačo ||
-ně|něCO||COSI|
-t|tY|t|tY|
-|JÁ||JÁ|
-|ONA||ONA|
+t|tEN|t|tEN||
+n|nÁŠ|n|nÁŠ||
+||Kačo |||
+ně|něCO||COSI||
+t|tY|t|tY||
+|JÁ||JÁ||
+|ONA||ONA||
 -
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 druHÝ|4|hý|hého|hému|hého|hý|hém|hým|zí|hých|hým|hé|zí|hých|hými|hý|hého|hému|hý|hý|hém|hým|hé|hých|hým|hé|hé|hých|hými|há|hé|hé|hou|há|hé|hou|hé|hých|hým|hé|hé|hých|hými|hé|hého|hému|hé|hé|hém|hým|há|hých|hým|há|há|hých|hými
@@ -127,10 +137,10 @@ druHÝ|4|hý?|hého?|hému?|hého?|hý?|hém?|hým?|zí?|hých?|hým?|hé?|zí?|
 dvA|4|a?|úch|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-
 třI|2|i?|třech|em?|i?|i?|ech?|emi?
 -
-jed|jedEN|jed|jedEN|
-dru|druHÝ|dru|druHÝ|
-dv|dvA|dv|dvA|
-tř|třI|tř|třI|
+jed|jedEN|jed|jedEN||
+dru|druHÝ|dru|druHÝ||
+dv|dvA|dv|dvA||
+tř|třI|tř|třI||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 pouštĚT|15|-1|ět|ím|íš|í|íme|íte|í,pouštějí|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla|ěn|ěn|ěna|ěno|ěni|ěny|ěny|ěna
@@ -156,28 +166,29 @@ počUT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|uj|ejme?|ejte?|al?|al?|ala?|al
 robIT|15|-1|at?|ám?|áš?|í|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 mÍT|7|-1|ít?|ám?|áš?|á|áme?|áte?|ají?|ěj?|ějme?|ějte?|ěl?|ěl?|ěla?|ělo?|ěli?|ěly?|ěly?|ěla?
 -
-|BÝT||BÝT|
-poušt|pouštĚT|púš|pouštĚT|
-povíd|povídAT|povíd|povídAT|
-m|mOCT|m|mOCT|
-nem|mOCT|nem|mOCT|
-vyhán|vyhánĚT|vyhá|vyháŇĚT|
-doj|dojIT|dój|dojIT|
-zpív|zpívAT|zpív|zpívAT|
-červen|červenAT|červen|červenAT|
-poslouch|poslouchAT|poč|počUT|
-děl|dělAT|rob|robIT|
-||vyletěła ||
-||Přeletěła ||
-m|mÍT|m|mÍT|
+|BÝT||BÝT||
+poušt|pouštĚT|púš|pouštĚT||
+povíd|povídAT|povíd|povídAT||
+m|mOCT|m|mOCT||
+nem|mOCT|nem|mOCT||
+vyhán|vyhánĚT|vyhá|vyháŇĚT||
+doj|dojIT|dój|dojIT||
+zpív|zpívAT|zpív|zpívAT||
+červen|červenAT|červen|červenAT||
+poslouch|poslouchAT|poč|počUT||
+děl|dělAT|rob|robIT||
+||vyletěła |||
+||Přeletěła |||
+m|mÍT|m|mÍT||
 -
-kudy|kady|
-jen,jenom|enom|
-nahoře|hore|
-včera|včéra|
-tam|tam|
+kudy|kady||
+jen,jenom|enom||
+nahoře|hore||
+včera|včéra||
+tam|tam||
+ještě|ešťe||fats
 -
 -
-nebo|lebo|
+nebo|lebo||
 -
 -

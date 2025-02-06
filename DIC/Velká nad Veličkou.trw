@@ -1,4 +1,4 @@
-TW v3
+TW v4
 tVelká nad Veličkou
 aGG
 d30.05.2023 10:00:51
@@ -17,42 +17,42 @@ oSlovácko>Horňácko
 -
 udělali by lépe|1|lepší bi spravili||
 -
-běžný pracovní den|1|ďelňí deň||
-brzo ráno|1|skoro ráno||
-den před Štědrým dnem|1|buchtoví deň||
-do půlky|1|do pú||
-když ten|1|dyš ten||
-lilek potměchuť,solanum dulcamara|1|čérné oko||
-lopuch plstnatý|1|čérní koreň||
-lopuch plstnatý,arctium tomentosum|1|čérní koreň||
-může být|1|može bid||
-na kopci|1|f čupku||
-naprosto|1|na čisté čisto||
-nepijte vodu|1|nepite vody||
-pánský kožich|1|dubenastí kožuch||
-pánský kožich|1|sedláckí kožuch|pánský krátký, bohatě lemovaný||strážňickí kožuch|pánský dlouhý, lemovaný jen kolem krku|
-plácl sebou|1|búchéṵ sebú||
-prosekávali mladý les|1|foštovali||
-proudem různé intenzity|1|cicúrem||
-s kvasem|1|s kvasem||
-se pekli husi|1|sa pékali husi||
-tlusté břicho|1|banďúr||
-v pekáčích|1|na brutvanoch||
-v pekáčích se pekli husi|1|na brutvanoch sa pékali husi||
-v polovině|1|f pouovici||
-velké jmění|1|bankáṵ||
-z nosu|0|z nosa||
-z té|1|s téj||
-z toho|1|s teho||
-postavili si hodně|1|nastavjali si||
-malých místnůstek|1|curďíkú||
-kdyby si aspoň postavili|1|dibi si bili postavili||
-se na to|1|sa naň||
-leckteré oblečení|1|dejaké hábi||
-v takové barabizně,v takovém baráku|1|f takéj baji||
-budeš litovat|0|budež banovat||
-uštěkaného psa|1|blavoňa|2. pás|sncj
-velikého uštěkaného psa|0|blavoňa velikého|2. pád|sncj
+běžný pracovní den|1|-1|ďelňí deň||
+brzo ráno|1|-1|skoro ráno||
+den před Štědrým dnem|1|-1|buchtoví deň||
+do půlky|1|-1|do pú||
+když ten|1|-1|dyš ten||
+lilek potměchuť,solanum dulcamara|1|-1|čérné oko||
+lopuch plstnatý|1|-1|čérní koreň||
+lopuch plstnatý,arctium tomentosum|1|-1|čérní koreň||
+může být|1|-1|može bid||
+na kopci|1|-1|f čupku||
+naprosto|1|-1|na čisté čisto||
+nepijte vodu|1|-1|nepite vody||
+pánský kožich|1|-1|dubenastí kožuch||
+pánský kožich|1|-1|sedláckí kožuch|pánský krátký, bohatě lemovaný||strážňickí kožuch|pánský dlouhý, lemovaný jen kolem krku|
+plácl sebou|1|-1|búchéṵ sebú||
+prosekávali mladý les|1|-1|foštovali||
+proudem různé intenzity|1|-1|cicúrem||
+s kvasem|1|-1|s kvasem||
+se pekli husi|1|-1|sa pékali husi||
+tlusté břicho|1|-1|banďúr||
+v pekáčích|1|-1|na brutvanoch||
+v pekáčích se pekli husi|1|-1|na brutvanoch sa pékali husi||
+v polovině|1|-1|f pouovici||
+velké jmění|1|-1|bankáṵ||
+z nosu|0|-1|z nosa||
+z té|1|-1|s téj||
+z toho|1|-1|s teho||
+postavili si hodně|1|-1|nastavjali si||
+malých místnůstek|1|-1|curďíkú||
+kdyby si aspoň postavili|1|-1|dibi si bili postavili||
+se na to|1|-1|sa naň||
+leckteré oblečení|1|-1|dejaké hábi||
+v takové barabizně,v takovém baráku|1|-1|f takéj baji||
+budeš litovat|0|-1|budež banovat||
+uštěkaného psa|1|-1|blavoňa|2. pás|sncj
+velikého uštěkaného psa|0|-1|blavoňa velikého|2. pád|sncj
 -
 -
 sedm|sen
@@ -143,6 +143,9 @@ DVEŘE|1|-|-|-|-|-|-|-|dveře|dveří|dveřím|dveře|dveře|dveřích|dveřmi
 soused|1||a|u,ovi|a|e|u,ovi|em|é,i|ů|ům|y|é,i|ech|y
 akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 čmeláK|2|k|ka|kovi,ku|ka|ku|kovi,ku|kem|ci|ků|kům|ky|ci|cích|ky
+cikán|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+cikán|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
+podmáslí|0|||||||m|||m|||ch|mi
 -
 bečKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ék|kám?|ky?|ky?|kách?|kami?
 bidLO|0|ṵo|la?|lu?|lo?|lo?|lu?,le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
@@ -197,6 +200,8 @@ DVEŘE|1|-|-|-|-|-|-|-|dveře?|dveří?|dveřím?|dvera|dveře?|dveřích?|dveř
 súsed|1|?|a?|u?,ovi?|a?|e?|u?,ovi?|em?|é|ú?|úm?|y?|é?,i?|ech?|y?
 agát|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 čmrláK|2|k|ka?|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
+cigáN|2|n?|na?|novi?,nu?|na?|ne?|novi?,nu?|nem?|ňé|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
+cmér|3||?|?|?|?|?|m?|?|?|m?|?|?|ch?|mi?
 -
 |BRÝLE|0||BRÝLE||
 ||0|2p sátků|||
@@ -256,6 +261,9 @@ třetice||0|treťice|||
 v|vŮZ|0|v|vÚZ||
 vod|vodA|0|vo|voDA||
 žvanil||0|baṵamuťé |||
+cikán|cikán|0|ciká|cigáN||sncj
+cikán|cikán|0|cigá|cigáN||sncj
+podmáslí|podmáslí|0|cmér|cmér||sncj
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 černÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -264,6 +272,7 @@ mokRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rý
 církevní|-1||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-||||||||-|-||ch|m|||ch|mi|-|-||ho|mu|ho||m|m|-|-||ch|m|||ch|mi|-|-||ho|mu|||m|m|-|-||ch|m|||ch|mi|-|-
 zlatÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 hezKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
+němeCKÝ|-1|cké|ckého|ckému|cké|cké|ckém|ckým|-|-|cká|ckých|ckým|cká|cká|ckých|ckými|-|-|cká|cké|cké|ckou|cká|cké|ckou|-|-|cké|ckých|ckým|cké|cké|ckých|ckými|-|-|cký|ckého|ckému|ckého|cký|ckém|ckým|-|-|čtí|ckých|ckým|cké|čtí|ckých|ckými|-|-|cký|ckého|ckému|cký|cký|ckém|ckým|-|-|cké|ckých|ckým|cké|cké|ckých|ckými|-|-
 -
 celÝ|-1|ṵé?|ṵého?|ṵému?|ṵé|ṵé?|ṵém?|ṵým?|-|-|ṵá?|ṵých?|ṵým?|ṵá?|ṵá?|ṵých?|ṵými?|-|-|ṵá?|ṵé?|ṵé?|ṵou?|ṵá?|ṵé?|ṵou?|-|-|ṵé?|ṵých?|ṵým?|ṵé?|ṵé?|ṵých?|ṵými?|-|-|ṵý?|ṵého?|ṵému?|ṵého?|ṵý?|ṵém?|ṵým?|-|-|ṵí?|ṵých?|ṵým?|ṵé?|ṵí?|ṵých?|ṵými?|-|-|ṵí|ṵého?|ṵému?|ṵý?|ṵý?|ṵém?|ṵým?|-|-|ṵé?|ṵých?|ṵým?|ṵé?|ṵé?|ṵých?|ṵými?|-|-
 čérNÝ|-1|né|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ní|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
@@ -272,6 +281,7 @@ mokRÝ|-1|ré?|rého|rému?|ré?|ré?|rém?|rým?|-|-|rá?|rých?|rým?|rá?|rá
 cirkevňí|-1||ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|?|?|?|?|?|?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|ho?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-|?|ho?|mu?|?|?|m?|m?|-|-|?|ch?|m?|?|?|ch?|mi?|-|-
 zlaTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|-|-|tá?|tých?|tým?|tá?|tá?|tých?|tými?|-|-|tá?|té?|té?|tou?|tá?|té?|tou?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-|tý?|tého|tému?|tého?|tý?|tém?|tým?|-|-|ťí?|tých?|tým?|té?|ťí?|tých?|tými?|-|-|tý?|tého?|tému?|tý?|tý?|tém?|tým?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-
 hezKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|-|-|ká?|kých?|kým?|ká?|ká?|kých?|kými?|-|-|ká|ké?|ké?|kou?|ká?|ké?|kou?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kými?|-|-|ký?|kého|kému?|kého?|ký?|kém?|kým?|-|-|cí?|kých?|kým?|ké?|cí?|kých?|kými?|-|-|ký?|kého?|kému?|ký?|ký?|kém?|kým?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kými?|-|-
+vrbecCKÝ|-1|cké?|ckého?|ckému?|cké?|cké?|ckém?|ckým?|-|-|cká?|ckých?|ckým?|cká?|cká?|ckých?|ckými?|-|-|cká?|cké?|cké?|ckou?|cká?|cké?|ckou?|-|-|cké?|ckých?|ckým?|cké?|cké?|ckých?|ckými?|-|-|cký?|ckého?|ckému?|ckého?|cký?|ckém?|ckým?|-|-|ččí|ckých?|ckým?|cké?|čťí?|ckých?|ckými?|-|-|cký?|ckého?|ckému?|cký?|cký?|ckém?|ckým?|-|-|cké?|ckých?|ckým?|cké?|cké?|ckých?|ckými?|-|-
 -
 ||dubenastí|||
 ||sedláckí|||
@@ -287,6 +297,8 @@ svat|zlatÝ|sva|zlaTÝ||
 slabouč|hezKÝ|sṵabuč|hezKÝ||
 hlad|hezKÝ|hṵat|hezKÝ||
 veli|hezKÝ|veli|hezKÝ||sncj
+||||z Vrbky|sncj
+vrbe|němeCKÝ|vrbe|vrbecCKÝ||
 -
 tEN|en|oho|omu|oho|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 MY|my|nás|nám|nás|my|nás|námi
@@ -404,6 +416,7 @@ záležET|7|-1|et|ím|íš|í|íme|íte|í,ejí|ej,|ejme,me|ejte,te|el|el|ela|el
 couvNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,couvnul|l,couvnul|la,couvnula|lo,couvnulo|li,couvnuli|ly,couvnuly|ly,couvnuly|la,couvnula
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 NÉST|31|-1|nést|nesu|neseš|nese|neseme|nesete|nesou|ponesu,budu nést|poneseš,budeš nést|ponese,bude nést|poneseme,budeme nést|ponesete,budete nést|ponesou,budou nést|nes|nesme|neste|nesl|nesl|nesla|neslo|nesli|nesly|nesly|nesla|nesen|nesen|nesena|neseno|neseni|neseny|neseny|nesena
+hrÁT|15|-1|át|aji,hraju|aješ|aje|ajeme|ajete|ají,hrajou|aj,hrej|ajme,hrejme|ajte,hrejte|ál|ál|ála|álo|áli|ály|ály|ála|án|án|ána|áno|áni|ány|ány|ána
 -
 BÝT|247|-1|bid,bit|sem|jsi?|je|sme|ste|jsou?|budu?|budež|bude?|budeme?|budete?|budú|buď?|buďme?|buďte?|byṵ?|byṵ?|biṵa|biṵo|bili|byṵy?|byṵy?|byṵa?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|bi
 dOJÍT|62|-1|jít?|?|?|ójda?|?|?|?|jdi?|jděme?|jděte?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiti?|jity?|jity?|jita?|ójda|?|?
@@ -430,10 +443,11 @@ banOVAT|15|-1|ovat|uji?,lituju?|uješ?|uje?|ujeme?|ujete?|ují?|uj?|ujme?|ujte?|
 cúfNÚT|22|-1|nút|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?,couvnul?|l?,couvnul?|la?,couvnula?|lo?,couvnulo?|li?,couvnuli?|ly?,couvnuly?|ly?,couvnuly?|la?,couvnula?
 vĚĎET|7|-1|ěďet?|ím|íš?|í?|íme?|íte?|ěďí?|ěz?|ězme?|ězte?|ěďel?|ěďel?|ěďela?|ěďelo?|ěďeli?|ěďely?|ěďely?|ěďela?
 NÉST|31|-1|nést?|nesu?|neseš?|nese?|neseme?|nesete?|nesou?|ponesu?,budu nést?|poneseš?,budeš nést?|ponese?,bude nést?|poneseme?,budeme nést?|ponesete?,budete nést?|ponesou?,budou nést?|nes|nesme?|neste?|nes?|nesl?|nesla?|neslo?|nesli?|nesly?|nesly?|nesla?|nesen?|nesen?|nesena?|neseno?|neseňi?|neseny?|neseny?|nesena?
+hrÁT|15|-1|át?|aji?,hraju?|aješ?|aje?|ajeme?|ajete?|ají?,hrajou?|aj?,hrej?|ajme?,hrejme?|ajte?,hrejte?|ál?|ál?|ála?|álo?|áli|ály?|ály?|ála?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
 |BÝT||BÝT||
 |JÍT||JÍT||sncj
-|mÍT||MÍT||sncj
+m|mÍT||MÍT||sncj
 ||on utrácá|||
 ||urodily|||
 ||pálívaṵo|||
@@ -479,6 +493,7 @@ zálež|záležET|zálež|záležET||
 v|vĚDĚT|v|vĚĎET||
 nev|vĚDĚT|nev|vĚĎET||sncj
 |NÉST||NÉST||sncj
+hr|hrÁT|hr|hrÁT||sncj
 -
 ani|aňi||
 až|až||
@@ -494,7 +509,7 @@ potom|potom||
 proč|proč||
 sem|sem||
 tak|tak||
-tam|tam||
+tam|tam||sncj
 tehdy|tedi||
 trochu|trochu||
 úplně|načisto||

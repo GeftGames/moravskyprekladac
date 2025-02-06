@@ -1,9 +1,9 @@
-TW v3
+TW v4
 tBukovec
 aGG
 d06.04.2023 9:25:43
 ipozor transkipce!\n-ňo -> nio (hnízdo -> gniozdo)
-bkniha|prijmeni=Kellner|jmeno=Adolf|nazev=Východolašská nářečí|misto=|vydavatel=|rok_vydani=|strany=120|issn=|odkaz=|zpracovano=|shortcut=\n\nsncj|i=Bukovec FM|zpracovano=\n\n\nkniha - České nářeční texty - Lamprecht, Arnošt 325
+bkniha|prijmeni=Kellner|jmeno=Adolf|nazev=Východolašská nářečí|misto=|vydavatel=|rok_vydani=|strany=120|issn=|odkaz=|zpracovano=|shortcut=\n\nsncj|i=Bukovec FM|zpracovano=\n\nkniha|prijmeni=Skulina|jmeno=Josef|nazev=O některých syntaktických prostředcích pro vyjádření emocionality v\nnářečních projevech staré generace na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=192-195|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/100757.pdf|zpracovano=0|shortcut=onsp\n\nkniha|prijmeni=Lamprecht|jmeno=Arnošt|nazev=České nářeční texty|misto=|vydavatel=|rok_vydani=|strany=325|licence=|ibsn=|issn=|odkaz=|zpracovano=|shortcut=cnt
 u2
 g49.5566901,18.8212782
 rpl=Bukowiec,de=Bukowetz,nář=Bukovjec
@@ -13,11 +13,14 @@ oSlezsko>Goralsko
 -
 -
 -
+kde jsi byla|1|kajž byṵo||onsp
 -
-tak jsem|1|tagech||
+tak jsem|1|-1|tagech||
+kde jsi|1|-1|kajž||onsp
 -
 -
 hní|gni
+o|ṵo
 -
 -
 -
@@ -27,6 +30,8 @@ hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+ohEŇ|3|eň|ně|ni|eň|ni|ni|něm|ně|ňů|ňům|ně|ně|ních|ni
+babičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
 -
 ženA|1|a?|y|ě?|u?|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 las|3|?|a|u?|?|e?|e?|em?|y?|ů?|ům?|y?|y?|ích?|y?
@@ -35,6 +40,8 @@ městO|0|o?|a?|u?|o?|o?|u,ě?|em?|a?|?|ům?|a?|a?|ech?|y?
 čṵunKO|3|ko|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 čṵunEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 agat|1|a|u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+ohEŇ|3|yń|ňe?|ňi?|eň?|ňi?|ňi?|ňem?|ňe?|ňú?|ňúm?|ňe?|ňe?|ňích?|ňi?
+starKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
 -
 hodin|ženA|0|godžin|ženA||
 les|les|0|las|las||
@@ -44,12 +51,19 @@ angrešt||0|agrest |||
 člun|člunEK|0|čṵun|čṵunKO|||čṵun|čṵunEK||
 jilm?||0|Břost|||
 akát|akát|0|agat|agat||sncj
+oh|ohEŇ|0|ṵog|ohEŇ||onsp
+||0|panočku!|||onsp
+babič|babičKA|0|star|starKA||onsp
+||2|maryča|||onsp
 -
 -
 -
 -
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to?|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
 -
+t|tEN||TEN||onsp
 -
 šest|2||i|i|||i|i
 -
@@ -57,15 +71,27 @@ akát|akát|0|agat|agat||sncj
 -
 šest|šest|šejždž|šejždž||
 -
+hořET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
+vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
+umřÍT|22|-1|ít|u,(zastarale) umru|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 -
+gořET|7|-1|et?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|oṵ|el?|ela?|elo?|eli?|ely?|ely?|ela?
+vĚĎET|7|-1|ěďet?|ím?|íš?|í?|íme?|íte?|'edzům|ěz?|ězme?|ězte?|ěďel?|ěďel?|ěďela?|ěďelo?|ěďeli?|ěďely?|ěďely?|ěďela?
+umřÍT|22|-1|ít?|u?,(zastarale) umru?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|el?|ela?|elo?|yĺi|ely?|ely?|ela?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|byṵo|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 -
+hoř|hořET|goř|gořET||
+v|vĚDĚT|v|vĚĎET||onsp
+umř|umřÍT|umř|umřÍT||onsp
+|BÝT||BÝT||onsp
 -
 ještě|ešče||
 tak|tak||
 třeba|třa||
 potom|potym||
 jednou|ros||
-již|juš||
+již|juš|||juž||onsp
 -
 v||v||
 na||na||
@@ -73,5 +99,6 @@ do||do||
 i||aji||
 -
 protože|bo||
+a|a||onsp
 -
 -

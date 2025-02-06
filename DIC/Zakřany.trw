@@ -1,50 +1,65 @@
-TW v2
+TW v4
 tZakřany
 aGG
 d19.01.2024 19:57:50
-c#Zdroje dat\n-https://archive.org/details/dialektologiemor02bartuoft/page/204/mode/1up
+bsncj|i=Zakřany BO|zpracovano=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|licence=|ibsn=|issn=|odkaz=https://archive.org/details/dialektologiemor02bartuoft/page/204/mode/1up|zpracovano=|shortcut=
+u1
 g49.1704121,16.3254163
 q0
+oPodhorácko
 -
 -
 -
 -
 -
-chumáč ovoce|1|brmbále|
+chumáč ovoce|1|-1|brmbále||
 -
 -
 -
 ou|ó
 -
+nout|nót
 -
 rohlíK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 třešnĚ|1|ě|ě|i|i|ě|i|í|ě|í|ím|ě|ě|ích|ěmi
+včelA|1|a|y|e|u|o|e|ou|y||ám|y|y|ách|ami
 -
 rohlíK|3|k|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 střešňE|1|e?|e?|i?|i?|e?|i?|í?|e?|é|ím?|e?|e?|ích?|emi?
+fčelKA|1|ka|y?|e?|u?|o?|e?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 -
-rohlí|rohlíK|0|rohlé|rohlíK|
-třešn|třešnĚ|0|střešň|střešňE|
+rohlí|rohlíK|0|rohlé|rohlíK||
+třešn|třešnĚ|0|střešň|střešňE||
+včel|včelA|0|fčel|fčelKA||sncj
 -
 veliKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
 -
 veliKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|-|-|ká?|kých?|kým?|ká?|ká?|kých?|kými?|-|-|ká?|ké?|ké?|kou?|ká?|ké?|kou?|-|-|ké?|kých?|kým?|ké?|ké?|kých?|kými?|-|-|ký?|kého?|kému?|kého?|ký?|kém?|kým?|-|-|cí?|kých?|kým?|ké?|cí?|kých?|kými?|-|-|ký?|kého?|kému?|ký?|ký?|kém?|kým?|-|-|kí|kých?|kým?|ké?|ké?|kých?|kými?|-|-
 -
-veli|veliKÝ|veli|veliKÝ|
+veli|veliKÝ|veli|veliKÝ||
 -
+ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
 -
+ON|on?|ho,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
 -
+|ON||ON||sncj
 -
 -
 -
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
+bodNOUT|30|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l|l|la|lo|li|ly|ly|la|nut|nut|nuta|nuto|nuti|nuty|nuty|nuta
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+mOCT|5|-1|oct?|ohu?,(hovorově) múžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) múžou?|ohl?|ohl?|uhla|ohlo?|ohli?|ohly?|ohly?|ohla?
+bžodNOUT|30|-1|nót|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?|l?|la?|lo?|li?|ly?|ly?|la?|nut?|nut?|nuta?|nuto?|nuťi?|nuty?|nuty?|nuta?
 -
-|BÝT||BÝT|
+|BÝT||BÝT||
+m|mOCT|m|mOCT||sncj
+bod|bodNOUT|bžod|bžodNOUT||
 -
-letos|letos|
+letos|letos||
 -
 -
 -

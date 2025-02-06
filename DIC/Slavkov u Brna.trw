@@ -1,8 +1,9 @@
-TW v2
+TW v4
 tSlavkov
 aGG
 d29.02.2024 8:00:58
-c#zdroje dat\n-Nářeční řemeslnická terminologie na Vyškovsku, Zuzana Jelínková (Václav Eliáš) (nevyčerpáno)
+bsncj|i=Slavkov u Brna VY|zpracovano=\n\n_kniha|prijmeni=Jelínková|jmeno=Zuzana|nazev=Nářeční řemeslnická terminologie na Vyškovsku|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=0|shortcut=
+u1
 g49.1527922,16.8763687
 x1
 q0
@@ -11,22 +12,37 @@ oHaná
 -
 -
 -
+čiperné|1|čupr||sncj
 -
-na slepou bábu|1|na slepó babu|
+na slepou bábu|1|-1|na slepó babu||
+čiperné děvče|1|-1|čupr ďefče||sncj
+na ni|1|-1|na ňu||sncj
+hezké děvče|1|-1|čupr ďefče||sncj
+když jsem|1|-1|diš sem||sncj
 -
 -
 -
 ou|ó
 -
+dost|dosť
 -
 kluK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 bÁBA|1|ába|áby|ábě|ábu|ábo|ábě|ábou|áby|ab|ábám|áby|áby|ábách|ábami
+děvčE|0|e|ete|eti|e|e|eti|etem|ata|at|atům|ata|ata|atech|aty
+radost|1||i|i||i|i|í|i|í|em|i|i|ech|mi
+bicykl|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 -
 kluK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|cí|kú?|kúm?|ky?|ci?|cích?|ky?
 bÁBA|1|ába?|áby?|ábje?|abu|ábo?|ábje?|ábou?|áby?|ab?|ábám?|áby?|áby?|ábách?|ábami?
+ďefčE|0|e|ete?|eťi?|e?|e?|eťi?|etem?|ata?|at?|atúm?|ata?|ata?|atech?|aty?
+radosT|1|ť|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|tem?|ťi?|ťi?|tech?|tmi?
+bicigl|3|?|u?|u?|?|e?|u|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-klu|kluK|0|klu|kluK|
-b|bÁBA|0|b|bÁBA|
+klu|kluK|0|klu|kluK||
+b|bÁBA|0|b|bÁBA||
+děvč|děvčE|0|ďefč|ďefčE||sncj
+radost|radost|0|rados|radosT||sncj
+bicykl|bicykl|0|bicigl|bicigl||sncj
 -
 malÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 rád|-1|-|-|-|-|-|-|-|o|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|y|-|-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|i|-|-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|y|-
@@ -34,33 +50,51 @@ rád|-1|-|-|-|-|-|-|-|o|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|a|-|-|-|-|-|-|-|-|y|-|
 malÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|-|-|á?|ých?|ým?|á?|á?|ých?|ými?|-|-|á?|é?|é?|ó|á?|é?|ou?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-|ý?|ého?|ému?|ého?|ý?|ém?|ým?|-|-|í|ých?|ým?|é?|í?|ých?|ými?|-|-|ý?|ého?|ému?|ý?|ý?|ém?|ým?|-|-|é?|ých?|ým?|é?|é?|ých?|ými?|-|-
 ráD|-1|-|-|-|-|-|-|-|do?|-|-|-|-|-|-|-|-|da?|-|-|-|-|-|-|-|-|da?|-|-|-|-|-|-|-|-|dy?|-|-|-|-|-|-|-|-|d?|-|-|-|-|-|-|-|-|ďi|-|-|-|-|-|-|-|-|d?|-|-|-|-|-|-|-|-|dy?|-
 -
-mal|malÝ|mal|malÝ|
-rád|rád|rá|ráD|
-slep|malÝ|slep|malÝ|
+mal|malÝ|mal|malÝ||
+rád|rád|rá|ráD||
+slep|malÝ|slep|malÝ||
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
+ONA|ona|jí,ní*|jí,ní*|ji,ni*|-|ní*|jí,ní*
 -
 SE|-|sebe?|si,sobje?|se,sebe?|-|sobje?|sebou?
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
+ONA|ona?|jí?,ňí*?|jí?,ňí*?|ji?,#ňu|-|ňí*?|jí?,ňí*?
 -
-|SE||SE|
+|SE||SE||sncj
+t|tEN||TEN||sncj
+|ONA||ONA||sncj
 -
 -
 -
+||ňekolikrát|||sncj
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
-hrÁT|15|-1|át|aji,hraju|aješ|aje|ajeme|ajete|ají,hrajou|aj,hrej|ajme,hrejme|ajte,hrejte|ál|ál|ála|álo|áli|ály|ály|ála|án|án|ána|áno|áni|ány|ány|ána
+hrÁT|15|-1|át|aji,aju|aješ|aje|ajeme|ajete|ají,ajou|aj,ej|ajme,ejme|ajte,ejte|ál|ál|ála|álo|áli|ály|ály|ála|án|án|ána|áno|áni|ány|ány|ána
 JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+podívAT_SE|30|2|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+učIT|15|-1|it|ím|íš|í|íme|íte|í||me|te|il|il|ila|ilo|ili|ily|ily|ila|en|en|ena|eno|eni|eny|eny|ena
+jezdIT|15|-1|it|ím|íš|í|íme|íte|í|i|ěme|ěte|il|il|ila|ilo|ili|ily|ily|ila|ěn,ježděn|ěn,ježděn|ěna,ježděna|ěno,ježděno|ěni,ježděni|ěny,ježděny|ěny,ježděny|ěna,ježděna
 -
-BÝT|247|-1|být?|jsem?|jsi?|je?|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|sem|jsi?|je|zme|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 hrÁT|15|-1|át?|aji?,hraju?|aješ?|aje?|ajeme?|ajete?|ají?,hrajou?|aj?,hrej?|ajme?,hrejme?|ajte?,hrejte?|ál?|ál?|ála?|álo?|áli|ály?|ály?|ála?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+poďívAT_SE|30|2|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+učIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
+jezďIT|15|-1|it|ím?|íš?|í?|íme?|íte?|í?|i?|eme?|ete?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?,ježďen?|en?,ježďen?|ena?,ježďena?|eno?,ježďeno?|eňi?,ježďeňi?|eny?,ježďeny?|eny?,ježďeny?|ena?,ježďena?
 -
-|BÝT||BÝT|
-hr|hrÁT|hr|hrÁT|
-|JÍT||JÍT|
+|BÝT||BÝT||sncj
+hr|hrÁT|hr|hrÁT||
+|JÍT||JÍT||
+podív|podívAT_SE|poďiv|poďívAT_SE||sncj
+uč|učIT|uč|učIT||sncj
+jezd|jezdIT|jezď|jezďIT||sncj
+natluct||naklókl |||sncj
 -
 -
-na||na|
+na||na||sncj
 -
-jako|jako|
+jako|jako||
+když|diš||sncj
 -
 -

@@ -1,8 +1,9 @@
-TW v2
+TW v4
 tLhota
 aGG
 d31.05.2023 9:13:39
 c#Zdroje dat\n-http://eyetracking.upol.cz/naki_vystava_nareci/\nhttps://moravscina.wordpress.com/2012/02/20/kolerovy-poplach-na-slovacku-roku-1884/ (nevyčerpáno)
+bkniha|prijmeni=Skulina|jmeno=Josef|nazev=O některých syntaktických prostředcích pro vyjádření emocionality v\nnářečních projevech staré generace na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=192-195|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/100757.pdf|zpracovano=0|shortcut=onsp
 g49.1691617,17.6023197
 q0
 -
@@ -10,7 +11,8 @@ q0
 -
 -
 -
-ne jak|1|né jag|
+ne jak|1|-1|né jag||
+můj dědeček|1|-1|našy stařýčeg|úctivě|onsp
 -
 -
 -
@@ -18,6 +20,7 @@ ne jak|1|né jag|
 rými|rýma
 kový|kové
 kami|kama
+řeli|řei
 -
 nedělE|1|e|e|i|i|e|i|í|e|,í|ím|e|e|ích|emi
 růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
@@ -25,6 +28,8 @@ růžE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 hrad|3||u|u||e|ě,u|em|y|ů|ům|y|y|ech|y
 člunEK|3|ek|ku|ku|ek|ku|ku|kem|ky|ků|kům|ky|ky|kách,cích|ky
 babičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+tetičKA|1|ka|ky|ce|ku|ko|ce|kou|ky|ek|kám|ky|ky|kách|kami
+dědečEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
 -
 nedělE|1|e?|e?|i?|u|e?|i?|í?|e?|,í?|ím?|e?|e?|ích?|emi?
 růžE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
@@ -32,33 +37,54 @@ růžE|1|e?|e?|i?|i?|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 hrad|3|?|u?|u?|?|e?|ě,u?|em?|y?|ů?|ům?|y|y?|ech?|y?
 čłuňEK|3|ek|ku?|ku?|ek?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|kách?,cích?|ky?
 stařeNA|1|na|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+teťičKA|1|ka?|ky?|ce?|ku?|ko|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
+stařýčEK|2|eg|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
 -
-neděl|nedělE|0|neděl|nedělE|
-květy|hrad|0|kvety|hrad|
-babič|babičKA|0|staře|stařeNA|
-člun|člunEK|0|čłuň|čłuňEK|
+neděl|nedělE|0|neděl|nedělE||
+květy|hrad|0|kvety|hrad||
+babič|babičKA|0|staře|stařeNA||
+člun|člunEK|0|čłuň|čłuňEK||
+tetič|tetičKA|0|teťič|teťičKA||onsp
+dědeč|dědečEK|0|stařýč|stařýčEK||onsp
 -
 -
 -
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
+vY|y|ás|ám|ás|y|ás|ámi
+nÁŠ|áš|ašeho|ašemu|ašeho|áš|ašem|aším|aši|ašich|ašim|aše|aši|ašich|ašimi|áš|ašeho|ašemu|áš|áš|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|aší|aší|aši|aše|aší|aší|aše|ašich|ašim|aše|aše|ašich|ašimi|aše|ašeho|ašemu|aše|aše|ašem|aším|aše|ašich|ašim|aše|aše|ašich|ašimi
 -
 SE|-|sebe?|si,sobě?|se,sebe?|-|sobě?|sebou?
+vY|y|ás?|ám?|ás?|y?|ás?|ámi?
+nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|ašy|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 -
-|SE||SE|
+|SE||SE||
+v|vY|v|vY||
+n|nÁŠ|n|nÁŠ||onsp
 -
 -
 -
 -
 vymySLET|14|-1|slet|sli|sleme|slete|slel,vymyslil|slel,vymyslil|slela,vymyslila|slelo,vymyslilo|sleli,vymyslili|slely,vymyslily|slely,vymyslily|slela,vymyslila|šlen|šlen|šlena|šleno|šleni|šleny|šleny|šlena
+BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
+umřÍT|22|-1|ít|u,(zastarale) umru|eš|e|eme|ete|ou|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela
 -
 namySLET|14|-1|slet?|sli?|sleme?|slete?|slel,vymyslil?|slel,vymyslil?|slela|slelo,vymyslilo?|sleli,vymyslili?|slely,vymyslily?|slely,vymyslily?|slela,vymyslila?|šlen?|šlen?|šlena?|šleno?|šleni?|šleny?|šleny?|šlena?
+BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste|by?
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pújde?|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
+umřÍT|22|-1|ít?|u?,(zastarale) umru?|eš?|e?|eme?|ete?|ou?|i?|eme?|ete?|el?|el?|ela?|elo?|ei|ely?|ely?|ela?
 -
-vymy|vymySLET|namy|namySLET|
+vymy|vymySLET|namy|namySLET||
+|BÝT||BÝT||onsp
+|JÍT||JÍT||onsp
+umř|umřÍT|umř|umřÍT||onsp
 -
-vždy|dycky|
+vždy|dycky||
+už|už||onsp
+dávno|dávno||onsp
 -
 -
 -
-ne|né|
+ne|né||
 -

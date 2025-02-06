@@ -1,9 +1,9 @@
-TW v3
+TW v4
 tHlavnice
 aGG
 d01.05.2023 14:17:01
 i„Kelko si fčera střelil srncuf?“… „Tobě pry se može zajic do buta lehnuť –\nty ho ešče nestrefíš.“… „Ale najšumnějše je, jak Satanik dycky střeli, a potem\nleti za nim a varga: Halt!“… „Raz Stanika jeden štyrak (srnec) zbulil. Dyby\nto tak byl šesterak! Ten by ho zežral…“
-bkniha|prijmeni=Sobotka|jmeno=Richard|nazev=Vůně mateřštiny|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=0|shortcut=dcjs
+bkniha|prijmeni=Sobotka|jmeno=Richard|nazev=Vůně mateřštiny|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=http://historie.zasova.info/subdom/historie/wp-content/uploads/2016/12/Sobotka_vune-materstiny.pdf|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=0|shortcut=dcjs\n\nkniha|prijmeni=Skulina|jmeno=Josef|nazev=O některých syntaktických prostředcích pro vyjádření emocionality v\nnářečních projevech staré generace na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=192-195|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/100757.pdf|zpracovano=0|shortcut=onsp\n\nkniha|prijmeni=|jmeno=|nazev=Dialektologie moravská|misto=|vydavatel=|rok_vydani=|strany=136|issn=|odkaz=https://ia803406.us.archive.org/7/items/dialektologiemor01bartuoft/dialektologiemor01bartuoft.pdf|zpracovano=|shortcut=bar1\n\nkniha|prijmeni=Bělič|jmeno=Jaromír|nazev=Nástin české dialektologie|misto=Praha|vydavatel=Státní pedagogické nakladatelství|rok_vydani=1972|strany=300|licence=|ibsn=|issn=|odkaz=|zpracovano=0|shortcut=ncd
 u2
 g49.9245195,17.7284024
 rnář=Hłavnica
@@ -16,9 +16,9 @@ oSlezsko>Opavsko
 na tom místě byly|1|na tym placu były||dcjs
 čím se mlátilo|1|co se młaćiło||dcjs
 -
-v té|1|f te||dcjs
-s tím|1|s tym||dcjs
-nad tou|1|nat tum||dcjs
+v té|1|-1|f te||dcjs
+s tím|1|-1|s tym||dcjs
+nad tou|1|-1|nat tum||dcjs
 -
 -
 nej|naj
@@ -64,6 +64,7 @@ hostinA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 půlnoc|1||i|i||i|i|í|i|í|ím|i|i|ích|emi
 barboRA|1|ra|ry|ře|ru|ro|ře|rou|ry|r|rám|ry|ry|rách|rami
 masopust|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
+týdEN|3|en|ne|nu,ni|en|ne,ni|nu,ni|nem|ny|nů|nům|ny|ny|nech|ny
 -
 zimA|1|a?|y?|ě?|u?|o?|je|ou?|y?|?|ám?|y?|y?|ách?|ami?
 muzyKA|1|ka?|ky?|ce?|ku?|ko?|ce?|kou?|ky|k?|kám?|ky?|ky?|kách?|kami?
@@ -86,6 +87,7 @@ hośćiNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 pułnoc|1|?|y|i?|?|i?|i?|í?|i?|í?|ím?|i?|i?|ích?|emi?
 barboRA|1|ra?|ry?|ře?|ru|ro?|ře?|rum|ry?|r?|rám?|ry?|ry?|rách?|rami?
 masopust|3|?|u?|u?||e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+tydEN|3|źeň|ne?|nu?,ňi?|en?|ne?,ňi?|nu?,ňi?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
 -
 z|zimA|0|z|zimA||
 muzi|muzyKA|0|muzy|muzyKA||dcjs
@@ -110,6 +112,7 @@ půlnoc|půlnoc|0|pułnoc|pułnoc||dcjs
 barbo|barboRA|2|barbo|barboRA||dcjs
 ||0|basa|||dcjs
 masopust|masopust|0|masopust|masopust||dcjs
+týd|týdEN|0|tyd|tydEN||dcjs
 -
 celÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|-|-|ká|kých|kým|ká|ká|kých|kými|-|-|ká|ké|ké|kou|ká|ké|kou|-|-|ké|kých|kým|ké|ké|kých|kými|-|-|ký|kého|kému|kého|ký|kém|kým|-|-|cí|kých|kým|ké|cí|kých|kými|-|-|ký|kého|kému|ký|ký|kém|kým|-|-|ké|kých|kým|ké|ké|kých|kými|-|-
@@ -154,14 +157,23 @@ každ|každÝ|kaž|kažDÝ||dcjs
 třI|2|i|třech[1],í,třech[1]|em|i|i|ech|emi
 jedEN|4|en|noho|nomu|noho|en|nom|ním|ni|něch|něm|ny|ni|něch|němi|en|noho|nomu|en|en|nom|ním|ny|něch|něm|ny|ny|něch|němi|na|né|né|nu|na|né|nou|ny|něch|něm|ny|ny|něch|němi|no|noho|nomu|no|no|nom|ním|na|něch|něm|na|na|něch|němi
 padesát|2||i|i|||i|i
+sedm|2||i|i|||i|i
+osm|2||i|i|||i|i
+devĚT|2|ět|íti|íti|ět|ět|íti|íti
 -
 třI|2|i?|třech[1]?,í?,třech[1]?|em?|y|i?|ech?|emi?
 jedEN|4|en?|noho?|nemu|noho?|en?|nom?|ňím?|ňi?|ňech?|ňem?|ny?|ňi?|ňech?|ňemi?|en?|noho?|nomu?|en?|en?|nom?|ňím?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|na?|né?|né?|nu?|na?|né?|nou?|ny?|ňech?|ňem?|ny?|ny?|ňech?|ňemi?|no?|noho?|nomu?|no?|no?|nom?|ňím?|na?|ňech?|ňem?|na?|na?|ňech?|ňemi?
 padesáT|2|t?|ťi?|ťi?|d|t?|ťi?|ťi?
+sedM|2|um|mi?|mi?|m?|m?|mi?|mi?
+osM|2|um|mi?|mi?|m?|m?|mi?|mi?
+devĚT|2|ět|íťi?|íťi?|ět?|ět?|íťi?|íťi?
 -
 tř|třI|tř|třI||dcjs
 jed|jedEN|jed|jedEN||dcjs
 padesát|padesát|padesa|padesáT||dcjs
+sedm|sedm|sed|sedM||bar1
+osm|osm|os|osM||bar1
+dev|devĚT|dev|devĚT||bar1
 -
 MÍT|103|-1|mít|mám|máš|má|máme|máte|mají|měj|mějme|mějte|měl|měl|měla|mělo|měli|měly|měly|měla|maje|majíc|majíce|měv|měvši|měvše
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by

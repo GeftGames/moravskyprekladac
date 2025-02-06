@@ -1,8 +1,9 @@
-TW v2
+TW v4
 tMaloměřice
 aGG
 d05.03.2024 20:05:43
 c#Zdroje dat\n-Brněnská mluva - Svěrák, František (nevyčerpáné, kromě ukázky)
+bkniha|prijmeni=Svěráková|jmeno=Božena|nazev=U nás v Brně|misto=Brno|vydavatel=Měst. kult. středisko S. K. Neumanna|rok_vydani=1989|strany=79|licence=|ibsn=|issn=|odkaz=|zpracovano=|shortcut=mkss
 sBrno
 g49.2181183,16.6431563
 x2
@@ -12,17 +13,17 @@ oBrněnsko
 -
 -
 -
-když byl dobrák|1|dež je dobrák|
-proč by se bránil|1|jag be se bráňil|
+když byl dobrák|1|dež je dobrák||
+proč by se bránil|1|jag be se bráňil||
 -
-od té|1|vot té|
-v soběšicích|1|f sobješicich|
-v lese|1|v lese|
-v zimě|1|v zémňe|
-proč by se|1|jag be se|
-|1|v obřanech|
-když šel|1|deš šel|
-a on jim|1|a von him|
+od té|1|-1|vot té||
+v soběšicích|1|-1|f sobješicich||
+v lese|1|-1|v lese||
+v zimě|1|-1|v zémňe||
+proč by se|1|-1|jag be se||
+|1|-1|v obřanech||
+když šel|1|-1|deš šel||
+a on jim|1|-1|a von him||
 -
 -
 ně|ne
@@ -82,25 +83,25 @@ zimA|1|ima?|imy?|imě?|imu?|imo?|émňe|imou?|imy?|im?|imám?|imy?|imy?|imách?|
 roKA|1|ka?|ky?|ce?|ko|ko?|ce?|kou?|ce?|kou?|kám?|ce?|ce?|kou?,kách?|kama?
 grécar|3|?|u?|u?|?|e?|o|em?|y?|ú?|úm?|y?|y?|ech?|y?
 -
-obřany||0|vobřanech 7p i v obřanech, z vobřan||
-||0|mír 2p||
-kostel|kostel|0|kostel|kostel|
-pol|polE|0|pol|polE|
-||0|malomňeřice 1+4p||
-les|les|0|les|les|
-dr|drÁHA|0|dr|drÁHA|železniční dráha
-d|dÍTĚ|0|ď|ďECKO||ď|ďÍŤE|
-jablíč|jablíčKO|0|jablóš|jablóšKO|
-||2|mašarák||
-fa|faRA|0|fa|faRA|
-||0| fSoběšicich||
-škol|školA|0|škol|školA|
-||2|folhán||
-dobrá|dobráK|0|dobrá|dobráK|
-bot|botA|0|bo|boTA|
-zim|zimA|0|z|zimA|
-ru|ruKA|0|ro|roKA|
-krejcar|krejcar|0|grécar|grécar|
+obřany||0|vobřanech 7p i v obřanech, z vobřan|||
+||0|mír 2p|||
+kostel|kostel|0|kostel|kostel||
+pol|polE|0|pol|polE||
+||0|malomňeřice 1+4p|||
+les|les|0|les|les||
+dr|drÁHA|0|dr|drÁHA|železniční dráha|
+d|dÍTĚ|0|ď|ďECKO|||ď|ďÍŤE||
+jablíč|jablíčKO|0|jablóš|jablóšKO||
+||2|mašarák|||
+fa|faRA|0|fa|faRA||
+||0| fSoběšicich|||
+škol|školA|0|škol|školA||
+||2|folhán|||
+dobrá|dobráK|0|dobrá|dobráK||
+bot|botA|0|bo|boTA||
+zim|zimA|0|z|zimA||
+ru|ruKA|0|ro|roKA||
+krejcar|krejcar|0|grécar|grécar||
 -
 farářŮV|-1|ovo|ova|ovu|ovo|ovo|ově,farářovu|ovým|-|-|ova|ových|ovým|ova|ova|ových|ovými|-|-|ova|ovy|ově|ovu|ova|ově|ovou|-|-|ovy|ových|ovým|ovy|ovy|ových|ovými|-|-|ův|ova|ovu|ova|ův|ově,farářovu|ovým|-|-|ovi|ových|ovým|ovy|ovi|ových|ovými|-|-|ův|ova|ovu|ův|ův|ově,farářovu|ovým|-|-|ovy|ových|ovým|ovy|ovy|ových|ovými|-|-
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -110,9 +111,9 @@ farářÚV|-1|ovo?|ova?|ovu?|ovo?|ovo?|ově?,farářovu?|ovým?|-|-|ova?|ových?
 zeleNÝ|-1|ní|ného?|nému?|né?|né?|ném?|ným?|-|-|ná?|ných?|ným?|ná?|ná?|ných?|nými?|-|-|ná?|né?|né?|nou?|ná?|né?|nou?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-|ný?|ného?|nému?|ného?|ný?|ném?|ným?|-|-|ňí?|ných?|ným?|né?|ňí?|ných?|nými?|-|-|ný?|ného?|nému?|ný?|ný?|ném?|ným?|-|-|né?|ných?|ným?|né?|né?|ných?|nými?|-|-
 žluTÝ|-1|té?|tého?|tému?|té?|té?|tém?|tým?|-|-|tá?|téch|tým?|tá?|tá?|tých?|tými?|-|-|tá?|té?|té?|tou?|tá?|té?|tou?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-|tý?|tého?|tému?|tého?|tý?|tém?|tým?|-|-|ťí?|tých?|tým?|té?|ťí?|tých?|tými?|-|-|tý?|tého?|tému?|tý?|tý?|tém?|tým?|-|-|té?|tých?|tým?|té?|té?|tých?|tými?|-|-
 -
-farář|farářŮV|pančk|farářÚV|
-nasazen|zelenÝ|saže|zeleNÝ|
-pronajat|žlutÝ|pronaja|žluTÝ|
+farář|farářŮV|pančk|farářÚV||
+nasazen|zelenÝ|saže|zeleNÝ||
+pronajat|žlutÝ|pronaja|žluTÝ||
 -
 každÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
 kDO|do|oho|omu|oho|do|om|ým
@@ -134,21 +135,21 @@ TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|
 SE|-|sebe?|si?,sobje?|se,sebe?|-|sobje?|sebou?
 OŇI|voňi|jich?,ňich*?|him,ňim*?|je?,ňe*?|-|ňich*?|jimi?,ňimi*?
 -
-každ|každÝ|kaž|kažDÝ|
-k|kDO||KDO|
-|CO||CO|
-|ON||ON|
-vš|všECHEN|fš|fšECHEN|
-něja|nějaKÝ|neja|nejaKÝ|
-t|tEN||TEN|
-|SE||SE|
-|ONI||OŇI|
+každ|každÝ|kaž|kažDÝ||
+k|kDO||KDO||
+|CO||CO||
+|ON||ON||
+vš|všECHEN|fš|fšECHEN||
+něja|nějaKÝ|neja|nejaKÝ||
+t|tEN||TEN||
+|SE||SE||
+|ONI||OŇI||
 -
 devadesát|2||i|i|||i|i
 -
 devadesáT|2|t|ťi?|ťi?|t?|t?|ťi?|ťi?
 -
-devadesát|devadesát|devadesá|devadesáT|
+devadesát|devadesát|devadesá|devadesáT||
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 mÍT|7|-1|ít|ám|áš|á|áme|áte|ají|ěj|ějme|ějte|ěl|ěl|ěla|ělo|ěli|ěly|ěly|ěla
@@ -179,45 +180,45 @@ odvÉZT|30|-1|ézt?|ezu?|ezeš?|eze?|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ezl?|ez
 lóbAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 dávAT|15|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 -
-|BÝT||BÝT|
-m|mÍT|m|mÍT|
-nem|mÍT|nem|mÍT|
-top|topIT|top|topIT|
-|JÍT||JÍT|
-uč|učIT|uč|učIT|
-jmen|jmenOVAT|men|menOVAT|
-vyzut||vezuli||
-br|brÁNIT|br|brÁŇIT|
-onemocn|onemocnĚT|vonemocň|onemocňET|
-ch|chTÍT|ch|chŤÍT|
-umř|umřÍT|umř|umřÍT|
-odv|odvÉZT|vodv|odvÉZT|
-líb|líbAT|lób|lóbAT|
-dáv|dávAT|dáv|dávAT|
+|BÝT||BÝT||
+m|mÍT|m|mÍT||
+nem|mÍT|nem|mÍT||
+top|topIT|top|topIT||
+|JÍT||JÍT||
+uč|učIT|uč|učIT||
+jmen|jmenOVAT|men|menOVAT||
+vyzut||vezuli|||
+br|brÁNIT|br|brÁŇIT||
+onemocn|onemocnĚT|vonemocň|onemocňET||
+ch|chTÍT|ch|chŤÍT||
+umř|umřÍT|umř|umřÍT||
+odv|odvÉZT|vodv|odvÉZT||
+líb|líbAT|lób|lóbAT||
+dáv|dávAT|dáv|dávAT||
 -
-tam|tam|
-víc,více|vic|
-málo|málo|
-kde|gde|
-však|šak|
-tak|tak|
-nejvíce|névic|
-jak|jag|
-potom|potom|
-tady|tade|
-pryč|prič|
+tam|tam||
+víc,více|vic||
+málo|málo||
+kde|gde||
+však|šak||
+tak|tak||
+nejvíce|névic||
+jak|jag||
+potom|potom||
+tady|tade||
+pryč|prič||
 -
-ve||ve|
-ke||ke|
-do||do|
-od||vot|
-v||f||v|
-z||z|
-přes||přes|
-po||po|
+ve||ve||
+ke||ke||
+do||do||
+od||vot||
+v||f|||v||
+z||z||
+přes||přes||
+po||po||
 -
-a|ha||a|
-když|dež||diš||deš|
-ale|ale|
+a|ha|||a||
+když|dež|||diš|||deš||
+ale|ale||
 -
 -

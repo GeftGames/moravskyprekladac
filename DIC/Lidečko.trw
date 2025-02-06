@@ -1,10 +1,13 @@
-TW v2
+TW v4
 tLidečko
 aGG
 d19.05.2024 10:03:12
-c#zdroje dat\n-http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131 (vyčerpáno)
+c#Poznámky\n-slovesa zakončena na -my (nesemy)
+bkniha|prijmeni=Chloupek|jmeno=Jan|nazev=Nářeční souvětí|misto=|vydavatel=|rok_vydani=1971|strany=|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/120566.pdf|zpracovano=0|shortcut=ns66\n\nkniha|prijmeni=Bartoš|jmeno=František|nazev=Dialektologie moravská|misto=|vydavatel=|rok_vydani=|strany=72|issn=|odkaz=https://ia803406.us.archive.org/7/items/dialektologiemor01bartuoft/dialektologiemor01bartuoft.pdf|zpracovano=|shortcut=bar1\n\nweb|nazev=|nazev_webu=|odkaz=https://archiv.fos.cz/encyklopedie/objekty1.phtml?id=51639|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=hohl\n\nweb|nazev=|nazev_webu=|odkaz=http://sas.ujc.cas.cz/archiv.php?lang=en&art=1131|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=0|shortcut=
+u1
 g49.2032256,18.0495717
 q0
+oValašsko
 -
 -
 -
@@ -19,6 +22,7 @@ fit|fiď
 -
 -
 -
+||0|z Liče, za Ličú|||hohl
 -
 -
 -
@@ -26,17 +30,29 @@ fit|fiď
 něCO|co|čeho|čemu|co|co|čem|čím
 COSI|cosi|čehosi|čemusi|cosi|-|čemsi|čímsi
 ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (pouze životný)|-|něm**|jím,ním**
+JÁ|já|mě,(knižně) mne[2]|mně,mi|mě,(knižně) mne[2]|já|mně|mnou
+tEN|en|oho|omu|oho|-|om|ím|i|ěch|ěm|i|-|ěch|ěmi|en|oho|omu|en|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi|a|é|é|u|-|é|ou|y|ěch|ěm|y|-|ěch|ěmi|o|oho|omu|o|-|om|ím|y|ěch|ěm|y|-|ěch|ěmi
 -
 ňeCO|co?|čeho?|čemu?|co?|co?|čem?|čím?
 COSI|cosi|čehosi?|čemusi?|cosi?|-|čemsi?|čímsi?
 ON|on?|ho,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
+JÁ|já?|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mňú
+TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|tych|ťem?|ťi?|-|tych|tymi|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|tych|ťem?|ty?|-|tych|tymi|ta?|té?|té?|tu?|-|té?|tou?|ty?|tych|ťem?|ty?|-|tych|tymi|to?|toho?|tomu?|to?|-|tom?|ťím?|ty?|tych|ťem?|ty?|-|tych|tymi
 -
-ně|něCO||COSI|
-|COSI||COSI|
-|ON||ON|
+ně|něCO||COSI||
+|COSI||COSI||
+|ON||ON||
+|JÁ||JÁ||bar1
+t|tEN||TEN||bar1
 -
+sedm|2||i|i|||i|i
+osm|2||i|i|||i|i
 -
+sedm|2||i?|i?|?|?|i?|i?
+osm|2||i?|i?|?|?|i?|i?
 -
+sedm|sedm|sedm|sedm||
+osm|osm|osm|osm||bar2
 -
 voDIT|15|-1|dit|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|dil|dil|dila|dilo|dili|dily|dily|dila|děn|děn|děna|děno|děni|děny|děny|děna
 mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorově) můžou|ohl|ohl|ohla|ohlo|ohli|ohly|ohly|ohla
@@ -44,14 +60,14 @@ mOCT|5|-1|oct|ohu,(hovorově) můžu|ůžeš|ůže|ůžeme|ůžete|ohou,(hovorov
 voďIT|15|-1|it?|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|iło|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 mOCT|5|-1|oct?|ohu?,(hovorově) múžu?|úžeš?|úže?|úžeme?|úžete?|ohou?,(hovorově) múžou?|ohł|ohl?|ohla?|ohlo?|ohli?|ohly?|ohly?|ohla?
 -
-vo|voDIT|voď|voďIT|
-m|mOCT|m|mOCT|
-nem|mOCT|nem|mOCT|
-||trefiď ||
+vo|voDIT|voď|voďIT||
+m|mOCT|m|mOCT||
+nem|mOCT|nem|mOCT||
+||trefiď |||
 -
-domů|dom|
+domů|dom||
 -
 -
-a|a|
+a|a||
 -
 -

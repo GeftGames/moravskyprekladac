@@ -1,17 +1,20 @@
-TW v2
+TW v4
 tUhřice
 aGG
 d25.01.2024 10:40:16
 c#Zdroje dat\n-<a href="https://www.google.com/search?q=site%3Asncj.ujc.cas.cz+%22Uh%C5%99ice+BK%22">SNČJ</a>
+u1
 g49.5949635,16.7348875
+rMalá Haná
 q0
+onář=Hóřêce
 -
 -
 -
 -
 -
-z povlečení|1|s cichê|povlečení nebo přikrývka?
-blechy koušou|1|blechê ščipajó |
+z povlečení|1|-1|s cichê|povlečení nebo přikrývka?|
+blechy koušou|1|-1|blechê ščipajó ||
 -
 -
 -
@@ -19,12 +22,16 @@ blechy koušou|1|blechê ščipajó |
 -
 koTĚ|0|tě|těte|těti|tě|tě|těti|tětem|ťata|ťat|ťatům|ťata|ťata|ťatech|ťaty
 bleCHA|1|cha|chy|še|chu|cho|še|chou|chy|ch|chám|chy|chy|chách|chami
+cikán|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
 -
 koťE|0|e?|ete?|eťi?|e|e?|eťi?|etem?|ata?|at?|atúm?|ata?|ata?|atech?|aty?
 bleCHA|1|cha?|chy?|še?|chu?|cho?|še?|chou?|chê|ch?|chám?|chy?|chy?|chách?|chami?
+cikáN|2|n|na?|novi?,nu?|na?|ne?|novi?,nu?|nem?|ňi?,nové?|nú?|núm?|ny?|ňi?,nové?|nech?|ny?
 -
-ko|koTĚ|0|koť|koťE|
-ble|bleCHA|0|ble|bleCHA|
+ko|koTĚ|0|koť|koťE||
+ble|bleCHA|0|ble|bleCHA||
+cikán|cikán|0|cêgá|cikáN||sncj
+cigán|cikán|0|cêgá|cikáN||sncj
 -
 -
 -
@@ -37,15 +44,22 @@ ble|bleCHA|0|ble|bleCHA|
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 štípAT|15|-1|at|u,ám|eš|e,á|eme,áme|ete,áte|ou,ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
+hleDĚT|7|-1|dět|dím|díš|dí|díme|díte|dí|ď|ďme|ďte|děl|děl|děla|dělo|děli|děly|děly|děla
+ukrÁST|15|-1|ást|adnu|adneš|adne|adneme|adnete|adnou|adni|adněme|adněte|adl|adl|adla|adlo|adli|adly|adly|adla|aden|aden|adena|adeno|adeni|adeny|adeny|adena
 -
 BÝT|247|-1|být?|sem|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 ščipAT|15|-1|at?|u?,ám?|eš?|e?,á?|eme?,áme?|ete?,áte?|pajó|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
+hleďET|7|-1|et?|ím?|íš?|i|íme?|íte?|í?|?|me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
+hôkrÁST|15|-1|ast|adnu?|adneš?|adne?|adneme?|adnete?|adnou?|adňi?|adňeme?|adňete?|adl?|adl?|adla?|adlo?|adli?|adly?|adly?|adla?|aden?|aden?|adena?|adeno?|adeňi?|adeny?|adeny?|adena?
 -
-|BÝT||BÝT|
-štíp|štípAT|ščip|ščipAT|
-||vêtřisala||dostat pryč
+|BÝT||BÝT||
+štíp|štípAT|ščip|ščipAT||
+||vêtřisala||dostat pryč|
+hle|hleDĚT|hleď|hleďET||sncj
+ukr|ukrÁST|hôkr|hôkrÁST||
 -
-onehdy|vonehdá|
+onehdy|vonehdá||
+jen,jenom|jenom||sncj
 -
 -
 -

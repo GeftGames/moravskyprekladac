@@ -1,10 +1,9 @@
-TW v3
+TW v4
 tHošťálkovice
 aGG
 d12.06.2023 10:52:56
 isouhrnně, úhrnem: naz było cełkovje tam sedym haviřy\nňedožyraj furt, ja ňemam času se furt s tebu bavič Ostrava OV (Hošťálkovice)\na cuš, dy un został doma Ostrava OV (Hošťálkovice)\n\n bulač kameň na haldu Ostrava OV (Hošťálkovice)\n\n bulač???
-c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 298\n-https://sncj.ujc.cas.cz/
-bsncj|i=Ostrava OV (Hošťálkovice)|zpracovano=
+bsncj|i=Ostrava OV (Hošťálkovice)|zpracovano=\n\nkniha|prijmeni=Lamprecht|jmeno=Arnošt|nazev=České nářeční texty|misto=|vydavatel=|rok_vydani=|strany=298|issn=|odkaz=|zpracovano=|shortcut=
 u2
 sOstrava
 g49.8523254,18.1871272
@@ -19,29 +18,33 @@ Ale kdeš!|1|Ale kajteš!||
 prsty jako habr|1|pyrsty jag do hrabi|nejistota českého překladu|
 utrácí rozmařile|1|utraca jag baron||
 -
-nemám čas|1|ňemam času||
-s tebou|1|s tebu||
-posviť na|1|blinkňi tam||
-lépe to uvidíš|1|lepšy to uvidžyš||
-posviť mi na tu|1|blinkňi tam tu||
-dělám to kvůli mě|1|robim dla sebe||
-pro případ že nastane bída|1|dla bidy||
-o kilo více|1|o kilu vjecej||
-o kilo navíc|1|o kilu vjecej||
-týden má sedm dní|1|tydžeň ma sedym dňich||
-má sedm dní|1|ma sedym dňich||
-ze stodoly????|1|s pjatra||
-velmi často|1|často husto||
-on je velmi často nemocný|1|un často husto maroduje||
-část stodoly|1|štfyrč||
-chystat léčku|1|stavjadž budu||
-sedět na bobku s koleny od sebe|1|robidž budu|děvčata|
-z toho|1|s teho||
-vydělal peníze|1|zarobił peňis||
-a teď,a hned|1|a fčyleg||
-na hromadu|1|na haldu||
-sypat kamení na hromadu|1|bulač kameň na haldu||
-šel stranou|1|šeł bokem||
+nemám čas|1|-1|ňemam času||
+s tebou|1|-1|s tebu||
+posviť na|1|-1|blinkňi tam||
+lépe to uvidíš|1|-1|lepšy to uvidžyš||
+posviť mi na tu|1|-1|blinkňi tam tu||
+dělám to kvůli mě|1|-1|robim dla sebe||
+pro případ že nastane bída|1|-1|dla bidy||
+o kilo více|1|-1|o kilu vjecej||
+o kilo navíc|1|-1|o kilu vjecej||
+týden má sedm dní|1|-1|tydžeň ma sedym dňich||
+má sedm dní|1|-1|ma sedym dňich||
+ze stodoly????|1|-1|s pjatra||
+velmi často|1|-1|často husto||
+on je velmi často nemocný|1|-1|un často husto maroduje||
+část stodoly|1|-1|štfyrč||
+chystat léčku|1|-1|stavjadž budu||
+sedět na bobku s koleny od sebe|1|-1|robidž budu|děvčata|
+z toho|1|-1|s teho||
+vydělal peníze|1|-1|zarobił peňis||
+a teď,a hned|1|-1|a fčyleg||
+na hromadu|1|-1|na haldu||
+sypat kamení na hromadu|1|-1|bulač kameň na haldu||
+šel stranou|1|-1|šeł bokem||
+mladý borovicový les|1|-1|borek||sncj
+|1|-1| to oto tante Mařka ||sncj
+něčí mléko|1|3|mleko čyjišyk||sncj
+čísi mléko|1|3|mleko čyjišyk||sncj
 -
 -
 ne|ňe
@@ -55,16 +58,17 @@ mě|mje
 ní|ňi
 íte|iče
 -
-vit|vič
-vět|vjadž
+ala|ała
+bil|bił
+dlo|dło
+hnal|hnał
+kočit|kočydž
+nout|nuč
 řel|řeł
 řela|řeła
 tal|tał
-kočit|kočydž
-dlo|dło
-bil|bił
-hnal|hnał
-nout|nuč
+vět|vjadž
+vit|vič
 -
 okNO|0|no|na|nu|no|no|nu,ně|nem|na|en|nům|na|na|nech|ny
 havíř|2||e|i,ovi|e|i|i,ovi|em|i|ů|ům|e|i|ích|i
@@ -95,6 +99,8 @@ kÁMEN|3|ámen|amene,amenu|ameni,amenu|ámen|ameni|ameni,amenu,ameně|amenem|ame
 haldA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 cihLA|1|la|ly|le|lu|lo|le|lou|ly|el|lám|ly|ly|lách|lami
 akát|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
+ránO|0|o|a|u|o|o|u|em|a||ům|a|a|ech|y
+mléKO|0|ko|ka|ku|ko|ko|ku,ce|kem|ka|k|kům|ka|ka|cích,kách|ky
 -
 okNO|0|no?|na?|nu?|no?|no?|nu,ně?|nem?|na?|en?|nům?|na?|na?|nech?|ny?
 haviř|2|?|e?|i,ovi?|e?|i?|i,ovi?|em?|i?|y|ům?|e?|i?|ích?|i?
@@ -105,7 +111,7 @@ kilO|0|o?|a?|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 máK|3|g|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 badyjan|3|?|u|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 týdEN|3|žeň|ne?|nu?,ňi?|en?|ne?,ňi?|nu?,ňi?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
-dEN|0|en?|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?,ne[4]?|nem?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|ňich|núm?|ňi?,ny?|ňi?,ny?,básňicky?,kňižňe) dnové[3]?|nech?|ny?
+dEN|0|en?|ne?|ňi?,nu?|en?|ne?,ňi?|ňi?,nu?|nem?|ňi?,ny?|ňich|núm?|ňi?,ny?|ňi?,ny?|nech?|ny?
 džecKO|0|ko?|ka?|ku?|ko?|ko?|ku?|kem|ka?|ek?|kám?,kúm?|ka?|ka?|kách?|ky?
 boraK|2|k?|ka|kovi?,ku?|ka?|ku?|kovi?,ku?|kem?|ci?|kú?|kúm?|ky?|ci?|cích?|ky?
 bOUDA|1|ouda?|oudy?|ouďe?|udu|oudo?|ouďe?|oudou?|oudy?|ud?|oudám?|oudy?|oudy?|oudách?|oudami?
@@ -125,6 +131,8 @@ kÁMEN|3|ámen?|amene?,amenu?|ameňi?,amenu?|ameň|ameňi?|ameňi?,amenu?,ameňe
 halDA|1|da?|dy?|ďe?|du?|do?|ďe?|dou?|dy?|d?|dám?|dy?|dy?|dách?|dami?
 cyhLA|1|la?|ly?|le?|łu|lo?|le?|lou?|ly?|el?|lám?|ly?|ly?|lách?|lami?
 agat|3||u?|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+ranO|0|o|a?|u?|o?|o?|u?|em?|a?|?|úm?|a?|a?|ech?|y?
+mleKO|0|ko?|ka?|ku?|ko|ko?|ku?,ce?|kem?|ka?|k?|kúm?|ka?|ka?|cích?,kách?|ky?
 -
 |člověk|0||člověk||
 ||0|šyłu 4p|||
@@ -134,7 +142,7 @@ b|bOUDA|0|b|bOUDA||
 badyán|badyán|0|badyjan|badyjan||
 bý|býK|0|by|byK||
 čas|čas|0|čas|čas||
-d|dEN|0|d|dEN||
+d|dEN|0|d|dEN||sncj
 děc|děcKO|0|džec|džecKO||
 duš|dušE|0|duš|dušA||
 havíř|havíř|0|haviř|haviř||
@@ -151,13 +159,17 @@ svět|světLO|0|svjet|světLO||
 světnice||0|jizba|||
 syn|synEK|0|syn|synEK||
 tatí|tatíK|0|tačy|tačyK||
-týd|týdEN|0|týd|týdEN||
+týd|týdEN|0|tyd|týdEN||sncj
 ubožá|ubožáK|0|bora|boraK||
 baron|baron|0|baro|baroN||
 k|kÁMEN|0|k|kÁMEN||
 hald|haldA|0|hal|halDA||
 cih|cihLA|0|cyh|cyhLA||
 akát|akát|0|agat|agat||
+||0|oto|||sncj
+||2|mařka|||sncj
+rán|ránO|0|ran|ranO||sncj
+mlé|mléKO|0|mle|mleKO||sncj
 -
 velKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
 -
@@ -189,7 +201,7 @@ ON|un|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu?,ňemu**?|ho*?,jej?,ňej**jeho?,�
 sÁM|am|amého?|amému?|mého?,ama?|-|amém?|amým?|ami?|amých?|amým?|amy?|-|amých?|amými?|ám?|amého?|amému?|ám?|-|amém?|amým?|amy?|amých?|amým?|amy?|-|amých?|amými?|ama?|amé?|amé?|amu?|-|amé?|amou?|amy?|amých?|amým?|amy?|-|amých?|amými?|amo?|amého?|amému?|amo?|-|amém?|amým?|ama?|amých?|amým?|ama?|-|amých?|amými?
 kolik|?|a?|a?||?|a?|a?
 -
-t|tEN||TEN||
+t|tEN||TEN||sncj
 |ONI||ONI||
 |ONA||ONA||
 |MY||MY||
@@ -205,7 +217,7 @@ sedm|2||i|i|||i|i
 -
 sedYM|2|ym|i?|i?|?|?|i?|i?
 -
-sedm|sedm|sed|sedYM||
+sedm|sedm|sed|sedYM||sncj
 -
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 bydlET|15|-1|et|ím|íš|í|íme|íte|í,bydlejí|i|eme|ete|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
@@ -233,6 +245,7 @@ brblAT|4|-1|at|al|al|ala|alo|ali|aly|aly|ala
 vydělAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 seHNAT|30|-1|hnat|ženu|ženeš|žene|ženeme|ženete|ženou|žeň|žeňme|žeňte|hnal|hnal|hnala|hnalo|hnali|hnaly|hnaly|hnala|hnán|hnán|hnána|hnáno|hnáni|hnány|hnány|hnána
 couvNOUT|22|-1|nout|nu|neš|ne|neme|nete|nou|ni|něme|něte|l,couvnul|l,couvnul|la,couvnula|lo,couvnulo|li,couvnuli|ly,couvnuly|ly,couvnuly|la,couvnula
+vZÍT|30|-1|zít|ezmu|ezmeš|ezme|ezmeme|ezmete|ezmou|ezmi|ezměme|ezměte|zal|zal|zala|zalo|zali|zaly|zaly|zala|zat|zat|zata|zato|zati|zaty|zaty|zata
 -
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|był|był|była|było|byli?|były|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 meškAT|15|-1|at?|ím?|íš?|í?|íme?|íte?|í,bydlejí?|i?|eme?|ete?|el?|el?|ela?|elo?|ali|ely?|ely?|ela?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
@@ -260,9 +273,10 @@ brbłAT|7|-1|at?|?|?|?|?|?|?|?|?|?|?|?|?|?|ali|?|?|?
 zarobIT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|ił|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 zeHNAT|30|-1|hnat?|ženu?|ženeš?|žene?|ženeme?|ženete?|ženou?|žeň?|žeňme?|žeňte?|hnał|hnal?|hnala?|hnalo?|hnali?|hnaly?|hnaly?|hnala?|hnán?|hnán?|hnána?|hnáno?|hnáňi?|hnány?|hnány?|hnána?
 cofNOUT|22|-1|nuč|nu?|neš?|ne?|neme?|nete?|nou?|ňi?|ňeme?|ňete?|l?,couvnul?|l?,couvnul?|la?,couvnula?|lo?,couvnulo?|li?,couvnuli?|ly?,couvnuly?|ly?,couvnuly?|la?,couvnula?
+vZÍT|30|-1|zít?|ezmu?|ezmeš?|ezme?|ezmeme?|ezmete?|ezmou?|ezmi?|ezměme?|ezměte?|zal?|zal?|zała|zalo?|zali?|zaly?|zaly?|zala?|zat?|zat?|zata?|zato?|zaťi?|zaty?|zaty?|zata?
 -
 |BÝT||BÝT||
-|MÍT||MÍT||
+|MÍT||MÍT||sncj
 |JÍT||JÍT||
 |SPADNOUT||SPADNOUT||
 ||holaj|||
@@ -293,6 +307,7 @@ vyděl|vydělAT|zarob|zarobIT||
 zač|začÍT|zač|začÍT||
 zůsta|zůstaT|zosta|zostaT||
 couv|couvNOUT|cof|cofNOUT||
+v|vZÍT|v|vZÍT||sncj
 -
 častěji|čaščejšy|častější?|
 často|často||

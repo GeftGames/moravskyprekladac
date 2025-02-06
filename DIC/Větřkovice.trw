@@ -1,9 +1,9 @@
-TW v3
+TW v4
 tVětřkovice
 aGG
 d12.06.2023 10:37:28
 c#Zdroje dat\n-České nářeční texty - Lamprecht, Arnošt; str. 302
-bkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=74|issn=|odkaz=|zpracovano=0|shortcut=dcjs
+bkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=74|issn=|odkaz=|zpracovano=0|shortcut=dcjs\n\nkniha|prijmeni=Skulina|jmeno=Josef|nazev=O některých syntaktických prostředcích pro vyjádření emocionality v\nnářečních projevech staré generace na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=192-195|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/100757.pdf|zpracovano=0|shortcut=onsp
 u2
 g49.7801977,17.8201911
 rnář=Větřkojice
@@ -14,8 +14,8 @@ oSlezsko>Opavsko
 -
 -
 -
-z toho|1|s teho||
-na měkkou podložku na židlu|1|do bapčaka||
+z toho|1|-1|s teho||
+na měkkou podložku na židlu|1|-1|do bapčaka||
 -
 -
 ne|ňe
@@ -30,17 +30,20 @@ místO|0|o|a|u|o|o|ě|em|a||ům|a|a|ech|y
 snÍH|3|íh|ěhu|ěhu|íh|ěhu|ěhu|ěhem|ěhy|ěhů|ěhům|ěhy|ěhy|ězích|ěhy
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 másLO|0|lo|la|lu|lo|lo|le|lem|la|el|lům|la|la|lech|ly
+týdEN|3|en|ne|nu,ni|en|ne,ni|nu,ni|nem|ny|nů|nům|ny|ny|nech|ny
 -
 místO|0|o?|a?|u?|o?|o?|ě?|em?|a?|?|ům?|a?|a?|och|y?
 snÍH|3|íh?|ěha|ěhu?|íh?|ěhu?|ěhu?|ěhem?|ěhy?|ěhů?|ěhům?|ěhy?|ěhy?|ězích?|ěhy?
 robA|1|na?|ny?|ňe?|nu?|no?|ňe?|nou?|y|n?|nám?|ny?|ny?|nách?|nami?
 másLO|0|lo|la?|lu?|lo?|lo?|le?|lem?|la?|el?|lúm?|la?|la?|lech?|ly?
+tydEN|3|źeň|ne?|nu?,ňi?|en?|ne?,ňi?|nu?,ňi?|nem?|ny?|nú?|núm?|ny?|ny?|nech?|ny?
 -
 míst|místO|0|mist|místO||
 sn|snÍH|0|sň|snÍH||
 más|másLO|0|mas|másLO||
 žen|ženA|0|rob|robA||
 ||0|spinky |||
+týd|týdEN|0|tyd|tydEN||dcjs
 -
 dobRÝ|-1|ré|rého|rému|ré|ré|rém|rým|-|-|rá|rých|rým|rá|rá|rých|rými|-|-|rá|ré|ré|rou|rá|ré|rou|-|-|ré|rých|rým|ré|ré|rých|rými|-|-|rý|rého|rému|rého|rý|rém|rým|-|-|ří|rých|rým|ré|ří|rých|rými|-|-|rý|rého|rému|rý|rý|rém|rým|-|-|ré|rých|rým|ré|ré|rých|rými|-|-
 -
@@ -82,6 +85,7 @@ potom|potem||
 tam|tam||
 vždy|dycky||
 jen,jenom|ene||
+domů|dom||dcjs
 -
 u||u||
 na||na||

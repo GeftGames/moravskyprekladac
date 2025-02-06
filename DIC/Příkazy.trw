@@ -1,11 +1,11 @@
-TW v3
+TW v4
 fSpisovná čeština
 tPříkazy
 aGG
 d17.03.2023 8:31:00
 iměkký infinitiv jít->jiť podle čja\n\n-https://www.prikazy.cz/file.php?nid=10161&oid=3239023 (možná)
 c#Popis nářečí\n-V Přikazích, Skrbeni, v Nákle na Olomoucku, v Myslejovicích na Prostějovsku jest ł před každým a, o, ó a na konci slov: stodoła, łampa, taboła, koło, małovat, vołał, oheł, ôčêteł, před e, ê, é je střední l: pacholek, zělené, lêd, leto, rohlék.
-bweb|nazev=|nazev_webu=|odkaz=http://eyetracking.upol.cz/naki_vystava_nareci/|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=Dialektologie moravská|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor02bartuoft/page/69/mode/1up|zpracovano=|shortcut=\n\nkniha|prijmeni=Lamprecht|jmeno=Arnošt|nazev=České nářeční texty|misto=|vydavatel=|rok_vydani=|strany=163|issn=|odkaz=|zpracovano=1|shortcut=cnt
+bweb|nazev=|nazev_webu=|odkaz=http://eyetracking.upol.cz/naki_vystava_nareci/|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\nkniha|prijmeni=|jmeno=|nazev=Dialektologie moravská|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://archive.org/details/dialektologiemor02bartuoft/page/69/mode/1up|zpracovano=|shortcut=\n\nkniha|prijmeni=Lamprecht|jmeno=Arnošt|nazev=České nářeční texty|misto=|vydavatel=|rok_vydani=|strany=163|issn=|odkaz=|zpracovano=1|shortcut=cnt\n\nkniha|prijmeni=Skulina|jmeno=Josef|nazev=O některých syntaktických prostředcích pro vyjádření emocionality v\nnářečních projevech staré generace na Moravě a ve Slezsku|misto=|vydavatel=|rok_vydani=|strany=192-195|issn=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/100757.pdf|zpracovano=1|shortcut=onsp
 zCS_HA-Náměšť
 u1
 lHanáčtina
@@ -28,27 +28,28 @@ co potřebovali povoznické práce|1|co potřebovalê formankô||cnt
 já se již nepamatuji|1|já jôš si nepamatôjô||cnt
 tak|1|toš||cnt
 -
-po smrti|1|po úmrťi||
-asi dvě|1|ze dvě||cnt
-byli týrající|1|bêlê sekanťi||cnt
-poté přišli domů|1|pak přêšlê dom||cnt
-o půlnoci|1|o pul nocê||cnt
-po půlnoci|1|po pul nocê||cnt
-mojí rodičové|0|mi roďiči||cnt
-u takových|1|ô takovéh||cnt
-dožil se devadesáti tří let|1|dožêlê věkô třêadevadesáťi let||cnt
-devadesáti tří let|1|třêadevadesáťi let||cnt
-osumdesáti tří|1|třêaosumdesáťi||cnt
-osmnácet třicet šest|1|v osumnást set šestatřêced||cnt
-v osmnácet čtyřicet dva|1|v osumnást sed dvaaštêrêcet||cnt
-osmnácet šedesát|1|osumnást set šedesát||cnt
-v kroji|1|f krojô||cnt
-tak oni|1|tag oňi||cnt
-v tom|1|f tem||cnt
-s tím|1|s tém||cnt
-s kolem na žebřiňáku|1|z redigó||cnt
-ze stavení|1|z grôntô||cnt
-ze statku|1|z grôntô||cnt
+po smrti|1|-1|po úmrťi||
+asi dvě|1|-1|ze dvě||cnt
+byli týrající|1|-1|bêlê sekanťi||cnt
+poté přišli domů|1|-1|pak přêšlê dom||cnt
+o půlnoci|1|-1|o pul nocê||cnt
+po půlnoci|1|-1|po pul nocê||cnt
+mojí rodičové|0|-1|mi roďiči||cnt
+u takových|1|-1|ô takovéh||cnt
+dožil se devadesáti tří let|1|-1|dožêlê věkô třêadevadesáťi let||cnt
+devadesáti tří let|1|-1|třêadevadesáťi let||cnt
+osumdesáti tří|1|-1|třêaosumdesáťi||cnt
+osmnácet třicet šest|1|-1|v osumnást set šestatřêced||cnt
+v osmnácet čtyřicet dva|1|-1|v osumnást sed dvaaštêrêcet||cnt
+osmnácet šedesát|1|-1|osumnást set šedesát||cnt
+v kroji|1|-1|f krojô||cnt
+tak oni|1|-1|tag oňi||cnt
+v tom|1|-1|f tem||cnt
+s tím|1|-1|s tém||cnt
+s kolem na žebřiňáku|1|-1|z redigó||cnt
+ze stavení|1|-1|z grôntô||cnt
+ze statku|1|-1|z grôntô||cnt
+můj tatínek|1|-1|náš taťínek|forma úcty|onsp
 -
 si|1|si||
 -
@@ -179,6 +180,8 @@ zedníK|2|k|ka|ku,kovi|ka|ku|ku,kovi|kem|ci|ků|kům|ky|ci|cích|ky
 žEŇ|1|eň|ně|ni|eň|ni|ni|ní|ně|ní|ním|ně|ně|ních|němi
 grunt|3||u|u||e|u,ě|em|y|ů|ům|y|y|ech|y
 dvŮR|3|ůr|ora,oru|oru|ůr|ore|oru,oře|orem|ory|orů|orům|ory|ory|orech|ory
+lÉTO|0|éto|éta|étu|éto|éto|étu,étě|étem|éta|et|étům,etům|éta|éta|étech,etech|éty,ety
+městO|0|o|a|u|o|o|u,ě|em|a||ům|a|a|ech|y
 -
 bogdal|2||a?|u?,ovi?|a?|e?|u?,ovi?|em?|i?,ové?|ú?|úm?|y?|i?,ové?|ech?|y?
 čásT|1|ť|ťi?|ťi?|t?|ťi?|ťi?|ťí?|ťi?|ťí?|tem?|ťi?|ťi?|tech?|tmi?
@@ -230,7 +233,7 @@ tabôŁA|1|ła|łe?|łi?|łi?|łe?|łi?|łí?|łe?|łí?|łím?|łe?|łe?|łích
 tatičEK|2|ek|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
 ťihLA|1|la?|ly?|le?|lu?|lo?|le?|lou?|ly?|el?|lám?|le|ly?|lách?|lami?
 tMA|1|ma?|mê|mě?|mu?|mo?|mě?|mou?|my?|em?|mám?|my?|my?|mách?|mami?
-úmrťí|0|i?|i?|i?|i?|i?|i|im?|i?|i?|im?|i?|i?|ich?|imi?
+úmrťI|0|i?|i?|i?|i?|i?|i|im?|i?|i?|im?|i?|i?|ich?|imi?
 vápNO|0|no|na?|nu?|no?|no?|nu?,ňe?|nem?|na?|en?|núm?|na?|na?|nech?|ny?
 večer|3|?|a|u?|?|e?|u?|em?|y?|ú?|úm?|y?|y?|ech?|y?
 věK|3|k?|kô|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
@@ -238,6 +241,8 @@ vepřovicE|1|e?|e?|i?|i?|e?|i?|í?|e?|?|ím?|e|e?|ích?|emi?
 vÚZ|3|úz?|oza|ozu?|úz?|oze?|ozu?,oze?|ozem|ozy?|ozú?|ozúm?|ozy?|ozy?|ozech?|ozy?
 zedňiK|2|k?|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci|kú?|kúm?|kê|ci?|cích?|ky?
 žEŇ|1|eň?|ňe?|ňi?|eň?|ňi?|ňe|ňí?|ňe?|ňí?|ňím?|ňe?|ňe?|ňích?|ňemi?
+lÉTO|0|ito|éta?|étu?|éto?|éto?|étu?,éťe?|étem?|éta?|et?|étúm?,etúm?|éta?|éta?|étech?,etech?|éty?,ety?
+městO|0|o?|a|u?|o?|o?|u?,e?|em?|a?|?|úm?|a?|a?|ech?|y?
 -
 |PENÍZE|0||PEŇÍZE||cnt
 |ČLOVĚK|0||ČLOVĚK||cnt
@@ -250,6 +255,8 @@ dědeč|dědečEK|0|stařeč|stařečEK||cnt
 děvč|děvčE|0|ďefč|ďefčE||cnt
 dom|domEK|0|dom|domEK||cnt
 domkař|domkař|0|domkař|domkař||
+dv|dvŮR|0|dv|dvÚR||cnt
+grunt|grunt|0|grônt|grunt||cnt
 hospodář|hospodář|0|hospodář|hospodář||cnt
 k|kŮŇ|0|k|kÚŇ||cnt
 kamení|kamení|0|kameň|kameňI||cnt
@@ -261,7 +268,6 @@ kroj|kroj|0|kroj|kroj||cnt
 l|lÉTO|0|l|lÉTO||cnt
 lamp|lampA|0|łamp|łampA||
 len||0|len|||
-léto||0|lito|||
 lid|lid|0|lêd|lêd||
 lou|louKA|0|l|lÓKA||
 malt|maltA|0|mal|malTA||cnt
@@ -289,10 +295,10 @@ svat|svatBA|0|svaj|svajBA||cnt
 šestizpřeží||0|šesťispřeži|||cnt
 t|tMA|0|t|tMA||cnt
 tabul|tabulE|0|tabô|tabôŁA||
-tatín|tatínEK|0|tatič|tatičEK||cnt
+tatín|tatínEK|0|tatič|tatičEK||cnt|taťin|tatičEK||onsp
 učitel|učitel|0|ôčêtel|ôčêteŁ||
 uh|uhEL|0|oh|ôhEL||
-úmrtí|úmrtí|0|úmrť|úmrťí||
+úmrtí|úmrtí|0|úmrť|úmrťI||
 v|vŮZ|0|v|vÚZ||cnt
 váp|vápNO|0|váp|vápNO||cnt
 vě|věK|0|vě|věK||cnt
@@ -300,8 +306,7 @@ večer|večer|0|večer|večer||cnt
 vepřovic|vepřovicE|0|vepřovic|vepřovicE||cnt
 zední|zedníK|0|zedňi|zedňiK||cnt
 ž|žEŇ|0|ž|žEŇ||cnt
-grunt|grunt|0|grônt|grunt||cnt
-dv|dvŮR|0|dv|dvÚR||cnt
+měst|městO|0|mňest|městO||onsp
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
 desetiletÝ|-1|é|ého|ému|é|é|ém|ým|-|-|á|ých|ým|á|á|ých|ými|-|-|á|é|é|ou|á|é|ou|-|-|é|ých|ým|é|é|ých|ými|-|-|ý|ého|ému|ého|ý|ém|ým|-|-|í|ých|ým|é|í|ých|ými|-|-|ý|ého|ému|ý|ý|ém|ým|-|-|é|ých|ým|é|é|ých|ými|-|-
@@ -357,7 +362,7 @@ kažDÝ|dé|dého?|dému?|dého?|-|dém?|dým?|ďí?|dých?|dým?|dé?|-|dých?|
 KDO|gdo|koho?|komu?|koho?|kdo?|kom?|kým?
 keRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ři|rých?|rým?|ré?|-|rých?|rými?|rý?|riho|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
 mÚJ|új?|ého?|ému?|ého?|új?|ém?|ým?|i|ých?|ým?|je?,é?|ji?,í?|ých?|ými?|új?|ého?|ému?|új?|új?|ém?|ým?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|je?,á?|é|jí?,é?|ji?,ou?|je?,á?|jí?,é?|jí?,ou?|je?,é?|ých?|ým?|je?,é?|je?,é?|ých?|ými?|je?,é?|ého?|ému?|je?,é?|je?,é?|ém?|ým?|je?,á?|ých?|ým?|je?,á?|je?,á?|ých?|ými?
-nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše|aše?|ašich?|ašimi?|aše|ašé|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
+nÁŠ|áš|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše|aše?|ašich?|ašimi?|aše|ašé|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
 nejaKÝ|ké|kého?|kému?|kého?|-|kém?|kým?|cí?|kých?|kým?|ké?|-|kých?|kými?|ký?|kého?|kému?|ký?|-|kém?|kým?|ké?|kých?|kým?|ké?|-|kých?|kými?|ká?|ké?|ké?|kou?|-|ké?|kou?|ké?|kých?|kým?|ké?|-|kých?|kými?|ké?|kého?|kému?|ké?|-|kém?|kým?|ká?|kých?|kým?|ká?|-|kých?|kými?
 oni|oňi|ih,nich|im,#ňim|je,ně*?|-|nich*?|jimi,nimi?
 SE|-|sebe?|si,sobje?|se,sebe?|-|sobje?|sebou?
@@ -377,7 +382,7 @@ t|tEN||TEN||cnt
 takov|takovÝ|takov|takovÝ||cnt
 tolik|tolik|tolê|tolêK||cnt
 vš|všECHEN|fš|fšECHEN||cnt
-n|nÁŠ|n|nÁŠ||cnt
+n|nÁŠ|n|nÁŠ||cnt,onsp
 ||jejich|||
 něja|nějaKÝ|neja|nejaKÝ||cnt
 -
@@ -452,7 +457,7 @@ jmenOVAT_SE|7|2|ovat|uji,uju|uješ|uje|ujeme|ujete|ují,ujou|uj|ujme|ujte|oval|o
 pocházET|7|-1|et|ím|íš|í|íme|íte|í,pocházejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela
 přijeT|22|-1|t|du|deš|de|deme|dete|dou|ď|ďme|ďte|l|l|la|lo|li|ly|ly|la
 -
-BÝT|247|-1|být?|sem|jsi?|je|sme|jste?|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|bêl|bêla|bêlo|bêlê|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+BÝT|247|-1|být?|sem|jsi?|je|sme|ste|só|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|bêl|bêl|bêla|bêlo|bêlê,belê|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 čÍST|15|-1|est|tu?|teš?|te?|teme?|tete?|tou?|ťi?|ťeme?|ťete?|etl?|etl?|etla?|etlo?|etli?|etly?|etly?|etla?|ten?|ten?|tena?|teno?|teňi?|teny?|teny?|tena?
 ďelAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala|alo|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 dostaT|22|-1|t?|nu?|neš?|ne?|neme?|nete?|nou?|ň?|ňme?|ňte?|l|l?|la?|lo?|li?|ly?|ly?|la?
@@ -497,7 +502,7 @@ zbořÊT|30|-1|êt|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?
 znÁT|15|-1|át?|ám|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 zpachtOVAT|30|-1|ovat?|?|?|?|?|?|?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovalê|ovaly?|ovaly?|ovala?|ován?|ován?|ována?|ováno?|ováňi?|ovány?|ovány?|ována?
 -
-|BÝT||BÝT||
+|BÝT||BÝT||onsp
 |JÍT||JÍT||
 ||pachtovalê|||
 ||spachtovalê|||
@@ -588,10 +593,11 @@ hodně|hodňe||cnt
 úplně|načêsto||cnt
 nezaujatě|nezaujaťe||cnt
 málokde|málogde||cnt
+kdepak|gdepak||onsp
 -
 po||po||
 u||ô||cnt
-do||do||cnt
+do||do||cnt,onsp
 k||k||cnt
 o||o||
 od||od||cnt
