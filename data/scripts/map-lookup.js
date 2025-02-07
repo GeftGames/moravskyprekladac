@@ -284,7 +284,8 @@ var initLookUpMap = function () {
                // console.log("c2",mX+circleRadius * 2>map_LocX + p.locationX * map_Zoom - circleRadius, mY+circleRadius * 2> map_LocY + p.locationY * map_Zoom - circleRadius);
                 if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2) ||
                 (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius*2, circleRadius*2))) {
-                    p.option.selected = true;
+                   // p.option.selected = true;
+                    ChangeSelectedLang(p);
                     PopPageClose('mapPage');
                     Translate();
                     GetDic()

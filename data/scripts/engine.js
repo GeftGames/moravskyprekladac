@@ -493,7 +493,7 @@ function ChangeDic() {
         localStorage.setItem('trTo', selTo.value);
     //location.hash.to = selTo.value;
     urlParamChange("input", selTo.value, true/**/);
-    currentLang = GetCurrentLanguage();
+  //  currentLang = GetCurrentLanguage();
     BuildOptions();
     //let n;
     //let headername = document.getElementById('headername');
@@ -628,11 +628,11 @@ function PopPageShow(name) {
         document.body.style.overflow = "clip";
         window.scrollTo({ top: 0 });
     } else if (name == "pageInfoLang") {
-        let lang = GetCurrentLanguage();
+       // let lang = GetCurrentLanguage();
       
         // Vytvořit blok textu s citacemi
-        if (lang.Cites==undefined || lang.Cites.length==0){
-            document.getElementById("infoLangText").innerHTML = lang.Comment;
+        if (currentLang.Cites==undefined || currentLang.Cites.length==0){
+            document.getElementById("infoLangText").innerHTML = currentLang.Comment;
         }else{
             let citeArr=document.createElement("ol");
             citeArr.style="margin-left: 24px;";
@@ -646,19 +646,19 @@ function PopPageShow(name) {
             if (citeArr.innerHTML.length>0) {
                 document.getElementById("infoLangText").innerHTML="<p class='settingHeader' style='display: inline'>Zdroje dat</p>";
                 document.getElementById("infoLangText").appendChild(citeArr);
-                document.getElementById("infoLangText").innerHTML += lang.Comment;
-            } else document.getElementById("infoLangText").innerHTML = lang.Comment;
+                document.getElementById("infoLangText").innerHTML += currentLang.Comment;
+            } else document.getElementById("infoLangText").innerHTML = currentLang.Comment;
         }
         
         // Vývojářské info
         if (dev) {
             // Location
             let devInfoText = "Umístění: ";
-            if (lang.Category === undefined) devInfoText += "neznámé";
-            else devInfoText += lang.Category.join(" > ");
+            if (currentLang.Category === undefined) devInfoText += "neznámé";
+            else devInfoText += currentLang.Category.join(" > ");
             
             // Stats
-            devInfoText+="<br>" + "Počet zázamů: " + lang.Stats();
+            devInfoText+="<br>" + "Počet zázamů: " + currentLang.Stats();
             
             // category
             document.getElementById("infoLangText").innerHTML += devInfoText;
@@ -4218,6 +4218,23 @@ function SetCurrentTranscription(transCode) {
         { from: "k", to: "к" }, { from: "K", to: "К" },
     ];
 
+    if (transCode == "hangual") return [
+        // ignore rare letters
+        { from: "a", to: "ㅏ" },
+        { from: "o", to: "ㅗ" },
+        { from: "u", to: "ㅜ" },
+        { from: "e", to: "ㅔ" },
+        { from: "va", to: "ㅘ" },
+        { from: "ve", to: "ㅞ" },
+        { from: "ng", to: "ㅇ" },
+        { from: "m", to: "ㅁ" },
+        { from: "h", to: "ㅎ" },
+        { from: "n", to: "ㄴ" },
+        { from: "s", to: "ㅅ" },
+        { from: "ka", to: "가" },
+        { from: "go", to: "고" },
+    ];
+
     // málo vyskytující se jevy potlačit (v datech moc neřešené)
     if (transCode == "default") return [
         // ignore rare letters
@@ -4601,9 +4618,9 @@ function urlParamClearB(){
 function ShowCite(shortcut) {
     // existuje citace?
     let cite_found=false;
-    let lang = GetCurrentLanguage();
+   // let lang = GetCurrentLanguage();
     if (lang!=null) {
-        for (let cite of lang.Cites) {
+        for (let cite of currentLang.Cites) {
             if (shortcut==cite.Shortcut) {
                 cite_found=true;
                 break;
@@ -5322,4 +5339,26 @@ function fillBackgroundColors() {
 
     // add
     document.getElementById("mapperOptionColorBack").value+=txt;
+}
+/*
+function ChangePosthogComplex(){
+    posthogEnabled=posthogComplex.checked;
+    posthogAdvanced=posthogAnalytics.checked;
+
+    if (posthogEnabled) {
+
+        if (posthogAdvanced) {
+            
+        }else{
+            posthog.opt_out_capturing();
+        }
+    }
+
+}*/
+function ChangeSelectedLang(lang) {
+    currentLang=lang;
+    document.getElementById("selectorTo").innerText=lang.Name;
+    BuildOptions();
+    GetDic();
+    Translate();
 }

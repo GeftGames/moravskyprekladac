@@ -1240,9 +1240,9 @@ class ItemSimpleWord {
         } else f = this.input;
                
         //p.appendChild(f);        
-        p.appendChild(document.createTextNode(f));
+        p.appendChild(document.createTextNode(f+eArrow));
         
-        p.appendChild(document.createTextNode(eArrow));
+      //  p.appendChild(document.createTextNode());
 
         let out = [];
         for (let i = 0; i < this.output.length; i++) {
@@ -1490,11 +1490,13 @@ class ItemPhrase {
         } else inp = this.input;
 
         let p = document.createElement("p");
-        let f = document.createElement("span");
+      /*  let f = document.createElement("span");
         f.innerText = inp;
-        p.appendChild(f);
+        p.appendChild(f);*/
 
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(inp+eArrow));
+
+    //    p.appendChild(document.createTextNode());
 
         let t = document.createElement("span");
         t.innerText = ApplyPostRules(out);
@@ -5909,7 +5911,11 @@ class LanguageTr{
 
                     /*	case "z":
                     		this.baseLangName=line.substring(1);
-                    		break;*/
+                    		break;*/   
+                
+                case "s":
+                    this.belongs=line.substring(1);
+                    break;
             }
         }
 

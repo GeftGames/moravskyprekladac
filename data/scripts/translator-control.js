@@ -178,7 +178,7 @@ function initLoadingLangData() {
     if (dev) console.log("Translator inicializating starting...");
     let select2 = document.getElementById("selectorTo");
 
-    InnerSearch(translations, select2, 0);
+ //   InnerSearch(translations, select2, 0);
     GetTranslations();
 
     function InnerSearch(arr, parent, level) {
@@ -186,7 +186,7 @@ function initLoadingLangData() {
             let group = document.createElement('optgroup');
             group.label = arr;
             group.className = "selectGroup" + level;
-            parent.appendChild(group);
+        //    parent.appendChild(group);
             return;
         }
         for (const name of arr) {
@@ -194,7 +194,7 @@ function initLoadingLangData() {
                 group = document.createElement('optgroup');
                 group.label = name;
                 group.className = "selectGroup" + level;
-                parent.appendChild(group);
+             //   parent.appendChild(group);
             } else {
                 if (Array.isArray(name)) InnerSearch(name, parent, level + 1);
             }
@@ -256,8 +256,16 @@ function GetTranslations() {
             // def lang
             if (defaultLang!=undefined) document.getElementById("selectorTo").value=defaultLang;
             else document.getElementById("selectorTo").selectedIndex=0;
-       }
-        currentLang = GetCurrentLanguage();
+        }
+        let bestLangVal=0;
+        for (let l of languagesList){
+            if (l.Stats()>bestLangVal){
+                currentLang=l;
+                bestLangVal=l.Stats();
+            }
+        }
+        document.getElementById("selectorTo").innerText=currentLang.Name;
+       // currentLang = GetCurrentLanguage();
         BuildOptions();
         //if (input_lang>=0 && input_lang!=undefined) 
         Translate();
@@ -409,7 +417,7 @@ function GetTranslations() {
     }
 
     function AddLang(lang) {
-        function insideSearch(div, cat) {
+    /*    function insideSearch(div, cat) {
             for (let n of div.childNodes) {
                 if (n.nodeName != "#text") {
                     if (n.label == cat) {
@@ -423,7 +431,7 @@ function GetTranslations() {
                 }
             }
             return select2;
-        }
+        }*/
         
         if (lang.Name=='Moravština "spisovná"') moravianId=lang.Id;
        
@@ -446,7 +454,7 @@ function GetTranslations() {
 
                 languagesList.push(lang);
 
-                let category;
+              /*  let category;
                 if (Array.isArray(lang.Category)) {
                     for (let c of lang.Category.reverse()) {
                         let cat = insideSearch(select2, c);
@@ -458,7 +466,7 @@ function GetTranslations() {
                     if (category == undefined) category = select2
                 } else { //console.log("ncat");
                     category = insideSearch(select2, lang.Category);
-                }
+                }*/
              
                 // Add color
              /*   if (lang.Quality == 5) {
@@ -483,11 +491,11 @@ function GetTranslations() {
                     lang.ColorStrokeStyle = 'rgb(0,0,0,.7)';
              //   } else { lang.ColorFillStyle = "#000"; }
 
-                let nodeLang = document.createElement('option');
+            /*    let nodeLang = document.createElement('option');
                 lang.option = nodeLang;
                 nodeLang.value = lang.Id;
                 nodeLang.innerText = name;
-                category.appendChild(nodeLang);
+                category.appendChild(nodeLang);*/
             } //else if (lang.quality>2) lang.Name+=" ✅";
 
         } else {
@@ -495,7 +503,7 @@ function GetTranslations() {
         }
     }
 }
-
+/*
 function DisableLangTranslate(search) {
     //let ele=document.getElementById("selectorFrom");
     //InnerSearch(ele, 0);
@@ -504,14 +512,6 @@ function DisableLangTranslate(search) {
     InnerSearch(ele2, 0);
 
     function InnerSearch(parent, level) {
-        /*	if (typeof parent === 'option') {
-        		if (parent.innerText==search) {
-        			parent.classList.add("disabledTranslate");
-        			node.setAttribute("disabled",true);
-        			return;
-        		}
-        	} else {console.log(parent.childNodes);*/
-
         for (let node of parent.childNodes) {
             //	console.log(node.tagName);
             if (node.tagName == 'OPTION') {
@@ -526,7 +526,7 @@ function DisableLangTranslate(search) {
             }
         }
     }
-}
+}*/
 
 function ClearTextbox(textbox) {
     document.getElementById(textbox).value = "";
@@ -535,7 +535,7 @@ function ClearTextbox(textbox) {
 }
 
 function Translate() {
-    currentLang = GetCurrentLanguage();
+   // currentLang = GetCurrentLanguage();
 
     if (currentLang==null) return;
     let input = document.getElementById("specialTextarea").value;
@@ -557,7 +557,7 @@ function Translate() {
 }
 
 function TranslateSimpleText(input) {
-    currentLang = GetCurrentLanguage();
+ //   currentLang = GetCurrentLanguage();
     //console.log("input: ", input);
 
     if (currentLang !== null) {
@@ -568,7 +568,7 @@ function TranslateSimpleText(input) {
 }
 
 function GetDic() {
-    currentLang = GetCurrentLanguage();
+  //  currentLang = GetCurrentLanguage();
     let input = dicInput.value;
 
     urlParamChange("input", input, true);
@@ -586,7 +586,7 @@ function GetDic() {
 
 // Získat zvolený překlad
 function GetCurrentLanguage() {    
-    let ele2 = parseInt(document.getElementById("selectorTo").value);
+   /* let ele2 = parseInt(document.getElementById("selectorTo").value);
 
     // own
     if (ele2 == "*own*" && loadedOwnLang) {
@@ -598,7 +598,7 @@ function GetCurrentLanguage() {
     if (find!=undefined) {        
         return find;
     }else if (dev) console.log("couldnt find", find);
-
+*/
 
     // First one
     if (languagesList.length>0){
@@ -1533,4 +1533,50 @@ function FilterCountry(country) {
     if (country==2 && (onlyMoravia=="mor+sl" || onlyMoravia=="default")) return true;
 
     return false;
+}
+
+
+function refreshListOfLangsForSelect() {
+    let search=document.getElementById("filterLangForSelect").value.toLowerCase();
+    let parentDiv=document.getElementById("langSearchResults");
+    
+    // Clean list
+    parentDiv.innerHTML="";
+
+    // Add items
+    for (let l of languagesList) {
+        let ptName= l.Name;
+        if (l.belongs!=undefined) ptName+=" ("+l.belongs+")";
+
+        let lovercaseName=ptName.toLowerCase();
+        if (lovercaseName.includes(search)) {
+            let langEle=document.createElement("a");
+            langEle.addEventListener("click", ()=>{
+                ChangeSelectedLang(l);
+                PopPageClose('SelectLang');
+                document.getElementById("filterLangForSelect").value="";
+            });
+            for (let ch of highlightMatch(ptName, lovercaseName, search)) langEle.appendChild(ch);
+           
+            if (l.Quality>=2) langEle.appendChild(document.createTextNode(" ✅"));            
+            if (currentLang.Id==l.Id) langEle.classList="selectedLang";
+            parentDiv.appendChild(langEle);
+        }
+    }
+}
+
+// show part of text bolder
+function highlightMatch(string, lovercaseName, search) {
+    if (search=="") return [document.createTextNode(string)];
+    
+    let pos=lovercaseName.indexOf(search);
+    if (pos==-1) return [document.createTextNode(string)];
+
+    // Bold part
+    let boldPart=document.createElement("span");
+    boldPart.style.fontWeight="400";
+    boldPart.style.color="inherit";
+    boldPart.innerText=string.substring(pos, pos + search.length);// = search, but can ge vaRiOuS uppercase letter
+    
+    return [document.createTextNode(string.substring(0, pos)), boldPart, document.createTextNode(string.substring(pos+search.length))];
 }
