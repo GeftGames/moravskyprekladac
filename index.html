@@ -287,7 +287,7 @@
 						</button>
 
                     <!--write about-->
-                    <button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(GetCurrentLanguage());">
+                    <button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(currentLang);">
 							<svg class="ib" viewbox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
 						</button>
 
@@ -582,7 +582,13 @@
                                 <p id="from" style="display: inline">Z</p>
                                 <p id="czech" style="display: flex">češtiny</p>
                                 <p id="to" style="display: inline;display: flex;align-items: center;">do</p>
-                                <select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>
+                                <!--<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>-->
+                                <div id="changeTranslate" style="display: flex;align-items: center;" onclick="PopPageShow('SelectLang');refreshListOfLangsForSelect();filterLangForSelect.focus()">
+                                    <span id="selectorTo">Obecná hanáčtina</span> 
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7L10 12L15 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
                             </div>   
                             <div style="display: flex;">
                                 <span data-tooltip="Vybrat místo z mapy" style="width: fit-content; height: fit-content;" class="butIc tooltipC" rel="nofollow" onclick="PopPageShow('mapPage');">
@@ -637,7 +643,7 @@
 
                     <div id="transarea" style="display: block; place-items: center;">
                         <div id="translateText" style="display: flex; flex-direction: column;justify-items: center; width: calc(100% - 1cm);">
-                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;font-size: 4.5mm;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu, z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()" style="font-size: 4.5mm;">slovník</a> nebo změnit místo. 
+                            <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;font-size: 4.5mm;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()" style="font-size: 4.5mm;">slovník</a> nebo změnit místo. 
                                 <!--<br>Neznáte nějaká slovíčka? <span onclick="PopPageShow('sendWords');" class="link">Poslat slovíčka</span>--></span>
                             <div id="translateTextFromTo" style="display: flex;align-items: stretch;justify-content: space-evenly;width: -webkit-fill-available;">
                                 <!-- Source translated text -->
@@ -1338,7 +1344,7 @@
                 <div>
                     <p class="aboutPageHeader" id="tagsheader">Tagy</p>
                 </div>
-                <p class="aboutPageHeader" id="tags" itemprop="keywords"><span>slovník moravských dialektů</span>, <span>moravský slovník</span>, <span>interaktivní sklovník</span>, <span>slovník moravských slov</span>, <span>moravština slovník</span>, <span>česko moravský slovník</span>, <span>česko-moravský slovník</span>, <span>moravština</span>, <span>moravština slova</span></p>
+                <p class="aboutPageHeader" id="tags" itemprop="keywords"><span>slovník moravských dialektů</span>, <span>moravský slovník</span>, <span>interaktivní sklovník</span>, <span>slovník moravských slov</span>, <span>moravština slovník</span>, <span>česko moravský slovník</span>, <span>česko-moravský slovník</span>, <span>moravština</span>, <span>moravština slova</span>, <span>překladač do hantecu</span></p>
             </div>
         </div>
 
@@ -1829,6 +1835,26 @@
                     <p style="margin-left: 0px;">Nastavení lze později změnit</p>
                 </div>
                 <br>
+            </div>
+        </div>
+
+        <div id="pagePop_SelectLang" class="pagePop" style="display: none; top:500px; z-index: 9; height: auto; min-height: -webkit-fill-available;">
+            <div class="pageInside" id="pageSelectLang" style="margin-left: 10%; margin-right: 10%; margin-bottom: 2cm;display: flex; flex-direction: column; align-items: center;">
+                <div onclick="PopPageClose('SelectLang')" class="pageFromDownClose" id="closeSelectLang">
+                    <div rel="nofollow">
+                        <svg class="ib" viewbox="0 0 24 24" style="display: flex;">
+                            <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                        </svg>
+                    </div>
+                    <p style="display:inline;" id="closeSelector">Zavřít</p>
+                </div>
+                <div>
+                    <h2 class="" id="pageTypeLangD"><span id="langName" style="font-size:8mm">Vybrat překlad</span></h2>
+                </div>
+                
+                <input type="text" id="filterLangForSelect" placeholder="Loštice" style="max-width: -webkit-fill-available;margin-top: 7mm;" oninput="refreshListOfLangsForSelect()">
+                
+                <div id="langSearchResults" style="overflow-y: auto; text-wrap: auto; margin-top: 6mm; display: flex; flex-direction: column;"></div>
             </div>
         </div>
     </div>
