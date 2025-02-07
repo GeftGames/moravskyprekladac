@@ -1,4 +1,7 @@
 # Poslední změny
+### 7.02. 2025
++ nové rozkliknutí výběru jazyka s vyhledáváním
+  
 ### 17.01. 2025
 + kalkulace podobnosti v mapě
   
