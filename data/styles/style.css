@@ -2012,3 +2012,38 @@ h3{
     margin: 5px;
     overflow-wrap: anywhere;
 }
+#langSearchResults > a{
+    cursor: pointer;
+    user-select: none;
+    padding: 1mm;
+    color: var(--ColorText);
+    margin-left: 4mm;
+}
+#langSearchResults > a:hover{
+    color: var(--ColorOrig);
+}
+.selectedLang{
+    background-color: var(--ColorTheme);
+    border-radius: 1mm;
+    margin-left: 0mm !important;
+}
+.selectedLang::before{
+    content: "🗸 ";
+}
+#changeTranslate{
+    color: var(--ColorText);
+    cursor: pointer;
+    user-select: none;
+    box-shadow: var(--ksh);
+    background-color: var(--dsh);
+    border-radius: 1mm;
+    padding-left: 2mm;
+    padding-right: 2mm;
+    margin: 1mm;
+    transition: var(--transitionFast);
+}
+#changeTranslate:hover{
+    /*color: var(--ColorOrig) !important;
+    background-color: var(--ColorTheme);*/
+    box-shadow: var(--ksh_hover);
+}
