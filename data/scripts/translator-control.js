@@ -1535,6 +1535,10 @@ function FilterCountry(country) {
     return false;
 }
 
+function DistanceS(a, b) {
+    let dX=a.gpsX-b.gpsX, dY=a.gpsY-b.gpsY;
+    return dX*dX+dY*dY;
+}
 
 function refreshListOfLangsForSelect() {
     let search=document.getElementById("filterLangForSelect").value.toLowerCase();
@@ -1542,6 +1546,34 @@ function refreshListOfLangsForSelect() {
     
     // Clean list
     parentDiv.innerHTML="";
+
+    // sort type
+    let sortType=document.getElementById("sortTypeSelLang").value;
+    switch (sortType) {
+        case "abc":
+            languagesList=languagesList.sort((a, b) => {return a.Name.localeCompare(b.Name);});
+            break;
+
+        case "top":
+            languagesList=languagesList.sort((a, b) => b.Stats() - a.Stats());
+            break;
+
+        case "reg":
+            languagesList=languagesList.sort((a, b) => {
+                if (a.Category==undefined && b.Category==undefined) return 0;
+                if (a.Category==undefined && b.Category!=undefined) return 1;
+                if (a.Category!=undefined && b.Category==undefined) return -1;
+
+                let aCat=a.Category.join(), bCat=b.Category.join();
+
+                return aCat.localeCompare(bCat);
+            });
+            break;
+
+        case "dis":
+            languagesList=languagesList.sort((a, b) => DistanceS(currentLang, a) - DistanceS(currentLang, b));
+            break;
+    }
 
     // Add items
     for (let l of languagesList) {

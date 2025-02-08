@@ -636,7 +636,7 @@ function PopPageShow(name) {
         }else{
             let citeArr=document.createElement("ol");
             citeArr.style="margin-left: 24px;";
-            for (let cite of lang.Cites){
+            for (let cite of currentLang.Cites){
 //                console.log(lang.Cites,cite);
                 citeArr.appendChild(cite.genEl);
             }
@@ -4218,21 +4218,42 @@ function SetCurrentTranscription(transCode) {
         { from: "k", to: "к" }, { from: "K", to: "К" },
     ];
 
+    //https://www.youtube.com/watch?v=Uw6Dpk_Mt64
+    //https://en.wikipedia.org/wiki/Cia-Cia_language
     if (transCode == "hangual") return [
         // ignore rare letters
         { from: "a", to: "ㅏ" },
         { from: "o", to: "ㅗ" },
         { from: "u", to: "ㅜ" },
         { from: "e", to: "ㅔ" },
+        { from: "i", to: "ㅣ" },
+        
+        { from: "h", to: "ㅎ" },
+        { from: "s", to: "ㅅ" },
+        { from: "ng", to: "ㅇ" },
+        { from: "k", to: "ㅌ" },
+        
+        { from: "ja", to: "ㅑ" },
+        { from: "jo", to: "ㅕ" },
+        
         { from: "va", to: "ㅘ" },
         { from: "ve", to: "ㅞ" },
-        { from: "ng", to: "ㅇ" },
-        { from: "m", to: "ㅁ" },
-        { from: "h", to: "ㅎ" },
-        { from: "n", to: "ㄴ" },
-        { from: "s", to: "ㅅ" },
+        
         { from: "ka", to: "가" },
+        
         { from: "go", to: "고" },
+        
+        { from: "dž", to: "ㅈ" },
+        
+        { from: "kch", to: "ㅋ" },
+        
+        { from: "ké", to: "개"},
+        
+        { from: "m", to: "ㅁ" },
+        { from: "ma", to: "마"},
+        
+        { from: "n", to: "ㄴ" },
+        { from: "na", to: "나"},
     ];
 
     // málo vyskytující se jevy potlačit (v datech moc neřešené)
@@ -4619,7 +4640,7 @@ function ShowCite(shortcut) {
     // existuje citace?
     let cite_found=false;
    // let lang = GetCurrentLanguage();
-    if (lang!=null) {
+    if (currentLang!=null) {
         for (let cite of currentLang.Cites) {
             if (shortcut==cite.Shortcut) {
                 cite_found=true;
