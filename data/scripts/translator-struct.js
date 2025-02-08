@@ -6520,9 +6520,10 @@ class LanguageTr{
         }
 
         let lastCh="";
-        if (out.length != 0) {
+        if (out.length > 0) {
             for (let z of out) {
                 if (dicAbc) {
+                    if (z.from[0]==undefined) continue;
                     if (z.from[0].toLowerCase()!=lastCh.toLowerCase()) {
                         let ch=document.createElement("p");
                         ch.innerText=z.from[0].toUpperCase();
