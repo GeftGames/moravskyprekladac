@@ -2047,3 +2047,11 @@ h3{
     background-color: var(--ColorTheme);*/
     box-shadow: var(--ksh_hover);
 }
+#areaTypeSelLangSort{
+    margin-top: 4mm;
+    opacity: .5;
+    transition: var(--transitionFast);
+}
+#areaTypeSelLangSort:hover{
+    opacity: 1;
+}
