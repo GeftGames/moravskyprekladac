@@ -1854,6 +1854,16 @@
                 
                 <input type="text" id="filterLangForSelect" placeholder="Loštice" style="max-width: -webkit-fill-available;margin-top: 7mm;" oninput="refreshListOfLangsForSelect()">
                 
+                <div id="areaTypeSelLangSort">
+                    <span>Setřídit</span>
+                    <select id="sortTypeSelLang" onchange="refreshListOfLangsForSelect()">
+                        <option value="top" selected>Od nejkvalitnějšího</option>
+                        <option value="abc">Abecedně</option>
+                        <option value="dis">Podle blízkosti</option>
+                        <option value="reg">Podle území</option>
+                    </select>
+                </div>
+
                 <div id="langSearchResults" style="overflow-y: auto; text-wrap: auto; margin-top: 6mm; display: flex; flex-direction: column;"></div>
             </div>
         </div>
