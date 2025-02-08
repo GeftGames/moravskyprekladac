@@ -5612,7 +5612,7 @@ provoz|1|provoz||
 provozními|1|provozňima||
 provozování|1|rovozováňi||
 provozu|1|provozô||
-prozatím|1|prozatim||
+prozatím|1|prozaťim||
 prozradil|1|prozradil||
 prožil|1|prožêl||
 prožitý|1|prožêté||
@@ -7859,7 +7859,7 @@ vypl|1|vêpl||
 vyplatilo|1|vêplatilo||
 vyplatit|1|vêplatit||
 výplň|1|vyplň||
-vyplnili|1|vêplnilê||
+vyplnili|1|vêplňilê||
 vyplňovat|1|vêplňovat||
 vyplňte|1|vêplňte||
 vyplývá|1|vêplévá||
@@ -8246,8 +8246,8 @@ zašmátrá|1|zašmátrá||
 zaštítil|1|zaštitil||
 zatáčka|1|zatáčka||
 zatáčky|1|zatáčkê||
-zatím|1|zatim||
-zatímco|1|zatimco||
+zatím|1|zaťim||
+zatímco|1|zaťimco||
 zátiší|1|zátiši||
 zatraceně|1|neščápeně||
 zatraceně|1|neščápeně||
@@ -8865,6 +8865,7 @@ zumět|zômět
 žíte|žite
 žuji|žôjô
 dím|ďím
+buji|bôjô
 -
 lÉTO|1|éto|éta|étu|éto|éto|étu,étě|étem|éta|et|étům,etům|éta|éta|étech,etech|éty,ety
 dÍTĚ|1|ítě|ítěte|ítěti|ítě|ítě|ítěti|ítětem|ěti|ětí|ětem|ěti|ěti|ětech|ětmi
@@ -9143,6 +9144,8 @@ hospoDA|1|da|dê|ďe|dô|do|ďe|dó|dê|d|dám|dê|dê|dách|dama
 ||0|robkô|||podr
 |NŮŽKY|0|nožéc|NOŽÉCE||hpos
 ||0||||
+|DVEŘE|0||DVEŘE||
+|NAROZENINY|0||NAROZEŇINY||
 adam|pán|2|adam|pán||
 agres|růžE|0|agres|ružA||
 albáni|itáliE|2|albánij|ženA||
@@ -9154,9 +9157,12 @@ antonín|pán|2|tónek|pán||
 arab|arab|0|arab|arab||
 aut|městO|0|aôt|městO||
 bakteri|růžE|0|baktérij|netálijA||
+bateri|bateriE|0|vňitř|vňitřEK||
 belgi|itáliE|2|belgij|ženA||
+bezin|bezinKA|0|kozeč|kozečKE||hpos
 biopsii||0|biopsi|netálijA||
 blát|blátO|0|bla|blaTO||podr
+blb|blbEC|0|hňop|hňop||hchc
 bodlá|bodláK|0|pcháč|pcháč||hpos
 bojovník|pán|0|hajdok|pán||
 boleslav|hrad|2|boleslav|ženA||
@@ -9204,6 +9210,7 @@ hlín|městO|0|hlên|městO||
 hmat|hrad|0|grif|hrad||
 hnilob|ženA|0|zhnilên|ženA||
 hor|ženA|0|hor|ženA||
+hospod|hospodA|0|hospo|hospoDA|||palôša||||krčma||hospoda horšího řádu|hchc
 host|host|0|hos|hosT||
 houf|hrad|0|hafol|hrad||
 houf|houf|0|hóf|hóf||podr
@@ -9216,6 +9223,7 @@ chorob|ženA|0|chorob|ženA||
 chorvat|pán|0|krobót|pán||
 chorvatsk|městO|2|krobótsk|městO||
 chrp|chrpA|0|charb|charbA||hpos
+chv|chvÍLE|0|chf|chfILA||
 internet|internet|0|internet|internet||
 itáli|itáliE|0|netálij|netálijA||
 jizv|ženA|0|jizv|ženA||
@@ -9256,11 +9264,13 @@ kronik|ženA|0|gronêk|ženA||
 kronikář|muž|0|kronêkář|pán||
 krup|větvičKA|0|króp|halózKA||
 křeč|olomouc|0|krč|piseň||
+křepel|křepelKA|0|potpoliš|potpoliš||hpos
 křižovatk|ženA|0|křêžovatk|ženA||
 kukuřic|kukuřicE|0|tôrkeň|tôrkêň||
 květin|květinA|0|kviťi|kviťi||potd
 l|lÉTO|0|l|lITO||
 l|lEŽ|0|l|lEŽ||
+lakom|lakomEC|0|hamó|hamóN||
 láv|větvičKA|0|la|laFKA||
 legrac|legracE|0|špás|||podr|prča|||
 lékař|muž|0|dochtor|pán||
@@ -9283,6 +9293,7 @@ malt|ženA|0|malt|ženA||
 mamin|maminKA|0|maťič|maťičKA||
 matrac|matracE|0|matrac|matracE||
 medicín|ženA|0|medicen|ženA||
+medvěd|medvěd|0|hôňáč|hôňáč||hchc
 měřic|měřicE|0|mjeřic|mjeřicE||
 měsíc|stroj|0|mjesic|hrad||
 měst|městO|0|mňest|městO||
@@ -9329,6 +9340,7 @@ ot|kopEC|0|tat|ženA||
 otoman|hrad|0|divan|hrad||
 ovoc|polE|0|ovoc|polE||
 pan|panNA|0|pan|panNA||
+pantofle||0|nazóvákê|||
 parkoviš|parkovišTĚ|0|parkovišť|parkovišťE||
 parskoviš|letišTĚ|0|parkovisk|městO||
 paříž|paříž|2|pařiž|pařiž||
@@ -9408,7 +9420,7 @@ stez|stezKA|0|ztez|ztezKA||
 stín|stín|0|ťin|ťin||
 stran|ženA|0|stran|ženA||
 strom|hrad|0|strom|hrad||
-studán|větvičKA|0|stôdynk|halózKA||
+studán|větvičKA|0|stôdyn|halózKA||
 studn|růžE|0|stôdň|ženA||
 stupín|háčEK|0|člôp|zmetEK||
 svadb|ženA|0|svajb|netálijA||
@@ -9420,10 +9432,12 @@ syn|pán|0|sên|pán||
 škvor|hrad|0|klišťák|hrad||
 španěl|pán|0|špaňhěl|pán||
 španělsk|městO|0|špaňhelsk|městO||
+špekáč|špekáčEK|0|cerbolát|cerbolát||hchc|cvek|||hchc
 štír|pán|0|ščór|pán||
 švet|větvičKA|0|kadlát|halózKA||
 švýcarsk|městO|0|helvécij|ženA||
 těhotenství|stavení|0|gravidit|ženA||
+toast||0|tóst|||
 tomáš|muž|0|tomáš|muž||
 trh|hrad|0|rên|zmetEK||
 troch|ženA|0|troch|ženA||
@@ -9447,6 +9461,7 @@ uzd|ženA|0|hôzd|ženA||
 v|vÍTR|0|větr|hrad||
 vědr|městO|0|okov|piseň||
 vejc|polE|0|véc|polA||
+vejmin|vejminEK|0|vémě|véměNA||hpos
 věk|hrad|0|věk|hrad||
 velbloud|velbloud|0|ščav|ščavA|||vembló|vemblóD||
 vesnic|vesnicE|0|ďeďi|ďeďiNA||
@@ -9482,24 +9497,10 @@ zel|stavení|0|kchél|hrad||
 zemětřesení|stavení|0|zemětřas|hrad||
 zeměžluč|stroj|0|zeměžlôť|hrad||
 změn|ženA|0|změn|ženA||
+žalud|žaludEK|0|žalód|žalódEK||
 žemlov|žemlovKA|0|bab|babA||
 žen|ženA|0|rob|robA||podr
 život|hrad|0|žêvot|hrad||
-vejmin|vejminEK|0|vémě|véměNA||hpos
-křepel|křepelKA|0|potpoliš|potpoliš||hpos
-bezin|bezinKA|0|kozeč|kozečKE||hpos
-toast||0|tóst|||
-bateri|bateriE|0|vňitř|vňitřEK||
-špekáč|špekáčEK|0|cerbolát|cerbolát||hchc|cvek|||hchc
-pantofle||0|nazóvákê|||
-žalud|žaludEK|0|žalód|žalódEK||
-|DVEŘE|0||DVEŘE||
-|NAROZENINY|0||NAROZEŇINY||
-chv|chvÍLE|0|chf|chfILA||
-blb|blbEC|0|hňop|hňop||hchc
-lakom|lakomEC|0|hamó|hamóN||
-medvěd|medvěd|0|hôňáč|hôňáč||hchc
-hospod|hospodA|0|hospo|hospoDA|||palôša||||krčma||hospoda horšího řádu|hchc
 -
 mladÝ|-1|é|ých|ým|é|é|ých|ými|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 jarní|-1||ho|mu|||m|m||||ch|m|||ch|mi|||||||||||||ch|m|||ch|mi||||ho|mu|ho||m|m||||ch|m|||ch|mi||||ho|mu|||m|m||||ch|m|||ch|mi||
@@ -9766,6 +9767,7 @@ zůstaT|22|-1|t|nu|neš|ne|neme|nete|nou|ň|ňme|ňte|l|l|la|lo|li|ly|ly|la
 žÍT|7|-1|ít|iju|iješ|ije|ijeme|ijete|ijí|ij|ijme|ijte|il|il|ila|ilo|ili|ily|ily|ila
 existOVAT|7|-1|ovat|uji,(hovorově) existuju|uješ|uje|ujeme|ujete|ují,(hovorově) existujou|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala
 milOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
+slibOVAT|15|-1|ovat|uji|uješ|uje|ujeme|ujete|ují|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala|ován|ován|ována|ováno|ováni|ovány|ovány|ována
 -
 BÊT|151|-1|bêt|sem,sô|si|je|zmê,zme|ste|só|bôdô|bôdeš|bôde|bôdem,bôdeme|bôdete|bôdó|bôď|bôďme|bôďte|bêl|bêl|bêla|bêlo|bêlê|bêlê|bêlê|bêla|bêch|bês|bê|bêhme|beste|bê
 bévAT|7|-1|at|ám|áš|á|áme|áte|ajó|?|?|?|?|?|?|?|?|?|?|?
@@ -9818,7 +9820,7 @@ ziskAT|15|-1|at|ám|áš|á|áme|áte|ajó|é|éme|éte|al|al|ala|alo|ale|ale|al
 zoptAT_SE|22|-1|at|ám|áš|á|áme|áte|ajó|é|éme|éte|al|al|ala|alo|alê|alê|alê|ala
 zvostaT|22|-1|t|nô|neš|ne|nem|nete|nó|ň|ňme|ňte|l|l|la|lo|lê|lê|lê|la?
 žET|7|-1|êt|êjô|êješ|êje|êjeme|êjete|êjó|é|éme|éte|êl|êl|êla|êlo|êlê|êlê|êlê|êla
-RÚST|23|-1|rúst?|rostu?|rosteš?|roste?|rosteme?|rostete?|rostou?|porostu?,budu rúst?|porosteš?,budeš rúst?|poroste?,bude rúst?|porosteme?,budeme rúst?|porostete?,budete rúst?|porostou?,budou rúst?|rosť?|rosťme?|rosťte?|rostl?|rostl?|rostla?|rustlo|rostli?|rostly?|rostly?|rostla?
+RÚST|23|-1|rust|rostô?|rosteš?|roste?|rostem?|rostete?|rostó?|porostu?|porosteš?|poroste?|porosteme?|porostete?|porostou?|rosť?|rosťme?|rosťte?|rostl?|rostl?|rostla?|rustlo|rostli?|rostly?|rostly?|rostla?
 mluvIT|15|-1|it|ím?|íš?|i|íme?|íte?|ijó|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 přeméšlET|7|-1|et|im|iš|i|ime|ite|ijó|é|éme|éte|el|el|ela|elo|elê|elê|elê|ela
 chêTNOUT|30|-1|tnout?|tnu?|tneš?|tne?|tneme?|tnete?|tnou?|ť?|ťme?|tňete?|tl|tl?,chytnul?,chyťil?|tla?,chytnula?,chyťila?|tnulo?,chyťilo?,chytlo?|tli?,chytnuli?,chyťili?|tly?,chytnuly?,chyťily?|tly?,chytnuly?,chyťily?|tla?,chytnula?,chyťila?|cen?,chytnut?|cen?,chytnut?|cena?,chytnuta?|ceno?,chytnuto?|ceňi?,chytnuťi?|ceny?,chytnuty?|ceny?,chytnuty?|cena?,chytnuta?
@@ -9827,6 +9829,7 @@ spomínAT|15|-1|at|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?
 ožRAT|21|-1|rat|?|?|?|?|?|?|eru|ereš|ere|erem|erete|eró|ral|ral|rala|ralo|ralê|ralê|ralê|rala
 egzistOVAT|7|-1|ovat|ôjô|ôješ|ôje|ôjem|ôjete|ôjó|ôj|ôjme|ôjte|oval|oval|ovala|ovalo|ovalê|ovalê|ovalê|ovala
 milOVAT|15|-1|ovat|ôjô|ôješ|ôje|ôjem|ôjete|ôjó|ôj|ôjme|ôjte|oval|oval|ovala|ovalo|ovalê|ovalê|ovalê|ovala|ován?|ován?|ována?|ované|ováňi?|ovány?|ovány?|ována?
+slêbOVAT|15|-1|ovat?|ôjô|ôješ|ôje|ôjem|ôjete|ôjó|ôj|ôjme?|ôjte|oval|oval|ovala|ovalo|ovalê|ovalê|ovalê|ovala|ován?|ován?|ována?|ováno?|ováňi?|ovány?|ovány?|ována?
 -
 |BÝT||BÊT||
 |JÍT||JIT||podr
@@ -9914,6 +9917,7 @@ nakouknout|||||
 op|opÍT|ož|ožRAT||
 exist|existOVAT|egzist|egzistOVAT||
 mil|milOVAT|mil|milOVAT||hchc
+slib|slibOVAT|slêb|slêbOVAT||
 -
 akorát|akoráď||
 alespoň|aspoň||

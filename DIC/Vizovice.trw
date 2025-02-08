@@ -1,8 +1,10 @@
-TW v2
+TW v4
 tVizovice
 aGG
 d31.08.2023 13:53:07
 c#Zdroje dat\nhttp://www.kiwiforum.cz/forum/viewtopic.php?p=73615&sid=a6195346fff35e3a617052eb8361e9f9\n-https://archive.org/details/vizovskyokres18peri/page/19/mode/1up (nevyčerpáno)\n-https://moravscina.wordpress.com/2012/01/02/cert-nad-certa/ (nevyčerpáno)
+bkniha|prijmeni=Bartoš|jmeno=František|nazev=Dialektologie moravská|misto=|vydavatel=|rok_vydani=|strany=72|issn=|odkaz=https://ia803406.us.archive.org/7/items/dialektologiemor01bartuoft/dialektologiemor01bartuoft.pdf|zpracovano=|shortcut=bar1\n\nperiodikum|prijmeni=Dušek|jmeno=Vavř. Jos.|prispevek=Dialektické zvláštnosti českého slovesa|periodikum=Listy filologické|podnazev=|rok=1892|misto=|vydavatel=|cislo=1/2|rocnik=19|strany=100-129|licence=|odkaz=https://www.jstor.org/stable/23436426|zpracovano=|shortcut=dzcs
+u1
 g49.2215186,17.8531512
 q0
 -
@@ -24,14 +26,20 @@ q0
 -
 -
 -
+osm|2||i|i|||i|i
+sedm|2||i|i|||i|i
 -
+osM|2|n|mi?|mi?|m?|m?|mi?|mi?
+sedM|2|n|mi?|mi?|m?|m?|mi?|mi?
 -
+osm|osm|os|osm||bar1
+sedm|sedm|sed|sedm||bar1
 -
 podívAT_SE|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 -
 podívAT_SE|30|-1|at_se?|u|áš?|á se?|áme se?|áte se?|ají se?|ej se?|ejme se?|ejte se?|al se?|al se?|ala se?|alo se?|ali se?|aly se?|aly se?|ala se?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?
 -
-podív|podívAT_SE|podív|podívAT_SE|
+podív|podívAT_SE|podív|podívAT_SE||
 -
 -
 -

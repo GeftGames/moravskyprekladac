@@ -1,9 +1,9 @@
-TW v3
+TW v4
 tLichnov
 aGG
 d01.05.2023 20:10:07
 ikery pocťivy młaďeňedz da nam groš česky na vjenec Lichnov NJ \nfurman był ceły dostrašeny, už z ňu aňi ňemłuvił Lichnov NJ\n
-bkniha|prijmeni=|jmeno=|nazev=Nářečí na Frenštátsku|misto=|vydavatel=|rok_vydani=|strany=71|issn=|odkaz=|zpracovano=1|shortcut=nnf\n\nkniha|prijmeni=Bělič|jmeno=Jaromír|nazev=Přehled nářečí českého jazyka|misto=|vydavatel=|rok_vydani=|strany=67|issn=|odkaz=|zpracovano=|shortcut=\n\nkniha|prijmeni=Bělič|jmeno=Jaromír|nazev=Nástin české dialektologie|misto=|vydavatel=|rok_vydani=|strany=264|issn=|odkaz=|zpracovano=|shortcut=\n\nsncj|i=|zpracovano=\n\nkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=78|issn=|odkaz=|zpracovano=0|shortcut=dcjs
+bkniha|prijmeni=|jmeno=|nazev=Nářečí na Frenštátsku|misto=|vydavatel=|rok_vydani=|strany=71|issn=|odkaz=|zpracovano=1|shortcut=nnf\n\nkniha|prijmeni=Bělič|jmeno=Jaromír|nazev=Přehled nářečí českého jazyka|misto=|vydavatel=|rok_vydani=|strany=67|issn=|odkaz=|zpracovano=|shortcut=\n\nkniha|prijmeni=Bělič|jmeno=Jaromír|nazev=Nástin české dialektologie|misto=Praha|vydavatel=Státní pedagogické nakladatelství|rok_vydani=1972|strany=294|licence=|ibsn=|issn=|odkaz=|zpracovano=0|shortcut=ncd\n\nsncj|i=|zpracovano=\n\nkniha|prijmeni=Knop|jmeno=Alois|nazev=Dějiny českého jazyka ve Slezsku a na Ostravsku|misto=|vydavatel=|rok_vydani=|strany=78|issn=|odkaz=|zpracovano=0|shortcut=dcjs\n\nperiodikum|prijmeni=Dušek|jmeno=Vavř. Jos.|prispevek=Dialektické zvláštnosti českého slovesa|periodikum=Listy filologické|podnazev=|rok=1892|misto=|vydavatel=|cislo=1/2|rocnik=19|strany=100-129|licence=|odkaz=https://www.jstor.org/stable/23436426|zpracovano=|shortcut=dzcs
 u1
 g49.5642269,18.1677571
 q0
@@ -18,17 +18,17 @@ ale chlapec ji viděl dobře|0|ale chlapec ju dobře||nnf
 začal kosou séct|1|začal ho smykať||nnf
 jak poté utíkal domů|0|jak potem přihnal domu||nnf
 -
-s ní|1|z ňu||nnf
-než obvykle|1|ež kdy inda||nnf
-seká za sebou trávu|1|smyče za sebu travňicu||nnf
-a říkal|1|a pravil||nnf
-na opěradle trakaře|1|na keľniku||nnf
-na opěradlo trakaře|1|na keľňik||nnf
-vedle sebe|0|vedle sebe||nnf
-na ni|1|na ňu||nnf
-nikdo neviděl|0|žaden ňeviďel||nnf
-praštila jej na obličej|0|liskla po hubě||nnf
-praštila ho na obličej|0|liskla po hubě||nnf
+s ní|1|-1|z ňu||nnf
+než obvykle|1|-1|ež kdy inda||nnf
+seká za sebou trávu|1|-1|smyče za sebu travňicu||nnf
+a říkal|1|-1|a pravil||nnf
+na opěradle trakaře|1|-1|na keľniku||nnf
+na opěradlo trakaře|1|-1|na keľňik||nnf
+vedle sebe|0|-1|vedle sebe||nnf
+na ni|1|-1|na ňu||nnf
+nikdo neviděl|0|-1|žaden ňeviďel||nnf
+praštila jej na obličej|0|-1|liskla po hubě||nnf
+praštila ho na obličej|0|-1|liskla po hubě||nnf
 -
 -
 mlá|mła
@@ -110,33 +110,33 @@ hubA|1|a?|y?|je?|u?|o?|ě|ou?|y?|?|ám?|y?|y?|ách?|ami?
 ||0|z Lichnova|||nnf
 ||0||||
 ||0|na Světlov|||nnf
+||0|stvořeňi|||nnf
 čarodejnic|čarodejnicE|0|čarodeňic|čarodeňicE||nnf
 groš||0|groš|||
 hlav|hlavA|0|hlav|hlavA||nnf
 hospod|hospodA|0|hospo|hospoDA||nnf
 hospody|hospodyNĚ|0|hospodyň|hospodyňE||nnf
 hrůz|hrůzA|0|hruz|hruzA||nnf
+hub|hubA|0|hub|hubA||nnf
 chlap|chlapEC|0|chlap|chlapEC||nnf
+chlap|chlap|0|chlap|chlap||nnf
+k|kŮŇ|0|k|kÚŇ||nnf
 mez|mez|0|mez|mez||nnf
 míst|místO|0|mis|misTO||nnf
 ml|mlHA|0|mh|mhLA||nnf
 mláden|mládenEC|0|młaďeň|młaďeňEC||
-ostrav|ostravA|0|ostrav|ostravA||nnf
+ostrav|ostravA|2|ostrav|ostravA||nnf
 pozor|pozor|0|pozor|pozor||nnf
 převozní|převozníK|0|furman|furman||nnf
 půl||0|puł|||
 pyt|pytEL|0|měch|měch||nnf
 ros|rosA|0|ros|rosA||nnf
+sen|senO|0|sen|senO||nnf
 smrt|smrt|0|smr|smrT||nnf
 soused|soused|0|sused|sused||nnf
 stařen|stařenA|0|staře|stařeNA||nnf
 tr|trÁVA|0|travňic|travňicA||nnf
 věn|věnEC|0|vjen|vjenEC||
-||0|stvořeňi|||nnf
-k|kŮŇ|0|k|kÚŇ||nnf
-sen|senO|0|sen|senO||nnf
-chlap|chlap|0|chlap|chlap||nnf
-hub|hubA|0|hub|hubA||nnf
 -
 zelenÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 poctivÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||

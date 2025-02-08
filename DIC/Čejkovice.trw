@@ -1,20 +1,22 @@
-TW v2
+TW v4
 tČejkovice
 aGG
 d25.06.2023 18:57:05
 ibranki se tam dali navrch, a ešťe dekl takovej Čejkovice HO
-c#Zdroje dat\n-sncj.ujc.cas.cz\n-https://archive.org/details/dialektickyslov00bartgoog/page/434/mode/1up#page=434\n-https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/\n-https://is.muni.cz/th/ncq01/Diplomova_prace.pdf (nevyčerpáno)\n\n#Popis nářečí\n-Střední L\nV Pavlovicích, Bořeticích, Čejkovicích a ve Vracově akkusativ mn. mužs. živ. zastoupen jest genitivem: Má dvúch bratrů, štyřech synů, dobrých rodičů. To je pro muzikantů. Šel mezi ženáčů. Zavolal mlatců. Na všecky cesty postavili vartýřů. Tech malých učil.\nv Čejkovicích tlustý, tlúct, tlačit\nČejkovicích dvoch, dvom, dvoma.\n-slovesa infinitiv: péct, hňéct\nza kv, tv, sv, chv se požívá kf, tf, sf, chf\n-jména mláďat zakončená na -e (húsa - húse, tela - tele)
+c#Popis nářečí\n-Střední L\nV Pavlovicích, Bořeticích, Čejkovicích a ve Vracově akkusativ mn. mužs. živ. zastoupen jest genitivem: Má dvúch bratrů, štyřech synů, dobrých rodičů. To je pro muzikantů. Šel mezi ženáčů. Zavolal mlatců. Na všecky cesty postavili vartýřů. Tech malých učil.\nv Čejkovicích tlustý, tlúct, tlačit\nČejkovicích dvoch, dvom, dvoma.\n-slovesa infinitiv: péct, hňéct\nza kv, tv, sv, chv se požívá kf, tf, sf, chf\n-jména mláďat zakončená na -e (húsa - húse, tela - tele)
+bkniha|prijmeni=Bartoš|jmeno=František|nazev=Národní písně moravské, v nově nasbírané|misto=|vydavatel=|rok_vydani=1889|strany=57-58|licence=|ibsn=|issn=|odkaz=https://archive.org/details/narodni_pisne_moravske/page/21/mode/1up|zpracovano=|shortcut=npmv\n\nsncj|i=|zpracovano=\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|licence=|ibsn=|issn=|odkaz=https://archive.org/details/dialektickyslov00bartgoog/page/434/mode/1up#page=434|zpracovano=|shortcut=\n\nweb|nazev=|nazev_webu=|odkaz=https://www.hustopecskachasa.cz/hanacke-slovacko/nareci/|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=\n\n_kniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|licence=|ibsn=|issn=|odkaz=https://is.muni.cz/th/ncq01/Diplomova_prace.pdf|zpracovano=0|shortcut=
 u1
 g48.9037217,16.9413705
 x3
+rnář=Čajkovice
 q0
-oSlovácko
+oSlovácko>Hanácké Slovácko
 -
 -
 -
 -
 -
-už je|1|už je|
+už je|1|-1|už je||
 -
 -
 -
@@ -34,7 +36,7 @@ reproduktoR|3|r|ra|ru,rovi|ra|re|ru,rovi|rem|ři|rů|rům|ry|ři|rech|ry
 cihelNA|1|na|ny|ně|nu|no|ně|nou|ny|en|nám|ny|ny|nách|nami
 baráK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích,kách|ky
 -
-kanEC|2|ec|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
+ganEC|2|ec|ce?|ci,covi?|ce?|če?|ci,covi?|cem?|ci?|ců?|cům?|ce?|ci?|cích?|ci?
 šuby|3|šuby|u?|u?|?|e?|u,ě?|em?|y?|ů?|ům?|y?|y?|ech?|y?
 syn|2|?|a?|u,ovi?|a?|u?|u,ovi?|em?|ové?|ů?|ům?|y?|ové?|ech?|y?
 bratR|2|r?|ra?|ru,rovi?|ra?|ře?|ru,rovi?|rem?|ři?|rů?|rům?|ry?|ři?|rech?|ry?
@@ -46,19 +48,19 @@ tlampač|3||ra?|ru?,rovi?|ra?|re?|ru?,rovi?|rem?|ři?|rú?|rúm?|ry?|ři?|rech?|
 ťihelNA|1|na|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|en?|nám?|ny?|ny?|nách?|nami?
 bajA|1|a|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?,kách?|ky?
 -
-||0|dekl||
-kan|kanEC|0|gan|kanEC|
-vinohrad|vinohrad|0||šuby|
-syn|syn|0|syn|syn|
-brat|bratR|0|brat|bratR|
-dub|dub|0|dub|dub|
-měsíc|měsíc|0|mňesíc|měsíc|
-vašík||2|vaša||
-cih|cihLA|0|ťih|ťihLA|
-žehlič|žehličKA|0|ťihlič|ťihličKA|
-reprodukto|reproduktoR|0|tlampač|tlampač|
-cihel|cihelNA|0|ťihel|ťihelNA|
-bará|baráK|0|baj|bajA|
+||0|dekl|||
+kan|kanEC|0|gan|ganEC||
+vinohrad|vinohrad|0||šuby||
+syn|syn|0|syn|syn||
+brat|bratR|0|brat|bratR||
+dub|dub|0|dub|dub||
+měsíc|měsíc|0|mňesíc|měsíc||
+vašík||2|vaša|||
+cih|cihLA|0|ťih|ťihLA||
+žehlič|žehličKA|0|ťihlič|ťihličKA||
+reprodukto|reproduktoR|0|tlampač|tlampač||
+cihel|cihelNA|0|ťihel|ťihelNA||
+bará|baráK|0|baj|bajA||
 -
 tlustÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 vysoKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -68,11 +70,11 @@ tlustÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ý
 vysoKÝ|-1|ké?|kého?|kému?|ké?|ké?|kém?|kým?|?|?|ká?|kých?|kým?|ká?|ká?|kých?|kými?|?|?|ká?|ké?|ké?|kou?|ká?|ké?|kou?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?|ký?|kého?|kému?|kého?|ký?|kém?|kým?|?|?|cí?|kých?|kým?|ké?|cí?|kých?|kými?|?|?|kej|kého?|kému?|ký?|ký?|kém?|kým?|?|?|ké?|kých?|kým?|ké?|ké?|kých?|kými?|?|?
 zeleNÝ|-1|né?|ného?|nému?|né?|né?|ném?|ným?|n?|n?|ná?|ných?|ným?|ná?|ná?|ných?|nými?|n?|n?|ná?|né?|né?|nou?|ná?|né?|nou?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?|ný?|ného?|nému?|ného?|ný?|ném?|ným?|n?|n?|ní?|ných?|ným?|né?|ní?|ných?|nými?|n?|n?|nej|ného?|nému?|ný?|ný?|ném?|ným?|n?|n?|né?|ných?|ným?|né?|né?|ných?|nými?|n?|n?
 -
-tlust|tlustÝ|tlust|tlustÝ|
-vyso|vysoKÝ|viso|vysoKÝ|
-ztracený|zelenÝ|straťe|zeleNÝ|
-||střízb|tlustÝ|
-červen|zelenÝ|červe|zeleNÝ|
+tlust|tlustÝ|tlust|tlustÝ||
+vyso|vysoKÝ|viso|vysoKÝ||
+ztracený|zelenÝ|straťe|zeleNÝ||
+||střízb|tlustÝ||
+červen|zelenÝ|červe|zeleNÝ||
 -
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
 takovÝ|ý|ého|ému|ého|-|ém|ým|í|ých|ým|é|-|ých|ými|ý|ého|ému|ý|-|ém|ým|é|ých|ým|é|-|ých|ými|á|é|é|ou|-|é|ou|é|ých|ým|é|-|ých|ými|é|ého|ému|é|-|ém|ým|á|ých|ým|á|-|ých|ými
@@ -82,9 +84,9 @@ SE|-|sebe?|si,sobě?|se|-|sobě?|sebou?
 takovÝ|ý?|ého?|ému?|ého?|-|ém?|ým?|í?|ých?|ým?|é?|-|ých?|ými?|ý?|ého?|ému?|ý?|-|ém?|ým?|é?|ých?|ým?|é?|-|ých?|ými?|á?|é?|é?|ou?|-|é?|ou?|é?|ých?|ým?|é?|-|ých?|ými?|é?|ého?|ému?|é?|-|ém?|ým?|á?|ých?|ým?|á?|-|ých?|ými?
 svŮJ|új|ého?|ému?|ého?|ůj?|ém?|ým?|i?,í?|ých?|ým?|e?,é?|i?,í?|ých?|ými?|ůj?|ého?|ému?|ůj?|ůj?|ém?|ým?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,á?|í?,é?|í?,é?|i?,ou?|e?,á?|í?,é?|í?,ou?|e?,é?|ých?|ým?|e?,é?|e?,é?|ých?|ými?|e?,é?|ého?|ému?|e?,é?|e?,é?|ém?|ým?|e?,á?|ých?|ým?|e?,á?|e?,á?|ých?|ými?
 -
-|SE||SE|
-takovÝ|takovÝ|takovÝ|takovÝ|
-sv|svŮJ|sf|svŮJ|
+|SE||SE||
+takovÝ|takovÝ|takovÝ|takovÝ||
+sv|svŮJ|sf|svŮJ||
 -
 dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-
 čtyřI|2|i|vorově) čtyřech[1],,(hovorově) čtyřech[1]|em|i|i|ech|tyřma[2],mi,čtyřma[2]
@@ -92,8 +94,8 @@ dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě
 dvA|4|a?|och|om|a?|a?|ou?|oma|-|-|-|-|-|-|-|a?|och|om|a?|a?|ou?|oma|-|-|-|-|-|-|-|ě?|och|om|ě?|ě?|ou?|oma|-|-|-|-|-|-|-|ě?|och|om|ě?|ě?|ou?|oma|-|-|-|-|-|-|-
 čtyřI|2|í|vorově) čtyřech[1]?,?,(hovorově) čtyřech[1]?|em?|i?|i?|ech?|tyřma[2]?,mi?,čtyřma[2]?
 -
-dv|dvA|dv|dvA|
-čtyř|čtyřI|štiř|čtyřI|
+dv|dvA|dv|dvA||
+čtyř|čtyřI|štiř|čtyřI||
 -
 dÁT|94|-1|át|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána|av|avši|avše
 tlOUCT|15|-1|ouct|uku,tluču|učeš|uče|učeme|učete|ukou,tlučou|uč,tluc|učme,tlucme|učte,tlucte|oukl|oukl|oukla|ouklo|oukli|oukly|oukly|oukla|učen|učen|učena|učeno|učeni|učeny|učeny|učena
@@ -102,6 +104,7 @@ hnÍST|15|-1|íst|ětu|ěteš|ěte|ěteme|ětete|ětou|ěť|ěťme|ěťte|ětl|�
 řÍCT|30|-1|íct|eknu,(knižně) řku[2]|ekneš|ekne|ekneme|eknete|eknou|ekni,(knižně) rci[2]|ekněme,(knižně) rceme|ekněte,(knižně) rcete[2]|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla|ečen|ečen|ečena|ečeno|ečeni|ečeny|ečeny|ečena
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
 chvÁLIT|15|-1|álit|álím|álíš|álí|álíme|álíte|álí|al|alme|alte|álil|álil|álila|álilo|álili|álily|álily|álila|álen|álen|álena|áleno|áleni|áleny|áleny|álena
+dožadOVAT_SE|7|-1|ovat_se|uju|uješ|uje|ujeme|ujete|ují se,dožadujou se (hovorově)|uj|ujme|ujte|oval|oval|ovala|ovalo|ovali|ovaly|ovaly|ovala
 -
 dÁT|94|-1|át?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ejte?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áni?|ány?|ány?|ána?|av?|avši?|avše?
 tlOUCT|15|-1|úct|uku,tluču?|učeš?|uče?|učeme?|učete?|ukou,tlučou?|uč,tluc?|učme,tlucme?|učte,tlucte?|oukl?|oukl?|oukla?|ouklo?|oukli?|oukly?|oukly?|oukla?|učen?|učen?|učena?|učeno?|učeni?|učeny?|učeny?|učena?
@@ -110,23 +113,25 @@ hnÍST|15|-1|éct|ětu?|ěteš?|ěte?|ěteme?|ětete?|ětou?|ěť?|ěťme?|ěťt
 řÍCT|30|-1|íct?|eknu,(knižně) řku[2]?|ekneš?|ekne?|ekneme?|eknete?|eknou?|ekni,(knižně) rci[2]?|ekněme,(knižně) rceme?|ekněte,(knižně) rcete[2]?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?|ečen?|ečen?|ečena?|ečeno?|ečeni?|ečeny?|ečeny?|ečena?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|jste?|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
 chvÁLIT|15|-1|álit|álím?|álíš?|álí?|álíme?|álíte?|álí?|al?|alme?|alte?|álil?|álil?|álila?|álilo?|álili?|álily?|álily?|álila?|álen?|álen?|álena?|áleno?|áleni?|áleny?|áleny?|álena?
+dožúvAT|7|-1|at|uju?|uješ?|uje?|ujeme?|ujete?|ují se?,dožadujou se (hovorově)?|uj?|ujme?|ujte?|oval?|oval?|ovala?|ovalo?|ovali?|ovaly?|ovaly?|ovala?
 -
-dÁ|dÁT|dÁ|dÁT|
-tl|tlOUCT|tl|tlOUCT|
-tlačit||tlačit||
-p|pÉCT|p|pÉCT|
-hn|hnÍST|hň|hnÍST|
-ř|řÍCT|ř|řÍCT|
-|BÝT||BÝT|
-chv|chvÁLIT|chv|chvÁLIT|
-pusinkovat||cicmat||
+dÁ|dÁT|dÁ|dÁT||
+tl|tlOUCT|tl|tlOUCT||
+tlačit||tlačit|||
+p|pÉCT|p|pÉCT||
+hn|hnÍST|hň|hnÍST||
+ř|řÍCT|ř|řÍCT||
+|BÝT||BÝT||
+chv|chvÁLIT|chv|chvÁLIT||
+pusinkovat||cicmat|||
+dožad|dožadOVAT_SE|dožúv|dožúvAT||
 -
-ještě|ešťe|
-nahorů|navrch|
-doposud|dofčilku|
-už|už|
+ještě|ešťe||
+nahorů|navrch||
+doposud|dofčilku||
+už|už||
 -
 -
-a|a|
+a|a||
 -
 -

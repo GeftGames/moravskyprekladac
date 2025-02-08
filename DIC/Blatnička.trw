@@ -3,7 +3,7 @@ tBlatnička
 aGG
 d25.06.2023 16:58:49
 is tebú młúvid a ze starú bránkú vŕzaď je jedno Blatnička HO – je to zbytečná řeč\ngalán z galánkú seďí pod bránkú a galánka płáče, že bi jedła kołáče Blatnička\n do Słafkova sa jede š čupka do čupka Blatnička HO\ndvúkolajka Blatnička HO\nďecka sa enom pořáď dožírajú Blatnička HO\nžadonit: ďecka furd dožírajú, abih ím kúpiła bombósú Blatnička HO\nkołem Prosťejova je dobrí kraj Blatnička HO,
-bsncj|i=Blatnička HO|zpracovano=0
+bsncj|i=Blatnička HO|zpracovano=0\n\nperiodikum|prijmeni=Dušek|jmeno=Vavř. Jos.|prispevek=Dialektické zvláštnosti českého slovesa|periodikum=Listy filologické|podnazev=|rok=1892|misto=|vydavatel=|cislo=1/2|rocnik=19|strany=100-129|licence=|odkaz=https://www.jstor.org/stable/23436426|zpracovano=|shortcut=dzcs
 u1
 g48.9353811,17.5305455
 rnář=Małá Błatňica,de=Klein Blatnitz
@@ -55,6 +55,7 @@ projíždí spřažení koní|1|-1|tahne cuk||
 dělali rámus když měli spát|1|-1|bałamúťili||sncj
 duje vítr|1|-1|búří sa vjetr||sncj
 utíkej rychle|1|-1|uťekaj o dva štiri||sncj
+až napředu|1|-1|až napředu|od příst|dzcs
 -
 ámen,amen|1|amen||
 -
@@ -355,7 +356,7 @@ ONA|ona?|jí?,ňí*?|jí?,ňí*?|ji?,ňi*?|-|ňí|jí?,ňí*?
 TEN|ten?|toho?|tomu?|toho?|-|tom?|tím?|ti?|těch?|těm?|ti?|-|těch?|těmi?|ten?|toho?|tomu?|ten?|-|tom?|tím?|ty?|těch?|těm?|ty?|-|tich|těmi?|ta|té?|té?|tu?|-|té?|tou?|ty?|těch?|těm?|ty?|-|těch?|těmi?|to?|toho|tomu?|to|-|tom?|tím?|ty?|těch?|těm?|ty?|-|těch?|těmi?
 neCO|co|čeho?|čemu?|co?|co?|čem?|čím?
 nÁŠ|áš?|ašeho?|ašemu?|ašeho?|áš?|ašem?|aším?|aši?|ašich?|ašim?|aše?|aši?|ašich?|ašimi?|áš?|ašeho?|ašemu?|áš?|áš?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aša|aší?|aší?|aši?|aše?|aší?|aší?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?|aše?|ašeho?|ašemu?|aše?|aše?|ašem?|aším?|aše?|ašich?|ašim?|aše?|aše?|ašich?|ašimi?
-JÁ|já|mě?,(kňižňe) mne[2]?|mňe?,mi?|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
+JÁ|já|mě?,(kňižňe) mne[2]?|mňe|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 neCO|co|čeho?|čemu?|co?|co?|čem?|čím?
 ňiC|c|čeho?|čemu?|c?|c?|čem?|čím?
 nekeRÝ|rý?|rého?|rému?|rého?|-|rém?|rým?|ří|rých?|rým?|ré?|-|rých?|rými?|rý?|rého?|rému?|rý?|-|rém?|rým?|ré?|rých?|rým?|ré?|-|rých?|rými?|rá?|ré?|ré?|rou?|-|ré?|rou?|ré?|rých?|rým?|ré?|-|rých?|rými?|ré?|rého?|rému?|ré?|-|rém?|rým?|rá?|rých?|rým?|rá?|-|rých?|rými?
@@ -376,7 +377,7 @@ ně|něCO|ne|neCO||
 někte|někteRÝ|neke|nekeRÝ||
 ni|niC|ňi|ňiC||
 sv|svŮJ|sv|svÚJ||
-t|tY||TY||
+t|tY||TY||dzcs
 t|tEN||TEN||
 |ON||ON||sncj
 -
@@ -428,9 +429,10 @@ utíkAT|7|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|al
 běžET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
 házET|15|-1|et|ím|íš|í|íme|íte|í,házejí|ej|ejme|ejte|el|el|ela|elo|eli|ely|ely|ela|en|en|ena|eno|eni|eny|eny|ena
 tÉCT|7|-1|éct|eku,teču|ečeš|eče|ečeme|ečete|ekou,tečou|eč|ečme|ečte|ekl|ekl|ekla|eklo|ekli|ekly|ekly|ekla
+přÍST|15|-1|íst|edu|edeš|ede|edeme|edete|edou|eď|eďme|eďte|edl|edl|edla|edlo|edli|edly|edly|edla|eden|eden|edena|edeno|edeni|edeny|edeny|edena
 -
 mluvIT|15|-1|id|ím?|íš?|í?|íme?|íte?|í?|?|me?|te?|il?|il?|ila?|ilo?|ili?|ily?|ily?|ila?|en?|en?|ena?|eno?|eni?|eny?|eny?|ena?
-BÝT|247|-1|být?|jsem?|si|je|jsme?|jste?|sú|budu?|budeš?|bude|budeme?|budete?|budou?|buď?|buďme?|buďte?|bíł|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
+BÝT|247|-1|být?|jsem?|si|je|jsme?|jste?|sú|budu?|budeš|bude|budeme?|budete?|budou?|buď?|buďme?|buďte?|bíł|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|bi|bychom?|byste?|by?
 płAKAT|7|-1|akat?|áču?|áčeš?|áče|áčeme?|áčete?|áčou?|ač,plakej?|ačme,plakejme?|ačte,plakejte?|akal?|akal?|akala?|akalo?|akali?|akaly?|akaly?|akala?
 jÍST|15|-1|íst?|ím?|íš?|í?|íme?|íte?|edí?|ez?|ezme?|ezte?|edl?|edl?|edła|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeni?|edeny?|edeny?|edena?
 JET|31|-1|jet?|jedu?|jedeš?|jede|jedeme?|jedete?|jedú|pojedu?|pojedeš?|pojede?|pojedeme?|pojedete?|pojedou?|jeď?|jeďme?|jeďte?|jel?|jel?|jela?|jelo?|jeli|jely?|jely?|jela?|jet?|jet?|jeta?|jeto?|jeti?|jety?|jety?|jeta?
@@ -462,17 +464,23 @@ uťekAT|7|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|al
 bježET|7|-1|et?|ím?|íš?|í?|íme?|íte?|í?||me?|te?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?
 házET|15|-1|ad|ím?|íš?|í?|íme?|íte?|í?,házejí?|ej?|ejme?|ejte?|el?|el?|ela?|elo?|eli?|ely?|ely?|ela?|en?|en?|ena?|eno?|eňi?|eny?|eny?|ena?
 tÉCT|7|-1|éct?|eku?,teču?|ečeš?|eče|ečeme?|ečete?|ekou?,tečou?|eč?|ečme?|ečte?|ekl?|ekl?|ekla?|eklo?|ekli?|ekly?|ekly?|ekla?
+přÍST|15|-1|asť|edu?|edeš?|ede?|edeme?|edete?|edou?|eď?|eďme?|eďte?|edl?|edl?|edla?|edlo?|edli?|edly?|edly?|edla?|eden?|eden?|edena?|edeno?|edeňi?|edeny?|edeny?|edena?
 -
-|BÝT||BÝT||
+|BÝT||BÝT||dzcs
 |JET||JET||sncj
 ||štrekovat|||
 |JÍT||JÍT||
 ||naprší |||
 |SPADNOUT||SPADNOUT||
+||pozbíráš|||
+|| obuj si|||sncj
+běž|běžET|bjež|bježET||sncj
+couv|couvNOUT|cúf|cúfNOUT||
 ček|čekAT|ček|čekAT||
 d|dÁT|d|dÁT||
 domlacet ||domłacáme |||
 dosta|dostaT|dost|dostAT||
+ház|házET|ház|házET||sncj
 ch|chTÍT|ch|chŤÍT||
 cho|choDIT|cho|choĎIT||
 jÍ|jÍST|jÍ|jÍST||
@@ -486,11 +494,14 @@ neček|čekAT|neček|čekAT||
 neslyš|slyšET|neč|čUT||
 otrav|otravOVAT|dožír|dožírAT||
 pl|plAKAT|pł|plAKAT||
+př|přÍST|př|přÍST||dzcs
 slyš|slyšET|č|čUT||
 sm|smÁT_SE|sm|smÁT_SE||
 spotřeb|spotřebOVAT|spotřeb|spotřebOVAT||
 škádlí||dožír|dožírAT||
 t|tÁHNOUT|t|tÁHNOUT||
+t|tÉCT|t|tÉCT||sncj
+utík|utíkAT|uťek|uťekAT||sncj
 v|vZÍT|v|vZÍT||
 vrzat||vŕzaď|||
 vstáv|vstávAT|stáv|vstávAT||
@@ -498,13 +509,6 @@ vyděl|vydělAT|vyďeł|vyďełAT||
 zab|zabÍT|zab|zabÍT||
 zavř|zavřÍT|zavř|zavřÍT||
 zůsta|zůstaT|osta|ostaT||
-couv|couvNOUT|cúf|cúfNOUT||
-||pozbíráš|||
-utík|utíkAT|uťek|uťekAT||sncj
-|| obuj si|||sncj
-běž|běžET|bjež|bježET||sncj
-ház|házET|ház|házET||sncj
-t|tÉCT|t|tÉCT||sncj
 -
 boso,bosky,naboso|boski||
 celkem|cełkovňe||
@@ -524,6 +528,7 @@ pořád|pořáď|||furd||
 tady|tu||
 úplně|načisto||
 už|už||
+až|až||dzcs
 -
 se||ze||
 pod||pod||

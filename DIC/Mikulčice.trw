@@ -1,49 +1,54 @@
-TW v2
+TW v4
 tMikulčice
 aGG
 d18.07.2023 7:43:15
 ipodmínkově přípustková; i kdyby: bár bi aj hnet pršao, už ňidz neporoste Mikulčice HO\n\nSymboly: ṵ
 c#Zdroje dat\n-https://sncj.ujc.cas.cz/\n-Nářečí na Břeclavsku a v Dolním Pomoraví, František Svěrák, str. 183 (nevyčerpán začátek, úkázka na koncu ano)
+bweb|nazev=|nazev_webu=|odkaz=https://digilib.phil.muni.cz/sites/default/files/pdf/124103.pdf|rok_navstevy=|mesic_navstevy=|den_navstevy=|zpracovano=|shortcut=hzta\n\nkniha|prijmeni=Bartoš|jmeno=František|nazev=Lid a národ|misto=|vydavatel=|rok_vydani=|strany=65|issn=|odkaz=https://www.digitalniknihovna.cz/kfbz/view/uuid:f1ad27c8-d039-43d9-8f0b-e1e8433273ea?page=uuid%3Adde5f97f-814b-11ed-bf66-001b63bd97ba|zpracovano=|shortcut=lnfb\n\nperiodikum|prijmeni=Dušek|jmeno=Vavř. Jos.|prispevek=Dialektické zvláštnosti českého slovesa|periodikum=Listy filologické|podnazev=|rok=1892|misto=|vydavatel=|cislo=1/2|rocnik=19|strany=100-129|licence=|odkaz=https://www.jstor.org/stable/23436426|zpracovano=|shortcut=dzcs
+u1
 g48.8163838,17.050578
+rnář=Mikulčice
 q0
-oSlovácko
+oSlovácko>Podluží
 -
 -
 -
 -
-že jsem dělal politiku|0|že sem politikovaṵ|
+že jsem dělal politiku|0|že sem politikovaṵ||
 -
-i kdyby|1|bár bi aj|
-nahorů na humna|1|hore humen|
-střelným prachem|1|černím pracem|
-když jsem|0|diš sem|
-když byly|0|diš bili|
-nad tím|0|nat tím|
-nad tím|0|nat tím uhlem|
-vrsta uhlí|1|flec|
-pod tou|0|pot tú|
-vrstvou uhlí|1|flecú|
-zelený slín|1|tégr|
-to už je|0|to uš je|
-když se|0|diš sa|
-přerostlé uhlí|1|žiďi|zmotaný dřevěný uhel
-více šachet|0|víc šachtí|
-v kleci|0|f kleci|
-čistit obilí na sítě|1|fugarovat|
+i kdyby|1|-1|bár bi aj||
+nahorů na humna|1|-1|hore humen||
+střelným prachem|1|-1|černím pracem||
+když jsem|0|-1|diš sem||
+když byly|0|-1|diš bili||
+nad tím|0|-1|nat tím||
+nad tím|0|-1|nat tím uhlem||
+vrsta uhlí|1|-1|flec||
+pod tou|0|-1|pot tú||
+vrstvou uhlí|1|-1|flecú||
+zelený slín|1|-1|tégr||
+to už je|0|-1|to uš je||
+když se|0|-1|diš sa||
+přerostlé uhlí|1|-1|žiďi|zmotaný dřevěný uhel|
+více šachet|0|-1|víc šachtí||
+v kleci|0|-1|f kleci||
+čistit obilí na sítě|1|-1|fugarovat||
 -
 -
 -
-ou|ú
-ně|ňe
-pě|pje
+dě|ďe
 di|ďi
 dí|ďí
-ti|ťi
+ně|ňe
 ni|ňi
 ní|ňí
+ou|ú
+pě|pje
+tě|ťe
+ti|ťi
 tí|ťí
-y|i
 ů|ú
+y|i
 -
 šelo|šaṵo
 čal|čaṵ
@@ -83,6 +88,9 @@ organizacE|1|e|e|i|i|e|i|í|e|í|ím|e|e|ích|emi
 ameriKA|0|ka|ky|ce|ku|ko|ce|kou|ky|k|kám|ky|ky|kách|kami
 patRO|0|ro|ra|ru|ro|ro|ře,ru|rem|ra|er|rům|ra|ra|rech|ry
 cukrovar|3||u|u||e|u,e|em|y|ů|ům|y|y|ech|y
+čáp|2||a|u,ovi|a|e|u,ovi|em|i,ové|ů|ům|y|i,ové|ech|y
+soused|1||a|u,ovi|a|e|u,ovi|em|é,i|ů|ům|y|é,i|ech|y
+psotníK|3|k|ku|ku|k|ku|ku|kem|ky|ků|kům|ky|ky|cích|ky
 -
 HRÁBĚ|1|-|-|-|-|-|-|-|hrabje|hrábí?|hrábím?|hrábje?|hrábje?|hrábích?|hrábjemi?
 kolejňicE|1|e?|e?|i?|i?|e?|i?|í?|e|?|ím?|e?|e?|ích?|emi?
@@ -113,43 +121,49 @@ orgaňizacE|1|e?|e?|i?|i|e?|i?|í?|e?|í?|ím?|e?|e?|ích?|emi?
 ameriKA|0|ka?|ky?|ce?|ku?|ko?|ce|kou?|ky?|k?|kám?|ky?|ky?|kách?|kami?
 patRO|0|ro?|ra?|ru?|ro?|ro?|ře,ru?|rem?|ra|er?|rúm?|ra?|ra?|rech?|ry?
 cukrovŇA|3|ňa|u?|u?|?|e?|u?,e?|em?|y?|ú?|úm?|y?|y?|ech?|y?
+bogdaL|2|ṵ|la?|lu?,lovi?|la?|le?|lu?,lovi?|lem?|li?,lové?|lú?|lúm?|ly?|li?,lové?|lech?|ly?
+súseD|1|?|a?|u?,ovi?|a?|e?|u?,ovi?|em?|é|ú?|úm?|y?|é?,i?|ech?|y?
+psotňíK|3|k?|ku?|ku?|k?|ku?|ku?|kem?|ky?|kú?|kúm?|ky?|ky?|cích?|ky?
 -
-krumpáč|krumpáč|0|krumpáč|krumpáč|
-prach|prach|0|prach|prach|
-motyč|motyčKA|0|motič|motyčKA|
-uhlí|uhlí|0|uhl|uhlí||uh|uhEL|
-kotouč|kotouč|0|kotúč|kotouč|
-truhlík|truhlík|0|truhlík|truhlík|
-|HRÁBĚ|0||HRÁBĚ|nástroj
-kus|kus|0|kus|kus|
-kolejnic|kolejnicE|0|kolejňic|kolejňicE|
-šíny||0|šíni||skládané kolejnice
-šach|šachTA|0|šach|šachTA|
-metr|metr|0|metr|metr|
-lignit|lignit|0|lignit|lignit|
-vrst|vrstVA|0|vrst|vrstVA|
-šmot||0|šmot||hornicky suchá vrstva mezi uhlím
-slín|slín|0|slín|slín|
-puklina||0|pukliny||
-vod|vodA|0|vod|vodA|
-ž|žÍLA|0|ž|žÍLA|
-šach|šachTA|0|šach|šachTA|
-trest|trest|0|trest|trest|
-da|daŇ|0|da|daŇ|
-pomoc|pomoc|0|pomoc|pomoc|
-republi|republiKA|0|republi|republiKA|
-havíř|havíř|0|hajer|havíř|
-organizac|organizacE|0|organizac|orgaňizacE|
-časopis|časopis|0|časopis|časopis|
-žeb|žebRO|0|žeb|žebRO|
-mezipodesta||0|otpočinek||
-ameri|ameriKA|0|ameri|ameriKA|
-pat|patRO|0|pat|patRO|
-cvrček||0|čvrček||
-křídlovka||0|flíghorna||trublka
-vrstevník||0|rovesňík||
-vrstevnice||0|rovesňica||
-cukrovar|cukrovar|0|cukrov|cukrovŇA|
+krumpáč|krumpáč|0|krumpáč|krumpáč||
+prach|prach|0|prach|prach||
+motyč|motyčKA|0|motič|motyčKA||
+uhlí|uhlí|0|uhl|uhlí|||uh|uhEL||
+kotouč|kotouč|0|kotúč|kotouč||
+truhlík|truhlík|0|truhlík|truhlík||
+|HRÁBĚ|0||HRÁBĚ|nástroj|
+kus|kus|0|kus|kus||
+kolejnic|kolejnicE|0|kolejňic|kolejňicE||
+šíny||0|šíni||skládané kolejnice|
+šach|šachTA|0|šach|šachTA||
+metr|metr|0|metr|metr||
+lignit|lignit|0|lignit|lignit||
+vrst|vrstVA|0|vrst|vrstVA||
+šmot||0|šmot||hornicky suchá vrstva mezi uhlím|
+slín|slín|0|slín|slín||
+puklina||0|pukliny|||
+vod|vodA|0|vod|vodA||
+ž|žÍLA|0|ž|žÍLA||
+šach|šachTA|0|šach|šachTA||
+trest|trest|0|trest|trest||
+da|daŇ|0|da|daŇ||
+pomoc|pomoc|0|pomoc|pomoc||
+republi|republiKA|0|republi|republiKA||
+havíř|havíř|0|hajer|havíř||
+organizac|organizacE|0|organizac|orgaňizacE||
+časopis|časopis|0|časopis|časopis||
+žeb|žebRO|0|žeb|žebRO||
+mezipodesta||0|otpočinek|||
+ameri|ameriKA|0|ameri|ameriKA||
+pat|patRO|0|pat|patRO||
+cvrček||0|čvrček|||
+křídlovka||0|flíghorna||trublka|
+vrstevník||0|rovesňík|||
+vrstevnice||0|rovesňica|||
+cukrovar|cukrovar|0|cukrov|cukrovŇA||
+čáp|čáp|0|bogda|bogdaL||
+soused|soused|0|súsed|súseD||
+psotní|psotníK|0|psotňí|psotňíK||
 -
 černÝ|-1|é|ého|ému|é|é|ém|ým|||á|ých|ým|á|á|ých|ými|||á|é|é|ou|á|é|ou|||é|ých|ým|é|é|ých|ými|||ý|ého|ému|ého|ý|ém|ým|||í|ých|ým|é|í|ých|ými|||ý|ého|ému|ý|ý|ém|ým|||é|ých|ým|é|é|ých|ými||
 hluboKÝ|-1|ké|kého|kému|ké|ké|kém|kým|||ká|kých|kým|ká|ká|kých|kými|||ká|ké|ké|kou|ká|ké|kou|||ké|kých|kým|ké|ké|kých|kými|||ký|kého|kému|kého|ký|kém|kým|||cí|kých|kým|ké|cí|kých|kými|||ký|kého|kému|ký|ký|kém|kým|||ké|kých|kým|ké|ké|kých|kými||
@@ -165,21 +179,21 @@ jarní|-1|?|ho?|mu?|?|?|m?|m?|?|?|?|ch?|m?|?|?|ch?|mi?|?|?|?|?|?|?|?|?|?|?|?|?|c
 celÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á?|é?|é?|ou?|á?|é?|ou?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|ý?|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 rozkvetlÝ|-1|é?|ého?|ému?|é?|é?|ém?|ým?|?|?|á?|ých?|ým?|á?|á?|ých?|ými?|?|?|á|é?|é?|ú|á?|é?|ú?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?|ý?|ého?|ému?|ého?|ý?|ém?|ým?|?|?|í?|ých?|ým?|é?|í?|ých?|ými?|?|?|í|ého?|ému?|ý?|ý?|ém?|ým?|?|?|é?|ých?|ým?|é?|é?|ých?|ými?|?|?
 -
-čern|černÝ|čer|čerNÝ|
-železn|černÝ|želez|čerNÝ|
-hlubo|hluboKÝ|hubo|hluboKÝ|
-su|suCHÝ|su|suCHÝ|
-zelen|černÝ|zele|čerNÝ|
-špatnější|jarní|špaťňejší|jarní|
-drobn|černÝ|drob|čerNÝ|
-přerostl|černÝ|přerústl|rozkvetlÝ|
-smotan|černÝ|zmota|čerNÝ|
-dřevěn|černÝ|dřevje|čerNÝ|
-řezan|černÝ|řeza|čerNÝ|
-boží|jarní|boží|jarní|
-nov|černÝ|nov|rozkvetlÝ|
-odborov|rozkvetlÝ|odborov|rozkvetlÝ|
-||horňickí časopis||
+čern|černÝ|čer|čerNÝ||
+železn|černÝ|želez|čerNÝ||
+hlubo|hluboKÝ|hubo|hluboKÝ||
+su|suCHÝ|su|suCHÝ||
+zelen|černÝ|zele|čerNÝ||
+špatnější|jarní|špaťňejší|jarní||
+drobn|černÝ|drob|čerNÝ||
+přerostl|černÝ|přerústl|rozkvetlÝ||
+smotan|černÝ|zmota|čerNÝ||
+dřevěn|černÝ|dřevje|čerNÝ||
+řezan|černÝ|řeza|čerNÝ||
+boží|jarní|boží|jarní||
+nov|černÝ|nov|rozkvetlÝ||
+odborov|rozkvetlÝ|odborov|rozkvetlÝ||
+||horňickí časopis|||
 -
 niC|c|čeho|čemu|c|c|čem|čím
 SE|-|sebe|si,sobě|se,sebe|-|sobě|sebou
@@ -199,14 +213,15 @@ JÁ|já|mě?,(knižně) mne[2]?|mně?,mi?|mě?,(knižně) mne[2]?|já?|mně?|mno
 MY|mi|nás?|nám?|nás?|my?|nás?|námi?
 ONI|oni?|jich?,nich*?|jim?,nim*?|je?,ně*?|-|nich*?|jimi?,#ňima
 -
-ni|niC|ňi|ňiC|
-|SE||SE|
-t|tEN||TEN|
-takov|takovÝ|takov|takovÝ|
-t|tENTO||TENTO|
-|JÁ||JÁ|
-|MY||MY|
-|ONI||ONI|
+ni|niC|ňi|ňiC||
+|SE||SE||
+t|tEN||TEN||
+takov|takovÝ|takov|takovÝ||
+t|tENTO||TENTO||
+|JÁ||JÁ||
+|MY||MY||
+|ONI||ONI||
+ladakdo||bárgdo|||hzta|ledagdo|||hzta
 -
 padesát|2||i|i|||i|i
 první|4||ho|mu|ho||m|m||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi|||||||||ch|m|||ch|mi||ho|mu|||m|m||ch|m|||ch|mi
@@ -218,10 +233,10 @@ první|4|?|ho?|mu?|ho?|?|m?|m?|?|ch?|m?|?|?|ch?|mi?|?|ho?|mu?|?|?|m?|m?|?|ch?|m?
 pjet|2||i?|i?|?|?|i?|i?
 třI|2|i|třech[1]?,í?,třech[1]?|em?|i?|i?|ech?|emi?
 -
-padesát|padesát|padesá|padesáT|
-první|první|prvňí|první|
-pět|pět|pjet|pjet|
-tř|třI|tř|třI|
+padesát|padesát|padesá|padesáT||
+první|první|prvňí|první||
+pět|pět|pjet|pjet||
+tř|třI|tř|třI||
 -
 pršET|7|-1|et|ím|íš|í|íme|íte|í||me|te|el|el|ela|elo|eli|ely|ely|ela
 RŮST|23|-1|růst|rostu|rosteš|roste|rosteme|rostete|rostou|porostu,budu růst|porosteš,budeš růst|poroste,bude růst|porosteme,budeme růst|porostete,budete růst|porostou,budou růst|rosť|rosťme|rosťte|rostl|rostl|rostla|rostlo|rostli|rostly|rostly|rostla
@@ -263,56 +278,79 @@ vycházET|7|-1|et?|ím?|íš?|í?|íme?|íte?|í,vycházejí?|ej?|ejme?|ejte?|el
 lÉZT|7|-1|ézt?|ezu?|ezeš?|eze?|ezeme?|ezete?|ezou?|ez?|ezme?|ezte?|ezl?|ezl?|ezla?|ezlo?|ézli|ezly?|ezly?|ezla?
 jezĎIT|15|-1|ďit?|dím?|díš?|dí?|díme?|díte?|dí?|di?|děme?|děte?|diṵ|ďil?|ďila?|ďilo?|ďili?|ďily?|ďily?|ďila?|ďen,ježďen?|ďen,ježďen?|ďena,ježďena?|ďeno,ježďeno?|ďeňi,ježďeňi?|ďeny,ježďeny?|ďeny,ježďeny?|ďena,ježďena?
 -
-|RŮST||RŮST|
-|BÝT||BÝT|
-|RŮST||RÚST|
-||nahrabovaṵo||
-b|bRÁT|b|bRÁT|
-býv|bývAT|bív|bývAT|
-dáv|dávAT|dáv|dávAT|
-ďel|dělAT||ĎELAT|
-kop|kopAT|kop|kopAT|
-l|lÉZT|l|lÉZT|
-m|mÍT|m|mÍT|
-ne|RŮST|ne|RŮST|
-odkopat||otkope||
-odstřelit||octřelí ono||
-podkopávat||potkopávaṵo||
-prš|pršET|prš|pršAT|
-rab|rabOVAT|rab|rabOVAT|ve význam težit horninu
-řík|říkAT|řík|říkAT|
-řík|říkAT|řík|říkAT|
-v|vZÍT|v|vZÍT|
-vycház|vycházET|vicház|vycházET|
-zač|začÍT|zač|začÍT|
-založ|založIT|zaṵož|založIT|
-zasekat||zaseká||
-jezd|jezdIT|jez|jezĎIT|jezDiṵ je ve zdroji!
+|RŮST||RŮST||
+|BÝT||BÝT||
+|RŮST||RÚST||
+||nahrabovaṵo|||
+b|bRÁT|b|bRÁT||
+býv|bývAT|bív|bývAT||
+dáv|dávAT|dáv|dávAT||
+ďel|dělAT||ĎELAT||
+kop|kopAT|kop|kopAT||
+l|lÉZT|l|lÉZT||
+m|mÍT|m|mÍT||
+ne|RŮST|ne|RŮST||
+odkopat||otkope|||
+odstřelit||octřelí ono|||
+podkopávat||potkopávaṵo|||
+prš|pršET|prš|pršAT||
+rab|rabOVAT|rab|rabOVAT|ve význam težit horninu|
+řík|říkAT|řík|říkAT||
+řík|říkAT|řík|říkAT||
+v|vZÍT|v|vZÍT||
+vycház|vycházET|vicház|vycházET||
+zač|začÍT|zač|začÍT||
+založ|založIT|zaṵož|založIT||
+zasekat||zaseká|||
+jezd|jezdIT|jez|jezĎIT|jezDiṵ je ve zdroji!|
 -
-hned|hnet|
-už|už||uš|
-potom|potom|
-zdola,spodem|spodem|
-tak|tak|
-tam|tam|
-až|aš|
-zase|zas|
-kde|gde|
-také,taky|také|
-více|víc|
+hned|hnet||
+už|už|||uš||
+potom|potom||
+zdola,spodem|spodem||
+tak|tak||
+tam|tam||
+až|aš||
+zase|zas||
+kde|gde||
+také,taky|také||
+více|víc||
+méně|méň||hzta
+tepleji|teplej||hzta
+tady|tadik||hzta
+tudy|tudik||hzta
+dráž|draší||hzta
+odkud|otkáď||hzta
+všude|fšade||hzta|fšadi||hzta
+jinde|inadi||hzta
+kudy|kadi||hzta|kadima||hzta
+kam|kam||hzta
+jednou|jednú||hzta
+vkleče|klekački||hzta|klečački||hzta
+černě|počérňe||hzta
+česky|česki||hzta|počeski||hzta
+odmala|odmalučka||hzta
+zdravě|zdravě||hzta
+hustě|husto||hzta
+okolo|około||hzta
+kvečeru,navečer|gvečeru||hzta
+pozítří|pozajtřešku||hzta
+vzadu|vzadu||hzta
+dole|dúle||
+dolů|dołú||hzta
 -
-i||aj|
-do||do|
-mezi||mezi|
-nad||nat||nad|
-za||za|
-po||po|
-v||v|
+i||aj||
+do||do||
+mezi||mezi||
+nad||nat|||nad||
+za||za||
+po||po||
+v||v||
 -
-když|diš|
-a|a|
-kdyby|dibi|
-jako|jak|po jak nenásleduje sloveso|jako|
-že|že|
+když|diš||
+a|a||
+kdyby|dibi||
+jako|jak|po jak nenásleduje sloveso||jako||
+že|že||
 -
 -

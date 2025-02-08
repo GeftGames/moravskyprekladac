@@ -1,10 +1,9 @@
-TW v3
+TW v4
 tBřeclav
 aGG
 d09.06.2023 10:22:41
-i-dativ  stromám, vozám
-c-dativ  stromám, vozám
-bkniha|primeni=|jmeno=|nazev=Nářečí na Břeclavsku a v dolním Pomoraví|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=|shortcut=nbdp\n\n-<a href="https://www.jstor.org/stable/42692223">jstor.org/stable/42692223</a>
+c#Popis nářečí\n-dativ stromám, vozám\n- v Břeclavě, Lanžhotě, Kosticích, Tvrdonicích Týnci a Hruškách: vedeu, vlekeu, utrheu (Lid a národ; Bartoš, František)
+bkniha|primeni=|jmeno=|nazev=Nářečí na Břeclavsku a v dolním Pomoraví|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=|zpracovano=|shortcut=nbdp\n\nkniha|prijmeni=|jmeno=|nazev=|misto=|vydavatel=|rok_vydani=|strany=|issn=|odkaz=https://www.jstor.org/stable/42692223">jstor.org/stable/42692223|zpracovano=|shortcut=\n\nkniha|prijmeni=Bartoš|jmeno=František|nazev=Lid a národ|misto=|vydavatel=|rok_vydani=|strany=61|issn=|odkaz=|zpracovano=|shortcut=lnfb\n\nkniha|prijmeni=Bartoš|jmeno=František|nazev=Národní písně moravské, v nově nasbírané|misto=|vydavatel=|rok_vydani=1889|strany=47|licence=|ibsn=|issn=|odkaz=https://archive.org/details/narodni_pisne_moravske/page/21/mode/1up|zpracovano=|shortcut=npmv
 u1
 g48.7600411,16.8800615
 x3
@@ -17,17 +16,17 @@ oSlovácko>Podluží
 -
 tatínek odešel na večné časy|1|taťínek zaspali||nbdp
 -
-místo zpustlých lidí|1|pustárňa||
-průjezd do dvora|1|vráťňica||
-dobové stromy|1|dubičí||
-kovářský měch|1|dímač||
-hloupá žena|1|mjachula||
-usměvavé děvče|1|čuřinka||
-koryto na seno|1|krmelec||
-tam tó|1|to oné|vzdálenější tamto|nbdp
-|1|ilecká do ťa||nbdp
-|1|fúsa nastrčené||nbdp
-mu to zabilo ženu|1|jemu to zabiṵo ženu||nbdp
+místo zpustlých lidí|1|-1|pustárňa||
+průjezd do dvora|1|-1|vráťňica||
+dobové stromy|1|-1|dubičí||
+kovářský měch|1|-1|dímač||
+hloupá žena|1|-1|mjachula||
+usměvavé děvče|1|-1|čuřinka||
+koryto na seno|1|-1|krmelec||
+tam tó|1|-1|to oné|vzdálenější tamto|nbdp
+|1|-1|ilecká do ťa||nbdp
+|1|-1|fúsa nastrčené||nbdp
+mu to zabilo ženu|1|-1|jemu to zabiṵo ženu||nbdp
 -
 -
 -
@@ -60,6 +59,8 @@ století|0|||||||m|,|,|m,m|,|,|ch,ch|mi,mi
 vous|3||u|u||e|u|em|y|ů|ům|y|y|ech|y
 ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
 tatínEK|2|ek|ka|ku,kovi|ka|ku|ku,kovi|kem|ci,kové|ků|kům|ky|ci,kové|cích|ky
+ženA|1|a|y|ě|u|o|ě|ou|y||ám|y|y|ách|ami
+chlap|2||a|ovi,u|a|e|ovi,u|em|i,ové|ů|ům|y|i,ové|ech|y
 -
 řepA|1|a?|y?|ě?|u|o?|ě?|ou?|y?|?|ám?|y?|y?|ách?|ami?
 ještěrKA|1|ka|ky?|ce?|ku?|ko?|ce?|kou?|ky?|ek?|kám?|ky?|ky?|kách?|kami?
@@ -85,6 +86,8 @@ stoleťÍ|0|í?|í?|í?|í?|í?|í?|ím?|á|í?,í?|ím?,ím?|á|í?,í?|ích?,�
 fús|3|?|u?|u?|?|e?|u?|em?|a|ú?|úm?|y?|y?|ech?|y?
 žeNA|1|na?|ny?|ňe?|nu|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|nách?|nami?
 taťínEK|2|ek|ka?|ku?,kovi?|ka?|ku?|ku?,kovi?|kem?|ci?,kové?|kú?|kúm?|ky?|ci?,kové?|cích?|ky?
+robA|1|na?|ny?|ňe?|nu?|no?|ňe?|nou?|ny?|n?|nám?|ny?|ny?|ách|nami?
+chlap|2|?|a?|ovi?,u?|a?|e?|ovi?,u?|em?|i?,ové?|ú?|úm?|y?|i?,ové?|ech?|y?
 -
 |ČLOVĚK|0||ČLOVĚK||
 ||0|škrobač|||
@@ -111,8 +114,10 @@ virtuos|virtuos|0|virtous|virtous||
 viržinka||0|verdžinka|||
 století|století|0|stoleť|stoleťÍ||
 vous|vous|0|fús|fús||
-žen|ženA|0|že|žeNA||nbdp
+žen|ženA|0|že|robA||nbdp
 tatín|tatínEK|0|taťín|taťínEK||nbdp
+žen|ženA|0|rob|robA||lnfb
+chlap|chlap|0|chlap|chlap||lnfb
 -
 -
 -
@@ -127,7 +132,7 @@ ON|on|ho*,jej,něj**jeho,něho**|mu*,jemu,němu**|ho*,jej,něj**jeho,něho** (po
 niC|c|čeho|čemu|c|c|čem|čím
 -
 SE|-|sebe?|si?,sobě?|sa,sebe?|-|sobě?|sebou?
-JÁ|já?|mě?,(kňižňe) mne[2]?|ňe|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
+JÁ|já?|mňa|ňe|mě?,(kňižňe) mne[2]?|já?|mňe?|mnou?
 TEN|ten?|toho?|tomu?|toho?|-|tom?|ťím?|ťi?|ťech?|ťem?|ťi?|-|ťech?|ťemi?|ten?|toho?|tomu?|ten?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|ta?|té?|té?|tu?|-|té?|tou?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?|to|toho?|tomu?|to?|-|tom?|ťím?|ty?|ťech?|ťem?|ty?|-|ťech?|ťemi?
 TY|ty?|ťa|ťi[1]?,tobje?|ťe[1]?,tebe?|ty?|tobje?|tebou?
 ON|on?|ho*?,jej?,ňej**jeho?,ňeho**?|mu*?,jemu,ňemu**?|ho*?,jej?,ňej**jeho?,ňeho** (pouze životný)?|-|ňem**?|jím?,ňím**?
@@ -140,8 +145,11 @@ t|tY||TY||
 |ON||ON||nbdp
 ni|niC|ňi|ňiC||nbdp
 -
+dvA|4|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|a|ou|ěma|a|a|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-|ě|ou|ěma|ě|ě|ou|ěma|-|-|-|-|-|-|-
 -
+dvA|4|a?|ou?|ěma?|a?|a?|och|ěma?|-|-|-|-|-|-|-|a?|ou?|ěma?|a?|a?|ou?|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ěch|ěma?|-|-|-|-|-|-|-|ě?|ou?|ěma?|ě?|ě?|ou?|ěma?|-|-|-|-|-|-|-
 -
+dv|dvA|dv|dvA||lnfb
 -
 podívAT_SE|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 podAT|30|-1|at|ám|áš|á|áme|áte|ají|ej|ejme|ejte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
@@ -151,6 +159,9 @@ zabÍT|15|-1|ít|iji|iješ|ije|ijeme|ijete|ijí|ij,|ijme,me|ijte,te|il|il|ila|il
 zaspAT|30|-1|at|ím|íš|í|íme|íte|í|i|ěme|ěte|al|al|ala|alo|ali|aly|aly|ala|án|án|ána|áno|áni|ány|ány|ána
 vĚDĚT|7|-1|ědět|ím|íš|í|íme|íte|ědí|ěz|ězme|ězte|ěděl|ěděl|ěděla|ědělo|ěděli|ěděly|ěděly|ěděla
 BÝT|247|-1|být|jsem|jsi|je|jsme|jste|jsou|budu|budeš|bude|budeme|budete|budou|buď|buďme|buďte|byl|byl|byla|bylo|byli|byly|byly|byla|jsa|jsouc|jsouce|byv|byvši|byvše|bych|bys|by|bychom|byste|by
+VÉST|31|-1|vést|vedu|vedeš|vede|vedeme|vedete|vedou|povedu,budu vést|povedeš,budeš vést|povede,bude vést|povedeme,budeme vést|povedete,budete vést|povedou,budou vést|veď|veďme|veďte|vedl|vedl|vedla|vedlo|vedli|vedly|vedly|vedla|veden|veden|vedena|vedeno|vedeni|vedeny|vedeny|vedena
+zaplaTIT|30|-1|tit|tím|tíš|tí|tíme|títe|tí|ť|ťme|ťte|til|til|tila|tilo|tili|tily|tily|tila|cen|cen|cena|ceno|ceni|ceny|ceny|cena
+JÍT|31|-1|jít|jdu|jdeš|jde|jdeme|jdete|jdou|půjdu|půjdeš|půjde|půjdeme|půjdete|půjdou|pojď,jdi|pojďme,jděme|pojďte,jděte|šel|šel|šla|šlo|šli|šly|šly|šla|jit|jit|jita|jito|jiti|jity|jity|jita
 -
 poďívAT_SE|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|ej?|ejme?|ajte|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 podAT|30|-1|at?|ám?|áš?|á?|áme?|áte?|ají?|aj|ejme?|ejte?|al?|al?|ala?|alo?|ali?|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
@@ -160,6 +171,9 @@ zabÍT|15|-1|ít?|iji?|iješ?|ije?|ijeme?|ijete?|ijí?|ij?|ijme?|ijte?|il?|il?|i
 zaspAT|30|-1|at?|ím?|íš?|í?|íme?|íte?|í?|i?|jeme?|jete?|al?|al?|ala?|alo?|ali|aly?|aly?|ala?|án?|án?|ána?|áno?|áňi?|ány?|ány?|ána?
 vĚĎET|7|-1|ěďet?|ím?|íš?|í?|íme?|íte?|ěďí?|ěz?|ězme?|ězte?|ěďel?|ěďel?|ěďela?|ěďelo?|ěďeli|ěďely?|ěďely?|ěďela?
 BÝT|247|-1|být?|jsem?|jsi?|je?|jsme?|ste|jsou?|budu?|budeš?|bude?|budeme?|budete?|budou?|buď?|buďme?|buďte?|byl?|byl?|byla?|bylo?|byli?|byly?|byly?|byla?|jsa?|jsouc?|jsouce?|byv?|byvši?|byvše?|bych?|bys?|by?|bychom?|byste?|by?
+VÉST|31|-1|vést?|vedu?|vedeš?|vede?|vedeme?|vedete?|vedou?|povedu?,budu vést?|povedeš?,budeš vést?|povede?,bude vést?|povedeme?,budeme vést?|povedete?,budete vést?|povedou?,budou vést?|veď?|veďme?|veďte?|vedeu?|vedl?|vedla?|vedlo?|vedli?|vedly?|vedly?|vedla?|veden?|veden?|vedena?|vedeno?|vedeňi?|vedeny?|vedeny?|vedena?
+zaplaŤIT|30|-1|ťit?|ťím?|ťíš?|ťí?|ťíme|ťíte?|ťí?|ť?|ťme?|ťte?|ťil?|ťil?|ťila?|ťilo?|ťili?|ťily?|ťily?|ťila?|cen?|cen?|cena?|ceno?|ceňi?|ceny?|ceny?|cena?
+JÍT|31|-1|jít?|jdu?|jdeš?|jde?|jdeme?|jdete?|jdou?|pújdu?|pújdeš?|pujde|pújdeme?|pújdete?|pújdou?|pojď?,jďi?|pojďme?,jďeme?|pojďte?,jďete?|šel?|šel?|šla?|šlo?|šli?|šly?|šly?|šla?|jit?|jit?|jita?|jito?|jiťi?|jity?|jity?|jita?
 -
 šahat||čahat|||
 kabonit||chaboňit|||
@@ -173,12 +187,18 @@ zasp|zaspAT|zasp|zaspAT||nbdp
 v|vĚDĚT|v|vĚĎET||
 nev|vĚDĚT|nev|vĚĎET||nbdp
 |BÝT||BÝT||nbdp
+|VÉST||VÉST||lnfb
+zapla|zaplaTIT|zapla|zaplaŤIT||nbdp
+nezapla|zaplaTIT|nezapla|zaplaŤIT||nbdp
+|JÍT||JÍT||nbdp
+||remplovat|||nbdp
 -
 předvčerejškem,předevčírem|přečerajški||
 -
 do||do||nbdp
+na||na||nbdp
 -
 ani|aňi||nbdp
-když|keď||nbdp
+když|keď||nbdp|diž|v poslední době|nbdp
 -
 -
