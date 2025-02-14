@@ -985,6 +985,7 @@ class ItemNoun {
             t.addEventListener("click", () => {
                 ShowPageLangD(pattern.GetTable(body));
             });
+            t.setAttribute("title", "Podívat se na časování");
             t.className = "dicCustom";
             p.appendChild(t);
             
@@ -3083,7 +3084,7 @@ class ItemPronoun {
 
         //From
         let f = document.createElement("span");
-        f.innerText = this.From + this.PatternFrom.Shapes[0];        
+        f.innerText = this.From + this.PatternFrom.Shapes[0];   
         p.appendChild(f);
 
         // Arrow
@@ -3103,6 +3104,7 @@ class ItemPronoun {
                 let t = document.createElement("span");
                 let to_text=ApplyPostRules(to.Body + shape);
                 t.innerText = to_text;
+                t.setAttribute("title", "Podívat se na skloňování");     
                 if (to.Pattern.Shapes.length > 1) {
                     t.addEventListener("click", () => {
                         ShowPageLangD(to.Pattern.GetTable(to.Body));
@@ -3607,6 +3609,7 @@ class ItemAdjective {
         t.addEventListener("click", () => {
             ShowPageLangD(t.GetTable());
         });
+        t.setAttribute("title", "Podívat se na skloňování");
         t.class = "dicCustom";
         
         // cites
@@ -4378,6 +4381,7 @@ class ItemNumber {
     
             let t = document.createElement("span");
             t.innerText = ApplyPostRules(to.Body + patternShapes[0]);
+            t.setAttribute("title", "Podívat se na skloňování");
             p.appendChild(t);
 
             if (patternShapes.length > 1) {
@@ -5277,7 +5281,7 @@ class ItemVerb {
         }
         
         let f = document.createElement("span");
-        f.innerText = str_from.join(", ");
+        f.innerText = str_from.join(", ");        
         p.appendChild(f);
         
         // Arrow
@@ -5297,6 +5301,7 @@ class ItemVerb {
                 t.addEventListener("click", () => {
                     ShowPageLangD(forms_to.To.Pattern.GetTable(forms_to.To.Body));
                 });
+                t.setAttribute("title", "Podívat se na časování");
                 p.appendChild(t);         
 
                 if (tif+1<forms_to.To_strs.length) p.appendChild(document.createTextNode(", "));
@@ -8455,6 +8460,7 @@ function mapper_link(input, filter){
     use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#imgPathMap");
     img.appendChild(use);
     img.classList="mapperBtn";
+  //  img.setAttribute("title", "Podívat se do mapy");
     img.addEventListener("click", function(){
         mapper_open(input, filter);
     });

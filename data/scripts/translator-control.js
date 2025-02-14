@@ -1536,6 +1536,7 @@ function FilterCountry(country) {
 }
 
 function DistanceS(a, b) {
+    //if (isNaN(a) || isNaN(b)) return 2147483647;
     let dX=a.gpsX-b.gpsX, dY=a.gpsY-b.gpsY;
     return dX*dX+dY*dY;
 }
@@ -1589,6 +1590,14 @@ function refreshListOfLangsForSelect() {
                 document.getElementById("filterLangForSelect").value="";
             });
             for (let ch of highlightMatch(ptName, lovercaseName, search)) langEle.appendChild(ch);
+
+         //   if (dev) {
+                let number=document.createElement("span");
+                number.innerText=" - "+l.Stats()+" slov";
+                number.className="langNumbStats";
+                
+                langEle.appendChild(number);
+           // }
            
             if (l.Quality>=2) langEle.appendChild(document.createTextNode(" ✅"));            
             if (currentLang.Id==l.Id) langEle.classList="selectedLang";

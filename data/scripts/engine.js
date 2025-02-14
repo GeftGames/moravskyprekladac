@@ -667,6 +667,11 @@ function PopPageShow(name) {
         GetTopLangs();
     }else if (name == "sendWords") {
         addRow('excelLike');
+    }else if (name == "SelectLang") {
+        let display=true;
+        if (isNaN(currentLang.gpsX)) display=false;
+        if (display) document.getElementById("selLangByDis").style.display="unset";
+        else document.getElementById("selLangByDis").style.display="none";
     }
 }
 
