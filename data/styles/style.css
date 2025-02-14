@@ -2055,3 +2055,8 @@ h3{
 #areaTypeSelLangSort:hover{
     opacity: 1;
 }
+.langNumbStats{
+    color: rgba(var(--RawColorBack), .4);
+    font-size: var(--fontSizeSmall);
+    text-shadow: unset;
+}
