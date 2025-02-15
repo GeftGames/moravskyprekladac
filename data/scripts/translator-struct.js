@@ -1315,20 +1315,21 @@ class ItemAdverb {
     GetDicForm(name) {
         let p = document.createElement("p");
        
-        let arr_inp=this.input;
+       /*let arr_inp=this.input;
         if (!Array.isArray(this.input)) arr_inp=[this.input];
 
         for (let i = 0; i < arr_inp.length; i++) {
-            let ri = arr_inp[i];
+         //   let ri = arr_inp[i];
             let f = document.createElement("span"); 
             f.innerText=ri;
       
             p.appendChild(f);
 
             // Do not place comma
-            if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
-        }
-       
+          //  if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
+      //  }*/
+        let from_str=Array.isArray(this.input) ? this.input.join(", ") : this.input;
+        p.appendChild(document.createTextNode(from_str));
         p.appendChild(document.createTextNode(eArrow));
 
         let out = [];
@@ -1363,6 +1364,9 @@ class ItemAdverb {
                 p.appendChild(space);
             }
         }
+        if (!dicSame){
+            if (from_str==out.join("")) return null;
+        }
         
         if (name != "") {
             let r = document.createElement("span");
@@ -1372,7 +1376,7 @@ class ItemAdverb {
         }
         p.appendChild(mapper_link(arr_inp[0], out));
 
-        return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p };
+        return { from: from_str, to: out.join(", "), name: "", element: p };
     }    
 }
 
@@ -1648,7 +1652,8 @@ class ItemPreposition {
 
     GetDicForm(name) {
         let p = document.createElement("p");
-        for (let ri of this.input){
+        let from_str=Array.isArray(this.input) ? this.input.join(", ") : this.input;
+       /* for (let ri of this.input){
             let f = document.createElement("span");
 
             f.innerText = ri;
@@ -1656,8 +1661,9 @@ class ItemPreposition {
             p.appendChild(f);
 
             if (ri!=this.input[this.input.length-1])p.appendChild(document.createTextNode(", "));
-        }
+        }*/
 
+        p.appendChild(document.createTextNode(from_str));
         p.appendChild(document.createTextNode(eArrow));
 
         //for (const to of this.output) {
@@ -1683,6 +1689,10 @@ class ItemPreposition {
                 }
             }
             if (i != this.output.length - 1) p.appendChild(document.createTextNode(", "));
+        }
+        
+        if (!dicSame){
+            if (from_str==out.join("")) return null;
         }
 
         let r = document.createElement("span");
