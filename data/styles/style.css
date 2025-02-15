@@ -1282,6 +1282,9 @@ optgroup {
 }
 
 @media only screen and (max-width:600px) {
+    .pageFromDownClose{
+        margin-top: 10px;
+    }
     .settingHeader {
         font-size: 6mm;
     }
@@ -1294,7 +1297,7 @@ optgroup {
         font-size: 5mm;
     }
     a, span, select, .button, textarea::placeholder, #specialTextarea {
-        font-size: 5mm;
+        font-size: 4.5mm;
     }
     #nav {
         max-width: calc(100vw - 10px);
@@ -1380,6 +1383,9 @@ optgroup {
         margin-left: 2mm;
         margin-right: 2mm;
     }
+    #changeTranslate{
+        padding: 1mm;
+    }
 }
 
 @media only screen and (max-width:390px) {
@@ -1428,7 +1434,7 @@ optgroup {
     }
     #appstabContainer {
         margin-left: 0px;
-    }
+    }    
 }
 
 
