@@ -12,7 +12,7 @@ var errorText;
 var enabletranslate = true;
 var forceTranslate = false;
 var onlyMoravia;
-var dicAbc=true;
+var dicAbc=true,dicSame=false;
 var language, autoTranslate, styleOutput=false, dev, betaFunctions;
 var saved = [];
 var loaded = false;
@@ -548,6 +548,15 @@ function ChangeAbcDic() {
     //dicAbc = document.getElementById('dev').checked;
     dicAbc=!dicAbc;
     localStorage.setItem('setting-dic-abc', dicAbc);   
+
+    GetDic();
+}
+function ChangeSameDic() {
+    if (!loaded) return;
+
+    dicSame=!dicSame;
+    document.getElementById("dicSame").innerText=dicSame? "=" : "≠";
+    localStorage.setItem('setting-dic-same', dicSame);   
 
     GetDic();
 }

@@ -1233,6 +1233,7 @@ class ItemSimpleWord {
 
     GetDicForm(name) {
         if (!this.show) return null;
+       
         let p = document.createElement("p");
         
         let f;
@@ -1271,7 +1272,11 @@ class ItemSimpleWord {
                 let space = document.createTextNode(", ");
                 p.appendChild(space);
             }
-        } 
+        }  
+       
+        if (!dicSame){
+            if (f==out.join("")) return null;
+        }
       
         if (name != "") {
             let r = document.createElement("span");
@@ -1282,7 +1287,7 @@ class ItemSimpleWord {
 
         p.appendChild(mapper_link(f, out));
 
-        return { from: Array.isArray(this.input) ? this.input[0] : this.input, to: out.join(", "), name: "", element: p };
+        return { from: f, to: out.join(", "), name: "", element: p };
     }
 }
 
@@ -6476,13 +6481,18 @@ class LanguageTr{
             display.innerText = "Nalezeno celkem " + total + " záznamů.";
         }
 
-        // Setřídit
-        out = out.sort((a, b) => {
-            if (typeof a.from == 'string') return a.from.localeCompare(b.from);
-            else {
-                if (dev) console.log("Type is not string", typeof a.from, a);
-                return false;
+        for (let a of out) {  
+            //  if (dev) console.log("Type is not string", typeof a.from, a);
+            if (typeof a.from !== 'string') out.pop();
+            if (!dicSame) {
+               // if (a.from == a.to) out.pop();
             }
+        }
+
+        // Setřídit
+        const collator = new Intl.Collator('cs', { sensitivity: 'base' });
+        out = out.sort((a, b) => {
+            return a.from.localeCompare(b.from, "cs",{ sensitivity: 'variant' }); //return collator.compare(a.from, b.from);
         });
         lastDic = out;
 
@@ -6497,8 +6507,8 @@ class LanguageTr{
 
         display = document.createElement("div");
         
-        if (out.length == 0) {           
-            
+
+        if (out.length == 0) {
             if ((input).length>0) {
                 let no = document.createElement("p");
                 no.style = "font-style: italic";
@@ -6524,18 +6534,21 @@ class LanguageTr{
             }
         }
 
-        let lastCh="";
+        
         if (out.length > 0) {
+            let lastCh="";
             for (let z of out) {
                 if (dicAbc) {
                     if (z.from[0]==undefined) continue;
-                    if (z.from[0].toLowerCase()!=lastCh.toLowerCase()) {
+                    
+                    let firstChar = z.from[0].toLowerCase().replaceAll("ú","u").replaceAll("ů","u").replaceAll("á","a").replaceAll("é","e");
+                    if (firstChar!=lastCh) {
                         let ch=document.createElement("p");
                         ch.innerText=z.from[0].toUpperCase();
                         ch.className="abcCh";
                         display.appendChild(ch);
                         
-                        lastCh=z.from[0];
+                        lastCh=firstChar;
                     }
                 }
                 display.appendChild(z.element);
