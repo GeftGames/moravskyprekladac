@@ -1,4 +1,5 @@
 # Poslední větší změny
+(opravy se tady nepíší)
 ### 15.02. 2025
 + skrývání stejných slov ve slovníku (neplatí u ohebných tvarů)
  
