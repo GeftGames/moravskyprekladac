@@ -1,4 +1,7 @@
-# Poslední změny
+# Poslední větší změny
+### 15.02. 2025
++ skrývání stejných slov ve slovníku (neplatí u ohebných tvarů)
+ 
 ### 7.02. 2025
 + nové rozkliknutí výběru jazyka s vyhledáváním
   
