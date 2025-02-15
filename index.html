@@ -585,8 +585,8 @@
                                 <!--<select id="selectorTo" style="margin: 5px;" onchange="ChangeDic();GetDic()" onclick="Translate();"></select>-->
                                 <div id="changeTranslate" style="display: flex;align-items: center;" onclick="PopPageShow('SelectLang');refreshListOfLangsForSelect();filterLangForSelect.focus()">
                                     <span id="selectorTo">Obecná hanáčtina</span> 
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 7L10 12L15 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg class="selectBtnImgDown" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7L10 12L15 7" stroke-width="2"/>
                                     </svg>
                                 </div>
                             </div>   
@@ -641,7 +641,7 @@
 
                     <div id="tabBackGround"></div>
 
-                    <div id="transarea" style="display: block;justify-items: center;place-items: center;">
+                    <div id="transarea" style="display: flow;justify-items: center;place-items: center;">
                         <div id="translateText" style="display: flex; flex-direction: column;justify-items: center; width: calc(100% - 1cm);justify-self: anchor-center;">
                             <span id="nodeTranslateTextLowQuality" style="display:none;margin-bottom: 6mm;text-align: center;font-size: 4.5mm;">⚠️ Překládání textu na text nebude nejlepší u tohoto překladu z důvodu nedostatku dat. Zkuste <a class="link" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()" style="font-size: 4.5mm;">slovník</a> nebo změnit místo. 
                                 <!--<br>Neznáte nějaká slovíčka? <span onclick="PopPageShow('sendWords');" class="link">Poslat slovíčka</span>--></span>
