@@ -1374,7 +1374,7 @@ class ItemAdverb {
             r.className = "dicMoreInfo";
             p.appendChild(r);
         }
-        p.appendChild(mapper_link(arr_inp[0], out));
+        p.appendChild(mapper_link(this.input[0], out));
 
         return { from: from_str, to: out.join(", "), name: "", element: p };
     }    
