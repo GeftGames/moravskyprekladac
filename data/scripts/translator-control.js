@@ -1587,7 +1587,8 @@ function refreshListOfLangsForSelect() {
             langEle.addEventListener("click", ()=>{
                 ChangeSelectedLang(l);
                 PopPageClose('SelectLang');
-                document.getElementById("filterLangForSelect").value="";
+                document.getElementById("filterLangForSelect").value=""; 
+                document.getElementById("filterLangForSelect").placeholder=ptName;
             });
             for (let ch of highlightMatch(ptName, lovercaseName, search)) langEle.appendChild(ch);
 
@@ -1595,7 +1596,7 @@ function refreshListOfLangsForSelect() {
                 let number=document.createElement("span");
                 number.innerText=" - "+l.Stats()+" slov";
                 number.className="langNumbStats";
-                
+               
                 langEle.appendChild(number);
            // }
            
