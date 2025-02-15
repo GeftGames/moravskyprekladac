@@ -115,8 +115,8 @@ var initLookUpMap = function () {
         //start move
         const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
         var touch1 = e.touches[0] || e.changedTouches[0];
-        let mx = touch1.pageX,
-            my = touch1.pageY - rect.top;
+        let mx = touch1.clientX*dpr - rect.left*dpr,
+            my = touch1.clientY*dpr - rect.top*dpr;
 
         if (e.touches.length == 1) {
             console.log("touchstart move");
@@ -131,11 +131,11 @@ var initLookUpMap = function () {
             map_MoveTime = Date.now();
             map_Touches = 1;
             window.requestAnimationFrame(mapRedraw);
-        } else {
+        } else if (e.touches.length == 2) {
             console.log("touchstart zoom");
             var touch2 = e.touches[1] || e.changedTouches[1];
-            let m2x = touch2.pageX,
-                m2y = touch2.pageY - rect.top;
+            let m2x = touch2.clientX*dpr - rect.left*dpr,
+                m2y = touch2.clientY*dpr - rect.top*dpr;
             map_Touches = 2;
             e.preventDefault();
 
@@ -153,34 +153,53 @@ var initLookUpMap = function () {
         console.log("touchend");
         var touch = e.touches[0] || e.changedTouches[0];
         const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
-
-        // Jeden prst
-        if (map_Touches == 1) {
-            let mx = touch.pageX;
-            let my = touch.pageY - rect.top;
-
-            if (map_Touches == 2) {
+    
+        if (map_Touches == 2) {         
+            if (e.touches.length == 0) {
                 map_LocX -= map_LocTmpX;
                 map_LocY -= map_LocTmpY;
 
                 map_LocTmpX = 0;
-                map_LocTmpY = 0;
-                map_Touches = 1;
-            }
+                map_LocTmpY = 0; 
+                map_Touches = 0;   
+            }else if (e.touches.length == 1) {
+                let mx = touch.clientX*dpr - rect.left*dpr;
+                let my = touch.clientY*dpr - rect.top*dpr;
 
-            // <300ms kliknutí
-            if ((Date.now() - map_MoveTime) < 300) {
-                // <10px vzdálenost od začátku 
-                let dX = mx - map_TouchStartX,
-                    dY = my - map_TouchStartY;
-                let d = Math.sqrt(dX * dX + dY * dY);
-                if (d < 10) {
-                    console.log("click!");
-                    mapClick(mx, my);
-                    return;
-                }
+                moved = true;
+
+                map_LocTmpX = mx - map_LocX;
+                map_LocTmpY = my - map_LocY;
+    
+                map_TouchStartX = mx;
+                map_TouchStartY = my;
+                map_Touches = 1;                
             }
-            map_Touches = 1;
+        }else 
+
+        // Jeden prst
+        if (map_Touches == 1) {
+            let mx = touch.clientX*dpr - rect.left*dpr;
+            let my = touch.clientY*dpr - rect.top*dpr;
+       
+            if (e.touches.length == 0) {
+                // <300ms kliknutí
+                if ((Date.now() - map_MoveTime) < 300) {
+                    // <10px vzdálenost od začátku 
+                    let dX = mx - map_TouchStartX,
+                        dY = my - map_TouchStartY;
+                    let d = Math.sqrt(dX * dX + dY * dY);
+                    console.log(d);
+                    if (d < 10) {
+                        console.log("click!");
+
+                    
+                        mapClick(mx, my);
+                        return;
+                    }
+                }
+                map_Touches = 0;
+            }
         }
 
         window.requestAnimationFrame(mapRedraw);
@@ -191,12 +210,11 @@ var initLookUpMap = function () {
         e.preventDefault();
         const rect = document.getElementById("mapSelectLang").getBoundingClientRect();
 
-
         if (e.touches.length == 1) {
             console.log("mousemove move");
             var touch = e.touches[0] || e.changedTouches[0];
-            let mx = touch.pageX,
-                my = touch.pageY - rect.top;
+            let mx = touch.clientX*dpr - rect.left*dpr;
+                my = touch.clientY*dpr - rect.top*dpr;
 
             if (moved) {
                 map_LocX = mx - map_LocTmpX;
@@ -210,12 +228,12 @@ var initLookUpMap = function () {
         } else if (e.touches.length == 2) {
             console.log("mousemove zoom");
             var touch1 = e.touches[0] || e.changedTouches[0];
-            let m1x = touch1.pageX,
-                m1y = touch1.pageY - rect.top;
+            let m1x = touch1.clientX*dpr - rect.left*dpr,
+                m1y = touch1.clientY*dpr - rect.top*dpr;
 
             var touch2 = e.touches[1] || e.changedTouches[1];
-            let m2x = touch2.pageX,
-                m2y = touch2.pageY - rect.top;
+            let m2x = touch2.clientX*dpr - rect.left*dpr,
+                m2y = touch2.clientY*dpr - rect.top*dpr;
 
             // start
             if (map_Touches != 2) {
@@ -234,10 +252,7 @@ var initLookUpMap = function () {
 
                 // now distance
                 dx = (m1x - map_LocX) - (m2x - map_LocX), dy = (m1y - map_LocY) - (m2y - map_LocY);
-             //   console.log(map_LocTmpX, m1x - map_LocX);
-             //   console.log(map_LocTmpY, m1y - map_LocY);
-             //   console.log(map_LocTmp2Y, m2y - map_LocY);
-              //  console.log(map_LocTmp2Y, m2y - map_LocY);
+
                 let now = Math.sqrt(dx * dx + dy * dy);
                 let prevZoom = map_Zoom;
                 map_Zoom = map_ZoomInit / (start / now);
@@ -246,21 +261,19 @@ var initLookUpMap = function () {
                 const imgMX = (m1x + m2x) / 2 - map_LocX,
                     imgMY = (m1y + m2y) / 2 - map_LocY;
 
-                const imgPMX = imgMX / (imgMap.width * prevZoom),
-                    imgPMY = imgMY / (imgMap.height * prevZoom);
+                const imgPMX = imgMX / (imgMap.width*dpr * prevZoom),
+                    imgPMY = imgMY / (imgMap.height*dpr * prevZoom);
 
-                map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX;
-                map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY;
+                map_LocX -= (map_Zoom - prevZoom) * imgMap.width * imgPMX*dpr;
+                map_LocY -= (map_Zoom - prevZoom) * imgMap.height * imgPMY*dpr;
 
                 window.requestAnimationFrame(mapRedraw);
             }
         }
     });
-
-        
-
 }
-    function mapClick(mX, mY) {
+
+function mapClick(mX, mY) {
        // let canvasMap = document.getElementById("mapSelectLang");
 
        // map_DisplayWidth = document.getElementById("mapZoom").clientWidth*dpr;
@@ -279,11 +292,14 @@ var initLookUpMap = function () {
         for (let p of languagesList) {
             if (isNaN(p.locationX)) continue;
             if (!(p.Quality == 0 && map_Zoom < 1.5*dpr && !(p.Name == currentLang.Name))){
-                console.log("click", { mX: mX, my: mY, x: map_LocX + p.locationX * map_Zoom - circleRadius, y: map_LocY + p.locationY * map_Zoom - circleRadius, w: circleRadius * 2, h: circleRadius * 2 });
+              
+              //  console.log("click", { mX: mX, my: mY, x: map_LocX + p.locationX * map_Zoom - circleRadius, y: map_LocY + p.locationY * map_Zoom - circleRadius, w: circleRadius * 2, h: circleRadius * 2 });
                // console.log("c",mX>map_LocX + p.locationX * map_Zoom - circleRadius, mY> map_LocY + p.locationY * map_Zoom - circleRadius);
                // console.log("c2",mX+circleRadius * 2>map_LocX + p.locationX * map_Zoom - circleRadius, mY+circleRadius * 2> map_LocY + p.locationY * map_Zoom - circleRadius);
-                if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2) ||
-                (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius*2, circleRadius*2))) {
+                
+               //              ctx.arc(map_LocX + p.locationX * map_Zoom,                map_LocY + p.locationY * map_Zoom,                circleRadius, 0, 2 * Math.PI);
+               if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius*2, circleRadius*2)) { /*||
+                (isTouchDevice() && 入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius*2, circleRadius*2))*/
                    // p.option.selected = true;
                     ChangeSelectedLang(p);
                     PopPageClose('mapPage');
@@ -293,7 +309,8 @@ var initLookUpMap = function () {
                 }
             }
         }
-    }
+}
+    
 function mapMove(mX, mY) {
     let canvasMap = document.getElementById("mapSelectLang");
     
@@ -310,18 +327,19 @@ function mapMove(mX, mY) {
     if (circleRadius > 8*dpr) circleRadius = 8*dpr;
 
     // generate dots
-    for (let p of languagesList) {
-        if (isNaN(p.locationX)) continue;
-        if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
-            if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2)) {
-                if (canvasMap.style.cursor != "pointer") canvasMap.style.cursor = "pointer";
-                return;
+    if (!isTouchDevice()) {
+        for (let p of languagesList) {
+            if (isNaN(p.locationX)) continue;
+            if (!(p.Quality == 0 && map_Zoom < 1.5 && !(p.Name == currentLang.Name))){
+                if (入っちゃった(mX, mY, map_LocX + p.locationX * map_Zoom - circleRadius, map_LocY + p.locationY * map_Zoom - circleRadius, circleRadius * 2, circleRadius * 2)) {
+                    if (canvasMap.style.cursor != "pointer") canvasMap.style.cursor = "pointer";
+                    return;
+                }
             }
         }
+        if (canvasMap.style.cursor != "move") canvasMap.style.cursor = "move";
     }
-    if (canvasMap.style.cursor != "move") canvasMap.style.cursor = "move";
 }
-
 
 function mapRedraw() {
     let canvasMap = document.getElementById("mapSelectLang");
@@ -419,7 +437,6 @@ function mapRedraw() {
 
     //ctx.restore();
 }
-
 
 // inside
 function 入っちゃった(mx, my, x, y, w, h) {
