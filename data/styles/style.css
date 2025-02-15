@@ -2066,3 +2066,6 @@ h3{
     font-size: var(--fontSizeSmall);
     text-shadow: unset;
 }
+.selectBtnImgDown{
+    stroke: var(--ColorText);
+}
