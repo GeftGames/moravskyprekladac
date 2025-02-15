@@ -143,6 +143,24 @@
        // }
     </script>
 
+    <script>
+    window.onerror = function(error) {   
+        function showError(error) { 
+            let e=document.getElementById("textDownloadingList");
+            if (e!=undefined){
+                e.innerText="Webovou aplikaci nelze načíst, vyskytla se JS chyba!\n"+error;
+                e.style.color="red";     
+            }
+        }
+        if (document.getElementById("textDownloadingList")!=undefined){
+            showError
+        }else{
+            // try again
+            setTimeout(() => showError(error),1000);
+        }     
+    };
+    </script>
+
     <!-- Links -->
     <link href="data/styles/style.css" rel="stylesheet" type="text/css">
     <script src="data/scripts/engine.js"></script>
