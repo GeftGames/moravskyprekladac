@@ -258,6 +258,7 @@ html {
     grid-auto-columns: 1fr;
     z-index: 5;
     position: relative;
+    text-align: -webkit-center;
 }
 
 #lte,
@@ -1069,7 +1070,7 @@ optgroup {
     position: absolute;
     box-shadow: 0px 0px 3px #00000050;
     clip-path: inset(-5px -5px 1px -5px);
-    /*background: linear-gradient(180deg, var(--ColorTheme) 0%, var(--ColorTheme) 10%, var(--ColorBack) 100%);*/
+   background: linear-gradient(180deg, var(--ColorTheme),var(--ColorBack)); /*For old version*/
     background: linear-gradient(180deg, var(--ColorTheme) 0%, 
         color-mix(in srgb, var(--ColorTheme) 50%, var(--ColorBack)) 25%, 
         color-mix(in srgb, var(--ColorTheme) 15%, var(--ColorBack)) 50%, var(--ColorBack) 100%);
@@ -2041,7 +2042,7 @@ h3{
     cursor: pointer;
     user-select: none;
     box-shadow: var(--ksh);
-    background-color: var(--dsh);
+    background-color: var(--ConBack);
     border-radius: 1mm;
     padding-left: 2mm;
     padding-right: 2mm;
