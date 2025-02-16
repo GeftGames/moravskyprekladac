@@ -144,19 +144,34 @@
     </script>
 
     <script>
-    window.onerror = function(error) {   
-        function showError(error) { 
-            let e=document.getElementById("textDownloadingList");
-            if (e!=undefined){
-                e.innerText="Webovou aplikaci nelze načíst, vyskytla se JS chyba!\n"+error;
-                e.style.color="red";     
+    window.onerror = function(error, source, line) {   
+        function showError(message) { 
+            // send
+            let parent=document.getElementById("loadingPage");
+            if (parent!=undefined){
+                let eNote=document.createElement("span");
+                eNote.innerText="Webovou aplikaci nelze načíst, vyskytla se JS chyba.\n"+message+"\nMáte verzi prohlížeče Chromium aspoň 80 nebo Firefox 75?\nZkuste restartovat stránku (Shift + F5).";
+                eNote.style.color="red";
+                eNote.style.textAlign="center";
+                parent.appendChild(eNote);
+                
+                let eBtn=document.createElement("a");
+                eBtn.innerText="Nahlásit problém";
+                eBtn.className="button";
+                eBtn.href="https://github.com/GeftGames/moravskyprekladac/issues";
+                parent.appendChild(eBtn);
             }
+
         }
+        let sourceText=source;
+        if (source.includes("/")) source=source.substring(source.lastIndexOf("/")+1);        
+        let message="/"+error+"/\n /Soubor: "+source+", linka: "+line+"/";
+
         if (document.getElementById("textDownloadingList")!=undefined){
-            showError(error);
+            showError(message);
         }else{
             // try again
-            setTimeout(() => showError(error),1000);
+            setTimeout(() => showError(message),1000);
         }     
     };
     </script>
@@ -565,7 +580,7 @@
             </div>
         </div>
 
-        <div id="loadingPage" style="flex-direction: column; display:flex; align-items: center;">
+        <div id="loadingPage" style="flex-direction: column; display:flex; align-items: center;z-index: 100;">
             <div id="loadingBar">
                 <div id="progness"></div>
             </div>
@@ -722,8 +737,8 @@
                                         <p id="dicOut" style="line-height: 32px;"><span class="placeholder" pseudo="-webkit-input-placeholder">Zde se objeví překlad</span></p>
                                     </div>
                                     <div style="margin-top: auto; align-self: flex-end;flex-direction: row; display: flex;">
-                                        <span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;user-select: none;font-size: xx-large;" id="dicSame" onclick="ChangeSameDic();" data-tooltip="Skrýt stejné">≠</span>
-                                        <span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;user-select: none;" id="dicAll" onclick="ChangeAbcDic();" data-tooltip="Rozbalit všechny">ABC</span>
+                                        <span rel="nofollow" class="butIc tooltipC" data-tooltip="Stejné překlady" style="margin: 5px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;user-select: none;font-size: xx-large;" id="dicSame" onclick="ChangeSameDic();" data-tooltip="Skrýt stejné">≠</span>
+                                        <span rel="nofollow" class="butIc tooltipC" data-tooltip="Seskupit" style="margin: 5px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;user-select: none;" id="dicAll" onclick="ChangeAbcDic();" data-tooltip="Rozbalit všechny">ABC</span>
                                         <!--	<span rel="nofollow" class="butIc" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;" id="translateWellLevel">Q?</span>-->
                                         <span rel="nofollow" class="butIc tooltipC" data-tooltip="Zkopírovat zobrazený slovník" onclick="Copy('outputtext')" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 31 31"><path class="st0" d="m22.4 3.5v1.9h3 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0 18.3 0h0c0 1-.4 1.8-1 2.5-.6.6-1.5 1-2.5 1v0h0-15.4 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-4.1h-3 0v0c-1 0-1.8-.4-2.5-1-.6-.6-1-1.5-1-2.5h0v0-16.1 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 15.4 0v0c1 0 1.8.4 2.5 1 .6.6 1 1.5 1 2.5h0v0l0 0zm-2.6 1.9v-1.9 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 16.1 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 3v-11.6 0h0c0-1 .4-1.8 1-2.5.6-.6 1.5-1 2.5-1v0h0 9.8l0 0zm6.5 21.8v-18.3 0h0c0-.2-.1-.4-.3-.6-.1-.1-.4-.3-.6-.3v0h0-15.4 0v0c-.2 0-.4.1-.6.3-.1.1-.3.4-.3.6h0v0 18.3 0h0c0 .2.1.4.3.6.1.1.4.3.6.3v0h0 15.4 0v0c.2 0 .4-.1.6-.3.1-.1.3-.4.3-.6h0v-0l0 0z"/></svg></span>
                                         <!--	<span rel="nofollow" class="butIc tooltipC" data-tooltip="Stáhnout" onclick="dic_save_csv()" style="margin: 5px; width: 24px; height: 24px; display: flex;   align-items: center;  justify-content: center;"><svg class="ib" viewBox="0 0 25 29"><path class="st0" d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"/></svg></span>-->
