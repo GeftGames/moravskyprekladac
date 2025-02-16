@@ -605,22 +605,22 @@ class ItemSentence {
         let p = document.createElement("p");
 
         // from
-        let f = document.createElement("span");
-        f.innerText = this.input;
-        p.appendChild(f);
+       /* let f = document.createElement("span");
+        f.innerText = ;
+        p.appendChild(f);*/
 
         // arrow
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(this.input+eArrow));
 
         // ro
         for (let to of this.output) {
-            let t = document.createElement("span");
-            t.innerText = to.Text;
+            p.appendChild(document.createTextNode(to.Text));//document.createElement("span");
+            /* t.innerText = ;
             t.addEventListener("click", () => {
                 ShowPageLangD(t.GetTable());
             });
             t.class = "dicCustom";
-            p.appendChild(t);
+            p.appendChild(t);*/
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));
@@ -652,20 +652,20 @@ class ItemSentencePart {
         if (!this.show) return null;
 
         let p = document.createElement("p");
-        let f = document.createElement("span");
-        f.innerText = this.input;
-        p.appendChild(f);
+      /*  let f = document.createElement("span");
+        f.innerText = ;
+        p.appendChild(f);*/
 
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(this.input+eArrow));
 
         for (let to of this.output) {
-            let t = document.createElement("span");
-            t.innerText = ApplyPostRules(to.Text);
+          /*  let t = document.createElement("span");
+            t.innerText = ApplyPostRules();
             t.addEventListener("click", () => {
                 ShowPageLangD(t.GetTable());
             });
-            t.class = "dicCustom";
-            p.appendChild(t);
+            t.class = "dicCustom";*/
+            p.appendChild(document.createTextNode(to.Text));
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));      
@@ -936,15 +936,16 @@ class ItemNoun {
 
         let str_form=this.PatternFrom.GetShape(this.From,0);
         
+
         // Create p snap
         let p = document.createElement("p");
         
         // From
-        let f = document.createElement("span");
-        if (this.UppercaseType == 1) f.innerText = str_form.toUpperCase();
-        else if (this.UppercaseType == 2) f.innerText = str_form[0].toUpperCase() + str_form.substring(1);
-        else f.innerText = str_form;
-        p.appendChild(f);
+        let nodeText="";
+        if (this.UppercaseType == 1) nodeText = str_form.toUpperCase();
+        else if (this.UppercaseType == 2) nodeText = str_form[0].toUpperCase() + str_form.substring(1);
+        else nodeText = str_form;
+        p.appendChild(document.createTextNode(nodeText));
 
         // arrow
         p.appendChild(document.createTextNode(eArrow));
@@ -1237,27 +1238,23 @@ class ItemSimpleWord {
         let p = document.createElement("p");
         
         let f;
-        if (Array.isArray(this.input)) {
-            f = this.input.join(", ");
-        } else f = this.input;
-               
-        //p.appendChild(f);        
+        if (Array.isArray(this.input)) f = this.input.join(", ");
+        else f = this.input;
+                    
         p.appendChild(document.createTextNode(f+eArrow));
         
-      //  p.appendChild(document.createTextNode());
-
         let out = [];
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
-            let o = ApplyPostRules(to.Text);
 
-            out.push(o);
+            let o = ApplyPostRules(to.Text);
             if (o == "") return null;
+            out.push(o);
 
             p.appendChild(document.createTextNode(o));
             
             // cites
-            GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
+            if (to.Source != undefined) GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
 
             if (to.Comment != undefined) {
                 if (to.Comment != "") {
@@ -1287,7 +1284,7 @@ class ItemSimpleWord {
 
         p.appendChild(mapper_link(f, out));
 
-        return { from: f, to: out.join(", "), name: "", element: p };
+        return { from: f, to: undefined/*out.join(", ")*/, name: "", element: p };
     }
 }
 
@@ -1329,22 +1326,23 @@ class ItemAdverb {
           //  if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
       //  }*/
         let from_str=Array.isArray(this.input) ? this.input.join(", ") : this.input;
-        p.appendChild(document.createTextNode(from_str));
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(from_str+eArrow));
+       // p.appendChild(document.createTextNode());
 
         let out = [];
         
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
             let o = ApplyPostRules(to.Text);
-
-            out.push(o);
             if (o == "") return null;
 
-            let t = document.createElement("span");
-            t.innerText = o;
-            p.appendChild(t);
-                        
+            out.push(o);
+
+         //   let t = document.createElement("span");
+            //t.innerText = o;
+          //  p.appendChild(t);
+            p.appendChild(document.createTextNode(o));  
+
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
 
@@ -1360,8 +1358,8 @@ class ItemAdverb {
             }
 
             if (i != this.output.length - 1) {
-                let space = document.createTextNode(", ");
-                p.appendChild(space);
+               // let space = ;
+                p.appendChild(document.createTextNode(", "));
             }
         }
         if (!dicSame){
@@ -1504,18 +1502,18 @@ class ItemPhrase {
         f.innerText = inp;
         p.appendChild(f);*/
 
-        p.appendChild(document.createTextNode(inp+eArrow));
+        p.appendChild(document.createTextNode(inp+eArrow+ApplyPostRules(out)));
 
     //    p.appendChild(document.createTextNode());
-
-        let t = document.createElement("span");
-        t.innerText = ApplyPostRules(out);
+/*
+        let t = document.createTextNode(out);//document.createElement("span");
+        t.innerText = ;
         p.appendChild(t);
 
-        t.addEventListener("click", () => {
+       /* t.addEventListener("click", () => {
             ShowPageLangD(t.GetTable());
         });
-        t.class = "dicCustom";
+        t.class = "dicCustom";*/
 
         return { from: inp, to: out, name: "fráze", element: p };
     }
@@ -1663,19 +1661,20 @@ class ItemPreposition {
             if (ri!=this.input[this.input.length-1])p.appendChild(document.createTextNode(", "));
         }*/
 
-        p.appendChild(document.createTextNode(from_str));
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(from_str+eArrow));
+       // p.appendChild(document.createTextNode());
 
         //for (const to of this.output) {
         let out=[];
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
-            let t = document.createElement("span");
+          //  let t = document.createElement("span");
 
             let text_to=ApplyPostRules(to.Text);
-            t.innerText = text_to;
+           // t.innerText = text_to;
             out.push(text_to)
-            p.appendChild(t);
+           // p.appendChild(t);
+            p.appendChild(document.createTextNode(text_to));
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
@@ -1688,7 +1687,7 @@ class ItemPreposition {
                     p.appendChild(t);
                 }
             }
-            if (i != this.output.length - 1) p.appendChild(document.createTextNode(", "));
+            if (i != this.output.length-1) p.appendChild(document.createTextNode(", "));
         }
         
         if (!dicSame){
@@ -3098,12 +3097,13 @@ class ItemPronoun {
         let p = document.createElement("p");
 
         //From
-        let f = document.createElement("span");
-        f.innerText = this.From + this.PatternFrom.Shapes[0];   
-        p.appendChild(f);
+        let from=ApplyPostRules(this.From + this.PatternFrom.Shapes[0]); 
+       // let f = document.createElement("span");
+       // f.innerText = 
+       // p.appendChild(f);
 
         // Arrow
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(from+eArrow));
 
         // To
         let to_out=[];
@@ -3126,7 +3126,9 @@ class ItemPronoun {
                     });
                     t.className = "dicCustom";
                 }
-                p.appendChild(t);     onebefore=true;
+                p.appendChild(t);     
+                onebefore=true; 
+               
                 
                 to_out.push(to_text);
             }            
@@ -3134,23 +3136,21 @@ class ItemPronoun {
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e)); 
        
-       
+            p.appendChild(mapper_link(from,to_out));
         }
 
         if (to_out.length==0) return null;
 
-        f.addEventListener("click", function(){
+        /*f.addEventListener("click", function(){
             mapper_open(f.innerText, to_out);
-        });
+        });*/
 
         let r = document.createElement("span");
         r.innerText = " (zájm.)";
         r.className = "dicMoreInfo";
         p.appendChild(r);
 
-        p.appendChild(mapper_link(f.innerText,to_out));
-
-        return { from: this.From + this.PatternFrom.Shapes[0], to: to_out, name: name, element: p };
+        return { from: from/*this.From + this.PatternFrom.Shapes[0]*/, to: to_out, name: name, element: p };
     }
     
     AllShapes(){
@@ -3612,21 +3612,21 @@ class ItemAdjective {
         } else return null;
 
         let p = document.createElement("p");
-        let f = document.createElement("span");
-        f.innerText = from;
+        //let f = document.createElement("span");
+       // f.innerText = ;
 
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(from+eArrow));
 
         let t = document.createElement("span");
         t.innerText = to;
+        t.class = "dicCustom";
+        t.setAttribute("title", "Podívat se na skloňování");
         p.appendChild(t);
 
         t.addEventListener("click", () => {
             ShowPageLangD(t.GetTable());
         });
-        t.setAttribute("title", "Podívat se na skloňování");
-        t.class = "dicCustom";
-        
+       
         // cites
         GenerateSupCite(to.Source).forEach(e => p.appendChild(e));                
 
@@ -4382,10 +4382,10 @@ class ItemNumber {
        /* let f = document.createElement("span");
         f.innerText = fromText;
         p.appendChild(f);*/
-        p.appendChild(document.createTextNode(fromText));
+        //p.appendChild(document.createTextNode());
 
         // Arrow
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(fromText+eArrow));
 
         // To
         let toShapes=[];
@@ -5294,13 +5294,14 @@ class ItemVerb {
             if (from_pattern == "?") return null;
             else str_from.push(this.From+from_pattern+add);
         }
+        let from=str_from.join(", ");
         
-        let f = document.createElement("span");
-        f.innerText = str_from.join(", ");        
-        p.appendChild(f);
-        
+      /*  let f = document.createElement("span");
+        f.innerText = ;        
+        p.appendChild(f);*/
+
         // Arrow
-        p.appendChild(document.createTextNode(eArrow));
+        p.appendChild(document.createTextNode(from+eArrow));
 
         // To
         for (let ti=0; ti<arr_forms.length; ti++) {
@@ -5393,7 +5394,7 @@ class ItemVerb {
         for (let f of arr_forms) all_str_forms.push(...f.To_strs);
         p.appendChild(mapper_link(arr_forms[0].From_one, all_str_forms));
 
-        return { from: f.innerText, to: ""/*form.to.join(", ")*/, name: name, element: p };
+        return { from: from, to: ""/*form.to.join(", ")*/, name: name, element: p };
     }
 
     AllShapes(){
@@ -6514,7 +6515,6 @@ class LanguageTr{
                 zkr = true;
             }
         }
-
         display = document.createElement("div");
         
 
@@ -6547,6 +6547,8 @@ class LanguageTr{
         
         if (out.length > 0) {
             let lastCh="";
+
+         //  const fragment = document.createDocumentFragment();
             for (let z of out) {
                 if (dicAbc) {
                     if (z.from[0]==undefined) continue;
@@ -6563,6 +6565,8 @@ class LanguageTr{
                 }
                 display.appendChild(z.element);
             }
+         //  display.appendChild(fragment);
+            
         }
         if (zkr) {
             let zkr = document.createElement("p");
@@ -8394,15 +8398,15 @@ function ApplyTranscription(text) {
     
     let ret = str;
     for (let g of transcription) {
-        
-        if (ret.type == "end") {
+     //   console.log(g);
+        if (g.type == "end") {
             if (ret.endsWith(g.from)) {
                 let startOfReplace = str.lastIndexOf(g.from);
 
                 // Pokuď néni obsazene
                 let doReplace = true;
                 for (let i = startOfReplace; i < g.from.length; i++) {
-                    if (PatternAlrearyReplaced[i] != 1) {
+                    if (PatternAlrearyReplaced[i] == false) {
                         doReplace = false;
                         break;
                     }
@@ -8416,7 +8420,32 @@ function ApplyTranscription(text) {
                     }
                 }
             }
-        } else {
+        } else if (g.type == "start") {
+            if (ret.startsWith(g.from)) {
+                let startOfReplace = str.indexOf(g.from);
+
+                // Pokuď néni obsazene
+                let doReplace = true;
+                for (let i = 0; i < startOfReplace; i++) {
+                    if (PatternAlrearyReplaced[i] == false) {
+                        doReplace = false;
+                        break;
+                    }
+                }
+                if (doReplace) {
+                    ret = g.to+ret.substring(g.from.length);
+                    
+                    for (let i=0; i<=startOfReplace; i++) {
+                        PatternAlrearyReplaced[i] = false;
+                    }
+                } 
+            }
+        } 
+    }
+    console.log(PatternAlrearyReplaced, text);
+        
+    for (let g of transcription) {
+        if (g.type != "start" && g.type != "end") {
             let ind = -1;
             for (let i = 0; i < 10; i++) {
                 if (ret.includes(g.from)) {
@@ -8430,7 +8459,7 @@ function ApplyTranscription(text) {
                     // Pokuď néni obsazene
                     let doReplace = true;
                     for (let i = startOfReplace; i < g.from.length; i++) {
-                        if (PatternAlrearyReplaced[i] != true) {
+                        if (PatternAlrearyReplaced[i] == false) {
                             doReplace = false;
                             break;
                         }
@@ -8478,17 +8507,14 @@ function LoadArr(rawArr, len, start) {
 }
 
 function mapper_link(input, filter){
-    let img = document.createElementNS("http://www.w3.org/2000/svg","svg");
+  let img = document.createElementNS("http://www.w3.org/2000/svg","svg");
     let use = document.createElementNS("http://www.w3.org/2000/svg","use");
     use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#imgPathMap");
     img.appendChild(use);
-    img.classList="mapperBtn";
-  //  img.setAttribute("title", "Podívat se do mapy");
-    img.addEventListener("click", function(){
-        mapper_open(input, filter);
-    });
-    lastAppMapper="dic";
-
+    img.classList.add("mapperBtn");
+   img.addEventListener("click", () => {
+        mapper_open(input, filter); 
+    });  
     return img;
 }
 

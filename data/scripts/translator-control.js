@@ -8,166 +8,6 @@
 // 5 - really good
 const languagesPackage = "v4.trw_a"; //"https://raw.githubusercontent.com/GeftGames/moravskyprekladac/main/v1.trw_a";
 let loadedversion = "TW 4";
-let translations = [
-    "Morava", [
-        "Slovácko", [
-            	"Podluží",
-            	"Horňácko",
-            	"Hanácké Slovácko",
-                "Dolňácko",
-                /*	// Dolňácko
-            	"Kyjovsko",
-            	"Uherskohradišstko",
-
-            	"Strážnicko",
-
-            	//Klobouvsko
-            	"Klobukovsko",
-                */
-                "Moravské Kopanice",
-               
-                // nekdy k Valachách
-                "Luhačovické Zálesí",
-
-        ],
-
-        "Valašsko", [
-            /*"Uherskohradišťské Závrší",
-            "Podřevnicko",
-            "Vsacko",
-            "Meziříčsko",
-            "Klouboukovsko",
-            "Vsetínsko",
-            "Vizovicko",
-            "Frenštátsko",*/
-        ],
-
-        "Moravské Horácko", [
-            "Horácko", [
-                /*	//Severní
-                	"Žďársko",
-                	"Kunštátsko",
-
-                	// Střední
-                	"Jihlavsko",
-
-                	// Jižní
-                	"Želetavsko",
-                	"Telč",
-                	"Dačice",
-                	"Jemnicko",*/
-            ],
-
-            "Podhorácko", [
-                /*	// Severní Podhorácko
-                	"Tišnovsko",
-                	"Nedvědicko",
-                	"Velkomeziříčsko",
-                	"Náměšťsko",
-                	"Velkobítešsko",
-
-                	// Jižní Podhorácko
-                	"Třebíčsko",
-                	"Oslovansko",
-                	"Hrotovicko",
-
-                	// Pod Brnem
-                	"Moravskobudějovicko",
-                	"Židlochovicko",*/
-            ],
-
-            "Malá haná",
-
-            "Horácké Dolsko",
-        ],
-
-        "Blansko", [
-
-        ],
-
-        "Haná", [
-            "Zábečví",
-            "Jižní Haná",
-            "Vyškovsko",
-            "Střední Haná",
-            "Čuhácko",
-            "Blaťácko",
-            "Litovelsko",
-            "Horní Haná",
-            /*	"Zábřežsko",
-            	"Litovelsko",
-            	"Olomoucko",
-            	"Čuhácko",
-            	"Prostějovsko",
-            	"Přerovsko",
-            	"Kroměřížsko",
-            	"Vyškovsko",
-            	"Slavkovsko-Bučovicko",*/
-        ],
-
-        "Hranicko",
-        "Pobečví",
-        "Šumpersko",
-
-        "Záhoří", [
-            "Kelečsko",
-            "Hostýnské Záhoří",
-            "Lipeňské Záhoří",
-        ],
-
-        "Drahansko", [
-            /*	"Konicko",
-            	"Protivansko",
-            	"Blansko",
-            	"Jedovnicko",*/
-        ],
-        "Hřebečsko",
-
-        "Lašsko", [
-            /*  "Frýdecko-Mýstecko",
-            	"Ostravsko",
-            	"Frendštátsko",*/
-        ],
-        "Kravařsko", [
-            //	"Jíčinsko",
-        ],
-        
-        "Jesenicko", [
-            //	"Spálovsko",
-        ],
-
-        "Brněnsko",
-    ],
-
-    "Slezsko", [
-        "Zaolší", [
-            /*	"Goralsko",
-            	"Karvinsko",
-            	"Těšínsko",
-            	"Bohumínsko",
-            	"Havířovsko",*/
-        ],
-        
-        "Goralsko", [
-        ],
-
-        "Hlučínsko", [
-            //	"Hlučínsko",
-        ],
-
-        "Opavsko", [
-            //	"Opavsko",
-        ],
-        "Lašsko", [
-
-        ]
-    ],
-
-    "Moravský jazyk",
-    "Slezský jazyk",
-
-    "Ostatní"
-];
 var currentLang;
 var languagesList = [];
 var languagesListAll = [];
@@ -567,6 +407,7 @@ function TranslateSimpleText(input) {
     }
 }
 
+let dicSpped=[];
 function GetDic() {
   //  currentLang = GetCurrentLanguage();
     let input = dicInput.value;
@@ -578,7 +419,14 @@ function GetDic() {
     else document.getElementById("nodeTranslateTextLowQuality").style.display = "none";
 
     if (currentLang !== null) {
-        let out = currentLang.GetDic(input);
+       // const start = performance.now();
+        let out = currentLang.GetDic(input);        
+     //  const end = performance.now();
+        //
+       // dicSpped.push(end - start);
+      //  let average=0;
+      //  for (let s of dicSpped) average+=s;
+      //  console.log(`Rychlost načítání slovníku: ${average/dicSpped.length} ms (${dicSpped.length})`);
         document.getElementById("dicOut").innerHTML = "";
         document.getElementById("dicOut").appendChild(out);
     }

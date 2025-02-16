@@ -3350,6 +3350,8 @@ function SetCurrentTranscription(transCode) {
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },
         { from: "bjející", to: "bějící", type: "end" },
+        { from: "ú", to: "ú", type: "start" },
+        { from: "ú", to: "ů"},
     ];
 
     // czech phonetics
