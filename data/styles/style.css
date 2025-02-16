@@ -258,7 +258,6 @@ html {
     grid-auto-columns: 1fr;
     z-index: 5;
     position: relative;
-    text-align: -webkit-center;
 }
 
 #lte,
