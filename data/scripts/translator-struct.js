@@ -6551,7 +6551,7 @@ class LanguageTr{
                 if (dicAbc) {
                     if (z.from[0]==undefined) continue;
                     
-                    let firstChar = z.from[0].toLowerCase().replaceAll("ú","u").replaceAll("ů","u").replaceAll("á","a").replaceAll("é","e");
+                    let firstChar = z.from[0].toLowerCase().replaceAll("ú","u").replaceAll("ů","u").replaceAll("á","a").replaceAll("é","e").replaceAll("í","i").replaceAll("ý","y").replaceAll("ó","o");
                     if (firstChar!=lastCh) {
                         let ch=document.createElement("p");
                         ch.innerText=z.from[0].toUpperCase();
