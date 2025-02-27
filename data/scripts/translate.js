@@ -384,29 +384,13 @@ class ItemSentence {
     }
 
     static Load(data) {
-       /* if (loadedVersionNumber < 2) {
-            let item = new ItemSentence();
-            let raw = data.split('|');
-            item.input = raw[0];
-            item.output = [{ Text: raw[1] }];
-            return item;
-        } else if (loadedVersionNumber == 2) {
-            let raw = data.split('|');
-            if (raw[0] == '') return null;
-            let item = new ItemSentence();
-            item.input = raw[0];
-            item.output = FastLoadTranslateTo(raw, 2);
-            if (item.output == null) return null;
-            return item;
-        }else if (loadedVersionNumber == 3) {*/
-            let raw = data.split('|');
-            if (raw[0] == '') return null;
-            let item = new ItemSentence();
-            item.input = raw[0];
-            item.output = FastLoadTranslateTo(raw, 2);
-            if (item.output == null) return null;
-            return item;
-       // }
+        let raw = data.split('|');
+        let item = new ItemSentence();
+        item.input = raw[0];
+       // if (raw[0] == '') return null;
+        item.output = FastLoadTranslateTo(raw, 2);
+        if (item.output == null) return null;
+        return item;
     }
 
     GetDicForm(name) {
@@ -2470,9 +2454,6 @@ class ItemPatternPronoun {
 }
 
 class ItemPronoun {
-    //static pattensFrom=[];
-    //static pattensTo=[];
-
     constructor() {
         this.From;
         this.To = [];
@@ -2480,74 +2461,23 @@ class ItemPronoun {
 
     static Load(data) {
         let raw = data.split('|');
-        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
-            if (raw.length == 4) {
-                let item = new ItemPronoun();
-                item.From = raw[0];
-                //item.To=raw[1];
+        let item = new ItemPronoun();
+        item.From = raw[0];
 
-                let paternFrom = this.GetPatternByNameFrom(raw[2]);
-                if (paternFrom == null) return null;
-                else item.PatternFrom = paternFrom;
-
-                let paternTo = this.GetPatternByNameTo(raw[3]);
-                if (paternTo == null) return null;
-                //else item.PatternTo = paternTo;
-                item.To = [{ Body: raw[1], Pattern: paternTo }];
-                return item;
-            }
-            if (raw.length == 3) {
-                let item = new ItemPronoun();
-                item.From = raw[0];
-                //	item.To=raw[0];
-
-                let paternFrom = this.GetPatternByNameFrom(raw[1]);
-                if (paternFrom == null) return null;
-                else item.PatternFrom = paternFrom;
-
-                let paternTo = this.GetPatternByNameTo(raw[2]);
-                if (paternTo == null) return null;
-
-                item.To = [{ Body: raw[0], Pattern: paternTo }];
-
-                return item;
-            }
-            if (raw.length == 2) {
-                let item = new ItemPronoun();
-                item.From = "";
-                //item.To="";
-
-                let paternFrom = this.GetPatternByNameFrom(raw[0]);
-                if (paternFrom == null) return null;
-                else item.PatternFrom = paternFrom;
-
-                let paternTo = this.GetPatternByNameTo(raw[1]);
-                if (paternTo == null) return null;
-
-                item.To = [{ Body: "", Pattern: paternTo }];
-
-                return item;
-            }
+        let paternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (paternFrom == null) {
+            if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
             return null;
-        } else if (loadedVersionNumber >= 2) {*/
-            let item = new ItemPronoun();
-            item.From = raw[0];
+        }
+        item.PatternFrom = paternFrom;
 
-            let paternFrom = this.GetPatternByNameFrom(raw[1]);
-            if (paternFrom == null) {
-                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
-                return null;
-            }
-            item.PatternFrom = paternFrom;
+        let to = FastLoadTranslateToWithPattern(raw, 2, this);
+        if (to == null) {
+            return null;
+        }
+        item.To = to;
 
-            let to = FastLoadTranslateToWithPattern(raw, 2, this);
-            if (to == null) {
-                return null;
-            }
-            item.To = to;
-
-            return item;
-       // }
+        return item;
     }
 
     static GetPatternByNameFrom(name) {
@@ -3162,77 +3092,28 @@ class ItemPatternAdjective {
 }
 
 class ItemAdjective {
-    //static pattensFrom;
-    //static pattensTo;
-
     constructor() {
         this.From;
-        //this.To;
         this.PatternFrom;
-        //	this.PatternTo;
         this.To = [];
     }
 
     static Load(data) {
         let raw = data.split('|');
-       /* if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
-            if (raw.length == 4) {
-                let paternFrom = this.GetPatternByNameFrom(raw[2]);
-                if (paternFrom == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[2] + "'");
-                    return null;
-                }
+        let item = new ItemAdjective();
+        item.From = raw[0];
 
-                let paternTo = this.GetPatternByNameTo(raw[3]);
-                if (paternTo == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[3] + "'");
-                    return null;
-                }
-
-                let item = new ItemAdjective();
-                item.From = raw[0];
-                item.To = [{ Body: raw[1], Pattern: paternTo }];
-                item.PatternFrom = paternFrom;
-                //item.PatternTo=paternTo;
-                return item;
-            } else if (raw.length == 3) {
-                let paternFrom = this.GetPatternByNameFrom(raw[1]);
-                if (paternFrom == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
-                    return null;
-                }
-
-                let paternTo = this.GetPatternByNameTo(raw[2]);
-                if (paternTo == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[2] + "'");
-                    return null;
-                }
-
-                let item = new ItemAdjective();
-                item.From = raw[0];
-                item.To = [{ Body: raw[0], Pattern: paternTo }];
-                item.PatternFrom = paternFrom;
-                //item.PatternTo=paternTo;
-                return item;
-            }
-            if (dev) console.log("Cannot load pattern, wrong len");
+        let paternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (paternFrom == null) {
+            if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
             return null;
-        } else if (loadedVersionNumber >= 2) {*/
-            let item = new ItemAdjective();
-            item.From = raw[0];
+        }
+        item.PatternFrom = paternFrom;
 
-            let paternFrom = this.GetPatternByNameFrom(raw[1]);
-            if (paternFrom == null) {
-                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
-                return null;
-            }
-            item.PatternFrom = paternFrom;
+        item.To = FastLoadTranslateToWithPattern(raw, 2, this);
+        if (item.To == null) return null;
 
-            item.To = FastLoadTranslateToWithPattern(raw, 2, this);
-            if (item.To == null) return null;
-
-            return item;
-       // }
+        return item;
     }
 
     IsStringThisWord(str) {
@@ -3645,9 +3526,6 @@ class ItemPatternNumber {
 }
 
 class ItemNumber {
-    //    static PatternFrom = [];
-    //static PatternTo = [];
-
     constructor() {
         this.From;
         this.PatternFrom;
@@ -3656,42 +3534,22 @@ class ItemNumber {
 
     static Load(data) {
         let raw = data.split('|');
-      /*  if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
-            if (raw.length == 4) {
-                let item = new ItemNumber();
-                item.From = raw[0];
-                //item.To=raw[1];
+        let item = new ItemNumber();
+        item.From = raw[0];
 
-                let paternFrom = this.GetPatternByNameFrom(raw[2]);
-                if (paternFrom == null) return null;
-                else item.PatternFrom = paternFrom;
+        let paternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (paternFrom == null) {
+            if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
+            return null;
+        }
+        item.PatternFrom = paternFrom;
 
-                let paternTo = this.GetPatternByNameTo(raw[3]);
-                if (paternTo == null) return null;
-
-                item.To = [{ Body: raw[1], Pattern: paternTo }];
-
-                return item;
-            }
-        } else if (loadedVersionNumber >= 2) {*/
-            let item = new ItemNumber();
-            item.From = raw[0];
-
-            let paternFrom = this.GetPatternByNameFrom(raw[1]);
-            if (paternFrom == null) {
-                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
-                return null;
-            }
-            item.PatternFrom = paternFrom;
-
-            item.To = FastLoadTranslateToWithPattern(raw, 2, this);
-            if (item.To == null) {
-                if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
-                return null;
-            }
-            return item;
-       // }
-        //return null;
+        item.To = FastLoadTranslateToWithPattern(raw, 2, this);
+        if (item.To == null) {
+            if (dev) console.warn("Cannot load pattern '" + raw[1] + "'");
+            return null;
+        }
+        return item;
     }
 
     static GetPatternByNameFrom(name) {
@@ -4099,18 +3957,6 @@ class ItemPatternVerb {
     }
 
     static GetArray(source, pos, len) {
-        /*let arr = [len];
-        for (let i=0; i<len; i++) {			
-        	if (source[pos+i].includes(",")) {
-        		arr[i]=[];
-        		for (let f of source[pos+i].split(',')) {
-        			if (f.includes('?')) arr[i].push('?'); 
-        			else arr[i].push(f); 
-        		}
-        	}//arr[i]=source[pos+i].split(',');
-        	else if (source[pos+i].includes('?')) arr[i]='?'; 
-        	else arr[i]=source[pos+i];
-        }*/
         let arr = [];
         for (let i = pos; i < pos + len; i++) {
             arr.push(source[i]);
@@ -4574,88 +4420,23 @@ class ItemVerb {
 
     static Load(data) {
         let raw = data.split('|');
-        /*if (loadedversion == "TW v0.1" || loadedversion == "TW v1.0") {
-            if (raw.length == 4) {
-                let paternFrom = this.GetPatternByNameFrom(raw[2]);
-                if (paternFrom == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[2] + "'");
-                    return null;
-                }
+        let item = new ItemVerb();
+        item.From = raw[0];
 
-                let paternTo = this.GetPatternByNameTo(raw[3]);
-                if (paternTo == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[3] + "'");
-                    return null;
-                }
-                let item = new ItemVerb();
-                item.From = raw[0];
-                //item.To=raw[1];
-                item.PatternFrom = paternFrom;
-                //item.PatternTo=paternTo;
-                item.To = [{ Body: raw[1], Pattern: paternTo }];
-                return item;
-            }
-            if (raw.length == 3) {
-                let paternFrom = this.GetPatternByNameFrom(raw[1]);
-                if (paternFrom == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
-                    return null;
-                }
-
-                let paternTo = this.GetPatternByNameTo(raw[2]);
-                if (paternTo == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[2] + "'");
-                    return null;
-                }
-                let item = new ItemVerb();
-                item.From = raw[0];
-                //item.To=raw[0];
-                item.To = [{ Body: raw[0], Pattern: paternTo }];
-                item.PatternFrom = paternFrom;
-                //	item.PatternTo=paternTo;
-                return item;
-            }
-            if (raw.length == 2) {
-                let paternFrom = this.GetPatternByNameFrom(raw[0]);
-                if (paternFrom == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[0] + "'");
-                    return null;
-                }
-
-                let paternTo = this.GetPatternByNameTo(raw[1]);
-                if (paternTo == null) {
-                    if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
-                    return null;
-                }
-                let item = new ItemVerb();
-                item.From = "";
-                item.To = [{ Body: "", Pattern: paternTo }];
-                item.PatternFrom = paternFrom;
-                //item.PatternTo=;
-                return item;
-            }
+        let paternFrom = this.GetPatternByNameFrom(raw[1]);
+        if (paternFrom == null) {
+            if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
             return null;
         }
-       
-        else if (loadedVersionNumber >= 2) {*/
-            let item = new ItemVerb();
-            item.From = raw[0];
+        item.PatternFrom = paternFrom;
 
-            let paternFrom = this.GetPatternByNameFrom(raw[1]);
-            if (paternFrom == null) {
-                if (dev) console.log("Cannot load pattern '" + raw[1] + "'");
-                return null;
-            }
-            item.PatternFrom = paternFrom;
+        let to = FastLoadTranslateToWithPattern(raw, 2, this);
+        if (to == null) {
+            return null;
+        }
+        item.To = to;
 
-            let to = FastLoadTranslateToWithPattern(raw, 2, this);
-            if (to == null) {
-                return null;
-            }
-            item.To = to;
-
-            return item;
-       // }
+        return item;
     }
 
     ForeachArr(pattenShapesName, fromIndex, toIndex, num, name, match) {
@@ -5223,65 +5004,65 @@ class Replace {
 
 class LanguageTr {
     constructor() {
-            this.Name = "";
-            //	this.myVocab=[];
-            //	this.Words=[];
-            //this.SameWords=[];
-            this.Sentences = [];
-            this.Phrases = [];
-            this.state = "instanced";
-            this.html = true;
-            this.SelectReplace = [];
-            this.SentencePatterns = [];
-            this.SentencePatternParts = [];
-            this.SentenceParts = [];
-            //	dev=false;
-            this.SimpleWords = [];
-            this.PatternNounsFrom = [];
-            this.PatternNounsTo = [];
-            this.PatternAdjectivesFrom = [];
-            this.PatternAdjectivesTo = [];
-            this.PatternPronounsFrom = [];
-            this.PatternPronounsTo = [];
-            this.PatternNumbersFrom = [];
-            this.PatternNumbersTo = [];
-            this.PatternVerbsFrom = [];
-            this.PatternVerbsTo = [];
-            this.Nouns = [];
-            this.Pronouns = [];
-            this.Verbs = [];
-            this.Adjectives = [];
-            this.Numbers = [];
-            this.Prepositions = [];
-            this.Interjections = [];
-            this.Particles = [];
-            this.Adverbs = [];
-            this.Conjunctions = [];
-            this.option = undefined;
-            this.ReplaceS = [];
-            this.ReplaceG = [];
-            this.ReplaceE = [];
+        this.Name = "";
+        //	this.myVocab=[];
+        //	this.Words=[];
+        //this.SameWords=[];
+        this.Sentences = [];
+        this.Phrases = [];
+        this.state = "instanced";
+        this.html = true;
+        this.SelectReplace = [];
+        this.SentencePatterns = [];
+        this.SentencePatternParts = [];
+        this.SentenceParts = [];
+        //	dev=false;
+        this.SimpleWords = [];
+        this.PatternNounsFrom = [];
+        this.PatternNounsTo = [];
+        this.PatternAdjectivesFrom = [];
+        this.PatternAdjectivesTo = [];
+        this.PatternPronounsFrom = [];
+        this.PatternPronounsTo = [];
+        this.PatternNumbersFrom = [];
+        this.PatternNumbersTo = [];
+        this.PatternVerbsFrom = [];
+        this.PatternVerbsTo = [];
+        this.Nouns = [];
+        this.Pronouns = [];
+        this.Verbs = [];
+        this.Adjectives = [];
+        this.Numbers = [];
+        this.Prepositions = [];
+        this.Interjections = [];
+        this.Particles = [];
+        this.Adverbs = [];
+        this.Conjunctions = [];
+        this.option = undefined;
+        this.ReplaceS = [];
+        this.ReplaceG = [];
+        this.ReplaceE = [];
 
-            this.MakeBold = "\x1b[1m";
-            this.MakeUnderline = "\x1b[4m";
-            this.MakeGreen = "\x1b[32m";
-            this.MakeBlue = "\x1b[34m";
-            this.MakeCyan = "\x1b[36m";
+        this.MakeBold = "\x1b[1m";
+        this.MakeUnderline = "\x1b[4m";
+        this.MakeGreen = "\x1b[32m";
+        this.MakeBlue = "\x1b[34m";
+        this.MakeCyan = "\x1b[36m";
 
-            this.qualityTrTotalTranslatedWell = 0.0;
-            this.qualityTrTotalTranslated = 0.0;
+        this.qualityTrTotalTranslatedWell = 0.0;
+        this.qualityTrTotalTranslated = 0.0;
 
 
-            this.locationX = NaN;
-            this.locationY = NaN;
-            this.gpsX = NaN;
-            this.gpsY = NaN;
-            this.Quality = 0;
-            this.Author = "";
-            this.LastDateEdit = "";
-            this.Comment = "";
-            this.baseLangName = null;
-        }
+        this.locationX = NaN;
+        this.locationY = NaN;
+        this.gpsX = NaN;
+        this.gpsY = NaN;
+        this.Quality = 0;
+        this.Author = "";
+        this.LastDateEdit = "";
+        this.Comment = "";
+        this.baseLangName = null;
+    }
         /*
         	GetVocabulary() {
         		this.state="downloading";
@@ -6150,11 +5931,15 @@ class LanguageTr {
 
             let currentSentence = currentSentenceS.String;//currentSentenceS /*[1]*/ ;
             if (dev) console.log("📘 \x1b[1m\x1b[34mCurrent Sentence: ", currentSentence);
-
+  
+            // In cases like ... or !!! or !? between chars
+            if (currentSentence == "") continue;
+  
+            // html tag <smt>
             if (isTag) {
                 this.AddText(currentSentence, output, "tag");
                 continue;
-            }/**/
+            }
 
             // Add . ? !
             //	if (!currentSentenceS[0]) {
@@ -6162,14 +5947,12 @@ class LanguageTr {
             //		continue;
             //	}
 
-            // In cases like ... or !!! or !?
-            if (currentSentence == "") continue;
-
-
             // Simple replece full sentences
             let m = this.matchSentence(currentSentence);
+            console.log(m);
             if (m !== null) {
-                this.AddText(m.output, output, "sentence");
+                this.AddText(m.output.foreach(i=>i.Text), output, "sentence");
+                console.log("sentence found", m);
                 continue;
             }
 
@@ -6498,21 +6281,22 @@ class LanguageTr {
     }
 
     matchSentence(input) {
-        if (!input.endsWith("!") && !input.endsWith("?") && !input.endsWith(".")) {
+        let inputLowecase=input.toLowerCase();
+        // Same
+        for (const s of this.Sentences) {
+            if (s.input.toLowerCase() == inputLowecase) return s;
+        }
 
+        // No ending
+        if (!inputLowecase.endsWith("!") && !inputLowecase.endsWith("?") && !inputLowecase.endsWith(".")) {
             for (const s of this.Sentences) {
-                //	console.log(s.input.substring(0, s.input.length-1));
                 if (s.input.length > 2) {
-                    if (s.input.substring(0, s.input.length - 1) == input) return s;
-                    //if (s.input==input) return s;
+                    if (s.input.substring(0, s.input.length - 1).toLowerCase() == inputLowecase) return s;
                 }
             }
             return null;
-
         }
-        for (const s of this.Sentences) {
-            if (s.input == input) return s;
-        }
+        
         return null;
     }
 
@@ -8139,23 +7923,22 @@ function LoadArr(rawArr, len, start) {
     //console.log(arr);
     return arr;
 }
-
+/*
 function mapper_link(input, filter){
     let img = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     img.classList="mapperBtn";
+    img.setAttribute("viewBox","0 0 60 60");
     img.addEventListener("click", function(){
         mapper_open(input, filter);
+        lastAppMapper="dic";
     });
-    img.setAttribute("viewBox","0 0 60 60");
 
     let path=document.createElementNS("http://www.w3.org/2000/svg", 'path');
     path.setAttribute("d", "M15.8.6C10 .5 3.9 3.7 1.7 9.3c-1.1 2.4-.6 5.2-.8 7.8l-.1 32.4a40.3 40.3 0 0124.5-13C22 31 20 24.8 17.9 18.8 13.7 5.2 19 2.7 19.2 1a10 10 0 00-3.4-.4Zm45.6 1a30.5 30.5 0 01-16 6.4 45 45 0 01-21-4.9c-2.3 1-3.4 6.8-3.3 8.7 4.6 1.5 18.3 4.3 40.4 13V1.6ZM22 16.2a56 56 0 0010.8 23.2c2.6 2.6 5.5 5.5 9.3 6.3 3 .3 5.6-1.2 8.1-2.5 4.1-2.2 7.8-5.1 11.3-8.1v-5.7C48.4 25.8 35.2 19.7 22 16.2Zm6 24.2c-4.9 1-9.8 1.8-14.2 4-4.5 2.8-10.7 8-13 10.7l.1 3.8c8-3.3 16.9-5 25.4-3.1 7.6 1.4 15 4.6 23 3.4 5.3-.9 10.8-4.5 12.3-10 .3-2.8 0-6.5 0-9.3-5 4.1-12 8.5-18.6 9-7.2-.3-13.5-8-14.9-9.7z");
     img.appendChild(path);
 
-    lastAppMapper="dic";
-
     return img;
-}
+}*/
 
 function GenerateSupCite(source) {
     // Check
