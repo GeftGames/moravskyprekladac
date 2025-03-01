@@ -242,17 +242,20 @@ langs["cs"] = {
 
     VideoNote: "Pokud máte video ve formátu mp4, mkv, avi apod, extrahujte titulky do .ASS či .SRT a ty semka načtěte.",
 
-    AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. Slezská část není řešená primárně. K jejich seznámení a popularizaci, neboť v součastné době je původní jazyk lidí na ústupu.",
-    ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvláště u kterých je 💩. U těch co mají ✅ tak jsou trochu zdařilejší jak ostatní i tak nejsou dokonalé.",
+    AboutTranslator: "Moravský překladač byl primárně navržený k překladům do moravských dialektů. "+
+        "Překladač slouží k jejich seznámení a popularizaci jazyka, neboť v součastné době je původní jazyk (mluva) lidí na ústupu. "+
+        "Slezská část není řešená primárně, překladač je zaměřen na Moravu. Obsahuje také obecné nářečí (unifikační tendence), nenářeční mluvy (hantenc), experimentální jazyky a "+
+        "návrhy, které jsou také součástí, i když některé nebyly tak úspěšné, jsou stále součástí historie.",
+    ItsNotBest: "Víme, že strojová kvalita překladů není dokonalá, zvlášť ty které mají málo dat.",
     NoMoney: "Projekt není finacován. Reklamy zde umístěné nemáme, vytvořili jsme je v našem omezeném volném času. Slovník zpřístupněn od 2023, doufáme, že jeho vývoj bude pokračovat.",
     ItsPrivate: "Snažili jsme se zajistit Vám co největší soukromí. Tento překladač neodesílá třetím stranám žádné data. Ani žádná uživatelská data našemu serveru, výjmkou je pouze oprava překladu, kde získáme od Vás pouze Text překladu.",
-    WhatIsQ: "Jsme s překladem transparentní. Q? popř Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
-    StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači pracujeme, ještě není úplně hotový.",
+    WhatIsQ: "Jsme s kvalitou překladu transparentní. Q s číslem označuje kvalitu překladu. Číslo udává odhad % počtu dobře přeložených slov ze všech. se pohybuje od 0 do 99, přičemž větší znamená lepší kvalitu překladu.",
+    StillWorking: "Kdyby něco na stránce nefungovalo dejte nám vědět, budeme rádi, ale berte v ohled, že stále na překladači pracujeme, ještě není úplně dokončený.",
     WhatWeUse: "Cookie nepoužíváme, dala jsou uskladněna v localStorage. Stránky jsou statické HTML.",
-    HowWeTranslate: "Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat a také jsou různě formátovaná (různé přepisy) či nezdigitalizovaná (rastrová). Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozebereme," +
+    HowWeTranslate: "Bohužel v našem případě nešlo použít k překládání umělou inteligenci, neboť jsme měli nedostatek vstupních dat a také jsou různě formátovaná (různé přepisy) či nezdigitalizovaná (rastrová). Překlad probíhá offline, pomocí JavaSkriptu. Překlad probíhá tak, že danou větu rozebereme," +
         "detekujeme, co je kažné slovo za slovní druh. Poté se podíváme do databáze vět a jestli věta má větný vzorec tak jej aplikujem." +
         "Jestli ne, tak přeložíme slova zvlášť. jesli ani dané slovo nedokážeme přeložit, tak zkusíme nahrazovat části slov. " +
-        "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. " +
+        "Např. dvojhlásku ve slově <i>kout</i> na <i>kút</i>, kde došlo k nahrazení ou na ú. " +
         "No, většinou se to povede, někdy nepovede, třeba bylo možná myšleno sloveso <i>kuť</i>. Zachováme tak aspoň ráz textu.",
     WeFree: "Měl by jít web stáhnout jako aplikace PWA. Web hostujeme na free web stránkách, včetně domény.",
 };

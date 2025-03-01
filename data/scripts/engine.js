@@ -339,6 +339,7 @@ function customTheme() {
                     styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
                 }
 
+                styles.setProperty('color-scheme', 'dark');
                 styles.setProperty('--ksh', '0px 0px 3px rgba(var(--RawColorBack), .5)');
             } else if (themeLight == "light") {
                 if (themeDay) {
@@ -369,6 +370,7 @@ function customTheme() {
                     styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
                 }
                 
+                styles.setProperty('color-scheme', 'light');
                 styles.setProperty('--ksh', '0px 0px 3px rgba(var(--RawColorBack), .3)');
             } else { // Semilight
                 if (themeDay) {
@@ -398,6 +400,8 @@ function customTheme() {
                     styles.setProperty('--RawColorBack', '0, 0, 0');
                     styles.setProperty('--ColorOrig', 'hsl(' + colorH + 'deg 100% 50%)');
                 }
+                
+                styles.setProperty('color-scheme', 'light');
                 styles.setProperty('--ksh', '0px 0px 3px rgba(var(--RawColorBack), .3)');
             }
 
@@ -1029,7 +1033,7 @@ function SetTheme() {
     // toggleTransitionOff();
 
     if (dev) console.log("Set Theme: " + ThemeLight);
-    if (ThemeLight == "default") {
+   /* if (ThemeLight == "default") {
         if (window.matchMedia) {
             let constrast = window.matchMedia('(prefers-contrast: more)').matches;
             let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -1048,7 +1052,7 @@ function SetTheme() {
                 }
             }
         } //else document.getElementById("themeAplicator").href = "./data/styles/themes/blue.css";
-    } //else document.getElementById("themeAplicator").href = "./data/styles/themes/" + ThemeLight + ".css";
+    } //else document.getElementById("themeAplicator").href = "./data/styles/themes/" + ThemeLight + ".css";*/
     // On
     //toggleTransitionOn();
 

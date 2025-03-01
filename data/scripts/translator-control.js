@@ -1429,7 +1429,7 @@ function refreshListOfLangsForSelect() {
 
     // Add items
     for (let l of languagesList) {
-        let ptName= l.Name;
+        let ptName=l.Name;
         if (l.belongs!=undefined) ptName+=" ("+l.belongs+")";
 
         let lovercaseName=ptName.toLowerCase();
@@ -1455,6 +1455,13 @@ function refreshListOfLangsForSelect() {
             if (currentLang.Id==l.Id) langEle.classList="selectedLang";
             parentDiv.appendChild(langEle);
         }
+    }
+
+    if (parentDiv.innerHTML=="") {
+        let note=document.createElement("span");
+        note.innerText="Nenalezeno";
+        note.style.fontStyle="italic";
+        langSearchResults.appendChild(note);
     }
 }
 
