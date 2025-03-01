@@ -109,6 +109,7 @@ function getCurrentThemeLight(){
     return "semi";
 }
 
+//#region Change settings
 function changeThemeLight() {
     ThemeLight = document.getElementById("themeLight").value;
     localStorage.setItem('ThemeLight', ThemeLight);
@@ -129,6 +130,45 @@ function changeCustomColor() {
     localStorage.setItem('Color', colorH);
 }
 
+function ChangeDev() {
+    if (!loaded) return;
+    dev = document.getElementById('dev').checked;
+    localStorage.setItem('setting-dev', dev);
+
+    if (dev) {
+        document.getElementById('whiteabout').style.display = 'block';
+        document.getElementById('refresh').style.display = 'block';
+        document.getElementById('uploadown').style.display = 'block';
+    } else {
+        document.getElementById('whiteabout').style.display = 'none';
+        document.getElementById('uploadown').style.display = 'none';
+        document.getElementById('refresh').style.display = 'none';
+    }
+}
+
+function ChangeDic() {
+    // let selFrom = document.getElementById('selectorFrom');
+    let selTo = document.getElementById('selectorTo');
+    if (selTo.value != "*own*")
+    // localStorage.setItem('trFrom', selFrom.value);
+        localStorage.setItem('trTo', selTo.value);
+    urlParamChange("input", selTo.value, true/**/);
+    BuildOptions();
+
+    /*if (sel.selectedIndex == 1) {
+    	document.getElementById('headername').innerText = textHCTranslator;
+    	document.title = textHCTranslator;
+    	document.getElementById('char').style.display = "flex";
+    } else {
+    	document.getElementById('headername').innerText = textCHTranslator;
+    	document.title = textCHTranslator;
+    	document.getElementById('char').style.display = "none";
+    }
+    SpellingJob();*/
+}
+//#endregion
+
+// colors from different hue have different contrast
 function smoothAdjustBlue(h, s, l) {
     const centerHue = 250; // Center of the blue range
     const range = 30;      // ±30° range around the center
@@ -160,16 +200,8 @@ function smoothAdjustBlueRGB(h, s, l) {
 }
 
 function customTheme() {
-   // ThemeLight = document.getElementById("themeLight").value;
-   // Power = document.getElementById("power").value;
-   // ThemeDay = document.getElementById("themeDay").value;
-
-  //  
-  //  localStorage.setItem('ThemeDay', ThemeDay);
-  //  localStorage.setItem('Power', Power);
-
-    // Dark/Light
-   /* let themeLight; // true or false
+    // Dark/Light file
+    /* let themeLight; // true or false
     if (ThemeLight == "default") {
         if (window.matchMedia) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) themeLight="dark"; else themeLight="light";
@@ -397,6 +429,7 @@ function customTheme() {
     window.requestAnimationFrame(mapRedraw);
 }
 
+// animation change theme
 function toggleTransitionOn() {
     document.querySelectorAll('p').forEach(e => e.classList.add('theme'));
     document.querySelectorAll('a').forEach(e => e.classList.add('theme'));
@@ -485,32 +518,6 @@ function SaveTrans() {
     document.getElementById('butclose').style.opacity = '0';
 }
 
-function ChangeDic() {
-    // let selFrom = document.getElementById('selectorFrom');
-    let selTo = document.getElementById('selectorTo');
-    if (selTo.value != "*own*")
-    // localStorage.setItem('trFrom', selFrom.value);
-        localStorage.setItem('trTo', selTo.value);
-    //location.hash.to = selTo.value;
-    urlParamChange("input", selTo.value, true/**/);
-  //  currentLang = GetCurrentLanguage();
-    BuildOptions();
-    //let n;
-    //let headername = document.getElementById('headername');
-
-    /*if (sel.selectedIndex == 1) {
-    	document.getElementById('headername').innerText = textHCTranslator;
-    	document.title = textHCTranslator;
-    	document.getElementById('char').style.display = "flex";
-    } else {
-    	document.getElementById('headername').innerText = textCHTranslator;
-    	document.title = textCHTranslator;
-    	document.getElementById('char').style.display = "none";
-    }
-    SpellingJob();*/
-    // prepareToTranslate(true);
-}
-
 function ShowError(text) {
     error = true;
     document.getElementById("errorMessage").innerHTML += text;
@@ -527,21 +534,6 @@ function ChangeManual() {
     localStorage.setItem('setting-autoTranslate', autoTranslate.toString());
 }
 
-function ChangeDev() {
-    if (!loaded) return;
-    dev = document.getElementById('dev').checked;
-    localStorage.setItem('setting-dev', dev);
-
-    if (dev) {
-        document.getElementById('whiteabout').style.display = 'block';
-        document.getElementById('refresh').style.display = 'block';
-        document.getElementById('uploadown').style.display = 'block';
-    } else {
-        document.getElementById('whiteabout').style.display = 'none';
-        document.getElementById('uploadown').style.display = 'none';
-        document.getElementById('refresh').style.display = 'none';
-    }
-}
 
 function ChangeAbcDic() {
     if (!loaded) return;
@@ -3098,8 +3090,6 @@ function SetSwitchForced() {
 }
 
 function CloseLastPopup() {
-    //    console.log(PopPage_lastOpen);
-
     document.body.style.overflow = "unset";
 
     let old = document.getElementById("pagePop_" + PopPage_lastOpen);
@@ -3208,16 +3198,29 @@ function SetCurrentTranscription(transCode) {
 
     if (transCode == "czechsimple") return [
         { from: "mňe", to: "mě" },
+        { from: "Mňe", to: "Mě" },
         { from: "fje", to: "fě" },
         { from: "pje", to: "pě" },
 
         { from: "ďe", to: "dě" },
         { from: "ťe", to: "tě" },
         { from: "ňe", to: "ně" },
+        
+        { from: "Ďe", to: "Dě" },
+        { from: "Ťe", to: "Tě" },
+        { from: "Ňe", to: "Ně" },
+
+        { from: "ĎE", to: "DĚ" },
+        { from: "ŤE", to: "TĚ" },
+        { from: "ŇE", to: "NĚ" },
 
         { from: "ďi", to: "di" },
         { from: "ťi", to: "ti" },
         { from: "ňi", to: "ni" },
+
+        { from: "Ďi", to: "Di" },
+        { from: "Ťi", to: "Ti" },
+        { from: "Ňi", to: "Ni" },
 
         { from: "ďê", to: "dě" },
         { from: "ťê", to: "tě" },
@@ -3279,6 +3282,8 @@ function SetCurrentTranscription(transCode) {
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },
         { from: "bjející", to: "bějící", type: "end" },
+        { from: "ú", to: "ú", type: "start" },
+        { from: "ú", to: "ů"},
     ];
 
     if (transCode == "czechnormal") return [
@@ -3350,8 +3355,6 @@ function SetCurrentTranscription(transCode) {
         { from: "vje", to: "vě", type: "end" },
         { from: "bje", to: "bě", type: "end" },
         { from: "bjející", to: "bějící", type: "end" },
-        { from: "ú", to: "ú", type: "start" },
-        { from: "ú", to: "ů"},
     ];
 
     // czech phonetics
@@ -4600,7 +4603,7 @@ function titleUpdate() {
 function urlParamUpdate() { 
     // Wayback Machine may have problems
    // if (![serverName, serverNameGithub].includes(window.location.origin+window.location.pathname)) return;
-//console.log("urlParamUpdate");
+
     let str_url="";
     // set up
     for (let param of webSearchParams) {
@@ -4609,10 +4612,9 @@ function urlParamUpdate() {
             else str_url+="&"+param.name+"="+param.value;
             // hidden
         }else /*if (!param.showName)*/ {
-            if (str_url=="") str_url+=param.value;
-            else str_url+="&"+param.value;
+            if (str_url=="") str_url+=param.value+"=1";
+            else str_url+="&"+param.value+"=1";
         }
-        //console.log(param, url.search);
     }
     
     // clear
@@ -4634,7 +4636,7 @@ function urlParamChange(name, value, showName/**/){
             return;
         }
     }
-    webSearchParams.push({showName: showName,/**/ name: name, value: value});
+    webSearchParams.push({showName: showName, name: name, value: value});
     urlParamUpdate();
     if (name=="page") titleUpdate();
 }
@@ -4644,7 +4646,7 @@ function urlParamClearB(){
     for (let param of webSearchParams) {
         if (param.name!="page"){
             webSearchParams.pop(param);
-            break;;
+            break;
         }
     }
     

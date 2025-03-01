@@ -854,7 +854,7 @@ function mapper_compute() {
 		let text="Vygenerováné '"+mapperRenderOptions.inputText+"', "+(date.toLocaleString('cs-CZ'))+", "+serverName;
 		let w=ctx.measureText(text);
 		ctx.fillText(text,(mapperCanvas.width-w.width-4)/*mapperRenderOptions.scale*/, mapperCanvas.height-mapperRenderOptions.fontSize-1);
-		console.log(w);
+		//console.log(w);
 	}
 
 	ctx.restore();

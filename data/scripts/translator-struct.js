@@ -862,7 +862,7 @@ class ItemNoun {
         //	for (let )
         if (this.To.Pattern == null) {
             throw Exception(PatternTo + " is null");
-            return this.To;
+           // return this.To;
         }
 
         //	console.log("Returning",this, number, fall);
@@ -1216,13 +1216,12 @@ class ItemSimpleWord {
     }
 
     static Load(data) {
-        let raw = /*data*/LoadDataLineString(data,sSimpleWord).split('|');
+        let raw = LoadDataLineString(data,sSimpleWord).split('|');
         if (raw[0] == '') return null;
         let item = new ItemSimpleWord();
 
         // z
-        if (raw[0].includes(',')) item.input = raw[0].split(',');
-        else item.input = raw[0];
+        item.input = raw[0].includes(',') ? raw[0].split(',') : item.input = raw[0];
 
         item.show = raw[1] == "1";
 
@@ -1237,9 +1236,7 @@ class ItemSimpleWord {
        
         let p = document.createElement("p");
         
-        let f;
-        if (Array.isArray(this.input)) f = this.input.join(", ");
-        else f = this.input;
+        const f = Array.isArray(this.input) ? this.input.join(", ") : this.input;
                     
         p.appendChild(document.createTextNode(f+eArrow));
         
@@ -1290,7 +1287,7 @@ class ItemSimpleWord {
 
 class ItemAdverb {
     constructor() {
-        this.input = null;
+      //  this.input = null;
     }
 
     static Load(data, shortcuts) {
@@ -1299,11 +1296,11 @@ class ItemAdverb {
         if (raw[0] == '') return null;
         let item = new ItemAdverb();
 
-        // z
+        // from
         if (raw[0].includes(',')) item.input = raw[0].split(',');
         else item.input = raw[0];
 
-        // na
+        // to
         item.output = FastLoadTranslateTo(raw, 1);
         if (item.output == null) return null;
         return item;
@@ -1312,53 +1309,45 @@ class ItemAdverb {
     GetDicForm(name) {
         let p = document.createElement("p");
        
-       /*let arr_inp=this.input;
-        if (!Array.isArray(this.input)) arr_inp=[this.input];
+        // From
+        let from_str, firstWord;
 
-        for (let i = 0; i < arr_inp.length; i++) {
-         //   let ri = arr_inp[i];
-            let f = document.createElement("span"); 
-            f.innerText=ri;
-      
-            p.appendChild(f);
-
-            // Do not place comma
-          //  if (i != arr_inp.length-1) p.appendChild(document.createTextNode(", "));
-      //  }*/
-        let from_str=Array.isArray(this.input) ? this.input.join(", ") : this.input;
+        if (Array.isArray(this.input)) {
+            firstWord = this.input[0];
+            from_str = this.input.join(", ");
+        } else {
+            firstWord=from_str=this.input;
+        }
         p.appendChild(document.createTextNode(from_str+eArrow));
-       // p.appendChild(document.createTextNode());
 
         let out = [];
-        
+       
         for (let i = 0; i < this.output.length; i++) {
             let to = this.output[i];
-            let o = ApplyPostRules(to.Text);
-            if (o == "") return null;
 
+            // Translated text
+            let o = ApplyPostRules(to.Text);
+           // if (o == "") return null;
             out.push(o);
 
-         //   let t = document.createElement("span");
-            //t.innerText = o;
-          //  p.appendChild(t);
+            // text to
             p.appendChild(document.createTextNode(o));  
 
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));   
 
-            //p.appendChild(document.createTextNode(" "));
-
+            // comment
             if (to.Comment != undefined) {
-                if (to.Comment != "") {
+               // if (to.Comment != "") {
                     let c = document.createElement("span");
                     c.innerText = " "+to.Comment;
                     c.className = "dicMeaning";
                     p.appendChild(c);
-                }
+              //  }
             }
 
+            // space
             if (i != this.output.length - 1) {
-               // let space = ;
                 p.appendChild(document.createTextNode(", "));
             }
         }
@@ -1372,7 +1361,7 @@ class ItemAdverb {
             r.className = "dicMoreInfo";
             p.appendChild(r);
         }
-        p.appendChild(mapper_link(this.input[0], out));
+        p.appendChild(mapper_link(firstWord, out));
 
         return { from: from_str, to: out.join(", "), name: "", element: p };
     }    
@@ -5601,52 +5590,7 @@ class LanguageTr{
         this.baseLangName = null;
         this.recTranscription = null;
     }
-        /*
-        	GetVocabulary() {
-        		this.state="downloading";
-        	//	dev=dev;
-        		if (dev) console.log("INFO| Starting Downloading '"+this.Name+".trw'");
-        		let request=new XMLHttpRequest();
-        		request.timeout=4000;
-        		request.open('GET', "DIC/"+this.Name+".trw", true);
-        		request.send();
-        		let self=this;
-        		request.onerror=function() {
-        			if (dev) console.log("ERROR| Cannot downloaded '"+self.Name+".trw'");
-        			this.state="cannot download";
-        		};
-        		let x=this;
-        		request.onreadystatechange=function() {
-        			this.state="download status "+request.status;
-        			if(request.readyState===4) {
-        				this.state="download status "+request.status;
-        				if(request.status===200) {
-        					this.state="downloaded";
-        					if(dev) console.log("INFO| Downloaded '"+self.name+".trw'");
-
-        					let text=request.responseText;
-        						
-        					let lines=text.split('\r\n');
-        					if(lines.length<5&&dev) {
-        						if(dev) console.log("WARLING| Downloaded '"+self.name+".trw' seems too small");
-        						enabletranslate=false;
-        						ReportDownloadedLanguage();
-        						return;
-        					}
-        					// document.getElementById('slovnik').innerText = lines.length;
-        					x.Load(lines);
-        					ReportDownloadedLanguage();
-        				} else {
-        					if(request.status==0) ShowError("<b>Jejda, něco se pokazilo.</b><br>Nelze stáhnout seznam slovíček překladu...'"+self.name+"'<br>");
-        					else ShowError("<b>Jejda, něco se pokazilo.</b><br>Nelze stáhnout seznam slovíček překladu<br>Chyba '"+request.status+"..."+self.name+"'<br>");
-        					DisableLangTranslate(self.name);
-        					ReportDownloadedLanguage();
-        					this.state="download errored";
-        					return;
-        				}
-        			}
-        		};
-        	}*/
+   
     Stats() {
         if (this._Stats!=undefined) return this._Stats;
         let stats = 0;
@@ -6537,7 +6481,7 @@ class LanguageTr{
                 return display;
             } else {
                 let no = document.createElement("p");
-                no.style = "font-style: italic";
+                no.style.fontStyle="italic";
                 no.innerText = "Slovníček tohoto místa je prázdný.";
                 display.appendChild(no);
                 return display;
@@ -6548,7 +6492,7 @@ class LanguageTr{
         if (out.length > 0) {
             let lastCh="";
 
-         //  const fragment = document.createDocumentFragment();
+          // const fragment = document.createDocumentFragment();
             for (let z of out) {
                 if (dicAbc) {
                     if (z.from[0]==undefined) continue;
@@ -6556,7 +6500,7 @@ class LanguageTr{
                     let firstChar = z.from[0].toLowerCase().replaceAll("ú","u").replaceAll("ů","u").replaceAll("á","a").replaceAll("é","e").replaceAll("í","i").replaceAll("ý","y").replaceAll("ó","o");
                     if (firstChar!=lastCh) {
                         let ch=document.createElement("p");
-                        ch.innerText=z.from[0].toUpperCase();
+                        ch.innerText=firstChar.toUpperCase();
                         ch.className="abcCh";
                         display.appendChild(ch);
                         
@@ -6565,12 +6509,12 @@ class LanguageTr{
                 }
                 display.appendChild(z.element);
             }
-         //  display.appendChild(fragment);
+        //   display.appendChild(fragment);
             
         }
         if (zkr) {
             let zkr = document.createElement("p");
-            zkr.style = "font-style: italic";
+            zkr.style.fontStyle="italic";
             zkr.innerText = "Nalezeno celkem " + total + " záznamů.";
             display.appendChild(zkr);
         }
@@ -6584,27 +6528,28 @@ class LanguageTr{
         this.html = htmlFancyOut;
         this.htmlCodeTranslate=true;
 
-       // PrepareReplaceRules();
-
         if (dev) console.log("📝 Translating " + this.Name + "...");
 
         let output = document.createElement("div");
         let stringOutput = "";
 
-        let sentences = this.SplitStringTags(input,".!?", false);//this.SplitSentences(input, ".!?");
+        let sentences = this.SplitStringTags(input, ".!?", false);
 
         for (let i = 0; i < sentences.length; i++) {
             let currentSentenceS = sentences[i];
 
             let isTag=currentSentenceS.Tag;
 
-            let currentSentence = currentSentenceS.String;//currentSentenceS /*[1]*/ ;
+            let currentSentence = currentSentenceS.String;
             if (dev) console.log("📘 \x1b[1m\x1b[34mCurrent Sentence: ", currentSentence);
+
+            // In cases like ... or !!! or !?
+            if (currentSentence == "") continue;
 
             if (isTag) {
                 this.AddText(currentSentence, output, "tag");
                 continue;
-            }/**/
+            }
 
             // Add . ? !
             //	if (!currentSentenceS[0]) {
@@ -6612,24 +6557,18 @@ class LanguageTr{
             //		continue;
             //	}
 
-            // In cases like ... or !!! or !?
-            if (currentSentence == "") continue;
-
-
             // Simple replece full sentences
             let m = this.matchSentence(currentSentence);
             if (m !== null) {
-                this.AddText(m.output, output, "sentence");
+                if (dev) console.log("sentence found", Array.from(m.output, (i) => i.Text));
+                this.AddText(Array.from(m.output, (i) => i.Text), output, "sentence");
                 continue;
             }
 
             // Sentence pattern
             let patternDone = this.SolveSentencePattern(currentSentence);
             if (patternDone != null) {
-
-                let space = document.createTextNode(" ");
-                output.appendChild(space);
-
+                output.appendChild(document.createTextNode(" "));
                 output.appendChild(patternDone);
                 continue;
             }
@@ -6637,9 +6576,6 @@ class LanguageTr{
             if (dev) console.warn("Sentence pattern not found", currentSentence);
 
             // Words
-            let unknownPattern;
-            //		let sent=currentSentence.substring(currentSentence.length-1);
-
             let words = this.MultipleSplit(currentSentence, "  ,-:;'\t_.!?„“\n[]");
 
             let BuildingSentence = [];
@@ -6949,12 +6885,13 @@ class LanguageTr{
     }
 
     matchSentence(input) {
+        let lowercase=input.toLowerCase();
         if (!input.endsWith("!") && !input.endsWith("?") && !input.endsWith(".")) {
 
             for (const s of this.Sentences) {
                 //	console.log(s.input.substring(0, s.input.length-1));
                 if (s.input.length > 2) {
-                    if (s.input.substring(0, s.input.length - 1) == input) return s;
+                    if (s.input.substring(0, s.input.length - 1).toLowerCase() == lowercase) return s;
                     //if (s.input==input) return s;
                 }
             }
@@ -6962,7 +6899,7 @@ class LanguageTr{
 
         }
         for (const s of this.Sentences) {
-            if (s.input == input) return s;
+            if (s.input.toLowerCase() == lowercase) return s;
         }
         return null;
     }
@@ -8339,18 +8276,27 @@ function ApplyPostRules(text) {
 function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
     let ret = [];
 
-    for (let i = indexStart; i < rawData.length; i += 4) {
+    for (let i=indexStart; i<rawData.length; i+=4) {
         let rawBody = rawData[i],
-            rawPattern = rawData[i + 1];
+            rawPattern = rawData[i+1],
+            comment = rawData[i+2] || undefined,
+            source = rawData[i+3] || undefined;
 
-        if (rawBody.includes('?')) continue;
-        if (rawPattern.includes('?')) continue;
+        if (rawBody.includes('?') || rawPattern.includes('?')) continue;
 
-        let patern = t.GetPatternByNameTo(rawPattern);
-        if (patern == null) { if (dev) console.log("Couldn't find pattern " + rawPattern); continue; }
+        let pattern = t.GetPatternByNameTo(rawPattern);
+        if (!pattern) { 
+            if (dev) console.log("Couldn't find pattern " + rawPattern); 
+            continue; 
+        }
 
-        let comment = rawData[i + 2];
-        ret.push({ Body: rawData[i], Pattern: patern, Comment: comment, Source: rawData[i + 3] });
+        if (comment=="") comment=undefined;
+       
+        if (source) {
+            source = source.includes(",") ? source.split(",").map(Number) : [parseInt(source)];
+        }
+
+        ret.push({ Body: rawData[i], Pattern: pattern, Comment: comment, Source: source });
     }
 
     if (ret.length == 0) {
@@ -8363,17 +8309,24 @@ function FastLoadTranslateToWithPattern(rawData, indexStart, t) {
 
 function FastLoadTranslateTo(rawData, indexStart) {
     let ret = [];
-    for (let i = indexStart; i < rawData.length; i += 3) {
-        let rawText = rawData[i];
+    for (let i=indexStart; i<rawData.length; i+=3) {
+        let rawText=rawData[i], 
+            comment=rawData[i+1] || undefined,
+            source=rawData[i+2] || undefined;
 
-        if (rawText == '') continue;
-        if (rawText.includes('?')) continue;
+        if (rawText == '' || rawText.includes('?')) continue;
 
-        ret.push({ Text: rawText, Comment: rawData[i + 1], Source: rawData[i + 2] });
+        if (comment=="") comment=undefined;
+
+        if (source) {
+            source = source.includes(",") ? source.split(",").map(Number) : [parseInt(source)];
+        }
+
+        ret.push({ Text: rawText, Comment: comment, Source: source });
     }
 
-    if (ret.length == 0) {
-        if (dev) console.log("Cannot load pattern '" + rawData + "'");
+    if (ret.length==0) {
+        if (dev) console.log("Cannot load to '" + rawData + "'");
         return null;
     }
 
@@ -8442,7 +8395,7 @@ function ApplyTranscription(text) {
             }
         } 
     }
-    console.log(PatternAlrearyReplaced, text);
+   // console.log(PatternAlrearyReplaced, text);
         
     for (let g of transcription) {
         if (g.type != "start" && g.type != "end") {
@@ -8507,26 +8460,26 @@ function LoadArr(rawArr, len, start) {
 }
 
 function mapper_link(input, filter){
-  let img = document.createElementNS("http://www.w3.org/2000/svg","svg");
-    let use = document.createElementNS("http://www.w3.org/2000/svg","use");
+    let img = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    img.classList.add("mapperBtn");
+    img.addEventListener("click", () => {
+        lastAppMapper="dic";
+        mapper_open(input, filter); 
+    }); 
+    
+    let use = document.createElementNS("http://www.w3.org/2000/svg", "use");
     use.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#imgPathMap");
     img.appendChild(use);
-    img.classList.add("mapperBtn");
-   img.addEventListener("click", () => {
-        mapper_open(input, filter); 
-    });  
     return img;
 }
 
-function GenerateSupCite(source) {
+function GenerateSupCite(arrCite) {
     // Check
-    if (source == undefined) return [];
-    if (source == "") return [];
+    if (arrCite == undefined) return [];
+   // if (source == "") return [];
 
     // arr of string
-    let arrCite=[];
-    if (source.includes(",")) arrCite=source.split(",");
-    else arrCite=[source];
+//    let arrCite=source.includes(",") ? source.split(",") : [source];
 
     // arr of elements
     let sp=[];

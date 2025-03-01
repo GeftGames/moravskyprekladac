@@ -407,7 +407,7 @@ function TranslateSimpleText(input) {
     }
 }
 
-let dicSpped=[];
+//let dicSpped=[];
 function GetDic() {
   //  currentLang = GetCurrentLanguage();
     let input = dicInput.value;
@@ -419,16 +419,19 @@ function GetDic() {
     else document.getElementById("nodeTranslateTextLowQuality").style.display = "none";
 
     if (currentLang !== null) {
-       // const start = performance.now();
-        let out = currentLang.GetDic(input);        
-     //  const end = performance.now();
-        //
-       // dicSpped.push(end - start);
-      //  let average=0;
-      //  for (let s of dicSpped) average+=s;
+        const start = performance.now();
+        let out = currentLang.GetDic(input);    
+     
+      //  dicSpped.push(end - start);
+    //    let average=0;
+    //    for (let s of dicSpped) average+=s;
       //  console.log(`Rychlost načítání slovníku: ${average/dicSpped.length} ms (${dicSpped.length})`);
-        document.getElementById("dicOut").innerHTML = "";
-        document.getElementById("dicOut").appendChild(out);
+      document.getElementById("dicOut").innerHTML = "";
+      document.getElementById("dicOut").appendChild(out);  
+      
+      
+      const end = performance.now();
+      console.log(`Rychlost načítání slovníku: ${end - start} ms`);
     }
 }
 
