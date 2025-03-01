@@ -42,6 +42,8 @@
     --fontSizeMedium: 4.5mm;
     --fontSizeBigger: 5.2mm;
     --fontSizeBig: 8mm;
+
+    color-scheme: light;
 }
 
 @font-face {
@@ -1629,6 +1631,12 @@ caption {
     font-size: 7mm;
     text-shadow: var(--tsh);
     display: block;
+}
+figcaption {
+    font-size: var(--fontSizeSmall);
+    text-shadow: var(--tsh);    
+    color: var(--ColorText);
+    font-family: var(--f);
 }
 
 .tableDic>tbody>tr>td {
