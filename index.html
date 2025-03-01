@@ -73,6 +73,17 @@
             }
         }
     </script>
+    <!-- regiony mapa -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "contentUrl": "/data/images/morava%20s%20popisky.svg",
+            "author": "GeftGames",
+            "description": "Mapa s tradičními moravskými a slezskými regiony",
+            "name": "Moravské a slezské regiony",
+        }
+    </script>
     <!-- do prohlížeče -->
     <script type="application/ld+json">
         {
@@ -136,8 +147,6 @@
                 persistence: "memory", // or 'localStorage'?
                 person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
             });
-
-
         //    posthog.opt_out_capturing()
           //  var _posthog=posthog;
        // }
@@ -161,7 +170,6 @@
                 eBtn.href="https://github.com/GeftGames/moravskyprekladac/issues";
                 parent.appendChild(eBtn);
             }
-
         }
         let sourceText=source;
         if (source.includes("/")) source=source.substring(source.lastIndexOf("/")+1);        
@@ -185,7 +193,6 @@
     <script src="data/scripts/mapper.js"></script>
     <script src="data/scripts/langs.js"></script>
     <script src="data/scripts/rhill-voronoi-core.js"></script>
-    <!--<link rel="prefetch" href="data/scripts/worker.js" as="worker" />-->
 
     <!-- Title -->
     <title>Moravský překladač</title>
@@ -213,7 +220,7 @@
     <meta property="og:title" content="Moravský překladač">
     <meta property="og:site_name" content="Moravský překladač">
     <meta name="twitter:title" content="Moravský překladač">
-    <!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.ga"-->
+    <!--<meta id="application-url" name="application-url"> content="https://moravskyprekladac.pages.dev/"-->
 
     <!-- Windows modern UI -->
     <meta name="msapplication-TileColor" content="#66ccff">
@@ -226,15 +233,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!-- PWA -->
-    <!--<link id="manifest" rel="manifest">-->
     <script>
         if ('serviceWorker' in navigator) {
             let location = window.location;
             // !localhost
             if (
-                /*location=="https://moravskyprekladac.ga/" 
-                			||*/
                 location == "https://moravskyprekladac.pages.dev/" ||
                 location == "https://geftgames.github.io/moravskyprekladac/") {
                 window.addEventListener('load', function() {
@@ -257,7 +260,7 @@
     <link rel="alternate" type="text/html" href="https://geftgames.github.io/moravskyprekladac/">
 </head>
 
-<body onload="/*Load();init();*/" style="min-height: 100%;" itemscope itemtype="http://schema.org/WebPage">
+<body style="min-height: 100%;" itemscope itemtype="http://schema.org/WebPage">
     <svg width="60" height="60" style="display: none">
        <defs>
             <symbol viewBox="0 0 60 60"  id="imgPathMap">
@@ -328,7 +331,7 @@
 							caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
 							HidePopUps();
 							window.location.reload();
-							window.location='https://moravskyprekladac.ga/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
+							window.location='https://moravskyprekladac.pages.dev/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
 							<svg class="ib" viewbox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
 						</button>
                 </div>
@@ -665,7 +668,6 @@
                     <div style="display: flex; justify-content: center;margin-top: 20px;height: 38px;">
                         <h2 rel="nofollow" id="tabText" class="tab tabSelected" onclick="TabSelect(document.getElementById('translateText'), document.getElementById('tabText'));" shorttext="Text">Text</h2>
                         <h2 rel="nofollow" id="tabDic" class="tab" onclick="TabSelect(document.getElementById('translateDic'), document.getElementById('tabDic')); GetDic()" shorttext="Slovník">Slovník</h2>
-                        <!---->
                         <h2 rel="nofollow" id="tabTxtFiles" class="tab" onclick="TabSelect(document.getElementById('translateFiles'),document.getElementById('tabTxtFiles'));" shorttext="Soubory">Textové soubory</h2>
                         <h2 rel="nofollow" id="tabSubs" class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));" shorttext="Titulky">Titulky k filmu</h2>
                         <!--<span rel="nofollow" id="tabWeb" 	class="tab" onclick="TabSelect(document.getElementById('translateSubs'), document.getElementById('tabSubs'));">Doplněk prohlížeče - překlad youtube titulků, webu</span>-->
@@ -792,10 +794,10 @@
                         <div id="searchIn" style="min-height:75px;width: -webkit-fill-available;width: -moz-available; ">
                             <input type="text" oninput="" spellcheck="false" id="searchInputText" onkeydown="if(event.key === 'Enter') SearchInMoravian();" style="height:auto; padding: 10px;" autofocus placeholder="např. šufan, křidla, šnitlich, ...">
                             <span id="ClearTextbox" style="width: fit-content; height: 24px;display:none" class="butIc" rel="nofollow" onclick="ClearTextbox('dicInput');">
-									<svg id="butclose" class="ib" viewBox="0 0 24 24">
-										<path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
-									</svg>
-								</span>
+                                <svg id="butclose" class="ib" viewBox="0 0 24 24">
+                                    <path d="M 10 12 L 2 20 L 4 22 L 12 14 L 20 22 L 22 20 L 14 12 L 22 4 L 20 2 L 12 10 L 4 2 L 2 4 Z"/>
+                                </svg>
+                            </span>
                         </div>
                         <p id="notePhonetics">Použijte <a class="link" onclick="PopPageShow('phonetics')">fonetický zápis</a>.</p>
 
@@ -825,7 +827,6 @@
                                 <br>
                                 <span class="settingLink" id="mapperSearchWord" onclick="mapperAdvanced=true;MapperMode('expert')" style="width: fit-content;">Rozšířená tvorba map</span>
                             </div>
-
                             
                             <p id="mapperSavedHeader">Uložené</p>
                             <div id="mapperSaved" style="display: inline-block;"></div>
@@ -838,13 +839,10 @@
                                 <div class="navrhCat">
                                     <!-- Unikátní slova-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=vesnice|typ=pods|cislo=j|pad=1}>')">VESNICE</div>
-                                  <!--  <div class="mapperNavrh" onclick="navrhClick('<{word=mrkev|typ=pods|cislo=j|pad=1}>')">MRKEV</div>-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=jaro|typ=pods|cislo=j|pad=1}>')">JARO</div>
                                     <div class="mapperNavrh" onclick="navrhClick('polštář')">POLŠTÁŘ</div>
                                     <div class="mapperNavrh" onclick="navrhClick('peřina')">PEŘINA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('postel')">POSTEL</div>
-                                    <!--<div class="mapperNavrh" onclick="navrhClick('větev')">VĚTEV</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('vzduch')">VZDUCH</div>-->
                                     <div class="mapperNavrh" onclick="navrhClick('dědeček')">DĚDEČEK</div>
                                     <div class="mapperNavrh" onclick="navrhClick('babička')">BABIČKA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('naběračka')">NABĚRAČKA</div>
@@ -858,7 +856,6 @@
                                     <div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
                                     <div class="mapperNavrh" onclick="navrhClick('hlava')">HLAVA</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=noci|typ=pods|cislo=j|pad=6}>')">o NOCI</div>
-                                    <!--	<div class="mapperNavrh" onclick="navrhClick('kachna')">KACHNA</div>-->
                                     
                                     <!-- Atipické skloňování-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div>
@@ -873,7 +870,6 @@
                                     <div class="mapperNavrh" onclick="navrhClick('růže')">RŮŽE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=léto|typ=pods|cislo=j|pad=1}>')">LÉTO</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=kůň|typ=pods|cislo=j|pad=1}>')">KŮŇ</div>
-                                    <!--<div class="mapperNavrh" onclick="navrhClick('mák')">MÁK</div>-->
 
                                     <!-- Změna -->
                                     <div class="mapperNavrh" onclick="navrhClick('doktor')">DOKTOR</div>
@@ -886,14 +882,11 @@
                                     <!-- Měkčení na konci slov-->
                                     <div class="mapperNavrh" onclick="navrhClick('den')">DEN</div>
                                     <div class="mapperNavrh" onclick="navrhClick('týden')">TÝDEN</div>
-                                    <!--	<div class="mapperNavrh" onclick="navrhClick('kost')">KOST</div>-->
                                 </div>
                                 <p>Přídavná jména</p>
                                 <div class="navrhCat">
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=celý|typ=prid|rod=mz|cislo=j|pad=1}>')">CELÝ muž</div>
-                                    <div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=z|cislo=j|pad=1}>')">CELÁ žena</div>
-                                    <!--<div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=s|cislo=m|pad=1}>')">CELÁ kuřata</div>
-										<div class="mapperNavrh" onclick="navrhClick('<{word=celé|typ=prid|rod=mn|cislo=m|pad=1}>')">CELÉ hrady</div>-->
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=z|cislo=j|pad=1}>')">CELÁ žena</div>                                 
                                 </div>
                                 <p>Zájmena</p>
                                 <div class="navrhCat">
@@ -1049,7 +1042,7 @@
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=ýl/ýł/ýṵ/íl/íł/íṵ|vse=yl/ył/yṵ/il/ił/iṵ|typ=slov|d=mincin|rod=muz|cislo=j}>',mapper_options_numbers('1'))">on &lt;bÝL, žÍL, ...&gt;</div>
                                     </div>
                                     
-                                   <!-- <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=á|vse=ijó/ijou/ijú|typ=slov|d=prub|osoba=3|cislo=m}>',mapper_options_numbers('1'))">lidé &lt;stojá, žijÁ, ...&gt;</div>-->
+                                    <!-- <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=á|vse=ijó/ijou/ijú|typ=slov|d=prub|osoba=3|cislo=m}>',mapper_options_numbers('1'))">lidé &lt;stojá, žijÁ, ...&gt;</div>-->
                                     <!--
                                     <div style="display: flex;">
                                         <div class="mapperNavrh" onclick="navrhClick('<{ending|zakonceni=yho|typ=cisl|rod=muz|cislo=1|pad=2}>',mapper_options_numbers('1'))">bez &lt;jednYHO&gt;</div>
@@ -1122,7 +1115,6 @@
                             <div class="settingMapperItem">
                                 <p id="mapperSearchWord">Hledaná fráze</p>
                                 <input style="margin-left: 10px;" type="text" id="mapperSearchPattern" placeholder="<{word=vesnice|typ=pods|cislo=j|pad=2}>" style="width: -webkit-fill-available;">
-                                <!--placeholder='To je <"dub"->"pods,č=j,pád=1">!; "buk"'-->
                             </div> 
 
                             <h3>Překlad</h3>
@@ -1158,8 +1150,7 @@
 								<div>
 									<p>Hranice míst</p>
 									<textarea id="mapperOptionColorText" placeholder='"dub"->"dôb" x "dub"->"dob" => dash; "dub"->"dub" x "dub"->"dob" => solid; "dub"->def => none'></textarea>
-								</div>
-                            -->
+								</div>-->
                                 <h3>Grafika</h3>								
                                 <div class="settingMapperItem">
                                     <p>Obarvení pozadí</p>
