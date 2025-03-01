@@ -316,24 +316,24 @@
                     </div>
                     <!--my dev-->
                     <button title="Upload own language" style="margin-left: auto;" id="uploadown" class="butIc" onclick="PopPageShow('pageOwnLang')">
-							<svg class="ib" viewbox="0 0 24 24" >
-								<path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
-							</svg>
-						</button>
+                        <svg class="ib" viewbox="0 0 24 24" >
+                            <path d="m21.6 11-8.9-10.7c-.3-.4-.8-.4-1.1 0l-8.9 10.7c-.6.7-.4 2 .6 2l4 0 0 16c0 .6.5 1 1 1l8 0c.6 0 1-.5 1-1l0-16 3.7 0c1.1 0 1.5-1.1.6-2z"/>
+                        </svg>
+                    </button>
 
                     <!--write about-->
                     <button title="Write lang about" style="margin-left: auto;" id="whiteabout" class="butIc" onclick="console.log(currentLang);">
-							<svg class="ib" viewbox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
-						</button>
+                        <svg class="ib" viewbox="0 0 24 24" ><path d="M 3.5 15.6 L 16.7 2.4 L 21.1 6.8 L 7.9 20 L 3.5 20 l 0 -4.4"/></svg>
+                    </button>
 
                     <!--reload-->
                     <button title="Clear cache and refresh" style="margin-left: auto;" id="refresh" class="butIc" onclick="
-							caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
-							HidePopUps();
-							window.location.reload();
-							window.location='https://moravskyprekladac.pages.dev/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
-							<svg class="ib" viewbox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
-						</button>
+                        caches.keys().then(function(names) { for (let name of names) caches.delete(name); });
+                        HidePopUps();
+                        window.location.reload();
+                        window.location='https://moravskyprekladac.pages.dev/?text='+document.getElementById('specialTextarea').innerText+'&tl='+(document.getElementById('selRev').selected?'cs':'ha')+'#reload';">
+                        <svg class="ib" viewbox="0 0 24 24" ><path d="M 7 9h -7 v -7h 1v 5.2c 1.9 -4.2 6.1 -7.2 11 -7.2c 6.6 0 12 5.4 12 12s -5.4 12 -12 12c -6.3 0 -11.4 -4.8 -12 -11h 1c 0.5 5.6 5.2 10 11 10c 6.1 0 11 -4.9 11 -11s -4.9 -11 -11 -11c -4.7 0 -8.6 2.9 -10.2 7h 5.2v 1z"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -552,7 +552,7 @@
                 <div class="settingSection">
                     <div class="sisetting">
                         <p style="display:inline-block" id="textSettingsTranstale" class="settingHeader">O překladači</p>
-                        <span id="textAbout" onclick="PopPageShow('about');/*ShowAboutPage()*/" class="settingLink" data-href="#about">O překladači</span>
+                        <span id="textAbout" onclick="PopPageShow('about');" class="settingLink" data-href="#about">O překladači</span>
                         <a id="textAddon" style="text-shadow: var(--tsh); font-size: 5mm;" href="https://github.com/GeftGames/moravskyprekladac-browser-addon/tree/main" class="settingLink" data-href="#about">Doplněk do prohlížeče</a>
                     </div> 
                     <div class="settingSection">
@@ -1325,8 +1325,9 @@
                     <p class="aboutPageHeader">K dělení na regiony</p>
                 </div>
                 <p>Moravu a Slezsko dělíme následnově na tradiční oblasti, ty mají ještě podpoblasti, které jsou vybarvené nepatrně odlišně.</p>
-                <div style="display: flex; justify-content: center">
+                <div style="display: flex; justify-content: center;flex-direction: column;align-items: center;" itemtype="https://schema.org/ImageObject">
                     <img itemprop="primaryImageOfPage" src="data/images/morava s popisky.svg" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy">
+                    <figcaption itemprop="description">Moravské a slezské regiony</figcaption>
                 </div>
                 <div style="display: flex; justify-content: center">
                     <img src="data/images/map_uprava_v3.png" loading="lazy" style="max-width: 16cm;width: -webkit-fill-available;" alt="Oblasti moravy - návrh úpravy">
