@@ -3086,7 +3086,7 @@ class ItemPronoun {
         let p = document.createElement("p");
 
         //From
-        let from=ApplyPostRules(this.From + this.PatternFrom.Shapes[0]); 
+        let from=this.From + this.PatternFrom.Shapes[0]; 
        // let f = document.createElement("span");
        // f.innerText = 
        // p.appendChild(f);
