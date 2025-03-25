@@ -2077,3 +2077,6 @@ h3{
 .selectBtnImgDown{
     stroke: var(--ColorText);
 }
+#dicOut p:hover{
+    background-color: var(--RawColorBack05);
+}
