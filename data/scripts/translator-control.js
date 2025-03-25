@@ -1459,7 +1459,7 @@ function refreshListOfLangsForSelect() {
 
     if (parentDiv.innerHTML=="") {
         let note=document.createElement("span");
-        note.innerText="Nenalezeno";
+        note.innerText="Nenalezeno (zkuste třeba blízké místo z mapy)";
         note.style.fontStyle="italic";
         langSearchResults.appendChild(note);
     }

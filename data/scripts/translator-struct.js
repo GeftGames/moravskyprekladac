@@ -955,7 +955,6 @@ class ItemNoun {
         let listTo=[];
         if (this.To.length==0) return null;
        
-
         for (let to of this.To) { 
             let body = to.Body,
                 pattern = to.Pattern,
@@ -966,7 +965,7 @@ class ItemNoun {
             let used_fall;
 
             for (let i = 0; i < try_shapes.length; i++) {
-                str_to = pattern.GetShapeTr(body, used_fall = try_shapes[i]);
+                str_to = ApplyPostRules(pattern.GetShapeTr(body, used_fall = try_shapes[i]));
                 mapper_from=this.PatternFrom.GetShapeFirst(this.From, try_shapes[i]);
                 // Uppercase
                 if (str_to!=undefined){                
@@ -982,7 +981,7 @@ class ItemNoun {
 
             // text
             let t = document.createElement("span");
-            t.innerText = ApplyPostRules(str_to);
+            t.innerText = str_to;
             t.addEventListener("click", () => {
                 ShowPageLangD(pattern.GetTable(body));
             });
@@ -992,10 +991,8 @@ class ItemNoun {
             
             // cites
             GenerateSupCite(to.Source).forEach(e => p.appendChild(e));
-            //console.log(to);                
-
-            let space = document.createTextNode("  ");
-            p.appendChild(space);
+             
+            p.appendChild(document.createTextNode("  "));
 
             // comment
             if (to.Comment != undefined) {
@@ -1023,7 +1020,10 @@ class ItemNoun {
             r.className = "dicMoreInfo";
             p.appendChild(r);
                 
-           if (mapper_from!=undefined)p.appendChild(mapper_link("<{word="+mapper_from+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", ApplyPostRules(str_to)));
+           if (mapper_from!=undefined)p.appendChild(mapper_link("<{word="+mapper_from+"|typ=pods|cislo="+(used_fall<7 ? "j" : "m")+"|pad="+(used_fall%7+1)+"}>", str_to));
+            
+           // separator
+           if (to!=this.To[this.To.length-1]) p.appendChild(document.createTextNode("; "));
         }
         
         if (listTo.length==0) return null;
