@@ -965,7 +965,7 @@ class ItemNoun {
             let used_fall;
 
             for (let i = 0; i < try_shapes.length; i++) {
-                str_to = ApplyPostRules(pattern.GetShapeTr(body, used_fall = try_shapes[i]));
+                str_to = pattern.GetShapeTr(body, used_fall = try_shapes[i]);
                 mapper_from=this.PatternFrom.GetShapeFirst(this.From, try_shapes[i]);
                 // Uppercase
                 if (str_to!=undefined){                
@@ -973,10 +973,11 @@ class ItemNoun {
                     else if (this.UppercaseType == 2) str_to = str_to[0].toUpperCase() + str_to.substring(1);
                     else str_to = str_to;
                 }
-
+                
                 if (str_to != undefined) break;
             }            
             if (str_to == undefined) continue;
+            str_to=ApplyPostRules(str_to);
             listTo.push(str_to);
 
             // text
