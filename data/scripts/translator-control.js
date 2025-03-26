@@ -1428,12 +1428,24 @@ function refreshListOfLangsForSelect() {
     }
 
     // Add items
+    let lastCat=null;
     for (let l of languagesList) {
+
         let ptName=l.Name;
         if (l.belongs!=undefined) ptName+=" ("+l.belongs+")";
 
         let lovercaseName=ptName.toLowerCase();
-        if (lovercaseName.includes(search)) {
+        if (lovercaseName.includes(search)) {        
+            if (sortType==="reg") {
+                if (lastCat!=l.Category.join()){
+                    let cat=document.createElement("p");
+                    cat.innerText=l.Category.join().replaceAll(","," > ");
+                    cat.style="margin-left: 4.5mm; font-weight: bold; margin-top: 3mm; font-size: var(--fontSizeBigger);margin-bottom: 1mm;";
+                    parentDiv.appendChild(cat);
+
+                    lastCat=l.Category.join();
+                }
+            }
             let langEle=document.createElement("a");
             langEle.addEventListener("click", ()=>{
                 ChangeSelectedLang(l);
