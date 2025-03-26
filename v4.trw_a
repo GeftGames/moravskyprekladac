@@ -7430,7 +7430,7 @@ oSpisovný jazyk
 q0
 u1
 y0
-e[{\n   "Example": "s ulicou"\n    "Name": "Dvojhláska ou",\n    "Type": "rep",\n    "Selected": 0,\n    "Replace": [\n        {\n            "From": "ou",\n            "Options": ["ú", "ó", "ou"]\n        }\n    ]\n}]
+e[{\n   "Example": "s ulicou",\n    "Name": "Dvojhláska ou",\n    "Type": "rep",\n    "Selected": 0,\n    "Replace": [\n        {\n            "From": "ou",\n            "Options": ["ú", "ó", "ou"]\n        }\n    ]\n}]
 -
 -
 -
