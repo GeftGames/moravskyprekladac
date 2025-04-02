@@ -1,5 +1,6 @@
 # Moravský překladač
 - Webová aplikace k překládání z češtiny do moravštiny
+- Obsahuje: překlad text na text, slovník, překládání souborů (i titulků), dokáže zobrazit varianty v mapě
   
 ## Jak se dostat na stránku?
 - Adresa webu: https://moravskyprekladac.pages.dev/ 
