@@ -16,6 +16,7 @@ Webová aplikace k překládání z češtiny do moravštiny
    - Obecná nářečí (hanácké, valašské, slovácké, ponasymu)
    - Manifesty spisovných jazyků (Łysohorsky, Kozorovsky, ...)
    - Hantec
+- Zaměření na nářečí a tvary jazyka na Moravě ve Slezsku v ČR, pár překladů je i mimo, lze je zapnout v bočním menu 
   
 ## Podrobný popis
 - Překládá podle různých překladů, buť daného nářečí v místě *vesnice*/*části města*/*města* nebo je zde návrh *spisovné moravštiny* (bez puntíku na mapě) a *Hantec* (soustředěný do Brna)
