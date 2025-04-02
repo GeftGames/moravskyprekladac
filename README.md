@@ -1,11 +1,22 @@
 # Moravský překladač
-- Webová aplikace k překládání z češtiny do moravštiny
-- Obsahuje: překlad text na text, slovník, překládání souborů (i titulků), dokáže zobrazit varianty v mapě
-  
+Webová aplikace k překládání z češtiny do moravštiny
+
 ## Jak se dostat na stránku?
 - Adresa webu: https://moravskyprekladac.pages.dev/ 
 - Alternativní adresa: https://geftgames.github.io/moravskyprekladac/
 
+# Obsahuje
+- Podaplikace:
+  - překlad text na text
+  - slovník
+  - překládání souborů (i titulků)
+  - dokáže zobrazit varianty v mapě
+- Dostupné překlady:
+   - Místní nářečí (jednotlivých vesnic)
+   - Obecná nářečí (hanácké, valašské, slovácké, ponasymu)
+   - Manifesty spisovných jazyků (Łysohorsky, Kozorovsky, ...)
+   - Hantec
+  
 ## Podrobný popis
 - Překládá podle různých překladů, buť daného nářečí v místě *vesnice*/*části města*/*města* nebo je zde návrh *spisovné moravštiny* (bez puntíku na mapě) a *Hantec* (soustředěný do Brna)
 -Překlady  <s>*Náměšť na Hané*</s>,  <s>*Rožnov*</s>, *Kroměříž*, *Jemnice*,  <s>*Těšín*</s>,  <s>*Lanžhot*</s> a <s>*Frýdek-Místek*</s> pochází ze starší verze, která se soustředila na obecné nářečí v regioně, proto mohou být tyto překlady lehce nepřesné v daném místě
