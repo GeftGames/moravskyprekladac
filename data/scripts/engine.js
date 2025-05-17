@@ -1752,7 +1752,9 @@ function MapperMode() {
 }
 
 function Copy(elementId) {
-    let copyText = document.getElementById(elementId).innerText;
+    //if (dev) console.log('coping...');
+    let copyText = document.getElementById(elementId).innerText;//textContent
+   // if (dev) console.log(copyText);
     navigator.clipboard.writeText(copyText).then(function() {
         if (dev) console.log('Copying to clipboard was successful!');
     }, function(err) {
