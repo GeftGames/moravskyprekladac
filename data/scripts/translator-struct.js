@@ -6528,6 +6528,8 @@ class LanguageTr{
                 localStorage.setItem('setting-dic-same', dicSame);    
                 
                 ChangeAbcDic();
+
+                document.getElementById("dicWrap").scrollTop = 0;
             });
 
             display.appendChild(btnAll);
