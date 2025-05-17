@@ -12,7 +12,7 @@ var errorText;
 var enabletranslate = true;
 var forceTranslate = false;
 var onlyMoravia;
-var dicAbc=false,dicSame=false;
+var dicAbc=true,dicSame=false, dicShrink=true;
 var language, autoTranslate, styleOutput=false, dev, betaFunctions;
 var saved = [];
 var loaded = false;
@@ -166,7 +166,23 @@ function ChangeDic() {
     }
     SpellingJob();*/
 }
-//#endregion
+
+
+function ChangeDicShrink() {
+    if (!loaded) return;
+    dicShrink=!dicShrink;
+
+    if (dicShrink){
+        document.getElementById("dicShrinkImg").style.display="block";
+        document.getElementById("dicShrinkImgReverse").style.display="none";
+    }else{
+        document.getElementById("dicShrinkImg").style.display="none";
+        document.getElementById("dicShrinkImgReverse").style.display="block";
+    } 
+
+    localStorage.setItem('setting-dic-shrink', dicShrink);
+    GetDic();
+}
 
 // colors from different hue have different contrast
 function smoothAdjustBlue(h, s, l) {
@@ -1326,7 +1342,17 @@ var Load = function () {
 
     // slovník abc
     dicAbc = loadSetting(true, 'setting-dic-abc', "Boolean");
-    
+
+    // slovník abc
+    dicShrink = loadSetting(true, 'setting-dic-shrink', "Boolean");
+    if (dicShrink){
+        document.getElementById("dicShrinkImg").style.display="block";
+        document.getElementById("dicShrinkImgReverse").style.display="none";
+    }else{
+        document.getElementById("dicShrinkImg").style.display="none";
+        document.getElementById("dicShrinkImgReverse").style.display="block";
+    } 
+      
     // Transkripce
     TranscriptionText = loadSetting("czechnormal", 'Transcription',  "String");
     if (document.getElementById("sTranscription") !== null) document.getElementById("sTranscription").value = TranscriptionText;

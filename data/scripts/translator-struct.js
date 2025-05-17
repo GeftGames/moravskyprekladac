@@ -6453,7 +6453,7 @@ class LanguageTr{
 
         // Zkrátit
         let zkr = false;
-        if (!dicAbc) {
+        if (dicShrink) {
             if (out.length > 50) {
                 out.splice(50, out.length - 50);
                 zkr = true;
@@ -6523,13 +6523,7 @@ class LanguageTr{
             btnAll.style="margin: 0 auto;display: flex;justify-content: center;";
             btnAll.innerText = "Zobrazit vše";
             btnAll.addEventListener("click", ()=>{
-                dicSame=true;
-                document.getElementById("dicSame").innerText=dicSame? "=" : "≠";
-                localStorage.setItem('setting-dic-same', dicSame);    
-                
-                ChangeAbcDic();
-
-                document.getElementById("dicWrap").scrollTop = 0;
+                ChangeDicShrink();
             });
 
             display.appendChild(btnAll);
