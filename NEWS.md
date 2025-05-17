@@ -1,5 +1,8 @@
 # Poslední větší změny
 (opravy se tady nepíší)
+### 17.07. 2025
++ úprava zkracování slovníku (ve výchozím nastavení zkráceno + tlačítko na ovládání)
+  
 ### 15.02. 2025
 + skrývání stejných slov ve slovníku (neplatí u ohebných tvarů)
  
