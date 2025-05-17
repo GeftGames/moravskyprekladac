@@ -12,7 +12,7 @@ var errorText;
 var enabletranslate = true;
 var forceTranslate = false;
 var onlyMoravia;
-var dicAbc=true,dicSame=false;
+var dicAbc=false,dicSame=false;
 var language, autoTranslate, styleOutput=false, dev, betaFunctions;
 var saved = [];
 var loaded = false;
@@ -537,7 +537,6 @@ function ChangeManual() {
 
     localStorage.setItem('setting-autoTranslate', autoTranslate.toString());
 }
-
 
 function ChangeAbcDic() {
     if (!loaded) return;
@@ -3325,6 +3324,10 @@ function SetCurrentTranscription(transCode) {
         { from: "ďi", to: "di" },
         { from: "ťi", to: "ti" },
         { from: "ňi", to: "ni" },
+        
+        { from: "Ďi", to: "Di" },
+        { from: "Ťi", to: "Ti" },
+        { from: "Ňi", to: "Ni" },
 
         { from: "ďí", to: "dí" },
         { from: "ťí", to: "tí" },

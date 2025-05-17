@@ -12,6 +12,7 @@ function mapper_open(text_input, filter) {
 	TabSwitch('mapper');
 	mapperAdvanced=false;
 	document.getElementById("mapperInput").value=text_input;
+	document.getElementById("createmaps").style.display="block";
 
 	let customStyle=new RenderMapperOptions();
 	customStyle.LoadDefault();
@@ -27,6 +28,13 @@ function mapper_open(text_input, filter) {
 	customStyle.ComputeColors();
 
 	mapper_init(customStyle);
+}
+function mapper_create(){
+	document.getElementById("mapperPreview").style.display="none";
+	document.getElementById("areaStartGenerate").style.display="flex";
+	urlParamClearB();
+	lastAppMapper="mapper";
+	document.getElementById("createmaps").style.display="none";
 }
 
 // vrátit se z mapy

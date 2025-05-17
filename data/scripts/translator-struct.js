@@ -6440,16 +6440,15 @@ class LanguageTr{
         for (let a of out) {  
             //  if (dev) console.log("Type is not string", typeof a.from, a);
             if (typeof a.from !== 'string') out.pop();
-            if (!dicSame) {
+          //  if (!dicSame) {
                // if (a.from == a.to) out.pop();
-            }
+          //  }
         }
 
         // Setřídit
         const collator = new Intl.Collator('cs', { sensitivity: 'base' });
-        out = out.sort((a, b) => {
-            return a.from.localeCompare(b.from, "cs",{ sensitivity: 'variant' }); //return collator.compare(a.from, b.from);
-        });
+        out = out.sort((a, b) => a.from.localeCompare(b.from, "cs", { sensitivity: 'variant' })); //return collator.compare(a.from, b.from);
+        
         lastDic = out;
 
         // Zkrátit
@@ -6518,6 +6517,20 @@ class LanguageTr{
             zkr.style.fontStyle="italic";
             zkr.innerText = "Nalezeno celkem " + total + " záznamů.";
             display.appendChild(zkr);
+
+            let btnAll = document.createElement("a");
+            btnAll.className="link";
+            btnAll.style="margin: 0 auto;display: flex;justify-content: center;";
+            btnAll.innerText = "Zobrazit vše";
+            btnAll.addEventListener("click", ()=>{
+                dicSame=true;
+                document.getElementById("dicSame").innerText=dicSame? "=" : "≠";
+                localStorage.setItem('setting-dic-same', dicSame);    
+                
+                ChangeAbcDic();
+            });
+
+            display.appendChild(btnAll);
         }
 
         return display;
