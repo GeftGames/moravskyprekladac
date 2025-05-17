@@ -859,6 +859,7 @@
                                     <div class="mapperNavrh" onclick="navrhClick('brambory')">BRAMBORY</div><span class="translated_as" style="display: none;">japka, zamáke, zemáky, erteple</span>
                                     <div class="mapperNavrh" onclick="navrhClick('velbloud')">VELBLOUD</div><span class="translated_as" style="display: none;">čava, ščava</span>
                                     <div class="mapperNavrh" onclick="navrhClick('žena')">ŽENA</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('deštník')">DEŠTNÍK</div>
                                     
                                     <!-- změna části slova-->
                                     <div class="mapperNavrh" onclick="navrhClick('strom')">STROM</div>
@@ -867,6 +868,9 @@
                                     <div class="mapperNavrh" onclick="navrhClick('hlava')">HLAVA</div><span class="translated_as" style="display: none;">hłava</span>
                                     <div class="mapperNavrh" onclick="navrhClick('slivovice')">SLIVOVICE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=noci|typ=pods|cislo=j|pad=6}>')">o NOCI</div>
+                                    
+                                    <div class="mapperNavrh" onclick="navrhClick('KREV')">KREV</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('déšť')">DÉŠŤ</div>
                                     
                                     <!-- Atipické skloňování-->
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=školy|typ=pods|cislo=j|pad=2}>')">do ŠKOLY</div><span class="translated_as" style="display: none;">do škole</span>
@@ -898,6 +902,7 @@
                                 <div class="navrhCat">
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=celý|typ=prid|rod=mz|cislo=j|pad=1}>')">CELÝ muž</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=celá|typ=prid|rod=z|cislo=j|pad=1}>')">CELÁ žena</div>                                 
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=žlutý|typ=prid|rod=mz|cislo=j|pad=1}>')">ŽLUTÝ</div>                                 
                                 </div>
                                 <p>Zájmena</p>
                                 <div class="navrhCat">
@@ -982,6 +987,7 @@
                                     <div class="mapperNavrh" onclick="navrhClick('večer')">VEČER</div><span class="translated_as" style="display: none;">večir, večér</span>
                                     <div class="mapperNavrh" onclick="navrhClick('dolů')">DOLŮ</div><span class="translated_as" style="display: none;">dule, dúle</span>
                                     <div class="mapperNavrh" onclick="navrhClick('takhle')">TAKHLE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('pomalu')">POMALU</div>
                                 </div>
                                 <p>Předložky</p>
                                 <div class="navrhCat">
@@ -1259,8 +1265,11 @@
 
 
                     <div id="mapperPreview" style="display:none;width: -webkit-fill-available;/*justify-content: space-between;*/flex-direction: column;">
-                        <div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 1cm;flex-direction: column; align-items: center;">
-                            <a rel="nofollow" class="button" id="downloadMap" onclick="mapper_next()">Zpátky - Vytvořit další mapu</a>
+                        <div style="margin-bottom: 4mm;display: flex;justify-content: center;margin-top: 5mm;flex-direction: column; align-items: center;">
+                            <div style="display: flex; flex-direction: column;align-items: center;">
+                                <a rel="nofollow" class="button" id="gobackmap" onclick="mapper_next()">Vrátit se zpátky</a>
+                                <a rel="nofollow" style="display:none" class="button" id="createmaps" onclick="mapper_create()">Vytvářet nářeční mapy</a>
+                            </div>
                             <h2 id="mapperInputPreview" style="margin-top: 12px;"></h2>
                         </div>
                         <div style="display:flex;flex-wrap: wrap;flex-direction: column;">
