@@ -2,6 +2,7 @@
 (opravy se tady nepíší)
 ### 17.07. 2025
 + úprava zkracování slovníku (ve výchozím nastavení zkráceno + tlačítko na ovládání)
++ u map nové tlačítko "Vytvářet mapy" pro snažší vstup do mapperu
   
 ### 15.02. 2025
 + skrývání stejných slov ve slovníku (neplatí u ohebných tvarů)
