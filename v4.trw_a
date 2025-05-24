@@ -7948,7 +7948,7 @@ oMoravský jazyk
 q2
 u0
 y1
-e{\n    "Example": "ska<x>a",\n    "Name": "Tvrdé ł, obalkování ṵ nebo jednoduché l?",\n    "Type": "rep",\n    "Selected": 0,\n    "Replace": [\n        {\n            "From": "ł",\n            "Options": ["l", "ṵ", "ł"]\n        },\n        {\n            "From": "Ł",\n            "Options": ["L", "Ṵ", "Ł"]\n        } \n    ]\n}
+e[{\n    "Example": "ska<x>a",\n    "Name": "Tvrdé ł, obalkování ṵ nebo jednoduché l?",\n    "Type": "rep",\n    "Selected": 0,\n    "Replace": [\n        {\n            "From": "ł",\n            "Options": ["l", "ṵ", "ł"]\n        },\n        {\n            "From": "Ł",\n            "Options": ["L", "Ṵ", "Ł"]\n        } \n    ]\n}]
 -
 -
 -
