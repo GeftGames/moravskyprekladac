@@ -1,6 +1,9 @@
 # Poslední větší změny
 (opravy se tady nepíší)
-### 17.07. 2025
+### 31.05. 2025
++ návaznosti slov, funguje jenom předložka-podstatné jméno a předložka přídavné jméno, např. "růže, bez růže" přeloženo ob. han. "ruža, bez ruže"
+
+### 17.05. 2025
 + úprava zkracování slovníku (ve výchozím nastavení zkráceno + tlačítko na ovládání)
 + u map nové tlačítko "Vytvářet mapy" pro snažší vstup do mapperu
   
