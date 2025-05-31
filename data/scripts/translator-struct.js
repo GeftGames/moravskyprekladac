@@ -6806,6 +6806,41 @@ class LanguageTr{
                         }                    
                     }
 
+                    // kombinaca: přédavny méno + podstatny méno
+                    if (wordBefore.Type=="Adjective" && word.Type == "Noun") {
+                        let adjShapesBetter=[],  adjShapesWorse=[],
+                            nounShapesBetter=[], nounShapesWorse=[];
+
+                        for (let adj_shape of wordBefore.To) {
+                            let noun_shapes=word.To.Shapes; 
+                            for (let noun_shape of noun_shapes) {  
+                              //  console.log("noun", word);   
+                                console.log(word.To.Gender, adj_shape.Gender,noun_shape.Fall,adj_shape.Fall,  noun_shape.Number, adj_shape.Number)                      
+                                if (//word.To.Gender       == adj_shape.Gender    // sténé rod                                   
+                                  noun_shape.Fall   == adj_shape.Fall      // sténé pád
+                                &&  noun_shape.Number == adj_shape.Number) { // stény číslo
+                                    adjShapesBetter.push(adj_shape);
+                                    if (!nounShapesBetter.includes(noun_shape)) nounShapesBetter.push(noun_shape);
+                                    continue;
+                                } else {
+                                    adjShapesWorse.push(adj_shape);
+                                    if (!nounShapesWorse.includes(noun_shape)) nounShapesWorse.push(noun_shape);
+                                }
+                            }
+                        }
+
+                        // add lists
+                        wordBefore.To=[];
+                        wordBefore.To.push(...adjShapesBetter);
+                        wordBefore.To.push(...adjShapesWorse);
+
+                        word.To.Shapes=[];
+                        word.To.Shapes.push(...nounShapesBetter);
+                        word.To.Shapes.push(...nounShapesWorse);
+
+                        if (dev) console.log("Aplikována vazba mezi přídavné jméno-podstatné jméno");     
+                    }
+
                   /*  // kombinace: zájmeno (jenom přívlastková!!!) + přídavné jméno
                     if (wordBefore.Type=="Pronoun" && word.Type == "Adjective") {      
                         console.log(word, wordBefore);
