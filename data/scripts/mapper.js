@@ -1139,8 +1139,69 @@ function mapper_save_geojson(){
 
 		data+=']\n'+
 			'}\n';
-
+			
 		download_file("mp_mapper "+mapperRenderOptions.inputText+"_GeoJSON.json", data, "text/json");
+	}	
+}
+
+
+function geojsonIOOpen() {
+	if (mapper_points.length>0) {
+		let features = [];
+
+		for (let pt of mapper_points) {
+			let feature = {
+				type: "Feature",
+				geometry: {
+					type: "Point",
+					coordinates: [pt.lang.gpsX, pt.lang.gpsY]
+				},
+				properties: {
+					location: pt.name,
+					text: pt.text
+				}
+			};
+			features.push(feature);
+		}
+
+		let geojson = {
+			type: "FeatureCollection",
+			features: features
+		};
+			
+		let url="http://geojson.io/#data=data:application/json,"+encodeURIComponent(JSON.stringify(geojson));
+		window.open(url, '_blank').focus();
+	}	
+}
+
+function mapper_save_topoJSON() {
+	if (mapper_points.length>0) {
+		let geometries = [];
+
+		for (let pt of mapper_points) {
+			let feature = {
+				"type": "Point",
+				"coordinates": [pt.lang.gpsX, pt.lang.gpsY],
+				"properties": {
+					"location": pt.name,
+					"text": pt.text
+				}
+			};
+			geometries.push(feature);
+		}
+
+		let topojson = {
+			"type": "Topology",
+			"objects": {
+				"translated": {
+					"type": "GeometryCollection",
+					"geometries": geometries
+				}
+			},
+			"arcs": [],
+		};
+			
+		download_file("mp_mapper "+mapperRenderOptions.inputText+"_TopoJSON.json", topojson, "text/json");
 	}	
 }
 

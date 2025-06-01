@@ -6815,7 +6815,7 @@ class LanguageTr{
                             let noun_shapes=word.To.Shapes; 
                             for (let noun_shape of noun_shapes) {  
                               //  console.log("noun", word);   
-                                console.log(word.To.Gender, adj_shape.Gender,noun_shape.Fall,adj_shape.Fall,  noun_shape.Number, adj_shape.Number)                      
+                               // console.log(word.To.Gender, adj_shape.Gender,noun_shape.Fall,adj_shape.Fall,  noun_shape.Number, adj_shape.Number)                      
                                 if (//word.To.Gender       == adj_shape.Gender    // sténé rod                                   
                                   noun_shape.Fall   == adj_shape.Fall      // sténé pád
                                 &&  noun_shape.Number == adj_shape.Number) { // stény číslo
