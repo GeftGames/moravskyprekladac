@@ -1201,7 +1201,7 @@ function mapper_save_topoJSON() {
 			"arcs": [],
 		};
 			
-		download_file("mp_mapper "+mapperRenderOptions.inputText+"_TopoJSON.json", topojson, "text/json");
+		download_file("mp_mapper "+mapperRenderOptions.inputText+"_TopoJSON.json", JSON.stringify(topojson), "text/json");
 	}	
 }
 
