@@ -1,5 +1,9 @@
 # Poslední větší změny
-(opravy se tady nepíší)
+(opravy se tady nepišou)
+### 1.06. 2025
++ TopoJSON
++ otevření mapy v geojson.io (přes tlačítko stáhnout)
+
 ### 31.05. 2025
 + návaznosti slov, funguje jenom předložka-podstatné jméno a předložka přídavné jméno, např. "růže, bez růže" přeloženo ob. han. "ruža, bez ruže"
 
