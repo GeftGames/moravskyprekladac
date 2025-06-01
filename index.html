@@ -875,7 +875,7 @@
                                     <div class="mapperNavrh" onclick="navrhClick('člunek')">ČLUNEK</div>
                                     <div class="mapperNavrh" onclick="navrhClick('pták')">PTÁK</div><span class="translated_as" style="display: none;">fták, vták</span>
                                     <div class="mapperNavrh" onclick="navrhClick('hlava')">HLAVA</div><span class="translated_as" style="display: none;">hłava</span>
-                                    <div class="mapperNavrh" onclick="navrhClick('slivovice')">SLIVOVICE</div>
+                                    <div class="mapperNavrh" onclick="navrhClick('<{word=slivovice|typ=pods|cislo=j|pad=1}>')">SLIVOVICE</div>
                                     <div class="mapperNavrh" onclick="navrhClick('<{word=noci|typ=pods|cislo=j|pad=6}>')">o NOCI</div>
                                     
                                     <div class="mapperNavrh" onclick="navrhClick('krev')">KREV</div>
@@ -1491,7 +1491,7 @@
                     <p style="display:inline;" id="closeAbout">Zavřít</p>
                 </div>
                 <div>
-                    <p class="aboutPageHeader" id="aboutTranslator">Výběr stáhnutí mapy</p>
+                    <p class="aboutPageHeader" id="aboutTranslator" style="justify-self: center;">Výběr stáhnutí mapy</p>
                 </div>
                 <br>
                 <div style="display: flex;justify-content: center;flex-direction: column;align-self: center;align-items: flex-start;">
@@ -1501,6 +1501,14 @@
                     <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_klm();PopPageClose('mapper_download_options')">KML</span>                        <span>Keyhole Markup Language</span></div>
                     <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gml();PopPageClose('mapper_download_options')">GML</span>                        <span>Geography Markup Language</span></div>
                     <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_gpx();PopPageClose('mapper_download_options')">GPX</span>                        <span>Výměný formát GPS</span></div>
+                    <div class="download_option"><svg class="ib" viewBox="0 0 25 29" style="margin-right: 10px;"><path d="M9 0 17 0 17 16 21 16 13 24 5 16 9 16 9 0M1 26 26 26 26 29 1 29 1 26"></path></svg><span style="width: 99px;" class="link" onclick="mapper_save_topoJSON();PopPageClose('mapper_download_options')">TopoJSON</span>                        <span>Nadstandartní GeoJSON</span></div>
+                </div>
+                <br>
+                <div>
+                    <p class="aboutPageHeader" id="aboutTranslator" style="justify-self: center;">Prohlížení mapy v externích službách</p>
+                </div>                
+                <div style="display: flex;justify-content: center;flex-direction: column;align-self: center;align-items: flex-start;">
+                    <div class="download_option"><svg class="ib" viewBox="0 0 30 30" style="margin-right: 10px;"><path d="M15 1 1 1 1 30 30 30 30 15 27 15 27 27 4 27 4 4 15 4 15 1M19 1 30 1 30 11 27 11 27 6 15 18 13 16 25 4 19 4 19 1"></path></svg><span style="width: 99px;" class="link" onclick="geojsonIOOpen();PopPageClose('mapper_download_options')">geojson.io</span></div></div>
                 </div>
             </div>
         </div>
