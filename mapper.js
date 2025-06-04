@@ -235,22 +235,33 @@ function getVoronoi(points) {
 	var voronoi = new Voronoi();
 	return voronoi.compute(points, bbox);
 }
-
+var firstTimeMapper=true;
 // překreslit mapu
 function mapperRedraw(){ 
 	document.getElementById("noteMapperNotFound").style.display="none";
 	document.getElementById("mapperAreaMap").style.display="block";
 	
+	//console.log(imgMap.width);
+	//console.log(mapperRenderOptions.scale);
+	let w=0;
+	if (imgMap.width<100) w=document.clientWidth;
+	else w=imgMap.width;
+
 	let mapperOuter=document.getElementById("mapperOuter");
-	mapperOuter.style.width=Math.round(imgMap.width*mapperRenderOptions.scale+20)+"px";
-	mapperOuter.style.height=Math.round(imgMap.width*mapperRenderOptions.scale+20)+"px";
+	let computedSize=Math.round(w*mapperRenderOptions.scale+20);
+	mapperOuter.style.width=computedSize+"px";
+	mapperOuter.style.height=computedSize+"px";
 	
-	var displayWidth  = mapperOuter.clientWidth;
-	var displayHeight = mapperOuter.clientHeight;
-	
+	var displayWidth  = computedSize;//mapperOuter.clientWidth;
+	var displayHeight = computedSize;//mapperOuter.clientHeight;
+
+
 	canvasMap = document.getElementById('mapperCanvas');
 	canvasMap.width = displayWidth*dpr;
 	canvasMap.height = displayHeight*dpr;
+
+	//console.log("computedSize: "+w);
+
 
 	ctx = canvasMap.getContext('2d', {willReadFrequently:true});
 	const start = performance.now();
@@ -1139,8 +1150,69 @@ function mapper_save_geojson(){
 
 		data+=']\n'+
 			'}\n';
-
+			
 		download_file("mp_mapper "+mapperRenderOptions.inputText+"_GeoJSON.json", data, "text/json");
+	}	
+}
+
+
+function geojsonIOOpen() {
+	if (mapper_points.length>0) {
+		let features = [];
+
+		for (let pt of mapper_points) {
+			let feature = {
+				type: "Feature",
+				geometry: {
+					type: "Point",
+					coordinates: [pt.lang.gpsX, pt.lang.gpsY]
+				},
+				properties: {
+					location: pt.name,
+					text: pt.text
+				}
+			};
+			features.push(feature);
+		}
+
+		let geojson = {
+			type: "FeatureCollection",
+			features: features
+		};
+			
+		let url="http://geojson.io/#data=data:application/json,"+encodeURIComponent(JSON.stringify(geojson));
+		window.open(url, '_blank').focus();
+	}	
+}
+
+function mapper_save_topoJSON() {
+	if (mapper_points.length>0) {
+		let geometries = [];
+
+		for (let pt of mapper_points) {
+			let feature = {
+				"type": "Point",
+				"coordinates": [pt.lang.gpsX, pt.lang.gpsY],
+				"properties": {
+					"location": pt.name,
+					"text": pt.text
+				}
+			};
+			geometries.push(feature);
+		}
+
+		let topojson = {
+			"type": "Topology",
+			"objects": {
+				"translated": {
+					"type": "GeometryCollection",
+					"geometries": geometries
+				}
+			},
+			"arcs": [],
+		};
+			
+		download_file("mp_mapper "+mapperRenderOptions.inputText+"_TopoJSON.json", JSON.stringify(topojson), "text/json");
 	}	
 }
 

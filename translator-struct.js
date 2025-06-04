@@ -1375,7 +1375,7 @@ class ItemPhrase {
     }
 
     static Load(data) {
-        let raw = /*data*/LoadDataLineString(data,sPhrase).split('|');
+        let raw = LoadDataLineString(data, sPhrase).split('|');
 
         if (raw[0] == '') return null;
         let item = new ItemPhrase();
@@ -5943,6 +5943,17 @@ class LanguageTr{
         }
         if (fullDev) console.log("🔣 Loaded Phrases", this.Phrases);
 
+        // sort 
+      /*  ["ano"],
+        ["jag", "se", "máš"],
+        ["jag", "se"],
+        ["jag"],
+        ["jak", "než"],
+        ["zeď"]*/
+        this.Phrases=this.Phrases.sort((a, b) => {
+            return b.input.join().localeCompare(a.input.join());
+        });
+
         // SimpleWords
         for (i++; i < lines.length; i++) {
             let line = lines[i];
@@ -6723,41 +6734,159 @@ class LanguageTr{
 
             if (dev) console.log("Sencence.. Before relationship.. ", BuildingSentence);
 
-            // Create relationships
-            // Po předložce nastav u podtatného nebo přídavného pád a rod
-            let startIndex = -1,
-                endIndex = -1;
+
+            // --- Vazby slov --- //
+            let wordBefore;
             for (let w = 0; w < BuildingSentence.length; w++) {
+               
                 let word = BuildingSentence[w];
-                if (word[0] == "Preposition") {
-                    if (startIndex == -1) {
-                        startIndex = w;
-                    } else {
-                        endIndex = w - 1;
-                        //	MakeprepositionAdjectiveNounRelationShip(BuildingSentence, startIndex, endIndex);
-                        startIndex = -1;
-                        endIndex - 1;
+    
+                if (wordBefore!=undefined){
+                    // kombinace: předložka + podstatné jméno
+                    if (wordBefore.Type=="Preposition" && word.Type == "Noun") {      
+                    //  console.log(word, wordBefore);
+                        let falls=wordBefore.To[1]; 
+                        if (falls==undefined) continue;
+                    // console.log(falls);
+                        if (falls.length>0) { // je-li nastaven nejaký pád
+                            
+                            let shapes=word.To.Shapes; // všechny možnosti
+                        //  console.log(shapes);
+
+                            // více na výběr možností
+                            if (shapes.length>1) {
+                                let hasPrepFall=[], notHavePrepFall=[];
+                                
+                                for (let shape of shapes) {
+                                    let fall=shape.Fall;
+                                //  console.log(shape, shape.Fall);
+                                    if (falls.includes(fall)) hasPrepFall.push(shape);
+                                    else notHavePrepFall.push(shape);
+                                }
+                                
+                                // add lists
+                                word.To.Shapes=[];
+                                word.To.Shapes.push(...hasPrepFall);
+                                word.To.Shapes.push(...notHavePrepFall);
+                                if (dev) console.log("Aplikována vazba mezi předložka ("+falls+")-podstatné jméno");
+                            //   console.log(word.To);
+                            }
+                        }                    
                     }
-                } else if (word.Type == "Noun" || word.Type == "Adjective" || word.Type == "Number") {} else {
-                    if (startIndex != -1) {
-                        endIndex = w - 1;
-                        //	MakeprepositionAdjectiveNounRelationShip(BuildingSentence, startIndex, endIndex);
-                        startIndex = -1;
-                        endIndex - 1;
+
+                    // kombinace: předložka + přídavné jméno
+                    if (wordBefore.Type=="Preposition" && word.Type == "Adjective") {      
+                     //     console.log(word, wordBefore);
+                        let falls=wordBefore.To[1]; 
+                        if (falls==undefined) continue;
+                       //  console.log(falls);
+                        if (falls.length>0){ // je-li nastaven nejaký pád
+                            
+                            let shapes=word.To; // všechny možnosti
+                            //  console.log(shapes);
+
+                            // více na výběr možností
+                            if (shapes.length>1) {
+                                let hasPrepFall=[], notHavePrepFall=[];
+                                
+                                for (let shape of shapes) {
+                                    let fall=shape.Fall;
+                                    //  console.log(shape, shape.Fall);
+                                    if (falls.includes(fall)) hasPrepFall.push(shape);
+                                    else notHavePrepFall.push(shape);
+                                }
+                                
+                                // add lists
+                                word.To=[];
+                                word.To.push(...hasPrepFall);
+                                word.To.push(...notHavePrepFall);
+                               // console.log(word.To);
+                                if (dev) console.log("Aplikována vazba mezi předložka ("+falls+")-přídavné jméno");
+                            }
+                        }                    
                     }
+
+                    // kombinaca: přédavny méno + podstatny méno
+                    if (wordBefore.Type=="Adjective" && word.Type == "Noun") {
+                        let adjShapesBetter=[],  adjShapesWorse=[],
+                            nounShapesBetter=[], nounShapesWorse=[];
+
+                        for (let adj_shape of wordBefore.To) {
+                            let noun_shapes=word.To.Shapes; 
+                            for (let noun_shape of noun_shapes) {  
+                              //  console.log("noun", word);   
+                               // console.log(word.To.Gender, adj_shape.Gender,noun_shape.Fall,adj_shape.Fall,  noun_shape.Number, adj_shape.Number)                      
+                                if (//word.To.Gender       == adj_shape.Gender    // sténé rod                                   
+                                  noun_shape.Fall   == adj_shape.Fall      // sténé pád
+                                &&  noun_shape.Number == adj_shape.Number) { // stény číslo
+                                    adjShapesBetter.push(adj_shape);
+                                    if (!nounShapesBetter.includes(noun_shape)) nounShapesBetter.push(noun_shape);
+                                    continue;
+                                } else {
+                                    adjShapesWorse.push(adj_shape);
+                                    if (!nounShapesWorse.includes(noun_shape)) nounShapesWorse.push(noun_shape);
+                                }
+                            }
+                        }
+
+                        // add lists
+                        wordBefore.To=[];
+                        wordBefore.To.push(...adjShapesBetter);
+                        wordBefore.To.push(...adjShapesWorse);
+
+                        word.To.Shapes=[];
+                        word.To.Shapes.push(...nounShapesBetter);
+                        word.To.Shapes.push(...nounShapesWorse);
+
+                        if (dev) console.log("Aplikována vazba mezi přídavné jméno-podstatné jméno");     
+                    }
+
+                  /*  // kombinace: zájmeno (jenom přívlastková!!!) + přídavné jméno
+                    if (wordBefore.Type=="Pronoun" && word.Type == "Adjective") {      
+                        console.log(word, wordBefore);
+                        let falls=wordBefore.To[1]; 
+                        if (falls==undefined) continue;
+                        console.log(falls);
+                        if (falls.length>0) { // je-li nastaven nejaký pád
+                          
+                            let shapes=word.To; // všechny možnosti
+                            console.log(shapes);
+
+                            // více na výběr možností
+                            if (shapes.length>1) {
+                                let hasPrepFall=[], notHavePrepFall=[];
+                                
+                                for (let shape of shapes) {
+                                    let fall=shape.Fall;
+                                        console.log(shape, shape.Fall);
+                                    if (falls.includes(fall)) hasPrepFall.push(shape);
+                                    else notHavePrepFall.push(shape);
+                                }
+                                
+                                // add lists
+                                word.To=[];
+                                word.To.push(...hasPrepFall);
+                                word.To.push(...notHavePrepFall);
+                                console.log(word.To);
+                                if (dev) console.log("Aplikována vazba mezi pronoun ("+falls+")-adjective");
+                            }
+                        }
+                    }*/
                 }
+
+                // předchozí slovo
+                if (word.Type!="Symbol") wordBefore=word;
             }
 
             if (dev) console.log("Sencence.. With relationship.. ", BuildingSentence);
 
-            // Print
+
+            // --- Print --- //
             for (let w = 0; w < BuildingSentence.length; w++) {
                 let word = BuildingSentence[w];
                 let type = word.Type;
                 let string = word.To;
                 let original = word.From;
-
-                //				console.log(word);
 
                 let printableString;
                 if (type == "Noun") {
@@ -7088,12 +7217,13 @@ class LanguageTr{
         return null;
     }
 
-    searchWordPhrase(input) {
+  /*  searchWordPhrase(input) {
         for (const n of this.Phrases) {
+            console.log(n.input=input,n.input,input);
             if (n.input == input) return n;
         }
         return null;
-    }
+    }*/
 
     searchWordVerb(input) {
         for (const n of this.Verbs) {
@@ -7827,17 +7957,41 @@ class LanguageTr{
         //return ((bestStart!=null) ?bestStart.output:"")+ret+((bestEnd!=null) ? bestEnd.output:"");
     }
 
-    ApplyPhrases(arrOfWords, start) {
-        for (const phrase of this.Phrases) {
-            for (const variantPhrase of phrase.input) {
+    getFirstRealWord(sentenceArray) {
+        for (let i=0; i<sentenceArray.length; i++){
+            const word =sentenceArray[i];
+            if (/[a-zá-žčďěňřšťůž]/i.test(word)) {
+                return i;
+            }
+        }
+        return null;
+    }
 
-                //console.log("Phrase",variantPhrase);
-                if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
-                    //let output=phrase.output;
-                    //if (Array.isArray(phrase.output)) output=phrase.output[0];
-                    let ret = ApplyMatch(arrOfWords, start, start + variantPhrase.length, phrase.output);
-                    /*if (ret!=null)*/
-                    return ret;
+    // arrOfWords = celá věta rozdělená na slova a mezery
+    // start = identifikovaná slova/mezery
+    ApplyPhrases(arrOfWords, start) {
+        // index prvního slova ve větě
+        let firtstWord=this.getFirstRealWord(arrOfWords);
+
+        for (const phrase of this.Phrases) {
+
+            // pouze na začátku věty
+            if (phrase.pos==1) {
+                if (start==firtstWord) {   
+                    for (const variantPhrase of phrase.input) {
+                        if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
+                            let ret = ApplyMatch(arrOfWords, start, start + variantPhrase.length, phrase.output);
+                            return ret;
+                        }
+                    }     
+                }   
+            // pozice kdekoliv        
+            }else{
+                for (const variantPhrase of phrase.input) {
+                    if (MatchArrayInArray(arrOfWords, start, variantPhrase)) {
+                        let ret = ApplyMatch(arrOfWords, start, start + variantPhrase.length, phrase.output);
+                        return ret;
+                    }
                 }
             }
         }
@@ -7847,7 +8001,6 @@ class LanguageTr{
             // Verob puvodni string
             let str = "";
             for (let w = startIndex; w < endIndex; w++) {
-                //				console.log(arrSource,w);
                 str += arrSource[w][1];
             }
 
@@ -7859,11 +8012,13 @@ class LanguageTr{
 
         function MatchArrayInArray(arrSource, startIndex, arrToMatch) {
             if (arrToMatch == undefined) return false;
-            //if (startIndex==0)console.log("MatchArrayInArray", arrSource, startIndex,arrToMatch);
-            //if (arrSource[0]==arrToMatch[0])console.log("bene");
+
+            // má méně slov než počet slov do konce věty
             if (arrSource.length - startIndex < arrToMatch.length) return false;
-            for (let i = 0; i + startIndex < arrSource.length && i < arrToMatch.length; i++) {
-                if (arrSource[startIndex + i][1] /*.toLowerCase()*/ !== arrToMatch[i]) return false;
+            
+            // porovnat slovo po slově
+            for (let i=0; i+startIndex < arrSource.length && i<arrToMatch.length; i++) {
+                if (arrSource[startIndex+i][1] /*.toLowerCase()*/ !== arrToMatch[i]) return false;
             }
 
             return true;
