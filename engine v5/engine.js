@@ -4,9 +4,9 @@ import * as translator from "./translate.js";
 
 /*** Settings ***/
 // path to a file with all tables schemas defined in JSON format
-const tablesSchemas='/engine v5/export_schemas.json';
+const tablesSchemas='./engine v5/export_schemas.json';
 // path to a file with gzipped tables data
-const tablesData='/engine v5/engine v5.trw_gz';
+const tablesData='./engine v5/engine v5.trw_gz';
 // if true, then shows in the console more info or more thing like that
 let debug=true;
 
